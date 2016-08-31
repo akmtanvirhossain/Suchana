@@ -7,7 +7,13 @@ import java.util.List;
  */
 public class downloadClass {
     List<String> dataString;
-    public void setdata(List<String> _dataString){this.dataString=_dataString;}
-    public List<String> getdata(){return this.dataString;}
+
+    public void setdata(List<String> _dataString) {
+        this.dataString = _dataString;
+    }
+
+    public List<String> getdata() {
+        return this.dataString;
+    }
 
 }

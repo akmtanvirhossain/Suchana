@@ -30,7 +30,7 @@ public class LoginActivity extends Activity {
     public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
     Connection C;
     Global g;
-    boolean netwoekAvailable=false;
+    boolean netwoekAvailable = false;
     int count = 0;
     TextView lblStaffType;
     String SystemUpdateDT = "";
@@ -40,48 +40,43 @@ public class LoginActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try
-        {
+        try {
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             setContentView(R.layout.login_activity);
             C = new Connection(this);
             g = Global.getInstance();
 
-            final TextView UniqueUserId      = (TextView)findViewById(R.id.UniqueUserId);
-            final Spinner uid      = (Spinner)findViewById(R.id.userId);
-            final EditText pass    = (EditText)findViewById(R.id.pass);
-            TextView lblSystemDate = (TextView)findViewById(R.id.lblSystemDate);
+            final TextView UniqueUserId = (TextView) findViewById(R.id.UniqueUserId);
+            final Spinner uid = (Spinner) findViewById(R.id.userId);
+            final EditText pass = (EditText) findViewById(R.id.pass);
+            TextView lblSystemDate = (TextView) findViewById(R.id.lblSystemDate);
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
             SystemUpdateDT = "21082016";  //Format: DDMMYYYY
-            lblSystemDate.setText("Version: 1.0, Built on:"+ SystemUpdateDT);
+            lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
             if (Connection.haveNetworkConnection(LoginActivity.this)) {
-                netwoekAvailable=true;
+                netwoekAvailable = true;
 
             } else {
-                netwoekAvailable=false;
+                netwoekAvailable = false;
             }
 
 
             //Rebuild Database
             String TotalTab = C.ReturnSingleValue("SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name != 'android_metadata' AND name != 'sqlite_sequence'");
 
-            if(Integer.valueOf(TotalTab) == 0)
-            {
-                if(netwoekAvailable)
-                {
+            if (Integer.valueOf(TotalTab) == 0) {
+                if (netwoekAvailable) {
                     //Call Setting Form
                     finish();
-                    Intent f1 = new Intent(getApplicationContext(),SettingForm.class);
+                    Intent f1 = new Intent(getApplicationContext(), SettingForm.class);
                     startActivity(f1);
                     return;
-                }
-                else
-                {
-                    Connection.MessageBox(LoginActivity.this,"Internet connection is not available for building initial database.");
+                } else {
+                    Connection.MessageBox(LoginActivity.this, "Internet connection is not available for building initial database.");
                     return;
                 }
             }
@@ -89,19 +84,18 @@ public class LoginActivity extends Activity {
 
             //Device Unique ID
             final String UniqueID = C.ReturnSingleValue("Select UserId from UserList");
-            UniqueUserId.setText("Unique ID :"+ UniqueID);
+            UniqueUserId.setText("Unique ID :" + UniqueID);
             g.setDeviceNo(UniqueID);
 
             //**************************************************************************************
-            if(netwoekAvailable)
-            {
+            if (netwoekAvailable) {
                 //Reqular data sync
             }
             //**************************************************************************************
 
             uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from UserList order by UserName"));
             String[] CL = uid.getSelectedItem().toString().split("-");
-            uid.setSelection(Global.SpinnerItemPosition(uid,CL[0].length(),C.ReturnSingleValue("Select UserId from LastLogin")));
+            uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
 
 
             //Only for removing the data of training: 17 Nov 2015
@@ -110,7 +104,7 @@ public class LoginActivity extends Activity {
                 //C.Save("Delete from BirthDeath where date(endt) <= '2016-02-10'");
             }*/
 
-            Button btnClose=(Button)findViewById(R.id.btnClose);
+            Button btnClose = (Button) findViewById(R.id.btnClose);
             btnClose.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     finish();
@@ -122,43 +116,37 @@ public class LoginActivity extends Activity {
             Button loginButton = (Button) findViewById(R.id.btnLogin);
             loginButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    try
-                    {
-                        String[] U = Connection.split(uid.getSelectedItem().toString(),'-');
+                    try {
+                        String[] U = Connection.split(uid.getSelectedItem().toString(), '-');
                         g.setUserId(U[0]);
 
-                        if(!C.Existence("Select * from UserList where UserId='"+ U[0] +"' and Pass='"+ pass.getText().toString() +"'"))
-                        {
-                            Connection.MessageBox(LoginActivity.this,"This is not a valid user id or password");
+                        if (!C.Existence("Select * from UserList where UserId='" + U[0] + "' and Pass='" + pass.getText().toString() + "'")) {
+                            Connection.MessageBox(LoginActivity.this, "This is not a valid user id or password");
                             return;
                         }
 
                         //Store Last Login information
                         C.Save("Delete from LastLogin");
-                        C.Save("Insert into LastLogin(UserId)Values('"+ U[0] +"')");
+                        C.Save("Insert into LastLogin(UserId)Values('" + U[0] + "')");
 
 
                         //Download Updated System
                         //...................................................................................
-                        if(netwoekAvailable==true)
-                        {
+                        if (netwoekAvailable == true) {
                             //Retrieve data from server for checking local device
-                            String[] ServerVal  = Connection.split(C.ReturnResult("ReturnSingleValue","sp_ServerCheck '"+ UniqueID +"'"),',');
-                            String ServerDate   = ServerVal[0].toString();
-                            String UpdateDT     = ServerVal[1].toString();
+                            String[] ServerVal = Connection.split(C.ReturnResult("ReturnSingleValue", "sp_ServerCheck '" + UniqueID + "'"), ',');
+                            String ServerDate = ServerVal[0].toString();
+                            String UpdateDT = ServerVal[1].toString();
 
                             //Check for New Version
                             if (!UpdateDT.equals(SystemUpdateDT)) {
                                 systemDownload d = new systemDownload();
                                 d.setContext(getApplicationContext());
                                 d.execute(Global.UpdatedSystem);
-                            }
-                            else
-                            {
+                            } else {
                                 //check for system date
-                                if(ServerDate.equals(Global.TodaysDateforCheck())==false)
-                                {
-                                    Connection.MessageBox(LoginActivity.this, "আপনার ট্যাব এর তারিখ সঠিক নয় ["+ Global.DateNowDMY() +"]।");
+                                if (ServerDate.equals(Global.TodaysDateforCheck()) == false) {
+                                    Connection.MessageBox(LoginActivity.this, "আপনার ট্যাব এর তারিখ সঠিক নয় [" + Global.DateNowDMY() + "]।");
                                     startActivity(new Intent(android.provider.Settings.ACTION_DATE_SETTINGS));
                                     return;
                                 }
@@ -169,7 +157,7 @@ public class LoginActivity extends Activity {
                                     public void run() {
                                         try {
                                             finish();
-                                            Intent f1 = new Intent(getApplicationContext(),MainMenu.class);
+                                            Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                             startActivity(f1);
                                         } catch (Exception e) {
 
@@ -178,16 +166,14 @@ public class LoginActivity extends Activity {
                                     }
                                 }.start();
                             }
-                        }
-                        else
-                        {
+                        } else {
                             final ProgressDialog progDailog = ProgressDialog.show(LoginActivity.this, "", "Please Wait . . .", true);
 
                             new Thread() {
                                 public void run() {
                                     try {
                                         finish();
-                                        Intent f1 = new Intent(getApplicationContext(),MainMenu.class);
+                                        Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                         startActivity(f1);
                                     } catch (Exception e) {
 
@@ -196,9 +182,7 @@ public class LoginActivity extends Activity {
                                 }
                             }.start();
                         }
-                    }
-                    catch(Exception ex)
-                    {
+                    } catch (Exception ex) {
                         //Connection.MessageBox(LoginActivity.this, ex.getMessage());
                         //return;
                         final ProgressDialog progDailog = ProgressDialog.show(LoginActivity.this, "", "Please Wait . . .", true);
@@ -207,7 +191,7 @@ public class LoginActivity extends Activity {
                             public void run() {
                                 try {
                                     finish();
-                                    Intent f1 = new Intent(getApplicationContext(),MainMenu.class);
+                                    Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                     startActivity(f1);
                                 } catch (Exception e) {
 
@@ -218,17 +202,14 @@ public class LoginActivity extends Activity {
                     }
                 }
             });
-        }
-        catch(Exception ex)
-        {
+        } catch (Exception ex) {
             Connection.MessageBox(LoginActivity.this, ex.getMessage());
         }
     }
 
     //Install application
-    private void InstallApplication()
-    {
-        File apkfile = new File(Environment.getExternalStorageDirectory() + File.separator + ProjectSetting.NewVersionName +".apk");
+    private void InstallApplication() {
+        File apkfile = new File(Environment.getExternalStorageDirectory() + File.separator + ProjectSetting.NewVersionName + ".apk");
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // without this flag android returned a intent error!
         intent.setDataAndType(Uri.parse("file://" + apkfile.toString()), "application/vnd.android.package-archive");
@@ -237,10 +218,10 @@ public class LoginActivity extends Activity {
     }
 
     //Downloading updated system from the central server
-    class systemDownload extends AsyncTask<String,String,Void> {
+    class systemDownload extends AsyncTask<String, String, Void> {
         private Context context;
 
-        public void setContext(Context contextf){
+        public void setContext(Context contextf) {
             context = contextf;
         }
 
@@ -276,16 +257,14 @@ public class LoginActivity extends Activity {
                 c.connect();
                 int lenghtOfFile = c.getContentLength();
 
-                File file=Environment.getExternalStorageDirectory();
+                File file = Environment.getExternalStorageDirectory();
 
                 file.mkdirs();
-                File outputFile = new File(file.getAbsolutePath()+ File.separator + ProjectSetting.NewVersionName +".apk");
+                File outputFile = new File(file.getAbsolutePath() + File.separator + ProjectSetting.NewVersionName + ".apk");
 
-                if(outputFile.exists()){
+                if (outputFile.exists()) {
                     outputFile.delete();
-                }
-                else
-                {
+                } else {
                     outputFile.createNewFile();
                 }
 

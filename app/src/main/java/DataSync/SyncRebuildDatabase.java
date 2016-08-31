@@ -7,23 +7,20 @@ import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.IBinder;
 
-//import com.data.rhis2.LoginActivity;
-
 import Common.Connection;
-import Common.Global;
+
+//import com.data.rhis2.LoginActivity;
 
 /**
  * Created by TanvirHossain on 14/03/2015.
  */
 
-public class SyncRebuildDatabase extends Service
-{
+public class SyncRebuildDatabase extends Service {
     Connection C;
     private NotificationManager mManager;
 
     @Override
-    public IBinder onBind(Intent arg0)
-    {
+    public IBinder onBind(Intent arg0) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -48,65 +45,9 @@ public class SyncRebuildDatabase extends Service
         new DataSyncTask().execute();
     }
 
-    private class DataSyncTask extends AsyncTask<String, Void, String> {
-        String Response = "";
-        /**
-         * This is where YOU do YOUR work. There's nothing for me to write here
-         * you have to fill this in. Make your HTTP request(s) or whatever it is
-         * you have to do to get your updates in here, because this is run in a
-         * separate thread
-         */
-        @Override
-        protected String doInBackground(String... params) {
-            String[] P = Connection.split(params[0],'^');
-
-            String SQLStr = "";
-            SQLStr = "Select zillaid from ProviderDB where";
-            SQLStr += " zillaid   ='" + P[0] + "' and";
-            SQLStr += " upazilaid ='" + P[1] + "' and";
-            SQLStr += " unionid   ='" + P[2] + "' and";
-            SQLStr += " provtype  ='" + P[3] + "' and";
-            SQLStr += " provcode  ='" + P[4] + "' and";
-            SQLStr += " active='1' and DeviceSetting='1'";
-
-            String AreaCode = "";//C.ReturnResult("Existence", SQLStr);
-            if (AreaCode.equals("2")) {
-                Response = "This is not a valid information for device setting or information not available for this provider.";
-            }
-
-            //Rebuild database
-            //if(Response.length()==0)
-            //    C.RebuildDatabase(P[0], P[1], P[2], P[3], P[4]);
-
-            Response = "done";
-
-            return Response;
-        }
-
-        /**
-         * In here you should interpret whatever you fetched in doInBackground
-         * and push any notifications you need to the status bar, using the
-         * NotificationManager. I will not cover this here, go check the docs on
-         * NotificationManager.
-         *
-         * What you HAVE to do is call stopSelf() after you've pushed your
-         * notification(s). This will:
-         * 1) Kill the service so it doesn't waste precious resources
-         * 2) Call onDestroy() which will release the wake lock, so the device
-         *    can go to sleep again and save precious battery.
-         */
-        @Override
-        protected void onPostExecute(String result) {
-            // handle your data
-            stopSelf();
-        }
-    }
-
-
     //@SuppressWarnings("static-access")
     @Override
-    public void onStart(Intent intent, int startId)
-    {
+    public void onStart(Intent intent, int startId) {
         handleIntent(intent);
         /*
         super.onStart(intent, startId);
@@ -143,13 +84,66 @@ public class SyncRebuildDatabase extends Service
         return START_NOT_STICKY;
     }
 
-
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
         //mWakeLock.release();
+    }
+
+    private class DataSyncTask extends AsyncTask<String, Void, String> {
+        String Response = "";
+
+        /**
+         * This is where YOU do YOUR work. There's nothing for me to write here
+         * you have to fill this in. Make your HTTP request(s) or whatever it is
+         * you have to do to get your updates in here, because this is run in a
+         * separate thread
+         */
+        @Override
+        protected String doInBackground(String... params) {
+            String[] P = Connection.split(params[0], '^');
+
+            String SQLStr = "";
+            SQLStr = "Select zillaid from ProviderDB where";
+            SQLStr += " zillaid   ='" + P[0] + "' and";
+            SQLStr += " upazilaid ='" + P[1] + "' and";
+            SQLStr += " unionid   ='" + P[2] + "' and";
+            SQLStr += " provtype  ='" + P[3] + "' and";
+            SQLStr += " provcode  ='" + P[4] + "' and";
+            SQLStr += " active='1' and DeviceSetting='1'";
+
+            String AreaCode = "";//C.ReturnResult("Existence", SQLStr);
+            if (AreaCode.equals("2")) {
+                Response = "This is not a valid information for device setting or information not available for this provider.";
+            }
+
+            //Rebuild database
+            //if(Response.length()==0)
+            //    C.RebuildDatabase(P[0], P[1], P[2], P[3], P[4]);
+
+            Response = "done";
+
+            return Response;
+        }
+
+        /**
+         * In here you should interpret whatever you fetched in doInBackground
+         * and push any notifications you need to the status bar, using the
+         * NotificationManager. I will not cover this here, go check the docs on
+         * NotificationManager.
+         * <p>
+         * What you HAVE to do is call stopSelf() after you've pushed your
+         * notification(s). This will:
+         * 1) Kill the service so it doesn't waste precious resources
+         * 2) Call onDestroy() which will release the wake lock, so the device
+         * can go to sleep again and save precious battery.
+         */
+        @Override
+        protected void onPostExecute(String result) {
+            // handle your data
+            stopSelf();
+        }
     }
 
 }

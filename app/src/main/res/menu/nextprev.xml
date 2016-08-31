@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">    
-    <item android:id="@+id/prev" android:title="Prev. Day" android:showAsAction="ifRoom|withText"/>
-    <item android:id="@+id/next" android:title="Next Day" android:showAsAction="ifRoom|withText"/>
-    <item android:id="@+id/homemenu" android:title="Close" android:showAsAction="ifRoom|withText"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/prev"
+        android:showAsAction="ifRoom|withText"
+        android:title="Prev. Day" />
+    <item
+        android:id="@+id/next"
+        android:showAsAction="ifRoom|withText"
+        android:title="Next Day" />
+    <item
+        android:id="@+id/homemenu"
+        android:showAsAction="ifRoom|withText"
+        android:title="Close" />
 </menu>

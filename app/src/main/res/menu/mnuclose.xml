@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menuClose" android:title="Close" android:icon="@drawable/close" android:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/menuClose"
+        android:icon="@drawable/close"
+        android:showAsAction="ifRoom|withText"
+        android:title="Close" />
 </menu>

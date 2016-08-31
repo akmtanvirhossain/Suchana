@@ -11,57 +11,53 @@ import Common.Connection;
 public class Sync_Data {
 
     //download data from server(working)
-    public void SyncTable_Download(Context con, String TableName, String WhereCondition)
-    {
+    public void SyncTable_Download(Context con, String TableName, String WhereCondition) {
         String VariableList = "";
-        String UniqueField  = "";
-        String SQLStr       = "";
-        String Res          = "";
+        String UniqueField = "";
+        String SQLStr = "";
+        String Res = "";
 
         Connection C = new Connection(con);
 
-        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='"+ TableName +"'");
+        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='" + TableName + "'");
         cur_H.moveToFirst();
 
-        while(!cur_H.isAfterLast())
-        {
-            if(WhereCondition.length()==0)
-                SQLStr       = "Select "+ cur_H.getString(cur_H.getColumnIndex("columnlist")) +" from "+ TableName;
+        while (!cur_H.isAfterLast()) {
+            if (WhereCondition.length() == 0)
+                SQLStr = "Select " + cur_H.getString(cur_H.getColumnIndex("columnlist")) + " from " + TableName;
             else
-                SQLStr       = "Select "+ cur_H.getString(cur_H.getColumnIndex("columnlist")) +" from "+ TableName +" Where "+ WhereCondition;
+                SQLStr = "Select " + cur_H.getString(cur_H.getColumnIndex("columnlist")) + " from " + TableName + " Where " + WhereCondition;
 
             VariableList = cur_H.getString(cur_H.getColumnIndex("columnlist"));
-            UniqueField  = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
+            UniqueField = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
             cur_H.moveToNext();
         }
         cur_H.close();
 
-        Res = C.DownloadJSON(SQLStr,TableName,VariableList,UniqueField);
+        Res = C.DownloadJSON(SQLStr, TableName, VariableList, UniqueField);
     }
 
     //upload data to server(working)
-    public void SyncTable_Upload(Context con, String TableName)
-    {
+    public void SyncTable_Upload(Context con, String TableName) {
         String VariableList = "";
-        String UniqueField  = "";
-        String SQLStr       = "";
-        String Res          = "";
+        String UniqueField = "";
+        String SQLStr = "";
+        String Res = "";
 
         Connection C = new Connection(con);
 
-        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='"+ TableName +"'");
+        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='" + TableName + "'");
         cur_H.moveToFirst();
 
-        while(!cur_H.isAfterLast())
-        {
-            SQLStr       = "Select "+ cur_H.getString(cur_H.getColumnIndex("columnlist")) +" from "+ TableName +" Where Upload='2'";
+        while (!cur_H.isAfterLast()) {
+            SQLStr = "Select " + cur_H.getString(cur_H.getColumnIndex("columnlist")) + " from " + TableName + " Where Upload='2'";
             VariableList = cur_H.getString(cur_H.getColumnIndex("columnlist"));
-            UniqueField  = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
+            UniqueField = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
             cur_H.moveToNext();
         }
         cur_H.close();
 
-        Res = C.UploadJSON(TableName,VariableList,UniqueField);
+        Res = C.UploadJSON(TableName, VariableList, UniqueField);
     }
 
 
@@ -95,27 +91,25 @@ public class Sync_Data {
     }*/
 
 
-    public String[] Sync_Parameter(Context con, String TableName)
-    {
+    public String[] Sync_Parameter(Context con, String TableName) {
         String VariableList = "";
-        String UniqueField  = "";
-        String SQLStr       = "";
+        String UniqueField = "";
+        String SQLStr = "";
 
         Connection C = new Connection(con);
 
-        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='"+ TableName +"'");
+        Cursor cur_H = C.ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='" + TableName + "'");
         cur_H.moveToFirst();
 
-        while(!cur_H.isAfterLast())
-        {
-            SQLStr       = "Select "+ cur_H.getString(cur_H.getColumnIndex("columnlist")) +" from "+ TableName +" Where Upload='2'";
+        while (!cur_H.isAfterLast()) {
+            SQLStr = "Select " + cur_H.getString(cur_H.getColumnIndex("columnlist")) + " from " + TableName + " Where Upload='2'";
             VariableList = cur_H.getString(cur_H.getColumnIndex("columnlist"));
-            UniqueField  = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
+            UniqueField = cur_H.getString(cur_H.getColumnIndex("uniqueid"));
             cur_H.moveToNext();
         }
         cur_H.close();
-        String[] ParaList = new String[]{SQLStr,VariableList,UniqueField};
+        String[] ParaList = new String[]{SQLStr, VariableList, UniqueField};
 
-        return  ParaList;
+        return ParaList;
     }
 }

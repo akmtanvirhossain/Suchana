@@ -1,29 +1,23 @@
 package DataSync;
 
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.IBinder;
-import android.os.PowerManager;
 
 import Common.Connection;
 
 /*
  * Created by TanvirHossain on 08/03/2015.
  */
-public class DataSyncService extends Service
-{
+public class DataSyncService extends Service {
     Connection C;
     private NotificationManager mManager;
 
     @Override
-    public IBinder onBind(Intent arg0)
-    {
+    public IBinder onBind(Intent arg0) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -56,6 +50,25 @@ public class DataSyncService extends Service
         new DataSyncTask().execute();
     }
 
+    //@SuppressWarnings("static-access")
+    @Override
+    public void onStart(Intent intent, int startId) {
+        handleIntent(intent);
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        handleIntent(intent);
+        return START_NOT_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+        //mWakeLock.release();
+    }
+
     private class DataSyncTask extends AsyncTask<Void, Void, Void> {
         /**
          * This is where YOU do YOUR work. There's nothing for me to write here
@@ -70,7 +83,7 @@ public class DataSyncService extends Service
             String ColumnList = "";
             String UniqueField = "";
 
-            String ResponseString="Status:";
+            String ResponseString = "Status:";
             String response;
 
             try {
@@ -81,14 +94,14 @@ public class DataSyncService extends Service
                         String ColumnList = "";
                         String UniqueField = "";
 
-                        String ResponseString="Status:";
+                        String ResponseString = "Status:";
                         String response;
 
                         try {
                             //Data upload to central server
                             TableName = "household";
                             VariableList = "dist,upz,un,mouza,vill,paddr,permaaddress,provtype,provcode,hhno,religion,vgfcard,subblock,unit,hhhead,totalmem,starttime,endtime,lat,lon,userid,endt,upload";
-                            response = C.UploadJSON(TableName , VariableList , "dist, upz, un, mouza, vill,provtype,provcode, hhno");
+                            response = C.UploadJSON(TableName, VariableList, "dist, upz, un, mouza, vill,provtype,provcode, hhno");
 
                         } catch (Exception e) {
 
@@ -110,41 +123,18 @@ public class DataSyncService extends Service
          * and push any notifications you need to the status bar, using the
          * NotificationManager. I will not cover this here, go check the docs on
          * NotificationManager.
-         *
+         * <p>
          * What you HAVE to do is call stopSelf() after you've pushed your
          * notification(s). This will:
          * 1) Kill the service so it doesn't waste precious resources
          * 2) Call onDestroy() which will release the wake lock, so the device
-         *    can go to sleep again and save precious battery.
+         * can go to sleep again and save precious battery.
          */
         @Override
         protected void onPostExecute(Void result) {
             // handle your data
             stopSelf();
         }
-    }
-
-
-    //@SuppressWarnings("static-access")
-    @Override
-    public void onStart(Intent intent, int startId)
-    {
-        handleIntent(intent);
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        handleIntent(intent);
-        return START_NOT_STICKY;
-    }
-
-
-    @Override
-    public void onDestroy()
-    {
-        // TODO Auto-generated method stub
-        super.onDestroy();
-        //mWakeLock.release();
     }
 
 }

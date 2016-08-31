@@ -21,13 +21,12 @@ public class SettingForm extends Activity {
     Global g;
     //private ProgressDialog dialog;
 
-    String Site   = "";
+    String Site = "";
     String UserID = "";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try
-        {
+        try {
             setContentView(R.layout.devicesetting);
             C = new Connection(this);
             g = Global.getInstance();
@@ -37,25 +36,25 @@ public class SettingForm extends Activity {
                 return;
             }
 
-            final Spinner spnUser = (Spinner)findViewById(R.id.spnUser);
+            final Spinner spnUser = (Spinner) findViewById(R.id.spnUser);
             SpinnerItem(spnUser, "select UserId+'-'+UserName from UserList order by UserId");
 
-            Button cmdSave = (Button)findViewById(R.id.cmdSave);
+            Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View arg0) {
                     try {
-                        String SQLStr   = "";
+                        String SQLStr = "";
 
                         String[] User = spnUser.getSelectedItem().toString().split("-");
                         UserID = User[0];
 
-                        String Setting = C.ReturnResult("Existence", "Select UserId from UserList where UserId='"+ Connection.SelectedSpinnerValue(spnUser.getSelectedItem().toString(),"-") +"' and Setting='1'");
+                        String Setting = C.ReturnResult("Existence", "Select UserId from UserList where UserId='" + Connection.SelectedSpinnerValue(spnUser.getSelectedItem().toString(), "-") + "' and Setting='1'");
                         if (Setting.equals("2")) {
-                            Connection.MessageBox(SettingForm.this, "Device ID :"+ spnUser.getSelectedItem().toString() +" is not allowed to configure a mobile device, contact with administrator.");
+                            Connection.MessageBox(SettingForm.this, "Device ID :" + spnUser.getSelectedItem().toString() + " is not allowed to configure a mobile device, contact with administrator.");
                             return;
                         }
 
-                        String ResponseString="Status:";
+                        String ResponseString = "Status:";
 
                         final ProgressDialog progDailog = ProgressDialog.show(SettingForm.this, "", "Please Wait . . .", true);
 
@@ -75,27 +74,22 @@ public class SettingForm extends Activity {
 
                             }
                         }.start();
-                    }
-                    catch(Exception ex)
-                    {
+                    } catch (Exception ex) {
                         Connection.MessageBox(SettingForm.this, ex.getMessage());
                         return;
                     }
                 }
             });
-        }
-        catch(Exception ex)
-        {
+        } catch (Exception ex) {
             Connection.MessageBox(SettingForm.this, ex.getMessage());
             return;
         }
     }
 
-    private void SpinnerItem(Spinner SpinnerName, String SQL)
-    {
+    private void SpinnerItem(Spinner SpinnerName, String SQL) {
         List<String> listItem = new ArrayList<String>();
         listItem = C.DataListJSON(SQL);
-        ArrayAdapter<String> adptrList= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listItem);
+        ArrayAdapter<String> adptrList = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listItem);
         SpinnerName.setAdapter(adptrList);
     }
 }
