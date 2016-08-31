@@ -27,16 +27,15 @@ import Common.Global;
 import Common.ProjectSetting;
 
 public class LoginActivity extends Activity {
+    public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
     Connection C;
     Global g;
     boolean netwoekAvailable=false;
-    public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
-    private ProgressDialog dialog;
     int count = 0;
-
     TextView lblStaffType;
-    String   SystemUpdateDT="";
-    private  String Password="";
+    String SystemUpdateDT = "";
+    private ProgressDialog dialog;
+    private String Password = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
