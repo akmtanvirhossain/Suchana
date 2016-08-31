@@ -2,17 +2,10 @@ package org.icddrb.suchana;
 
 //Android Manifest Code
 //<activity android:name=".Identity" android:label="Identity" />
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+//suchona update need to check : Tanvir
 
 import android.Manifest;
-import android.app.*;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -21,74 +14,53 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.util.Patterns;
 import android.view.KeyEvent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
 import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
 
-import Common.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
 
 public class Identity extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String SHUCHONAID = "";
+    static String RND = "";
     boolean netwoekAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
-
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout secAgeGroup;
     TextView VlblAgeGroup;
@@ -102,43 +74,36 @@ public class Identity extends Activity {
     LinearLayout secH01;
     TextView VlblH01;
     RadioGroup rdogrpH01;
-
     RadioButton rdoH011;
     RadioButton rdoH012;
     LinearLayout secH02;
     TextView VlblH02;
     RadioGroup rdogrpH02;
-
     RadioButton rdoH021;
     RadioButton rdoH022;
     LinearLayout secH03;
     TextView VlblH03;
     RadioGroup rdogrpH03;
-
     RadioButton rdoH031;
     RadioButton rdoH032;
     LinearLayout secH04;
     TextView VlblH04;
     RadioGroup rdogrpH04;
-
     RadioButton rdoH041;
     RadioButton rdoH042;
     LinearLayout secH05;
     TextView VlblH05;
     RadioGroup rdogrpH05;
-
     RadioButton rdoH051;
     RadioButton rdoH052;
     LinearLayout secH06;
     TextView VlblH06;
     RadioGroup rdogrpH06;
-
     RadioButton rdoH061;
     RadioButton rdoH062;
     LinearLayout secH07;
     TextView VlblH07;
     RadioGroup rdogrpH07;
-
     RadioButton rdoH071;
     RadioButton rdoH072;
     LinearLayout secH07a;
@@ -162,7 +127,6 @@ public class Identity extends Activity {
     LinearLayout secH12;
     TextView VlblH12;
     RadioGroup rdogrpH12;
-
     RadioButton rdoH121;
     RadioButton rdoH122;
     RadioButton rdoH123;
@@ -184,11 +148,53 @@ public class Identity extends Activity {
     LinearLayout secRnd;
     TextView VlblRnd;
     EditText txtRnd;
-
     String StartTime;
     Bundle IDbundle;
-    static String SHUCHONAID = "";
-    static String RND = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            dtpDate = (EditText) findViewById(R.id.dtpH14);
+            if (VariableID.equals("btnH14")) {
+                dtpDate = (EditText) findViewById(R.id.dtpH14);
+            }
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime = null;
+
+
+            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -800,7 +806,6 @@ public class Identity extends Activity {
         }
     }
 
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -813,38 +818,6 @@ public class Identity extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            dtpDate = (EditText) findViewById(R.id.dtpH14);
-            if (VariableID.equals("btnH14")) {
-                dtpDate = (EditText) findViewById(R.id.dtpH14);
-            }
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................
