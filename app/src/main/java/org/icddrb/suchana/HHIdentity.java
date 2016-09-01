@@ -376,10 +376,12 @@ public class HHIdentity extends Activity {
                     if (checkedId == R.id.rdoH123) {
                         secH12x.setVisibility(View.VISIBLE);
                     } else {
+                        txtH12x.setText("");
                         secH12x.setVisibility(View.GONE);
                     }
                 }
             });
+            secH12x.setVisibility(View.GONE);
             secH01 = (LinearLayout) findViewById(R.id.secH01);
             VlblH01 = (TextView) findViewById(R.id.VlblH01);
             rdogrpH01 = (RadioGroup) findViewById(R.id.rdogrpH01);

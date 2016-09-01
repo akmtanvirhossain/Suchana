@@ -39,6 +39,26 @@
         <activity
             android:name="org.icddrb.suchana.MainMenu"
             android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.HHIdentity"
+            android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.HHIdentity_list"
+            android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.Member"
+            android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.Member_list"
+            android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.SES"
+            android:label="Main Menu"></activity>
+        <activity
+            android:name="org.icddrb.suchana.SES_list"
+            android:label="Main Menu"></activity>
+
+
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"></activity>-->
 
         //Android Manifest Code

@@ -322,17 +322,23 @@ public class Member extends Activity {
             listH28.add("5-অন্যান্য (উল্লেখ কর)");
             ArrayAdapter<String> adptrH28 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH28);
             spnH28.setAdapter(adptrH28);
-            spnH28.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnH28.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 5) {
                         secH28X.setVisibility(View.VISIBLE);
                     } else {
+                        txtH28X.setText("");
                         secH28X.setVisibility(View.GONE);
                     }
                 }
-            });
 
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            secH28X.setVisibility(View.GONE);
             secH29 = (LinearLayout) findViewById(R.id.secH29);
             VlblH29 = (TextView) findViewById(R.id.VlblH29);
             rdogrpH29 = (RadioGroup) findViewById(R.id.rdogrpH29);
@@ -391,17 +397,24 @@ public class Member extends Activity {
             secH212X = (LinearLayout) findViewById(R.id.secH212X);
             VlblH212X = (TextView) findViewById(R.id.VlblH212X);
             txtH212X = (EditText) findViewById(R.id.txtH212X);
-            spnH212.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnH212.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 20) {
                         secH212X.setVisibility(View.VISIBLE);
                     } else {
+                        txtH212X.setText("");
                         secH212X.setVisibility(View.GONE);
                     }
                 }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
             });
 
+            secH212X.setVisibility(View.GONE);
             secH213 = (LinearLayout) findViewById(R.id.secH213);
             VlblH213 = (TextView) findViewById(R.id.VlblH213);
             spnH213 = (Spinner) findViewById(R.id.spnH213);
@@ -464,16 +477,24 @@ public class Member extends Activity {
             secH215X = (LinearLayout) findViewById(R.id.secH215X);
             VlblH215X = (TextView) findViewById(R.id.VlblH215X);
             txtH215X = (EditText) findViewById(R.id.txtH215X);
-            spnH215.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnH215.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 8) {
                         secH215X.setVisibility(View.VISIBLE);
                     } else {
+                        txtH215X.setText("");
                         secH215X.setVisibility(View.GONE);
                     }
                 }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
             });
+            secH215X.setVisibility(View.GONE);
+
             secH216 = (LinearLayout) findViewById(R.id.secH216);
             VlblH216 = (TextView) findViewById(R.id.VlblH216);
             spnH216 = (Spinner) findViewById(R.id.spnH216);
@@ -515,16 +536,24 @@ public class Member extends Activity {
             secH216X = (LinearLayout) findViewById(R.id.secH216X);
             VlblH216X = (TextView) findViewById(R.id.VlblH216X);
             txtH216X = (EditText) findViewById(R.id.txtH216X);
-            spnH216.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnH216.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 8) {
                         secH216X.setVisibility(View.VISIBLE);
                     } else {
+                        txtH216X.setText("");
                         secH216X.setVisibility(View.GONE);
                     }
                 }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+
             });
+            secH216X.setVisibility(View.GONE);
             secH217 = (LinearLayout) findViewById(R.id.secH217);
             VlblH217 = (TextView) findViewById(R.id.VlblH217);
             txtH217 = (EditText) findViewById(R.id.txtH217);

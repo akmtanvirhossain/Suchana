@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +18,13 @@ import Common.Global;
 public class MainMenu extends Activity {
 
     static String USERID = "";
+    Button cmdMenuIdentity;
+    Button cmdMenuMember;
+    Button cmdMenuSES;
+    
     Button cmdDataUpload;
     Button cmdDataSync;
+
     Connection C;
     Global g;
 
@@ -33,6 +39,32 @@ public class MainMenu extends Activity {
 
             USERID = g.getUserId();
 
+            cmdMenuIdentity = (Button) findViewById(R.id.cmdMenuIdentity);
+            cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), HHIdentity_list.class);
+                    startActivity(f1);
+                }
+            });
+
+            cmdMenuMember = (Button) findViewById(R.id.cmdMenuMember);
+            cmdMenuMember.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Member_list.class);
+                    startActivity(f1);
+                }
+            });
+
+            cmdMenuSES = (Button) findViewById(R.id.cmdMenuSES);
+            cmdMenuSES.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), SES_list.class);
+                    startActivity(f1);
+                }
+            });
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {
