@@ -366,6 +366,20 @@ public class HHIdentity extends Activity {
             rdoH121 = (RadioButton) findViewById(R.id.rdoH121);
             rdoH122 = (RadioButton) findViewById(R.id.rdoH122);
             rdoH123 = (RadioButton) findViewById(R.id.rdoH123);
+            secH12x = (LinearLayout) findViewById(R.id.secH12x);
+            VlblH12x = (TextView) findViewById(R.id.VlblH12x);
+            txtH12x = (EditText) findViewById(R.id.txtH12x);
+            secH12x.setVisibility(View.GONE);
+            rdogrpH12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if (checkedId == R.id.rdoH123) {
+                        secH12x.setVisibility(View.VISIBLE);
+                    } else {
+                        secH12x.setVisibility(View.GONE);
+                    }
+                }
+            });
             secH01 = (LinearLayout) findViewById(R.id.secH01);
             VlblH01 = (TextView) findViewById(R.id.VlblH01);
             rdogrpH01 = (RadioGroup) findViewById(R.id.rdogrpH01);
@@ -378,9 +392,7 @@ public class HHIdentity extends Activity {
 
             rdoH021 = (RadioButton) findViewById(R.id.rdoH021);
             rdoH022 = (RadioButton) findViewById(R.id.rdoH022);
-            secH12x = (LinearLayout) findViewById(R.id.secH12x);
-            VlblH12x = (TextView) findViewById(R.id.VlblH12x);
-            txtH12x = (EditText) findViewById(R.id.txtH12x);
+
             secH15 = (LinearLayout) findViewById(R.id.secH15);
             VlblH15 = (TextView) findViewById(R.id.VlblH15);
             txtH15 = (EditText) findViewById(R.id.txtH15);
@@ -481,7 +493,7 @@ public class HHIdentity extends Activity {
                 }
             });
 
-
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
