@@ -21,7 +21,7 @@ public class MainMenu extends Activity {
     Button cmdMenuIdentity;
     Button cmdMenuMember;
     Button cmdMenuSES;
-    
+    Button cmdMenuLand;
     Button cmdDataUpload;
     Button cmdDataSync;
 
@@ -65,6 +65,17 @@ public class MainMenu extends Activity {
                     startActivity(f1);
                 }
             });
+
+            cmdMenuLand = (Button) findViewById(R.id.cmdMenuLand);
+            cmdMenuLand.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Land_list.class);
+                    startActivity(f1);
+                }
+            });
+
+
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -28,7 +28,7 @@
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
-
+    </LinearLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dip"
@@ -848,7 +848,7 @@
                         android:id="@+id/rdogrpH341"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:textSize="20sp">
 
                         <RadioButton
@@ -867,13 +867,6 @@
                             android:text="না"
                             android:textSize="20sp" />
 
-                        <RadioButton
-                            android:id="@+id/rdoH3413"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
-                            android:text=""
-                            android:textSize="20sp" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -1494,13 +1487,6 @@
                             android:text="NA"
                             android:textSize="20sp" />
 
-                        <RadioButton
-                            android:id="@+id/rdoH674"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
-                            android:text=""
-                            android:textSize="20sp" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -1964,13 +1950,6 @@
                             android:text="ভাগাভাগি "
                             android:textSize="20sp" />
 
-                        <RadioButton
-                            android:id="@+id/rdoH612a4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
-                            android:text=""
-                            android:textSize="20sp" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -4707,4 +4686,3 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-</ScrollView>

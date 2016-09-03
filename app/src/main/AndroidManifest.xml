@@ -41,23 +41,28 @@
             android:label="Main Menu"></activity>
         <activity
             android:name="org.icddrb.suchana.HHIdentity"
-            android:label="Main Menu"></activity>
+            android:label="IDENTITY FORM"></activity>
         <activity
             android:name="org.icddrb.suchana.HHIdentity_list"
-            android:label="Main Menu"></activity>
+            android:label="IDENTITY LIST"></activity>
         <activity
             android:name="org.icddrb.suchana.Member"
-            android:label="Main Menu"></activity>
+            android:label="MEMBER FORM"></activity>
         <activity
             android:name="org.icddrb.suchana.Member_list"
-            android:label="Main Menu"></activity>
+            android:label="MEMBER LIST"></activity>
         <activity
             android:name="org.icddrb.suchana.SES"
-            android:label="Main Menu"></activity>
+            android:label="SES FORM"></activity>
         <activity
             android:name="org.icddrb.suchana.SES_list"
-            android:label="Main Menu"></activity>
-
+            android:label="SES FORM"></activity>
+        <activity
+            android:name="org.icddrb.suchana.Land"
+            android:label="LAND FORM"></activity>
+        <activity
+            android:name="org.icddrb.suchana.Land_list"
+            android:label="LAND LIST"></activity>
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"></activity>-->
 

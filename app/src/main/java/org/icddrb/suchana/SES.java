@@ -799,7 +799,7 @@ public class SES extends Activity {
 
             rdoH3411 = (RadioButton) findViewById(R.id.rdoH3411);
             rdoH3412 = (RadioButton) findViewById(R.id.rdoH3412);
-            rdoH3413 = (RadioButton) findViewById(R.id.rdoH3413);
+            //rdoH3413 = (RadioButton) findViewById(R.id.rdoH3413);
             secH342 = (LinearLayout) findViewById(R.id.secH342);
             VlblH342 = (TextView) findViewById(R.id.VlblH342);
             txtH342 = (EditText) findViewById(R.id.txtH342);
@@ -948,7 +948,7 @@ public class SES extends Activity {
             rdoH671 = (RadioButton) findViewById(R.id.rdoH671);
             rdoH672 = (RadioButton) findViewById(R.id.rdoH672);
             rdoH673 = (RadioButton) findViewById(R.id.rdoH673);
-            rdoH674 = (RadioButton) findViewById(R.id.rdoH674);
+            //rdoH674 = (RadioButton) findViewById(R.id.rdoH674);
             secH68 = (LinearLayout) findViewById(R.id.secH68);
             VlblH68 = (TextView) findViewById(R.id.VlblH68);
             rdogrpH68 = (RadioGroup) findViewById(R.id.rdogrpH68);
@@ -1019,7 +1019,7 @@ public class SES extends Activity {
             rdoH612a1 = (RadioButton) findViewById(R.id.rdoH612a1);
             rdoH612a2 = (RadioButton) findViewById(R.id.rdoH612a2);
             rdoH612a3 = (RadioButton) findViewById(R.id.rdoH612a3);
-            rdoH612a4 = (RadioButton) findViewById(R.id.rdoH612a4);
+            // rdoH612a4 = (RadioButton) findViewById(R.id.rdoH612a4);
             secLBH612 = (LinearLayout) findViewById(R.id.secLBH612);
             secH612b1 = (LinearLayout) findViewById(R.id.secH612b1);
             VlblH612b1 = (TextView) findViewById(R.id.VlblH612b1);
@@ -1853,7 +1853,7 @@ public class SES extends Activity {
 
             objSave.setH332A(txtH332A.getText().toString());
             objSave.setH332B(txtH332B.getText().toString());
-            String[] d_rdogrpH341 = new String[]{"1", "0", ""};
+            String[] d_rdogrpH341 = new String[]{"1", "0"};
             objSave.setH341("");
             for (int i = 0; i < rdogrpH341.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH341.getChildAt(i);
@@ -1890,7 +1890,7 @@ public class SES extends Activity {
             }
 
             objSave.setH66((spnH66.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH66.getSelectedItem().toString(), "-")));
-            String[] d_rdogrpH67 = new String[]{"1", "0", "9", ""};
+            String[] d_rdogrpH67 = new String[]{"1", "0", "9"};
             objSave.setH67("");
             for (int i = 0; i < rdogrpH67.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH67.getChildAt(i);
@@ -1929,7 +1929,7 @@ public class SES extends Activity {
             objSave.setH612RX(txtH612RX.getText().toString());
             objSave.setH612D((spnH612D.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH612D.getSelectedItem().toString(), "-")));
             objSave.setH612DX(txtH612DX.getText().toString());
-            String[] d_rdogrpH612a = new String[]{"1", "0", "3", ""};
+            String[] d_rdogrpH612a = new String[]{"1", "0", "3"};
             objSave.setH612a("");
             for (int i = 0; i < rdogrpH612a.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH612a.getChildAt(i);
