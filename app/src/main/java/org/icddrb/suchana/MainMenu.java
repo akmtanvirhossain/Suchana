@@ -22,6 +22,7 @@ public class MainMenu extends Activity {
     Button cmdMenuMember;
     Button cmdMenuSES;
     Button cmdMenuLand;
+    Button cmdMenuHDDS;
     Button cmdDataUpload;
     Button cmdDataSync;
 
@@ -74,6 +75,17 @@ public class MainMenu extends Activity {
                     startActivity(f1);
                 }
             });
+
+            cmdMenuHDDS = (Button) findViewById(R.id.cmdMenuHDDS);
+            cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
+                    startActivity(f1);
+                }
+            });
+
+
 
 
 

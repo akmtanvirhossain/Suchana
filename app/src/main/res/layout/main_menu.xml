@@ -88,7 +88,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/cmdMenuHDDS"
                 style="@style/menuButtonStyle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Menu-1"
+                android:text="HDDS"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 

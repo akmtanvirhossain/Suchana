@@ -64,6 +64,14 @@
             android:name="org.icddrb.suchana.Land_list"
             android:label="LAND LIST"></activity>
 
+        <activity
+            android:name="org.icddrb.suchana.HDDS_list"
+            android:label="HDDS LIST"></activity>
+        <activity
+            android:name="org.icddrb.suchana.HDDS"
+            android:label="HDDS FORM"></activity>
+
+
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"></activity>-->
 
         //Android Manifest Code
