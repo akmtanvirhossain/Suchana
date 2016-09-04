@@ -153,7 +153,7 @@ public class SES_list extends Activity {
         try {
 
             SES_DataModel d = new SES_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName;
             List<SES_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
