@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="Savings"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/secRnd"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRnd"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblRnd"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="রাউন্ড নাম্বার"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtRnd"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSuchanaID"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblSuchanaID"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে/ Suchona ID"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtSuchanaID"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH101"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH101"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H101"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH101"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি  বা আপনার স্ত্রী বা পরিবারেরঅন্যান্যসদস্য কি কোন সমব্যয় সমিতি  বা এলাকার সঞ্চয়ীকমিটিরসদস্য  সুচনা বহির্ভূত"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1011"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1012"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH102"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH102"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H102"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH102"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কি সুচনা সঞ্চয়ী গ্রুপের সদস্য	"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1021"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1022"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH103"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH103"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H103"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH103"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনার এবং / অথবা আপনার স্ত্রী কোন সঞ্চয় আছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1031"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1032"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1031"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1031"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1031"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1031"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ঘরে সঞ্চয়"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1031"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1032"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1032"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1032"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1032"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="মাটির ব্যাঙ্ক সিন্দুকে সঞ্চয়"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1032"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1033"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1033"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1033"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1033"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ব্যাংক  পোস্ট অফিস"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1033"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1034a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1034a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1034a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1034a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য এনজিও"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1034a"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1034b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1034b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1034b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1034b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ক্ষুদ্রঋণ দানকারী প্রতিষ্ঠান"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1034b"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1034c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1034c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1034c"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1034c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="সুচনা সঞ্চয়ী গ্রুপ"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1034c"
+                    style="@style/customEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1035a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1035a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1035a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1035a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="1. কিসের জন্য সঞ্চয় করছেন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1035a"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1035b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1035b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1035b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1035b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="2.কিসের জন্য সঞ্চয় করছেন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1035b"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1035c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1035c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1035c"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1035c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="3. কিসের জন্য সঞ্চয় করছেন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1035c"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1035X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1035X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1035X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1035X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="উল্লেখ করুন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1035X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="60dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1036a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1036a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1036a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="1. অন্য কোন এনজিও তে সঞ্চয় থাকলে তার নাম লিখুন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1036a"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1036b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1036b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1036b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="2. অন্য কোন এনজিও তে সঞ্চয় থাকলে তার নাম লিখুন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1036b"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1036c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1036c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1036c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="3. অন্য কোন এনজিও তে সঞ্চয় থাকলে তার নাম লিখুন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1036c"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1036X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1036X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1036X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="উল্লেখ করুন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1036X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="60dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
+
+                <Button
+                    android:id="@+id/cmdSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/button_style"
+                    android:text=" Save -> Continue "
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

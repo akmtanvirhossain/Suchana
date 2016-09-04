@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:paddingLeft="10sp"
-            android:text="Member"
+            android:text="Loan"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
     </LinearLayout>
@@ -79,13 +79,13 @@
 
     <include
         layout="@layout/common_heading"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"
-        android:layout_marginBottom="5sp"
+        android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
 
     <ScrollView
@@ -112,7 +112,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="750sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"

@@ -35,44 +35,56 @@
 
         <activity
             android:name="org.icddrb.suchana.SettingForm"
-            android:label="Device Setting"></activity>
+            android:label="Device Setting" />
         <activity
             android:name="org.icddrb.suchana.MainMenu"
-            android:label="Main Menu"></activity>
+            android:label="Main Menu" />
         <activity
             android:name="org.icddrb.suchana.HHIdentity"
-            android:label="IDENTITY FORM"></activity>
+            android:label="IDENTITY FORM" />
         <activity
             android:name="org.icddrb.suchana.HHIdentity_list"
-            android:label="IDENTITY LIST"></activity>
+            android:label="IDENTITY LIST" />
         <activity
             android:name="org.icddrb.suchana.Member"
-            android:label="MEMBER FORM"></activity>
+            android:label="MEMBER FORM" />
         <activity
             android:name="org.icddrb.suchana.Member_list"
-            android:label="MEMBER LIST"></activity>
+            android:label="MEMBER LIST" />
         <activity
             android:name="org.icddrb.suchana.SES"
-            android:label="SES FORM"></activity>
+            android:label="SES FORM" />
         <activity
             android:name="org.icddrb.suchana.SES_list"
-            android:label="SES FORM"></activity>
+            android:label="SES FORM" />
         <activity
             android:name="org.icddrb.suchana.Land"
-            android:label="LAND FORM"></activity>
+            android:label="LAND FORM" />
         <activity
             android:name="org.icddrb.suchana.Land_list"
-            android:label="LAND LIST"></activity>
+            android:label="LAND LIST" />
 
         <activity
             android:name="org.icddrb.suchana.HDDS_list"
-            android:label="HDDS LIST"></activity>
+            android:label="HDDS LIST" />
         <activity
             android:name="org.icddrb.suchana.HDDS"
-            android:label="HDDS FORM"></activity>
+            android:label="HDDS FORM" />
+        <activity
+            android:name="org.icddrb.suchana.Loan_list"
+            android:label="LOAN LIST" />
+        <activity
+            android:name="org.icddrb.suchana.Loan"
+            android:label="LOAN FORM" />
 
+        <activity
+            android:name="org.icddrb.suchana.Savings_list"
+            android:label="SAVING LIST" />
+        <activity
+            android:name="org.icddrb.suchana.Savings"
+            android:label="SAVING FORM" />
 
-        <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"></activity>-->
+        <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 
         //Android Manifest Code
         <!--<activity android:name="org.icddrb.data.Screening" android:label="Screening" />-->

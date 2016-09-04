@@ -143,9 +143,10 @@ public class HDDS_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
-    public String getUpload(){
+    public String getUpload() {
         return _Upload;
     }
+
     public String getRnd() {
         return _Rnd;
     }

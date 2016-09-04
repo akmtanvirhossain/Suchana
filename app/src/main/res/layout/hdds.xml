@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="45sp"
         android:background="@color/pageHeadingBack"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/cmdBack"
@@ -28,7 +28,7 @@
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
-
+    </LinearLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dip"
@@ -4910,4 +4910,3 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-</ScrollView>

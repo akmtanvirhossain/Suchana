@@ -38,6 +38,7 @@ public class Land_DataModel {
     public String getUpload() {
         return _Upload;
     }
+
     public String getRnd() {
         return _Rnd;
     }

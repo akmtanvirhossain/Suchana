@@ -70,6 +70,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"
@@ -112,7 +113,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="750sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
