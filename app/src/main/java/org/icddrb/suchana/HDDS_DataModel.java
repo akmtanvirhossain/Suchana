@@ -143,6 +143,9 @@ public class HDDS_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
+    public String getUpload(){
+        return _Upload;
+    }
     public String getRnd() {
         return _Rnd;
     }
@@ -1320,6 +1323,7 @@ public class HDDS_DataModel {
             d._H717b3 = cur.getString(cur.getColumnIndex("H717b3"));
             d._H717b4 = cur.getString(cur.getColumnIndex("H717b4"));
             d._H717c = cur.getString(cur.getColumnIndex("H717c"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
             data.add(d);
 
             cur.moveToNext();

@@ -11,11 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="#C2E0EC"
+        android:background="@color/HeadingCyan"
         android:orientation="horizontal"
         android:paddingBottom="5px"
         android:paddingTop="5px">
-
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Upload"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -23,40 +29,10 @@
             android:text="Rnd" />
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Dist" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Upz" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Un" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Vill" />
-
-        <TextView
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="SuchanaID" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Result" />
 
     </LinearLayout>
 </LinearLayout>

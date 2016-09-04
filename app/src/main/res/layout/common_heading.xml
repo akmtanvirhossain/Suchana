@@ -11,28 +11,34 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="#C2E0EC"
+        android:background="@color/HeadingCyan"
         android:orientation="horizontal"
         android:paddingBottom="5px"
         android:paddingTop="5px">
 
         <TextView
-            android:id="@+id/VlblUpload"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Upload" />
+            android:layout_marginLeft="15dp"
+            android:text="Upload"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Rnd" />
+            android:text="Rnd"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SuchanaID" />
+            android:text="SuchanaID"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>

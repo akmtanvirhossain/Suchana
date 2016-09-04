@@ -127,6 +127,10 @@ public class SES_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
+    public String getUpload() {
+        return _Upload;
+    }
+
     public String getRnd() {
         return _Rnd;
     }
@@ -1160,6 +1164,8 @@ public class SES_DataModel {
             d._H620X = cur.getString(cur.getColumnIndex("H620X"));
             d._H621 = cur.getString(cur.getColumnIndex("H621"));
             d._H622 = cur.getString(cur.getColumnIndex("H622"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
+
             data.add(d);
 
             cur.moveToNext();

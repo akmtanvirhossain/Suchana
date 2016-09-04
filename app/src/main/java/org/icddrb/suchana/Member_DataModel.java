@@ -50,6 +50,9 @@ public class Member_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
+    public String getUpload() {
+        return _Upload;
+    }
     public String getRnd() {
         return _Rnd;
     }
@@ -390,6 +393,8 @@ public class Member_DataModel {
             d._H218 = cur.getString(cur.getColumnIndex("H218"));
             d._H219 = cur.getString(cur.getColumnIndex("H219"));
             d._H222 = cur.getString(cur.getColumnIndex("H222"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
+
             data.add(d);
 
             cur.moveToNext();

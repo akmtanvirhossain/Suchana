@@ -35,6 +35,9 @@ public class Land_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
+    public String getUpload() {
+        return _Upload;
+    }
     public String getRnd() {
         return _Rnd;
     }
@@ -240,6 +243,8 @@ public class Land_DataModel {
             d._H5h = cur.getString(cur.getColumnIndex("H5h"));
             d._H5Year = cur.getString(cur.getColumnIndex("H5Year"));
             d._H5Month = cur.getString(cur.getColumnIndex("H5Month"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
+
             data.add(d);
 
             cur.moveToNext();

@@ -156,7 +156,7 @@ public class Member_list extends Activity {
         try {
 
             Member_DataModel d = new Member_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H21='" + H21 + "'";
+            String SQL = "Select * from " + TableName;
             List<Member_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -196,6 +196,7 @@ public class Member_list extends Activity {
                 map.put("H218", item.getH218());
                 map.put("H219", item.getH219());
                 map.put("H222", item.getH222());
+                map.put("Upload", item.getUpload());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(Member_list.this, dataList, R.layout.member_list, new String[]{"rowsec"},
@@ -232,70 +233,19 @@ public class Member_list extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.member_row, null);
+                convertView = inflater.inflate(R.layout.common_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView H21 = (TextView) convertView.findViewById(R.id.H21);
-            final TextView H22 = (TextView) convertView.findViewById(R.id.H22);
-            final TextView H23 = (TextView) convertView.findViewById(R.id.H23);
-            final TextView H24Y = (TextView) convertView.findViewById(R.id.H24Y);
-            final TextView H24M = (TextView) convertView.findViewById(R.id.H24M);
-            final TextView H25 = (TextView) convertView.findViewById(R.id.H25);
-            final TextView H26 = (TextView) convertView.findViewById(R.id.H26);
-            final TextView H27 = (TextView) convertView.findViewById(R.id.H27);
-            final TextView H28 = (TextView) convertView.findViewById(R.id.H28);
-            final TextView H28X = (TextView) convertView.findViewById(R.id.H28X);
-            final TextView H29 = (TextView) convertView.findViewById(R.id.H29);
-            final TextView H210 = (TextView) convertView.findViewById(R.id.H210);
-            final TextView H220 = (TextView) convertView.findViewById(R.id.H220);
-            final TextView H221 = (TextView) convertView.findViewById(R.id.H221);
-            final TextView H211 = (TextView) convertView.findViewById(R.id.H211);
-            final TextView H212 = (TextView) convertView.findViewById(R.id.H212);
-            final TextView H212X = (TextView) convertView.findViewById(R.id.H212X);
-            final TextView H213 = (TextView) convertView.findViewById(R.id.H213);
-            final TextView H214 = (TextView) convertView.findViewById(R.id.H214);
-            final TextView H215 = (TextView) convertView.findViewById(R.id.H215);
-            final TextView H215X = (TextView) convertView.findViewById(R.id.H215X);
-            final TextView H216 = (TextView) convertView.findViewById(R.id.H216);
-            final TextView H216X = (TextView) convertView.findViewById(R.id.H216X);
-            final TextView H217 = (TextView) convertView.findViewById(R.id.H217);
-            final TextView H218 = (TextView) convertView.findViewById(R.id.H218);
-            final TextView H219 = (TextView) convertView.findViewById(R.id.H219);
-            final TextView H222 = (TextView) convertView.findViewById(R.id.H222);
+            final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
+
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            H21.setText(o.get("H21"));
-            H22.setText(o.get("H22"));
-            H23.setText(o.get("H23"));
-            H24Y.setText(o.get("H24Y"));
-            H24M.setText(o.get("H24M"));
-            H25.setText(o.get("H25"));
-            H26.setText(o.get("H26"));
-            H27.setText(o.get("H27"));
-            H28.setText(o.get("H28"));
-            H28X.setText(o.get("H28X"));
-            H29.setText(o.get("H29"));
-            H210.setText(o.get("H210"));
-            H220.setText(o.get("H220"));
-            H221.setText(o.get("H221"));
-            H211.setText(o.get("H211"));
-            H212.setText(o.get("H212"));
-            H212X.setText(o.get("H212X"));
-            H213.setText(o.get("H213"));
-            H214.setText(o.get("H214"));
-            H215.setText(o.get("H215"));
-            H215X.setText(o.get("H215X"));
-            H216.setText(o.get("H216"));
-            H216X.setText(o.get("H216X"));
-            H217.setText(o.get("H217"));
-            H218.setText(o.get("H218"));
-            H219.setText(o.get("H219"));
-            H222.setText(o.get("H222"));
+            Upload.setText(o.get("Upload"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

@@ -11,28 +11,25 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="#C2E0EC"
-        android:orientation="horizontal"
-        android:paddingBottom="5px"
-        android:paddingTop="5px">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/VlblUpload"
+            android:id="@+id/txtUploadStatus"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Upload" />
+            android:layout_marginLeft="15dp" />
 
         <TextView
+            android:id="@+id/Rnd"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Rnd" />
+            android:gravity="center" />
 
         <TextView
+            android:id="@+id/SuchanaID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="SuchanaID" />
+            android:gravity="center" />
 
     </LinearLayout>
 </LinearLayout>

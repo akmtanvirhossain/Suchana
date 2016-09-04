@@ -84,7 +84,7 @@
         <item name="android:paddingTop">5sp</item>
         <item name="android:paddingBottom">5sp</item>
         <item name="android:background">@color/HeadingBackground</item>
-        <item name="android:textColor">@color/Heading</item>
+        <item name="android:textColor">@color/HeadingCyan</item>
         <item name="android:paddingRight">10sp</item>
         <item name="android:paddingLeft">10sp</item>
     </style>

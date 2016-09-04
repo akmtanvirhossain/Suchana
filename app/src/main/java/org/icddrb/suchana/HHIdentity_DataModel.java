@@ -44,6 +44,9 @@ public class HHIdentity_DataModel {
     private String _EnDt = "";
     private String _Upload = "2";
 
+    public String getUpload() {
+        return _Upload;
+    }
     public String getRnd() {
         return _Rnd;
     }
@@ -330,6 +333,7 @@ public class HHIdentity_DataModel {
             d._H06 = cur.getString(cur.getColumnIndex("H06"));
             d._H07 = cur.getString(cur.getColumnIndex("H07"));
             d._H07a = cur.getString(cur.getColumnIndex("H07a"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
             data.add(d);
 
             cur.moveToNext();

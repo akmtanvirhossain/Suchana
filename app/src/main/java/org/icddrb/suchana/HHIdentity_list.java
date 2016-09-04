@@ -153,7 +153,7 @@ public class HHIdentity_list extends Activity {
         try {
 
             HHIdentity_DataModel d = new HHIdentity_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName;
             List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -187,6 +187,7 @@ public class HHIdentity_list extends Activity {
                 map.put("H06", item.getH06());
                 map.put("H07", item.getH07());
                 map.put("H07a", item.getH07a());
+                map.put("Upload", item.getUpload());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(HHIdentity_list.this, dataList, R.layout.hhidentity_list, new String[]{"rowsec"},
@@ -223,42 +224,19 @@ public class HHIdentity_list extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.hhidentity_row, null);
+                convertView = inflater.inflate(R.layout.common_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
-            final TextView Dist = (TextView) convertView.findViewById(R.id.Dist);
-            final TextView Upz = (TextView) convertView.findViewById(R.id.Upz);
-            final TextView Un = (TextView) convertView.findViewById(R.id.Un);
-            final TextView Vill = (TextView) convertView.findViewById(R.id.Vill);
-            //final TextView H11 = (TextView) convertView.findViewById(R.id.H11);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-          /*  final TextView AgeGroup = (TextView) convertView.findViewById(R.id.AgeGroup);
-            final TextView H14 = (TextView) convertView.findViewById(R.id.H14);
-            final TextView Result = (TextView) convertView.findViewById(R.id.Result);
-            final TextView OthResult = (TextView) convertView.findViewById(R.id.OthResult);
-            final TextView H12 = (TextView) convertView.findViewById(R.id.H12);
-            final TextView H01 = (TextView) convertView.findViewById(R.id.H01);
-            final TextView H02 = (TextView) convertView.findViewById(R.id.H02);
-            final TextView H12x = (TextView) convertView.findViewById(R.id.H12x);
-            final TextView H15 = (TextView) convertView.findViewById(R.id.H15);
-            final TextView H03 = (TextView) convertView.findViewById(R.id.H03);
-            final TextView H04 = (TextView) convertView.findViewById(R.id.H04);
-            final TextView H17 = (TextView) convertView.findViewById(R.id.H17);
-            final TextView H05 = (TextView) convertView.findViewById(R.id.H05);
-            final TextView H06 = (TextView) convertView.findViewById(R.id.H06);
-            final TextView H07 = (TextView) convertView.findViewById(R.id.H07);
-            final TextView H07a = (TextView) convertView.findViewById(R.id.H07a);*/
+            final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
-            Dist.setText(o.get("Dist"));
-            Upz.setText(o.get("Upz"));
-            Un.setText(o.get("Un"));
-            Vill.setText(o.get("Vill"));
-            //  H11.setText(o.get("H11"));
             SuchanaID.setText(o.get("SuchanaID"));
+            Upload.setText(o.get("Upload"));
+
             /*AgeGroup.setText(o.get("AgeGroup"));
             H14.setText(o.get("H14"));
             Result.setText(o.get("Result"));

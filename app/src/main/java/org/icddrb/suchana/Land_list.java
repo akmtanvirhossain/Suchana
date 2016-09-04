@@ -155,7 +155,7 @@ public class Land_list extends Activity {
         try {
 
             Land_DataModel d = new Land_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SlNo='" + SlNo + "'";
+            String SQL = "Select * from " + TableName;
             List<Land_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -180,6 +180,7 @@ public class Land_list extends Activity {
                 map.put("H5h", item.getH5h());
                 map.put("H5Year", item.getH5Year());
                 map.put("H5Month", item.getH5Month());
+                map.put("Upload", item.getUpload());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(Land_list.this, dataList, R.layout.land_list, new String[]{"rowsec"},
@@ -216,41 +217,19 @@ public class Land_list extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.land_row, null);
+                convertView = inflater.inflate(R.layout.common_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
-            final TextView H5a = (TextView) convertView.findViewById(R.id.H5a);
-            final TextView H5b = (TextView) convertView.findViewById(R.id.H5b);
-            final TextView H5bx = (TextView) convertView.findViewById(R.id.H5bx);
-            final TextView H5c = (TextView) convertView.findViewById(R.id.H5c);
-            final TextView H5d = (TextView) convertView.findViewById(R.id.H5d);
-            final TextView H5e = (TextView) convertView.findViewById(R.id.H5e);
-            final TextView H5f = (TextView) convertView.findViewById(R.id.H5f);
-            final TextView H5g = (TextView) convertView.findViewById(R.id.H5g);
-            final TextView H5h = (TextView) convertView.findViewById(R.id.H5h);
-            final TextView H5Year = (TextView) convertView.findViewById(R.id.H5Year);
-            final TextView H5Month = (TextView) convertView.findViewById(R.id.H5Month);
+            final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
+
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            SlNo.setText(o.get("SlNo"));
-            H5a.setText(o.get("H5a"));
-            H5b.setText(o.get("H5b"));
-            H5bx.setText(o.get("H5bx"));
-            H5c.setText(o.get("H5c"));
-            H5d.setText(o.get("H5d"));
-            H5e.setText(o.get("H5e"));
-            H5f.setText(o.get("H5f"));
-            H5g.setText(o.get("H5g"));
-            H5h.setText(o.get("H5h"));
-            H5Year.setText(o.get("H5Year"));
-            H5Month.setText(o.get("H5Month"));
-
+            Upload.setText(o.get("Upload"));
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     //Write your code here
@@ -264,7 +243,6 @@ public class Land_list extends Activity {
                     startActivity(f1);
                 }
             });
-
 
             return convertView;
         }

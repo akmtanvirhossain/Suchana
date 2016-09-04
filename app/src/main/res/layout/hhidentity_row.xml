@@ -14,38 +14,19 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/txtUploadStatus"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp" />
+        <TextView
             android:id="@+id/Rnd"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/Dist"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/Upz"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/Un"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/Vill"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
             android:id="@+id/SuchanaID"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
