@@ -25,6 +25,7 @@ public class MainMenu extends Activity {
     Button cmdMenuHDDS;
     Button cmdMenuLoan;
     Button cmdMenuSavings;
+    Button cmdMenuHFIAS;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -106,6 +107,14 @@ public class MainMenu extends Activity {
                 }
             });
 
+            cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
+            cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), HFIAS_list.class);
+                    startActivity(f1);
+                }
+            });
 
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);

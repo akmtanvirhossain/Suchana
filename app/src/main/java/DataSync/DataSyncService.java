@@ -123,7 +123,7 @@ public class DataSyncService extends Service {
          * and push any notifications you need to the status bar, using the
          * NotificationManager. I will not cover this here, go check the docs on
          * NotificationManager.
-         * <p/>
+         * <p>
          * What you HAVE to do is call stopSelf() after you've pushed your
          * notification(s). This will:
          * 1) Kill the service so it doesn't waste precious resources

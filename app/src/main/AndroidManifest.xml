@@ -84,6 +84,14 @@
             android:name="org.icddrb.suchana.Savings"
             android:label="SAVING FORM" />
 
+        <activity
+            android:name="org.icddrb.suchana.HFIAS_list"
+            android:label="HFIAS LIST" />
+        <activity
+            android:name="org.icddrb.suchana.HFIAS"
+            android:label="HFIAS FORM" />
+
+
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 
         //Android Manifest Code
