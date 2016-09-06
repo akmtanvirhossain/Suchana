@@ -20,21 +20,22 @@ public class HHIdentity_DataModel {
     private String _H11 = "";
     private String _SuchanaID = "";
     private String _AgeGroup = "";
-    private String _H14 = "";
+    private String _H17 = "";
     private String _Result = "";
-    private String _OthResult = "";
-    private String _H12 = "";
+    private String _ResultX = "";
+    private String _H16 = "";
+    private String _H16X = "";
+    private String _H13 = "";
+    private String _H14 = "";
     private String _H01 = "";
     private String _H02 = "";
-    private String _H12x = "";
-    private String _H15 = "";
     private String _H03 = "";
     private String _H04 = "";
-    private String _H17 = "";
     private String _H05 = "";
     private String _H06 = "";
     private String _H07 = "";
     private String _H07a = "";
+    private String _H08 = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -43,10 +44,6 @@ public class HHIdentity_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
-
-    public String getUpload() {
-        return _Upload;
-    }
 
     public String getRnd() {
         return _Rnd;
@@ -112,12 +109,12 @@ public class HHIdentity_DataModel {
         _AgeGroup = newValue;
     }
 
-    public String getH14() {
-        return _H14;
+    public String getH17() {
+        return _H17;
     }
 
-    public void setH14(String newValue) {
-        _H14 = newValue;
+    public void setH17(String newValue) {
+        _H17 = newValue;
     }
 
     public String getResult() {
@@ -128,20 +125,44 @@ public class HHIdentity_DataModel {
         _Result = newValue;
     }
 
-    public String getOthResult() {
-        return _OthResult;
+    public String getResultX() {
+        return _ResultX;
     }
 
-    public void setOthResult(String newValue) {
-        _OthResult = newValue;
+    public void setResultX(String newValue) {
+        _ResultX = newValue;
     }
 
-    public String getH12() {
-        return _H12;
+    public String getH16() {
+        return _H16;
     }
 
-    public void setH12(String newValue) {
-        _H12 = newValue;
+    public void setH16(String newValue) {
+        _H16 = newValue;
+    }
+
+    public String getH16X() {
+        return _H16X;
+    }
+
+    public void setH16X(String newValue) {
+        _H16X = newValue;
+    }
+
+    public String getH13() {
+        return _H13;
+    }
+
+    public void setH13(String newValue) {
+        _H13 = newValue;
+    }
+
+    public String getH14() {
+        return _H14;
+    }
+
+    public void setH14(String newValue) {
+        _H14 = newValue;
     }
 
     public String getH01() {
@@ -160,22 +181,6 @@ public class HHIdentity_DataModel {
         _H02 = newValue;
     }
 
-    public String getH12x() {
-        return _H12x;
-    }
-
-    public void setH12x(String newValue) {
-        _H12x = newValue;
-    }
-
-    public String getH15() {
-        return _H15;
-    }
-
-    public void setH15(String newValue) {
-        _H15 = newValue;
-    }
-
     public String getH03() {
         return _H03;
     }
@@ -190,14 +195,6 @@ public class HHIdentity_DataModel {
 
     public void setH04(String newValue) {
         _H04 = newValue;
-    }
-
-    public String getH17() {
-        return _H17;
-    }
-
-    public void setH17(String newValue) {
-        _H17 = newValue;
     }
 
     public String getH05() {
@@ -230,6 +227,14 @@ public class HHIdentity_DataModel {
 
     public void setH07a(String newValue) {
         _H07a = newValue;
+    }
+
+    public String getH08() {
+        return _H08;
+    }
+
+    public void setH08(String newValue) {
+        _H08 = newValue;
     }
 
     public void setStartTime(String newValue) {
@@ -280,7 +285,7 @@ public class HHIdentity_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,Dist,Upz,Un,Vill,H11,SuchanaID,AgeGroup,H14,Result,OthResult,H12,H01,H02,H12x,H15,H03,H04,H17,H05,H06,H07,H07a,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _Dist + "', '" + _Upz + "', '" + _Un + "', '" + _Vill + "', '" + _H11 + "', '" + _SuchanaID + "', '" + _AgeGroup + "', '" + _H14 + "', '" + _Result + "', '" + _OthResult + "', '" + _H12 + "', '" + _H01 + "', '" + _H02 + "', '" + _H12x + "', '" + _H15 + "', '" + _H03 + "', '" + _H04 + "', '" + _H17 + "', '" + _H05 + "', '" + _H06 + "', '" + _H07 + "', '" + _H07a + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,Dist,Upz,Un,Vill,H11,SuchanaID,AgeGroup,H17,Result,ResultX,H16,H16X,H13,H14,H01,H02,H03,H04,H05,H06,H07,H07a,H08,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _Dist + "', '" + _Upz + "', '" + _Un + "', '" + _Vill + "', '" + _H11 + "', '" + _SuchanaID + "', '" + _AgeGroup + "', '" + _H17 + "', '" + _Result + "', '" + _ResultX + "', '" + _H16 + "', '" + _H16X + "', '" + _H13 + "', '" + _H14 + "', '" + _H01 + "', '" + _H02 + "', '" + _H03 + "', '" + _H04 + "', '" + _H05 + "', '" + _H06 + "', '" + _H07 + "', '" + _H07a + "', '" + _H08 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -293,7 +298,7 @@ public class HHIdentity_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',Dist = '" + _Dist + "',Upz = '" + _Upz + "',Un = '" + _Un + "',Vill = '" + _Vill + "',H11 = '" + _H11 + "',SuchanaID = '" + _SuchanaID + "',AgeGroup = '" + _AgeGroup + "',H14 = '" + _H14 + "',Result = '" + _Result + "',OthResult = '" + _OthResult + "',H12 = '" + _H12 + "',H01 = '" + _H01 + "',H02 = '" + _H02 + "',H12x = '" + _H12x + "',H15 = '" + _H15 + "',H03 = '" + _H03 + "',H04 = '" + _H04 + "',H17 = '" + _H17 + "',H05 = '" + _H05 + "',H06 = '" + _H06 + "',H07 = '" + _H07 + "',H07a = '" + _H07a + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',Dist = '" + _Dist + "',Upz = '" + _Upz + "',Un = '" + _Un + "',Vill = '" + _Vill + "',H11 = '" + _H11 + "',SuchanaID = '" + _SuchanaID + "',AgeGroup = '" + _AgeGroup + "',H17 = '" + _H17 + "',Result = '" + _Result + "',ResultX = '" + _ResultX + "',H16 = '" + _H16 + "',H16X = '" + _H16X + "',H13 = '" + _H13 + "',H14 = '" + _H14 + "',H01 = '" + _H01 + "',H02 = '" + _H02 + "',H03 = '" + _H03 + "',H04 = '" + _H04 + "',H05 = '" + _H05 + "',H06 = '" + _H06 + "',H07 = '" + _H07 + "',H07a = '" + _H07a + "',H08 = '" + _H08 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -319,22 +324,22 @@ public class HHIdentity_DataModel {
             d._H11 = cur.getString(cur.getColumnIndex("H11"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));
-            d._H14 = cur.getString(cur.getColumnIndex("H14"));
+            d._H17 = cur.getString(cur.getColumnIndex("H17"));
             d._Result = cur.getString(cur.getColumnIndex("Result"));
-            d._OthResult = cur.getString(cur.getColumnIndex("OthResult"));
-            d._H12 = cur.getString(cur.getColumnIndex("H12"));
+            d._ResultX = cur.getString(cur.getColumnIndex("ResultX"));
+            d._H16 = cur.getString(cur.getColumnIndex("H16"));
+            d._H16X = cur.getString(cur.getColumnIndex("H16X"));
+            d._H13 = cur.getString(cur.getColumnIndex("H13"));
+            d._H14 = cur.getString(cur.getColumnIndex("H14"));
             d._H01 = cur.getString(cur.getColumnIndex("H01"));
             d._H02 = cur.getString(cur.getColumnIndex("H02"));
-            d._H12x = cur.getString(cur.getColumnIndex("H12x"));
-            d._H15 = cur.getString(cur.getColumnIndex("H15"));
             d._H03 = cur.getString(cur.getColumnIndex("H03"));
             d._H04 = cur.getString(cur.getColumnIndex("H04"));
-            d._H17 = cur.getString(cur.getColumnIndex("H17"));
             d._H05 = cur.getString(cur.getColumnIndex("H05"));
             d._H06 = cur.getString(cur.getColumnIndex("H06"));
             d._H07 = cur.getString(cur.getColumnIndex("H07"));
             d._H07a = cur.getString(cur.getColumnIndex("H07a"));
-            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
+            d._H08 = cur.getString(cur.getColumnIndex("H08"));
             data.add(d);
 
             cur.moveToNext();

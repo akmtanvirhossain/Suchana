@@ -60,6 +60,7 @@ public class HHIdentity extends Activity {
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
     TextView lblHeading;
+    LinearLayout seclblH1;
     LinearLayout secRnd;
     TextView VlblRnd;
     EditText txtRnd;
@@ -84,21 +85,31 @@ public class HHIdentity extends Activity {
     LinearLayout secAgeGroup;
     TextView VlblAgeGroup;
     Spinner spnAgeGroup;
-    LinearLayout secH14;
-    TextView VlblH14;
-    EditText dtpH14;
+    LinearLayout secH17;
+    TextView VlblH17;
+    EditText dtpH17;
     LinearLayout secResult;
     TextView VlblResult;
     Spinner spnResult;
-    LinearLayout secOthResult;
-    TextView VlblOthResult;
-    EditText txtOthResult;
-    LinearLayout secH12;
-    TextView VlblH12;
-    RadioGroup rdogrpH12;
-    RadioButton rdoH121;
-    RadioButton rdoH122;
-    RadioButton rdoH123;
+    LinearLayout secResultX;
+    TextView VlblResultX;
+    EditText txtResultX;
+    LinearLayout secH16;
+    TextView VlblH16;
+    RadioGroup rdogrpH16;
+    RadioButton rdoH161;
+    RadioButton rdoH162;
+    RadioButton rdoH163;
+    LinearLayout secH16X;
+    TextView VlblH16X;
+    EditText txtH16X;
+    LinearLayout secH13;
+    TextView VlblH13;
+    EditText txtH13;
+    LinearLayout secH14;
+    TextView VlblH14;
+    Spinner spnH14;
+    LinearLayout seclblV1;
     LinearLayout secH01;
     TextView VlblH01;
     RadioGroup rdogrpH01;
@@ -109,12 +120,6 @@ public class HHIdentity extends Activity {
     RadioGroup rdogrpH02;
     RadioButton rdoH021;
     RadioButton rdoH022;
-    LinearLayout secH12x;
-    TextView VlblH12x;
-    EditText txtH12x;
-    LinearLayout secH15;
-    TextView VlblH15;
-    EditText txtH15;
     LinearLayout secH03;
     TextView VlblH03;
     RadioGroup rdogrpH03;
@@ -125,9 +130,6 @@ public class HHIdentity extends Activity {
     RadioGroup rdogrpH04;
     RadioButton rdoH041;
     RadioButton rdoH042;
-    LinearLayout secH17;
-    TextView VlblH17;
-    Spinner spnH17;
     LinearLayout secH05;
     TextView VlblH05;
     RadioGroup rdogrpH05;
@@ -146,6 +148,9 @@ public class HHIdentity extends Activity {
     LinearLayout secH07a;
     TextView VlblH07a;
     Spinner spnH07a;
+    LinearLayout secH08;
+    TextView VlblH08;
+    Spinner spnH08;
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -161,9 +166,9 @@ public class HHIdentity extends Activity {
             EditText dtpDate;
 
 
-            dtpDate = (EditText) findViewById(R.id.dtpH14);
-            if (VariableID.equals("btnH14")) {
-                dtpDate = (EditText) findViewById(R.id.dtpH14);
+            dtpDate = (EditText) findViewById(R.id.dtpH17);
+            if (VariableID.equals("btnH17")) {
+                dtpDate = (EditText) findViewById(R.id.dtpH17);
             }
             dtpDate.setText(new StringBuilder()
                     .append(Global.Right("00" + mDay, 2)).append("/")
@@ -232,6 +237,7 @@ public class HHIdentity extends Activity {
             });
 
 
+            seclblH1 = (LinearLayout) findViewById(R.id.seclblH1);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
@@ -297,9 +303,9 @@ public class HHIdentity extends Activity {
             ArrayAdapter<String> adptrAgeGroup = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listAgeGroup);
             spnAgeGroup.setAdapter(adptrAgeGroup);
 
-            secH14 = (LinearLayout) findViewById(R.id.secH14);
-            VlblH14 = (TextView) findViewById(R.id.VlblH14);
-            dtpH14 = (EditText) findViewById(R.id.dtpH14);
+            secH17 = (LinearLayout) findViewById(R.id.secH17);
+            VlblH17 = (TextView) findViewById(R.id.VlblH17);
+            dtpH17 = (EditText) findViewById(R.id.dtpH17);
             secResult = (LinearLayout) findViewById(R.id.secResult);
             VlblResult = (TextView) findViewById(R.id.VlblResult);
             spnResult = (Spinner) findViewById(R.id.spnResult);
@@ -309,7 +315,7 @@ public class HHIdentity extends Activity {
             listResult.add("1-ইন্টারভিউ সম্পন্ন");
             listResult.add("2-উত্তরদাত্রী/প্রধান মহিলা বাড়ি ছিলেননা");
             listResult.add("3-অংশগ্রহনে অসম্মতি");
-            listResult.add("4-অনান্ন");
+            listResult.add("4-অন্যান্য");
             ArrayAdapter<String> adptrResult = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listResult);
             spnResult.setAdapter(adptrResult);
 
@@ -318,37 +324,71 @@ public class HHIdentity extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnResult.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnResult.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secOthResult.setVisibility(View.GONE);
-                        secH12.setVisibility(View.GONE);
+                    if (spnData.equalsIgnoreCase("4")) {
+                        secResultX.setVisibility(View.VISIBLE);
+                        secH16.setVisibility(View.GONE);
+                        secH16X.setVisibility(View.GONE);
+                        seclblV1.setVisibility(View.GONE);
+                        secH13.setVisibility(View.GONE);
+                        secH14.setVisibility(View.GONE);
+                        secH01.setVisibility(View.GONE);
+                        secH02.setVisibility(View.GONE);
+                        secH03.setVisibility(View.GONE);
+                        secH04.setVisibility(View.GONE);
+                        secH05.setVisibility(View.GONE);
+                        secH06.setVisibility(View.GONE);
+                        secH07.setVisibility(View.GONE);
+                        secH07a.setVisibility(View.GONE);
+                        secH08.setVisibility(View.GONE);
+                    } else if (spnData.equalsIgnoreCase("1")) {
+                        secH16.setVisibility(View.VISIBLE);
+                        secH16X.setVisibility(View.VISIBLE);
+                        seclblV1.setVisibility(View.VISIBLE);
+                        secH13.setVisibility(View.VISIBLE);
+                        secH14.setVisibility(View.VISIBLE);
+                        secH01.setVisibility(View.VISIBLE);
+                        secH02.setVisibility(View.VISIBLE);
+                        secH03.setVisibility(View.VISIBLE);
+                        secH04.setVisibility(View.VISIBLE);
+                        secH05.setVisibility(View.VISIBLE);
+                        secH06.setVisibility(View.VISIBLE);
+                        secH07.setVisibility(View.VISIBLE);
+                        secH07a.setVisibility(View.VISIBLE);
+                        secH08.setVisibility(View.VISIBLE);
                     } else if (spnData.equalsIgnoreCase("2")) {
-                        secOthResult.setVisibility(View.GONE);
-                        secH12.setVisibility(View.GONE);
+                        txtResultX.setText("");
+                        secResultX.setVisibility(View.GONE);
+                        seclblV1.setVisibility(View.GONE);
+                        secH16.setVisibility(View.GONE);
+                        secH16X.setVisibility(View.GONE);
+                        secH13.setVisibility(View.GONE);
+                        secH14.setVisibility(View.GONE);
                         secH01.setVisibility(View.GONE);
                         secH02.setVisibility(View.GONE);
-                        secH12x.setVisibility(View.GONE);
-                        secH15.setVisibility(View.GONE);
                         secH03.setVisibility(View.GONE);
                         secH04.setVisibility(View.GONE);
-                        secH17.setVisibility(View.GONE);
                         secH05.setVisibility(View.GONE);
                         secH06.setVisibility(View.GONE);
                         secH07.setVisibility(View.GONE);
+                        secH07a.setVisibility(View.GONE);
+                        secH08.setVisibility(View.GONE);
                     } else if (spnData.equalsIgnoreCase("3")) {
-                        secOthResult.setVisibility(View.GONE);
-                        secH12.setVisibility(View.GONE);
+                        txtResultX.setText("");
+                        secResultX.setVisibility(View.GONE);
+                        seclblV1.setVisibility(View.GONE);
+                        secH16.setVisibility(View.GONE);
+                        secH16X.setVisibility(View.GONE);
+                        secH13.setVisibility(View.GONE);
+                        secH14.setVisibility(View.GONE);
                         secH01.setVisibility(View.GONE);
                         secH02.setVisibility(View.GONE);
-                        secH12x.setVisibility(View.GONE);
-                        secH15.setVisibility(View.GONE);
                         secH03.setVisibility(View.GONE);
                         secH04.setVisibility(View.GONE);
-                        secH17.setVisibility(View.GONE);
                         secH05.setVisibility(View.GONE);
                         secH06.setVisibility(View.GONE);
                         secH07.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("4")) {
-                    } else {
+                        secH07a.setVisibility(View.GONE);
+                        secH08.setVisibility(View.GONE);
                     }
                 }
 
@@ -356,32 +396,63 @@ public class HHIdentity extends Activity {
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-            secOthResult = (LinearLayout) findViewById(R.id.secOthResult);
-            VlblOthResult = (TextView) findViewById(R.id.VlblOthResult);
-            txtOthResult = (EditText) findViewById(R.id.txtOthResult);
-            secH12 = (LinearLayout) findViewById(R.id.secH12);
-            VlblH12 = (TextView) findViewById(R.id.VlblH12);
-            rdogrpH12 = (RadioGroup) findViewById(R.id.rdogrpH12);
+            secResultX = (LinearLayout) findViewById(R.id.secResultX);
+            VlblResultX = (TextView) findViewById(R.id.VlblResultX);
+            txtResultX = (EditText) findViewById(R.id.txtResultX);
+            secH16 = (LinearLayout) findViewById(R.id.secH16);
+            VlblH16 = (TextView) findViewById(R.id.VlblH16);
+            rdogrpH16 = (RadioGroup) findViewById(R.id.rdogrpH16);
 
-            rdoH121 = (RadioButton) findViewById(R.id.rdoH121);
-            rdoH122 = (RadioButton) findViewById(R.id.rdoH122);
-            rdoH123 = (RadioButton) findViewById(R.id.rdoH123);
-            secH12x = (LinearLayout) findViewById(R.id.secH12x);
-            VlblH12x = (TextView) findViewById(R.id.VlblH12x);
-            txtH12x = (EditText) findViewById(R.id.txtH12x);
-            secH12x.setVisibility(View.GONE);
-            rdogrpH12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            rdoH161 = (RadioButton) findViewById(R.id.rdoH161);
+            rdoH162 = (RadioButton) findViewById(R.id.rdoH162);
+            rdoH163 = (RadioButton) findViewById(R.id.rdoH163);
+            rdogrpH16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    if (checkedId == R.id.rdoH123) {
-                        secH12x.setVisibility(View.VISIBLE);
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH16 = new String[]{"1", "2", "3"};
+                    for (int i = 0; i < rdogrpH16.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH16.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH16[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH16X.setVisibility(View.GONE);
+                        txtH16X.setText("");
+                    } else if (rbData.equalsIgnoreCase("2")) {
+                        secH16X.setVisibility(View.GONE);
+                        txtH16X.setText("");
                     } else {
-                        txtH12x.setText("");
-                        secH12x.setVisibility(View.GONE);
+                        secH16X.setVisibility(View.VISIBLE);
                     }
                 }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
             });
-            secH12x.setVisibility(View.GONE);
+            secH16X = (LinearLayout) findViewById(R.id.secH16X);
+            VlblH16X = (TextView) findViewById(R.id.VlblH16X);
+            txtH16X = (EditText) findViewById(R.id.txtH16X);
+            secH13 = (LinearLayout) findViewById(R.id.secH13);
+            VlblH13 = (TextView) findViewById(R.id.VlblH13);
+            txtH13 = (EditText) findViewById(R.id.txtH13);
+            secH14 = (LinearLayout) findViewById(R.id.secH14);
+            VlblH14 = (TextView) findViewById(R.id.VlblH14);
+            spnH14 = (Spinner) findViewById(R.id.spnH14);
+            List<String> listH14 = new ArrayList<String>();
+
+            listH14.add("");
+            listH14.add("1-ইন্টারভেনশন গ্রুপ");
+            listH14.add("2-কন্ট্রোল গ্রুপ");
+            listH14.add("3-সম্পদ হস্তান্তর গ্রুপ");
+            listH14.add("4-সম্পদ না হস্তান্তর গ্রুপ");
+            listH14.add("5-কন্ট্রোল গ্রুপ");
+            ArrayAdapter<String> adptrH14 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH14);
+            spnH14.setAdapter(adptrH14);
+
+            seclblV1 = (LinearLayout) findViewById(R.id.seclblV1);
             secH01 = (LinearLayout) findViewById(R.id.secH01);
             VlblH01 = (TextView) findViewById(R.id.VlblH01);
             rdogrpH01 = (RadioGroup) findViewById(R.id.rdogrpH01);
@@ -394,10 +465,6 @@ public class HHIdentity extends Activity {
 
             rdoH021 = (RadioButton) findViewById(R.id.rdoH021);
             rdoH022 = (RadioButton) findViewById(R.id.rdoH022);
-
-            secH15 = (LinearLayout) findViewById(R.id.secH15);
-            VlblH15 = (TextView) findViewById(R.id.VlblH15);
-            txtH15 = (EditText) findViewById(R.id.txtH15);
             secH03 = (LinearLayout) findViewById(R.id.secH03);
             VlblH03 = (TextView) findViewById(R.id.VlblH03);
             rdogrpH03 = (RadioGroup) findViewById(R.id.rdogrpH03);
@@ -410,20 +477,6 @@ public class HHIdentity extends Activity {
 
             rdoH041 = (RadioButton) findViewById(R.id.rdoH041);
             rdoH042 = (RadioButton) findViewById(R.id.rdoH042);
-            secH17 = (LinearLayout) findViewById(R.id.secH17);
-            VlblH17 = (TextView) findViewById(R.id.VlblH17);
-            spnH17 = (Spinner) findViewById(R.id.spnH17);
-            List<String> listH17 = new ArrayList<String>();
-
-            listH17.add("");
-            listH17.add("1-ইন্টারভেনশন গ্রুপ");
-            listH17.add("2-কন্ট্রোল গ্রুপ");
-            listH17.add("3-সম্পদ হস্তান্তর গ্রুপ");
-            listH17.add("4-সম্পদ না হস্তান্তর গ্রুপ");
-            listH17.add("5-কন্ট্রোল গ্রুপ");
-            ArrayAdapter<String> adptrH17 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH17);
-            spnH17.setAdapter(adptrH17);
-
             secH05 = (LinearLayout) findViewById(R.id.secH05);
             VlblH05 = (TextView) findViewById(R.id.VlblH05);
             rdogrpH05 = (RadioGroup) findViewById(R.id.rdogrpH05);
@@ -479,14 +532,25 @@ public class HHIdentity extends Activity {
             ArrayAdapter<String> adptrH07a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH07a);
             spnH07a.setAdapter(adptrH07a);
 
+            secH08 = (LinearLayout) findViewById(R.id.secH08);
+            VlblH08 = (TextView) findViewById(R.id.VlblH08);
+            spnH08 = (Spinner) findViewById(R.id.spnH08);
+            List<String> listH08 = new ArrayList<String>();
 
-            dtpH14.setOnTouchListener(new View.OnTouchListener() {
+            listH08.add("");
+            listH08.add("1-হ্যা");
+            listH08.add("0-না");
+            ArrayAdapter<String> adptrH08 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH08);
+            spnH08.setAdapter(adptrH08);
+
+
+            dtpH17.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     final int DRAWABLE_RIGHT = 2;
                     if (event.getAction() == MotionEvent.ACTION_UP) {
-                        if (event.getRawX() >= (dtpH14.getRight() - dtpH14.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                            VariableID = "btnH14";
+                        if (event.getRawX() >= (dtpH17.getRight() - dtpH17.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                            VariableID = "btnH17";
                             showDialog(DATE_DIALOG);
                             return true;
                         }
@@ -495,7 +559,7 @@ public class HHIdentity extends Activity {
                 }
             });
 
-            DataSearch(RND, SUCHANAID);
+
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -554,22 +618,34 @@ public class HHIdentity extends Activity {
                 spnAgeGroup.requestFocus();
                 return;
             }
-            DV = Global.DateValidate(dtpH14.getText().toString());
-            if (DV.length() != 0 & secH14.isShown()) {
+            DV = Global.DateValidate(dtpH17.getText().toString());
+            if (DV.length() != 0 & secH17.isShown()) {
                 Connection.MessageBox(HHIdentity.this, DV);
-                dtpH14.requestFocus();
+                dtpH17.requestFocus();
                 return;
             } else if (spnResult.getSelectedItemPosition() == 0 & secResult.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Required field: সাক্ষাৎকার এর ফলাফল.");
                 spnResult.requestFocus();
                 return;
-            } else if (txtOthResult.getText().toString().length() == 0 & secOthResult.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Required field: সাক্ষাৎকার সম্পন্ন না হয়ে থাকলে তার কারণ কি?.");
-                txtOthResult.requestFocus();
+            } else if (txtResultX.getText().toString().length() == 0 & secResultX.isShown()) {
+                Connection.MessageBox(HHIdentity.this, "Required field: অন্যান্য নির্দিষ্ট করুন.");
+                txtResultX.requestFocus();
                 return;
-            } else if (!rdoH121.isChecked() & !rdoH122.isChecked() & !rdoH123.isChecked() & secH12.isShown()) {
+            } else if (!rdoH161.isChecked() & !rdoH162.isChecked() & !rdoH163.isChecked() & secH16.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (খানা’র নৃতাত্ত্বিক  গোষ্ঠী).");
-                rdoH121.requestFocus();
+                rdoH161.requestFocus();
+                return;
+            } else if (txtH16X.getText().toString().length() == 0 & secH16X.isShown()) {
+                Connection.MessageBox(HHIdentity.this, "Required field: অন্যান্য.");
+                txtH16X.requestFocus();
+                return;
+            } else if (txtH13.getText().toString().length() == 0 & secH13.isShown()) {
+                Connection.MessageBox(HHIdentity.this, "Required field: উপকারভোগীর ফোন নম্বর.");
+                txtH13.requestFocus();
+                return;
+            } else if (spnH14.getSelectedItemPosition() == 0 & secH14.isShown()) {
+                Connection.MessageBox(HHIdentity.this, "Required field: সুচনা অনুসরে খানা’র গ্রুপ.");
+                spnH14.requestFocus();
                 return;
             } else if (!rdoH011.isChecked() & !rdoH012.isChecked() & secH01.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) নারী সদস্য রয়েছে কী? ).");
@@ -579,14 +655,6 @@ public class HHIdentity extends Activity {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
                 rdoH021.requestFocus();
                 return;
-            } else if (txtH12x.getText().toString().length() == 0 & secH12x.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Required field: অন্যান্য.");
-                txtH12x.requestFocus();
-                return;
-            } else if (txtH15.getText().toString().length() == 0 & secH15.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Required field: উপকারভোগীর ফোন নম্বর.");
-                txtH15.requestFocus();
-                return;
             } else if (!rdoH031.isChecked() & !rdoH032.isChecked() & secH03.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
                 rdoH031.requestFocus();
@@ -594,10 +662,6 @@ public class HHIdentity extends Activity {
             } else if (!rdoH041.isChecked() & !rdoH042.isChecked() & secH04.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-19 বছর বয়সী কিশোরী রয়েছে কী ?).");
                 rdoH041.requestFocus();
-                return;
-            } else if (spnH17.getSelectedItemPosition() == 0 & secH17.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Required field: সুচনা অনুসরে খানা’র গ্রুপ.");
-                spnH17.requestFocus();
                 return;
             } else if (!rdoH051.isChecked() & !rdoH052.isChecked() & secH05.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছি কী ?).");
@@ -615,6 +679,10 @@ public class HHIdentity extends Activity {
                 Connection.MessageBox(HHIdentity.this, "Required field: কি ব্যবস্থা গ্রহন করেন.");
                 spnH07a.requestFocus();
                 return;
+            } else if (spnH08.getSelectedItemPosition() == 0 & secH08.isShown()) {
+                Connection.MessageBox(HHIdentity.this, "Required field: আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?.");
+                spnH08.requestFocus();
+                return;
             }
 
             String SQL = "";
@@ -629,16 +697,19 @@ public class HHIdentity extends Activity {
             objSave.setH11(txtH11.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
             objSave.setAgeGroup((spnAgeGroup.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnAgeGroup.getSelectedItem().toString(), "-")));
-            objSave.setH14(dtpH14.getText().toString().length() > 0 ? Global.DateConvertYMD(dtpH14.getText().toString()) : dtpH14.getText().toString());
+            objSave.setH17(dtpH17.getText().toString().length() > 0 ? Global.DateConvertYMD(dtpH17.getText().toString()) : dtpH17.getText().toString());
             objSave.setResult((spnResult.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnResult.getSelectedItem().toString(), "-")));
-            objSave.setOthResult(txtOthResult.getText().toString());
-            String[] d_rdogrpH12 = new String[]{"1", "2", "3"};
-            objSave.setH12("");
-            for (int i = 0; i < rdogrpH12.getChildCount(); i++) {
-                rb = (RadioButton) rdogrpH12.getChildAt(i);
-                if (rb.isChecked()) objSave.setH12(d_rdogrpH12[i]);
+            objSave.setResultX(txtResultX.getText().toString());
+            String[] d_rdogrpH16 = new String[]{"1", "2", "3"};
+            objSave.setH16("");
+            for (int i = 0; i < rdogrpH16.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH16.getChildAt(i);
+                if (rb.isChecked()) objSave.setH16(d_rdogrpH16[i]);
             }
 
+            objSave.setH16X(txtH16X.getText().toString());
+            objSave.setH13(txtH13.getText().toString());
+            objSave.setH14((spnH14.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH14.getSelectedItem().toString(), "-")));
             String[] d_rdogrpH01 = new String[]{"1", "0"};
             objSave.setH01("");
             for (int i = 0; i < rdogrpH01.getChildCount(); i++) {
@@ -653,8 +724,6 @@ public class HHIdentity extends Activity {
                 if (rb.isChecked()) objSave.setH02(d_rdogrpH02[i]);
             }
 
-            objSave.setH12x(txtH12x.getText().toString());
-            objSave.setH15(txtH15.getText().toString());
             String[] d_rdogrpH03 = new String[]{"1", "0"};
             objSave.setH03("");
             for (int i = 0; i < rdogrpH03.getChildCount(); i++) {
@@ -669,7 +738,6 @@ public class HHIdentity extends Activity {
                 if (rb.isChecked()) objSave.setH04(d_rdogrpH04[i]);
             }
 
-            objSave.setH17((spnH17.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH17.getSelectedItem().toString(), "-")));
             String[] d_rdogrpH05 = new String[]{"1", "0"};
             objSave.setH05("");
             for (int i = 0; i < rdogrpH05.getChildCount(); i++) {
@@ -692,6 +760,7 @@ public class HHIdentity extends Activity {
             }
 
             objSave.setH07a((spnH07a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH07a.getSelectedItem().toString(), "-")));
+            objSave.setH08((spnH08.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH08.getSelectedItem().toString(), "-")));
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -728,16 +797,19 @@ public class HHIdentity extends Activity {
                 txtH11.setText(item.getH11());
                 txtSuchanaID.setText(item.getSuchanaID());
                 spnAgeGroup.setSelection(Global.SpinnerItemPositionAnyLength(spnAgeGroup, item.getAgeGroup()));
-                dtpH14.setText(item.getH14().toString().length() == 0 ? "" : Global.DateConvertDMY(item.getH14()));
+                dtpH17.setText(item.getH17().toString().length() == 0 ? "" : Global.DateConvertDMY(item.getH17()));
                 spnResult.setSelection(Global.SpinnerItemPositionAnyLength(spnResult, item.getResult()));
-                txtOthResult.setText(item.getOthResult());
-                String[] d_rdogrpH12 = new String[]{"1", "2", "3"};
-                for (int i = 0; i < d_rdogrpH12.length; i++) {
-                    if (item.getH12().equals(String.valueOf(d_rdogrpH12[i]))) {
-                        rb = (RadioButton) rdogrpH12.getChildAt(i);
+                txtResultX.setText(item.getResultX());
+                String[] d_rdogrpH16 = new String[]{"1", "2", "3"};
+                for (int i = 0; i < d_rdogrpH16.length; i++) {
+                    if (item.getH16().equals(String.valueOf(d_rdogrpH16[i]))) {
+                        rb = (RadioButton) rdogrpH16.getChildAt(i);
                         rb.setChecked(true);
                     }
                 }
+                txtH16X.setText(item.getH16X());
+                txtH13.setText(item.getH13());
+                spnH14.setSelection(Global.SpinnerItemPositionAnyLength(spnH14, item.getH14()));
                 String[] d_rdogrpH01 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH01.length; i++) {
                     if (item.getH01().equals(String.valueOf(d_rdogrpH01[i]))) {
@@ -752,8 +824,6 @@ public class HHIdentity extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                txtH12x.setText(item.getH12x());
-                txtH15.setText(item.getH15());
                 String[] d_rdogrpH03 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH03.length; i++) {
                     if (item.getH03().equals(String.valueOf(d_rdogrpH03[i]))) {
@@ -768,7 +838,6 @@ public class HHIdentity extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                spnH17.setSelection(Global.SpinnerItemPositionAnyLength(spnH17, item.getH17()));
                 String[] d_rdogrpH05 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH05.length; i++) {
                     if (item.getH05().equals(String.valueOf(d_rdogrpH05[i]))) {
@@ -791,6 +860,7 @@ public class HHIdentity extends Activity {
                     }
                 }
                 spnH07a.setSelection(Global.SpinnerItemPositionAnyLength(spnH07a, item.getH07a()));
+                spnH08.setSelection(Global.SpinnerItemPositionAnyLength(spnH08, item.getH08()));
             }
         } catch (Exception e) {
             Connection.MessageBox(HHIdentity.this, e.getMessage());
