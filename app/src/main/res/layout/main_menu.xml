@@ -144,6 +144,34 @@
                 android:textSize="20sp" />
 
             <Button
+                android:id="@+id/cmdMenuIllness"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="center|center_vertical"
+                android:text="Illness"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuIGA"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="center|center_vertical"
+                android:text="IGA"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/cmdDataSync"
                 style="@style/menuButtonStyle"
                 android:layout_width="fill_parent"

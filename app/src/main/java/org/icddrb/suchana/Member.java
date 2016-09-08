@@ -51,7 +51,7 @@ public class Member extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String H21 = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -61,97 +61,126 @@ public class Member extends Activity {
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
     TextView lblHeading;
     LinearLayout secRnd;
+    View lineRnd;
     TextView VlblRnd;
     EditText txtRnd;
     LinearLayout secSuchanaID;
+    View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
     LinearLayout secH21;
+    View lineH21;
     TextView VlblH21;
     EditText txtH21;
     LinearLayout secH22;
+    View lineH22;
     TextView VlblH22;
     EditText txtH22;
     LinearLayout secH23;
+    View lineH23;
     TextView VlblH23;
     RadioGroup rdogrpH23;
     RadioButton rdoH231;
     RadioButton rdoH232;
-    LinearLayout seclblH24;
-    LinearLayout secH24Y;
-    TextView VlblH24Y;
-    EditText txtH24Y;
-    LinearLayout secH24M;
-    TextView VlblH24M;
-    EditText txtH24M;
+    LinearLayout secH24;
+    View lineH24;
+    TextView VlblH24;
+    EditText txtH24;
     LinearLayout secH25;
+    View lineH25;
     TextView VlblH25;
     Spinner spnH25;
-    LinearLayout secH26;
-    TextView VlblH26;
-    Spinner spnH26;
+    LinearLayout seclblH26;
+    LinearLayout secH26Y;
+    View lineH26Y;
+    TextView VlblH26Y;
+    EditText txtH26Y;
+    LinearLayout secH26M;
+    View lineH26M;
+    TextView VlblH26M;
+    EditText txtH26M;
     LinearLayout secH27;
+    View lineH27;
     TextView VlblH27;
-    EditText txtH27;
+    Spinner spnH27;
     LinearLayout secH28;
+    View lineH28;
     TextView VlblH28;
-    Spinner spnH28;
-    LinearLayout secH28X;
-    TextView VlblH28X;
-    EditText txtH28X;
+    EditText txtH28;
     LinearLayout secH29;
+    View lineH29;
     TextView VlblH29;
-    RadioGroup rdogrpH29;
-    RadioButton rdoH291;
-    RadioButton rdoH292;
+    Spinner spnH29;
+    LinearLayout secH29X;
+    View lineH29X;
+    TextView VlblH29X;
+    EditText txtH29X;
     LinearLayout secH210;
+    View lineH210;
     TextView VlblH210;
-    EditText txtH210;
-    LinearLayout secH220;
-    TextView VlblH220;
-    EditText txtH220;
-    LinearLayout secH221;
-    TextView VlblH221;
-    EditText txtH221;
+    RadioGroup rdogrpH210;
+    RadioButton rdoH2101;
+    RadioButton rdoH2102;
     LinearLayout secH211;
+    View lineH211;
     TextView VlblH211;
     Spinner spnH211;
     LinearLayout secH212;
+    View lineH212;
     TextView VlblH212;
     Spinner spnH212;
     LinearLayout secH212X;
+    View lineH212X;
     TextView VlblH212X;
     EditText txtH212X;
     LinearLayout secH213;
+    View lineH213;
     TextView VlblH213;
     Spinner spnH213;
     LinearLayout secH214;
+    View lineH214;
     TextView VlblH214;
     RadioGroup rdogrpH214;
     RadioButton rdoH2141;
     RadioButton rdoH2142;
     LinearLayout secH215;
+    View lineH215;
     TextView VlblH215;
     Spinner spnH215;
     LinearLayout secH215X;
+    View lineH215X;
     TextView VlblH215X;
     EditText txtH215X;
     LinearLayout secH216;
+    View lineH216;
     TextView VlblH216;
     Spinner spnH216;
     LinearLayout secH216X;
+    View lineH216X;
     TextView VlblH216X;
     EditText txtH216X;
     LinearLayout secH217;
+    View lineH217;
     TextView VlblH217;
     EditText txtH217;
     LinearLayout secH218;
+    View lineH218;
     TextView VlblH218;
     EditText txtH218;
     LinearLayout secH219;
+    View lineH219;
     TextView VlblH219;
     EditText txtH219;
+    LinearLayout secH220;
+    View lineH220;
+    TextView VlblH220;
+    EditText txtH220;
+    LinearLayout secH221;
+    View lineH221;
+    TextView VlblH221;
+    EditText txtH221;
     LinearLayout secH222;
+    View lineH222;
     TextView VlblH222;
     EditText txtH222;
     String StartTime;
@@ -238,31 +267,34 @@ public class Member extends Activity {
 
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
+            lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
+            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             secH21 = (LinearLayout) findViewById(R.id.secH21);
+            lineH21 = (View) findViewById(R.id.lineH21);
             VlblH21 = (TextView) findViewById(R.id.VlblH21);
             txtH21 = (EditText) findViewById(R.id.txtH21);
             secH22 = (LinearLayout) findViewById(R.id.secH22);
+            lineH22 = (View) findViewById(R.id.lineH22);
             VlblH22 = (TextView) findViewById(R.id.VlblH22);
             txtH22 = (EditText) findViewById(R.id.txtH22);
             secH23 = (LinearLayout) findViewById(R.id.secH23);
+            lineH23 = (View) findViewById(R.id.lineH23);
             VlblH23 = (TextView) findViewById(R.id.VlblH23);
             rdogrpH23 = (RadioGroup) findViewById(R.id.rdogrpH23);
 
             rdoH231 = (RadioButton) findViewById(R.id.rdoH231);
             rdoH232 = (RadioButton) findViewById(R.id.rdoH232);
-            seclblH24 = (LinearLayout) findViewById(R.id.seclblH24);
-            secH24Y = (LinearLayout) findViewById(R.id.secH24Y);
-            VlblH24Y = (TextView) findViewById(R.id.VlblH24Y);
-            txtH24Y = (EditText) findViewById(R.id.txtH24Y);
-            secH24M = (LinearLayout) findViewById(R.id.secH24M);
-            VlblH24M = (TextView) findViewById(R.id.VlblH24M);
-            txtH24M = (EditText) findViewById(R.id.txtH24M);
+            secH24 = (LinearLayout) findViewById(R.id.secH24);
+            lineH24 = (View) findViewById(R.id.lineH24);
+            VlblH24 = (TextView) findViewById(R.id.VlblH24);
+            txtH24 = (EditText) findViewById(R.id.txtH24);
             secH25 = (LinearLayout) findViewById(R.id.secH25);
+            lineH25 = (View) findViewById(R.id.lineH25);
             VlblH25 = (TextView) findViewById(R.id.VlblH25);
             spnH25 = (Spinner) findViewById(R.id.spnH25);
             List<String> listH25 = new ArrayList<String>();
@@ -288,73 +320,81 @@ public class Member extends Activity {
             ArrayAdapter<String> adptrH25 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH25);
             spnH25.setAdapter(adptrH25);
 
-            secH26 = (LinearLayout) findViewById(R.id.secH26);
-            VlblH26 = (TextView) findViewById(R.id.VlblH26);
-            spnH26 = (Spinner) findViewById(R.id.spnH26);
-            List<String> listH26 = new ArrayList<String>();
-
-            listH26.add("");
-            listH26.add("1-অবিবাহিত চিরকুমার অথবা চিরকুমারী");
-            listH26.add("2-বিবাহিত");
-            listH26.add("3-বিধবা অথবা বিপত্নীক");
-            listH26.add("4-তালাকপ্রাপ্ত");
-            listH26.add("5-পৃথক থাকে অথবা পরিত্যক্তা");
-            ArrayAdapter<String> adptrH26 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH26);
-            spnH26.setAdapter(adptrH26);
-
+            seclblH26 = (LinearLayout) findViewById(R.id.seclblH26);
+            secH26Y = (LinearLayout) findViewById(R.id.secH26Y);
+            lineH26Y = (View) findViewById(R.id.lineH26Y);
+            VlblH26Y = (TextView) findViewById(R.id.VlblH26Y);
+            txtH26Y = (EditText) findViewById(R.id.txtH26Y);
+            secH26M = (LinearLayout) findViewById(R.id.secH26M);
+            lineH26M = (View) findViewById(R.id.lineH26M);
+            VlblH26M = (TextView) findViewById(R.id.VlblH26M);
+            txtH26M = (EditText) findViewById(R.id.txtH26M);
             secH27 = (LinearLayout) findViewById(R.id.secH27);
+            lineH27 = (View) findViewById(R.id.lineH27);
             VlblH27 = (TextView) findViewById(R.id.VlblH27);
-            txtH27 = (EditText) findViewById(R.id.txtH27);
-            secH28 = (LinearLayout) findViewById(R.id.secH28);
-            VlblH28 = (TextView) findViewById(R.id.VlblH28);
-            spnH28 = (Spinner) findViewById(R.id.spnH28);
-            secH28X = (LinearLayout) findViewById(R.id.secH28X);
-            VlblH28X = (TextView) findViewById(R.id.VlblH28X);
-            txtH28X = (EditText) findViewById(R.id.txtH28X);
-            secH28X.setVisibility(View.GONE);
-            List<String> listH28 = new ArrayList<String>();
+            spnH27 = (Spinner) findViewById(R.id.spnH27);
+            List<String> listH27 = new ArrayList<String>();
 
-            listH28.add("");
-            listH28.add("1-মুসলিম ");
-            listH28.add("2-হিন্দু");
-            listH28.add("3-খ্রীষ্ট");
-            listH28.add("4-বুদ্ধ");
-            listH28.add("5-অন্যান্য (উল্লেখ কর)");
-            ArrayAdapter<String> adptrH28 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH28);
-            spnH28.setAdapter(adptrH28);
-            spnH28.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            listH27.add("");
+            listH27.add("1-অবিবাহিত (চিরকুমার অথবা চিরকুমারী)");
+            listH27.add("2-বিবাহিত");
+            listH27.add("3-বিধবা অথবা বিপত্নীক");
+            listH27.add("4-তালাকপ্রাপ্ত");
+            listH27.add("5-পৃথক থাকে অথবা পরিত্যক্তা");
+            ArrayAdapter<String> adptrH27 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH27);
+            spnH27.setAdapter(adptrH27);
+
+            secH28 = (LinearLayout) findViewById(R.id.secH28);
+            lineH28 = (View) findViewById(R.id.lineH28);
+            VlblH28 = (TextView) findViewById(R.id.VlblH28);
+            txtH28 = (EditText) findViewById(R.id.txtH28);
+            secH29 = (LinearLayout) findViewById(R.id.secH29);
+            lineH29 = (View) findViewById(R.id.lineH29);
+            VlblH29 = (TextView) findViewById(R.id.VlblH29);
+            spnH29 = (Spinner) findViewById(R.id.spnH29);
+            List<String> listH29 = new ArrayList<String>();
+
+            listH29.add("");
+            listH29.add("1-মুসলিম");
+            listH29.add("2-হিন্দু");
+            listH29.add("3-খ্রীষ্ট");
+            listH29.add("4-বুদ্ধ");
+            listH29.add("5-অন্যান্য (উল্লেখ কর)");
+            ArrayAdapter<String> adptrH29 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH29);
+            spnH29.setAdapter(adptrH29);
+
+            spnH29.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 5) {
-                        secH28X.setVisibility(View.VISIBLE);
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH29.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH29.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("5")) {
+                        secH29X.setVisibility(View.VISIBLE);
+                        lineH29X.setVisibility(View.VISIBLE);
                     } else {
-                        txtH28X.setText("");
-                        secH28X.setVisibility(View.GONE);
+                        txtH29X.setText("");
+                        secH29X.setVisibility(View.GONE);
+                        lineH29X.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
+                public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-            secH28X.setVisibility(View.GONE);
-            secH29 = (LinearLayout) findViewById(R.id.secH29);
-            VlblH29 = (TextView) findViewById(R.id.VlblH29);
-            rdogrpH29 = (RadioGroup) findViewById(R.id.rdogrpH29);
-
-            rdoH291 = (RadioButton) findViewById(R.id.rdoH291);
-            rdoH292 = (RadioButton) findViewById(R.id.rdoH292);
+            secH29X = (LinearLayout) findViewById(R.id.secH29X);
+            lineH29X = (View) findViewById(R.id.lineH29X);
+            VlblH29X = (TextView) findViewById(R.id.VlblH29X);
+            txtH29X = (EditText) findViewById(R.id.txtH29X);
             secH210 = (LinearLayout) findViewById(R.id.secH210);
+            lineH210 = (View) findViewById(R.id.lineH210);
             VlblH210 = (TextView) findViewById(R.id.VlblH210);
-            txtH210 = (EditText) findViewById(R.id.txtH210);
-            secH220 = (LinearLayout) findViewById(R.id.secH220);
-            VlblH220 = (TextView) findViewById(R.id.VlblH220);
-            txtH220 = (EditText) findViewById(R.id.txtH220);
-            secH221 = (LinearLayout) findViewById(R.id.secH221);
-            VlblH221 = (TextView) findViewById(R.id.VlblH221);
-            txtH221 = (EditText) findViewById(R.id.txtH221);
+            rdogrpH210 = (RadioGroup) findViewById(R.id.rdogrpH210);
+
+            rdoH2101 = (RadioButton) findViewById(R.id.rdoH2101);
+            rdoH2102 = (RadioButton) findViewById(R.id.rdoH2102);
             secH211 = (LinearLayout) findViewById(R.id.secH211);
+            lineH211 = (View) findViewById(R.id.lineH211);
             VlblH211 = (TextView) findViewById(R.id.VlblH211);
             spnH211 = (Spinner) findViewById(R.id.spnH211);
             List<String> listH211 = new ArrayList<String>();
@@ -368,6 +408,7 @@ public class Member extends Activity {
             spnH211.setAdapter(adptrH211);
 
             secH212 = (LinearLayout) findViewById(R.id.secH212);
+            lineH212 = (View) findViewById(R.id.lineH212);
             VlblH212 = (TextView) findViewById(R.id.VlblH212);
             spnH212 = (Spinner) findViewById(R.id.spnH212);
             List<String> listH212 = new ArrayList<String>();
@@ -394,28 +435,31 @@ public class Member extends Activity {
             listH212.add("77-অন্যান্য");
             ArrayAdapter<String> adptrH212 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH212);
             spnH212.setAdapter(adptrH212);
-            secH212X = (LinearLayout) findViewById(R.id.secH212X);
-            VlblH212X = (TextView) findViewById(R.id.VlblH212X);
-            txtH212X = (EditText) findViewById(R.id.txtH212X);
+
             spnH212.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 20) {
-                        secH212X.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH212X.setText("");
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH212.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH212.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("77")) {
                         secH212X.setVisibility(View.GONE);
+                        lineH212X.setVisibility(View.GONE);
+                    } else {
+                        secH212X.setVisibility(View.VISIBLE);
+                        lineH212X.setVisibility(View.VISIBLE);
                     }
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
+                public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-
-            secH212X.setVisibility(View.GONE);
+            secH212X = (LinearLayout) findViewById(R.id.secH212X);
+            lineH212X = (View) findViewById(R.id.lineH212X);
+            VlblH212X = (TextView) findViewById(R.id.VlblH212X);
+            txtH212X = (EditText) findViewById(R.id.txtH212X);
             secH213 = (LinearLayout) findViewById(R.id.secH213);
+            lineH213 = (View) findViewById(R.id.lineH213);
             VlblH213 = (TextView) findViewById(R.id.VlblH213);
             spnH213 = (Spinner) findViewById(R.id.spnH213);
             List<String> listH213 = new ArrayList<String>();
@@ -426,17 +470,19 @@ public class Member extends Activity {
             listH213.add("3-বেসরকারীস্কুল/কলেজ");
             listH213.add("4-মাদ্রাসা বোর্ড পাঠ্যক্রম");
             listH213.add("5-মাদ্রাসা –কওমী/ শুধুমাত্র ধর্মীয় পাঠ্যক্রম");
-            listH213.add("6-জানি না");
+            listH213.add("8-জানি না");
             ArrayAdapter<String> adptrH213 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH213);
             spnH213.setAdapter(adptrH213);
 
             secH214 = (LinearLayout) findViewById(R.id.secH214);
+            lineH214 = (View) findViewById(R.id.lineH214);
             VlblH214 = (TextView) findViewById(R.id.VlblH214);
             rdogrpH214 = (RadioGroup) findViewById(R.id.rdogrpH214);
 
             rdoH2141 = (RadioButton) findViewById(R.id.rdoH2141);
             rdoH2142 = (RadioButton) findViewById(R.id.rdoH2142);
             secH215 = (LinearLayout) findViewById(R.id.secH215);
+            lineH215 = (View) findViewById(R.id.lineH215);
             VlblH215 = (TextView) findViewById(R.id.VlblH215);
             spnH215 = (Spinner) findViewById(R.id.spnH215);
             List<String> listH215 = new ArrayList<String>();
@@ -465,37 +511,41 @@ public class Member extends Activity {
             listH215.add("21-ক্ষেত ফসল কৃষক");
             listH215.add("22-বসত ভিটায়ে কৃষিকাজ করে");
             listH215.add("23-মৎস চাষ");
-            listH215.add("24-হাঁস মুরগি লালন পালন");
-            listH215.add("25-গবাদিপশু লালন পালন");
-            listH215.add("26-গৃহিনী");
-            listH215.add("27-কিছু করে না");
-            listH215.add("28-ছাত্র/ছাত্রী");
-            listH215.add("29-শিশুর বয়স পাচ বছরের নিচে");
+            listH215.add("24-জেলে");
+            listH215.add("25-হাঁস মুরগি লালন পালন");
+            listH215.add("26-গবাদিপশু লালন পালন");
+            listH215.add("27-গৃহিনী");
+            listH215.add("28-কিছু করে না");
+            listH215.add("29-ছাত্র/ছাত্রী");
+            listH215.add("30-শিশুর বয়স পাচ বছরের নিচে");
             ArrayAdapter<String> adptrH215 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH215);
             spnH215.setAdapter(adptrH215);
 
-            secH215X = (LinearLayout) findViewById(R.id.secH215X);
-            VlblH215X = (TextView) findViewById(R.id.VlblH215X);
-            txtH215X = (EditText) findViewById(R.id.txtH215X);
             spnH215.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 8) {
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH215.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH215.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("8")) {
                         secH215X.setVisibility(View.VISIBLE);
+                        lineH215X.setVisibility(View.VISIBLE);
                     } else {
                         txtH215X.setText("");
                         secH215X.setVisibility(View.GONE);
+                        lineH215X.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
+                public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-            secH215X.setVisibility(View.GONE);
-
+            secH215X = (LinearLayout) findViewById(R.id.secH215X);
+            lineH215X = (View) findViewById(R.id.lineH215X);
+            VlblH215X = (TextView) findViewById(R.id.VlblH215X);
+            txtH215X = (EditText) findViewById(R.id.txtH215X);
             secH216 = (LinearLayout) findViewById(R.id.secH216);
+            lineH216 = (View) findViewById(R.id.lineH216);
             VlblH216 = (TextView) findViewById(R.id.VlblH216);
             spnH216 = (Spinner) findViewById(R.id.spnH216);
             List<String> listH216 = new ArrayList<String>();
@@ -524,51 +574,65 @@ public class Member extends Activity {
             listH216.add("21-ক্ষেত ফসল কৃষক");
             listH216.add("22-বসত ভিটায়ে কৃষিকাজ করে");
             listH216.add("23-মৎস চাষ");
-            listH216.add("24-হাঁস মুরগি লালন পালন");
-            listH216.add("25-গবাদিপশু লালন পালন");
-            listH216.add("26-গৃহিনী");
-            listH216.add("27-কিছু করে না");
-            listH216.add("28-ছাত্র/ছাত্রী");
-            listH216.add("29-শিশুর বয়স পাচ বছরের নিচে");
+            listH216.add("24-জেলে");
+            listH216.add("25-হাঁস মুরগি লালন পালন");
+            listH216.add("26-গবাদিপশু লালন পালন");
+            listH216.add("27-গৃহিনী");
+            listH216.add("28-কিছু করে না");
+            listH216.add("29-ছাত্র/ছাত্রী");
+            listH216.add("30-শিশুর বয়স পাচ বছরের নিচে");
             ArrayAdapter<String> adptrH216 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH216);
             spnH216.setAdapter(adptrH216);
 
-            secH216X = (LinearLayout) findViewById(R.id.secH216X);
-            VlblH216X = (TextView) findViewById(R.id.VlblH216X);
-            txtH216X = (EditText) findViewById(R.id.txtH216X);
             spnH216.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 8) {
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH216.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH216.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("8")) {
                         secH216X.setVisibility(View.VISIBLE);
+                        lineH216X.setVisibility(View.VISIBLE);
                     } else {
                         txtH216X.setText("");
                         secH216X.setVisibility(View.GONE);
+                        lineH216X.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
+                public void onNothingSelected(AdapterView<?> parentView) {
                 }
-
             });
-            secH216X.setVisibility(View.GONE);
+            secH216X = (LinearLayout) findViewById(R.id.secH216X);
+            lineH216X = (View) findViewById(R.id.lineH216X);
+            VlblH216X = (TextView) findViewById(R.id.VlblH216X);
+            txtH216X = (EditText) findViewById(R.id.txtH216X);
             secH217 = (LinearLayout) findViewById(R.id.secH217);
+            lineH217 = (View) findViewById(R.id.lineH217);
             VlblH217 = (TextView) findViewById(R.id.VlblH217);
             txtH217 = (EditText) findViewById(R.id.txtH217);
             secH218 = (LinearLayout) findViewById(R.id.secH218);
+            lineH218 = (View) findViewById(R.id.lineH218);
             VlblH218 = (TextView) findViewById(R.id.VlblH218);
             txtH218 = (EditText) findViewById(R.id.txtH218);
             secH219 = (LinearLayout) findViewById(R.id.secH219);
+            lineH219 = (View) findViewById(R.id.lineH219);
             VlblH219 = (TextView) findViewById(R.id.VlblH219);
             txtH219 = (EditText) findViewById(R.id.txtH219);
+            secH220 = (LinearLayout) findViewById(R.id.secH220);
+            lineH220 = (View) findViewById(R.id.lineH220);
+            VlblH220 = (TextView) findViewById(R.id.VlblH220);
+            txtH220 = (EditText) findViewById(R.id.txtH220);
+            secH221 = (LinearLayout) findViewById(R.id.secH221);
+            lineH221 = (View) findViewById(R.id.lineH221);
+            VlblH221 = (TextView) findViewById(R.id.VlblH221);
+            txtH221 = (EditText) findViewById(R.id.txtH221);
             secH222 = (LinearLayout) findViewById(R.id.secH222);
+            lineH222 = (View) findViewById(R.id.lineH222);
             VlblH222 = (TextView) findViewById(R.id.VlblH222);
             txtH222 = (EditText) findViewById(R.id.txtH222);
 
 
-            DataSearch(RND, SUCHANAID, H21);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -607,83 +671,67 @@ public class Member extends Activity {
                 txtH21.requestFocus();
                 return;
             } else if (txtH22.getText().toString().length() == 0 & secH22.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: নাম  (জাতীয় পরিচয়পত্র  দেখে).");
+                Connection.MessageBox(Member.this, "Required field: নাম  (জাতীয় পরিচয়পত্র অথবা জন্মনিবন্ধন সনদ/ টিকা কার্ড   দেখে নিশ্চিত হোন).");
                 txtH22.requestFocus();
                 return;
             } else if (!rdoH231.isChecked() & !rdoH232.isChecked() & secH23.isShown()) {
                 Connection.MessageBox(Member.this, "Select anyone options from (লিঙ্গ ).");
                 rdoH231.requestFocus();
                 return;
-            } else if (txtH24Y.getText().toString().length() == 0 & secH24Y.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: বছর.");
-                txtH24Y.requestFocus();
+            } else if (txtH24.getText().toString().length() == 0 & secH24.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: পিতা’র লাইন নম্বর.");
+                txtH24.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH24Y.getText().toString().length() == 0 ? "1" : txtH24Y.getText().toString()) < 1 || Integer.valueOf(txtH24Y.getText().toString().length() == 0 ? "125" : txtH24Y.getText().toString()) > 125) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 125(বছর).");
-                txtH24Y.requestFocus();
-                return;
-            } else if (txtH24M.getText().toString().length() == 0 & secH24M.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: মাস.");
-                txtH24M.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH24M.getText().toString().length() == 0 ? "1" : txtH24M.getText().toString()) < 1 || Integer.valueOf(txtH24M.getText().toString().length() == 0 ? "11" : txtH24M.getText().toString()) > 11) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 11(মাস).");
-                txtH24M.requestFocus();
+            } else if (Integer.valueOf(txtH24.getText().toString().length() == 0 ? "0" : txtH24.getText().toString()) < 0 || Integer.valueOf(txtH24.getText().toString().length() == 0 ? "25" : txtH24.getText().toString()) > 25) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 25(পিতা’র লাইন নম্বর).");
+                txtH24.requestFocus();
                 return;
             } else if (spnH25.getSelectedItemPosition() == 0 & secH25.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: খানা  প্রধানের সাথে সম্পর্ক.");
+                Connection.MessageBox(Member.this, "Required field: খানা প্রধানের সাথে সম্পর্ক.");
                 spnH25.requestFocus();
                 return;
-            } else if (spnH26.getSelectedItemPosition() == 0 & secH26.isShown()) {
+            } else if (txtH26Y.getText().toString().length() == 0 & secH26Y.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: বছর.");
+                txtH26Y.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "1" : txtH26Y.getText().toString()) < 1 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 125(বছর).");
+                txtH26Y.requestFocus();
+                return;
+            } else if (txtH26M.getText().toString().length() == 0 & secH26M.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: মাস.");
+                txtH26M.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH26M.getText().toString().length() == 0 ? "1" : txtH26M.getText().toString()) < 1 || Integer.valueOf(txtH26M.getText().toString().length() == 0 ? "11" : txtH26M.getText().toString()) > 11) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 11(মাস).");
+                txtH26M.requestFocus();
+                return;
+            } else if (spnH27.getSelectedItemPosition() == 0 & secH27.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: বৈবাহিক অবস্থা.");
-                spnH26.requestFocus();
+                spnH27.requestFocus();
                 return;
-            } else if (txtH27.getText().toString().length() == 0 & secH27.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: বিয়ের সময় বয়স.");
-                txtH27.requestFocus();
+            } else if (txtH28.getText().toString().length() == 0 & secH28.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: বিয়ের সময় বয়স (বছর).");
+                txtH28.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH27.getText().toString().length() == 0 ? "12" : txtH27.getText().toString()) < 12 || Integer.valueOf(txtH27.getText().toString().length() == 0 ? "60" : txtH27.getText().toString()) > 60) {
-                Connection.MessageBox(Member.this, "Value should be between 12 and 60(বিয়ের সময় বয়স).");
-                txtH27.requestFocus();
+            } else if (Integer.valueOf(txtH28.getText().toString().length() == 0 ? "12" : txtH28.getText().toString()) < 12 || Integer.valueOf(txtH28.getText().toString().length() == 0 ? "60" : txtH28.getText().toString()) > 60) {
+                Connection.MessageBox(Member.this, "Value should be between 12 and 60(বিয়ের সময় বয়স (বছর)).");
+                txtH28.requestFocus();
                 return;
-            } else if (spnH28.getSelectedItemPosition() == 0 & secH28.isShown()) {
+            } else if (spnH29.getSelectedItemPosition() == 0 & secH29.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: ধর্ম.");
-                spnH28.requestFocus();
+                spnH29.requestFocus();
                 return;
-            } else if (txtH28X.getText().toString().length() == 0 & secH28X.isShown()) {
+            } else if (txtH29X.getText().toString().length() == 0 & secH29X.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: অন্যান্য.");
-                txtH28X.requestFocus();
+                txtH29X.requestFocus();
                 return;
-            } else if (!rdoH291.isChecked() & !rdoH292.isChecked() & secH29.isShown()) {
+            } else if (!rdoH2101.isChecked() & !rdoH2102.isChecked() & secH210.isShown()) {
                 Connection.MessageBox(Member.this, "Select anyone options from (ভাষা).");
-                rdoH291.requestFocus();
-                return;
-            } else if (txtH210.getText().toString().length() == 0 & secH210.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: পিতা’র লাইন নম্বর.");
-                txtH210.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH210.getText().toString().length() == 0 ? "0" : txtH210.getText().toString()) < 0 || Integer.valueOf(txtH210.getText().toString().length() == 0 ? "25" : txtH210.getText().toString()) > 25) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 25(পিতা’র লাইন নম্বর).");
-                txtH210.requestFocus();
-                return;
-            } else if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
-                txtH220.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH220.getText().toString().length() == 0 ? "0" : txtH220.getText().toString()) < 0 || Integer.valueOf(txtH220.getText().toString().length() == 0 ? "25" : txtH220.getText().toString()) > 25) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 25(মায়ের লাইন নম্বর).");
-                txtH220.requestFocus();
-                return;
-            } else if (txtH221.getText().toString().length() == 0 & secH221.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: স্বামী অথবা স্ত্রী  লাইন নম্বর.");
-                txtH221.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH221.getText().toString().length() == 0 ? "0" : txtH221.getText().toString()) < 0 || Integer.valueOf(txtH221.getText().toString().length() == 0 ? "25" : txtH221.getText().toString()) > 25) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 25(স্বামী অথবা স্ত্রী  লাইন নম্বর).");
-                txtH221.requestFocus();
+                rdoH2101.requestFocus();
                 return;
             } else if (spnH211.getSelectedItemPosition() == 0 & secH211.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: শিক্ষাগত যোগ্যতা.");
+                Connection.MessageBox(Member.this, "Required field: সাক্ষর জ্ঞান.");
                 spnH211.requestFocus();
                 return;
             } else if (spnH212.getSelectedItemPosition() == 0 & secH212.isShown()) {
@@ -722,32 +770,48 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: প্রধান পেশা থেকে গত মাসের আয়.");
                 txtH217.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "1" : txtH217.getText().toString()) < 1 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999999" : txtH217.getText().toString()) > 999999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999999(প্রধান পেশা থেকে গত মাসের আয়).");
+            } else if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "1" : txtH217.getText().toString()) < 1 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999" : txtH217.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(প্রধান পেশা থেকে গত মাসের আয়).");
                 txtH217.requestFocus();
                 return;
             } else if (txtH218.getText().toString().length() == 0 & secH218.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত মাসের আয়.");
+                Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত মাসের আয়.");
                 txtH218.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "1" : txtH218.getText().toString()) < 1 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999999" : txtH218.getText().toString()) > 999999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999999(সকল উৎস থেকে গত মাসের আয়).");
+            } else if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "1" : txtH218.getText().toString()) < 1 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999" : txtH218.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(সকল উৎস থেকে গত মাসের আয়).");
                 txtH218.requestFocus();
                 return;
             } else if (txtH219.getText().toString().length() == 0 & secH219.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত বছরের আয়.");
+                Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত বছরের আয়.");
                 txtH219.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "1" : txtH219.getText().toString()) < 1 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999999" : txtH219.getText().toString()) > 999999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999999(সকল উৎস থেকে গত বছরের আয়).");
+            } else if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "1" : txtH219.getText().toString()) < 1 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999" : txtH219.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(সকল উৎস থেকে গত বছরের আয়).");
                 txtH219.requestFocus();
+                return;
+            } else if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: ইনডেক্স শিশু লাইন নম্বর.");
+                txtH220.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH220.getText().toString().length() == 0 ? "1" : txtH220.getText().toString()) < 1 || Integer.valueOf(txtH220.getText().toString().length() == 0 ? "2" : txtH220.getText().toString()) > 2) {
+                Connection.MessageBox(Member.this, "Value should be between 1 and 2(ইনডেক্স শিশু লাইন নম্বর).");
+                txtH220.requestFocus();
+                return;
+            } else if (txtH221.getText().toString().length() == 0 & secH221.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
+                txtH221.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH221.getText().toString().length() == 0 ? "0" : txtH221.getText().toString()) < 0 || Integer.valueOf(txtH221.getText().toString().length() == 0 ? "25" : txtH221.getText().toString()) > 25) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 25(মায়ের লাইন নম্বর).");
+                txtH221.requestFocus();
                 return;
             } else if (txtH222.getText().toString().length() == 0 & secH222.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: ইনডেক্স শিশু লাইন নম্বর.");
+                Connection.MessageBox(Member.this, "Required field: স্বামী অথবা স্ত্রী  লাইন নম্বর.");
                 txtH222.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH222.getText().toString().length() == 0 ? "1" : txtH222.getText().toString()) < 1 || Integer.valueOf(txtH222.getText().toString().length() == 0 ? "2" : txtH222.getText().toString()) > 2) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 2(ইনডেক্স শিশু লাইন নম্বর).");
+            } else if (Integer.valueOf(txtH222.getText().toString().length() == 0 ? "0" : txtH222.getText().toString()) < 0 || Integer.valueOf(txtH222.getText().toString().length() == 0 ? "25" : txtH222.getText().toString()) > 25) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 25(স্বামী অথবা স্ত্রী  লাইন নম্বর).");
                 txtH222.requestFocus();
                 return;
             }
@@ -767,23 +831,21 @@ public class Member extends Activity {
                 if (rb.isChecked()) objSave.setH23(d_rdogrpH23[i]);
             }
 
-            objSave.setH24Y(txtH24Y.getText().toString());
-            objSave.setH24M(txtH24M.getText().toString());
+            objSave.setH24(txtH24.getText().toString());
             objSave.setH25((spnH25.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH25.getSelectedItem().toString(), "-")));
-            objSave.setH26((spnH26.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH26.getSelectedItem().toString(), "-")));
-            objSave.setH27(txtH27.getText().toString());
-            objSave.setH28((spnH28.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH28.getSelectedItem().toString(), "-")));
-            objSave.setH28X(txtH28X.getText().toString());
-            String[] d_rdogrpH29 = new String[]{"1", "2"};
-            objSave.setH29("");
-            for (int i = 0; i < rdogrpH29.getChildCount(); i++) {
-                rb = (RadioButton) rdogrpH29.getChildAt(i);
-                if (rb.isChecked()) objSave.setH29(d_rdogrpH29[i]);
+            objSave.setH26Y(txtH26Y.getText().toString());
+            objSave.setH26M(txtH26M.getText().toString());
+            objSave.setH27((spnH27.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH27.getSelectedItem().toString(), "-")));
+            objSave.setH28(txtH28.getText().toString());
+            objSave.setH29((spnH29.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH29.getSelectedItem().toString(), "-")));
+            objSave.setH29X(txtH29X.getText().toString());
+            String[] d_rdogrpH210 = new String[]{"1", "2"};
+            objSave.setH210("");
+            for (int i = 0; i < rdogrpH210.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH210.getChildAt(i);
+                if (rb.isChecked()) objSave.setH210(d_rdogrpH210[i]);
             }
 
-            objSave.setH210(txtH210.getText().toString());
-            objSave.setH220(txtH220.getText().toString());
-            objSave.setH221(txtH221.getText().toString());
             objSave.setH211((spnH211.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH211.getSelectedItem().toString(), "-")));
             objSave.setH212((spnH212.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH212.getSelectedItem().toString(), "-")));
             objSave.setH212X(txtH212X.getText().toString());
@@ -802,6 +864,8 @@ public class Member extends Activity {
             objSave.setH217(txtH217.getText().toString());
             objSave.setH218(txtH218.getText().toString());
             objSave.setH219(txtH219.getText().toString());
+            objSave.setH220(txtH220.getText().toString());
+            objSave.setH221(txtH221.getText().toString());
             objSave.setH222(txtH222.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -842,23 +906,21 @@ public class Member extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                txtH24Y.setText(item.getH24Y());
-                txtH24M.setText(item.getH24M());
+                txtH24.setText(item.getH24());
                 spnH25.setSelection(Global.SpinnerItemPositionAnyLength(spnH25, item.getH25()));
-                spnH26.setSelection(Global.SpinnerItemPositionAnyLength(spnH26, item.getH26()));
-                txtH27.setText(item.getH27());
-                spnH28.setSelection(Global.SpinnerItemPositionAnyLength(spnH28, item.getH28()));
-                txtH28X.setText(item.getH28X());
-                String[] d_rdogrpH29 = new String[]{"1", "2"};
-                for (int i = 0; i < d_rdogrpH29.length; i++) {
-                    if (item.getH29().equals(String.valueOf(d_rdogrpH29[i]))) {
-                        rb = (RadioButton) rdogrpH29.getChildAt(i);
+                txtH26Y.setText(item.getH26Y());
+                txtH26M.setText(item.getH26M());
+                spnH27.setSelection(Global.SpinnerItemPositionAnyLength(spnH27, item.getH27()));
+                txtH28.setText(item.getH28());
+                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
+                txtH29X.setText(item.getH29X());
+                String[] d_rdogrpH210 = new String[]{"1", "2"};
+                for (int i = 0; i < d_rdogrpH210.length; i++) {
+                    if (item.getH210().equals(String.valueOf(d_rdogrpH210[i]))) {
+                        rb = (RadioButton) rdogrpH210.getChildAt(i);
                         rb.setChecked(true);
                     }
                 }
-                txtH210.setText(item.getH210());
-                txtH220.setText(item.getH220());
-                txtH221.setText(item.getH221());
                 spnH211.setSelection(Global.SpinnerItemPositionAnyLength(spnH211, item.getH211()));
                 spnH212.setSelection(Global.SpinnerItemPositionAnyLength(spnH212, item.getH212()));
                 txtH212X.setText(item.getH212X());
@@ -877,6 +939,8 @@ public class Member extends Activity {
                 txtH217.setText(item.getH217());
                 txtH218.setText(item.getH218());
                 txtH219.setText(item.getH219());
+                txtH220.setText(item.getH220());
+                txtH221.setText(item.getH221());
                 txtH222.setText(item.getH222());
             }
         } catch (Exception e) {

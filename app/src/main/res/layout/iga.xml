@@ -1,0 +1,3551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="IGA"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+</LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="5sp"
+            android:background="#CCCCCC" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:isScrollContainer="true"
+            android:overScrollMode="always"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/secRND"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblRND"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblRND"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="রাউন্ড নাম্বার"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtRND"
+                        style="@style/customEdit"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineRND"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secSuchanaID"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblSuchanaID"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblSuchanaID"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে/Suchana ID"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtSuchanaID"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineSuchanaID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblHH18b1"
+                        style="@style/rowHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="আপনি নিম্নে বর্ণিত সরঞ্জাম/সামগ্রী/দ্রব্য ব্যবহারকরে থাকেন"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/seclb18b2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblHlb18b2"
+                        style="@style/rowHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/linelb18b2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1a"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1a"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1a"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1a"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="বীজ"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1a1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1a2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1a"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2a7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2a7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2a7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2a7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2a7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2a7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2a7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1b"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1b"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1b"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1b"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="সার"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1b1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1b2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1b"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2b7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2b7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2b7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2b7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2b7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2b7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2b7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1c"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1c"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1c"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1c"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="মাছেরপোনা"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1c1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1c2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2c7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2c7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2c7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2c7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2c7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2c7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2c7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1d"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1d"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1d"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1d"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="চুন"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1d1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1d2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1d"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2d7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2d7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2d7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2d7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2d7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2d7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2d7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1e"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1e"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1e"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1e"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="হাস/মুরগির বাচ্চা"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1e1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1e2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1e"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2e7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2e7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2e7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2e7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2e7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2e7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2e7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1f"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1f"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1f"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1f"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="টীকা"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1f1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1f2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1f"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2f7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2f7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2f7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2f7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2f7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2f7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2f7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1g"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1g"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1g"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1g"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="হাস-মুরগির খাবার/পোল্ট্রিফিড"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1g1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1g2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1g"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2g7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2g7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2g7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2g7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2g7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2g7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2g7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1h"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1h"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1h"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1h"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="মাছের খাবার"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1h"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1h1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1h2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1h"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজিংতারিখ"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="ব্যাচ নাম্বার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নির্মাতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h6"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h6"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h6"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h6"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h7"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h7"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h7"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h7"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2h7"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2h7X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2h7X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2h7X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2h7X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2h7X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2h7X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1i"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1i"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1i"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1i"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="কচি চারাগাছ"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1i"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1i1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1i2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1i"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="আকার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2i1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="স্বাস্থ্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2i2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নার্সারির নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2i3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2i4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2i5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2i5X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2i5X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2i5X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2i5X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2i5X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2i5X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1j"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1j"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1j"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1j"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="চারা"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1j"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1j1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1j2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1j"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j1"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j1"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j1"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="আকার"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2j1"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j2"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j2"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j2"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="স্বাস্থ্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2j2"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j3"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j3"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j3"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j3"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="নার্সারির নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2j3"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j4"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j4"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j4"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="বিক্রেতার নাম ও সুনাম"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2j4"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j5"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j5"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j5"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j5"
+                        android:layout_width="400sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkH18b2j5"
+                        android:layout_width="50sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2j5X"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2j5X"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2j5X"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2j5X"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2j5X"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2j5X"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b1k"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b1k"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b1k"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b1k"
+                        android:layout_width="300sp"
+                        android:layout_height="wrap_content"
+                        android:text="অনান্য"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdogrpH18b1k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="20sp">
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1k1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="হ্যা"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoH18b1k2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:text="না"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b1k"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/secH18b2kX"
+                    style="@style/rowStyle0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblH18b2kX"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="H18b2kX"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/VlblH18b2kX"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="উল্লেখ কর"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtH18b2kX"
+                        style="@style/customEdit"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineH18b2kX"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20sp">
+
+                    <Button
+                        android:id="@+id/cmdSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/button_style"
+                        android:text=" Save -> Continue "
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

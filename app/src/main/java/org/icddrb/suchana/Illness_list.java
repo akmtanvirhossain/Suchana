@@ -1,7 +1,7 @@
 package org.icddrb.suchana;
 
 //Android Manifest Code
-//<activity android:name=".HFIAS_list" android:label="HFIAS: List" />
+//<activity android:name=".Illness_list" android:label="Illness: List" />
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,13 +30,13 @@ import java.util.List;
 import Common.Connection;
 import Common.Global;
 
-public class HFIAS_list extends Activity {
+public class Illness_list extends Activity {
     static final int DATE_DIALOG = 1;
     static final int TIME_DIALOG = 2;
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -68,12 +68,12 @@ public class HFIAS_list extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            setContentView(R.layout.hfias_list);
+            setContentView(R.layout.illness_list);
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
 
-            TableName = "HFIAS";
+            TableName = "Illness";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
@@ -81,7 +81,7 @@ public class HFIAS_list extends Activity {
                     final int DRAWABLE_RIGHT = 2;
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         if (event.getRawX() >= (lblHeading.getRight() - lblHeading.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                            AlertDialog.Builder adb = new AlertDialog.Builder(HFIAS_list.this);
+                            AlertDialog.Builder adb = new AlertDialog.Builder(Illness_list.this);
                             adb.setTitle("Close");
                             adb.setMessage("Do you want to close this form[Yes/No]?");
                             adb.setNegativeButton("No", null);
@@ -101,7 +101,7 @@ public class HFIAS_list extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(HFIAS_list.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Illness_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -131,7 +131,7 @@ public class HFIAS_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", "");
                     IDbundle.putString("SuchanaID", "");
-                    Intent intent = new Intent(getApplicationContext(), HFIAS.class);
+                    Intent intent = new Intent(getApplicationContext(), Illness.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
                     getApplicationContext().startActivity(intent);
@@ -144,7 +144,7 @@ public class HFIAS_list extends Activity {
 
 
         } catch (Exception e) {
-            Connection.MessageBox(HFIAS_list.this, e.getMessage());
+            Connection.MessageBox(Illness_list.this, e.getMessage());
             return;
         }
     }
@@ -152,9 +152,9 @@ public class HFIAS_list extends Activity {
     private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
-            HFIAS_DataModel d = new HFIAS_DataModel();
-            String SQL = "Select * from " + TableName;
-            List<HFIAS_DataModel> data = d.SelectAll(this, SQL);
+            Illness_DataModel d = new Illness_DataModel();
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            List<Illness_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
             dataAdapter = null;
@@ -162,50 +162,30 @@ public class HFIAS_list extends Activity {
             ListView list = (ListView) findViewById(R.id.lstData);
             HashMap<String, String> map;
 
-            for (HFIAS_DataModel item : data) {
+            for (Illness_DataModel item : data) {
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
-                map.put("H121", item.getH121());
-                map.put("H122", item.getH122());
-                map.put("H123", item.getH123());
-                map.put("H124", item.getH124());
-                map.put("H125", item.getH125());
-                map.put("H126", item.getH126());
-                map.put("H127", item.getH127());
-                map.put("H128", item.getH128());
-                map.put("H129", item.getH129());
-                map.put("H1210", item.getH1210());
-                map.put("H1211", item.getH1211());
-                map.put("H1212", item.getH1212());
-                map.put("H1213", item.getH1213());
-                map.put("H1214", item.getH1214());
-                map.put("H1215", item.getH1215());
-                map.put("H1216", item.getH1216());
-                map.put("H1217", item.getH1217());
-                map.put("H1218", item.getH1218());
-                map.put("H131", item.getH131());
-                map.put("H132A", item.getH132A());
-                map.put("H132B", item.getH132B());
-                map.put("H132C", item.getH132C());
-                map.put("H132D", item.getH132D());
-                map.put("H132E", item.getH132E());
-                map.put("H132F", item.getH132F());
-                map.put("H132G", item.getH132G());
-                map.put("H132H", item.getH132H());
-                map.put("H132I", item.getH132I());
-                map.put("H132J", item.getH132J());
-                map.put("H132K", item.getH132K());
-                map.put("H132L", item.getH132L());
-                map.put("Upload", item.getUpload());
-
+                map.put("H171", item.getH171());
+                map.put("SlNo", item.getSlNo());
+                map.put("H171a", item.getH171a());
+                map.put("H171aX", item.getH171aX());
+                map.put("H171b", item.getH171b());
+                map.put("H171bX", item.getH171bX());
+                map.put("H171c", item.getH171c());
+                map.put("H171d", item.getH171d());
+                map.put("H171VCost", item.getH171VCost());
+                map.put("H171TCost", item.getH171TCost());
+                map.put("H171TrCost", item.getH171TrCost());
+                map.put("H171f", item.getH171f());
+                map.put("H171g", item.getH171g());
                 dataList.add(map);
             }
-            dataAdapter = new SimpleAdapter(HFIAS_list.this, dataList, R.layout.hfias_list, new String[]{"rowsec"},
+            dataAdapter = new SimpleAdapter(Illness_list.this, dataList, R.layout.illness_list, new String[]{"rowsec"},
                     new int[]{R.id.secListRow});
             list.setAdapter(new DataListAdapter(this, dataAdapter));
         } catch (Exception e) {
-            Connection.MessageBox(HFIAS_list.this, e.getMessage());
+            Connection.MessageBox(Illness_list.this, e.getMessage());
             return;
         }
     }
@@ -235,19 +215,42 @@ public class HFIAS_list extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.common_row, null);
+                convertView = inflater.inflate(R.layout.illness_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
-
+            final TextView H171 = (TextView) convertView.findViewById(R.id.H171);
+            final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
+            final TextView H171a = (TextView) convertView.findViewById(R.id.H171a);
+            final TextView H171aX = (TextView) convertView.findViewById(R.id.H171aX);
+            final TextView H171b = (TextView) convertView.findViewById(R.id.H171b);
+            final TextView H171bX = (TextView) convertView.findViewById(R.id.H171bX);
+            final TextView H171c = (TextView) convertView.findViewById(R.id.H171c);
+            final TextView H171d = (TextView) convertView.findViewById(R.id.H171d);
+            final TextView H171VCost = (TextView) convertView.findViewById(R.id.H171VCost);
+            final TextView H171TCost = (TextView) convertView.findViewById(R.id.H171TCost);
+            final TextView H171TrCost = (TextView) convertView.findViewById(R.id.H171TrCost);
+            final TextView H171f = (TextView) convertView.findViewById(R.id.H171f);
+            final TextView H171g = (TextView) convertView.findViewById(R.id.H171g);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            Upload.setText(o.get("Upload"));
+            H171.setText(o.get("H171"));
+            SlNo.setText(o.get("SlNo"));
+            H171a.setText(o.get("H171a"));
+            H171aX.setText(o.get("H171aX"));
+            H171b.setText(o.get("H171b"));
+            H171bX.setText(o.get("H171bX"));
+            H171c.setText(o.get("H171c"));
+            H171d.setText(o.get("H171d"));
+            H171VCost.setText(o.get("H171VCost"));
+            H171TCost.setText(o.get("H171TCost"));
+            H171TrCost.setText(o.get("H171TrCost"));
+            H171f.setText(o.get("H171f"));
+            H171g.setText(o.get("H171g"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -256,11 +259,13 @@ public class HFIAS_list extends Activity {
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
                     Intent f1;
-                    f1 = new Intent(getApplicationContext(), HFIAS.class);
+                    f1 = new Intent(getApplicationContext(), Illness.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
                 }
             });
+
+
             return convertView;
         }
     }

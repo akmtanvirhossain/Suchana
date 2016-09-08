@@ -36,7 +36,7 @@ public class HHIdentity_list extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -220,6 +220,7 @@ public class HHIdentity_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
+
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {

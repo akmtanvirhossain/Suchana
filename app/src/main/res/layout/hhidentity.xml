@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="45sp"
         android:background="@color/pageHeadingBack"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/cmdBack"
@@ -27,7 +27,7 @@
             android:text="HHIdentity"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
-
+    </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
@@ -66,6 +66,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/linelblH1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -93,7 +94,7 @@
                 <EditText
                     android:id="@+id/txtRnd"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -102,6 +103,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineRnd"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -137,6 +139,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineDist"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -172,6 +175,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineUpz"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -207,6 +211,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineUn"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -242,6 +247,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineVill"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -269,7 +275,7 @@
                 <EditText
                     android:id="@+id/txtH11"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -278,6 +284,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH11"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -308,12 +315,13 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineSuchanaID"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -349,6 +357,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineAgeGroup"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -387,6 +396,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH17"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -402,6 +412,7 @@
                     android:id="@+id/lblResult"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="Result"
                     android:textSize="20sp" />
 
                 <TextView
@@ -422,6 +433,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineResult"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -441,7 +453,7 @@
 
                 <TextView
                     android:id="@+id/VlblResultX"
-                    android:layout_width="300dp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য নির্দিষ্ট করুন"
                     android:textSize="20sp" />
@@ -458,6 +470,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineResultX"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -517,6 +530,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH16"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -532,12 +546,11 @@
                     android:id="@+id/lblH16X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H16X"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH16X"
-                    android:layout_width="300dp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -554,6 +567,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH16X"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -585,12 +599,13 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="phone|text"
+                    android:inputType="text"
                     android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH13"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -627,6 +642,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -647,6 +663,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/linelblV1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -669,6 +686,7 @@
                     android:id="@+id/VlblH01"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) নারী সদস্য রয়েছে কী?"
                     android:textSize="20sp" />
 
@@ -698,6 +716,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH01"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -720,6 +739,7 @@
                     android:id="@+id/VlblH02"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
                     android:textSize="20sp" />
 
@@ -749,6 +769,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH02"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -771,6 +792,7 @@
                     android:id="@+id/VlblH03"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
                     android:textSize="20sp" />
 
@@ -800,6 +822,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH03"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -822,6 +845,7 @@
                     android:id="@+id/VlblH04"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 15-19 বছর বয়সী কিশোরী রয়েছে কী ?"
                     android:textSize="20sp" />
 
@@ -851,6 +875,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH04"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -873,6 +898,7 @@
                     android:id="@+id/VlblH05"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছি কী ?"
                     android:textSize="20sp" />
 
@@ -902,6 +928,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH05"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -924,6 +951,7 @@
                     android:id="@+id/VlblH06"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="সারা বছরব্যাপী পরিবারের সকল সদস্যের পর্যাপ্ত খাবারের (৩ বেলা পেট ভরে খাবারের) সুযোগ / নিশ্চয়তা আছে কী ?"
                     android:textSize="20sp" />
 
@@ -953,6 +981,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH06"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -975,6 +1004,7 @@
                     android:id="@+id/VlblH07"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="দুর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা?"
                     android:textSize="20sp" />
 
@@ -1004,6 +1034,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH07"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1026,6 +1057,7 @@
                     android:id="@+id/VlblH07a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="কি ব্যবস্থা গ্রহন করেন"
                     android:textSize="20sp" />
 
@@ -1040,6 +1072,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH07a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1062,6 +1095,7 @@
                     android:id="@+id/VlblH08"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?"
                     android:textSize="20sp" />
 
@@ -1076,6 +1110,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH08"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1097,5 +1132,5 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    </LinearLayout>
-</ScrollView>
+
+</LinearLayout>

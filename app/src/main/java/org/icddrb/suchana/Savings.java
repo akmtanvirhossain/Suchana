@@ -453,6 +453,7 @@ public class Savings extends Activity {
             VlblH1036X = (TextView) findViewById(R.id.VlblH1036X);
             txtH1036X = (EditText) findViewById(R.id.txtH1036X);
 
+            DataSearch(RND, SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

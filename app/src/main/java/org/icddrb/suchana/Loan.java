@@ -504,6 +504,7 @@ public class Loan extends Activity {
             VlblH1112X = (TextView) findViewById(R.id.VlblH1112X);
             txtH1112X = (EditText) findViewById(R.id.txtH1112X);
 
+            DataSearch(RND, SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

@@ -542,6 +542,7 @@ public class HFIAS extends Activity {
             VlblH132L = (TextView) findViewById(R.id.VlblH132L);
             chkH132L = (CheckBox) findViewById(R.id.chkH132L);
 
+            DataSearch(RND, SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

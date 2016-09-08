@@ -91,6 +91,22 @@
             android:name="org.icddrb.suchana.HFIAS"
             android:label="HFIAS FORM" />
 
+        <activity
+            android:name="org.icddrb.suchana.Illness_list"
+            android:label="Illness LIST" />
+        <activity
+            android:name="org.icddrb.suchana.Illness"
+            android:label="Illness FORM" />
+
+        <activity
+            android:name="org.icddrb.suchana.IGA_list"
+            android:label="IGA LIST" />
+        <activity
+            android:name="org.icddrb.suchana.IGA"
+            android:label="IGA FORM" />
+
+
+
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

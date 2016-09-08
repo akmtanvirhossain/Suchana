@@ -44,13 +44,7 @@
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H24Y"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H24M"
+            android:id="@+id/H24"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -62,7 +56,13 @@
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H26"
+            android:id="@+id/H26Y"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H26M"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -80,31 +80,19 @@
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H28X"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
             android:id="@+id/H29"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/H29X"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
             android:id="@+id/H210"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H220"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H221"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -177,6 +165,18 @@
 
         <TextView
             android:id="@+id/H219"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H220"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H221"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />

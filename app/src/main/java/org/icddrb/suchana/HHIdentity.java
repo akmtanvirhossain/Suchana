@@ -51,7 +51,7 @@ public class HHIdentity extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -62,93 +62,117 @@ public class HHIdentity extends Activity {
     TextView lblHeading;
     LinearLayout seclblH1;
     LinearLayout secRnd;
+    View lineRnd;
     TextView VlblRnd;
     EditText txtRnd;
     LinearLayout secDist;
+    View lineDist;
     TextView VlblDist;
     Spinner spnDist;
     LinearLayout secUpz;
+    View lineUpz;
     TextView VlblUpz;
     Spinner spnUpz;
     LinearLayout secUn;
+    View lineUn;
     TextView VlblUn;
     Spinner spnUn;
     LinearLayout secVill;
+    View lineVill;
     TextView VlblVill;
     Spinner spnVill;
     LinearLayout secH11;
+    View lineH11;
     TextView VlblH11;
     EditText txtH11;
     LinearLayout secSuchanaID;
+    View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
     LinearLayout secAgeGroup;
+    View lineAgeGroup;
     TextView VlblAgeGroup;
     Spinner spnAgeGroup;
     LinearLayout secH17;
+    View lineH17;
     TextView VlblH17;
     EditText dtpH17;
     LinearLayout secResult;
+    View lineResult;
     TextView VlblResult;
     Spinner spnResult;
     LinearLayout secResultX;
+    View lineResultX;
     TextView VlblResultX;
     EditText txtResultX;
     LinearLayout secH16;
+    View lineH16;
     TextView VlblH16;
     RadioGroup rdogrpH16;
     RadioButton rdoH161;
     RadioButton rdoH162;
     RadioButton rdoH163;
     LinearLayout secH16X;
+    View lineH16X;
     TextView VlblH16X;
     EditText txtH16X;
     LinearLayout secH13;
+    View lineH13;
     TextView VlblH13;
     EditText txtH13;
     LinearLayout secH14;
+    View lineH14;
     TextView VlblH14;
     Spinner spnH14;
     LinearLayout seclblV1;
     LinearLayout secH01;
+    View lineH01;
     TextView VlblH01;
     RadioGroup rdogrpH01;
     RadioButton rdoH011;
     RadioButton rdoH012;
     LinearLayout secH02;
+    View lineH02;
     TextView VlblH02;
     RadioGroup rdogrpH02;
     RadioButton rdoH021;
     RadioButton rdoH022;
     LinearLayout secH03;
+    View lineH03;
     TextView VlblH03;
     RadioGroup rdogrpH03;
     RadioButton rdoH031;
     RadioButton rdoH032;
     LinearLayout secH04;
+    View lineH04;
     TextView VlblH04;
     RadioGroup rdogrpH04;
     RadioButton rdoH041;
     RadioButton rdoH042;
     LinearLayout secH05;
+    View lineH05;
     TextView VlblH05;
     RadioGroup rdogrpH05;
     RadioButton rdoH051;
     RadioButton rdoH052;
     LinearLayout secH06;
+    View lineH06;
     TextView VlblH06;
     RadioGroup rdogrpH06;
     RadioButton rdoH061;
     RadioButton rdoH062;
     LinearLayout secH07;
+    View lineH07;
     TextView VlblH07;
     RadioGroup rdogrpH07;
     RadioButton rdoH071;
     RadioButton rdoH072;
     LinearLayout secH07a;
+    View lineH07a;
     TextView VlblH07a;
     Spinner spnH07a;
     LinearLayout secH08;
+    View lineH08;
     TextView VlblH08;
     Spinner spnH08;
     String StartTime;
@@ -239,9 +263,11 @@ public class HHIdentity extends Activity {
 
             seclblH1 = (LinearLayout) findViewById(R.id.seclblH1);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
+            lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secDist = (LinearLayout) findViewById(R.id.secDist);
+            lineDist = (View) findViewById(R.id.lineDist);
             VlblDist = (TextView) findViewById(R.id.VlblDist);
             spnDist = (Spinner) findViewById(R.id.spnDist);
             List<String> listDist = new ArrayList<String>();
@@ -253,6 +279,7 @@ public class HHIdentity extends Activity {
             spnDist.setAdapter(adptrDist);
 
             secUpz = (LinearLayout) findViewById(R.id.secUpz);
+            lineUpz = (View) findViewById(R.id.lineUpz);
             VlblUpz = (TextView) findViewById(R.id.VlblUpz);
             spnUpz = (Spinner) findViewById(R.id.spnUpz);
             List<String> listUpz = new ArrayList<String>();
@@ -264,6 +291,7 @@ public class HHIdentity extends Activity {
             spnUpz.setAdapter(adptrUpz);
 
             secUn = (LinearLayout) findViewById(R.id.secUn);
+            lineUn = (View) findViewById(R.id.lineUn);
             VlblUn = (TextView) findViewById(R.id.VlblUn);
             spnUn = (Spinner) findViewById(R.id.spnUn);
             List<String> listUn = new ArrayList<String>();
@@ -275,6 +303,7 @@ public class HHIdentity extends Activity {
             spnUn.setAdapter(adptrUn);
 
             secVill = (LinearLayout) findViewById(R.id.secVill);
+            lineVill = (View) findViewById(R.id.lineVill);
             VlblVill = (TextView) findViewById(R.id.VlblVill);
             spnVill = (Spinner) findViewById(R.id.spnVill);
             List<String> listVill = new ArrayList<String>();
@@ -286,12 +315,15 @@ public class HHIdentity extends Activity {
             spnVill.setAdapter(adptrVill);
 
             secH11 = (LinearLayout) findViewById(R.id.secH11);
+            lineH11 = (View) findViewById(R.id.lineH11);
             VlblH11 = (TextView) findViewById(R.id.VlblH11);
             txtH11 = (EditText) findViewById(R.id.txtH11);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
+            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             secAgeGroup = (LinearLayout) findViewById(R.id.secAgeGroup);
+            lineAgeGroup = (View) findViewById(R.id.lineAgeGroup);
             VlblAgeGroup = (TextView) findViewById(R.id.VlblAgeGroup);
             spnAgeGroup = (Spinner) findViewById(R.id.spnAgeGroup);
             List<String> listAgeGroup = new ArrayList<String>();
@@ -304,9 +336,11 @@ public class HHIdentity extends Activity {
             spnAgeGroup.setAdapter(adptrAgeGroup);
 
             secH17 = (LinearLayout) findViewById(R.id.secH17);
+            lineH17 = (View) findViewById(R.id.lineH17);
             VlblH17 = (TextView) findViewById(R.id.VlblH17);
             dtpH17 = (EditText) findViewById(R.id.dtpH17);
             secResult = (LinearLayout) findViewById(R.id.secResult);
+            lineResult = (View) findViewById(R.id.lineResult);
             VlblResult = (TextView) findViewById(R.id.VlblResult);
             spnResult = (Spinner) findViewById(R.id.spnResult);
             List<String> listResult = new ArrayList<String>();
@@ -397,9 +431,11 @@ public class HHIdentity extends Activity {
                 }
             });
             secResultX = (LinearLayout) findViewById(R.id.secResultX);
+            lineResultX = (View) findViewById(R.id.lineResultX);
             VlblResultX = (TextView) findViewById(R.id.VlblResultX);
             txtResultX = (EditText) findViewById(R.id.txtResultX);
             secH16 = (LinearLayout) findViewById(R.id.secH16);
+            lineH16 = (View) findViewById(R.id.lineH16);
             VlblH16 = (TextView) findViewById(R.id.VlblH16);
             rdogrpH16 = (RadioGroup) findViewById(R.id.rdogrpH16);
 
@@ -419,12 +455,15 @@ public class HHIdentity extends Activity {
 
                     if (rbData.equalsIgnoreCase("1")) {
                         secH16X.setVisibility(View.GONE);
+                        lineH16X.setVisibility(View.GONE);
                         txtH16X.setText("");
                     } else if (rbData.equalsIgnoreCase("2")) {
                         secH16X.setVisibility(View.GONE);
+                        lineH16X.setVisibility(View.GONE);
                         txtH16X.setText("");
                     } else {
                         secH16X.setVisibility(View.VISIBLE);
+                        lineH16X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -433,12 +472,15 @@ public class HHIdentity extends Activity {
                 }
             });
             secH16X = (LinearLayout) findViewById(R.id.secH16X);
+            lineH16X = (View) findViewById(R.id.lineH16X);
             VlblH16X = (TextView) findViewById(R.id.VlblH16X);
             txtH16X = (EditText) findViewById(R.id.txtH16X);
             secH13 = (LinearLayout) findViewById(R.id.secH13);
+            lineH13 = (View) findViewById(R.id.lineH13);
             VlblH13 = (TextView) findViewById(R.id.VlblH13);
             txtH13 = (EditText) findViewById(R.id.txtH13);
             secH14 = (LinearLayout) findViewById(R.id.secH14);
+            lineH14 = (View) findViewById(R.id.lineH14);
             VlblH14 = (TextView) findViewById(R.id.VlblH14);
             spnH14 = (Spinner) findViewById(R.id.spnH14);
             List<String> listH14 = new ArrayList<String>();
@@ -454,42 +496,49 @@ public class HHIdentity extends Activity {
 
             seclblV1 = (LinearLayout) findViewById(R.id.seclblV1);
             secH01 = (LinearLayout) findViewById(R.id.secH01);
+            lineH01 = (View) findViewById(R.id.lineH01);
             VlblH01 = (TextView) findViewById(R.id.VlblH01);
             rdogrpH01 = (RadioGroup) findViewById(R.id.rdogrpH01);
 
             rdoH011 = (RadioButton) findViewById(R.id.rdoH011);
             rdoH012 = (RadioButton) findViewById(R.id.rdoH012);
             secH02 = (LinearLayout) findViewById(R.id.secH02);
+            lineH02 = (View) findViewById(R.id.lineH02);
             VlblH02 = (TextView) findViewById(R.id.VlblH02);
             rdogrpH02 = (RadioGroup) findViewById(R.id.rdogrpH02);
 
             rdoH021 = (RadioButton) findViewById(R.id.rdoH021);
             rdoH022 = (RadioButton) findViewById(R.id.rdoH022);
             secH03 = (LinearLayout) findViewById(R.id.secH03);
+            lineH03 = (View) findViewById(R.id.lineH03);
             VlblH03 = (TextView) findViewById(R.id.VlblH03);
             rdogrpH03 = (RadioGroup) findViewById(R.id.rdogrpH03);
 
             rdoH031 = (RadioButton) findViewById(R.id.rdoH031);
             rdoH032 = (RadioButton) findViewById(R.id.rdoH032);
             secH04 = (LinearLayout) findViewById(R.id.secH04);
+            lineH04 = (View) findViewById(R.id.lineH04);
             VlblH04 = (TextView) findViewById(R.id.VlblH04);
             rdogrpH04 = (RadioGroup) findViewById(R.id.rdogrpH04);
 
             rdoH041 = (RadioButton) findViewById(R.id.rdoH041);
             rdoH042 = (RadioButton) findViewById(R.id.rdoH042);
             secH05 = (LinearLayout) findViewById(R.id.secH05);
+            lineH05 = (View) findViewById(R.id.lineH05);
             VlblH05 = (TextView) findViewById(R.id.VlblH05);
             rdogrpH05 = (RadioGroup) findViewById(R.id.rdogrpH05);
 
             rdoH051 = (RadioButton) findViewById(R.id.rdoH051);
             rdoH052 = (RadioButton) findViewById(R.id.rdoH052);
             secH06 = (LinearLayout) findViewById(R.id.secH06);
+            lineH06 = (View) findViewById(R.id.lineH06);
             VlblH06 = (TextView) findViewById(R.id.VlblH06);
             rdogrpH06 = (RadioGroup) findViewById(R.id.rdogrpH06);
 
             rdoH061 = (RadioButton) findViewById(R.id.rdoH061);
             rdoH062 = (RadioButton) findViewById(R.id.rdoH062);
             secH07 = (LinearLayout) findViewById(R.id.secH07);
+            lineH07 = (View) findViewById(R.id.lineH07);
             VlblH07 = (TextView) findViewById(R.id.VlblH07);
             rdogrpH07 = (RadioGroup) findViewById(R.id.rdogrpH07);
 
@@ -516,6 +565,7 @@ public class HHIdentity extends Activity {
                 }
             });
             secH07a = (LinearLayout) findViewById(R.id.secH07a);
+            lineH07a = (View) findViewById(R.id.lineH07a);
             VlblH07a = (TextView) findViewById(R.id.VlblH07a);
             spnH07a = (Spinner) findViewById(R.id.spnH07a);
             List<String> listH07a = new ArrayList<String>();
@@ -533,6 +583,7 @@ public class HHIdentity extends Activity {
             spnH07a.setAdapter(adptrH07a);
 
             secH08 = (LinearLayout) findViewById(R.id.secH08);
+            lineH08 = (View) findViewById(R.id.lineH08);
             VlblH08 = (TextView) findViewById(R.id.VlblH08);
             spnH08 = (Spinner) findViewById(R.id.spnH08);
             List<String> listH08 = new ArrayList<String>();

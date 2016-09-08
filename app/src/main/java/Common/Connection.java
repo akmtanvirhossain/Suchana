@@ -85,7 +85,7 @@ public class Connection extends SQLiteOpenHelper {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                         if (Msg.equals("Saved Successfully")) {
+                        if (Msg.equals("Saved Successfully")) {
                             ((Activity) ClassName).finish();
                         }
                     }

@@ -17,17 +17,15 @@ public class Member_DataModel {
     private String _H21 = "";
     private String _H22 = "";
     private String _H23 = "";
-    private String _H24Y = "";
-    private String _H24M = "";
+    private String _H24 = "";
     private String _H25 = "";
-    private String _H26 = "";
+    private String _H26Y = "";
+    private String _H26M = "";
     private String _H27 = "";
     private String _H28 = "";
-    private String _H28X = "";
     private String _H29 = "";
+    private String _H29X = "";
     private String _H210 = "";
-    private String _H220 = "";
-    private String _H221 = "";
     private String _H211 = "";
     private String _H212 = "";
     private String _H212X = "";
@@ -40,6 +38,8 @@ public class Member_DataModel {
     private String _H217 = "";
     private String _H218 = "";
     private String _H219 = "";
+    private String _H220 = "";
+    private String _H221 = "";
     private String _H222 = "";
     private String _StartTime = "";
     private String _EndTime = "";
@@ -49,10 +49,6 @@ public class Member_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
-
-    public String getUpload() {
-        return _Upload;
-    }
 
     public String getRnd() {
         return _Rnd;
@@ -94,20 +90,12 @@ public class Member_DataModel {
         _H23 = newValue;
     }
 
-    public String getH24Y() {
-        return _H24Y;
+    public String getH24() {
+        return _H24;
     }
 
-    public void setH24Y(String newValue) {
-        _H24Y = newValue;
-    }
-
-    public String getH24M() {
-        return _H24M;
-    }
-
-    public void setH24M(String newValue) {
-        _H24M = newValue;
+    public void setH24(String newValue) {
+        _H24 = newValue;
     }
 
     public String getH25() {
@@ -118,12 +106,20 @@ public class Member_DataModel {
         _H25 = newValue;
     }
 
-    public String getH26() {
-        return _H26;
+    public String getH26Y() {
+        return _H26Y;
     }
 
-    public void setH26(String newValue) {
-        _H26 = newValue;
+    public void setH26Y(String newValue) {
+        _H26Y = newValue;
+    }
+
+    public String getH26M() {
+        return _H26M;
+    }
+
+    public void setH26M(String newValue) {
+        _H26M = newValue;
     }
 
     public String getH27() {
@@ -142,14 +138,6 @@ public class Member_DataModel {
         _H28 = newValue;
     }
 
-    public String getH28X() {
-        return _H28X;
-    }
-
-    public void setH28X(String newValue) {
-        _H28X = newValue;
-    }
-
     public String getH29() {
         return _H29;
     }
@@ -158,28 +146,20 @@ public class Member_DataModel {
         _H29 = newValue;
     }
 
+    public String getH29X() {
+        return _H29X;
+    }
+
+    public void setH29X(String newValue) {
+        _H29X = newValue;
+    }
+
     public String getH210() {
         return _H210;
     }
 
     public void setH210(String newValue) {
         _H210 = newValue;
-    }
-
-    public String getH220() {
-        return _H220;
-    }
-
-    public void setH220(String newValue) {
-        _H220 = newValue;
-    }
-
-    public String getH221() {
-        return _H221;
-    }
-
-    public void setH221(String newValue) {
-        _H221 = newValue;
     }
 
     public String getH211() {
@@ -278,6 +258,22 @@ public class Member_DataModel {
         _H219 = newValue;
     }
 
+    public String getH220() {
+        return _H220;
+    }
+
+    public void setH220(String newValue) {
+        _H220 = newValue;
+    }
+
+    public String getH221() {
+        return _H221;
+    }
+
+    public void setH221(String newValue) {
+        _H221 = newValue;
+    }
+
     public String getH222() {
         return _H222;
     }
@@ -334,7 +330,7 @@ public class Member_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24Y,H24M,H25,H26,H27,H28,H28X,H29,H210,H220,H221,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24Y + "', '" + _H24M + "', '" + _H25 + "', '" + _H26 + "', '" + _H27 + "', '" + _H28 + "', '" + _H28X + "', '" + _H29 + "', '" + _H210 + "', '" + _H220 + "', '" + _H221 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24,H25,H26Y,H26M,H27,H28,H29,H29X,H210,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H220,H221,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24 + "', '" + _H25 + "', '" + _H26Y + "', '" + _H26M + "', '" + _H27 + "', '" + _H28 + "', '" + _H29 + "', '" + _H29X + "', '" + _H210 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H220 + "', '" + _H221 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -347,7 +343,7 @@ public class Member_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H21 = '" + _H21 + "',H22 = '" + _H22 + "',H23 = '" + _H23 + "',H24Y = '" + _H24Y + "',H24M = '" + _H24M + "',H25 = '" + _H25 + "',H26 = '" + _H26 + "',H27 = '" + _H27 + "',H28 = '" + _H28 + "',H28X = '" + _H28X + "',H29 = '" + _H29 + "',H210 = '" + _H210 + "',H220 = '" + _H220 + "',H221 = '" + _H221 + "',H211 = '" + _H211 + "',H212 = '" + _H212 + "',H212X = '" + _H212X + "',H213 = '" + _H213 + "',H214 = '" + _H214 + "',H215 = '" + _H215 + "',H215X = '" + _H215X + "',H216 = '" + _H216 + "',H216X = '" + _H216X + "',H217 = '" + _H217 + "',H218 = '" + _H218 + "',H219 = '" + _H219 + "',H222 = '" + _H222 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H21='" + _H21 + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H21 = '" + _H21 + "',H22 = '" + _H22 + "',H23 = '" + _H23 + "',H24 = '" + _H24 + "',H25 = '" + _H25 + "',H26Y = '" + _H26Y + "',H26M = '" + _H26M + "',H27 = '" + _H27 + "',H28 = '" + _H28 + "',H29 = '" + _H29 + "',H29X = '" + _H29X + "',H210 = '" + _H210 + "',H211 = '" + _H211 + "',H212 = '" + _H212 + "',H212X = '" + _H212X + "',H213 = '" + _H213 + "',H214 = '" + _H214 + "',H215 = '" + _H215 + "',H215X = '" + _H215X + "',H216 = '" + _H216 + "',H216X = '" + _H216X + "',H217 = '" + _H217 + "',H218 = '" + _H218 + "',H219 = '" + _H219 + "',H220 = '" + _H220 + "',H221 = '" + _H221 + "',H222 = '" + _H222 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H21='" + _H21 + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -370,17 +366,15 @@ public class Member_DataModel {
             d._H21 = cur.getString(cur.getColumnIndex("H21"));
             d._H22 = cur.getString(cur.getColumnIndex("H22"));
             d._H23 = cur.getString(cur.getColumnIndex("H23"));
-            d._H24Y = cur.getString(cur.getColumnIndex("H24Y"));
-            d._H24M = cur.getString(cur.getColumnIndex("H24M"));
+            d._H24 = cur.getString(cur.getColumnIndex("H24"));
             d._H25 = cur.getString(cur.getColumnIndex("H25"));
-            d._H26 = cur.getString(cur.getColumnIndex("H26"));
+            d._H26Y = cur.getString(cur.getColumnIndex("H26Y"));
+            d._H26M = cur.getString(cur.getColumnIndex("H26M"));
             d._H27 = cur.getString(cur.getColumnIndex("H27"));
             d._H28 = cur.getString(cur.getColumnIndex("H28"));
-            d._H28X = cur.getString(cur.getColumnIndex("H28X"));
             d._H29 = cur.getString(cur.getColumnIndex("H29"));
+            d._H29X = cur.getString(cur.getColumnIndex("H29X"));
             d._H210 = cur.getString(cur.getColumnIndex("H210"));
-            d._H220 = cur.getString(cur.getColumnIndex("H220"));
-            d._H221 = cur.getString(cur.getColumnIndex("H221"));
             d._H211 = cur.getString(cur.getColumnIndex("H211"));
             d._H212 = cur.getString(cur.getColumnIndex("H212"));
             d._H212X = cur.getString(cur.getColumnIndex("H212X"));
@@ -393,9 +387,9 @@ public class Member_DataModel {
             d._H217 = cur.getString(cur.getColumnIndex("H217"));
             d._H218 = cur.getString(cur.getColumnIndex("H218"));
             d._H219 = cur.getString(cur.getColumnIndex("H219"));
+            d._H220 = cur.getString(cur.getColumnIndex("H220"));
+            d._H221 = cur.getString(cur.getColumnIndex("H221"));
             d._H222 = cur.getString(cur.getColumnIndex("H222"));
-            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
-
             data.add(d);
 
             cur.moveToNext();

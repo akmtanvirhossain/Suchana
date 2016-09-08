@@ -305,6 +305,7 @@ public class Land extends Activity {
             VlblH5Month = (TextView) findViewById(R.id.VlblH5Month);
             txtH5Month = (EditText) findViewById(R.id.txtH5Month);
 
+            DataSearch(RND, SUCHANAID, SLNO);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

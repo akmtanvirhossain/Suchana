@@ -26,6 +26,8 @@ public class MainMenu extends Activity {
     Button cmdMenuLoan;
     Button cmdMenuSavings;
     Button cmdMenuHFIAS;
+    Button cmdMenuIllness;
+    Button cmdMenuIGA;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -107,6 +109,14 @@ public class MainMenu extends Activity {
                 }
             });
 
+            cmdMenuIllness = (Button) findViewById(R.id.cmdMenuIllness);
+            cmdMenuIllness.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Illness_list.class);
+                    startActivity(f1);
+                }
+            });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
             cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -115,6 +125,15 @@ public class MainMenu extends Activity {
                     startActivity(f1);
                 }
             });
+            cmdMenuIGA = (Button) findViewById(R.id.cmdMenuIGA);
+            cmdMenuIGA.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), IGA_list.class);
+                    startActivity(f1);
+                }
+            });
+
 
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);

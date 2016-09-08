@@ -34,20 +34,43 @@ public class SES_DataModel {
     private String _H342 = "";
     private String _H61 = "";
     private String _H62 = "";
-    private String _H63 = "";
-    private String _H64A = "";
-    private String _H64B = "";
-    private String _H64C = "";
-    private String _H64D = "";
-    private String _H64E = "";
-    private String _H64X = "";
+    private String _H63A = "";
+    private String _H63B = "";
+    private String _H63C = "";
+    private String _H63D = "";
+    private String _H63E = "";
+    private String _H63X = "";
+    private String _H64 = "";
     private String _H65 = "";
     private String _H66 = "";
     private String _H67 = "";
     private String _H68 = "";
     private String _H69 = "";
-    private String _H610 = "";
-    private String _H611 = "";
+    private String _H610R = "";
+    private String _H610RX = "";
+    private String _H610D = "";
+    private String _H610DX = "";
+    private String _H610a = "";
+    private String _H610b1 = "";
+    private String _H610b2 = "";
+    private String _H610b3 = "";
+    private String _H610b4 = "";
+    private String _H610b5 = "";
+    private String _H610b5X = "";
+    private String _H610b6 = "";
+    private String _H610c = "";
+    private String _H611R = "";
+    private String _H611RX = "";
+    private String _H611D = "";
+    private String _H611DX = "";
+    private String _H611a = "";
+    private String _H611b1 = "";
+    private String _H611b2 = "";
+    private String _H611b3 = "";
+    private String _H611b4 = "";
+    private String _H611b5 = "";
+    private String _H611b5X = "";
+    private String _H611b6 = "";
     private String _H612R = "";
     private String _H612RX = "";
     private String _H612D = "";
@@ -57,9 +80,9 @@ public class SES_DataModel {
     private String _H612b2 = "";
     private String _H612b3 = "";
     private String _H612b4 = "";
-    private String _H612bX = "";
-    private String _H612X1 = "";
     private String _H612b5 = "";
+    private String _H612b5X = "";
+    private String _H612b6 = "";
     private String _H612c = "";
     private String _H613R = "";
     private String _H613RX = "";
@@ -70,9 +93,10 @@ public class SES_DataModel {
     private String _H613b2 = "";
     private String _H613b3 = "";
     private String _H613b4 = "";
-    private String _H613bX = "";
-    private String _H613bX1 = "";
     private String _H613b5 = "";
+    private String _H613b5X = "";
+    private String _H613b6 = "";
+    private String _H613c = "";
     private String _H614R = "";
     private String _H614RX = "";
     private String _H614D = "";
@@ -82,42 +106,18 @@ public class SES_DataModel {
     private String _H614b2 = "";
     private String _H614b3 = "";
     private String _H614b4 = "";
-    private String _H614bX = "";
-    private String _H614bX1 = "";
     private String _H614b5 = "";
+    private String _H614b5X = "";
+    private String _H614b6 = "";
     private String _H614c = "";
-    private String _H615R = "";
-    private String _H615RX = "";
-    private String _H615D = "";
-    private String _H615DX = "";
     private String _H615a = "";
-    private String _H615b1 = "";
-    private String _H615b2 = "";
-    private String _H615b3 = "";
-    private String _H615b4 = "";
-    private String _H615bX = "";
-    private String _H615X1 = "";
-    private String _H615b5 = "";
-    private String _H616R = "";
-    private String _H616RX = "";
-    private String _H616D = "";
-    private String _H616DX = "";
-    private String _H616a = "";
-    private String _H616b1 = "";
-    private String _H616b2 = "";
-    private String _H616b3 = "";
-    private String _H616b4 = "";
-    private String _H616bX = "";
-    private String _H616X1 = "";
-    private String _H616b5 = "";
-    private String _H616c = "";
+    private String _H615b = "";
+    private String _H616 = "";
     private String _H617 = "";
     private String _H618 = "";
+    private String _H618X = "";
     private String _H619 = "";
     private String _H620 = "";
-    private String _H620X = "";
-    private String _H621 = "";
-    private String _H622 = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -126,10 +126,6 @@ public class SES_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
-
-    public String getUpload() {
-        return _Upload;
-    }
 
     public String getRnd() {
         return _Rnd;
@@ -307,60 +303,60 @@ public class SES_DataModel {
         _H62 = newValue;
     }
 
-    public String getH63() {
-        return _H63;
+    public String getH63A() {
+        return _H63A;
     }
 
-    public void setH63(String newValue) {
-        _H63 = newValue;
+    public void setH63A(String newValue) {
+        _H63A = newValue;
     }
 
-    public String getH64A() {
-        return _H64A;
+    public String getH63B() {
+        return _H63B;
     }
 
-    public void setH64A(String newValue) {
-        _H64A = newValue;
+    public void setH63B(String newValue) {
+        _H63B = newValue;
     }
 
-    public String getH64B() {
-        return _H64B;
+    public String getH63C() {
+        return _H63C;
     }
 
-    public void setH64B(String newValue) {
-        _H64B = newValue;
+    public void setH63C(String newValue) {
+        _H63C = newValue;
     }
 
-    public String getH64C() {
-        return _H64C;
+    public String getH63D() {
+        return _H63D;
     }
 
-    public void setH64C(String newValue) {
-        _H64C = newValue;
+    public void setH63D(String newValue) {
+        _H63D = newValue;
     }
 
-    public String getH64D() {
-        return _H64D;
+    public String getH63E() {
+        return _H63E;
     }
 
-    public void setH64D(String newValue) {
-        _H64D = newValue;
+    public void setH63E(String newValue) {
+        _H63E = newValue;
     }
 
-    public String getH64E() {
-        return _H64E;
+    public String getH63X() {
+        return _H63X;
     }
 
-    public void setH64E(String newValue) {
-        _H64E = newValue;
+    public void setH63X(String newValue) {
+        _H63X = newValue;
     }
 
-    public String getH64X() {
-        return _H64X;
+    public String getH64() {
+        return _H64;
     }
 
-    public void setH64X(String newValue) {
-        _H64X = newValue;
+    public void setH64(String newValue) {
+        _H64 = newValue;
     }
 
     public String getH65() {
@@ -403,20 +399,204 @@ public class SES_DataModel {
         _H69 = newValue;
     }
 
-    public String getH610() {
-        return _H610;
+    public String getH610R() {
+        return _H610R;
     }
 
-    public void setH610(String newValue) {
-        _H610 = newValue;
+    public void setH610R(String newValue) {
+        _H610R = newValue;
     }
 
-    public String getH611() {
-        return _H611;
+    public String getH610RX() {
+        return _H610RX;
     }
 
-    public void setH611(String newValue) {
-        _H611 = newValue;
+    public void setH610RX(String newValue) {
+        _H610RX = newValue;
+    }
+
+    public String getH610D() {
+        return _H610D;
+    }
+
+    public void setH610D(String newValue) {
+        _H610D = newValue;
+    }
+
+    public String getH610DX() {
+        return _H610DX;
+    }
+
+    public void setH610DX(String newValue) {
+        _H610DX = newValue;
+    }
+
+    public String getH610a() {
+        return _H610a;
+    }
+
+    public void setH610a(String newValue) {
+        _H610a = newValue;
+    }
+
+    public String getH610b1() {
+        return _H610b1;
+    }
+
+    public void setH610b1(String newValue) {
+        _H610b1 = newValue;
+    }
+
+    public String getH610b2() {
+        return _H610b2;
+    }
+
+    public void setH610b2(String newValue) {
+        _H610b2 = newValue;
+    }
+
+    public String getH610b3() {
+        return _H610b3;
+    }
+
+    public void setH610b3(String newValue) {
+        _H610b3 = newValue;
+    }
+
+    public String getH610b4() {
+        return _H610b4;
+    }
+
+    public void setH610b4(String newValue) {
+        _H610b4 = newValue;
+    }
+
+    public String getH610b5() {
+        return _H610b5;
+    }
+
+    public void setH610b5(String newValue) {
+        _H610b5 = newValue;
+    }
+
+    public String getH610b5X() {
+        return _H610b5X;
+    }
+
+    public void setH610b5X(String newValue) {
+        _H610b5X = newValue;
+    }
+
+    public String getH610b6() {
+        return _H610b6;
+    }
+
+    public void setH610b6(String newValue) {
+        _H610b6 = newValue;
+    }
+
+    public String getH610c() {
+        return _H610c;
+    }
+
+    public void setH610c(String newValue) {
+        _H610c = newValue;
+    }
+
+    public String getH611R() {
+        return _H611R;
+    }
+
+    public void setH611R(String newValue) {
+        _H611R = newValue;
+    }
+
+    public String getH611RX() {
+        return _H611RX;
+    }
+
+    public void setH611RX(String newValue) {
+        _H611RX = newValue;
+    }
+
+    public String getH611D() {
+        return _H611D;
+    }
+
+    public void setH611D(String newValue) {
+        _H611D = newValue;
+    }
+
+    public String getH611DX() {
+        return _H611DX;
+    }
+
+    public void setH611DX(String newValue) {
+        _H611DX = newValue;
+    }
+
+    public String getH611a() {
+        return _H611a;
+    }
+
+    public void setH611a(String newValue) {
+        _H611a = newValue;
+    }
+
+    public String getH611b1() {
+        return _H611b1;
+    }
+
+    public void setH611b1(String newValue) {
+        _H611b1 = newValue;
+    }
+
+    public String getH611b2() {
+        return _H611b2;
+    }
+
+    public void setH611b2(String newValue) {
+        _H611b2 = newValue;
+    }
+
+    public String getH611b3() {
+        return _H611b3;
+    }
+
+    public void setH611b3(String newValue) {
+        _H611b3 = newValue;
+    }
+
+    public String getH611b4() {
+        return _H611b4;
+    }
+
+    public void setH611b4(String newValue) {
+        _H611b4 = newValue;
+    }
+
+    public String getH611b5() {
+        return _H611b5;
+    }
+
+    public void setH611b5(String newValue) {
+        _H611b5 = newValue;
+    }
+
+    public String getH611b5X() {
+        return _H611b5X;
+    }
+
+    public void setH611b5X(String newValue) {
+        _H611b5X = newValue;
+    }
+
+    public String getH611b6() {
+        return _H611b6;
+    }
+
+    public void setH611b6(String newValue) {
+        _H611b6 = newValue;
     }
 
     public String getH612R() {
@@ -491,28 +671,28 @@ public class SES_DataModel {
         _H612b4 = newValue;
     }
 
-    public String getH612bX() {
-        return _H612bX;
-    }
-
-    public void setH612bX(String newValue) {
-        _H612bX = newValue;
-    }
-
-    public String getH612X1() {
-        return _H612X1;
-    }
-
-    public void setH612X1(String newValue) {
-        _H612X1 = newValue;
-    }
-
     public String getH612b5() {
         return _H612b5;
     }
 
     public void setH612b5(String newValue) {
         _H612b5 = newValue;
+    }
+
+    public String getH612b5X() {
+        return _H612b5X;
+    }
+
+    public void setH612b5X(String newValue) {
+        _H612b5X = newValue;
+    }
+
+    public String getH612b6() {
+        return _H612b6;
+    }
+
+    public void setH612b6(String newValue) {
+        _H612b6 = newValue;
     }
 
     public String getH612c() {
@@ -595,28 +775,36 @@ public class SES_DataModel {
         _H613b4 = newValue;
     }
 
-    public String getH613bX() {
-        return _H613bX;
-    }
-
-    public void setH613bX(String newValue) {
-        _H613bX = newValue;
-    }
-
-    public String getH613bX1() {
-        return _H613bX1;
-    }
-
-    public void setH613bX1(String newValue) {
-        _H613bX1 = newValue;
-    }
-
     public String getH613b5() {
         return _H613b5;
     }
 
     public void setH613b5(String newValue) {
         _H613b5 = newValue;
+    }
+
+    public String getH613b5X() {
+        return _H613b5X;
+    }
+
+    public void setH613b5X(String newValue) {
+        _H613b5X = newValue;
+    }
+
+    public String getH613b6() {
+        return _H613b6;
+    }
+
+    public void setH613b6(String newValue) {
+        _H613b6 = newValue;
+    }
+
+    public String getH613c() {
+        return _H613c;
+    }
+
+    public void setH613c(String newValue) {
+        _H613c = newValue;
     }
 
     public String getH614R() {
@@ -691,28 +879,28 @@ public class SES_DataModel {
         _H614b4 = newValue;
     }
 
-    public String getH614bX() {
-        return _H614bX;
-    }
-
-    public void setH614bX(String newValue) {
-        _H614bX = newValue;
-    }
-
-    public String getH614bX1() {
-        return _H614bX1;
-    }
-
-    public void setH614bX1(String newValue) {
-        _H614bX1 = newValue;
-    }
-
     public String getH614b5() {
         return _H614b5;
     }
 
     public void setH614b5(String newValue) {
         _H614b5 = newValue;
+    }
+
+    public String getH614b5X() {
+        return _H614b5X;
+    }
+
+    public void setH614b5X(String newValue) {
+        _H614b5X = newValue;
+    }
+
+    public String getH614b6() {
+        return _H614b6;
+    }
+
+    public void setH614b6(String newValue) {
+        _H614b6 = newValue;
     }
 
     public String getH614c() {
@@ -723,38 +911,6 @@ public class SES_DataModel {
         _H614c = newValue;
     }
 
-    public String getH615R() {
-        return _H615R;
-    }
-
-    public void setH615R(String newValue) {
-        _H615R = newValue;
-    }
-
-    public String getH615RX() {
-        return _H615RX;
-    }
-
-    public void setH615RX(String newValue) {
-        _H615RX = newValue;
-    }
-
-    public String getH615D() {
-        return _H615D;
-    }
-
-    public void setH615D(String newValue) {
-        _H615D = newValue;
-    }
-
-    public String getH615DX() {
-        return _H615DX;
-    }
-
-    public void setH615DX(String newValue) {
-        _H615DX = newValue;
-    }
-
     public String getH615a() {
         return _H615a;
     }
@@ -763,164 +919,20 @@ public class SES_DataModel {
         _H615a = newValue;
     }
 
-    public String getH615b1() {
-        return _H615b1;
+    public String getH615b() {
+        return _H615b;
     }
 
-    public void setH615b1(String newValue) {
-        _H615b1 = newValue;
+    public void setH615b(String newValue) {
+        _H615b = newValue;
     }
 
-    public String getH615b2() {
-        return _H615b2;
+    public String getH616() {
+        return _H616;
     }
 
-    public void setH615b2(String newValue) {
-        _H615b2 = newValue;
-    }
-
-    public String getH615b3() {
-        return _H615b3;
-    }
-
-    public void setH615b3(String newValue) {
-        _H615b3 = newValue;
-    }
-
-    public String getH615b4() {
-        return _H615b4;
-    }
-
-    public void setH615b4(String newValue) {
-        _H615b4 = newValue;
-    }
-
-    public String getH615bX() {
-        return _H615bX;
-    }
-
-    public void setH615bX(String newValue) {
-        _H615bX = newValue;
-    }
-
-    public String getH615X1() {
-        return _H615X1;
-    }
-
-    public void setH615X1(String newValue) {
-        _H615X1 = newValue;
-    }
-
-    public String getH615b5() {
-        return _H615b5;
-    }
-
-    public void setH615b5(String newValue) {
-        _H615b5 = newValue;
-    }
-
-    public String getH616R() {
-        return _H616R;
-    }
-
-    public void setH616R(String newValue) {
-        _H616R = newValue;
-    }
-
-    public String getH616RX() {
-        return _H616RX;
-    }
-
-    public void setH616RX(String newValue) {
-        _H616RX = newValue;
-    }
-
-    public String getH616D() {
-        return _H616D;
-    }
-
-    public void setH616D(String newValue) {
-        _H616D = newValue;
-    }
-
-    public String getH616DX() {
-        return _H616DX;
-    }
-
-    public void setH616DX(String newValue) {
-        _H616DX = newValue;
-    }
-
-    public String getH616a() {
-        return _H616a;
-    }
-
-    public void setH616a(String newValue) {
-        _H616a = newValue;
-    }
-
-    public String getH616b1() {
-        return _H616b1;
-    }
-
-    public void setH616b1(String newValue) {
-        _H616b1 = newValue;
-    }
-
-    public String getH616b2() {
-        return _H616b2;
-    }
-
-    public void setH616b2(String newValue) {
-        _H616b2 = newValue;
-    }
-
-    public String getH616b3() {
-        return _H616b3;
-    }
-
-    public void setH616b3(String newValue) {
-        _H616b3 = newValue;
-    }
-
-    public String getH616b4() {
-        return _H616b4;
-    }
-
-    public void setH616b4(String newValue) {
-        _H616b4 = newValue;
-    }
-
-    public String getH616bX() {
-        return _H616bX;
-    }
-
-    public void setH616bX(String newValue) {
-        _H616bX = newValue;
-    }
-
-    public String getH616X1() {
-        return _H616X1;
-    }
-
-    public void setH616X1(String newValue) {
-        _H616X1 = newValue;
-    }
-
-    public String getH616b5() {
-        return _H616b5;
-    }
-
-    public void setH616b5(String newValue) {
-        _H616b5 = newValue;
-    }
-
-    public String getH616c() {
-        return _H616c;
-    }
-
-    public void setH616c(String newValue) {
-        _H616c = newValue;
+    public void setH616(String newValue) {
+        _H616 = newValue;
     }
 
     public String getH617() {
@@ -939,6 +951,14 @@ public class SES_DataModel {
         _H618 = newValue;
     }
 
+    public String getH618X() {
+        return _H618X;
+    }
+
+    public void setH618X(String newValue) {
+        _H618X = newValue;
+    }
+
     public String getH619() {
         return _H619;
     }
@@ -953,30 +973,6 @@ public class SES_DataModel {
 
     public void setH620(String newValue) {
         _H620 = newValue;
-    }
-
-    public String getH620X() {
-        return _H620X;
-    }
-
-    public void setH620X(String newValue) {
-        _H620X = newValue;
-    }
-
-    public String getH621() {
-        return _H621;
-    }
-
-    public void setH621(String newValue) {
-        _H621 = newValue;
-    }
-
-    public String getH622() {
-        return _H622;
-    }
-
-    public void setH622(String newValue) {
-        _H622 = newValue;
     }
 
     public void setStartTime(String newValue) {
@@ -1027,7 +1023,7 @@ public class SES_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H311,H312,H313,H321,H321X,H322,H322X,H323,H323X,H324,H324X,H325,H325X,H331,H332A,H332B,H341,H342,H61,H62,H63,H64A,H64B,H64C,H64D,H64E,H64X,H65,H66,H67,H68,H69,H610,H611,H612R,H612RX,H612D,H612DX,H612a,H612b1,H612b2,H612b3,H612b4,H612bX,H612X1,H612b5,H612c,H613R,H613RX,H613D,H613DX,H613a,H613b1,H613b2,H613b3,H613b4,H613bX,H613bX1,H613b5,H614R,H614RX,H614D,H614DX,H614a,H614b1,H614b2,H614b3,H614b4,H614bX,H614bX1,H614b5,H614c,H615R,H615RX,H615D,H615DX,H615a,H615b1,H615b2,H615b3,H615b4,H615bX,H615X1,H615b5,H616R,H616RX,H616D,H616DX,H616a,H616b1,H616b2,H616b3,H616b4,H616bX,H616X1,H616b5,H616c,H617,H618,H619,H620,H620X,H621,H622,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H311 + "', '" + _H312 + "', '" + _H313 + "', '" + _H321 + "', '" + _H321X + "', '" + _H322 + "', '" + _H322X + "', '" + _H323 + "', '" + _H323X + "', '" + _H324 + "', '" + _H324X + "', '" + _H325 + "', '" + _H325X + "', '" + _H331 + "', '" + _H332A + "', '" + _H332B + "', '" + _H341 + "', '" + _H342 + "', '" + _H61 + "', '" + _H62 + "', '" + _H63 + "', '" + _H64A + "', '" + _H64B + "', '" + _H64C + "', '" + _H64D + "', '" + _H64E + "', '" + _H64X + "', '" + _H65 + "', '" + _H66 + "', '" + _H67 + "', '" + _H68 + "', '" + _H69 + "', '" + _H610 + "', '" + _H611 + "', '" + _H612R + "', '" + _H612RX + "', '" + _H612D + "', '" + _H612DX + "', '" + _H612a + "', '" + _H612b1 + "', '" + _H612b2 + "', '" + _H612b3 + "', '" + _H612b4 + "', '" + _H612bX + "', '" + _H612X1 + "', '" + _H612b5 + "', '" + _H612c + "', '" + _H613R + "', '" + _H613RX + "', '" + _H613D + "', '" + _H613DX + "', '" + _H613a + "', '" + _H613b1 + "', '" + _H613b2 + "', '" + _H613b3 + "', '" + _H613b4 + "', '" + _H613bX + "', '" + _H613bX1 + "', '" + _H613b5 + "', '" + _H614R + "', '" + _H614RX + "', '" + _H614D + "', '" + _H614DX + "', '" + _H614a + "', '" + _H614b1 + "', '" + _H614b2 + "', '" + _H614b3 + "', '" + _H614b4 + "', '" + _H614bX + "', '" + _H614bX1 + "', '" + _H614b5 + "', '" + _H614c + "', '" + _H615R + "', '" + _H615RX + "', '" + _H615D + "', '" + _H615DX + "', '" + _H615a + "', '" + _H615b1 + "', '" + _H615b2 + "', '" + _H615b3 + "', '" + _H615b4 + "', '" + _H615bX + "', '" + _H615X1 + "', '" + _H615b5 + "', '" + _H616R + "', '" + _H616RX + "', '" + _H616D + "', '" + _H616DX + "', '" + _H616a + "', '" + _H616b1 + "', '" + _H616b2 + "', '" + _H616b3 + "', '" + _H616b4 + "', '" + _H616bX + "', '" + _H616X1 + "', '" + _H616b5 + "', '" + _H616c + "', '" + _H617 + "', '" + _H618 + "', '" + _H619 + "', '" + _H620 + "', '" + _H620X + "', '" + _H621 + "', '" + _H622 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H311,H312,H313,H321,H321X,H322,H322X,H323,H323X,H324,H324X,H325,H325X,H331,H332A,H332B,H341,H342,H61,H62,H63A,H63B,H63C,H63D,H63E,H63X,H64,H65,H66,H67,H68,H69,H610R,H610RX,H610D,H610DX,H610a,H610b1,H610b2,H610b3,H610b4,H610b5,H610b5X,H610b6,H610c,H611R,H611RX,H611D,H611DX,H611a,H611b1,H611b2,H611b3,H611b4,H611b5,H611b5X,H611b6,H612R,H612RX,H612D,H612DX,H612a,H612b1,H612b2,H612b3,H612b4,H612b5,H612b5X,H612b6,H612c,H613R,H613RX,H613D,H613DX,H613a,H613b1,H613b2,H613b3,H613b4,H613b5,H613b5X,H613b6,H613c,H614R,H614RX,H614D,H614DX,H614a,H614b1,H614b2,H614b3,H614b4,H614b5,H614b5X,H614b6,H614c,H615a,H615b,H616,H617,H618,H618X,H619,H620,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H311 + "', '" + _H312 + "', '" + _H313 + "', '" + _H321 + "', '" + _H321X + "', '" + _H322 + "', '" + _H322X + "', '" + _H323 + "', '" + _H323X + "', '" + _H324 + "', '" + _H324X + "', '" + _H325 + "', '" + _H325X + "', '" + _H331 + "', '" + _H332A + "', '" + _H332B + "', '" + _H341 + "', '" + _H342 + "', '" + _H61 + "', '" + _H62 + "', '" + _H63A + "', '" + _H63B + "', '" + _H63C + "', '" + _H63D + "', '" + _H63E + "', '" + _H63X + "', '" + _H64 + "', '" + _H65 + "', '" + _H66 + "', '" + _H67 + "', '" + _H68 + "', '" + _H69 + "', '" + _H610R + "', '" + _H610RX + "', '" + _H610D + "', '" + _H610DX + "', '" + _H610a + "', '" + _H610b1 + "', '" + _H610b2 + "', '" + _H610b3 + "', '" + _H610b4 + "', '" + _H610b5 + "', '" + _H610b5X + "', '" + _H610b6 + "', '" + _H610c + "', '" + _H611R + "', '" + _H611RX + "', '" + _H611D + "', '" + _H611DX + "', '" + _H611a + "', '" + _H611b1 + "', '" + _H611b2 + "', '" + _H611b3 + "', '" + _H611b4 + "', '" + _H611b5 + "', '" + _H611b5X + "', '" + _H611b6 + "', '" + _H612R + "', '" + _H612RX + "', '" + _H612D + "', '" + _H612DX + "', '" + _H612a + "', '" + _H612b1 + "', '" + _H612b2 + "', '" + _H612b3 + "', '" + _H612b4 + "', '" + _H612b5 + "', '" + _H612b5X + "', '" + _H612b6 + "', '" + _H612c + "', '" + _H613R + "', '" + _H613RX + "', '" + _H613D + "', '" + _H613DX + "', '" + _H613a + "', '" + _H613b1 + "', '" + _H613b2 + "', '" + _H613b3 + "', '" + _H613b4 + "', '" + _H613b5 + "', '" + _H613b5X + "', '" + _H613b6 + "', '" + _H613c + "', '" + _H614R + "', '" + _H614RX + "', '" + _H614D + "', '" + _H614DX + "', '" + _H614a + "', '" + _H614b1 + "', '" + _H614b2 + "', '" + _H614b3 + "', '" + _H614b4 + "', '" + _H614b5 + "', '" + _H614b5X + "', '" + _H614b6 + "', '" + _H614c + "', '" + _H615a + "', '" + _H615b + "', '" + _H616 + "', '" + _H617 + "', '" + _H618 + "', '" + _H618X + "', '" + _H619 + "', '" + _H620 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -1040,7 +1036,7 @@ public class SES_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H311 = '" + _H311 + "',H312 = '" + _H312 + "',H313 = '" + _H313 + "',H321 = '" + _H321 + "',H321X = '" + _H321X + "',H322 = '" + _H322 + "',H322X = '" + _H322X + "',H323 = '" + _H323 + "',H323X = '" + _H323X + "',H324 = '" + _H324 + "',H324X = '" + _H324X + "',H325 = '" + _H325 + "',H325X = '" + _H325X + "',H331 = '" + _H331 + "',H332A = '" + _H332A + "',H332B = '" + _H332B + "',H341 = '" + _H341 + "',H342 = '" + _H342 + "',H61 = '" + _H61 + "',H62 = '" + _H62 + "',H63 = '" + _H63 + "',H64A = '" + _H64A + "',H64B = '" + _H64B + "',H64C = '" + _H64C + "',H64D = '" + _H64D + "',H64E = '" + _H64E + "',H64X = '" + _H64X + "',H65 = '" + _H65 + "',H66 = '" + _H66 + "',H67 = '" + _H67 + "',H68 = '" + _H68 + "',H69 = '" + _H69 + "',H610 = '" + _H610 + "',H611 = '" + _H611 + "',H612R = '" + _H612R + "',H612RX = '" + _H612RX + "',H612D = '" + _H612D + "',H612DX = '" + _H612DX + "',H612a = '" + _H612a + "',H612b1 = '" + _H612b1 + "',H612b2 = '" + _H612b2 + "',H612b3 = '" + _H612b3 + "',H612b4 = '" + _H612b4 + "',H612bX = '" + _H612bX + "',H612X1 = '" + _H612X1 + "',H612b5 = '" + _H612b5 + "',H612c = '" + _H612c + "',H613R = '" + _H613R + "',H613RX = '" + _H613RX + "',H613D = '" + _H613D + "',H613DX = '" + _H613DX + "',H613a = '" + _H613a + "',H613b1 = '" + _H613b1 + "',H613b2 = '" + _H613b2 + "',H613b3 = '" + _H613b3 + "',H613b4 = '" + _H613b4 + "',H613bX = '" + _H613bX + "',H613bX1 = '" + _H613bX1 + "',H613b5 = '" + _H613b5 + "',H614R = '" + _H614R + "',H614RX = '" + _H614RX + "',H614D = '" + _H614D + "',H614DX = '" + _H614DX + "',H614a = '" + _H614a + "',H614b1 = '" + _H614b1 + "',H614b2 = '" + _H614b2 + "',H614b3 = '" + _H614b3 + "',H614b4 = '" + _H614b4 + "',H614bX = '" + _H614bX + "',H614bX1 = '" + _H614bX1 + "',H614b5 = '" + _H614b5 + "',H614c = '" + _H614c + "',H615R = '" + _H615R + "',H615RX = '" + _H615RX + "',H615D = '" + _H615D + "',H615DX = '" + _H615DX + "',H615a = '" + _H615a + "',H615b1 = '" + _H615b1 + "',H615b2 = '" + _H615b2 + "',H615b3 = '" + _H615b3 + "',H615b4 = '" + _H615b4 + "',H615bX = '" + _H615bX + "',H615X1 = '" + _H615X1 + "',H615b5 = '" + _H615b5 + "',H616R = '" + _H616R + "',H616RX = '" + _H616RX + "',H616D = '" + _H616D + "',H616DX = '" + _H616DX + "',H616a = '" + _H616a + "',H616b1 = '" + _H616b1 + "',H616b2 = '" + _H616b2 + "',H616b3 = '" + _H616b3 + "',H616b4 = '" + _H616b4 + "',H616bX = '" + _H616bX + "',H616X1 = '" + _H616X1 + "',H616b5 = '" + _H616b5 + "',H616c = '" + _H616c + "',H617 = '" + _H617 + "',H618 = '" + _H618 + "',H619 = '" + _H619 + "',H620 = '" + _H620 + "',H620X = '" + _H620X + "',H621 = '" + _H621 + "',H622 = '" + _H622 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H311 = '" + _H311 + "',H312 = '" + _H312 + "',H313 = '" + _H313 + "',H321 = '" + _H321 + "',H321X = '" + _H321X + "',H322 = '" + _H322 + "',H322X = '" + _H322X + "',H323 = '" + _H323 + "',H323X = '" + _H323X + "',H324 = '" + _H324 + "',H324X = '" + _H324X + "',H325 = '" + _H325 + "',H325X = '" + _H325X + "',H331 = '" + _H331 + "',H332A = '" + _H332A + "',H332B = '" + _H332B + "',H341 = '" + _H341 + "',H342 = '" + _H342 + "',H61 = '" + _H61 + "',H62 = '" + _H62 + "',H63A = '" + _H63A + "',H63B = '" + _H63B + "',H63C = '" + _H63C + "',H63D = '" + _H63D + "',H63E = '" + _H63E + "',H63X = '" + _H63X + "',H64 = '" + _H64 + "',H65 = '" + _H65 + "',H66 = '" + _H66 + "',H67 = '" + _H67 + "',H68 = '" + _H68 + "',H69 = '" + _H69 + "',H610R = '" + _H610R + "',H610RX = '" + _H610RX + "',H610D = '" + _H610D + "',H610DX = '" + _H610DX + "',H610a = '" + _H610a + "',H610b1 = '" + _H610b1 + "',H610b2 = '" + _H610b2 + "',H610b3 = '" + _H610b3 + "',H610b4 = '" + _H610b4 + "',H610b5 = '" + _H610b5 + "',H610b5X = '" + _H610b5X + "',H610b6 = '" + _H610b6 + "',H610c = '" + _H610c + "',H611R = '" + _H611R + "',H611RX = '" + _H611RX + "',H611D = '" + _H611D + "',H611DX = '" + _H611DX + "',H611a = '" + _H611a + "',H611b1 = '" + _H611b1 + "',H611b2 = '" + _H611b2 + "',H611b3 = '" + _H611b3 + "',H611b4 = '" + _H611b4 + "',H611b5 = '" + _H611b5 + "',H611b5X = '" + _H611b5X + "',H611b6 = '" + _H611b6 + "',H612R = '" + _H612R + "',H612RX = '" + _H612RX + "',H612D = '" + _H612D + "',H612DX = '" + _H612DX + "',H612a = '" + _H612a + "',H612b1 = '" + _H612b1 + "',H612b2 = '" + _H612b2 + "',H612b3 = '" + _H612b3 + "',H612b4 = '" + _H612b4 + "',H612b5 = '" + _H612b5 + "',H612b5X = '" + _H612b5X + "',H612b6 = '" + _H612b6 + "',H612c = '" + _H612c + "',H613R = '" + _H613R + "',H613RX = '" + _H613RX + "',H613D = '" + _H613D + "',H613DX = '" + _H613DX + "',H613a = '" + _H613a + "',H613b1 = '" + _H613b1 + "',H613b2 = '" + _H613b2 + "',H613b3 = '" + _H613b3 + "',H613b4 = '" + _H613b4 + "',H613b5 = '" + _H613b5 + "',H613b5X = '" + _H613b5X + "',H613b6 = '" + _H613b6 + "',H613c = '" + _H613c + "',H614R = '" + _H614R + "',H614RX = '" + _H614RX + "',H614D = '" + _H614D + "',H614DX = '" + _H614DX + "',H614a = '" + _H614a + "',H614b1 = '" + _H614b1 + "',H614b2 = '" + _H614b2 + "',H614b3 = '" + _H614b3 + "',H614b4 = '" + _H614b4 + "',H614b5 = '" + _H614b5 + "',H614b5X = '" + _H614b5X + "',H614b6 = '" + _H614b6 + "',H614c = '" + _H614c + "',H615a = '" + _H615a + "',H615b = '" + _H615b + "',H616 = '" + _H616 + "',H617 = '" + _H617 + "',H618 = '" + _H618 + "',H618X = '" + _H618X + "',H619 = '" + _H619 + "',H620 = '" + _H620 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -1080,20 +1076,43 @@ public class SES_DataModel {
             d._H342 = cur.getString(cur.getColumnIndex("H342"));
             d._H61 = cur.getString(cur.getColumnIndex("H61"));
             d._H62 = cur.getString(cur.getColumnIndex("H62"));
-            d._H63 = cur.getString(cur.getColumnIndex("H63"));
-            d._H64A = cur.getString(cur.getColumnIndex("H64A"));
-            d._H64B = cur.getString(cur.getColumnIndex("H64B"));
-            d._H64C = cur.getString(cur.getColumnIndex("H64C"));
-            d._H64D = cur.getString(cur.getColumnIndex("H64D"));
-            d._H64E = cur.getString(cur.getColumnIndex("H64E"));
-            d._H64X = cur.getString(cur.getColumnIndex("H64X"));
+            d._H63A = cur.getString(cur.getColumnIndex("H63A"));
+            d._H63B = cur.getString(cur.getColumnIndex("H63B"));
+            d._H63C = cur.getString(cur.getColumnIndex("H63C"));
+            d._H63D = cur.getString(cur.getColumnIndex("H63D"));
+            d._H63E = cur.getString(cur.getColumnIndex("H63E"));
+            d._H63X = cur.getString(cur.getColumnIndex("H63X"));
+            d._H64 = cur.getString(cur.getColumnIndex("H64"));
             d._H65 = cur.getString(cur.getColumnIndex("H65"));
             d._H66 = cur.getString(cur.getColumnIndex("H66"));
             d._H67 = cur.getString(cur.getColumnIndex("H67"));
             d._H68 = cur.getString(cur.getColumnIndex("H68"));
             d._H69 = cur.getString(cur.getColumnIndex("H69"));
-            d._H610 = cur.getString(cur.getColumnIndex("H610"));
-            d._H611 = cur.getString(cur.getColumnIndex("H611"));
+            d._H610R = cur.getString(cur.getColumnIndex("H610R"));
+            d._H610RX = cur.getString(cur.getColumnIndex("H610RX"));
+            d._H610D = cur.getString(cur.getColumnIndex("H610D"));
+            d._H610DX = cur.getString(cur.getColumnIndex("H610DX"));
+            d._H610a = cur.getString(cur.getColumnIndex("H610a"));
+            d._H610b1 = cur.getString(cur.getColumnIndex("H610b1"));
+            d._H610b2 = cur.getString(cur.getColumnIndex("H610b2"));
+            d._H610b3 = cur.getString(cur.getColumnIndex("H610b3"));
+            d._H610b4 = cur.getString(cur.getColumnIndex("H610b4"));
+            d._H610b5 = cur.getString(cur.getColumnIndex("H610b5"));
+            d._H610b5X = cur.getString(cur.getColumnIndex("H610b5X"));
+            d._H610b6 = cur.getString(cur.getColumnIndex("H610b6"));
+            d._H610c = cur.getString(cur.getColumnIndex("H610c"));
+            d._H611R = cur.getString(cur.getColumnIndex("H611R"));
+            d._H611RX = cur.getString(cur.getColumnIndex("H611RX"));
+            d._H611D = cur.getString(cur.getColumnIndex("H611D"));
+            d._H611DX = cur.getString(cur.getColumnIndex("H611DX"));
+            d._H611a = cur.getString(cur.getColumnIndex("H611a"));
+            d._H611b1 = cur.getString(cur.getColumnIndex("H611b1"));
+            d._H611b2 = cur.getString(cur.getColumnIndex("H611b2"));
+            d._H611b3 = cur.getString(cur.getColumnIndex("H611b3"));
+            d._H611b4 = cur.getString(cur.getColumnIndex("H611b4"));
+            d._H611b5 = cur.getString(cur.getColumnIndex("H611b5"));
+            d._H611b5X = cur.getString(cur.getColumnIndex("H611b5X"));
+            d._H611b6 = cur.getString(cur.getColumnIndex("H611b6"));
             d._H612R = cur.getString(cur.getColumnIndex("H612R"));
             d._H612RX = cur.getString(cur.getColumnIndex("H612RX"));
             d._H612D = cur.getString(cur.getColumnIndex("H612D"));
@@ -1103,9 +1122,9 @@ public class SES_DataModel {
             d._H612b2 = cur.getString(cur.getColumnIndex("H612b2"));
             d._H612b3 = cur.getString(cur.getColumnIndex("H612b3"));
             d._H612b4 = cur.getString(cur.getColumnIndex("H612b4"));
-            d._H612bX = cur.getString(cur.getColumnIndex("H612bX"));
-            d._H612X1 = cur.getString(cur.getColumnIndex("H612X1"));
             d._H612b5 = cur.getString(cur.getColumnIndex("H612b5"));
+            d._H612b5X = cur.getString(cur.getColumnIndex("H612b5X"));
+            d._H612b6 = cur.getString(cur.getColumnIndex("H612b6"));
             d._H612c = cur.getString(cur.getColumnIndex("H612c"));
             d._H613R = cur.getString(cur.getColumnIndex("H613R"));
             d._H613RX = cur.getString(cur.getColumnIndex("H613RX"));
@@ -1116,9 +1135,10 @@ public class SES_DataModel {
             d._H613b2 = cur.getString(cur.getColumnIndex("H613b2"));
             d._H613b3 = cur.getString(cur.getColumnIndex("H613b3"));
             d._H613b4 = cur.getString(cur.getColumnIndex("H613b4"));
-            d._H613bX = cur.getString(cur.getColumnIndex("H613bX"));
-            d._H613bX1 = cur.getString(cur.getColumnIndex("H613bX1"));
             d._H613b5 = cur.getString(cur.getColumnIndex("H613b5"));
+            d._H613b5X = cur.getString(cur.getColumnIndex("H613b5X"));
+            d._H613b6 = cur.getString(cur.getColumnIndex("H613b6"));
+            d._H613c = cur.getString(cur.getColumnIndex("H613c"));
             d._H614R = cur.getString(cur.getColumnIndex("H614R"));
             d._H614RX = cur.getString(cur.getColumnIndex("H614RX"));
             d._H614D = cur.getString(cur.getColumnIndex("H614D"));
@@ -1128,44 +1148,18 @@ public class SES_DataModel {
             d._H614b2 = cur.getString(cur.getColumnIndex("H614b2"));
             d._H614b3 = cur.getString(cur.getColumnIndex("H614b3"));
             d._H614b4 = cur.getString(cur.getColumnIndex("H614b4"));
-            d._H614bX = cur.getString(cur.getColumnIndex("H614bX"));
-            d._H614bX1 = cur.getString(cur.getColumnIndex("H614bX1"));
             d._H614b5 = cur.getString(cur.getColumnIndex("H614b5"));
+            d._H614b5X = cur.getString(cur.getColumnIndex("H614b5X"));
+            d._H614b6 = cur.getString(cur.getColumnIndex("H614b6"));
             d._H614c = cur.getString(cur.getColumnIndex("H614c"));
-            d._H615R = cur.getString(cur.getColumnIndex("H615R"));
-            d._H615RX = cur.getString(cur.getColumnIndex("H615RX"));
-            d._H615D = cur.getString(cur.getColumnIndex("H615D"));
-            d._H615DX = cur.getString(cur.getColumnIndex("H615DX"));
             d._H615a = cur.getString(cur.getColumnIndex("H615a"));
-            d._H615b1 = cur.getString(cur.getColumnIndex("H615b1"));
-            d._H615b2 = cur.getString(cur.getColumnIndex("H615b2"));
-            d._H615b3 = cur.getString(cur.getColumnIndex("H615b3"));
-            d._H615b4 = cur.getString(cur.getColumnIndex("H615b4"));
-            d._H615bX = cur.getString(cur.getColumnIndex("H615bX"));
-            d._H615X1 = cur.getString(cur.getColumnIndex("H615X1"));
-            d._H615b5 = cur.getString(cur.getColumnIndex("H615b5"));
-            d._H616R = cur.getString(cur.getColumnIndex("H616R"));
-            d._H616RX = cur.getString(cur.getColumnIndex("H616RX"));
-            d._H616D = cur.getString(cur.getColumnIndex("H616D"));
-            d._H616DX = cur.getString(cur.getColumnIndex("H616DX"));
-            d._H616a = cur.getString(cur.getColumnIndex("H616a"));
-            d._H616b1 = cur.getString(cur.getColumnIndex("H616b1"));
-            d._H616b2 = cur.getString(cur.getColumnIndex("H616b2"));
-            d._H616b3 = cur.getString(cur.getColumnIndex("H616b3"));
-            d._H616b4 = cur.getString(cur.getColumnIndex("H616b4"));
-            d._H616bX = cur.getString(cur.getColumnIndex("H616bX"));
-            d._H616X1 = cur.getString(cur.getColumnIndex("H616X1"));
-            d._H616b5 = cur.getString(cur.getColumnIndex("H616b5"));
-            d._H616c = cur.getString(cur.getColumnIndex("H616c"));
+            d._H615b = cur.getString(cur.getColumnIndex("H615b"));
+            d._H616 = cur.getString(cur.getColumnIndex("H616"));
             d._H617 = cur.getString(cur.getColumnIndex("H617"));
             d._H618 = cur.getString(cur.getColumnIndex("H618"));
+            d._H618X = cur.getString(cur.getColumnIndex("H618X"));
             d._H619 = cur.getString(cur.getColumnIndex("H619"));
             d._H620 = cur.getString(cur.getColumnIndex("H620"));
-            d._H620X = cur.getString(cur.getColumnIndex("H620X"));
-            d._H621 = cur.getString(cur.getColumnIndex("H621"));
-            d._H622 = cur.getString(cur.getColumnIndex("H622"));
-            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
-
             data.add(d);
 
             cur.moveToNext();

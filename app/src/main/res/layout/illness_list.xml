@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:paddingLeft="10sp"
-            android:text="SES"
+            android:text="Illness"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
     </LinearLayout>
