@@ -19,14 +19,45 @@
             android:src="@drawable/back" />
 
         <TextView
-            android:id="@+id/lblHeading"
-            android:layout_width="match_parent"
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10sp"
+            android:text="Back"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
             android:paddingLeft="10sp"
             android:text="HHIdentity"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Next"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
     </LinearLayout>
 
     <View
@@ -306,16 +337,16 @@
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী/সদস্য আইডি/Suchana ID"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -412,7 +443,6 @@
                     android:id="@+id/lblResult"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Result"
                     android:textSize="20sp" />
 
                 <TextView
@@ -464,8 +494,11 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
+                    android:gravity="top|left"
+                    android:inputType="text|textMultiLine"
                     android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:text="a"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -561,8 +594,11 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
+                    android:gravity="top|left"
+                    android:inputType="text|textMultiLine"
                     android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:text="a"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -588,7 +624,7 @@
 
                 <TextView
                     android:id="@+id/VlblH13"
-                    android:layout_width="300dp"
+                    android:layout_width="220sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগীর ফোন নম্বর"
                     android:textSize="20sp" />
@@ -596,7 +632,7 @@
                 <EditText
                     android:id="@+id/txtH13"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -1057,7 +1093,6 @@
                     android:id="@+id/VlblH07a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
                     android:text="কি ব্যবস্থা গ্রহন করেন"
                     android:textSize="20sp" />
 
@@ -1095,7 +1130,6 @@
                     android:id="@+id/VlblH08"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
                     android:text="আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?"
                     android:textSize="20sp" />
 

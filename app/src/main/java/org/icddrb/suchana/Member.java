@@ -368,13 +368,21 @@ public class Member extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH29.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH29.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("5")) {
-                        secH29X.setVisibility(View.VISIBLE);
-                        lineH29X.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH29X.setText("");
+                    if (spnData.equalsIgnoreCase("1")) {
                         secH29X.setVisibility(View.GONE);
                         lineH29X.setVisibility(View.GONE);
+                    } else if (spnData.equalsIgnoreCase("2")) {
+                        secH29X.setVisibility(View.GONE);
+                        lineH29X.setVisibility(View.GONE);
+                    } else if (spnData.equalsIgnoreCase("3")) {
+                        secH29X.setVisibility(View.GONE);
+                        lineH29X.setVisibility(View.GONE);
+                    } else if (spnData.equalsIgnoreCase("4")) {
+                        secH29X.setVisibility(View.GONE);
+                        lineH29X.setVisibility(View.GONE);
+                    } else {
+                        secH29X.setVisibility(View.VISIBLE);
+                        lineH29X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -527,12 +535,11 @@ public class Member extends Activity {
                     if (spnH215.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH215.getSelectedItem().toString(), "-");
                     if (spnData.equalsIgnoreCase("8")) {
-                        secH215X.setVisibility(View.VISIBLE);
-                        lineH215X.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH215X.setText("");
                         secH215X.setVisibility(View.GONE);
                         lineH215X.setVisibility(View.GONE);
+                    } else {
+                        secH215X.setVisibility(View.VISIBLE);
+                        lineH215X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -590,12 +597,11 @@ public class Member extends Activity {
                     if (spnH216.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH216.getSelectedItem().toString(), "-");
                     if (spnData.equalsIgnoreCase("8")) {
-                        secH216X.setVisibility(View.VISIBLE);
-                        lineH216X.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH216X.setText("");
                         secH216X.setVisibility(View.GONE);
                         lineH216X.setVisibility(View.GONE);
+                    } else {
+                        secH216X.setVisibility(View.VISIBLE);
+                        lineH216X.setVisibility(View.VISIBLE);
                     }
                 }
 

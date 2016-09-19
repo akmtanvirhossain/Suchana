@@ -74,6 +74,36 @@
                 android:textSize="20sp" />
 
             <Button
+                android:id="@+id/cmdMenuASSETB"
+                style="@style/menuButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="center|center_vertical"
+                android:text="ASSET Business"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuASSETNB"
+                style="@style/menuButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="center|center_vertical"
+                android:text="ASSET Non Business"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/cmdMenuLand"
                 style="@style/menuButtonStyle"
                 android:layout_width="fill_parent"

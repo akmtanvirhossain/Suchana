@@ -38,19 +38,31 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="H5" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="H5X" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="H5a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H5b" />
+            android:text="H5aX" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H5bx" />
+            android:text="H5b" />
 
         <TextView
             android:layout_width="50dp"
@@ -86,18 +98,12 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H5h" />
+            android:text="H5hY" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H5Year" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5Month" />
+            android:text="H5hM" />
     </LinearLayout>
 </LinearLayout>

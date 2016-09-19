@@ -227,7 +227,6 @@ public class Member_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
-
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {

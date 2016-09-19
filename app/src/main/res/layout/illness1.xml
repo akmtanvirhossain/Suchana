@@ -19,14 +19,45 @@
             android:src="@drawable/back" />
 
         <TextView
-            android:id="@+id/lblHeading"
-            android:layout_width="match_parent"
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Loan"
+            android:text="Back"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="ILLNESS"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Next"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
     </LinearLayout>
 
     <View
@@ -82,6 +113,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineRnd"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -103,13 +135,13 @@
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি/Suchana ID"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -118,48 +150,70 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineSuchanaID"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH111"
+                android:id="@+id/seclbH17"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlbH17"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" অসুস্থতা"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelbH17"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH171"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH111"
+                    android:id="@+id/lblH171"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H111"
+                    android:text="H171"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH111"
+                    android:id="@+id/VlblH171"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি অথবা আপনার স্বামীর কোনো বকেয়া ঋণ আছে (পরিবাবের অন্যদের কথাও জিগ্যেস করুন)"
+                    android:text="গত ১৫ দিনে  খানার কোন  সদস্য অসুস্থ হয়েছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH111"
+                    android:id="@+id/rdogrpH171"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1111"
+                        android:id="@+id/rdoH1711"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হাঁ  "
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1112"
+                        android:id="@+id/rdoH1712"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -169,33 +223,34 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH112"
+                android:id="@+id/secSlNo"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH112"
+                    android:id="@+id/lblSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H112"
+                    android:text="SlNo"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH112"
+                    android:id="@+id/VlblSlNo"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="লোন নম্বর"
+                    android:text="লাইন নং"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH112"
+                    android:id="@+id/txtSlNo"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -206,33 +261,34 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineSlNo"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH113"
+                android:id="@+id/secH171a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH113"
+                    android:id="@+id/lblH171a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H113"
+                    android:text="H171a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH113"
+                    android:id="@+id/VlblH171a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কার কাছ থেকে"
+                    android:text="বিগত 15 দিনের মধ্যে অসুস্থতার ধরন"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spnH113"
+                    android:id="@+id/spnH171a"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
@@ -242,33 +298,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH113X"
+                android:id="@+id/secH171aX"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH113X"
+                    android:id="@+id/lblH171aX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H113X"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH113X"
-                    android:layout_width="300dp"
+                    android:id="@+id/VlblH171aX"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH113X"
+                    android:id="@+id/txtH171aX"
                     style="@style/customEdit"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
@@ -276,38 +332,39 @@
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="60dp"
+                    android:minHeight="40dp"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171aX"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH114"
+                android:id="@+id/secH171b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH114"
+                    android:id="@+id/lblH171b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H114"
+                    android:text="H171b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH114"
+                    android:id="@+id/VlblH171b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে"
+                    android:text="প্রথম কোন চিকিৎসা নেয়া হয়েছিল"
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spnH114"
+                    android:id="@+id/spnH171b"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
@@ -317,33 +374,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH114X"
+                android:id="@+id/secH171bX"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH114X"
+                    android:id="@+id/lblH171bX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H114X"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH114X"
-                    android:layout_width="300dp"
+                    android:id="@+id/VlblH171bX"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH114X"
+                    android:id="@+id/txtH171bX"
                     style="@style/customEdit"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
@@ -351,319 +408,39 @@
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="60dp"
+                    android:minHeight="40dp"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171bX"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH115"
+                android:id="@+id/secH171c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH115"
+                    android:id="@+id/lblH171c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H115"
+                    android:text="H171c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH115"
+                    android:id="@+id/VlblH171c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ক্যাশ কিনা"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH115"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1151"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="ক্যাশ"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1152"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="দয়া করে"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1153"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="NA"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH116"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH116"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H116"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH116"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="লোনের পরিমাণ"
+                    android:text="যদি প্রথম চিকিৎসা HCP হয়, তবে অসুস্থতা শুরুর কত দিন পরে গিয়েছিলেন"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH116"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH117"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH117"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H117"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH117"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কার লোন"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH117"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1171"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="নিজের"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1172"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="স্ত্রীর"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1173"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="NA"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH118"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH118"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H118"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH118"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="আপনি ঋণ শোধ করছেন"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH118"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1181"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="আংশিকভাবে"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1182"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="পুরাপুরি"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1183"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1184"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="NA"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH119"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH119"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H119"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH119"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="লোনের জন্য কোন সুধ দিতে হয়"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH119"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1191"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1192"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1193"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="NA"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1110"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1110"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1110"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1110"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কিস্তির সংখ্যা"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH1110"
+                    android:id="@+id/txtH171c"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -674,33 +451,129 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH1111"
+                android:id="@+id/secH171d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH1111"
+                    android:id="@+id/lblH171d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1111"
+                    android:text="H171d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH1111"
+                    android:id="@+id/VlblH171d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতিটি কিস্তির পরিমাণ"
+                    android:text="অসুস্থতার মোট সময়কাল (শুরু থেকে সুস্থ হওয়া পর্যন্ত) (দিন)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH1111"
+                    android:id="@+id/txtH171d"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH171d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblH17v"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblH17v"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="চিকিৎসার জন্য মোট খরচ"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblH17v"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH171VCost"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH171VCost"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH171VCost"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="চিকিৎসার জন্য খরচ: ভিজিট"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH171VCost"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH171VCost"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH171TCost"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH171TCost"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH171TCost"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="চিকিৎসার জন্য খরচ: পরীক্ষা"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH171TCost"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -711,112 +584,140 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171TCost"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH1112"
+                android:id="@+id/secH171TrCost"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH1112"
+                    android:id="@+id/lblH171TrCost"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1112"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH1112"
+                    android:id="@+id/VlblH171TrCost"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ঋণ যদি শোধ না করে থাকেন তাহলে কারণ কি"
+                    android:text="চিকিৎসার জন্য খরচ: যাতায়াত"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH171TrCost"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH171TrCost"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH171f"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH171f"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH171f"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আয়মূলক কর্মকান্ডে কি এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH1112"
+                    android:id="@+id/rdogrpH171f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH11121"
+                        android:id="@+id/rdoH171f1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="ব্যবসা খারাপ যাচ্ছে"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH11122"
+                        android:id="@+id/rdoH171f2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="ব্যবসা ছাড়া অনান্য কাজ অপর্যাপ্ত"
+                        android:text="না"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH11123"
+                        android:id="@+id/rdoH171f3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="অনান্য"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH11124"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="NA"
+                        android:text="অসুস্থতা এখনো রয়েছে"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171f"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH1112X"
+                android:id="@+id/secH171g"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH1112X"
+                    android:id="@+id/lblH171g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1112X"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH1112X"
-                    android:layout_width="300dp"
+                    android:id="@+id/VlblH171g"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য উল্লেখ করুন"
+                    android:text="হ্যাঁ হলে কত দিনের জন্যে?"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH1112X"
+                    android:id="@+id/txtH171g"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:gravity="top|left"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
-                    android:minHeight="60dp"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH171g"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

@@ -39,74 +39,35 @@
         <activity
             android:name="org.icddrb.suchana.MainMenu"
             android:label="Main Menu" />
-        <activity
-            android:name="org.icddrb.suchana.HHIdentity"
-            android:label="IDENTITY FORM" />
-        <activity
-            android:name="org.icddrb.suchana.HHIdentity_list"
-            android:label="IDENTITY LIST" />
-        <activity
-            android:name="org.icddrb.suchana.Member"
-            android:label="MEMBER FORM" />
-        <activity
-            android:name="org.icddrb.suchana.Member_list"
-            android:label="MEMBER LIST" />
-        <activity
-            android:name="org.icddrb.suchana.SES"
-            android:label="SES FORM" />
-        <activity
-            android:name="org.icddrb.suchana.SES_list"
-            android:label="SES FORM" />
-        <activity
-            android:name="org.icddrb.suchana.Land"
-            android:label="LAND FORM" />
-        <activity
-            android:name="org.icddrb.suchana.Land_list"
-            android:label="LAND LIST" />
 
-        <activity
-            android:name="org.icddrb.suchana.HDDS_list"
-            android:label="HDDS LIST" />
-        <activity
-            android:name="org.icddrb.suchana.HDDS"
-            android:label="HDDS FORM" />
-        <activity
-            android:name="org.icddrb.suchana.Loan_list"
-            android:label="LOAN LIST" />
-        <activity
-            android:name="org.icddrb.suchana.Loan"
-            android:label="LOAN FORM" />
-
-        <activity
-            android:name="org.icddrb.suchana.Savings_list"
-            android:label="SAVING LIST" />
-        <activity
-            android:name="org.icddrb.suchana.Savings"
-            android:label="SAVING FORM" />
-
-        <activity
-            android:name="org.icddrb.suchana.HFIAS_list"
-            android:label="HFIAS LIST" />
-        <activity
-            android:name="org.icddrb.suchana.HFIAS"
-            android:label="HFIAS FORM" />
-
-        <activity
-            android:name="org.icddrb.suchana.Illness_list"
-            android:label="Illness LIST" />
-        <activity
-            android:name="org.icddrb.suchana.Illness"
-            android:label="Illness FORM" />
-
-        <activity
-            android:name="org.icddrb.suchana.IGA_list"
-            android:label="IGA LIST" />
-        <activity
-            android:name="org.icddrb.suchana.IGA"
-            android:label="IGA FORM" />
-
-
-
+        <activity android:name=".HHIdentity" />
+        <activity android:name=".HHIdentity_list" />
+        <activity android:name=".Member" />
+        <activity android:name=".Member_list" />
+        <activity android:name=".SES" />
+        <activity android:name=".SES_list" />
+        <activity android:name=".AssetB" />
+        <activity android:name=".AssetB_list" />
+        <activity android:name=".AssetNB" />
+        <activity android:name=".AssetNB_list" />
+        <activity android:name=".Land" />
+        <activity android:name=".Land_list" />
+        <activity android:name=".Destruction1" />
+        <activity android:name=".Destruction1_list" />
+        <activity android:name=".Destruction2" />
+        <activity android:name=".Destruction2_list" />
+        <activity android:name=".Agriculture" />
+        <activity android:name=".Agriculture_list" />
+        <activity android:name=".NGOWork" />
+        <activity android:name=".NGOWork_list" />
+        <activity android:name=".Illness1" />
+        <activity android:name=".Illness1_list" />
+        <activity android:name=".Illness2" />
+        <activity android:name=".Illness2_list" />
+        <activity android:name=".Careseek" />
+        <activity android:name=".Careseek_list" />
+        <activity android:name=".IGA" />
+        <activity android:name=".IGA_list" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

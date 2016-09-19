@@ -19,14 +19,44 @@
             android:src="@drawable/back" />
 
         <TextView
-            android:id="@+id/lblHeading"
-            android:layout_width="match_parent"
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="HFIAS"
+            android:text="Back"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="Destruction"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Next"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
     </LinearLayout>
 
     <View
@@ -82,6 +112,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineRnd"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -103,13 +134,13 @@
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি/Suchana ID"
+                    android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -118,68 +149,69 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineSuchanaID"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/seclbl12"
+                android:id="@+id/seclb14b"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHlbl12"
+                    android:id="@+id/lblHlb14b"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী"
+                    android:text="আপনি কি প্রাকৃতিক দুর্যোগ সহনীয় নিম্নে বর্ণিত প্রযুক্তিগুলি ব্যবহার করেন কি"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/linelb14b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH121"
+                android:id="@+id/secH14b1"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH121"
+                    android:id="@+id/lblH14b1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H121"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH121"
+                    android:id="@+id/VlblH14b1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত চার সপ্তাহে আপনি আপনার খানায় পর্যাপ্ত খাদ্য থাকবেনা এই রকম দুশ্চিন্তায় ছিলেন কি"
+                    android:text="আগাম চাশাবাদ করা"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH121"
+                    android:id="@+id/rdogrpH14b1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1211"
+                        android:id="@+id/rdoH14b11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ"
+                        android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1212"
+                        android:id="@+id/rdoH14b12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -189,107 +221,252 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14b1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH122"
+                android:id="@+id/secH14b2"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH122"
+                    android:id="@+id/lblH14b2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H122"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH122"
+                    android:id="@+id/VlblH14b2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
+                    android:text="ঘেরা জাইগাই মাছ উৎপাদন করা"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH122"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1221"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার   "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1222"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1223"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH123"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH123"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H123"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH123"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত চার সপ্তাহে এমন হয়েছিল কি আপনি বা আপনার খানার কোনো সদস্যকে খাবার বা টাকার অভাবের কারণে যা খাবার সাধারণত খান তা খেতেপারেননি"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH123"
+                    android:id="@+id/rdogrpH14b2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1231"
+                        android:id="@+id/rdoH14b21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
+                        android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1232"
+                        android:id="@+id/rdoH14b22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না "
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14b2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14b3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14b3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14b3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="উচু জায়গায় বাগান করা"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH14b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না "
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14b3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14b4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14b4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14b4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="পানি সহিষ্ণু প্রজাতি আবাদ"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH14b4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না "
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14b4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14b5"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14b5"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14b5"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="বহুস্তরী বাগান করা"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH14b5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না "
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14b5"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14b6"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14b6"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14b6"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="বস্তায় চাষ করা"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH14b6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH14b62"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -299,48 +476,48 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14b6"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH124"
+                android:id="@+id/secH14b7"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH124"
+                    android:id="@+id/lblH14b7"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H124"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH124"
+                    android:id="@+id/VlblH14b7"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
+                    android:text="বিকল্প জীবিকানির্বাহ কার্যক্রম"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH124"
+                    android:id="@+id/rdogrpH14b7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1241"
+                        android:id="@+id/rdoH14b71"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
+                        android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1242"
+                        android:id="@+id/rdoH14b72"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -350,48 +527,48 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14b7"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH125"
+                android:id="@+id/secH14b8"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH125"
+                    android:id="@+id/lblH14b8"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H125"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH125"
+                    android:id="@+id/VlblH14b8"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত চার সপ্তাহে এমন হয়েছিল কি  যা খাবার কেনার টাকা না থাকার কারণে সীমিত প্রকারের খাবার খেতে হয়েছে"
+                    android:text="অনান্য"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH125"
+                    android:id="@+id/rdogrpH14b8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1251"
+                        android:id="@+id/rdoH14b81"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
+                        android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1252"
+                        android:id="@+id/rdoH14b82"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -401,823 +578,143 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14b8"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH126"
+                android:id="@+id/secH14b8X"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH126"
+                    android:id="@+id/lblH14b8X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H126"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH126"
-                    android:layout_width="300sp"
+                    android:id="@+id/VlblH14b8X"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
+                    android:text="উল্লেখ কর"
                     android:textSize="20sp" />
 
-                <RadioGroup
-                    android:id="@+id/rdogrpH126"
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/txtH14b8X"
+                    style="@style/customEdit"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1261"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার(খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1262"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার(মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1263"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14b8X"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH127"
-                style="@style/rowStyle0"
+                android:id="@+id/seclb14c"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH127"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H127"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH127"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত চার সপ্তাহে এমন হয়েছিল কি আপনি বা আপনার খানার কোনো সদস্যকে খাবার কেনার টাকা না থাকার কারণে এমন কোনো খাবার খেতে হয়েছে যা আপনি সাধারণতখান না"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH127"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1271"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1272"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH128"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH128"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H128"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH128"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH128"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1281"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1282"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1283"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH129"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH129"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H129"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH129"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="খানায় পর্যাপ্ত খাবার বাখাবার কেনার টাকা না থাকার কারণে গত এক মাসে আপনি বা আপনার খানার কোনো সদস্যকে কি কোনো বেলা সাধারণত যতটুকু খান তার তুলনায় কম খেতে হয়েছিল"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH129"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH1291"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH1292"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1210"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1210"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1210"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1210"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1210"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12101"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12102"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12103"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1211"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1211"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1211"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1211"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত এক মাসে আপনি বা আপনার খানার কোনো সদস্যকে খাবারের অভাব বা খাবার কেনার টাকা না থাকার কারণে কি কোনো বেলা না খেয়ে থাকতে হয়েছিল"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1211"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12111"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12112"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1212"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1212"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1212"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1212"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1212"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12121"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12122"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12123"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1213"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1213"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1213"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1213"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত এক মাসে কখনো কি আপনার ঘরের খাবার শেষ হয়ে গিয়েছিল এবং ঐদিন খাবার কেনার কোনো টাকাও ছিলনা"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1213"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12131"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12132"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1214"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1214"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1214"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1214"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1214"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12141"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12142"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12143"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1215"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1215"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1215"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1215"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত এক মাসে কি কখনো এমন হয়েছিল যে আপনাকে অথবা খানার কোনো সদস্য কে অভাবের কারণে ক্ষুধার্ত অভুক্ত অবস্থায় রাতে ঘুমাতে যেতে হয়েছিল"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1215"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12151"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12152"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1216"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1216"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1216"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1216"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1216"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12161"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12162"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12163"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1217"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1217"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1217"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1217"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="গত এক মাসেকি কখনো এমন হয়েছিল যে আপনি বা আপনার খানার কোনো সদস্যকে খাবারের অভাবের কারণে না খেয়ে সারাদিন রাতকাটাতেহয়েছিল"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1217"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12171"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12172"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH1218"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH1218"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H1218"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH1218"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="কতবার এইরূপ ঘটেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH1218"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH12181"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে এক থেকে দুই বার (খুবই কম)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12182"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে তিন থেকে দশ বার (মাঝে মধ্যে)"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH12183"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text="গত চার সপ্তাহে দশ বারেরও বেশি (প্রায়ই)"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/seclb13"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblHlb13"
+                    android:id="@+id/lblHlb14c"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="বাড়ির খাদ্য পর্যাপ্ত তার মাসের বিবরণ"
+                    android:text="সরকারী সামাজিক নিরাপত্তা বেষ্টনী কর্মসূচী"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
+                android:id="@+id/linelb14c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH131"
+                android:id="@+id/secH14c1"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH131"
+                    android:id="@+id/lblH14c1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H131"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH131"
+                    android:id="@+id/VlblH14c1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="বিগত 1year এরমধ্যে এমন কি কোনো মাস ছিল যখন পরিবারের প্রয়োজন মিটাবার জন্যে পর্যাপ্ত খাদ্য আপনার ছিলনা উত্তরদাত্রী যদি হ্যাঁ বলেন বাক্স এ 1 বসান, যদিউত্তর না হয়তব 0 বসান"
+                    android:text="আপনি অথবা আপনার পরিবারের কোনো সদস্য সরকারের তরফ থেকে কোনো ভাতা /বৃত্তি / ক্ষুদ্র ঋণ পেয়েছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH131"
+                    android:id="@+id/rdogrpH14c1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH1311"
+                        android:id="@+id/rdoH14c11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
+                        android:text="হ্যাঁ "
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH1312"
+                        android:id="@+id/rdoH14c12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="না"
+                        android:text="না   "
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132A"
+                android:id="@+id/secH14c1a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132A"
+                    android:id="@+id/lblH14c1a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132A"
+                    android:id="@+id/VlblH14c1a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="বৈশাখ"
+                    android:text="মাতৃকালীন ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132A"
+                    android:id="@+id/chkH14c1a"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1226,33 +723,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132B"
+                android:id="@+id/secH14c1b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132B"
+                    android:id="@+id/lblH14c1b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132B"
+                    android:id="@+id/VlblH14c1b"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="জৈষ্ট্য"
+                    android:text="দরিদ্রদের জন্য  কর্মসংস্থান"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132B"
+                    android:id="@+id/chkH14c1b"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1261,33 +758,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132C"
+                android:id="@+id/secH14c1c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132C"
+                    android:id="@+id/lblH14c1c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132C"
+                    android:id="@+id/VlblH14c1c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="আষাঢ়"
+                    android:text="VGD"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132C"
+                    android:id="@+id/chkH14c1c"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1296,33 +793,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132D"
+                android:id="@+id/secH14c1d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132D"
+                    android:id="@+id/lblH14c1d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132D"
+                    android:id="@+id/VlblH14c1d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="শ্রাবন"
+                    android:text="স্কুল ফিডিং কর্মসূচি"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132D"
+                    android:id="@+id/chkH14c1d"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1331,33 +828,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132E"
+                android:id="@+id/secH14c1e"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132E"
+                    android:id="@+id/lblH14c1e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132E"
+                    android:id="@+id/VlblH14c1e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="ভাদ্র"
+                    android:text="বয়স্ক ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132E"
+                    android:id="@+id/chkH14c1e"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1366,33 +863,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1e"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132F"
+                android:id="@+id/secH14c1f"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132F"
+                    android:id="@+id/lblH14c1f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132F"
+                    android:id="@+id/VlblH14c1f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="আশ্বিন"
+                    android:text="বিধবা/দুঃস্থ নারী ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132F"
+                    android:id="@+id/chkH14c1f"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1401,33 +898,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1f"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132G"
+                android:id="@+id/secH14c1g"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132G"
+                    android:id="@+id/lblH14c1g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132G"
+                    android:id="@+id/VlblH14c1g"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="কার্তিক"
+                    android:text="আর্থিকভাবে অসচ্ছল প্রতিবন্ধী"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132G"
+                    android:id="@+id/chkH14c1g"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1436,33 +933,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1g"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132H"
+                android:id="@+id/secH14c1h"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132H"
+                    android:id="@+id/lblH14c1h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132H"
+                    android:id="@+id/VlblH14c1h"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="অগ্রহায়ন"
+                    android:text="দরিদ্র দুগ্ধদানকারী মায়ের ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132H"
+                    android:id="@+id/chkH14c1h"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1471,33 +968,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1h"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132I"
+                android:id="@+id/secH14c1i"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132I"
+                    android:id="@+id/lblH14c1i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132I"
+                    android:id="@+id/VlblH14c1i"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="পৌষ"
+                    android:text="মুক্তিযোদ্ধাদের জন্য ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132I"
+                    android:id="@+id/chkH14c1i"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1506,33 +1003,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1i"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132J"
+                android:id="@+id/secH14c1j"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132J"
+                    android:id="@+id/lblH14c1j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132J"
+                    android:id="@+id/VlblH14c1j"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="মাঘ"
+                    android:text="মুক্তিযোদ্ধাদের জন্য চিকিৎসা ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132J"
+                    android:id="@+id/chkH14c1j"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1541,33 +1038,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1j"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132K"
+                android:id="@+id/secH14c1k"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132K"
+                    android:id="@+id/lblH14c1k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132K"
+                    android:id="@+id/VlblH14c1k"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="ফাল্গুন"
+                    android:text="শহীদ পরিবার / মুক্তিযোদ্ধাদের জন্য স্বল্প মূল্যে খাদ্য শস্য"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132K"
+                    android:id="@+id/chkH14c1k"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1576,33 +1073,33 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1k"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH132L"
+                android:id="@+id/secH14c1l"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH132L"
+                    android:id="@+id/lblH14c1l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH132L"
+                    android:id="@+id/VlblH14c1l"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="চৈত্র"
+                    android:text="চা বাগান শ্রমিকদের জীবিকার উন্নতি"
                     android:textSize="20sp" />
 
                 <CheckBox
-                    android:id="@+id/chkH132L"
+                    android:id="@+id/chkH14c1l"
                     android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
@@ -1611,6 +1108,361 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH14c1l"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1m"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1m"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1m"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতিবন্ধী শিক্ষার্থীদের জন্য উপবৃত্তি"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1m"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1m"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1n"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1n"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1n"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="CMS"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1n"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1n"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1o"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1o"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1o"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="VGF"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1o"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1o"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1p"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1p"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1p"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="Test Relief (TR) খাদ্য"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1p"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1p"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1q"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1q"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1q"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="Gratuitous Relief (GR) খাদ্য"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1q"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1q"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1r"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1r"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1r"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="কাজের বিনিময়ে খাদ্য"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1r"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1r"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1s"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1s"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1s"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="কাজের বিনিময়ে অর্থ"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1s"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1s"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1t"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1t"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1t"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="নারী স্ব -কর্মসংস্থানের জন্য ক্ষুদ্রঋণ"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1t"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1t"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1x"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1x"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1x"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="অনান্য"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH14c1x"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1x"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH14c1x1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH14c1x1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH14c1x1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="উল্লেখ কর"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH14c1x1"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH14c1x1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1632,5 +1484,4 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

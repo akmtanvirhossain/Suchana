@@ -22,7 +22,6 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -50,7 +49,7 @@ public class Land extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String SLNO = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -60,49 +59,67 @@ public class Land extends Activity {
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
     TextView lblHeading;
     LinearLayout secRnd;
+    View lineRnd;
     TextView VlblRnd;
     EditText txtRnd;
     LinearLayout secSuchanaID;
+    View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
     LinearLayout seclb50;
     LinearLayout seclb501;
     LinearLayout secSlNo;
+    View lineSlNo;
     TextView VlblSlNo;
     EditText txtSlNo;
+    LinearLayout secH5;
+    View lineH5;
+    TextView VlblH5;
+    Spinner spnH5;
+    LinearLayout secH5X;
+    View lineH5X;
+    TextView VlblH5X;
+    EditText txtH5X;
     LinearLayout secH5a;
+    View lineH5a;
     TextView VlblH5a;
     Spinner spnH5a;
+    LinearLayout secH5aX;
+    View lineH5aX;
+    TextView VlblH5aX;
+    EditText txtH5aX;
     LinearLayout secH5b;
+    View lineH5b;
     TextView VlblH5b;
-    Spinner spnH5b;
-    LinearLayout secH5bx;
-    TextView VlblH5bx;
-    EditText txtH5bx;
+    EditText txtH5b;
     LinearLayout secH5c;
+    View lineH5c;
     TextView VlblH5c;
     EditText txtH5c;
     LinearLayout secH5d;
+    View lineH5d;
     TextView VlblH5d;
-    EditText txtH5d;
+    Spinner spnH5d;
     LinearLayout secH5e;
+    View lineH5e;
     TextView VlblH5e;
     Spinner spnH5e;
     LinearLayout secH5f;
+    View lineH5f;
     TextView VlblH5f;
-    Spinner spnH5f;
+    EditText txtH5f;
     LinearLayout secH5g;
+    View lineH5g;
     TextView VlblH5g;
     EditText txtH5g;
-    LinearLayout secH5h;
-    TextView VlblH5h;
-    EditText txtH5h;
-    LinearLayout secH5Year;
-    TextView VlblH5Year;
-    EditText txtH5Year;
-    LinearLayout secH5Month;
-    TextView VlblH5Month;
-    EditText txtH5Month;
+    LinearLayout secH5hY;
+    View lineH5hY;
+    TextView VlblH5hY;
+    EditText txtH5hY;
+    LinearLayout secH5hM;
+    View lineH5hM;
+    TextView VlblH5hM;
+    EditText txtH5hM;
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -187,78 +204,92 @@ public class Land extends Activity {
 
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
+            lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
+            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             seclb50 = (LinearLayout) findViewById(R.id.seclb50);
             seclb501 = (LinearLayout) findViewById(R.id.seclb501);
             secSlNo = (LinearLayout) findViewById(R.id.secSlNo);
+            lineSlNo = (View) findViewById(R.id.lineSlNo);
             VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
+            secH5 = (LinearLayout) findViewById(R.id.secH5);
+            lineH5 = (View) findViewById(R.id.lineH5);
+            VlblH5 = (TextView) findViewById(R.id.VlblH5);
+            spnH5 = (Spinner) findViewById(R.id.spnH5);
+            List<String> listH5 = new ArrayList<String>();
+
+            listH5.add("");
+            listH5.add("1-ভিটেমাটি");
+            listH5.add("2-চাষযোগ্য বা আবাদী জমি");
+            listH5.add("3-গবাদি পশুর চারণের উপযোগী");
+            listH5.add("4-ভূমিঝোপ/জংলা জমি");
+            listH5.add("5-চাষযোগ্য পুকুর");
+            listH5.add("6-পরিত্যক্ত পুকুর");
+            listH5.add("7-বর্জ্য বা অনাবাদি জমি");
+            listH5.add("8-নদীগর্ভের বা হাওরের জমি");
+            listH5.add("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
+            ArrayAdapter<String> adptrH5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5);
+            spnH5.setAdapter(adptrH5);
+
+            secH5X = (LinearLayout) findViewById(R.id.secH5X);
+            lineH5X = (View) findViewById(R.id.lineH5X);
+            VlblH5X = (TextView) findViewById(R.id.VlblH5X);
+            txtH5X = (EditText) findViewById(R.id.txtH5X);
             secH5a = (LinearLayout) findViewById(R.id.secH5a);
+            lineH5a = (View) findViewById(R.id.lineH5a);
             VlblH5a = (TextView) findViewById(R.id.VlblH5a);
             spnH5a = (Spinner) findViewById(R.id.spnH5a);
             List<String> listH5a = new ArrayList<String>();
 
             listH5a.add("");
-            listH5a.add("1-ভিটেমাটি");
-            listH5a.add("2-চাষযোগ্য বা আবাদী জমি");
-            listH5a.add("3-গবাদি পশুর চারণের উপযোগী");
-            listH5a.add("4-ভূমিঝোপ/জংলা জমি");
-            listH5a.add("5-চাষযোগ্য পুকুর");
-            listH5a.add("6-পরিত্যক্ত পুকুর");
-            listH5a.add("7-বর্জ্য বা অনাবাদি জমি");
-            listH5a.add("8-নদীগর্ভের বা হাওরের জমি");
-            listH5a.add("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
+            listH5a.add("1-খাদ্যশস্য ");
+            listH5a.add("2-শাকসবজি");
+            listH5a.add("3-ফল ");
+            listH5a.add("4-মাছ");
+            listH5a.add("5-হাস/মুরগি");
+            listH5a.add("6-গবাদিপশু");
+            listH5a.add("7-অনান্য");
+            listH5a.add("8-কিছুনা");
             ArrayAdapter<String> adptrH5a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5a);
             spnH5a.setAdapter(adptrH5a);
 
+            secH5aX = (LinearLayout) findViewById(R.id.secH5aX);
+            lineH5aX = (View) findViewById(R.id.lineH5aX);
+            VlblH5aX = (TextView) findViewById(R.id.VlblH5aX);
+            txtH5aX = (EditText) findViewById(R.id.txtH5aX);
             secH5b = (LinearLayout) findViewById(R.id.secH5b);
+            lineH5b = (View) findViewById(R.id.lineH5b);
             VlblH5b = (TextView) findViewById(R.id.VlblH5b);
-            spnH5b = (Spinner) findViewById(R.id.spnH5b);
-
-            secH5bx = (LinearLayout) findViewById(R.id.secH5bx);
-            VlblH5bx = (TextView) findViewById(R.id.VlblH5bx);
-            txtH5bx = (EditText) findViewById(R.id.txtH5bx);
-            secH5bx.setVisibility(View.GONE);
-            List<String> listH5b = new ArrayList<String>();
-
-            listH5b.add("");
-            listH5b.add("1-খাদ্যশষ্য");
-            listH5b.add("2-শাকসবজি");
-            listH5b.add("3-ফলমূল");
-            listH5b.add("4-মাছ");
-            listH5b.add("5-হাস/মুরগি");
-            listH5b.add("6-গবাদিপশু");
-            listH5b.add("7-অনান্য");
-            listH5b.add("8-কিছু করা হয় না");
-            ArrayAdapter<String> adptrH5b = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5b);
-            spnH5b.setAdapter(adptrH5b);
-
-            spnH5b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (position == 7) {
-                        secH5bx.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH5bx.setText("");
-                        secH5bx.setVisibility(View.GONE);
-                    }
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parentView) {
-                }
-            });
+            txtH5b = (EditText) findViewById(R.id.txtH5b);
             secH5c = (LinearLayout) findViewById(R.id.secH5c);
+            lineH5c = (View) findViewById(R.id.lineH5c);
             VlblH5c = (TextView) findViewById(R.id.VlblH5c);
             txtH5c = (EditText) findViewById(R.id.txtH5c);
             secH5d = (LinearLayout) findViewById(R.id.secH5d);
+            lineH5d = (View) findViewById(R.id.lineH5d);
             VlblH5d = (TextView) findViewById(R.id.VlblH5d);
-            txtH5d = (EditText) findViewById(R.id.txtH5d);
+            spnH5d = (Spinner) findViewById(R.id.spnH5d);
+            List<String> listH5d = new ArrayList<String>();
+
+            listH5d.add("");
+            listH5d.add("1-পতিত জমি");
+            listH5d.add("2-নিজপরিচালিত");
+            listH5d.add("3-ভাড়া বা ইজারা নেয়া বা নগদ");
+            listH5d.add("4-ভাড়া বা ইজারা নেয়া বা ফসল ভাগাভাগি");
+            listH5d.add("5-বন্ধকনেয়া");
+            listH5d.add("6-ভাড়া বা ইজারা দেয়া বা নগদ");
+            listH5d.add("7-ভাড়া বা ইজারা দেয়া বা ফসল ভাগাভাগি");
+            listH5d.add("8-বন্ধক দেয়া");
+            ArrayAdapter<String> adptrH5d = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5d);
+            spnH5d.setAdapter(adptrH5d);
+
             secH5e = (LinearLayout) findViewById(R.id.secH5e);
+            lineH5e = (View) findViewById(R.id.lineH5e);
             VlblH5e = (TextView) findViewById(R.id.VlblH5e);
             spnH5e = (Spinner) findViewById(R.id.spnH5e);
             List<String> listH5e = new ArrayList<String>();
@@ -266,46 +297,32 @@ public class Land extends Activity {
             listH5e.add("");
             listH5e.add("1-পতিত জমি");
             listH5e.add("2-নিজপরিচালিত");
-            listH5e.add("3-ভাড়া বা ইজারা নেয়া বা নগদ");
-            listH5e.add("4-ভাড়া বা ইজারা নেয়া বা ফসল ভাগাভাগি");
+            listH5e.add("3-ভাড়া/ইজারা নেয়া/নগদ");
+            listH5e.add("4-ভাড়া/ইজারা নেয়া/ফসল ভাগাভাগি");
             listH5e.add("5-বন্ধকনেয়া");
-            listH5e.add("6-ভাড়া বা ইজারা দেয়া বা নগদ");
-            listH5e.add("7-ভাড়া বা ইজারা দেয়া বা ফসল ভাগাভাগি");
+            listH5e.add("6-ভাড়া/ইজারা দেয়া/নগদ");
+            listH5e.add("7-ভাড়া/ইজারা দেয়া/ফসল ভাগাভাগি");
             listH5e.add("8-বন্ধক দেয়া");
             ArrayAdapter<String> adptrH5e = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5e);
             spnH5e.setAdapter(adptrH5e);
 
             secH5f = (LinearLayout) findViewById(R.id.secH5f);
+            lineH5f = (View) findViewById(R.id.lineH5f);
             VlblH5f = (TextView) findViewById(R.id.VlblH5f);
-            spnH5f = (Spinner) findViewById(R.id.spnH5f);
-            List<String> listH5f = new ArrayList<String>();
-
-            listH5f.add("");
-            listH5f.add("1-পতিত জমি");
-            listH5f.add("2-নিজপরিচালিত");
-            listH5f.add("3-ভাড়া বা ইজারা নেয়া বা নগদ");
-            listH5f.add("4-ভাড়া বা ইজারা নেয়া বা ফসল ভাগাভাগি");
-            listH5f.add("5-বন্ধকনেয়া");
-            listH5f.add("6-ভাড়া বা ইজারা দেয়া বা নগদ");
-            listH5f.add("7-ভাড়া বা ইজারা দেয়া বা ফসল ভাগাভাগি");
-            listH5f.add("8-বন্ধক দেয়া");
-            ArrayAdapter<String> adptrH5f = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5f);
-            spnH5f.setAdapter(adptrH5f);
-
+            txtH5f = (EditText) findViewById(R.id.txtH5f);
             secH5g = (LinearLayout) findViewById(R.id.secH5g);
+            lineH5g = (View) findViewById(R.id.lineH5g);
             VlblH5g = (TextView) findViewById(R.id.VlblH5g);
             txtH5g = (EditText) findViewById(R.id.txtH5g);
-            secH5h = (LinearLayout) findViewById(R.id.secH5h);
-            VlblH5h = (TextView) findViewById(R.id.VlblH5h);
-            txtH5h = (EditText) findViewById(R.id.txtH5h);
-            secH5Year = (LinearLayout) findViewById(R.id.secH5Year);
-            VlblH5Year = (TextView) findViewById(R.id.VlblH5Year);
-            txtH5Year = (EditText) findViewById(R.id.txtH5Year);
-            secH5Month = (LinearLayout) findViewById(R.id.secH5Month);
-            VlblH5Month = (TextView) findViewById(R.id.VlblH5Month);
-            txtH5Month = (EditText) findViewById(R.id.txtH5Month);
+            secH5hY = (LinearLayout) findViewById(R.id.secH5hY);
+            lineH5hY = (View) findViewById(R.id.lineH5hY);
+            VlblH5hY = (TextView) findViewById(R.id.VlblH5hY);
+            txtH5hY = (EditText) findViewById(R.id.txtH5hY);
+            secH5hM = (LinearLayout) findViewById(R.id.secH5hM);
+            lineH5hM = (View) findViewById(R.id.lineH5hM);
+            VlblH5hM = (TextView) findViewById(R.id.VlblH5hM);
+            txtH5hM = (EditText) findViewById(R.id.txtH5hM);
 
-            DataSearch(RND, SUCHANAID, SLNO);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -344,73 +361,77 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Value should be between 01 and 10(Serial No).");
                 txtSlNo.requestFocus();
                 return;
-            } else if (spnH5a.getSelectedItemPosition() == 0 & secH5a.isShown()) {
+            } else if (spnH5.getSelectedItemPosition() == 0 & secH5.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: জমির  বিবরণ.");
+                spnH5.requestFocus();
+                return;
+            } else if (txtH5X.getText().toString().length() == 0 & secH5X.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: অন্যান্য.");
+                txtH5X.requestFocus();
+                return;
+            } else if (spnH5a.getSelectedItemPosition() == 0 & secH5a.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: এই সম্পদ দিয়ে কি উত্পাদন করা হয়.");
                 spnH5a.requestFocus();
                 return;
-            } else if (spnH5b.getSelectedItemPosition() == 0 & secH5b.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: এই সম্পদ দিয়ে কি উত্পাদন করা হয়.");
-                spnH5b.requestFocus();
+            } else if (txtH5aX.getText().toString().length() == 0 & secH5aX.isShown()) {
+                Connection.MessageBox(Land.this, "Required field:  অনান্য উল্লেখ কর.");
+                txtH5aX.requestFocus();
                 return;
-            } else if (txtH5bx.getText().toString().length() == 0 & secH5bx.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: অনান্য.");
-                txtH5bx.requestFocus();
+            } else if (txtH5b.getText().toString().length() == 0 & secH5b.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: মালিকানা.");
+                txtH5b.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH5b.getText().toString().length() == 0 ? "01" : txtH5b.getText().toString()) < 01 || Integer.valueOf(txtH5b.getText().toString().length() == 0 ? "30" : txtH5b.getText().toString()) > 30) {
+                Connection.MessageBox(Land.this, "Value should be between 01 and 30(মালিকানা).");
+                txtH5b.requestFocus();
                 return;
             } else if (txtH5c.getText().toString().length() == 0 & secH5c.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: মালিকানা.");
+                Connection.MessageBox(Land.this, "Required field: জমির পরিমান (শতাংশ).");
                 txtH5c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "01" : txtH5c.getText().toString()) < 01 || Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "30" : txtH5c.getText().toString()) > 30) {
-                Connection.MessageBox(Land.this, "Value should be between 01 and 30(মালিকানা).");
+            } else if (Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "2" : txtH5c.getText().toString()) > 2) {
+                Connection.MessageBox(Land.this, "Value should be between 1 and 2(জমির পরিমান (শতাংশ)).");
                 txtH5c.requestFocus();
                 return;
-            } else if (txtH5d.getText().toString().length() == 0 & secH5d.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: আয়তন বা জমির পরিমান শতাংশ এ.");
-                txtH5d.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH5d.getText().toString().length() == 0 ? "0001" : txtH5d.getText().toString()) < 0001 || Integer.valueOf(txtH5d.getText().toString().length() == 0 ? "9999" : txtH5d.getText().toString()) > 9999) {
-                Connection.MessageBox(Land.this, "Value should be between 0001 and 9999(আয়তন বা জমির পরিমান শতাংশ এ).");
-                txtH5d.requestFocus();
+            } else if (spnH5d.getSelectedItemPosition() == 0 & secH5d.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: জমির বর্তমান ব্যবহারিকঅবস্থা.");
+                spnH5d.requestFocus();
                 return;
             } else if (spnH5e.getSelectedItemPosition() == 0 & secH5e.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: জমির বর্তমান ব্যবহারিকঅবস্থা.");
+                Connection.MessageBox(Land.this, "Required field: গত ঋতুতে জমির ব্যবহারিক অবস্থা কি ছিল(ফসল ক্যালেন্ডার অনুযায়ী).");
                 spnH5e.requestFocus();
                 return;
-            } else if (spnH5f.getSelectedItemPosition() == 0 & secH5f.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: গত ঋতুতে জমির ব্যবহারিকঅবস্থা কি ছিল  (ফসল ক্যালেন্ডার অনুযায়ী).");
-                spnH5f.requestFocus();
+            } else if (txtH5f.getText().toString().length() == 0 & secH5f.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন.");
+                txtH5f.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "00000" : txtH5f.getText().toString()) < 00000 || Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "99999" : txtH5f.getText().toString()) > 99999) {
+                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন).");
+                txtH5f.requestFocus();
                 return;
             } else if (txtH5g.getText().toString().length() == 0 & secH5g.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: জমিটি যদি টাকার বিনিময় ভাড়া বা ইজারা দেয়া হয়ে থাকে তাহলে গত ঋতুতে কত টাকা পেয়েছেন.");
+                Connection.MessageBox(Land.this, "Required field: জমির বর্তমান বাজার মূল্য.");
                 txtH5g.requestFocus();
                 return;
             } else if (Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "00000" : txtH5g.getText().toString()) < 00000 || Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "99999" : txtH5g.getText().toString()) > 99999) {
-                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমিটি যদি টাকার বিনিময় ভাড়া বা ইজারা দেয়া হয়ে থাকে তাহলে গত ঋতুতে কত টাকা পেয়েছেন).");
+                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমির বর্তমান বাজার মূল্য).");
                 txtH5g.requestFocus();
                 return;
-            } else if (txtH5h.getText().toString().length() == 0 & secH5h.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: জমির বর্তমান বাজার মূল্য বর্তমানে জমিটি কত টাকায় বিক্রি করতে পারবেন.");
-                txtH5h.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH5h.getText().toString().length() == 0 ? "00000" : txtH5h.getText().toString()) < 00000 || Integer.valueOf(txtH5h.getText().toString().length() == 0 ? "99999" : txtH5h.getText().toString()) > 99999) {
-                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমির বর্তমান বাজার মূল্য বর্তমানে জমিটি কত টাকায় বিক্রি করতে পারবেন).");
-                txtH5h.requestFocus();
-                return;
-            } else if (txtH5Year.getText().toString().length() == 0 & secH5Year.isShown()) {
+            } else if (txtH5hY.getText().toString().length() == 0 & secH5hY.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: আপনি জমিটির মালিকানা  কত বছর থেকে ভোগ করছেন.");
-                txtH5Year.requestFocus();
+                txtH5hY.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5Year.getText().toString().length() == 0 ? "00" : txtH5Year.getText().toString()) < 00 || Integer.valueOf(txtH5Year.getText().toString().length() == 0 ? "99" : txtH5Year.getText().toString()) > 99) {
+            } else if (Integer.valueOf(txtH5hY.getText().toString().length() == 0 ? "00" : txtH5hY.getText().toString()) < 00 || Integer.valueOf(txtH5hY.getText().toString().length() == 0 ? "99" : txtH5hY.getText().toString()) > 99) {
                 Connection.MessageBox(Land.this, "Value should be between 00 and 99(আপনি জমিটির মালিকানা  কত বছর থেকে ভোগ করছেন).");
-                txtH5Year.requestFocus();
+                txtH5hY.requestFocus();
                 return;
-            } else if (txtH5Month.getText().toString().length() == 0 & secH5Month.isShown()) {
+            } else if (txtH5hM.getText().toString().length() == 0 & secH5hM.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: আপনি জমিটির মালিকানা  কত মাস থেকে ভোগ করছেন.");
-                txtH5Month.requestFocus();
+                txtH5hM.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5Month.getText().toString().length() == 0 ? "00" : txtH5Month.getText().toString()) < 00 || Integer.valueOf(txtH5Month.getText().toString().length() == 0 ? "11" : txtH5Month.getText().toString()) > 11) {
+            } else if (Integer.valueOf(txtH5hM.getText().toString().length() == 0 ? "00" : txtH5hM.getText().toString()) < 00 || Integer.valueOf(txtH5hM.getText().toString().length() == 0 ? "11" : txtH5hM.getText().toString()) > 11) {
                 Connection.MessageBox(Land.this, "Value should be between 00 and 11(আপনি জমিটির মালিকানা  কত মাস থেকে ভোগ করছেন).");
-                txtH5Month.requestFocus();
+                txtH5hM.requestFocus();
                 return;
             }
 
@@ -421,17 +442,18 @@ public class Land extends Activity {
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
             objSave.setSlNo(txtSlNo.getText().toString());
+            objSave.setH5((spnH5.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5.getSelectedItem().toString(), "-")));
+            objSave.setH5X(txtH5X.getText().toString());
             objSave.setH5a((spnH5a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5a.getSelectedItem().toString(), "-")));
-            objSave.setH5b((spnH5b.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5b.getSelectedItem().toString(), "-")));
-            objSave.setH5bx(txtH5bx.getText().toString());
+            objSave.setH5aX(txtH5aX.getText().toString());
+            objSave.setH5b(txtH5b.getText().toString());
             objSave.setH5c(txtH5c.getText().toString());
-            objSave.setH5d(txtH5d.getText().toString());
+            objSave.setH5d((spnH5d.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5d.getSelectedItem().toString(), "-")));
             objSave.setH5e((spnH5e.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5e.getSelectedItem().toString(), "-")));
-            objSave.setH5f((spnH5f.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5f.getSelectedItem().toString(), "-")));
+            objSave.setH5f(txtH5f.getText().toString());
             objSave.setH5g(txtH5g.getText().toString());
-            objSave.setH5h(txtH5h.getText().toString());
-            objSave.setH5Year(txtH5Year.getText().toString());
-            objSave.setH5Month(txtH5Month.getText().toString());
+            objSave.setH5hY(txtH5hY.getText().toString());
+            objSave.setH5hM(txtH5hM.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -463,17 +485,18 @@ public class Land extends Activity {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
                 txtSlNo.setText(item.getSlNo());
+                spnH5.setSelection(Global.SpinnerItemPositionAnyLength(spnH5, item.getH5()));
+                txtH5X.setText(item.getH5X());
                 spnH5a.setSelection(Global.SpinnerItemPositionAnyLength(spnH5a, item.getH5a()));
-                spnH5b.setSelection(Global.SpinnerItemPositionAnyLength(spnH5b, item.getH5b()));
-                txtH5bx.setText(item.getH5bx());
+                txtH5aX.setText(item.getH5aX());
+                txtH5b.setText(item.getH5b());
                 txtH5c.setText(item.getH5c());
-                txtH5d.setText(item.getH5d());
+                spnH5d.setSelection(Global.SpinnerItemPositionAnyLength(spnH5d, item.getH5d()));
                 spnH5e.setSelection(Global.SpinnerItemPositionAnyLength(spnH5e, item.getH5e()));
-                spnH5f.setSelection(Global.SpinnerItemPositionAnyLength(spnH5f, item.getH5f()));
+                txtH5f.setText(item.getH5f());
                 txtH5g.setText(item.getH5g());
-                txtH5h.setText(item.getH5h());
-                txtH5Year.setText(item.getH5Year());
-                txtH5Month.setText(item.getH5Month());
+                txtH5hY.setText(item.getH5hY());
+                txtH5hM.setText(item.getH5hM());
             }
         } catch (Exception e) {
             Connection.MessageBox(Land.this, e.getMessage());

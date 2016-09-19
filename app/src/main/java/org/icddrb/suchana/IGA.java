@@ -635,13 +635,10 @@ public class IGA extends Activity {
                         secH18b2a7X.setVisibility(View.GONE);
                         lineH18b2a7X.setVisibility(View.GONE);
                         txtH18b2a7X.setText("");
+                        secH18b1b.setVisibility(View.GONE);
+                        lineH18b1b.setVisibility(View.GONE);
                         rdogrpH18b1b.clearCheck();
-                    } else {
-                        secH18b2a7X.setVisibility(View.VISIBLE);
-                        lineH18b2a7X.setVisibility(View.VISIBLE);
-
                     }
-
                 }
             });
             secH18b2a7X = (LinearLayout) findViewById(R.id.secH18b2a7X);
@@ -749,10 +746,9 @@ public class IGA extends Activity {
                         secH18b2b7X.setVisibility(View.GONE);
                         lineH18b2b7X.setVisibility(View.GONE);
                         txtH18b2b7X.setText("");
+                        secH18b1c.setVisibility(View.GONE);
+                        lineH18b1c.setVisibility(View.GONE);
                         rdogrpH18b1c.clearCheck();
-                    } else {
-                        secH18b2b7X.setVisibility(View.VISIBLE);
-                        lineH18b2b7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -861,11 +857,9 @@ public class IGA extends Activity {
                         secH18b2c7X.setVisibility(View.GONE);
                         lineH18b2c7X.setVisibility(View.GONE);
                         txtH18b2c7X.setText("");
+                        secH18b1d.setVisibility(View.GONE);
+                        lineH18b1d.setVisibility(View.GONE);
                         rdogrpH18b1d.clearCheck();
-                    } else {
-                        secH18b2c7X.setVisibility(View.VISIBLE);
-                        lineH18b2c7X.setVisibility(View.VISIBLE);
-
                     }
                 }
             });
@@ -974,11 +968,9 @@ public class IGA extends Activity {
                         secH18b2d7X.setVisibility(View.GONE);
                         lineH18b2d7X.setVisibility(View.GONE);
                         txtH18b2d7X.setText("");
+                        secH18b1e.setVisibility(View.GONE);
+                        lineH18b1e.setVisibility(View.GONE);
                         rdogrpH18b1e.clearCheck();
-                    } else {
-                        secH18b2d7X.setVisibility(View.VISIBLE);
-                        lineH18b2d7X.setVisibility(View.VISIBLE);
-
                     }
                 }
             });
@@ -1087,11 +1079,9 @@ public class IGA extends Activity {
                         secH18b2e7X.setVisibility(View.GONE);
                         lineH18b2e7X.setVisibility(View.GONE);
                         txtH18b2e7X.setText("");
+                        secH18b1f.setVisibility(View.GONE);
+                        lineH18b1f.setVisibility(View.GONE);
                         rdogrpH18b1f.clearCheck();
-                    } else {
-
-                        secH18b2e7X.setVisibility(View.VISIBLE);
-                        lineH18b2e7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1200,11 +1190,9 @@ public class IGA extends Activity {
                         secH18b2f7X.setVisibility(View.GONE);
                         lineH18b2f7X.setVisibility(View.GONE);
                         txtH18b2f7X.setText("");
+                        secH18b1g.setVisibility(View.GONE);
+                        lineH18b1g.setVisibility(View.GONE);
                         rdogrpH18b1g.clearCheck();
-                    } else {
-
-                        secH18b2f7X.setVisibility(View.VISIBLE);
-                        lineH18b2f7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1313,11 +1301,9 @@ public class IGA extends Activity {
                         secH18b2g7X.setVisibility(View.GONE);
                         lineH18b2g7X.setVisibility(View.GONE);
                         txtH18b2g7X.setText("");
+                        secH18b1h.setVisibility(View.GONE);
+                        lineH18b1h.setVisibility(View.GONE);
                         rdogrpH18b1h.clearCheck();
-                    } else {
-
-                        secH18b2g7X.setVisibility(View.VISIBLE);
-                        lineH18b2g7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1426,11 +1412,9 @@ public class IGA extends Activity {
                         secH18b2h7X.setVisibility(View.GONE);
                         lineH18b2h7X.setVisibility(View.GONE);
                         txtH18b2h7X.setText("");
+                        secH18b1i.setVisibility(View.GONE);
+                        lineH18b1i.setVisibility(View.GONE);
                         rdogrpH18b1i.clearCheck();
-                    } else {
-
-                        secH18b2h7X.setVisibility(View.VISIBLE);
-                        lineH18b2h7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1521,11 +1505,9 @@ public class IGA extends Activity {
                         secH18b2i5X.setVisibility(View.GONE);
                         lineH18b2i5X.setVisibility(View.GONE);
                         txtH18b2i5X.setText("");
+                        secH18b1j.setVisibility(View.GONE);
+                        lineH18b1j.setVisibility(View.GONE);
                         rdogrpH18b1j.clearCheck();
-                    } else {
-
-                        secH18b2i5X.setVisibility(View.VISIBLE);
-                        lineH18b2i5X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1616,11 +1598,9 @@ public class IGA extends Activity {
                         secH18b2j5X.setVisibility(View.GONE);
                         lineH18b2j5X.setVisibility(View.GONE);
                         txtH18b2j5X.setText("");
+                        secH18b1k.setVisibility(View.GONE);
+                        lineH18b1k.setVisibility(View.GONE);
                         rdogrpH18b1k.clearCheck();
-                    } else {
-
-                        secH18b2j5X.setVisibility(View.VISIBLE);
-                        lineH18b2j5X.setVisibility(View.VISIBLE);
                     }
                 }
             });

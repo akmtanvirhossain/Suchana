@@ -3,6 +3,7 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".SES" android:label="SES" />
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -11,12 +12,14 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -1372,13 +1375,11 @@ public class SES extends Activity {
                     if (spnH611R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH611R.getSelectedItem().toString(), "-");
                     if (spnData.equalsIgnoreCase("7")) {
-                        secH611RX.setVisibility(View.VISIBLE);
-                        lineH611RX.setVisibility(View.VISIBLE);
-
-                    } else {
-                        txtH611RX.setText("");
                         secH611RX.setVisibility(View.GONE);
                         lineH611RX.setVisibility(View.GONE);
+                    } else {
+                        secH611RX.setVisibility(View.VISIBLE);
+                        lineH611RX.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -3089,6 +3090,16 @@ public class SES extends Activity {
             public void onProviderDisabled(String provider) {
             }
         };
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 

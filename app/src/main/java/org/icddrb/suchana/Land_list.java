@@ -37,7 +37,7 @@ public class Land_list extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String SLNO = "";
-    boolean netwoekAvailable = false;
+    boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
     String VariableID;
@@ -155,7 +155,7 @@ public class Land_list extends Activity {
         try {
 
             Land_DataModel d = new Land_DataModel();
-            String SQL = "Select * from " + TableName;
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SlNo='" + SlNo + "'";
             List<Land_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -169,18 +169,18 @@ public class Land_list extends Activity {
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
                 map.put("SlNo", item.getSlNo());
+                map.put("H5", item.getH5());
+                map.put("H5X", item.getH5X());
                 map.put("H5a", item.getH5a());
+                map.put("H5aX", item.getH5aX());
                 map.put("H5b", item.getH5b());
-                map.put("H5bx", item.getH5bx());
                 map.put("H5c", item.getH5c());
                 map.put("H5d", item.getH5d());
                 map.put("H5e", item.getH5e());
                 map.put("H5f", item.getH5f());
                 map.put("H5g", item.getH5g());
-                map.put("H5h", item.getH5h());
-                map.put("H5Year", item.getH5Year());
-                map.put("H5Month", item.getH5Month());
-                map.put("Upload", item.getUpload());
+                map.put("H5hY", item.getH5hY());
+                map.put("H5hM", item.getH5hM());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(Land_list.this, dataList, R.layout.land_list, new String[]{"rowsec"},
@@ -213,23 +213,46 @@ public class Land_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
-
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.common_row, null);
+                convertView = inflater.inflate(R.layout.land_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
+            final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
+            final TextView H5 = (TextView) convertView.findViewById(R.id.H5);
+            final TextView H5X = (TextView) convertView.findViewById(R.id.H5X);
+            final TextView H5a = (TextView) convertView.findViewById(R.id.H5a);
+            final TextView H5aX = (TextView) convertView.findViewById(R.id.H5aX);
+            final TextView H5b = (TextView) convertView.findViewById(R.id.H5b);
+            final TextView H5c = (TextView) convertView.findViewById(R.id.H5c);
+            final TextView H5d = (TextView) convertView.findViewById(R.id.H5d);
+            final TextView H5e = (TextView) convertView.findViewById(R.id.H5e);
+            final TextView H5f = (TextView) convertView.findViewById(R.id.H5f);
+            final TextView H5g = (TextView) convertView.findViewById(R.id.H5g);
+            final TextView H5hY = (TextView) convertView.findViewById(R.id.H5hY);
+            final TextView H5hM = (TextView) convertView.findViewById(R.id.H5hM);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
-
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            Upload.setText(o.get("Upload"));
+            SlNo.setText(o.get("SlNo"));
+            H5.setText(o.get("H5"));
+            H5X.setText(o.get("H5X"));
+            H5a.setText(o.get("H5a"));
+            H5aX.setText(o.get("H5aX"));
+            H5b.setText(o.get("H5b"));
+            H5c.setText(o.get("H5c"));
+            H5d.setText(o.get("H5d"));
+            H5e.setText(o.get("H5e"));
+            H5f.setText(o.get("H5f"));
+            H5g.setText(o.get("H5g"));
+            H5hY.setText(o.get("H5hY"));
+            H5hM.setText(o.get("H5hM"));
+
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     //Write your code here
@@ -243,6 +266,7 @@ public class Land_list extends Activity {
                     startActivity(f1);
                 }
             });
+
 
             return convertView;
         }

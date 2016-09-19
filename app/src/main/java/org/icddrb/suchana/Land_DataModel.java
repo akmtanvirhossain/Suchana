@@ -15,17 +15,18 @@ public class Land_DataModel {
     private String _Rnd = "";
     private String _SuchanaID = "";
     private String _SlNo = "";
+    private String _H5 = "";
+    private String _H5X = "";
     private String _H5a = "";
+    private String _H5aX = "";
     private String _H5b = "";
-    private String _H5bx = "";
     private String _H5c = "";
     private String _H5d = "";
     private String _H5e = "";
     private String _H5f = "";
     private String _H5g = "";
-    private String _H5h = "";
-    private String _H5Year = "";
-    private String _H5Month = "";
+    private String _H5hY = "";
+    private String _H5hM = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -34,10 +35,6 @@ public class Land_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
-
-    public String getUpload() {
-        return _Upload;
-    }
 
     public String getRnd() {
         return _Rnd;
@@ -63,6 +60,22 @@ public class Land_DataModel {
         _SlNo = newValue;
     }
 
+    public String getH5() {
+        return _H5;
+    }
+
+    public void setH5(String newValue) {
+        _H5 = newValue;
+    }
+
+    public String getH5X() {
+        return _H5X;
+    }
+
+    public void setH5X(String newValue) {
+        _H5X = newValue;
+    }
+
     public String getH5a() {
         return _H5a;
     }
@@ -71,20 +84,20 @@ public class Land_DataModel {
         _H5a = newValue;
     }
 
+    public String getH5aX() {
+        return _H5aX;
+    }
+
+    public void setH5aX(String newValue) {
+        _H5aX = newValue;
+    }
+
     public String getH5b() {
         return _H5b;
     }
 
     public void setH5b(String newValue) {
         _H5b = newValue;
-    }
-
-    public String getH5bx() {
-        return _H5bx;
-    }
-
-    public void setH5bx(String newValue) {
-        _H5bx = newValue;
     }
 
     public String getH5c() {
@@ -127,28 +140,20 @@ public class Land_DataModel {
         _H5g = newValue;
     }
 
-    public String getH5h() {
-        return _H5h;
+    public String getH5hY() {
+        return _H5hY;
     }
 
-    public void setH5h(String newValue) {
-        _H5h = newValue;
+    public void setH5hY(String newValue) {
+        _H5hY = newValue;
     }
 
-    public String getH5Year() {
-        return _H5Year;
+    public String getH5hM() {
+        return _H5hM;
     }
 
-    public void setH5Year(String newValue) {
-        _H5Year = newValue;
-    }
-
-    public String getH5Month() {
-        return _H5Month;
-    }
-
-    public void setH5Month(String newValue) {
-        _H5Month = newValue;
+    public void setH5hM(String newValue) {
+        _H5hM = newValue;
     }
 
     public void setStartTime(String newValue) {
@@ -199,7 +204,7 @@ public class Land_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,SlNo,H5a,H5b,H5bx,H5c,H5d,H5e,H5f,H5g,H5h,H5Year,H5Month,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _SlNo + "', '" + _H5a + "', '" + _H5b + "', '" + _H5bx + "', '" + _H5c + "', '" + _H5d + "', '" + _H5e + "', '" + _H5f + "', '" + _H5g + "', '" + _H5h + "', '" + _H5Year + "', '" + _H5Month + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,SlNo,H5,H5X,H5a,H5aX,H5b,H5c,H5d,H5e,H5f,H5g,H5hY,H5hM,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _SlNo + "', '" + _H5 + "', '" + _H5X + "', '" + _H5a + "', '" + _H5aX + "', '" + _H5b + "', '" + _H5c + "', '" + _H5d + "', '" + _H5e + "', '" + _H5f + "', '" + _H5g + "', '" + _H5hY + "', '" + _H5hM + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -212,7 +217,7 @@ public class Land_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',SlNo = '" + _SlNo + "',H5a = '" + _H5a + "',H5b = '" + _H5b + "',H5bx = '" + _H5bx + "',H5c = '" + _H5c + "',H5d = '" + _H5d + "',H5e = '" + _H5e + "',H5f = '" + _H5f + "',H5g = '" + _H5g + "',H5h = '" + _H5h + "',H5Year = '" + _H5Year + "',H5Month = '" + _H5Month + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',SlNo = '" + _SlNo + "',H5 = '" + _H5 + "',H5X = '" + _H5X + "',H5a = '" + _H5a + "',H5aX = '" + _H5aX + "',H5b = '" + _H5b + "',H5c = '" + _H5c + "',H5d = '" + _H5d + "',H5e = '" + _H5e + "',H5f = '" + _H5f + "',H5g = '" + _H5g + "',H5hY = '" + _H5hY + "',H5hM = '" + _H5hM + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -233,19 +238,18 @@ public class Land_DataModel {
             d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._SlNo = cur.getString(cur.getColumnIndex("SlNo"));
+            d._H5 = cur.getString(cur.getColumnIndex("H5"));
+            d._H5X = cur.getString(cur.getColumnIndex("H5X"));
             d._H5a = cur.getString(cur.getColumnIndex("H5a"));
+            d._H5aX = cur.getString(cur.getColumnIndex("H5aX"));
             d._H5b = cur.getString(cur.getColumnIndex("H5b"));
-            d._H5bx = cur.getString(cur.getColumnIndex("H5bx"));
             d._H5c = cur.getString(cur.getColumnIndex("H5c"));
             d._H5d = cur.getString(cur.getColumnIndex("H5d"));
             d._H5e = cur.getString(cur.getColumnIndex("H5e"));
             d._H5f = cur.getString(cur.getColumnIndex("H5f"));
             d._H5g = cur.getString(cur.getColumnIndex("H5g"));
-            d._H5h = cur.getString(cur.getColumnIndex("H5h"));
-            d._H5Year = cur.getString(cur.getColumnIndex("H5Year"));
-            d._H5Month = cur.getString(cur.getColumnIndex("H5Month"));
-            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
-
+            d._H5hY = cur.getString(cur.getColumnIndex("H5hY"));
+            d._H5hM = cur.getString(cur.getColumnIndex("H5hM"));
             data.add(d);
 
             cur.moveToNext();

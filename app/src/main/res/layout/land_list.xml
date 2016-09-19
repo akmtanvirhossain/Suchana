@@ -77,18 +77,6 @@
         android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
 
-    <include
-        layout="@layout/common_heading"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginBottom="5sp"
-        android:background="#CCCCCC" />
-
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -113,7 +101,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="750sp"
+                    android:layout_height="250sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
