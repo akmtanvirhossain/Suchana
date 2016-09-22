@@ -25,11 +25,19 @@ public class MainMenu extends Activity {
     Button cmdMenuAssetNB;
     Button cmdMenuLand;
     Button cmdMenuHDDS;
-    Button cmdMenuLoan;
+    Button cmdMenuCost;
     Button cmdMenuSavings;
+    Button cmdMenuLoan;
     Button cmdMenuHFIAS;
-    Button cmdMenuIllness;
+    Button cmdMenuDestruction1;
+    Button cmdMenuDestruction2;
+    Button cmdMenuAgriculture;
+    Button cmdMenuNGO;
+    Button cmdMenuIllness1;
+    Button cmdMenuIllness2;
+    Button cmdMenuCareseek;
     Button cmdMenuIGA;
+    Button cmdMenuStart;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -42,11 +50,22 @@ public class MainMenu extends Activity {
         try {
             super.onCreate(savedInstanceState);
             //getLayoutInflater().inflate(R.layout.main_menu, frameLayout);
-            setContentView(R.layout.main_menu);
+            setContentView(R.layout.main_menu_dev);
+            //  setContentView(R.layout.main_menu);
+
             C = new Connection(this);
             g = Global.getInstance();
 
             USERID = g.getUserId();
+
+
+        /*    cmdMenuStart = (Button) findViewById(R.id.cmdMenuStart);
+            cmdMenuStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
+                }
+            });*/
 
             cmdMenuIdentity = (Button) findViewById(R.id.cmdMenuIdentity);
             cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +93,7 @@ public class MainMenu extends Activity {
                 }
             });
 
-            cmdMenuAssetB = (Button) findViewById(R.id.cmdMenuASSETB);
+            cmdMenuAssetB = (Button) findViewById(R.id.cmdMenuAssetB);
             cmdMenuAssetB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -83,7 +102,7 @@ public class MainMenu extends Activity {
                 }
             });
 
-            cmdMenuAssetNB = (Button) findViewById(R.id.cmdMenuASSETNB);
+            cmdMenuAssetNB = (Button) findViewById(R.id.cmdMenuAssetNB);
             cmdMenuAssetNB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -91,8 +110,6 @@ public class MainMenu extends Activity {
                     startActivity(f1);
                 }
             });
-
-
 
             cmdMenuLand = (Button) findViewById(R.id.cmdMenuLand);
             cmdMenuLand.setOnClickListener(new View.OnClickListener() {
@@ -111,13 +128,12 @@ public class MainMenu extends Activity {
                     //   startActivity(f1);
                 }
             });
-
-            cmdMenuLoan = (Button) findViewById(R.id.cmdMenuLoan);
-            cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
+            cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);
+            cmdMenuCost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //  Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
-                    // startActivity(f1);
+                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
+                    //   startActivity(f1);
                 }
             });
 
@@ -130,20 +146,77 @@ public class MainMenu extends Activity {
                 }
             });
 
-            cmdMenuIllness = (Button) findViewById(R.id.cmdMenuIllness);
-            cmdMenuIllness.setOnClickListener(new View.OnClickListener() {
+            cmdMenuLoan = (Button) findViewById(R.id.cmdMenuLoan);
+            cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Illness1_list.class);
-                    startActivity(f1);
+                    //  Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
+                    // startActivity(f1);
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
             cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HFIAS_list.class);
-                    // startActivity(f1);
+                    //Intent f1 = new Intent(getApplicationContext(), HFIAS_list.class);
+                    //startActivity(f1);
+                }
+            });
+            cmdMenuDestruction1 = (Button) findViewById(R.id.cmdMenuDestruction1);
+            cmdMenuDestruction1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Destruction1_list.class);
+                    startActivity(f1);
+                }
+            });
+            cmdMenuDestruction2 = (Button) findViewById(R.id.cmdMenuDestruction2);
+            cmdMenuDestruction2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Destruction2_list.class);
+                    startActivity(f1);
+                }
+            });
+
+            cmdMenuAgriculture = (Button) findViewById(R.id.cmdMenuAgriculture);
+            cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Agriculture_list.class);
+                    startActivity(f1);
+                }
+            });
+            cmdMenuNGO = (Button) findViewById(R.id.cmdMenuNGO);
+            cmdMenuNGO.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), NGOWork_list.class);
+                    startActivity(f1);
+                }
+            });
+            cmdMenuIllness1 = (Button) findViewById(R.id.cmdMenuIllness1);
+            cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Illness1_list.class);
+                    startActivity(f1);
+                }
+            });
+            cmdMenuIllness2 = (Button) findViewById(R.id.cmdMenuIllness2);
+            cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Illness2_list.class);
+                    startActivity(f1);
+                }
+            });
+            cmdMenuCareseek = (Button) findViewById(R.id.cmdMenuCareseek);
+            cmdMenuCareseek.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent f1 = new Intent(getApplicationContext(), Careseek_list.class);
+                    startActivity(f1);
                 }
             });
             cmdMenuIGA = (Button) findViewById(R.id.cmdMenuIGA);

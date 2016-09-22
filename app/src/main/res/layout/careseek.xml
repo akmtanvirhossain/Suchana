@@ -1,0 +1,4014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10sp"
+            android:text="Back"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="Careseek"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Next"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/secRnd"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRnd"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblRnd"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="রাউন্ড নাম্বার"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtRnd"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineRnd"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSuchanaID"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblSuchanaID"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="Suchana ID"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtSuchanaID"
+                    style="@style/customEdit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSuchanaID"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblH18a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblH18a"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="সেবা কেন্দ্র সমুহে সেবা গ্রহন কেন্দ্রেরতালিকা"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblH18a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি সাস্থ্য কেন্দ্র/হাসপাতাল যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH181a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH181a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH181a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH181a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH181a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH181a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH181a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH181a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH181a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH181a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH181a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H181a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH181a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH181a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH181a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি স্থানীয় দোকান যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH182a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH182a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH182a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH182a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH182a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH182a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH182a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH182a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH182a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH182a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH182a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H182a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH182a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH182a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH182a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি সাপ্তাহিক হাট/বাজার যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH183a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH183a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH183a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH183a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH183a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH183a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH183a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH183a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH183a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH183a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH183a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H183a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH183a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH183a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH183a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি ব্যাঙ্ক যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH184a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH184a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH184a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH184a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH184a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH184a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH184a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH184a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH184a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH184a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH184a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H184a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH184a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH184a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH184a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যকেনারজন্যে) যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH185a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH185a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH185a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH185a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH185a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH185a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH185a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH185a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH185a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH185a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H185a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH185a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যবিক্রিরজন্যে)যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH186a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH186a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH186a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH186a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH186a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH186a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH186a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH186a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH186a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH186a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH186a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H186a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH186a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH186a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি সরকারী কৃষিসেবায় যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH187a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH187a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH187a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH187a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH187a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH187a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH187a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH187a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH187a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH187a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH187a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H187a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH187a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH187a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH187a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনার বাড়ির কোনো সদস্য কি মৎস্য বিভাগ যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH188a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH188a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH188a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH188a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH188a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH188a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH188a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH188a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1881a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1881a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1881a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1881a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1881a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1881a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH188a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH188a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H188a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH188a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH188a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH188a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="বেসরকারীখাত-মাছেরপোনা, চুন ও খাদ্য প্রদানকারী কেন্দ্র গুলোতে যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH189a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH189a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH189a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH189a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH189a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH189a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH189a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH189a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH189a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH189a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH189a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H189a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH189a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH189a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH189a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="বেসরকারীখাত- বীজও সার প্রদানকারী কেন্দ্র গুলোতে যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH1810a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1810a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1810a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1810a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1810a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1810a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1810a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1810a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1810a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1810a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1810a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1810a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1810a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1810a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1810a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরকারীখাত-মাছেরপোনা, চুনওখাদ্য প্রদানকারী কেন্দ্র গুলোতে যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH1811a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1811a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1811a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1811a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1811a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1811a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1811a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1811a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1811a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1811a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1811a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1811a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1811a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1811a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1811a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরকারীখাত- বীজওসারপ্রদানকারী কেন্দ্র গুলোতে যান"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH1812a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH1812a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH1812a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a1"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রথম বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1812a1"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a1X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a1X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a1X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a1X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1812a1X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a1X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a2"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দ্বিতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1812a2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a2X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a2X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a2X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a2X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1812a2X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a2X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a3"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="তৃতীয় বাহন"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH1812a3"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a3X"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a3X"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a3X"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a3X"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1812a3X"
+                    style="@style/customEdit"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a3X"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH1812a4"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH1812a4"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H1812a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH1812a4"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দূরত্ব KM"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH1812a4"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH1812a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
+
+                <Button
+                    android:id="@+id/cmdSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/button_style"
+                    android:text=" Save -> Continue "
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

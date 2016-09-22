@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:scrollbars="vertical" android:background="#F3F3F3">
+    android:background="#F3F3F3"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
     <include
+        layout="@layout/form_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/form_heading" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="0sp"
+        android:background="#FFFFFF"
+        android:visibility="gone">
 
-    <LinearLayout android:visibility="gone" android:layout_marginTop="0sp" android:layout_marginBottom="20sp" android:layout_width="fill_parent" android:background="#FFFFFF" android:layout_height="wrap_content" android:layout_gravity="center">
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="45sp"
@@ -23,51 +32,97 @@
 
     </LinearLayout>
 
-    <LinearLayout android:layout_width="fill_parent" android:layout_marginTop="10sp" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/pageHeadingBack">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/lblSystemDate"
-            android:layout_height="30sp"
             android:layout_width="fill_parent"
+            android:layout_height="30sp"
             android:gravity="center"
             android:text="09 Jul 2014"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout android:layout_marginLeft="50sp" android:layout_marginRight="50sp" android:layout_marginTop="0sp" android:layout_marginBottom="20sp" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="0sp">
+
         <TextView
             android:id="@+id/UniqueUserId"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:gravity="center_horizontal|center_vertical" android:textColor="#006699"/>
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#006699" />
 
     </LinearLayout>
 
-    <LinearLayout android:layout_marginLeft="50sp" android:layout_marginRight="50sp" android:layout_marginTop="20sp" android:layout_marginBottom="0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="20sp">
+
         <TextView
-            android:layout_height="30sp"
             android:layout_width="fill_parent"
+            android:layout_height="30sp"
             android:gravity="left"
             android:text="User Name"
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout android:layout_marginLeft="50sp" android:layout_marginRight="50sp" android:layout_marginTop="0sp" android:layout_marginBottom="20sp" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="0sp">
+
         <Spinner
             android:id="@+id/userId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true" android:enabled="true"/>
+            android:drawSelectorOnTop="true"
+            android:enabled="true" />
 
     </LinearLayout>
 
-    <LinearLayout android:layout_marginLeft="50sp" android:layout_marginRight="50sp" android:layout_marginTop="0sp" android:layout_marginBottom="20sp" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_gravity="center">
-        <EditText android:id="@+id/pass"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="0sp">
+
+        <EditText
+            android:id="@+id/pass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:inputType="textPassword"
-            android:layout_marginTop="20sp" android:layout_marginBottom="5dip"
-            android:singleLine="true" android:hint="Password"
-            android:password="true" android:text=""/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="20sp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:password="true"
+            android:singleLine="true"
+            android:text="" />
 
         <!--<android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -85,20 +140,39 @@
         </android.support.design.widget.TextInputLayout>-->
     </LinearLayout>
 
-    <LinearLayout android:layout_weight="0.07" android:layout_marginLeft="50sp" android:layout_marginRight="50sp"  android:orientation="horizontal" android:layout_marginTop="0sp" android:layout_marginBottom="20sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center">
-        <Button android:id="@+id/btnLogin"  android:background="@drawable/button_style_gray"
-            android:layout_width="wrap_content" android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:layout_marginBottom="10sp"
-            android:text="Login" android:textColor="#FFFFFF"/>
-        <Button android:id="@+id/btnClose" android:layout_marginLeft="20sp"
-            android:background="@drawable/button_style_gray" android:layout_weight="1"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="0sp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
             android:layout_marginBottom="10sp"
-            android:text="Close" android:textColor="#FFFFFF"/>
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_style_gray"
+            android:text="Login"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_style_gray"
+            android:text="Close"
+            android:textColor="#FFFFFF" />
 
 
     </LinearLayout>

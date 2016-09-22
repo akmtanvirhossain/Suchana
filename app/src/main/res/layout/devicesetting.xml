@@ -1,33 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="always" android:isScrollContainer="true" android:scrollbarAlwaysDrawVerticalTrack="true"         android:scrollbarStyle="outsideInset"         android:scrollbars="vertical"><LinearLayout android:orientation="vertical" android:layout_width="fill_parent"    android:layout_marginLeft="10sp" android:layout_marginRight="10sp"    android:layout_height="wrap_content" android:scrollbars="vertical">
-    <include
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical">
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/form_heading" />
-    <LinearLayout android:id="@+id/seclblListing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowHeading">
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
 
-        <TextView
-            android:id="@+id/lblHlblListing"
-            android:layout_width="wrap_content"
+        <include
+            layout="@layout/form_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/seclblListing"
+            style="@style/rowHeading"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Device Setting"
-            android:textColor="#006699"
-            android:textSize="20sp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblHlblListing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Setting"
+                android:textColor="#006699"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#CCCCCC" />
+
+        <LinearLayout
+            style="@style/rowStyle0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Device ID"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spnUser"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/planet_prompt"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#CCCCCC" />
+
+        <LinearLayout
+            style="@style/rowStyle0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="60sp">
+
+            <Button
+                android:id="@+id/cmdSave"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/button_style"
+                android:text=" Done "
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </LinearLayout>
-    <View android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
-        <TextView android:text="Device ID" android:layout_width="140sp" android:layout_height="wrap_content" android:textSize="20sp" />
-        <Spinner android:id="@+id/spnUser" android:drawSelectorOnTop="true" android:layout_width="300sp" android:layout_height="wrap_content" android:layout_weight="0" android:prompt="@string/planet_prompt" android:textSize="20sp" />
-    </LinearLayout>
-
-    <View android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
-
-    <LinearLayout android:layout_width="fill_parent" android:paddingTop="60sp" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
-       	<Button android:id="@+id/cmdSave" android:layout_width="fill_parent" android:layout_height="wrap_content"
-       			android:textSize="20sp" android:text=" Done "  android:layout_marginBottom="10sp" android:background="@drawable/button_style"/>
-    </LinearLayout>
-
-</LinearLayout>
 </ScrollView>

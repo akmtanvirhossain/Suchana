@@ -1,7 +1,7 @@
 package org.icddrb.suchana;
 
 //Android Manifest Code
-//<activity android:name=".Member_list" android:label="Member: List" />
+//<activity android:name=".AssetNB_list" android:label="AssetNB: List" />
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,13 +30,13 @@ import java.util.List;
 import Common.Connection;
 import Common.Global;
 
-public class Member_list extends Activity {
+public class AssetNB_list extends Activity {
     static final int DATE_DIALOG = 1;
     static final int TIME_DIALOG = 2;
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    static String H21 = "";
+    static String H42A = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -49,6 +49,12 @@ public class Member_list extends Activity {
     Button btnAdd;
     Button btnRefresh;
     String StartTime;
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -63,12 +69,12 @@ public class Member_list extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            setContentView(R.layout.member_list);
+            setContentView(R.layout.assetnb_list);
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
 
-            TableName = "Member";
+            TableName = "AssetNB";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
@@ -76,7 +82,7 @@ public class Member_list extends Activity {
                     final int DRAWABLE_RIGHT = 2;
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
                         if (event.getRawX() >= (lblHeading.getRight() - lblHeading.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                            AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
+                            AlertDialog.Builder adb = new AlertDialog.Builder(AssetNB_list.this);
                             adb.setTitle("Close");
                             adb.setMessage("Do you want to close this form[Yes/No]?");
                             adb.setNegativeButton("No", null);
@@ -96,7 +102,7 @@ public class Member_list extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetNB_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -114,7 +120,7 @@ public class Member_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, H21);
+                    DataSearch(RND, SUCHANAID, H42A);
 
                 }
             });
@@ -126,8 +132,8 @@ public class Member_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", "");
                     IDbundle.putString("SuchanaID", "");
-                    IDbundle.putString("H21", "");
-                    Intent intent = new Intent(getApplicationContext(), Member.class);
+                    IDbundle.putString("H42a", "");
+                    Intent intent = new Intent(getApplicationContext(), AssetNB.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
                     getApplicationContext().startActivity(intent);
@@ -136,22 +142,21 @@ public class Member_list extends Activity {
             });
 
 
-            DataSearch(RND, SUCHANAID, H21);
+            DataSearch(RND, SUCHANAID, H42A);
 
 
         } catch (Exception e) {
-            Connection.MessageBox(Member_list.this, e.getMessage());
+            Connection.MessageBox(AssetNB_list.this, e.getMessage());
             return;
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String H21) {
+    private void DataSearch(String Rnd, String SuchanaID, String H42a) {
         try {
 
-            Member_DataModel d = new Member_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H21='" + H21 + "'";
-            ;
-            List<Member_DataModel> data = d.SelectAll(this, SQL);
+            AssetNB_DataModel d = new AssetNB_DataModel();
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H42a='" + H42a + "'";
+            List<AssetNB_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
             dataAdapter = null;
@@ -159,44 +164,28 @@ public class Member_list extends Activity {
             ListView list = (ListView) findViewById(R.id.lstData);
             HashMap<String, String> map;
 
-            for (Member_DataModel item : data) {
+            for (AssetNB_DataModel item : data) {
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
-                map.put("H21", item.getH21());
-                map.put("H22", item.getH22());
-                map.put("H23", item.getH23());
-                map.put("H24", item.getH24());
-                map.put("H25", item.getH25());
-                map.put("H26Y", item.getH26Y());
-                map.put("H26M", item.getH26M());
-                map.put("H27", item.getH27());
-                map.put("H28", item.getH28());
-                map.put("H29", item.getH29());
-                map.put("H29X", item.getH29X());
-                map.put("H210", item.getH210());
-                map.put("H211", item.getH211());
-                map.put("H212", item.getH212());
-                map.put("H212X", item.getH212X());
-                map.put("H213", item.getH213());
-                map.put("H214", item.getH214());
-                map.put("H215", item.getH215());
-                map.put("H215X", item.getH215X());
-                map.put("H216", item.getH216());
-                map.put("H216X", item.getH216X());
-                map.put("H217", item.getH217());
-                map.put("H218", item.getH218());
-                map.put("H219", item.getH219());
-                map.put("H220", item.getH220());
-                map.put("H221", item.getH221());
-                map.put("H222", item.getH222());
+                map.put("H42a", item.getH42a());
+                map.put("H42aX", item.getH42aX());
+                map.put("H42b", item.getH42b());
+                map.put("H42c", item.getH42c());
+                map.put("H42d1", item.getH42d1());
+                map.put("H42d2", item.getH42d2());
+                map.put("H42d3", item.getH42d3());
+                map.put("H42d4", item.getH42d4());
+                map.put("H42d4X", item.getH42d4X());
+                map.put("H42d4X1", item.getH42d4X1());
+                map.put("H42d4X2", item.getH42d4X2());
                 dataList.add(map);
             }
-            dataAdapter = new SimpleAdapter(Member_list.this, dataList, R.layout.member_list, new String[]{"rowsec"},
+            dataAdapter = new SimpleAdapter(AssetNB_list.this, dataList, R.layout.assetnb_list, new String[]{"rowsec"},
                     new int[]{R.id.secListRow});
             list.setAdapter(new DataListAdapter(this, dataAdapter));
         } catch (Exception e) {
-            Connection.MessageBox(Member_list.this, e.getMessage());
+            Connection.MessageBox(AssetNB_list.this, e.getMessage());
             return;
         }
     }
@@ -222,23 +211,42 @@ public class Member_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
+
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.member_row, null);
+                convertView = inflater.inflate(R.layout.assetnb_row, null);
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView H21 = (TextView) convertView.findViewById(R.id.H21);
-
+            final TextView H42a = (TextView) convertView.findViewById(R.id.H42a);
+            final TextView H42aX = (TextView) convertView.findViewById(R.id.H42aX);
+            final TextView H42b = (TextView) convertView.findViewById(R.id.H42b);
+            final TextView H42c = (TextView) convertView.findViewById(R.id.H42c);
+            final TextView H42d1 = (TextView) convertView.findViewById(R.id.H42d1);
+            final TextView H42d2 = (TextView) convertView.findViewById(R.id.H42d2);
+            final TextView H42d3 = (TextView) convertView.findViewById(R.id.H42d3);
+            final TextView H42d4 = (TextView) convertView.findViewById(R.id.H42d4);
+            final TextView H42d4X = (TextView) convertView.findViewById(R.id.H42d4X);
+            final TextView H42d4X1 = (TextView) convertView.findViewById(R.id.H42d4X1);
+            final TextView H42d4X2 = (TextView) convertView.findViewById(R.id.H42d4X2);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            H21.setText(o.get("H21"));
-
+            H42a.setText(o.get("H42a"));
+            H42aX.setText(o.get("H42aX"));
+            H42b.setText(o.get("H42b"));
+            H42c.setText(o.get("H42c"));
+            H42d1.setText(o.get("H42d1"));
+            H42d2.setText(o.get("H42d2"));
+            H42d3.setText(o.get("H42d3"));
+            H42d4.setText(o.get("H42d4"));
+            H42d4X.setText(o.get("H42d4X"));
+            H42d4X1.setText(o.get("H42d4X1"));
+            H42d4X2.setText(o.get("H42d4X2"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -246,9 +254,9 @@ public class Member_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
-                    IDbundle.putString("H21", o.get("H21"));
+                    IDbundle.putString("H42a", o.get("H42a"));
                     Intent f1;
-                    f1 = new Intent(getApplicationContext(), Member.class);
+                    f1 = new Intent(getApplicationContext(), AssetNB.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
                 }
