@@ -114,7 +114,7 @@ public class Member_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, H21);
+                    DataSearch(RND, SUCHANAID);
 
                 }
             });
@@ -136,7 +136,7 @@ public class Member_list extends Activity {
             });
 
 
-            DataSearch(RND, SUCHANAID, H21);
+            DataSearch(RND, SUCHANAID);
 
 
         } catch (Exception e) {
@@ -145,11 +145,11 @@ public class Member_list extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String H21) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             Member_DataModel d = new Member_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H21='" + H21 + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='1'";
             ;
             List<Member_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();

@@ -46,6 +46,8 @@ import Common.Connection;
 import Common.Global;
 
 public class SES extends Activity {
+
+
     static final int DATE_DIALOG = 1;
     static final int TIME_DIALOG = 2;
     static String TableName;
