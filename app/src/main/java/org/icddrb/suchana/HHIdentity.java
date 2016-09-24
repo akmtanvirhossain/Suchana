@@ -17,6 +17,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -46,6 +48,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    String[] SuchanaIdBuilder;
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -278,6 +281,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             lineDist = (View) findViewById(R.id.lineDist);
             VlblDist = (TextView) findViewById(R.id.VlblDist);
             spnDist = (Spinner) findViewById(R.id.spnDist);
+            SpinnerItem(spnDist, "select DistCode+'-'+DistName from VillageList order by DistCode");
+
             List<String> listDist = new ArrayList<String>();
 
             listDist.add("");
@@ -285,7 +290,12 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listDist.add("02-BB");
             ArrayAdapter<String> adptrDist = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listDist);
             spnDist.setAdapter(adptrDist);
-
+            spnDist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    SuchanaIdBuilder[0] = String.valueOf(id);
+                }
+            });
             secUpz = (LinearLayout) findViewById(R.id.secUpz);
             lineUpz = (View) findViewById(R.id.lineUpz);
             VlblUpz = (TextView) findViewById(R.id.VlblUpz);
@@ -297,6 +307,12 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listUpz.add("02-BB");
             ArrayAdapter<String> adptrUpz = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listUpz);
             spnUpz.setAdapter(adptrUpz);
+            spnUpz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    SuchanaIdBuilder[1] = String.valueOf(id);
+                }
+            });
 
             secUn = (LinearLayout) findViewById(R.id.secUn);
             lineUn = (View) findViewById(R.id.lineUn);
@@ -309,7 +325,12 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listUn.add("02-BB");
             ArrayAdapter<String> adptrUn = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listUn);
             spnUn.setAdapter(adptrUn);
-
+            spnUn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    SuchanaIdBuilder[2] = String.valueOf(id);
+                }
+            });
             secVill = (LinearLayout) findViewById(R.id.secVill);
             lineVill = (View) findViewById(R.id.lineVill);
             VlblVill = (TextView) findViewById(R.id.VlblVill);
@@ -321,11 +342,32 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listVill.add("02-BB");
             ArrayAdapter<String> adptrVill = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listVill);
             spnVill.setAdapter(adptrVill);
-
+            spnVill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    SuchanaIdBuilder[0] = String.valueOf(id);
+                }
+            });
             secH11 = (LinearLayout) findViewById(R.id.secH11);
             lineH11 = (View) findViewById(R.id.lineH11);
             VlblH11 = (TextView) findViewById(R.id.VlblH11);
             txtH11 = (EditText) findViewById(R.id.txtH11);
+            txtH11.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    SuchanaIdBuilder[4] = txtH11.getText().toString();
+                }
+            });
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
@@ -663,6 +705,13 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             Connection.MessageBox(HHIdentity.this, e.getMessage());
             return;
         }
+    }
+
+    private void SpinnerItem(Spinner SpinnerName, String SQL) {
+        List<String> listItem = new ArrayList<String>();
+        listItem = C.DataListJSON(SQL);
+        ArrayAdapter<String> adptrList = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listItem);
+        SpinnerName.setAdapter(adptrList);
     }
 
     @Override
