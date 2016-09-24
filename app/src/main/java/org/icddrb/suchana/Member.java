@@ -385,7 +385,7 @@ public class Member extends Activity {
             listH29.add("5-অন্যান্য (উল্লেখ কর)");
             ArrayAdapter<String> adptrH29 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH29);
             spnH29.setAdapter(adptrH29);
-            spnH29.setVisibility(View.GONE);
+
             spnH29.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -408,6 +408,7 @@ public class Member extends Activity {
             lineH29X = (View) findViewById(R.id.lineH29X);
             VlblH29X = (TextView) findViewById(R.id.VlblH29X);
             txtH29X = (EditText) findViewById(R.id.txtH29X);
+            secH29X.setVisibility(View.GONE);
             secH210 = (LinearLayout) findViewById(R.id.secH210);
             lineH210 = (View) findViewById(R.id.lineH210);
             VlblH210 = (TextView) findViewById(R.id.VlblH210);
