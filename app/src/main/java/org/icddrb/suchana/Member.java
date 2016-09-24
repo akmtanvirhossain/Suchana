@@ -349,9 +349,9 @@ public class Member extends Activity {
             listH27.add("5-পৃথক থাকে অথবা পরিত্যক্তা");
             ArrayAdapter<String> adptrH27 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH27);
             spnH27.setAdapter(adptrH27);
-            spnH27.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnH27.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 1) {
                         txtH28.setText("");
                         secH28.setVisibility(View.GONE);
@@ -359,12 +359,18 @@ public class Member extends Activity {
                         secH28.setVisibility(View.VISIBLE);
                     }
                 }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
             });
 
             secH28 = (LinearLayout) findViewById(R.id.secH28);
             lineH28 = (View) findViewById(R.id.lineH28);
             VlblH28 = (TextView) findViewById(R.id.VlblH28);
             txtH28 = (EditText) findViewById(R.id.txtH28);
+            secH28.setVisibility(View.GONE);
             secH29 = (LinearLayout) findViewById(R.id.secH29);
             lineH29 = (View) findViewById(R.id.lineH29);
             VlblH29 = (TextView) findViewById(R.id.VlblH29);
@@ -379,22 +385,13 @@ public class Member extends Activity {
             listH29.add("5-অন্যান্য (উল্লেখ কর)");
             ArrayAdapter<String> adptrH29 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH29);
             spnH29.setAdapter(adptrH29);
-
+            spnH29.setVisibility(View.GONE);
             spnH29.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH29.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH29.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("5")) {
-                        secH29X.setVisibility(View.GONE);
-                        lineH29X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH29X.setVisibility(View.GONE);
-                        lineH29X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH29X.setVisibility(View.GONE);
-                        lineH29X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("4")) {
+                    if (!spnData.equalsIgnoreCase("5")) {
                         secH29X.setVisibility(View.GONE);
                         lineH29X.setVisibility(View.GONE);
                     } else {
@@ -662,6 +659,7 @@ public class Member extends Activity {
             secH215X.setVisibility(View.GONE);
             secH216X.setVisibility(View.GONE);
 
+            DataSearch(RND, SUCHANAID, H21);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
