@@ -75,6 +75,7 @@ public class MainMenu extends Activity {
                         return;
                     }
 
+
                     AlertDialog.Builder adb = new AlertDialog.Builder(MainMenu.this);
                     adb.setTitle("Data Sync");
                     adb.setMessage("Do you want to Sync Data[Yes/No]?");

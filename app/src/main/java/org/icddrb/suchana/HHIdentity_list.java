@@ -35,6 +35,7 @@ import java.util.List;
 import Common.Connection;
 import Common.Global;
 
+
 public class HHIdentity_list extends Activity {
     static final int DATE_DIALOG = 1;
     static final int TIME_DIALOG = 2;

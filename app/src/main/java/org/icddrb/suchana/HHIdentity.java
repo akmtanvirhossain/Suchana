@@ -1265,6 +1265,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         }
     }
 
+
     // Method to turn off the GPS
     public void turnGPSOff() {
         String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);

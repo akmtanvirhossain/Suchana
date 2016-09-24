@@ -342,7 +342,6 @@
                         android:text="Suchana ID"
                         android:textColor="#006699"
                         android:textSize="20sp" />
-
                     <EditText
                         android:id="@+id/txtSuchanaID"
                         style="@style/customEdit"
