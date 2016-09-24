@@ -48,6 +48,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    private static String Status = "new";
     String[] SuchanaIdBuilder;
     boolean networkAvailable = false;
     Location currentLocation;
@@ -205,6 +206,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     RadioButton rdoH082;
     String StartTime;
     Bundle IDbundle;
+    String DIS = "";
+    String UPZ = "";
+    String UN = "";
+    String VILL = "";
     private int hour;
     private int minute;
     private int mDay;
@@ -277,40 +282,46 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+            txtRnd.setEnabled(false);
             secDist = (LinearLayout) findViewById(R.id.secDist);
             lineDist = (View) findViewById(R.id.lineDist);
             VlblDist = (TextView) findViewById(R.id.VlblDist);
             spnDist = (Spinner) findViewById(R.id.spnDist);
-            SpinnerItem(spnDist, "select DistCode+'-'+DistName from VillageList order by DistCode");
-
-            List<String> listDist = new ArrayList<String>();
-
-            listDist.add("");
-            listDist.add("01-AA");
-            listDist.add("02-BB");
-            ArrayAdapter<String> adptrDist = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listDist);
-            spnDist.setAdapter(adptrDist);
-            spnDist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnDist.setAdapter(C.getArrayAdapter("Select '' DistCode union select distinct DistCode||'-'||DistName from VillageList order by DistCode"));
+            spnDist.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    SuchanaIdBuilder[0] = String.valueOf(id);
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    //SuchanaIdBuilder[0] = String.valueOf(id);
+                    GenerateSuchanaID();
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    spnUpz.setAdapter(C.getArrayAdapter("Select '' union Select distinct UPZCode||'-'||UPZName from VillageList where DistCode='" + D + "'"));
+                    spnUpz.setSelection(Global.SpinnerItemPositionAnyLength(spnUpz, UPZ));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
                 }
             });
             secUpz = (LinearLayout) findViewById(R.id.secUpz);
             lineUpz = (View) findViewById(R.id.lineUpz);
             VlblUpz = (TextView) findViewById(R.id.VlblUpz);
             spnUpz = (Spinner) findViewById(R.id.spnUpz);
-            List<String> listUpz = new ArrayList<String>();
 
-            listUpz.add("");
-            listUpz.add("01-AA");
-            listUpz.add("02-BB");
-            ArrayAdapter<String> adptrUpz = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listUpz);
-            spnUpz.setAdapter(adptrUpz);
-            spnUpz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnUpz.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    SuchanaIdBuilder[1] = String.valueOf(id);
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    GenerateSuchanaID();
+                    //SuchanaIdBuilder[1] = String.valueOf(id);
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    String U = Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-");
+                    spnUn.setAdapter(C.getArrayAdapter("Select '' union Select distinct UNCode||'-'||UNName from VillageList where DistCode='" + D + "' and UpzCode='" + U + "'"));
+                    spnUn.setSelection(Global.SpinnerItemPositionAnyLength(spnUn, UN));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
                 }
             });
 
@@ -318,34 +329,38 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             lineUn = (View) findViewById(R.id.lineUn);
             VlblUn = (TextView) findViewById(R.id.VlblUn);
             spnUn = (Spinner) findViewById(R.id.spnUn);
-            List<String> listUn = new ArrayList<String>();
 
-            listUn.add("");
-            listUn.add("01-AA");
-            listUn.add("02-BB");
-            ArrayAdapter<String> adptrUn = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listUn);
-            spnUn.setAdapter(adptrUn);
-            spnUn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnUn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    SuchanaIdBuilder[2] = String.valueOf(id);
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    GenerateSuchanaID();
+                    //SuchanaIdBuilder[2] = String.valueOf(id);
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    String U = Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-");
+                    String UN = Connection.SelectedSpinnerValue(spnUn.getSelectedItem().toString(), "-");
+                    spnVill.setAdapter(C.getArrayAdapter("Select '' union Select distinct VillCode||'-'||VillName from VillageList where DistCode='" + D + "' and UpzCode='" + U + "' and UNCode='" + UN + "'"));
+                    spnVill.setSelection(Global.SpinnerItemPositionAnyLength(spnVill, VILL));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
                 }
             });
             secVill = (LinearLayout) findViewById(R.id.secVill);
             lineVill = (View) findViewById(R.id.lineVill);
             VlblVill = (TextView) findViewById(R.id.VlblVill);
             spnVill = (Spinner) findViewById(R.id.spnVill);
-            List<String> listVill = new ArrayList<String>();
-
-            listVill.add("");
-            listVill.add("01-AA");
-            listVill.add("02-BB");
-            ArrayAdapter<String> adptrVill = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listVill);
-            spnVill.setAdapter(adptrVill);
-            spnVill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            spnVill.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    SuchanaIdBuilder[0] = String.valueOf(id);
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    GenerateSuchanaID();
+                    //SuchanaIdBuilder[0] = String.valueOf(id);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
                 }
             });
             secH11 = (LinearLayout) findViewById(R.id.secH11);
@@ -365,13 +380,16 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    SuchanaIdBuilder[4] = txtH11.getText().toString();
+                    GenerateSuchanaID();
+                    //SuchanaIdBuilder[4] = txtH11.getText().toString();
                 }
             });
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setEnabled(false);
+
             secAgeGroup = (LinearLayout) findViewById(R.id.secAgeGroup);
             lineAgeGroup = (View) findViewById(R.id.lineAgeGroup);
             VlblAgeGroup = (TextView) findViewById(R.id.VlblAgeGroup);
@@ -463,7 +481,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     } else {
                         secH16.setVisibility(View.VISIBLE);
                         lineH16.setVisibility(View.VISIBLE);
-                        secH16X.setVisibility(View.VISIBLE);
+                        //secH16X.setVisibility(View.VISIBLE);
                         lineH16X.setVisibility(View.VISIBLE);
                         secH13.setVisibility(View.VISIBLE);
                         lineH13.setVisibility(View.VISIBLE);
@@ -483,24 +501,24 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH06.setVisibility(View.VISIBLE);
                         secH07.setVisibility(View.VISIBLE);
                         lineH07.setVisibility(View.VISIBLE);
-                        secH07a.setVisibility(View.VISIBLE);
-                        lineH07a.setVisibility(View.VISIBLE);
-                        secH07b.setVisibility(View.VISIBLE);
-                        lineH07b.setVisibility(View.VISIBLE);
-                        secH07c.setVisibility(View.VISIBLE);
-                        lineH07c.setVisibility(View.VISIBLE);
-                        secH07d.setVisibility(View.VISIBLE);
-                        lineH07d.setVisibility(View.VISIBLE);
-                        secH07e.setVisibility(View.VISIBLE);
-                        lineH07e.setVisibility(View.VISIBLE);
-                        secH07f.setVisibility(View.VISIBLE);
-                        lineH07f.setVisibility(View.VISIBLE);
-                        secH07g.setVisibility(View.VISIBLE);
-                        lineH07g.setVisibility(View.VISIBLE);
-                        secH07h.setVisibility(View.VISIBLE);
-                        lineH07h.setVisibility(View.VISIBLE);
+                        /*secH07a.setVisibility(View.GONE);
+                        lineH07a.setVisibility(View.GONE);
+                        secH07b.setVisibility(View.GONE);
+                        lineH07b.setVisibility(View.GONE);
+                        secH07c.setVisibility(View.GONE);
+                        lineH07c.setVisibility(View.GONE);
+                        secH07d.setVisibility(View.GONE);
+                        lineH07d.setVisibility(View.GONE);
+                        secH07e.setVisibility(View.GONE);
+                        lineH07e.setVisibility(View.GONE);
+                        secH07f.setVisibility(View.GONE);
+                        lineH07f.setVisibility(View.GONE);
+                        secH07g.setVisibility(View.GONE);
+                        lineH07g.setVisibility(View.GONE);
+                        secH07h.setVisibility(View.GONE);
+                        lineH07h.setVisibility(View.GONE);
                         secH08.setVisibility(View.VISIBLE);
-                        lineH08.setVisibility(View.VISIBLE);
+                        lineH08.setVisibility(View.VISIBLE);*/
                     }
                 }
 
@@ -694,6 +712,20 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 }
             });
 
+
+            secResultX.setVisibility(View.GONE);
+            secH16X.setVisibility(View.GONE);
+            secH07a.setVisibility(View.GONE);
+            secH07b.setVisibility(View.GONE);
+            secH07c.setVisibility(View.GONE);
+            secH07d.setVisibility(View.GONE);
+            secH07e.setVisibility(View.GONE);
+            secH07f.setVisibility(View.GONE);
+            secH07g.setVisibility(View.GONE);
+            secH07h.setVisibility(View.GONE);
+
+            secH08.setVisibility(View.GONE);
+
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -743,13 +775,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             case R.id.rdogrpH06:
             case R.id.rdogrpH07:
                 if (rdoH052.isChecked() || rdoH062.isChecked() || rdoH071.isChecked()) {
+                    secH08.setVisibility(View.VISIBLE);
+                } else {
                     rdogrpH08.clearCheck();
                     secH08.setVisibility(View.GONE);
-
-                } else {
-
-                    secH08.setVisibility(View.VISIBLE);
-
                 }
 
 
@@ -795,9 +824,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     lineH07g.setVisibility(View.VISIBLE);
                     secH07h.setVisibility(View.VISIBLE);
                     lineH07h.setVisibility(View.VISIBLE);
-                    rdogrpH08.clearCheck();
-                    secH08.setVisibility(View.GONE);
-
+                    //rdogrpH08.clearCheck();
+                    //secH08.setVisibility(View.GONE);
                 }
 
                 break;
@@ -822,7 +850,17 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 Connection.MessageBox(HHIdentity.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
                 txtRnd.requestFocus();
                 return;
-            } else if (spnDist.getSelectedItemPosition() == 0 & secDist.isShown()) {
+            }
+
+            if (txtSuchanaID.getText().toString().length() != 12) {
+                Connection.MessageBox(HHIdentity.this, "Length of suchana ID should be 12 digit.");
+                return;
+            } else if (Status.equals("new") & C.Existence("Select * from HHIdentity where Rnd='" + txtRnd.getText().toString() + "' and SuchanaId='" + txtSuchanaID.getText().toString() + "'")) {
+                Connection.MessageBox(HHIdentity.this, "Duplicate suchana ID.");
+                return;
+            }
+
+            if (spnDist.getSelectedItemPosition() == 0 & secDist.isShown()) {
                 Connection.MessageBox(HHIdentity.this, "Required field: District.");
                 spnDist.requestFocus();
                 return;
@@ -1034,13 +1072,26 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
             for (HHIdentity_DataModel item : data) {
+                Status = "update";
                 txtRnd.setText(item.getRnd());
                 spnDist.setSelection(Global.SpinnerItemPositionAnyLength(spnDist, item.getDist()));
+                DIS = item.getDist();
                 spnUpz.setSelection(Global.SpinnerItemPositionAnyLength(spnUpz, item.getUpz()));
+                UPZ = item.getUpz();
                 spnUn.setSelection(Global.SpinnerItemPositionAnyLength(spnUn, item.getUn()));
+                UN = item.getUn();
                 spnVill.setSelection(Global.SpinnerItemPositionAnyLength(spnVill, item.getVill()));
+                VILL = item.getVill();
                 txtH11.setText(item.getH11());
                 txtSuchanaID.setText(item.getSuchanaID());
+
+                spnDist.setEnabled(false);
+                spnUpz.setEnabled(false);
+                spnUn.setEnabled(false);
+                spnVill.setEnabled(false);
+                txtH11.setEnabled(false);
+                txtSuchanaID.setEnabled(false);
+
                 spnAgeGroup.setSelection(Global.SpinnerItemPositionAnyLength(spnAgeGroup, item.getAgeGroup()));
                 dtpH17.setText(item.getH17().toString().length() == 0 ? "" : Global.DateConvertDMY(item.getH17()));
                 spnResult.setSelection(Global.SpinnerItemPositionAnyLength(spnResult, item.getResult()));
@@ -1235,5 +1286,14 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         turnGPSOff();
     }
 
+
+    private void GenerateSuchanaID() {
+        String D = spnDist.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-") : "";
+        String U = spnUpz.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-") : "";
+        String Un = spnUn.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnUn.getSelectedItem().toString(), "-") : "";
+        String Vil = spnVill.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnVill.getSelectedItem().toString(), "-") : "";
+        String SID = D + U + Un + Vil + txtH11.getText().toString();
+        txtSuchanaID.setText(SID);
+    }
 
 }

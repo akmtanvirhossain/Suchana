@@ -49,9 +49,7 @@ public class MainMenu extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
-            //getLayoutInflater().inflate(R.layout.main_menu, frameLayout);
-            setContentView(R.layout.main_menu_dev);
-            //  setContentView(R.layout.main_menu);
+            setContentView(R.layout.main_menu);
 
             C = new Connection(this);
             g = Global.getInstance();
@@ -59,176 +57,13 @@ public class MainMenu extends Activity {
             USERID = g.getUserId();
 
 
-        /*    cmdMenuStart = (Button) findViewById(R.id.cmdMenuStart);
+            cmdMenuStart = (Button) findViewById(R.id.cmdMenuStart);
             cmdMenuStart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
                 }
-            });*/
-
-            cmdMenuIdentity = (Button) findViewById(R.id.cmdMenuIdentity);
-            cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), HHIdentity_list.class);
-                    startActivity(f1);
-                }
             });
-
-            cmdMenuMember = (Button) findViewById(R.id.cmdMenuMember);
-            cmdMenuMember.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Member_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuSES = (Button) findViewById(R.id.cmdMenuSES);
-            cmdMenuSES.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), SES_list.class);
-                    startActivity(f1);
-                }
-            });
-
-            cmdMenuAssetB = (Button) findViewById(R.id.cmdMenuAssetB);
-            cmdMenuAssetB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), AssetB_list.class);
-                    startActivity(f1);
-                }
-            });
-
-            cmdMenuAssetNB = (Button) findViewById(R.id.cmdMenuAssetNB);
-            cmdMenuAssetNB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), AssetNB_list.class);
-                    startActivity(f1);
-                }
-            });
-
-            cmdMenuLand = (Button) findViewById(R.id.cmdMenuLand);
-            cmdMenuLand.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Land_list.class);
-                    startActivity(f1);
-                }
-            });
-
-            cmdMenuHDDS = (Button) findViewById(R.id.cmdMenuHDDS);
-            cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                    //   startActivity(f1);
-                }
-            });
-            cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);
-            cmdMenuCost.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                    //   startActivity(f1);
-                }
-            });
-
-            cmdMenuSavings = (Button) findViewById(R.id.cmdMenuSavings);
-            cmdMenuSavings.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //  Intent f1 = new Intent(getApplicationContext(), Savings_list.class);
-                    //  startActivity(f1);
-                }
-            });
-
-            cmdMenuLoan = (Button) findViewById(R.id.cmdMenuLoan);
-            cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //  Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
-                    // startActivity(f1);
-                }
-            });
-            cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
-            cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //Intent f1 = new Intent(getApplicationContext(), HFIAS_list.class);
-                    //startActivity(f1);
-                }
-            });
-            cmdMenuDestruction1 = (Button) findViewById(R.id.cmdMenuDestruction1);
-            cmdMenuDestruction1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Destruction1_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuDestruction2 = (Button) findViewById(R.id.cmdMenuDestruction2);
-            cmdMenuDestruction2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Destruction2_list.class);
-                    startActivity(f1);
-                }
-            });
-
-            cmdMenuAgriculture = (Button) findViewById(R.id.cmdMenuAgriculture);
-            cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Agriculture_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuNGO = (Button) findViewById(R.id.cmdMenuNGO);
-            cmdMenuNGO.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), NGOWork_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuIllness1 = (Button) findViewById(R.id.cmdMenuIllness1);
-            cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Illness1_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuIllness2 = (Button) findViewById(R.id.cmdMenuIllness2);
-            cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Illness2_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuCareseek = (Button) findViewById(R.id.cmdMenuCareseek);
-            cmdMenuCareseek.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Careseek_list.class);
-                    startActivity(f1);
-                }
-            });
-            cmdMenuIGA = (Button) findViewById(R.id.cmdMenuIGA);
-            cmdMenuIGA.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), IGA_list.class);
-                    startActivity(f1);
-                }
-            });
-
-
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {

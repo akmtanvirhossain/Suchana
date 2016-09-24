@@ -12,6 +12,10 @@ public class HHIdentity_DataModel {
 
     String TableName = "HHIdentity";
     Connection C;
+    String _distName = "";
+    String _upzName = "";
+    String _unName = "";
+    String _villName = "";
     private String _Rnd = "";
     private String _Dist = "";
     private String _Upz = "";
@@ -377,7 +381,6 @@ public class HHIdentity_DataModel {
         return response;
     }
 
-
     public List<HHIdentity_DataModel> SelectAll(Context context, String SQL) {
         Connection C = new Connection(context);
         List<HHIdentity_DataModel> data = new ArrayList<HHIdentity_DataModel>();
@@ -426,5 +429,52 @@ public class HHIdentity_DataModel {
         return data;
     }
 
+    public String getdistName() {
+        return _distName;
+    }
 
+    public String getupzName() {
+        return _upzName;
+    }
+
+    public String getunName() {
+        return _unName;
+    }
+
+    public String getvillName() {
+        return _villName;
+    }
+
+    public List<HHIdentity_DataModel> SelectAllList(Context context, String SQL) {
+        Connection C = new Connection(context);
+        List<HHIdentity_DataModel> data = new ArrayList<HHIdentity_DataModel>();
+        HHIdentity_DataModel d = new HHIdentity_DataModel();
+        Cursor cur = C.ReadData(SQL);
+
+        cur.moveToFirst();
+        while (!cur.isAfterLast()) {
+            d = new HHIdentity_DataModel();
+            d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
+            d._Dist = cur.getString(cur.getColumnIndex("Dist"));
+            d._Upz = cur.getString(cur.getColumnIndex("Upz"));
+            d._Un = cur.getString(cur.getColumnIndex("Un"));
+            d._Vill = cur.getString(cur.getColumnIndex("Vill"));
+            d._H11 = cur.getString(cur.getColumnIndex("H11"));
+            d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
+            d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));
+            d._H17 = cur.getString(cur.getColumnIndex("H17"));
+            d._Result = cur.getString(cur.getColumnIndex("Result"));
+
+            d._distName = cur.getString(cur.getColumnIndex("DistName"));
+            d._upzName = cur.getString(cur.getColumnIndex("UPZName"));
+            d._unName = cur.getString(cur.getColumnIndex("UNName"));
+            d._villName = cur.getString(cur.getColumnIndex("VillName"));
+
+            data.add(d);
+
+            cur.moveToNext();
+        }
+        cur.close();
+        return data;
+    }
 }

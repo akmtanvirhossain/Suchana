@@ -4,6 +4,8 @@ package org.icddrb.suchana;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -24,6 +28,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -48,11 +53,37 @@ public class HHIdentity_list extends Activity {
     Button btnAdd;
     Button btnRefresh;
     String StartTime;
+    EditText dtpFDate;
+    EditText dtpTDate;
+    Button btnSearch;
+    ImageButton dateSearch;
+    LinearLayout secDateSearch;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            dtpDate = (EditText) findViewById(R.id.dtpFDate);
+            if (VariableID.equals("dtpFDate")) {
+                dtpDate = (EditText) findViewById(R.id.dtpFDate);
+            } else if (VariableID.equals("dtpTDate")) {
+                dtpDate = (EditText) findViewById(R.id.dtpTDate);
+            }
+
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -135,6 +166,48 @@ public class HHIdentity_list extends Activity {
                 }});
 
 
+            dtpFDate = (EditText) findViewById(R.id.dtpFDate);
+            dtpFDate.setText(Global.DateNowDMY());
+            dtpTDate = (EditText) findViewById(R.id.dtpTDate);
+            dtpTDate.setText(Global.DateNowDMY());
+
+            dtpFDate.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    final int DRAWABLE_RIGHT = 2;
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        if (event.getRawX() >= (dtpFDate.getRight() - dtpFDate.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                            VariableID = "dtpFDate";
+                            showDialog(DATE_DIALOG);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
+            dtpTDate.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    final int DRAWABLE_RIGHT = 2;
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        if (event.getRawX() >= (dtpTDate.getRight() - dtpTDate.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                            VariableID = "dtpTDate";
+                            showDialog(DATE_DIALOG);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
+
+
+            btnSearch = (Button) findViewById(R.id.btnSearch);
+            btnSearch.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    DataSearch();
+                }
+            });
+
             DataSearch();
 
 
@@ -160,8 +233,12 @@ public class HHIdentity_list extends Activity {
         {
 
             HHIdentity_DataModel d = new HHIdentity_DataModel();
-            String SQL = "Select * from "+ TableName;
-            List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
+            String SQL = "";
+            SQL = "Select Rnd, SuchanaID, Dist, Upz, Un, Vill, H11, AgeGroup, H17, Result,DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload from HHIdentity i";
+            SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
+            SQL += " where date(H17) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
+
+            List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
             dataList.clear();
 
             dataAdapter = null;
@@ -172,36 +249,16 @@ public class HHIdentity_list extends Activity {
             for(HHIdentity_DataModel item : data){
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
-                map.put("Dist", item.getDist());
-                map.put("Upz", item.getUpz());
-                map.put("Un", item.getUn());
-                map.put("Vill", item.getVill());
+                map.put("Dist", item.getdistName());
+                map.put("Upz", item.getupzName());
+                map.put("Un", item.getunName());
+                map.put("Vill", item.getvillName());
                 map.put("H11", item.getH11());
                 map.put("SuchanaID", item.getSuchanaID());
                 map.put("AgeGroup", item.getAgeGroup());
                 map.put("H17", item.getH17().toString().length()==0 ? "" : Global.DateConvertDMY(item.getH17()));
                 map.put("Result", item.getResult());
-                map.put("ResultX", item.getResultX());
-                map.put("H16", item.getH16());
-                map.put("H16X", item.getH16X());
-                map.put("H13", item.getH13());
-                map.put("H14", item.getH14());
-                map.put("H01", item.getH01());
-                map.put("H02", item.getH02());
-                map.put("H03", item.getH03());
-                map.put("H04", item.getH04());
-                map.put("H05", item.getH05());
-                map.put("H06", item.getH06());
-                map.put("H07", item.getH07());
-                map.put("H07a", item.getH07a());
-                map.put("H07b", item.getH07b());
-                map.put("H07c", item.getH07c());
-                map.put("H07d", item.getH07d());
-                map.put("H07e", item.getH07e());
-                map.put("H07f", item.getH07f());
-                map.put("H07g", item.getH07g());
-                map.put("H07h", item.getH07h());
-                map.put("H08", item.getH08());
+
                 map.put("Upload",item.getUpload());
                 dataList.add(map);
             }
@@ -216,6 +273,18 @@ public class HHIdentity_list extends Activity {
         }
     }
 
+    protected Dialog onCreateDialog(int id) {
+        final Calendar c = Calendar.getInstance();
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
+        switch (id) {
+            case DATE_DIALOG:
+                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
+            //case TIME_DIALOG:
+            //    return new TimePickerDialog(this, timePickerListener, hour, minute,false);
+        }
+        return null;
+    }
 
     public class DataListAdapter extends BaseAdapter
     {
@@ -229,24 +298,37 @@ public class HHIdentity_list extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.common_row, null);
+                convertView = inflater.inflate(R.layout.hhidentity_row1, null);
             }
             LinearLayout   secListRow = (LinearLayout)convertView.findViewById(R.id.secListRow);
 
             final TextView Rnd = (TextView)convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView)convertView.findViewById(R.id.SuchanaID);
+            final TextView zilla = (TextView) convertView.findViewById(R.id.zilla);
+            final TextView upazila = (TextView) convertView.findViewById(R.id.upazila);
+            final TextView unions = (TextView) convertView.findViewById(R.id.unions);
+            final TextView village = (TextView) convertView.findViewById(R.id.village);
+            final TextView hhNo = (TextView) convertView.findViewById(R.id.hhNo);
+            final TextView visitdate = (TextView) convertView.findViewById(R.id.visitdate);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
-            SuchanaID.setText(o.get("SuchanaID"));
+            SuchanaID.setText(": " + o.get("SuchanaID"));
+            zilla.setText(": " + o.get("Dist"));
+            upazila.setText(": " + o.get("Upz"));
+            unions.setText(": " + o.get("Un"));
+            village.setText(": " + o.get("Vill"));
+            hhNo.setText(": " + o.get("H11"));
+            visitdate.setText(": " + o.get("H17"));
+
           //  Upload.setText(o.get("Upload"));
             final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);
             if (o.get("Upload").equals("1")) {
-                Upload.setText("Yes");
+                Upload.setText(": " + "Yes");
                 Upload.setTextColor(Color.parseColor("#FF00C853"));
                 //status.setImageResource(R.mipmap.uploaded);
             } else {
-                Upload.setText("No");
+                Upload.setText(": " + "No");
                 Upload.setTextColor(Color.RED);
                 //status.setImageResource(R.mipmap.pending);
             }
@@ -263,10 +345,8 @@ public class HHIdentity_list extends Activity {
                 }
             });
 
-
             return convertView;
         }
     }
-
 
 }
