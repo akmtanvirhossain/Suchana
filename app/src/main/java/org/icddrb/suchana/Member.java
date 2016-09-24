@@ -253,7 +253,10 @@ public class Member extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(Member.this, Member_list.class));
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", txtRnd.getText().toString());
+                            IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
+                            startActivity(new Intent(Member.this, Member_list.class).putExtras(IDBundle));
                         }
                     });
                     adb.show();
@@ -265,7 +268,7 @@ public class Member extends Activity {
                 public void onClick(View v) {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", txtRnd.getText().toString());
-                            IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                             startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
 
                 }
@@ -284,6 +287,9 @@ public class Member extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+
             secH21 = (LinearLayout) findViewById(R.id.secH21);
             lineH21 = (View) findViewById(R.id.lineH21);
             VlblH21 = (TextView) findViewById(R.id.VlblH21);
@@ -681,11 +687,7 @@ public class Member extends Activity {
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
 
-                    startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
                 }
             });
         } catch (Exception e) {
@@ -930,7 +932,12 @@ public class Member extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Member.this, "Saved Successfully");
+
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
+                //  Connection.MessageBox(Member.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(Member.this, status);
                 return;
