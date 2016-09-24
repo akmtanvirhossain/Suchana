@@ -263,21 +263,14 @@ public class Member extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Member.this);
-                    adb.setTitle("Close");
-                    adb.setMessage("Do you want to close this form[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", txtRnd.getText().toString());
                             IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
                             startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
-                        }
-                    });
-                    adb.show();
+
                 }
             });
+
 
 
 
@@ -286,6 +279,7 @@ public class Member extends Activity {
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+            txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
@@ -695,8 +689,9 @@ public class Member extends Activity {
                 }
             });
         } catch (Exception e) {
-            Connection.MessageBox(Member.this, e.getMessage());
-            return;
+            throw e;
+            //  Connection.MessageBox(Member.this, e.getMessage());
+            // return;
         }
     }
 
