@@ -13,8 +13,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="30sp"
         android:background="#FFFFFF"
-        android:paddingTop="30sp"
         android:visibility="gone">
 
         <ImageView
@@ -36,7 +36,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20sp"
         android:layout_marginTop="20sp"
-        android:background="#FFFFFF"
+
         android:visibility="visible">
 
         <TextView

@@ -89,14 +89,20 @@ public class LoginActivity extends Activity {
 
             //**************************************************************************************
             if (netwoekAvailable) {
-                //Reqular data sync
+
+                //Database Structure Update
+                C.Sync_DatabaseStructure(UniqueID);
+
+                if (!C.Existence("Select * from VillageList limit 1")) {
+                    C.Sync_Download("VillageList", UniqueID, "");
+                }
+
             }
             //**************************************************************************************
 
             uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from UserList order by UserName"));
             String[] CL = uid.getSelectedItem().toString().split("-");
             uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
-
 
             //Only for removing the data of training: 17 Nov 2015
             /*if(Global.DateNowDMY().equals("11/02/2016") & g.getDistrict().equals("12") & g.getUpazila().equals("63"))
