@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="HFIAS"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/secRnd"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRnd"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Rnd"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblRnd"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="রাউন্ড নাম্বার"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtRnd"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineRnd"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSuchanaID"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="SuchanaID"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblSuchanaID"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="উপকারভোগী সদস্য আইডি"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtSuchanaID"
+                    style="@style/customEdit"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSuchanaID"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclbl12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlbl12"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelbl12"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH121a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH121a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H121a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH121a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনাদের খানায় যথেষ্ট খাবার থাকবে না, বিগত ৪ সপ্তাহে এরকম কোন দুশ্চিন্তা হয়েছিল কী (উত্তর )"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH121a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH121a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH121a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH121a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH121b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH121b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H121b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH121b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH121b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH121b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH121b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH121b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH121b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH121b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH122a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH122a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H122a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH122a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনারা সাধারণত যে ধরনের খাবার খেয়ে থাকেন, গত ৪ সপ্তাহে অভাবের কারনে আপনি বা আপনাদের খানার কোন সদস্য কি  সে ধরনের খাবার খেতে পারেন নি"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH122a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH122a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH122a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH122a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH122b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH122b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H122b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH122b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH122b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH122b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH122b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH122b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH122b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH122b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH123a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH123a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H123a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH123a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনি বা আপনাদের খানার কোন সদস্য কি অভাবের কারনে সীমিত রকমের (Variety) খাবার খেতে হয়েছে, অর্থাৎ আগে যত পদ খেতেন গত ৪ সপ্তাহে অভাবের কারনে তার চেয়ে কম পদ খেতে হয়েছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH123a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH123a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH123a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH123a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH123b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH123b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H123b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH123b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH123b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH123b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH123b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH123b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH123b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH123b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH124a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH124a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H124a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH124a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, যে খাবার আপনারা খান না, অভাবের কারনে তা খেয়ে থাকতে হয়েছে কি"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH124a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH124a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH124a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH124a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH124b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH124b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H124b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH124b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH124b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH124b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH124b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH124b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH124b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH124b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH125a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH125a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H125a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH125a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে কি সাধারণত যে খাবার খান, অভাবের কারনে তার থেকে কম খেয়ে থাকতে হয়েছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH125a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH125a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH125a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH125a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH125b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH125b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H125b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH125b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH125b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH125b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH125b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH125b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH125b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH125b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH126a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH126a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H126a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH126a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, অভাবের কারনে কোন বেলা না খেয়ে থাকতে হয়েছে কি"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH126a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH126a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH126a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH126a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH126b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH126b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H126b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH126b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH126b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH126b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH126b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH126b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH126b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH126b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH127a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH127a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H127a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH127a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে এমনকি হয়েছে যে আপনার খানায় অভাবের কারনে খাওয়ার জন্য কোন খাবার ছিল না"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH127a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH127a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH127a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH127a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH127b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH127b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H127b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH127b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH127b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH127b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH127b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH127b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH127b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH127b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH128a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH128a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H128a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH128a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH128a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH128a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH128a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH128a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH128b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH128b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H128b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH128b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH128b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH128b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH128b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH128b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH128b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH128b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH129a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH129a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H129a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH129a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH129a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH129a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যাঁ  "
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH129a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH129a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH129b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH129b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H129b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH129b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কত ঘন ঘন এইরূপ ঘটেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH129b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH129b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" খুবই কম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH129b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" মাঝে মধ্যে"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH129b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" প্রায়ই"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH129b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH129b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secLb13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHLb13"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="খুবই কম-1-2  বার  গত ৪ সপ্তাহে  ,মাঝে মধ্যে -3-10 গত ৪ সপ্তাহে  ,প্রায়ই-10  বেশী বার  গত ৪ সপ্তাহে"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineLb13"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
+
+                <Button
+                    android:id="@+id/cmdSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/button_style"
+                    android:text=" Save -> Continue "
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
