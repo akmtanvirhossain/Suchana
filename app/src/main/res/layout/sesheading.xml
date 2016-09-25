@@ -158,7 +158,19 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="H63AX" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="H63B" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="H34BX" />
 
         <TextView
             android:layout_width="50dp"
@@ -170,13 +182,31 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="H34CX" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="H63D" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="H34DX" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="H63E" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="H34EX" />
 
         <TextView
             android:layout_width="50dp"
@@ -224,13 +254,13 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H610R" />
+            android:text="H610" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H610RX" />
+            android:text="H610X" />
 
         <TextView
             android:layout_width="50dp"
@@ -369,6 +399,12 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H611b6" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="H611c" />
 
         <TextView
             android:layout_width="50dp"

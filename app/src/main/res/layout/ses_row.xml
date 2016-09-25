@@ -152,7 +152,19 @@
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/H63AX"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
             android:id="@+id/H63B"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H63BX"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -164,13 +176,31 @@
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/H63CX"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
             android:id="@+id/H63D"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/H63DX"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
             android:id="@+id/H63E"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H63EX"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -218,13 +248,13 @@
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H610R"
+            android:id="@+id/H610"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H610RX"
+            android:id="@+id/H610X"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -363,6 +393,12 @@
 
         <TextView
             android:id="@+id/H611b6"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H611c"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />

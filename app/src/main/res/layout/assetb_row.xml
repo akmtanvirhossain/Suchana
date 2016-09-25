@@ -26,6 +26,12 @@
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/MSlNo"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
             android:id="@+id/H41a"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -134,13 +140,31 @@
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H41o"
+            android:id="@+id/H41o1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
-            android:id="@+id/H41oX"
+            android:id="@+id/H41o2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H41o3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H41o4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/H41o4X"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center" />

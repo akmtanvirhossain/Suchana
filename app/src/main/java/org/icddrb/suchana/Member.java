@@ -256,6 +256,7 @@ public class Member extends Activity {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", txtRnd.getText().toString());
                             IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
+
                             startActivity(new Intent(Member.this, Member_list.class).putExtras(IDBundle));
                         }
                     });
@@ -269,6 +270,7 @@ public class Member extends Activity {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H21", txtH21.getText().toString());
                             startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
 
                 }

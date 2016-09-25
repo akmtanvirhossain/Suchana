@@ -168,6 +168,7 @@ public class AssetB_list extends Activity {
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
+                map.put("MSlNo", item.getMSlNo());
                 map.put("H41a", item.getH41a());
                 map.put("H41aX", item.getH41aX());
                 map.put("H41b", item.getH41b());
@@ -186,8 +187,11 @@ public class AssetB_list extends Activity {
                 map.put("H41l", item.getH41l());
                 map.put("H41m", item.getH41m());
                 map.put("H41n", item.getH41n());
-                map.put("H41o", item.getH41o());
-                map.put("H41oX", item.getH41oX());
+                map.put("H41o1", item.getH41o1());
+                map.put("H41o2", item.getH41o2());
+                map.put("H41o3", item.getH41o3());
+                map.put("H41o4", item.getH41o4());
+                map.put("H41o4X", item.getH41o4X());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(AssetB_list.this, dataList, R.layout.assetb_list, new String[]{"rowsec"},
@@ -220,7 +224,6 @@ public class AssetB_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
-
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
@@ -230,6 +233,7 @@ public class AssetB_list extends Activity {
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
+            final TextView MSlNo = (TextView) convertView.findViewById(R.id.MSlNo);
             final TextView H41a = (TextView) convertView.findViewById(R.id.H41a);
             final TextView H41aX = (TextView) convertView.findViewById(R.id.H41aX);
             final TextView H41b = (TextView) convertView.findViewById(R.id.H41b);
@@ -248,12 +252,16 @@ public class AssetB_list extends Activity {
             final TextView H41l = (TextView) convertView.findViewById(R.id.H41l);
             final TextView H41m = (TextView) convertView.findViewById(R.id.H41m);
             final TextView H41n = (TextView) convertView.findViewById(R.id.H41n);
-            final TextView H41o = (TextView) convertView.findViewById(R.id.H41o);
-            final TextView H41oX = (TextView) convertView.findViewById(R.id.H41oX);
+            final TextView H41o1 = (TextView) convertView.findViewById(R.id.H41o1);
+            final TextView H41o2 = (TextView) convertView.findViewById(R.id.H41o2);
+            final TextView H41o3 = (TextView) convertView.findViewById(R.id.H41o3);
+            final TextView H41o4 = (TextView) convertView.findViewById(R.id.H41o4);
+            final TextView H41o4X = (TextView) convertView.findViewById(R.id.H41o4X);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
+            MSlNo.setText(o.get("MSlNo"));
             H41a.setText(o.get("H41a"));
             H41aX.setText(o.get("H41aX"));
             H41b.setText(o.get("H41b"));
@@ -272,8 +280,11 @@ public class AssetB_list extends Activity {
             H41l.setText(o.get("H41l"));
             H41m.setText(o.get("H41m"));
             H41n.setText(o.get("H41n"));
-            H41o.setText(o.get("H41o"));
-            H41oX.setText(o.get("H41oX"));
+            H41o1.setText(o.get("H41o1"));
+            H41o2.setText(o.get("H41o2"));
+            H41o3.setText(o.get("H41o3"));
+            H41o4.setText(o.get("H41o4"));
+            H41o4X.setText(o.get("H41o4X"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
