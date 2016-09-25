@@ -478,6 +478,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH07h.setVisibility(View.GONE);
                         secH08.setVisibility(View.GONE);
                         lineH08.setVisibility(View.GONE);
+                        seclblV1.setVisibility(View.GONE);
                     } else {
                         secH16.setVisibility(View.VISIBLE);
                         lineH16.setVisibility(View.VISIBLE);
@@ -501,6 +502,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH06.setVisibility(View.VISIBLE);
                         secH07.setVisibility(View.VISIBLE);
                         lineH07.setVisibility(View.VISIBLE);
+                        seclblV1.setVisibility(View.VISIBLE);
                         /*secH07a.setVisibility(View.GONE);
                         lineH07a.setVisibility(View.GONE);
                         secH07b.setVisibility(View.GONE);
@@ -731,6 +733,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", RND);
+                    IDBundle.putString("SuchanaId", SUCHANAID);
+                    startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
                 }
             });
         } catch (Exception e) {
@@ -1054,6 +1060,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 Connection.MessageBox(HHIdentity.this, "Saved Successfully");
+
             } else {
                 Connection.MessageBox(HHIdentity.this, status);
                 return;

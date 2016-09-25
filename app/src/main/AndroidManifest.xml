@@ -41,7 +41,7 @@
         <activity
             android:name="org.icddrb.suchana.MainMenu"
             android:label="Main Menu" />
-
+        <activity android:name=".MainMenu1" />
         <activity android:name=".HHIdentity" />
         <activity android:name=".HHIdentity_list" />
         <activity android:name=".Member" />
