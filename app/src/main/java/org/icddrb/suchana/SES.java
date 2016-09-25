@@ -649,10 +649,14 @@ public class SES extends Activity {
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
             secH311 = (LinearLayout) findViewById(R.id.secH311);
             lineH311 = (View) findViewById(R.id.lineH311);
             VlblH311 = (TextView) findViewById(R.id.VlblH311);

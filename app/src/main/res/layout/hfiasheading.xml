@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="@color/HeadingCyan"
+        android:background="#C2E0EC"
         android:orientation="horizontal"
         android:paddingBottom="5px"
         android:paddingTop="5px">
@@ -23,7 +23,7 @@
             android:text="Rnd" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="SuchanaID" />
@@ -32,162 +32,108 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H21" />
+            android:text="H121a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H22" />
+            android:text="H121b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H23" />
+            android:text="H122a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H24" />
+            android:text="H122b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H25" />
+            android:text="H123a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H26Y" />
+            android:text="H123b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H26M" />
+            android:text="H124a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H27" />
+            android:text="H124b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H28" />
+            android:text="H125a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H29" />
+            android:text="H125b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H29X" />
+            android:text="H126a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H210" />
+            android:text="H126b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H211" />
+            android:text="H127a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H212" />
+            android:text="H127b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H212X" />
+            android:text="H128a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H213" />
+            android:text="H128b" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H214" />
+            android:text="H129a" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H215" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H215X" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H216" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H216X" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H217" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H218" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H219" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H220" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H221" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H222" />
+            android:text="H129b" />
     </LinearLayout>
 </LinearLayout>

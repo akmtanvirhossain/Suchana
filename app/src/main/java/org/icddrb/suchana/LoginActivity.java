@@ -163,7 +163,7 @@ public class LoginActivity extends Activity {
                                     public void run() {
                                         try {
                                             finish();
-                                            Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
+                                            Intent f1 = new Intent(getApplicationContext(), MainMenu1.class);
                                             startActivity(f1);
                                         } catch (Exception e) {
 
@@ -179,7 +179,7 @@ public class LoginActivity extends Activity {
                                 public void run() {
                                     try {
                                         finish();
-                                        Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
+                                        Intent f1 = new Intent(getApplicationContext(), MainMenu1.class);
                                         startActivity(f1);
                                     } catch (Exception e) {
 
@@ -197,7 +197,7 @@ public class LoginActivity extends Activity {
                             public void run() {
                                 try {
                                     finish();
-                                    Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
+                                    Intent f1 = new Intent(getApplicationContext(), MainMenu1.class);
                                     startActivity(f1);
                                 } catch (Exception e) {
 
