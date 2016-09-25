@@ -66,7 +66,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -104,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
@@ -142,20 +142,20 @@
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/txtMSlNo"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
+                <Spinner
+                    android:id="@+id/spnMSlNo"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -180,7 +180,7 @@
 
                 <TextView
                     android:id="@+id/VlblH111"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে?"
                     android:textSize="20sp" />
@@ -232,7 +232,7 @@
 
                 <TextView
                     android:id="@+id/VlblH112"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লোন নম্বর"
                     android:textSize="20sp" />
@@ -270,7 +270,7 @@
 
                 <TextView
                     android:id="@+id/VlblH113"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কার কাছ থেকে"
                     android:textSize="20sp" />
@@ -307,7 +307,7 @@
 
                 <TextView
                     android:id="@+id/VlblH113X"
-                    android:layout_width="220sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -345,7 +345,7 @@
 
                 <TextView
                     android:id="@+id/VlblH114a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে"
                     android:textSize="20sp" />
@@ -382,7 +382,7 @@
 
                 <TextView
                     android:id="@+id/VlblH114b"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে"
                     android:textSize="20sp" />
@@ -419,7 +419,7 @@
 
                 <TextView
                     android:id="@+id/VlblH114c"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে"
                     android:textSize="20sp" />
@@ -456,7 +456,7 @@
 
                 <TextView
                     android:id="@+id/VlblH114X"
-                    android:layout_width="220sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -494,7 +494,7 @@
 
                 <TextView
                     android:id="@+id/VlblH115"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ক্যাশ কিনা ?"
                     android:textSize="20sp" />
@@ -546,7 +546,7 @@
 
                 <TextView
                     android:id="@+id/VlblH116"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লোনের পরিমাণ (টাকা)"
                     android:textSize="20sp" />
@@ -584,7 +584,7 @@
 
                 <TextView
                     android:id="@+id/VlblH117"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কার লোন"
                     android:textSize="20sp" />
@@ -636,7 +636,7 @@
 
                 <TextView
                     android:id="@+id/VlblH118"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি ঋণ শোধ করছেন ?"
                     android:textSize="20sp" />

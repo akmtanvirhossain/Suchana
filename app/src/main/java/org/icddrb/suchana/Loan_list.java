@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -54,6 +55,7 @@ public class Loan_list extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
+    Bundle IDbundle;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -99,6 +101,12 @@ public class Loan_list extends Activity {
                 }
             });
 
+
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
+          //  H112 = IDbundle.getString("H112");
+
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -120,7 +128,7 @@ public class Loan_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, H112);
+                    DataSearch(RND, SUCHANAID);
 
                 }
             });
@@ -129,20 +137,29 @@ public class Loan_list extends Activity {
             btnAdd.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
-                    Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
-                    IDbundle.putString("H112", "");
+                    int lineNo = 0;
+                    Cursor cursor = C.GetData("Loan", "H112", H112);
+                    if (cursor.getCount() != 0) {
+                        lineNo = cursor.getCount() + 1;
+                    } else {
+                        lineNo = 1;
+                    }
+
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", RND);
+                    IDbundle1.putString("SuchanaID", SUCHANAID);
+                    IDbundle1.putString("H112",String.valueOf(lineNo));
+
                     Intent intent = new Intent(getApplicationContext(), Loan.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtras(IDbundle);
+                    intent.putExtras(IDbundle1);
                     getApplicationContext().startActivity(intent);
 
                 }
             });
 
 
-            DataSearch(RND, SUCHANAID, H112);
+            DataSearch(RND, SUCHANAID);
 
 
         } catch (Exception e) {
@@ -151,11 +168,11 @@ public class Loan_list extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String H112) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             Loan_DataModel d = new Loan_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H112='" + H112 + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<Loan_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
