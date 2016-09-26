@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -236,6 +237,199 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/buttonAssetType01"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="01" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType02"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="02" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType03"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="03" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType04"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="04" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType05"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="05" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType06"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="06" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType07"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="07" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType08"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="08" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/buttonAssetType09"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="09" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType10"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="10" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType11"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="11" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType12"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="12" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType13"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="13" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType14"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="14" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType15"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="15" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType16"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="16" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <Button
+                        android:id="@+id/buttonAssetType17"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="17" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType18"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="18" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType19"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="19" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType20"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="20" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType21"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="21" />
+
+                    <Button
+                        android:id="@+id/buttonAssetType22"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:text="22" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/linelblBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH41a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -246,21 +440,22 @@
                     android:id="@+id/lblH41a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41a"
+                    android:text="TYPE"
+                    android:textColor="@color/navigationBar"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH41a"
-                    android:layout_width="250sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="সম্পদ"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnH41a"
-                    android:layout_width="200sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
@@ -287,7 +482,7 @@
 
                 <TextView
                     android:id="@+id/VlblH41aX"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য সম্পদ"
                     android:textSize="20sp" />
@@ -295,12 +490,12 @@
                 <EditText
                     android:id="@+id/txtH41aX"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -391,7 +586,8 @@
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <TextView
                     android:id="@+id/lblH41d"
@@ -410,7 +606,7 @@
                 <EditText
                     android:id="@+id/txtH41d"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -476,7 +672,7 @@
 
                 <TextView
                     android:id="@+id/VlblH41eX"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -484,12 +680,12 @@
                 <EditText
                     android:id="@+id/txtH41eX"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -551,7 +747,7 @@
 
                 <TextView
                     android:id="@+id/VlblH41fX"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -559,12 +755,12 @@
                 <EditText
                     android:id="@+id/txtH41fX"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -606,7 +802,7 @@
                         android:id="@+id/rdoH41g1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -614,7 +810,7 @@
                         android:id="@+id/rdoH41g2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -813,7 +1009,7 @@
 
                 <TextView
                     android:id="@+id/VlblH41kX"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -821,12 +1017,12 @@
                 <EditText
                     android:id="@+id/txtH41kX"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1147,7 +1343,7 @@
 
                 <TextView
                     android:id="@+id/VlblH41o4X"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -1155,7 +1351,7 @@
                 <EditText
                     android:id="@+id/txtH41o4X"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"

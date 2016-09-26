@@ -257,7 +257,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            startActivity(new Intent(HHIdentity.this, MainMenu.class));
                         }
                     });
                     adb.show();
@@ -268,7 +268,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DataSave();
+
                     Bundle bundle = new Bundle();
                     bundle.putString("Rnd", txtRnd.getText().toString());
                     bundle.putString("SuchanaID", txtSuchanaID.getText().toString());
@@ -1059,7 +1059,13 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(HHIdentity.this, "Saved Successfully");
+                Bundle bundle = new Bundle();
+                bundle.putString("Rnd", txtRnd.getText().toString());
+                bundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                Intent intent = new Intent(new Intent(HHIdentity.this, Member_list.class));
+                intent.putExtra("bundle", bundle);
+                startActivity(intent);
+                //Connection.MessageBox(HHIdentity.this, "Saved Successfully");
 
             } else {
                 Connection.MessageBox(HHIdentity.this, status);

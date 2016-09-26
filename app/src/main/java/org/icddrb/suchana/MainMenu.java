@@ -91,17 +91,8 @@ public class MainMenu extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
-                                        tableList.add("Screening");
-                                        tableList.add("idnHistory");
-                                        tableList.add("medRecord");
-                                        tableList.add("Admission");
-                                        tableList.add("Folup");
-                                        tableList.add("Medicine");
-                                        tableList.add("OthInvestig");
+                                        tableList.add("Village");
 
-                                        //Lab
-                                        tableList.add("SampleAnalysis");
-                                        tableList.add("LabResult");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 

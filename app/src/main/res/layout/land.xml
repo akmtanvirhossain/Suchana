@@ -96,7 +96,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -133,7 +133,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -141,7 +141,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="170sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -213,7 +213,7 @@
 
                 <TextView
                     android:id="@+id/VlblSlNo"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Serial No"
                     android:textSize="20sp" />
@@ -251,7 +251,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমির  বিবরণ"
                     android:textSize="20sp" />
@@ -288,7 +288,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5X"
-                    android:layout_width="300dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -296,13 +296,13 @@
                 <EditText
                     android:id="@+id/txtH5X"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -328,7 +328,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="এই সম্পদ দিয়ে কি উত্পাদন করা হয়"
                     android:textSize="20sp" />
@@ -365,7 +365,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5aX"
-                    android:layout_width="300dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text=" অনান্য উল্লেখ কর"
                     android:textSize="20sp" />
@@ -373,13 +373,13 @@
                 <EditText
                     android:id="@+id/txtH5aX"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -405,7 +405,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5b"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="মালিকানা"
                     android:textSize="20sp" />
@@ -443,7 +443,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5c"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমির পরিমান (শতাংশ)"
                     android:textSize="20sp" />
@@ -455,7 +455,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
-                    android:maxLength="1"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -481,7 +481,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5d"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমির বর্তমান ব্যবহারিকঅবস্থা"
                     android:textSize="20sp" />
@@ -518,7 +518,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5e"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="গত ঋতুতে জমির ব্যবহারিক অবস্থা কি ছিল(ফসল ক্যালেন্ডার অনুযায়ী)"
                     android:textSize="20sp" />
@@ -555,7 +555,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5f"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন"
                     android:textSize="20sp" />
@@ -563,11 +563,11 @@
                 <EditText
                     android:id="@+id/txtH5f"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
-                    android:maxLength="5"
+                    android:maxLength="6"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -593,7 +593,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5g"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমির বর্তমান বাজার মূল্য"
                     android:textSize="20sp" />
@@ -601,11 +601,11 @@
                 <EditText
                     android:id="@+id/txtH5g"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
-                    android:maxLength="5"
+                    android:maxLength="6"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -631,7 +631,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5hY"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি জমিটির মালিকানা  কত বছর থেকে ভোগ করছেন"
                     android:textSize="20sp" />
@@ -669,7 +669,7 @@
 
                 <TextView
                     android:id="@+id/VlblH5hM"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি জমিটির মালিকানা  কত মাস থেকে ভোগ করছেন"
                     android:textSize="20sp" />
