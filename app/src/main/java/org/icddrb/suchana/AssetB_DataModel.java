@@ -14,6 +14,7 @@ public class AssetB_DataModel {
     Connection C;
     private String _Rnd = "";
     private String _SuchanaID = "";
+    private String _MSlNo = "";
     private String _H41a = "";
     private String _H41aX = "";
     private String _H41b = "";
@@ -32,8 +33,11 @@ public class AssetB_DataModel {
     private String _H41l = "";
     private String _H41m = "";
     private String _H41n = "";
-    private String _H41o = "";
-    private String _H41oX = "";
+    private String _H41o1 = "";
+    private String _H41o2 = "";
+    private String _H41o3 = "";
+    private String _H41o4 = "";
+    private String _H41o4X = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -57,6 +61,14 @@ public class AssetB_DataModel {
 
     public void setSuchanaID(String newValue) {
         _SuchanaID = newValue;
+    }
+
+    public String getMSlNo() {
+        return _MSlNo;
+    }
+
+    public void setMSlNo(String newValue) {
+        _MSlNo = newValue;
     }
 
     public String getH41a() {
@@ -203,20 +215,44 @@ public class AssetB_DataModel {
         _H41n = newValue;
     }
 
-    public String getH41o() {
-        return _H41o;
+    public String getH41o1() {
+        return _H41o1;
     }
 
-    public void setH41o(String newValue) {
-        _H41o = newValue;
+    public void setH41o1(String newValue) {
+        _H41o1 = newValue;
     }
 
-    public String getH41oX() {
-        return _H41oX;
+    public String getH41o2() {
+        return _H41o2;
     }
 
-    public void setH41oX(String newValue) {
-        _H41oX = newValue;
+    public void setH41o2(String newValue) {
+        _H41o2 = newValue;
+    }
+
+    public String getH41o3() {
+        return _H41o3;
+    }
+
+    public void setH41o3(String newValue) {
+        _H41o3 = newValue;
+    }
+
+    public String getH41o4() {
+        return _H41o4;
+    }
+
+    public void setH41o4(String newValue) {
+        _H41o4 = newValue;
+    }
+
+    public String getH41o4X() {
+        return _H41o4X;
+    }
+
+    public void setH41o4X(String newValue) {
+        _H41o4X = newValue;
     }
 
     public void setStartTime(String newValue) {
@@ -267,7 +303,7 @@ public class AssetB_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H41a,H41aX,H41b,H41c,H41d,H41e,H41eX,H41f,H41fX,H41g,H41h,H41i,H41j,H41k,H41kX,H41l,H41m,H41n,H41o,H41oX,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H41a + "', '" + _H41aX + "', '" + _H41b + "', '" + _H41c + "', '" + _H41d + "', '" + _H41e + "', '" + _H41eX + "', '" + _H41f + "', '" + _H41fX + "', '" + _H41g + "', '" + _H41h + "', '" + _H41i + "', '" + _H41j + "', '" + _H41k + "', '" + _H41kX + "', '" + _H41l + "', '" + _H41m + "', '" + _H41n + "', '" + _H41o + "', '" + _H41oX + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H41a,H41aX,H41b,H41c,H41d,H41e,H41eX,H41f,H41fX,H41g,H41h,H41i,H41j,H41k,H41kX,H41l,H41m,H41n,H41o1,H41o2,H41o3,H41o4,H41o4X,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H41a + "', '" + _H41aX + "', '" + _H41b + "', '" + _H41c + "', '" + _H41d + "', '" + _H41e + "', '" + _H41eX + "', '" + _H41f + "', '" + _H41fX + "', '" + _H41g + "', '" + _H41h + "', '" + _H41i + "', '" + _H41j + "', '" + _H41k + "', '" + _H41kX + "', '" + _H41l + "', '" + _H41m + "', '" + _H41n + "', '" + _H41o1 + "', '" + _H41o2 + "', '" + _H41o3 + "', '" + _H41o4 + "', '" + _H41o4X + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -280,7 +316,7 @@ public class AssetB_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H41a = '" + _H41a + "',H41aX = '" + _H41aX + "',H41b = '" + _H41b + "',H41c = '" + _H41c + "',H41d = '" + _H41d + "',H41e = '" + _H41e + "',H41eX = '" + _H41eX + "',H41f = '" + _H41f + "',H41fX = '" + _H41fX + "',H41g = '" + _H41g + "',H41h = '" + _H41h + "',H41i = '" + _H41i + "',H41j = '" + _H41j + "',H41k = '" + _H41k + "',H41kX = '" + _H41kX + "',H41l = '" + _H41l + "',H41m = '" + _H41m + "',H41n = '" + _H41n + "',H41o = '" + _H41o + "',H41oX = '" + _H41oX + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H41a='" + _H41a + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H41a = '" + _H41a + "',H41aX = '" + _H41aX + "',H41b = '" + _H41b + "',H41c = '" + _H41c + "',H41d = '" + _H41d + "',H41e = '" + _H41e + "',H41eX = '" + _H41eX + "',H41f = '" + _H41f + "',H41fX = '" + _H41fX + "',H41g = '" + _H41g + "',H41h = '" + _H41h + "',H41i = '" + _H41i + "',H41j = '" + _H41j + "',H41k = '" + _H41k + "',H41kX = '" + _H41kX + "',H41l = '" + _H41l + "',H41m = '" + _H41m + "',H41n = '" + _H41n + "',H41o1 = '" + _H41o1 + "',H41o2 = '" + _H41o2 + "',H41o3 = '" + _H41o3 + "',H41o4 = '" + _H41o4 + "',H41o4X = '" + _H41o4X + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H41a='" + _H41a + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -300,6 +336,7 @@ public class AssetB_DataModel {
             d = new AssetB_DataModel();
             d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
+            d._MSlNo = cur.getString(cur.getColumnIndex("MSlNo"));
             d._H41a = cur.getString(cur.getColumnIndex("H41a"));
             d._H41aX = cur.getString(cur.getColumnIndex("H41aX"));
             d._H41b = cur.getString(cur.getColumnIndex("H41b"));
@@ -318,8 +355,11 @@ public class AssetB_DataModel {
             d._H41l = cur.getString(cur.getColumnIndex("H41l"));
             d._H41m = cur.getString(cur.getColumnIndex("H41m"));
             d._H41n = cur.getString(cur.getColumnIndex("H41n"));
-            d._H41o = cur.getString(cur.getColumnIndex("H41o"));
-            d._H41oX = cur.getString(cur.getColumnIndex("H41oX"));
+            d._H41o1 = cur.getString(cur.getColumnIndex("H41o1"));
+            d._H41o2 = cur.getString(cur.getColumnIndex("H41o2"));
+            d._H41o3 = cur.getString(cur.getColumnIndex("H41o3"));
+            d._H41o4 = cur.getString(cur.getColumnIndex("H41o4"));
+            d._H41o4X = cur.getString(cur.getColumnIndex("H41o4X"));
             data.add(d);
 
             cur.moveToNext();

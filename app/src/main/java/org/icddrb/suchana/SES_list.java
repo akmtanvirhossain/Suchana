@@ -2,7 +2,6 @@ package org.icddrb.suchana;
 
 //Android Manifest Code
 //<activity android:name=".SES_list" android:label="SES: List" />
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -187,10 +186,15 @@ public class SES_list extends Activity {
                 map.put("H61", item.getH61());
                 map.put("H62", item.getH62());
                 map.put("H63A", item.getH63A());
+                map.put("H63AX", item.getH63AX());
                 map.put("H63B", item.getH63B());
+                map.put("H63BX", item.getH63BX());
                 map.put("H63C", item.getH63C());
+                map.put("H63CX", item.getH63CX());
                 map.put("H63D", item.getH63D());
+                map.put("H63DX", item.getH63DX());
                 map.put("H63E", item.getH63E());
+                map.put("H63EX", item.getH63EX());
                 map.put("H63X", item.getH63X());
                 map.put("H64", item.getH64());
                 map.put("H65", item.getH65());
@@ -198,8 +202,8 @@ public class SES_list extends Activity {
                 map.put("H67", item.getH67());
                 map.put("H68", item.getH68());
                 map.put("H69", item.getH69());
-                map.put("H610R", item.getH610R());
-                map.put("H610RX", item.getH610RX());
+                map.put("H610", item.getH610());
+                map.put("H610X", item.getH610X());
                 map.put("H610D", item.getH610D());
                 map.put("H610DX", item.getH610DX());
                 map.put("H610a", item.getH610a());
@@ -223,6 +227,7 @@ public class SES_list extends Activity {
                 map.put("H611b5", item.getH611b5());
                 map.put("H611b5X", item.getH611b5X());
                 map.put("H611b6", item.getH611b6());
+                map.put("H611c", item.getH611c());
                 map.put("H612R", item.getH612R());
                 map.put("H612RX", item.getH612RX());
                 map.put("H612D", item.getH612D());
@@ -332,10 +337,15 @@ public class SES_list extends Activity {
             final TextView H61 = (TextView) convertView.findViewById(R.id.H61);
             final TextView H62 = (TextView) convertView.findViewById(R.id.H62);
             final TextView H63A = (TextView) convertView.findViewById(R.id.H63A);
+            final TextView H63AX = (TextView) convertView.findViewById(R.id.H63AX);
             final TextView H63B = (TextView) convertView.findViewById(R.id.H63B);
+            final TextView H63BX = (TextView) convertView.findViewById(R.id.H63BX);
             final TextView H63C = (TextView) convertView.findViewById(R.id.H63C);
+            final TextView H63CX = (TextView) convertView.findViewById(R.id.H63CX);
             final TextView H63D = (TextView) convertView.findViewById(R.id.H63D);
+            final TextView H63DX = (TextView) convertView.findViewById(R.id.H63DX);
             final TextView H63E = (TextView) convertView.findViewById(R.id.H63E);
+            final TextView H63EX = (TextView) convertView.findViewById(R.id.H63EX);
             final TextView H63X = (TextView) convertView.findViewById(R.id.H63X);
             final TextView H64 = (TextView) convertView.findViewById(R.id.H64);
             final TextView H65 = (TextView) convertView.findViewById(R.id.H65);
@@ -343,8 +353,8 @@ public class SES_list extends Activity {
             final TextView H67 = (TextView) convertView.findViewById(R.id.H67);
             final TextView H68 = (TextView) convertView.findViewById(R.id.H68);
             final TextView H69 = (TextView) convertView.findViewById(R.id.H69);
-            final TextView H610R = (TextView) convertView.findViewById(R.id.H610R);
-            final TextView H610RX = (TextView) convertView.findViewById(R.id.H610RX);
+            final TextView H610 = (TextView) convertView.findViewById(R.id.H610);
+            final TextView H610X = (TextView) convertView.findViewById(R.id.H610X);
             final TextView H610D = (TextView) convertView.findViewById(R.id.H610D);
             final TextView H610DX = (TextView) convertView.findViewById(R.id.H610DX);
             final TextView H610a = (TextView) convertView.findViewById(R.id.H610a);
@@ -368,6 +378,7 @@ public class SES_list extends Activity {
             final TextView H611b5 = (TextView) convertView.findViewById(R.id.H611b5);
             final TextView H611b5X = (TextView) convertView.findViewById(R.id.H611b5X);
             final TextView H611b6 = (TextView) convertView.findViewById(R.id.H611b6);
+            final TextView H611c = (TextView) convertView.findViewById(R.id.H611c);
             final TextView H612R = (TextView) convertView.findViewById(R.id.H612R);
             final TextView H612RX = (TextView) convertView.findViewById(R.id.H612RX);
             final TextView H612D = (TextView) convertView.findViewById(R.id.H612D);
@@ -440,10 +451,15 @@ public class SES_list extends Activity {
             H61.setText(o.get("H61"));
             H62.setText(o.get("H62"));
             H63A.setText(o.get("H63A"));
+            H63AX.setText(o.get("H63AX"));
             H63B.setText(o.get("H63B"));
+            H63BX.setText(o.get("H63BX"));
             H63C.setText(o.get("H63C"));
+            H63CX.setText(o.get("H63CX"));
             H63D.setText(o.get("H63D"));
+            H63DX.setText(o.get("H63DX"));
             H63E.setText(o.get("H63E"));
+            H63EX.setText(o.get("H63EX"));
             H63X.setText(o.get("H63X"));
             H64.setText(o.get("H64"));
             H65.setText(o.get("H65"));
@@ -451,8 +467,8 @@ public class SES_list extends Activity {
             H67.setText(o.get("H67"));
             H68.setText(o.get("H68"));
             H69.setText(o.get("H69"));
-            H610R.setText(o.get("H610R"));
-            H610RX.setText(o.get("H610RX"));
+            H610.setText(o.get("H610"));
+            H610X.setText(o.get("H610X"));
             H610D.setText(o.get("H610D"));
             H610DX.setText(o.get("H610DX"));
             H610a.setText(o.get("H610a"));
@@ -476,6 +492,7 @@ public class SES_list extends Activity {
             H611b5.setText(o.get("H611b5"));
             H611b5X.setText(o.get("H611b5X"));
             H611b6.setText(o.get("H611b6"));
+            H611c.setText(o.get("H611c"));
             H612R.setText(o.get("H612R"));
             H612RX.setText(o.get("H612RX"));
             H612D.setText(o.get("H612D"));

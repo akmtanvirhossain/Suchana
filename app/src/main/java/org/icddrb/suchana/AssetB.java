@@ -5,12 +5,7 @@ package org.icddrb.suchana;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -20,12 +15,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -34,10 +31,8 @@ import android.widget.RadioGroup;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -68,6 +63,10 @@ public class AssetB extends Activity {
     View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    EditText txtMSlNo;
     LinearLayout seclblH4;
     LinearLayout seclblH41;
     LinearLayout secH41a;
@@ -146,14 +145,27 @@ public class AssetB extends Activity {
     View lineH41n;
     TextView VlblH41n;
     EditText txtH41n;
-    LinearLayout secH41o;
-    View lineH41o;
-    TextView VlblH41o;
-    Spinner spnH41o;
-    LinearLayout secH41oX;
-    View lineH41oX;
-    TextView VlblH41oX;
-    EditText txtH41oX;
+    LinearLayout seclblH41o;
+    LinearLayout secH41o1;
+    View lineH41o1;
+    TextView VlblH41o1;
+    CheckBox chkH41o1;
+    LinearLayout secH41o2;
+    View lineH41o2;
+    TextView VlblH41o2;
+    CheckBox chkH41o2;
+    LinearLayout secH41o3;
+    View lineH41o3;
+    TextView VlblH41o3;
+    CheckBox chkH41o3;
+    LinearLayout secH41o4;
+    View lineH41o4;
+    TextView VlblH41o4;
+    CheckBox chkH41o4;
+    LinearLayout secH41o4X;
+    View lineH41o4X;
+    TextView VlblH41o4X;
+    EditText txtH41o4X;
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -161,31 +173,6 @@ public class AssetB extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate = null;
-
-
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -223,16 +210,24 @@ public class AssetB extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
-                    adb.setTitle("Close");
-                    adb.setMessage("Do you want to close this form[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    });
-                    adb.show();
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+
+
+                    startActivity(new Intent(AssetB.this, SES.class).putExtras(IDBundle));
+                }
+            });
+
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H41a", "");
+                    startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
+
                 }
             });
 
@@ -245,6 +240,10 @@ public class AssetB extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
             seclblH4 = (LinearLayout) findViewById(R.id.seclblH4);
             seclblH41 = (LinearLayout) findViewById(R.id.seclblH41);
             secH41a = (LinearLayout) findViewById(R.id.secH41a);
@@ -302,6 +301,55 @@ public class AssetB extends Activity {
             lineH41b = (View) findViewById(R.id.lineH41b);
             VlblH41b = (TextView) findViewById(R.id.VlblH41b);
             txtH41b = (EditText) findViewById(R.id.txtH41b);
+            txtH41b.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (Integer.parseInt(txtH41b.getText().toString()) == 0) {
+                        secH41c.setVisibility(View.GONE);
+                        lineH41c.setVisibility(View.GONE);
+                        secH41d.setVisibility(View.GONE);
+                        lineH41d.setVisibility(View.GONE);
+                        secH41e.setVisibility(View.GONE);
+                        lineH41e.setVisibility(View.GONE);
+                        txtH41eX.setText("");
+                        secH41eX.setVisibility(View.GONE);
+                        lineH41eX.setVisibility(View.GONE);
+                        secH41f.setVisibility(View.GONE);
+                        lineH41f.setVisibility(View.GONE);
+                        txtH41fX.setText("");
+                        secH41fX.setVisibility(View.GONE);
+                        lineH41fX.setVisibility(View.GONE);
+                        secH41g.setVisibility(View.GONE);
+                        lineH41g.setVisibility(View.GONE);
+                        secH41h.setVisibility(View.GONE);
+                        lineH41h.setVisibility(View.GONE);
+
+                    } else {
+                        secH41c.setVisibility(View.VISIBLE);
+                        lineH41c.setVisibility(View.VISIBLE);
+                        secH41d.setVisibility(View.VISIBLE);
+                        lineH41d.setVisibility(View.VISIBLE);
+                        secH41e.setVisibility(View.VISIBLE);
+                        lineH41e.setVisibility(View.VISIBLE);
+                        secH41f.setVisibility(View.VISIBLE);
+                        lineH41f.setVisibility(View.VISIBLE);
+                        secH41g.setVisibility(View.VISIBLE);
+                        lineH41g.setVisibility(View.VISIBLE);
+                        secH41h.setVisibility(View.VISIBLE);
+                        lineH41h.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
             secH41c = (LinearLayout) findViewById(R.id.secH41c);
             lineH41c = (View) findViewById(R.id.lineH41c);
             VlblH41c = (TextView) findViewById(R.id.VlblH41c);
@@ -343,11 +391,12 @@ public class AssetB extends Activity {
                         secH41fX.setVisibility(View.GONE);
                         lineH41fX.setVisibility(View.GONE);
                     } else if (spnData.equalsIgnoreCase("10")) {
-                        secH41eX.setVisibility(View.GONE);
-                        lineH41eX.setVisibility(View.GONE);
-                    } else {
                         secH41eX.setVisibility(View.VISIBLE);
                         lineH41eX.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH41eX.setText("");
+                        secH41eX.setVisibility(View.GONE);
+                        lineH41eX.setVisibility(View.GONE);
                     }
                 }
 
@@ -384,7 +433,8 @@ public class AssetB extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH41f.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH41f.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("10")) {
+                    if (!spnData.equalsIgnoreCase("10")) {
+                        txtH41fX.setText("");
                         secH41fX.setVisibility(View.GONE);
                         lineH41fX.setVisibility(View.GONE);
                     } else {
@@ -442,6 +492,40 @@ public class AssetB extends Activity {
             lineH41i = (View) findViewById(R.id.lineH41i);
             VlblH41i = (TextView) findViewById(R.id.VlblH41i);
             txtH41i = (EditText) findViewById(R.id.txtH41i);
+            txtH41i.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (Integer.parseInt(txtH41i.getText().toString()) == 0) {
+                        secH41j.setVisibility(View.GONE);
+                        lineH41j.setVisibility(View.GONE);
+                        secH41k.setVisibility(View.GONE);
+                        lineH41k.setVisibility(View.GONE);
+                        txtH41kX.setText("");
+                        secH41kX.setVisibility(View.GONE);
+                        lineH41kX.setVisibility(View.GONE);
+
+
+                    } else {
+
+                        secH41j.setVisibility(View.VISIBLE);
+                        lineH41j.setVisibility(View.VISIBLE);
+                        secH41k.setVisibility(View.VISIBLE);
+                        lineH41k.setVisibility(View.VISIBLE);
+                        secH41kX.setVisibility(View.VISIBLE);
+                        lineH41kX.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
             secH41j = (LinearLayout) findViewById(R.id.secH41j);
             lineH41j = (View) findViewById(R.id.lineH41j);
             VlblH41j = (TextView) findViewById(R.id.VlblH41j);
@@ -467,7 +551,8 @@ public class AssetB extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH41k.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH41k.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("6")) {
+                    if (!spnData.equalsIgnoreCase("6")) {
+                        txtH41kX.setText("");
                         secH41kX.setVisibility(View.GONE);
                         lineH41kX.setVisibility(View.GONE);
                     } else {
@@ -489,6 +574,83 @@ public class AssetB extends Activity {
             lineH41l = (View) findViewById(R.id.lineH41l);
             VlblH41l = (TextView) findViewById(R.id.VlblH41l);
             txtH41l = (EditText) findViewById(R.id.txtH41l);
+            txtH41l.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (Integer.parseInt(txtH41l.getText().toString()) == 0) {
+                        secH41m.setVisibility(View.GONE);
+                        lineH41m.setVisibility(View.GONE);
+                        secH41n.setVisibility(View.GONE);
+                        lineH41n.setVisibility(View.GONE);
+                        seclblH41o.setVisibility(View.GONE);
+                        secH41o1.setVisibility(View.GONE);
+                        lineH41o1.setVisibility(View.GONE);
+                        VlblH41o1.setVisibility(View.GONE);
+
+                        chkH41o1.setChecked(false);
+                        chkH41o2.setChecked(false);
+                        chkH41o3.setChecked(false);
+                        chkH41o4.setChecked(false);
+
+                        chkH41o1.setVisibility(View.GONE);
+                        secH41o2.setVisibility(View.GONE);
+                        lineH41o2.setVisibility(View.GONE);
+                        VlblH41o2.setVisibility(View.GONE);
+                        chkH41o2.setVisibility(View.GONE);
+                        secH41o3.setVisibility(View.GONE);
+                        lineH41o3.setVisibility(View.GONE);
+                        VlblH41o3.setVisibility(View.GONE);
+                        chkH41o3.setVisibility(View.GONE);
+                        secH41o4.setVisibility(View.GONE);
+                        lineH41o4.setVisibility(View.GONE);
+                        VlblH41o4.setVisibility(View.GONE);
+                        chkH41o4.setVisibility(View.GONE);
+                        secH41o4X.setVisibility(View.GONE);
+                        lineH41o4X.setVisibility(View.GONE);
+                        VlblH41o4X.setVisibility(View.GONE);
+                        txtH41o4X.setVisibility(View.GONE);
+
+
+                    } else {
+                        secH41m.setVisibility(View.VISIBLE);
+                        lineH41m.setVisibility(View.VISIBLE);
+                        secH41n.setVisibility(View.VISIBLE);
+                        lineH41n.setVisibility(View.VISIBLE);
+                        seclblH41o.setVisibility(View.VISIBLE);
+                        secH41o1.setVisibility(View.VISIBLE);
+                        lineH41o1.setVisibility(View.VISIBLE);
+                        VlblH41o1.setVisibility(View.VISIBLE);
+                        chkH41o1.setVisibility(View.VISIBLE);
+                        secH41o2.setVisibility(View.VISIBLE);
+                        lineH41o2.setVisibility(View.VISIBLE);
+                        VlblH41o2.setVisibility(View.VISIBLE);
+                        chkH41o2.setVisibility(View.VISIBLE);
+                        secH41o3.setVisibility(View.VISIBLE);
+                        lineH41o3.setVisibility(View.VISIBLE);
+                        VlblH41o3.setVisibility(View.VISIBLE);
+                        chkH41o3.setVisibility(View.VISIBLE);
+                        secH41o4.setVisibility(View.VISIBLE);
+                        lineH41o4.setVisibility(View.VISIBLE);
+                        VlblH41o4.setVisibility(View.VISIBLE);
+                        chkH41o4.setVisibility(View.VISIBLE);
+                        secH41o4X.setVisibility(View.VISIBLE);
+                        lineH41o4X.setVisibility(View.VISIBLE);
+                        VlblH41o4X.setVisibility(View.VISIBLE);
+                        txtH41o4X.setVisibility(View.VISIBLE);
+
+                    }
+                }
+            });
             secH41m = (LinearLayout) findViewById(R.id.secH41m);
             lineH41m = (View) findViewById(R.id.lineH41m);
             VlblH41m = (TextView) findViewById(R.id.VlblH41m);
@@ -497,25 +659,29 @@ public class AssetB extends Activity {
             lineH41n = (View) findViewById(R.id.lineH41n);
             VlblH41n = (TextView) findViewById(R.id.VlblH41n);
             txtH41n = (EditText) findViewById(R.id.txtH41n);
-            secH41o = (LinearLayout) findViewById(R.id.secH41o);
-            lineH41o = (View) findViewById(R.id.lineH41o);
-            VlblH41o = (TextView) findViewById(R.id.VlblH41o);
-            spnH41o = (Spinner) findViewById(R.id.spnH41o);
-            List<String> listH41o = new ArrayList<String>();
+            seclblH41o = (LinearLayout) findViewById(R.id.seclblH41o);
+            secH41o1 = (LinearLayout) findViewById(R.id.secH41o1);
+            lineH41o1 = (View) findViewById(R.id.lineH41o1);
+            VlblH41o1 = (TextView) findViewById(R.id.VlblH41o1);
+            chkH41o1 = (CheckBox) findViewById(R.id.chkH41o1);
+            secH41o2 = (LinearLayout) findViewById(R.id.secH41o2);
+            lineH41o2 = (View) findViewById(R.id.lineH41o2);
+            VlblH41o2 = (TextView) findViewById(R.id.VlblH41o2);
+            chkH41o2 = (CheckBox) findViewById(R.id.chkH41o2);
+            secH41o3 = (LinearLayout) findViewById(R.id.secH41o3);
+            lineH41o3 = (View) findViewById(R.id.lineH41o3);
+            VlblH41o3 = (TextView) findViewById(R.id.VlblH41o3);
+            chkH41o3 = (CheckBox) findViewById(R.id.chkH41o3);
+            secH41o4 = (LinearLayout) findViewById(R.id.secH41o4);
+            lineH41o4 = (View) findViewById(R.id.lineH41o4);
+            VlblH41o4 = (TextView) findViewById(R.id.VlblH41o4);
+            chkH41o4 = (CheckBox) findViewById(R.id.chkH41o4);
+            secH41o4X = (LinearLayout) findViewById(R.id.secH41o4X);
+            lineH41o4X = (View) findViewById(R.id.lineH41o4X);
+            VlblH41o4X = (TextView) findViewById(R.id.VlblH41o4X);
+            txtH41o4X = (EditText) findViewById(R.id.txtH41o4X);
 
-            listH41o.add("");
-            listH41o.add("1-বিক্রি");
-            listH41o.add("2-যৌতুক");
-            listH41o.add("3-উপহার");
-            listH41o.add("4-অন্যান্য");
-            ArrayAdapter<String> adptrH41o = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH41o);
-            spnH41o.setAdapter(adptrH41o);
-
-            secH41oX = (LinearLayout) findViewById(R.id.secH41oX);
-            lineH41oX = (View) findViewById(R.id.lineH41oX);
-            VlblH41oX = (TextView) findViewById(R.id.VlblH41oX);
-            txtH41oX = (EditText) findViewById(R.id.txtH41oX);
-
+            DataSearch(RND, SUCHANAID, H41A);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -545,6 +711,14 @@ public class AssetB extends Activity {
             } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
+                return;
+            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(AssetB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                txtMSlNo.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
+                Connection.MessageBox(AssetB.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
+                txtMSlNo.requestFocus();
                 return;
             } else if (spnH41a.getSelectedItemPosition() == 0 & secH41a.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: সম্পদ.");
@@ -610,8 +784,8 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
                 txtH41i.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "1" : txtH41i.getText().toString()) < 1 || Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "999" : txtH41i.getText().toString()) > 999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 1 and 999(সংখ্যা).");
+            } else if (Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "0" : txtH41i.getText().toString()) < 0 || Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "999" : txtH41i.getText().toString()) > 999) {
+                Connection.MessageBox(AssetB.this, "Value should be between 0 and 999(সংখ্যা).");
                 txtH41i.requestFocus();
                 return;
             } else if (txtH41j.getText().toString().length() == 0 & secH41j.isShown()) {
@@ -654,13 +828,9 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Value should be between 0 and 999999(এই সম্পদের বর্তমান মূল্য কত).");
                 txtH41n.requestFocus();
                 return;
-            } else if (spnH41o.getSelectedItemPosition() == 0 & secH41o.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কি ভাবে বদলি করেছেন.");
-                spnH41o.requestFocus();
-                return;
-            } else if (txtH41oX.getText().toString().length() == 0 & secH41oX.isShown()) {
+            } else if (txtH41o4X.getText().toString().length() == 0 & secH41o4X.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH41oX.requestFocus();
+                txtH41o4X.requestFocus();
                 return;
             }
 
@@ -670,6 +840,7 @@ public class AssetB extends Activity {
             AssetB_DataModel objSave = new AssetB_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
+            objSave.setMSlNo(txtMSlNo.getText().toString());
             objSave.setH41a((spnH41a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-")));
             objSave.setH41aX(txtH41aX.getText().toString());
             objSave.setH41b(txtH41b.getText().toString());
@@ -694,8 +865,11 @@ public class AssetB extends Activity {
             objSave.setH41l(txtH41l.getText().toString());
             objSave.setH41m(txtH41m.getText().toString());
             objSave.setH41n(txtH41n.getText().toString());
-            objSave.setH41o((spnH41o.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH41o.getSelectedItem().toString(), "-")));
-            objSave.setH41oX(txtH41oX.getText().toString());
+            objSave.setH41o1((chkH41o1.isChecked() ? "1" : "2"));
+            objSave.setH41o2((chkH41o2.isChecked() ? "1" : "2"));
+            objSave.setH41o3((chkH41o3.isChecked() ? "1" : "2"));
+            objSave.setH41o4((chkH41o4.isChecked() ? "1" : "2"));
+            objSave.setH41o4X(txtH41o4X.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -705,7 +879,13 @@ public class AssetB extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(AssetB.this, "Saved Successfully");
+
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
+                // Connection.MessageBox(AssetB.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(AssetB.this, status);
                 return;
@@ -726,6 +906,7 @@ public class AssetB extends Activity {
             for (AssetB_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                txtMSlNo.setText(item.getMSlNo());
                 spnH41a.setSelection(Global.SpinnerItemPositionAnyLength(spnH41a, item.getH41a()));
                 txtH41aX.setText(item.getH41aX());
                 txtH41b.setText(item.getH41b());
@@ -750,8 +931,27 @@ public class AssetB extends Activity {
                 txtH41l.setText(item.getH41l());
                 txtH41m.setText(item.getH41m());
                 txtH41n.setText(item.getH41n());
-                spnH41o.setSelection(Global.SpinnerItemPositionAnyLength(spnH41o, item.getH41o()));
-                txtH41oX.setText(item.getH41oX());
+                if (item.getH41o1().equals("1")) {
+                    chkH41o1.setChecked(true);
+                } else if (item.getH41o1().equals("2")) {
+                    chkH41o1.setChecked(false);
+                }
+                if (item.getH41o2().equals("1")) {
+                    chkH41o2.setChecked(true);
+                } else if (item.getH41o2().equals("2")) {
+                    chkH41o2.setChecked(false);
+                }
+                if (item.getH41o3().equals("1")) {
+                    chkH41o3.setChecked(true);
+                } else if (item.getH41o3().equals("2")) {
+                    chkH41o3.setChecked(false);
+                }
+                if (item.getH41o4().equals("1")) {
+                    chkH41o4.setChecked(true);
+                } else if (item.getH41o4().equals("2")) {
+                    chkH41o4.setChecked(false);
+                }
+                txtH41o4X.setText(item.getH41o4X());
             }
         } catch (Exception e) {
             Connection.MessageBox(AssetB.this, e.getMessage());
@@ -759,18 +959,6 @@ public class AssetB extends Activity {
         }
     }
 
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute, false);
-        }
-        return null;
-    }
 
     //GPS Reading
     //.....................................................................................................

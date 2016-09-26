@@ -3,30 +3,19 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".SES" android:label="SES" />
 
-import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -35,10 +24,8 @@ import android.widget.RadioGroup;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -46,13 +33,12 @@ import Common.Connection;
 import Common.Global;
 
 public class SES extends Activity {
-
-
     static final int DATE_DIALOG = 1;
     static final int TIME_DIALOG = 2;
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    static String H21 = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -175,22 +161,42 @@ public class SES extends Activity {
     View lineH63A;
     TextView VlblH63A;
     Spinner spnH63A;
+    LinearLayout secH63AX;
+    View lineH63AX;
+    TextView VlblH63AX;
+    EditText txtH63AX;
     LinearLayout secH63B;
     View lineH63B;
     TextView VlblH63B;
     Spinner spnH63B;
+    LinearLayout secH63BX;
+    View lineH63BX;
+    TextView VlblH63BX;
+    EditText txtH63BX;
     LinearLayout secH63C;
     View lineH63C;
     TextView VlblH63C;
     Spinner spnH63C;
+    LinearLayout secH63CX;
+    View lineH63CX;
+    TextView VlblH63CX;
+    EditText txtH63CX;
     LinearLayout secH63D;
     View lineH63D;
     TextView VlblH63D;
     Spinner spnH63D;
+    LinearLayout secH63DX;
+    View lineH63DX;
+    TextView VlblH63DX;
+    EditText txtH63DX;
     LinearLayout secH63E;
     View lineH63E;
     TextView VlblH63E;
     Spinner spnH63E;
+    LinearLayout secH63EX;
+    View lineH63EX;
+    TextView VlblH63EX;
+    EditText txtH63EX;
     LinearLayout secH63X;
     View lineH63X;
     TextView VlblH63X;
@@ -233,14 +239,14 @@ public class SES extends Activity {
     RadioButton rdoH691;
     RadioButton rdoH692;
     LinearLayout seclblH610;
-    LinearLayout secH610R;
-    View lineH610R;
-    TextView VlblH610R;
-    Spinner spnH610R;
-    LinearLayout secH610RX;
-    View lineH610RX;
-    TextView VlblH610RX;
-    EditText txtH610RX;
+    LinearLayout secH610;
+    View lineH610;
+    TextView VlblH610;
+    Spinner spnH610;
+    LinearLayout secH610X;
+    View lineH610X;
+    TextView VlblH610X;
+    EditText txtH610X;
     LinearLayout secH610D;
     View lineH610D;
     TextView VlblH610D;
@@ -344,6 +350,12 @@ public class SES extends Activity {
     View lineH611b6;
     TextView VlblH611b6;
     CheckBox chkH611b6;
+    LinearLayout secH611c;
+    View lineH611c;
+    TextView VlblH611c;
+    RadioGroup rdogrpH611c;
+    RadioButton rdoH611c1;
+    RadioButton rdoH611c2;
     LinearLayout seclblH612;
     LinearLayout secH612R;
     View lineH612R;
@@ -569,31 +581,6 @@ public class SES extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate = null;
-
-
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -616,7 +603,7 @@ public class SES extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-
+            H21 = IDbundle.getString("H21");
             TableName = "SES";
 
             //turnGPSOn();
@@ -630,33 +617,36 @@ public class SES extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(SES.this);
-                    adb.setTitle("Close");
-                    adb.setMessage("Do you want to close this form[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    });
-                    adb.show();
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H21", H21);
+
+                    startActivity(new Intent(SES.this, Member.class).putExtras(IDBundle));
                 }
             });
 
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H41a", "");
+                    startActivity(new Intent(SES.this, AssetB.class).putExtras(IDBundle));
+
+                }
+            });
 
             seclblH311 = (LinearLayout) findViewById(R.id.seclblH311);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
-            txtRnd.setText(RND);
-            txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
-            txtSuchanaID.setText(SUCHANAID);
-            txtSuchanaID.setEnabled(false);
             secH311 = (LinearLayout) findViewById(R.id.secH311);
             lineH311 = (View) findViewById(R.id.lineH311);
             VlblH311 = (TextView) findViewById(R.id.VlblH311);
@@ -713,7 +703,6 @@ public class SES extends Activity {
                         lineH321X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -755,7 +744,6 @@ public class SES extends Activity {
                         lineH322X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -797,7 +785,6 @@ public class SES extends Activity {
                         lineH323X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -827,13 +814,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH324.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH324.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH324X.setVisibility(View.GONE);
-                        lineH324X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH324X.setVisibility(View.GONE);
-                        lineH324X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
+                    if (!spnData.equalsIgnoreCase("6")) {
+                        txtH324X.setText("");
                         secH324X.setVisibility(View.GONE);
                         lineH324X.setVisibility(View.GONE);
                     } else {
@@ -841,7 +823,6 @@ public class SES extends Activity {
                         lineH324X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -911,7 +892,6 @@ public class SES extends Activity {
                         lineH325X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -961,7 +941,6 @@ public class SES extends Activity {
                         lineH332B.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1002,7 +981,6 @@ public class SES extends Activity {
                         lineH342.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1047,7 +1025,30 @@ public class SES extends Activity {
             listH63A.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63A = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63A);
             spnH63A.setAdapter(adptrH63A);
+            spnH63A.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH63A.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH63A.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("5")) {
+                        txtH63AX.setText("");
+                        secH63AX.setVisibility(View.GONE);
+                        lineH63AX.setVisibility(View.GONE);
+                    } else {
+                        secH63AX.setVisibility(View.VISIBLE);
+                        lineH63AX.setVisibility(View.VISIBLE);
+                    }
+                }
 
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+            secH63AX = (LinearLayout) findViewById(R.id.secH63AX);
+            secH63AX.setVisibility(View.GONE);
+            lineH63AX = (View) findViewById(R.id.lineH63AX);
+            VlblH63AX = (TextView) findViewById(R.id.VlblH63AX);
+            txtH63AX = (EditText) findViewById(R.id.txtH63AX);
             secH63B = (LinearLayout) findViewById(R.id.secH63B);
             lineH63B = (View) findViewById(R.id.lineH63B);
             VlblH63B = (TextView) findViewById(R.id.VlblH63B);
@@ -1062,7 +1063,30 @@ public class SES extends Activity {
             listH63B.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63B = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63B);
             spnH63B.setAdapter(adptrH63B);
+            spnH63B.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH63B.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH63B.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("5")) {
+                        txtH63BX.setText("");
+                        secH63BX.setVisibility(View.GONE);
+                        lineH63BX.setVisibility(View.GONE);
+                    } else {
+                        lineH63BX.setVisibility(View.VISIBLE);
+                        secH63BX.setVisibility(View.VISIBLE);
+                    }
+                }
 
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+            secH63BX = (LinearLayout) findViewById(R.id.secH63BX);
+            secH63BX.setVisibility(View.GONE);
+            lineH63BX = (View) findViewById(R.id.lineH63BX);
+            VlblH63BX = (TextView) findViewById(R.id.VlblH63BX);
+            txtH63BX = (EditText) findViewById(R.id.txtH63BX);
             secH63C = (LinearLayout) findViewById(R.id.secH63C);
             lineH63C = (View) findViewById(R.id.lineH63C);
             VlblH63C = (TextView) findViewById(R.id.VlblH63C);
@@ -1077,7 +1101,31 @@ public class SES extends Activity {
             listH63C.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63C = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63C);
             spnH63C.setAdapter(adptrH63C);
+            spnH63C.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH63C.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH63C.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("5")) {
+                        txtH63CX.setText("");
+                        secH63CX.setVisibility(View.GONE);
+                        lineH63CX.setVisibility(View.GONE);
+                    } else {
+                        secH63CX.setVisibility(View.VISIBLE);
+                        lineH63CX.setVisibility(View.VISIBLE);
 
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+            secH63CX = (LinearLayout) findViewById(R.id.secH63CX);
+            secH63CX.setVisibility(View.GONE);
+            lineH63CX = (View) findViewById(R.id.lineH63CX);
+            VlblH63CX = (TextView) findViewById(R.id.VlblH63CX);
+            txtH63CX = (EditText) findViewById(R.id.txtH63CX);
             secH63D = (LinearLayout) findViewById(R.id.secH63D);
             lineH63D = (View) findViewById(R.id.lineH63D);
             VlblH63D = (TextView) findViewById(R.id.VlblH63D);
@@ -1092,7 +1140,31 @@ public class SES extends Activity {
             listH63D.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63D);
             spnH63D.setAdapter(adptrH63D);
+            spnH63D.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH63D.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH63D.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("5")) {
+                        txtH63DX.setText("");
+                        secH63DX.setVisibility(View.GONE);
+                        lineH63DX.setVisibility(View.GONE);
+                    } else {
+                        secH63DX.setVisibility(View.VISIBLE);
+                        lineH63DX.setVisibility(View.VISIBLE);
 
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+            secH63DX = (LinearLayout) findViewById(R.id.secH63DX);
+            secH63DX.setVisibility(View.GONE);
+            lineH63DX = (View) findViewById(R.id.lineH63DX);
+            VlblH63DX = (TextView) findViewById(R.id.VlblH63DX);
+            txtH63DX = (EditText) findViewById(R.id.txtH63DX);
             secH63E = (LinearLayout) findViewById(R.id.secH63E);
             lineH63E = (View) findViewById(R.id.lineH63E);
             VlblH63E = (TextView) findViewById(R.id.VlblH63E);
@@ -1107,7 +1179,31 @@ public class SES extends Activity {
             listH63E.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63E = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63E);
             spnH63E.setAdapter(adptrH63E);
+            spnH63E.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH63E.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH63E.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("5")) {
+                        txtH63EX.setText("");
+                        secH63EX.setVisibility(View.GONE);
+                        lineH63EX.setVisibility(View.GONE);
+                    } else {
+                        secH63EX.setVisibility(View.VISIBLE);
+                        lineH63EX.setVisibility(View.VISIBLE);
 
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+            secH63EX = (LinearLayout) findViewById(R.id.secH63EX);
+            secH63EX.setVisibility(View.GONE);
+            lineH63EX = (View) findViewById(R.id.lineH63EX);
+            VlblH63EX = (TextView) findViewById(R.id.VlblH63EX);
+            txtH63EX = (EditText) findViewById(R.id.txtH63EX);
             secH63X = (LinearLayout) findViewById(R.id.secH63X);
             lineH63X = (View) findViewById(R.id.lineH63X);
             VlblH63X = (TextView) findViewById(R.id.VlblH63X);
@@ -1152,7 +1248,6 @@ public class SES extends Activity {
                         lineH67.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1184,7 +1279,6 @@ public class SES extends Activity {
                         lineH67.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1211,52 +1305,43 @@ public class SES extends Activity {
             rdoH691 = (RadioButton) findViewById(R.id.rdoH691);
             rdoH692 = (RadioButton) findViewById(R.id.rdoH692);
             seclblH610 = (LinearLayout) findViewById(R.id.seclblH610);
-            secH610R = (LinearLayout) findViewById(R.id.secH610R);
-            lineH610R = (View) findViewById(R.id.lineH610R);
-            VlblH610R = (TextView) findViewById(R.id.VlblH610R);
-            spnH610R = (Spinner) findViewById(R.id.spnH610R);
-            List<String> listH610R = new ArrayList<String>();
+            secH610 = (LinearLayout) findViewById(R.id.secH610);
+            lineH610 = (View) findViewById(R.id.lineH610);
+            VlblH610 = (TextView) findViewById(R.id.VlblH610);
+            spnH610 = (Spinner) findViewById(R.id.spnH610);
+            List<String> listH610 = new ArrayList<String>();
 
-            listH610R.add("");
-            listH610R.add("0-হাত ধোয়ে না");
-            listH610R.add("1-টিউবওয়েল");
-            listH610R.add("2-নদী/খাল/পুকুর");
-            listH610R.add("3-বৃষ্টির পানি");
-            listH610R.add("7-অন্যান্য");
-            ArrayAdapter<String> adptrH610R = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH610R);
-            spnH610R.setAdapter(adptrH610R);
+            listH610.add("");
+            listH610.add("0-হাত ধোয়ে না");
+            listH610.add("1-টিউবওয়েল");
+            listH610.add("2-নদী/খাল/পুকুর");
+            listH610.add("3-বৃষ্টির পানি");
+            listH610.add("4-অন্যান্য");
+            ArrayAdapter<String> adptrH610 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH610);
+            spnH610.setAdapter(adptrH610);
 
-            spnH610R.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spnH610.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH610R.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH610R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH610RX.setVisibility(View.GONE);
-                        lineH610RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH610RX.setVisibility(View.GONE);
-                        lineH610RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH610RX.setVisibility(View.GONE);
-                        lineH610RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
-                        secH610RX.setVisibility(View.GONE);
-                        lineH610RX.setVisibility(View.GONE);
+                    if (spnH610.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH610.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH610X.setText("");
+                        secH610X.setVisibility(View.GONE);
+                        lineH610X.setVisibility(View.GONE);
                     } else {
-                        secH610RX.setVisibility(View.VISIBLE);
-                        lineH610RX.setVisibility(View.VISIBLE);
+                        secH610X.setVisibility(View.VISIBLE);
+                        lineH610X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-            secH610RX = (LinearLayout) findViewById(R.id.secH610RX);
-            lineH610RX = (View) findViewById(R.id.lineH610RX);
-            VlblH610RX = (TextView) findViewById(R.id.VlblH610RX);
-            txtH610RX = (EditText) findViewById(R.id.txtH610RX);
+            secH610X = (LinearLayout) findViewById(R.id.secH610X);
+            lineH610X = (View) findViewById(R.id.lineH610X);
+            VlblH610X = (TextView) findViewById(R.id.VlblH610X);
+            txtH610X = (EditText) findViewById(R.id.txtH610X);
             secH610D = (LinearLayout) findViewById(R.id.secH610D);
             lineH610D = (View) findViewById(R.id.lineH610D);
             VlblH610D = (TextView) findViewById(R.id.VlblH610D);
@@ -1268,7 +1353,7 @@ public class SES extends Activity {
             listH610D.add("1-টিউবওয়েল");
             listH610D.add("2-নদী/খাল/পুকুর");
             listH610D.add("3-বৃষ্টির পানি");
-            listH610D.add("7-অন্যান্য");
+            listH610D.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH610D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH610D);
             spnH610D.setAdapter(adptrH610D);
 
@@ -1277,16 +1362,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH610D.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH610D.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH610DX.setVisibility(View.GONE);
-                        lineH610DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH610DX.setVisibility(View.GONE);
-                        lineH610DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH610DX.setVisibility(View.GONE);
-                        lineH610DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH610DX.setText("");
                         secH610DX.setVisibility(View.GONE);
                         lineH610DX.setVisibility(View.GONE);
                     } else {
@@ -1294,7 +1371,6 @@ public class SES extends Activity {
                         lineH610DX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1332,18 +1408,24 @@ public class SES extends Activity {
             lineH610b5 = (View) findViewById(R.id.lineH610b5);
             VlblH610b5 = (TextView) findViewById(R.id.VlblH610b5);
             chkH610b5 = (CheckBox) findViewById(R.id.chkH610b5);
-            chkH610b5.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+            chkH610b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
                         secH610b5X.setVisibility(View.GONE);
                         lineH610b5X.setVisibility(View.GONE);
                         txtH610b5X.setText("");
                         secH610b6.setVisibility(View.GONE);
                         lineH610b6.setVisibility(View.GONE);
-                        chkH610b6.setChecked(false);
+                    } else {
+                        secH610b5X.setVisibility(View.VISIBLE);
+                        lineH610b5X.setVisibility(View.VISIBLE);
+                        secH610b6.setVisibility(View.VISIBLE);
+                        lineH610b6.setVisibility(View.VISIBLE);
                     }
                 }
             });
+
             secH610b5X = (LinearLayout) findViewById(R.id.secH610b5X);
             lineH610b5X = (View) findViewById(R.id.lineH610b5X);
             VlblH610b5X = (TextView) findViewById(R.id.VlblH610b5X);
@@ -1371,7 +1453,7 @@ public class SES extends Activity {
             listH611R.add("1-টিউবওয়েল");
             listH611R.add("2-নদী/খাল/পুকুর");
             listH611R.add("3-বৃষ্টির পানি");
-            listH611R.add("7-অন্যান্য");
+            listH611R.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH611R = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH611R);
             spnH611R.setAdapter(adptrH611R);
 
@@ -1380,7 +1462,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH611R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH611R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("7")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH611RX.setText("");
                         secH611RX.setVisibility(View.GONE);
                         lineH611RX.setVisibility(View.GONE);
                     } else {
@@ -1388,7 +1471,6 @@ public class SES extends Activity {
                         lineH611RX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1408,7 +1490,7 @@ public class SES extends Activity {
             listH611D.add("1-টিউবওয়েল");
             listH611D.add("2-নদী/খাল/পুকুর");
             listH611D.add("3-বৃষ্টির পানি");
-            listH611D.add("7-অন্যান্য");
+            listH611D.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH611D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH611D);
             spnH611D.setAdapter(adptrH611D);
 
@@ -1417,16 +1499,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH611D.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH611D.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH611DX.setVisibility(View.GONE);
-                        lineH611DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH611DX.setVisibility(View.GONE);
-                        lineH611DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH611DX.setVisibility(View.GONE);
-                        lineH611DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH611DX.setText("");
                         secH611DX.setVisibility(View.GONE);
                         lineH611DX.setVisibility(View.GONE);
                     } else {
@@ -1434,7 +1508,6 @@ public class SES extends Activity {
                         lineH611DX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1472,15 +1545,20 @@ public class SES extends Activity {
             lineH611b5 = (View) findViewById(R.id.lineH611b5);
             VlblH611b5 = (TextView) findViewById(R.id.VlblH611b5);
             chkH611b5 = (CheckBox) findViewById(R.id.chkH611b5);
-            chkH611b5.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+            chkH611b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
                         secH611b5X.setVisibility(View.GONE);
                         lineH611b5X.setVisibility(View.GONE);
                         txtH611b5X.setText("");
                         secH611b6.setVisibility(View.GONE);
                         lineH611b6.setVisibility(View.GONE);
-                        chkH611b6.setChecked(false);
+                    } else {
+                        secH611b5X.setVisibility(View.VISIBLE);
+                        lineH611b5X.setVisibility(View.VISIBLE);
+                        secH611b6.setVisibility(View.VISIBLE);
+                        lineH611b6.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1492,6 +1570,13 @@ public class SES extends Activity {
             lineH611b6 = (View) findViewById(R.id.lineH611b6);
             VlblH611b6 = (TextView) findViewById(R.id.VlblH611b6);
             chkH611b6 = (CheckBox) findViewById(R.id.chkH611b6);
+            secH611c = (LinearLayout) findViewById(R.id.secH611c);
+            lineH611c = (View) findViewById(R.id.lineH611c);
+            VlblH611c = (TextView) findViewById(R.id.VlblH611c);
+            rdogrpH611c = (RadioGroup) findViewById(R.id.rdogrpH611c);
+
+            rdoH611c1 = (RadioButton) findViewById(R.id.rdoH611c1);
+            rdoH611c2 = (RadioButton) findViewById(R.id.rdoH611c2);
             seclblH612 = (LinearLayout) findViewById(R.id.seclblH612);
             secH612R = (LinearLayout) findViewById(R.id.secH612R);
             lineH612R = (View) findViewById(R.id.lineH612R);
@@ -1504,7 +1589,7 @@ public class SES extends Activity {
             listH612R.add("1-টিউবওয়েল");
             listH612R.add("2-নদী বা খাল পুকুর");
             listH612R.add("3-বৃষ্টির পানি");
-            listH612R.add("7-অন্যান্য");
+            listH612R.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH612R = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH612R);
             spnH612R.setAdapter(adptrH612R);
 
@@ -1513,16 +1598,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH612R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH612R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH612RX.setVisibility(View.GONE);
-                        lineH612RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH612RX.setVisibility(View.GONE);
-                        lineH612RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH612RX.setVisibility(View.GONE);
-                        lineH612RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH612RX.setText("");
                         secH612RX.setVisibility(View.GONE);
                         lineH612RX.setVisibility(View.GONE);
                     } else {
@@ -1530,7 +1607,6 @@ public class SES extends Activity {
                         lineH612RX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1550,7 +1626,7 @@ public class SES extends Activity {
             listH612D.add("1-টিউবওয়েল");
             listH612D.add("2-নদী বা খাল পুকুর");
             listH612D.add("3-বৃষ্টির পানি");
-            listH612D.add("7-অন্যান্য");
+            listH612D.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH612D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH612D);
             spnH612D.setAdapter(adptrH612D);
 
@@ -1559,16 +1635,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH612D.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH612D.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH612DX.setVisibility(View.GONE);
-                        lineH612DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH612DX.setVisibility(View.GONE);
-                        lineH612DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH612DX.setVisibility(View.GONE);
-                        lineH612DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH612DX.setText("");
                         secH612DX.setVisibility(View.GONE);
                         lineH612DX.setVisibility(View.GONE);
                     } else {
@@ -1576,7 +1644,6 @@ public class SES extends Activity {
                         lineH612DX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1614,18 +1681,24 @@ public class SES extends Activity {
             lineH612b5 = (View) findViewById(R.id.lineH612b5);
             VlblH612b5 = (TextView) findViewById(R.id.VlblH612b5);
             chkH612b5 = (CheckBox) findViewById(R.id.chkH612b5);
-            chkH612b5.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+            chkH612b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
                         secH612b5X.setVisibility(View.GONE);
                         lineH612b5X.setVisibility(View.GONE);
                         txtH612b5X.setText("");
                         secH612b6.setVisibility(View.GONE);
                         lineH612b6.setVisibility(View.GONE);
-                        chkH612b6.setChecked(false);
+                    } else {
+                        secH612b5X.setVisibility(View.VISIBLE);
+                        lineH612b5X.setVisibility(View.VISIBLE);
+                        secH612b6.setVisibility(View.VISIBLE);
+                        lineH612b6.setVisibility(View.VISIBLE);
                     }
                 }
             });
+
             secH612b5X = (LinearLayout) findViewById(R.id.secH612b5X);
             lineH612b5X = (View) findViewById(R.id.lineH612b5X);
             VlblH612b5X = (TextView) findViewById(R.id.VlblH612b5X);
@@ -1653,7 +1726,7 @@ public class SES extends Activity {
             listH613R.add("1-টিউবওয়েল");
             listH613R.add("2-নদী বা খাল পুকুর");
             listH613R.add("3-বৃষ্টির পানি");
-            listH613R.add("7-অন্যান্য");
+            listH613R.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH613R = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH613R);
             spnH613R.setAdapter(adptrH613R);
 
@@ -1662,16 +1735,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH613R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH613R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH613RX.setVisibility(View.GONE);
-                        lineH613RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH613RX.setVisibility(View.GONE);
-                        lineH613RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH613RX.setVisibility(View.GONE);
-                        lineH613RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH613RX.setText("");
                         secH613RX.setVisibility(View.GONE);
                         lineH613RX.setVisibility(View.GONE);
                     } else {
@@ -1679,7 +1744,6 @@ public class SES extends Activity {
                         lineH613RX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1699,7 +1763,7 @@ public class SES extends Activity {
             listH613D.add("1-টিউবওয়েল");
             listH613D.add("2-নদী বা খাল পুকুর");
             listH613D.add("3-বৃষ্টির পানি");
-            listH613D.add("7-অন্যান্য");
+            listH613D.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH613D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH613D);
             spnH613D.setAdapter(adptrH613D);
 
@@ -1708,16 +1772,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH613D.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH613D.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH613DX.setVisibility(View.GONE);
-                        lineH613DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH613DX.setVisibility(View.GONE);
-                        lineH613DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH613DX.setVisibility(View.GONE);
-                        lineH613DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH613DX.setText("");
                         secH613DX.setVisibility(View.GONE);
                         lineH613DX.setVisibility(View.GONE);
                     } else {
@@ -1725,7 +1781,6 @@ public class SES extends Activity {
                         lineH613DX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1763,18 +1818,24 @@ public class SES extends Activity {
             lineH613b5 = (View) findViewById(R.id.lineH613b5);
             VlblH613b5 = (TextView) findViewById(R.id.VlblH613b5);
             chkH613b5 = (CheckBox) findViewById(R.id.chkH613b5);
-            chkH613b5.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+            chkH613b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
                         secH613b5X.setVisibility(View.GONE);
                         lineH613b5X.setVisibility(View.GONE);
                         txtH613b5X.setText("");
                         secH613b6.setVisibility(View.GONE);
                         lineH613b6.setVisibility(View.GONE);
-                        chkH613b6.setChecked(false);
+                    } else {
+                        secH613b5X.setVisibility(View.VISIBLE);
+                        lineH613b5X.setVisibility(View.VISIBLE);
+                        secH613b6.setVisibility(View.VISIBLE);
+                        lineH613b6.setVisibility(View.VISIBLE);
                     }
                 }
             });
+
             secH613b5X = (LinearLayout) findViewById(R.id.secH613b5X);
             lineH613b5X = (View) findViewById(R.id.lineH613b5X);
             VlblH613b5X = (TextView) findViewById(R.id.VlblH613b5X);
@@ -1802,7 +1863,7 @@ public class SES extends Activity {
             listH614R.add("1-টিউবওয়েল");
             listH614R.add("2-নদী বা খাল পুকুর");
             listH614R.add("3-বৃষ্টির পানি");
-            listH614R.add("7-অন্যান্য");
+            listH614R.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH614R = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH614R);
             spnH614R.setAdapter(adptrH614R);
 
@@ -1811,16 +1872,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH614R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH614R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH614RX.setVisibility(View.GONE);
-                        lineH614RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH614RX.setVisibility(View.GONE);
-                        lineH614RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH614RX.setVisibility(View.GONE);
-                        lineH614RX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (spnData.equalsIgnoreCase("4")) {
+                        txtH614RX.setText("");
                         secH614RX.setVisibility(View.GONE);
                         lineH614RX.setVisibility(View.GONE);
                     } else {
@@ -1828,7 +1881,6 @@ public class SES extends Activity {
                         lineH614RX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1848,7 +1900,7 @@ public class SES extends Activity {
             listH614D.add("1-টিউবওয়েল");
             listH614D.add("2-নদী বা খাল পুকুর");
             listH614D.add("3-বৃষ্টির পানি");
-            listH614D.add("7-অন্যান্য");
+            listH614D.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH614D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH614D);
             spnH614D.setAdapter(adptrH614D);
 
@@ -1857,16 +1909,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH614D.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH614D.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH614DX.setVisibility(View.GONE);
-                        lineH614DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH614DX.setVisibility(View.GONE);
-                        lineH614DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH614DX.setVisibility(View.GONE);
-                        lineH614DX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("0")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
+                        txtH614DX.setText("");
                         secH614DX.setVisibility(View.GONE);
                         lineH614DX.setVisibility(View.GONE);
                     } else {
@@ -1874,7 +1918,6 @@ public class SES extends Activity {
                         lineH614DX.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -1912,15 +1955,20 @@ public class SES extends Activity {
             lineH614b5 = (View) findViewById(R.id.lineH614b5);
             VlblH614b5 = (TextView) findViewById(R.id.VlblH614b5);
             chkH614b5 = (CheckBox) findViewById(R.id.chkH614b5);
-            chkH614b5.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+            chkH614b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
                         secH614b5X.setVisibility(View.GONE);
                         lineH614b5X.setVisibility(View.GONE);
                         txtH614b5X.setText("");
                         secH614b6.setVisibility(View.GONE);
                         lineH614b6.setVisibility(View.GONE);
-                        chkH614b6.setChecked(false);
+                    } else {
+                        secH614b5X.setVisibility(View.VISIBLE);
+                        lineH614b5X.setVisibility(View.VISIBLE);
+                        secH614b6.setVisibility(View.VISIBLE);
+                        lineH614b6.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1987,7 +2035,6 @@ public class SES extends Activity {
                         lineH618X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -2014,22 +2061,8 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH618.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH618.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secH618X.setVisibility(View.GONE);
-                        lineH618X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secH618X.setVisibility(View.GONE);
-                        lineH618X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("3")) {
-                        secH618X.setVisibility(View.GONE);
-                        lineH618X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("4")) {
-                        secH618X.setVisibility(View.GONE);
-                        lineH618X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("5")) {
-                        secH618X.setVisibility(View.GONE);
-                        lineH618X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("7")) {
+                    if (!spnData.equalsIgnoreCase("7")) {
+                        txtH618X.setText("");
                         secH618X.setVisibility(View.GONE);
                         lineH618X.setVisibility(View.GONE);
                     } else {
@@ -2037,7 +2070,6 @@ public class SES extends Activity {
                         lineH618X.setVisibility(View.VISIBLE);
                     }
                 }
-
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
@@ -2053,6 +2085,26 @@ public class SES extends Activity {
 
             rdoH6191 = (RadioButton) findViewById(R.id.rdoH6191);
             rdoH6192 = (RadioButton) findViewById(R.id.rdoH6192);
+            rdogrpH619.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH619 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH619.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH619.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH619[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                    } else {
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH620 = (LinearLayout) findViewById(R.id.secH620);
             lineH620 = (View) findViewById(R.id.lineH620);
             VlblH620 = (TextView) findViewById(R.id.VlblH620);
@@ -2109,6 +2161,10 @@ public class SES extends Activity {
                 return;
             } else if (Integer.valueOf(txtH313.getText().toString().length() == 0 ? "00" : txtH313.getText().toString()) < 00 || Integer.valueOf(txtH313.getText().toString().length() == 0 ? "10" : txtH313.getText().toString()) > 10) {
                 Connection.MessageBox(SES.this, "Value should be between 00 and 10(ঘুমের জন্য কয়টি কক্ষ ব্যবহার করা হয়).");
+                txtH313.requestFocus();
+                return;
+            } else if ((Integer.parseInt(txtH313.getText().toString()) > Integer.parseInt(txtH312.getText().toString()))) {
+                Connection.MessageBox(SES.this, "Error: H313 এর ইনপুট H312 এর চেয়ে বড় হবেনা");
                 txtH313.requestFocus();
                 return;
             } else if (spnH321.getSelectedItemPosition() == 0 & secH321.isShown()) {
@@ -2195,21 +2251,41 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Required field: রান্নাঘরেরবর্জ্য.");
                 spnH63A.requestFocus();
                 return;
+            } else if (txtH63AX.getText().toString().length() == 0 & secH63AX.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: অন্যান্য.");
+                txtH63AX.requestFocus();
+                return;
             } else if (spnH63B.getSelectedItemPosition() == 0 & secH63B.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: শিশুর পায়েখানা.");
                 spnH63B.requestFocus();
+                return;
+            } else if (txtH63BX.getText().toString().length() == 0 & secH63BX.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: অন্যান্য.");
+                txtH63BX.requestFocus();
                 return;
             } else if (spnH63C.getSelectedItemPosition() == 0 & secH63C.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: হাস মুরগির বর্জ্য.");
                 spnH63C.requestFocus();
                 return;
+            } else if (txtH63CX.getText().toString().length() == 0 & secH63CX.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: অন্যান্য.");
+                txtH63CX.requestFocus();
+                return;
             } else if (spnH63D.getSelectedItemPosition() == 0 & secH63D.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: গরু ছাগলের বর্জ্য.");
                 spnH63D.requestFocus();
                 return;
+            } else if (txtH63DX.getText().toString().length() == 0 & secH63DX.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: অন্যান্য.");
+                txtH63DX.requestFocus();
+                return;
             } else if (spnH63E.getSelectedItemPosition() == 0 & secH63E.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: গৃহস্তলির বর্জ্য.");
                 spnH63E.requestFocus();
+                return;
+            } else if (txtH63EX.getText().toString().length() == 0 & secH63EX.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: অন্যান্য.");
+                txtH63EX.requestFocus();
                 return;
             } else if (txtH63X.getText().toString().length() == 0 & secH63X.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: অন্যান্য উল্লেখ করুন.");
@@ -2239,13 +2315,13 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Select anyone options from (শিশুর হাত পরিষ্কার আছে? ).");
                 rdoH691.requestFocus();
                 return;
-            } else if (spnH610R.getSelectedItemPosition() == 0 & secH610R.isShown()) {
+            } else if (spnH610.getSelectedItemPosition() == 0 & secH610.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খাবার পানির উৎস (বর্ষার মৌসুমে).");
-                spnH610R.requestFocus();
+                spnH610.requestFocus();
                 return;
-            } else if (txtH610RX.getText().toString().length() == 0 & secH610RX.isShown()) {
+            } else if (txtH610X.getText().toString().length() == 0 & secH610X.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH610RX.requestFocus();
+                txtH610X.requestFocus();
                 return;
             } else if (spnH610D.getSelectedItemPosition() == 0 & secH610D.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খাবার পানি উৎস (শুকনো মৌসুমে ).");
@@ -2291,6 +2367,10 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtH611b5X.requestFocus();
                 return;
+            } else if (!rdoH611c1.isChecked() & !rdoH611c2.isChecked() & secH611c.isShown()) {
+                Connection.MessageBox(SES.this, "Select anyone options from (পানির কনটেইনার কি ঢেকে রাখা হয়).");
+                rdoH611c1.requestFocus();
+                return;
             } else if (spnH612R.getSelectedItemPosition() == 0 & secH612R.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: ধোয়া মোছার জন্য পানি (বর্ষার মৌসুমে).");
                 spnH612R.requestFocus();
@@ -2316,7 +2396,7 @@ public class SES extends Activity {
                 txtH612b5X.requestFocus();
                 return;
             } else if (!rdoH612c1.isChecked() & !rdoH612c2.isChecked() & secH612c.isShown()) {
-                Connection.MessageBox(SES.this, "Select anyone options from (পানির কনটেইনার কি ঢেকে রাখা ).");
+                Connection.MessageBox(SES.this, "Select anyone options from (পানির কনটেইনার কি ঢেকে রাখা হয়).");
                 rdoH612c1.requestFocus();
                 return;
             } else if (spnH613R.getSelectedItemPosition() == 0 & secH613R.isShown()) {
@@ -2344,7 +2424,7 @@ public class SES extends Activity {
                 txtH613b5X.requestFocus();
                 return;
             } else if (!rdoH613c1.isChecked() & !rdoH613c2.isChecked() & secH613c.isShown()) {
-                Connection.MessageBox(SES.this, "Select anyone options from (পানির কনটেইনার কি ঢেকে রাখা ).");
+                Connection.MessageBox(SES.this, "Select anyone options from (পানির কনটেইনার কি ঢেকে রাখা হয়).");
                 rdoH613c1.requestFocus();
                 return;
             } else if (spnH614R.getSelectedItemPosition() == 0 & secH614R.isShown()) {
@@ -2468,10 +2548,15 @@ public class SES extends Activity {
             }
 
             objSave.setH63A((spnH63A.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH63A.getSelectedItem().toString(), "-")));
+            objSave.setH63AX(txtH63AX.getText().toString());
             objSave.setH63B((spnH63B.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH63B.getSelectedItem().toString(), "-")));
+            objSave.setH63BX(txtH63BX.getText().toString());
             objSave.setH63C((spnH63C.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH63C.getSelectedItem().toString(), "-")));
+            objSave.setH63CX(txtH63CX.getText().toString());
             objSave.setH63D((spnH63D.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH63D.getSelectedItem().toString(), "-")));
+            objSave.setH63DX(txtH63DX.getText().toString());
             objSave.setH63E((spnH63E.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH63E.getSelectedItem().toString(), "-")));
+            objSave.setH63EX(txtH63EX.getText().toString());
             objSave.setH63X(txtH63X.getText().toString());
             String[] d_rdogrpH64 = new String[]{"1", "0"};
             objSave.setH64("");
@@ -2515,8 +2600,8 @@ public class SES extends Activity {
                 if (rb.isChecked()) objSave.setH69(d_rdogrpH69[i]);
             }
 
-            objSave.setH610R((spnH610R.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610R.getSelectedItem().toString(), "-")));
-            objSave.setH610RX(txtH610RX.getText().toString());
+            objSave.setH610((spnH610.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610.getSelectedItem().toString(), "-")));
+            objSave.setH610X(txtH610X.getText().toString());
             objSave.setH610D((spnH610D.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610D.getSelectedItem().toString(), "-")));
             objSave.setH610DX(txtH610DX.getText().toString());
             String[] d_rdogrpH610a = new String[]{"1", "2", "3"};
@@ -2558,6 +2643,13 @@ public class SES extends Activity {
             objSave.setH611b5((chkH611b5.isChecked() ? "1" : "2"));
             objSave.setH611b5X(txtH611b5X.getText().toString());
             objSave.setH611b6((chkH611b6.isChecked() ? "1" : "2"));
+            String[] d_rdogrpH611c = new String[]{"1", "0"};
+            objSave.setH611c("");
+            for (int i = 0; i < rdogrpH611c.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH611c.getChildAt(i);
+                if (rb.isChecked()) objSave.setH611c(d_rdogrpH611c[i]);
+            }
+
             objSave.setH612R((spnH612R.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH612R.getSelectedItem().toString(), "-")));
             objSave.setH612RX(txtH612RX.getText().toString());
             objSave.setH612D((spnH612D.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH612D.getSelectedItem().toString(), "-")));
@@ -2674,7 +2766,12 @@ public class SES extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(SES.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(SES.this, AssetB.class).putExtras(IDBundle));
+                // /  Connection.MessageBox(SES.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(SES.this, status);
                 return;
@@ -2740,10 +2837,15 @@ public class SES extends Activity {
                     }
                 }
                 spnH63A.setSelection(Global.SpinnerItemPositionAnyLength(spnH63A, item.getH63A()));
+                txtH63AX.setText(item.getH63AX());
                 spnH63B.setSelection(Global.SpinnerItemPositionAnyLength(spnH63B, item.getH63B()));
+                txtH63BX.setText(item.getH63BX());
                 spnH63C.setSelection(Global.SpinnerItemPositionAnyLength(spnH63C, item.getH63C()));
+                txtH63CX.setText(item.getH63CX());
                 spnH63D.setSelection(Global.SpinnerItemPositionAnyLength(spnH63D, item.getH63D()));
+                txtH63DX.setText(item.getH63DX());
                 spnH63E.setSelection(Global.SpinnerItemPositionAnyLength(spnH63E, item.getH63E()));
+                txtH63EX.setText(item.getH63EX());
                 txtH63X.setText(item.getH63X());
                 String[] d_rdogrpH64 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH64.length; i++) {
@@ -2787,8 +2889,8 @@ public class SES extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                spnH610R.setSelection(Global.SpinnerItemPositionAnyLength(spnH610R, item.getH610R()));
-                txtH610RX.setText(item.getH610RX());
+                spnH610.setSelection(Global.SpinnerItemPositionAnyLength(spnH610, item.getH610()));
+                txtH610X.setText(item.getH610X());
                 spnH610D.setSelection(Global.SpinnerItemPositionAnyLength(spnH610D, item.getH610D()));
                 txtH610DX.setText(item.getH610DX());
                 String[] d_rdogrpH610a = new String[]{"1", "2", "3"};
@@ -2877,6 +2979,13 @@ public class SES extends Activity {
                     chkH611b6.setChecked(true);
                 } else if (item.getH611b6().equals("2")) {
                     chkH611b6.setChecked(false);
+                }
+                String[] d_rdogrpH611c = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH611c.length; i++) {
+                    if (item.getH611c().equals(String.valueOf(d_rdogrpH611c[i]))) {
+                        rb = (RadioButton) rdogrpH611c.getChildAt(i);
+                        rb.setChecked(true);
+                    }
                 }
                 spnH612R.setSelection(Global.SpinnerItemPositionAnyLength(spnH612R, item.getH612R()));
                 txtH612RX.setText(item.getH612RX());
@@ -3064,50 +3173,7 @@ public class SES extends Activity {
         }
     }
 
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute, false);
-        }
-        return null;
-    }
 
-    //GPS Reading
-    //.....................................................................................................
-    public void FindLocation() {
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                updateLocation(location);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            public void onProviderEnabled(String provider) {
-            }
-
-            public void onProviderDisabled(String provider) {
-            }
-        };
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-    }
 
     void updateLocation(Location location) {
         currentLocation = location;
