@@ -72,6 +72,7 @@
         <activity android:name=".IGA_list" />
         <activity android:name=".Loan" />
         <activity android:name=".Loan_list" />
+        <activity android:name=".HFIAS" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

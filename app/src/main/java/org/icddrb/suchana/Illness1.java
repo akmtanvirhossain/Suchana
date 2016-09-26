@@ -20,6 +20,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+//import android.support.v4.view.accessibility.AccessibilityRecordCompatIcs;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,6 +51,7 @@ public class Illness1 extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    static String SlNo = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -78,6 +80,10 @@ public class Illness1 extends Activity {
     View lineSlNo;
     TextView VlblSlNo;
     EditText txtSlNo;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    Spinner spnMSlNo;
     LinearLayout secH171a;
     View lineH171a;
     TextView VlblH171a;
@@ -180,6 +186,7 @@ public class Illness1 extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
+            SlNo = IDbundle.getString("SlNo");
 
             TableName = "Illness1";
 
@@ -238,7 +245,7 @@ public class Illness1 extends Activity {
                     if (rbData.equalsIgnoreCase("0")) {
                         secSlNo.setVisibility(View.GONE);
                         lineSlNo.setVisibility(View.GONE);
-                        txtSlNo.setText("");
+                        //txtSlNo.setText("");
                         secH171a.setVisibility(View.GONE);
                         lineH171a.setVisibility(View.GONE);
                         spnH171a.setSelection(0);
@@ -266,17 +273,25 @@ public class Illness1 extends Activity {
                         secH171TrCost.setVisibility(View.GONE);
                         lineH171TrCost.setVisibility(View.GONE);
                         txtH171TrCost.setText("");
+                        secMSlNo.setVisibility(View.GONE);
+
+                        seclblH17v.setVisibility(View.GONE);
+                        secH171f.setVisibility(View.GONE);
+                        rdogrpH171f.clearCheck();
+                        secH171g.setVisibility(View.GONE);
+                        txtH171g.setText(null);
+
                     } else {
                         secSlNo.setVisibility(View.VISIBLE);
                         lineSlNo.setVisibility(View.VISIBLE);
                         secH171a.setVisibility(View.VISIBLE);
                         lineH171a.setVisibility(View.VISIBLE);
-                        secH171aX.setVisibility(View.VISIBLE);
-                        lineH171aX.setVisibility(View.VISIBLE);
+                       // secH171aX.setVisibility(View.VISIBLE);
+                       // lineH171aX.setVisibility(View.VISIBLE);
                         secH171b.setVisibility(View.VISIBLE);
                         lineH171b.setVisibility(View.VISIBLE);
-                        secH171bX.setVisibility(View.VISIBLE);
-                        lineH171bX.setVisibility(View.VISIBLE);
+                       // secH171bX.setVisibility(View.VISIBLE);
+                       // lineH171bX.setVisibility(View.VISIBLE);
                         secH171c.setVisibility(View.VISIBLE);
                         lineH171c.setVisibility(View.VISIBLE);
                         secH171d.setVisibility(View.VISIBLE);
@@ -287,6 +302,12 @@ public class Illness1 extends Activity {
                         lineH171TCost.setVisibility(View.VISIBLE);
                         secH171TrCost.setVisibility(View.VISIBLE);
                         lineH171TrCost.setVisibility(View.VISIBLE);
+
+                        secMSlNo.setVisibility(View.VISIBLE);
+
+                        seclblH17v.setVisibility(View.VISIBLE);
+                        secH171f.setVisibility(View.VISIBLE);
+                        secH171g.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -298,6 +319,11 @@ public class Illness1 extends Activity {
             lineSlNo = (View) findViewById(R.id.lineSlNo);
             VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
             secH171a = (LinearLayout) findViewById(R.id.secH171a);
             lineH171a = (View) findViewById(R.id.lineH171a);
             VlblH171a = (TextView) findViewById(R.id.VlblH171a);
@@ -391,6 +417,100 @@ public class Illness1 extends Activity {
             VlblH171g = (TextView) findViewById(R.id.VlblH171g);
             txtH171g = (EditText) findViewById(R.id.txtH171g);
 
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+            txtSlNo.setText(SlNo);
+            txtSlNo.setEnabled(false);
+
+            secH171aX.setVisibility(View.GONE);
+            spnH171a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH171a.getSelectedItem().toString(), "-").equals("22"))
+                        {
+                            secH171aX.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH171aX.setVisibility(View.GONE);
+                            txtH171aX.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+            secH171bX.setVisibility(View.GONE);
+            spnH171b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                       if(spnH171b.getSelectedItemPosition()==1 || spnH171b.getSelectedItemPosition()==2)
+                       {
+                           secH171c.setVisibility(view.GONE);
+                           txtH171c.setText(null);
+                           secH171bX.setVisibility(View.GONE);
+                       }
+                       else if(Connection.SelectedSpinnerValue(spnH171b.getSelectedItem().toString(), "-").equals("10"))
+                       {
+                           secH171c.setVisibility(View.VISIBLE);
+                           secH171bX.setVisibility(View.VISIBLE);
+                       }
+                       else
+                       {
+                           secH171c.setVisibility(view.VISIBLE);
+                           secH171bX.setVisibility(View.GONE);
+                       }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
+
+
+            rdogrpH171f.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH171f = new String[]{"1", "0","8"};
+                    for (int i = 0; i < rdogrpH171f.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH171f.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH171f[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+
+                        secH171g.setVisibility(View.GONE);
+                        txtH171g.setText("");
+
+                    } else {
+                        secH171g.setVisibility(View.VISIBLE);
+
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -429,7 +549,13 @@ public class Illness1 extends Activity {
                 Connection.MessageBox(Illness1.this, "Required field: লাইন নং.");
                 txtSlNo.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "01" : txtSlNo.getText().toString()) < 01 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "30" : txtSlNo.getText().toString()) > 30) {
+            }
+            else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Illness1.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                // txtMSlNo.requestFocus();
+                return;
+            }
+            else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "01" : txtSlNo.getText().toString()) < 01 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "30" : txtSlNo.getText().toString()) > 30) {
                 Connection.MessageBox(Illness1.this, "Value should be between 01 and 30(লাইন নং).");
                 txtSlNo.requestFocus();
                 return;
@@ -517,6 +643,7 @@ public class Illness1 extends Activity {
             }
 
             objSave.setSlNo(txtSlNo.getText().toString());
+            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
             objSave.setH171a((spnH171a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH171a.getSelectedItem().toString(), "-")));
             objSave.setH171aX(txtH171aX.getText().toString());
             objSave.setH171b((spnH171b.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH171b.getSelectedItem().toString(), "-")));
@@ -526,7 +653,7 @@ public class Illness1 extends Activity {
             objSave.setH171VCost(txtH171VCost.getText().toString());
             objSave.setH171TCost(txtH171TCost.getText().toString());
             objSave.setH171TrCost(txtH171TrCost.getText().toString());
-            String[] d_rdogrpH171f = new String[]{"1", "2", "9"};
+            String[] d_rdogrpH171f = new String[]{"1", "0", "8"};
             objSave.setH171f("");
             for (int i = 0; i < rdogrpH171f.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH171f.getChildAt(i);

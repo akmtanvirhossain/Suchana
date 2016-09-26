@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -53,6 +54,7 @@ public class Illness1_list extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
+    Bundle IDbundle;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -72,6 +74,10 @@ public class Illness1_list extends Activity {
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
+
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "Illness1";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
@@ -128,16 +134,26 @@ public class Illness1_list extends Activity {
             btnAdd.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
-                    Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
+                    int lineNo = 0;
+                    Cursor cursor = C.GetData("Illness1", "SuchanaID", SUCHANAID);
+                    if (cursor.getCount() != 0) {
+                        lineNo = cursor.getCount() + 1;
+                    } else {
+                        lineNo = 1;
+                    }
+
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", RND);
+                    IDbundle1.putString("SuchanaID", SUCHANAID);
+                    IDbundle1.putString("SlNo",String.valueOf(lineNo));
                     Intent intent = new Intent(getApplicationContext(), Illness1.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtras(IDbundle);
+                    intent.putExtras(IDbundle1);
                     getApplicationContext().startActivity(intent);
 
                 }
             });
+
 
 
             DataSearch(RND, SUCHANAID);

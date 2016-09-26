@@ -217,7 +217,7 @@ public class Loan extends Activity {
                     if (rbData.equalsIgnoreCase("0")) {
                         secH112.setVisibility(View.GONE);
                         lineH112.setVisibility(View.GONE);
-                        txtH112.setText("");
+                        //txtH112.setText("");
                         secH113.setVisibility(View.GONE);
                         lineH113.setVisibility(View.GONE);
                         spnH113.setSelection(0);
