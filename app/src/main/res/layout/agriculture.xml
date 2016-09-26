@@ -97,7 +97,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -134,7 +134,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -148,6 +148,38 @@
                     android:inputType="number"
                     android:maxLength="12"
                     android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secMSlNo"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblMSlNo"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="MSlNo"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblMSlNo"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnMSlNo"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -193,7 +225,7 @@
 
                 <TextView
                     android:id="@+id/VlblH151"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
                     android:textSize="20sp" />
@@ -245,7 +277,7 @@
 
                 <TextView
                     android:id="@+id/VlblSl"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সিরিয়াল নাম্বার"
                     android:textSize="20sp" />
@@ -282,7 +314,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Code"
                     android:textSize="20sp" />
@@ -318,7 +350,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152bOth"
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -378,7 +410,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152b"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="code 2"
                     android:textSize="20sp" />
@@ -436,7 +468,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152c"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="জমি/পানির মাপ (জল আয়তন)"
                     android:textSize="20sp" />
@@ -495,7 +527,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152d1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -533,7 +565,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152d2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -606,7 +638,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152e1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -644,7 +676,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152e2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -717,7 +749,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152f"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বিক্রি করে কত টাকা পেয়েছিলেন"
                     android:textSize="20sp" />
@@ -776,7 +808,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152g"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো"
                     android:textSize="20sp" />
@@ -835,7 +867,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152h1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -873,7 +905,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152h2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -946,7 +978,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152i1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -984,7 +1016,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152i2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -1057,7 +1089,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152j1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -1095,7 +1127,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152j2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -1168,7 +1200,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152k1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />
@@ -1206,7 +1238,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152k2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="কিলো/সংখ্যা"
                     android:textSize="20sp" />

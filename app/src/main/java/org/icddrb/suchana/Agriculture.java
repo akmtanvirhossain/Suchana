@@ -56,6 +56,10 @@ public class Agriculture extends Activity {
     View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    Spinner spnMSlNo;
     LinearLayout seclbH151;
     LinearLayout secH151;
     View lineH151;
@@ -187,6 +191,7 @@ public class Agriculture extends Activity {
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
+
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
@@ -227,6 +232,12 @@ public class Agriculture extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
             seclbH151 = (LinearLayout) findViewById(R.id.seclbH151);
             secH151 = (LinearLayout) findViewById(R.id.secH151);
             lineH151 = (View) findViewById(R.id.lineH151);
@@ -250,6 +261,7 @@ public class Agriculture extends Activity {
                         secSl.setVisibility(View.GONE);
                         lineSl.setVisibility(View.GONE);
                         txtSl.setText("");
+
                         secH152a.setVisibility(View.GONE);
                         lineH152a.setVisibility(View.GONE);
                         spnH152a.setSelection(0);
@@ -301,6 +313,22 @@ public class Agriculture extends Activity {
                         secH152k1.setVisibility(View.GONE);
                         lineH152k1.setVisibility(View.GONE);
                         txtH152k1.setText("");
+
+                        secLb1H151b.setVisibility(View.GONE);
+                        seclbH152c.setVisibility(View.GONE);
+                        seclbH152d.setVisibility(View.GONE);
+                        seclbH15e.setVisibility(View.GONE);
+                        seclbh152f.setVisibility(View.GONE);
+                        seclbH152g.setVisibility(View.GONE);
+                        seclbH152h.setVisibility(View.GONE);
+                        seclbH15i.setVisibility(View.GONE);
+                        seclbH152j.setVisibility(View.GONE);
+                        seclbH152k.setVisibility(View.GONE);
+                        secH152k2.setVisibility(View.GONE);
+                        rdogrpH152k2.clearCheck();
+
+
+
                     } else {
                         secSl.setVisibility(View.VISIBLE);
                         lineSl.setVisibility(View.VISIBLE);
@@ -338,6 +366,18 @@ public class Agriculture extends Activity {
                         lineH152j2.setVisibility(View.VISIBLE);
                         secH152k1.setVisibility(View.VISIBLE);
                         lineH152k1.setVisibility(View.VISIBLE);
+
+                        secLb1H151b.setVisibility(View.VISIBLE);
+                        seclbH152c.setVisibility(View.VISIBLE);
+                        seclbH152d.setVisibility(View.VISIBLE);
+                        seclbH15e.setVisibility(View.VISIBLE);
+                        seclbh152f.setVisibility(View.VISIBLE);
+                        seclbH152g.setVisibility(View.VISIBLE);
+                        seclbH152h.setVisibility(View.VISIBLE);
+                        seclbH15i.setVisibility(View.VISIBLE);
+                        seclbH152j.setVisibility(View.VISIBLE);
+                        seclbH152k.setVisibility(View.VISIBLE);
+                        secH152k2.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -516,6 +556,13 @@ public class Agriculture extends Activity {
             rdoH152k22 = (RadioButton) findViewById(R.id.rdoH152k22);
 
 
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+            txtSl.setText(SL);
+            txtSl.setEnabled(false);
+
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -673,6 +720,7 @@ public class Agriculture extends Activity {
             Agriculture_DataModel objSave = new Agriculture_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
+            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
             String[] d_rdogrpH151 = new String[]{"1", "0"};
             objSave.setH151("");
             for (int i = 0; i < rdogrpH151.getChildCount(); i++) {

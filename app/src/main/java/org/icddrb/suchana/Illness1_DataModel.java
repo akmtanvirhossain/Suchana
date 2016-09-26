@@ -15,6 +15,7 @@ public class Illness1_DataModel {
     private String _Rnd = "";
     private String _SuchanaID = "";
     private String _H171 = "";
+    private String _MSlNo = "";
     private String _SlNo = "";
     private String _H171a = "";
     private String _H171aX = "";
@@ -66,6 +67,13 @@ public class Illness1_DataModel {
 
     public void setSlNo(String newValue) {
         _SlNo = newValue;
+    }
+    public String getMSlNo() {
+        return _MSlNo;
+    }
+
+    public void setMSlNo(String newValue) {
+        _MSlNo = newValue;
     }
 
     public String getH171a() {
@@ -189,7 +197,7 @@ public class Illness1_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' "))
+            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'"))
                 response = UpdateData(context);
             else
                 response = SaveData(context);
@@ -204,7 +212,7 @@ public class Illness1_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H171,SlNo,H171a,H171aX,H171b,H171bX,H171c,H171d,H171VCost,H171TCost,H171TrCost,H171f,H171g,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H171 + "', '" + _SlNo + "', '" + _H171a + "', '" + _H171aX + "', '" + _H171b + "', '" + _H171bX + "', '" + _H171c + "', '" + _H171d + "', '" + _H171VCost + "', '" + _H171TCost + "', '" + _H171TrCost + "', '" + _H171f + "', '" + _H171g + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H171,SlNo,MSlNo,H171a,H171aX,H171b,H171bX,H171c,H171d,H171VCost,H171TCost,H171TrCost,H171f,H171g,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H171 + "', '" + _SlNo + "','" + _MSlNo + "','" + _H171a + "', '" + _H171aX + "', '" + _H171b + "', '" + _H171bX + "', '" + _H171c + "', '" + _H171d + "', '" + _H171VCost + "', '" + _H171TCost + "', '" + _H171TrCost + "', '" + _H171f + "', '" + _H171g + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -217,7 +225,7 @@ public class Illness1_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H171 = '" + _H171 + "',SlNo = '" + _SlNo + "',H171a = '" + _H171a + "',H171aX = '" + _H171aX + "',H171b = '" + _H171b + "',H171bX = '" + _H171bX + "',H171c = '" + _H171c + "',H171d = '" + _H171d + "',H171VCost = '" + _H171VCost + "',H171TCost = '" + _H171TCost + "',H171TrCost = '" + _H171TrCost + "',H171f = '" + _H171f + "',H171g = '" + _H171g + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H171 = '" + _H171 + "',SlNo = '" + _SlNo + "',MSlNo='" + _MSlNo + "',H171a = '" + _H171a + "',H171aX = '" + _H171aX + "',H171b = '" + _H171b + "',H171bX = '" + _H171bX + "',H171c = '" + _H171c + "',H171d = '" + _H171d + "',H171VCost = '" + _H171VCost + "',H171TCost = '" + _H171TCost + "',H171TrCost = '" + _H171TrCost + "',H171f = '" + _H171f + "',H171g = '" + _H171g + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -239,6 +247,7 @@ public class Illness1_DataModel {
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._H171 = cur.getString(cur.getColumnIndex("H171"));
             d._SlNo = cur.getString(cur.getColumnIndex("SlNo"));
+            d._MSlNo = cur.getString(cur.getColumnIndex("MSlNo"));
             d._H171a = cur.getString(cur.getColumnIndex("H171a"));
             d._H171aX = cur.getString(cur.getColumnIndex("H171aX"));
             d._H171b = cur.getString(cur.getColumnIndex("H171b"));

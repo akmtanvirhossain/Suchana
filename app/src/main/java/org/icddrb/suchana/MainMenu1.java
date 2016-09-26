@@ -149,16 +149,24 @@ public class MainMenu1 extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //  Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
-                    // startActivity(f1);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
+                    f1.putExtras(IDbundle1);
+                    startActivity(f1);
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
             cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Intent f1 = new Intent(getApplicationContext(), HFIAS_list.class);
-                    //startActivity(f1);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), HFIAS.class);
+                    f1.putExtras(IDbundle1);
+                    startActivity(f1);
                 }
             });
             cmdMenuDestruction1 = (Button) findViewById(R.id.cmdMenuDestruction1);
@@ -182,7 +190,11 @@ public class MainMenu1 extends Activity {
             cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
                     Intent f1 = new Intent(getApplicationContext(), Agriculture_list.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
@@ -190,7 +202,11 @@ public class MainMenu1 extends Activity {
             cmdMenuNGO.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), NGOWork_list.class);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), NGOWork.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
@@ -198,7 +214,11 @@ public class MainMenu1 extends Activity {
             cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
                     Intent f1 = new Intent(getApplicationContext(), Illness1_list.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });

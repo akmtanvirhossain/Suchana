@@ -276,6 +276,7 @@
 
             <View
                 android:id="@+id/lineH162"
+                android:text="H163"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -291,7 +292,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কি"
+                    android:text="H163. সুচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কি"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -700,6 +701,7 @@
                 <TextView
                     android:id="@+id/lblH164"
                     android:layout_width="60sp"
+                    android:text="H164"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -707,7 +709,7 @@
                     android:id="@+id/VlblH164"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি সুচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন"
+                    android:text="H164. আপনি সুচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -735,6 +737,14 @@
                 android:orientation="horizontal">
 
                 <TextView
+                android:id="@+id/lblH165"
+                android:text="H165"
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+                <TextView
+
                     android:id="@+id/lblHlbH165"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
@@ -1146,6 +1156,7 @@
 
                 <TextView
                     android:id="@+id/lblH166"
+                    android:text="H166"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -1199,7 +1210,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচি থেকে আপনি কি কি গ্রান্ট/অনুদান পেয়েছেন"
+                    android:text="H167. সুচনা কর্মসূচি থেকে আপনি কি কি গ্রান্ট/অনুদান পেয়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1571,6 +1582,7 @@
 
                 <TextView
                     android:id="@+id/lblH168"
+                    android:text="H168"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -1608,6 +1620,7 @@
 
                 <TextView
                     android:id="@+id/lblH169"
+                    android:text="H169"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -1659,6 +1672,7 @@
 
                 <TextView
                     android:id="@+id/lblH1610"
+                    android:text="H1610"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -1697,6 +1711,7 @@
                 <TextView
                     android:id="@+id/lblH1611"
                     android:layout_width="60sp"
+                    android:text="H1611"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1749,7 +1764,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="এন,জি,ওর নাম"
+                    android:text="H1612.এন,জি,ওর নাম"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2191,6 +2206,7 @@
 
                 <TextView
                     android:id="@+id/lblH1613"
+                    android:text="H1613"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -2235,6 +2251,7 @@
 
             <LinearLayout
                 android:id="@+id/secH1614"
+                android:text="H1614"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -2244,7 +2261,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="এন,জি,ও কর্মসূচির আওতায় কি কি ট্রেনিং পেয়েছেন"
+                    android:text="H1614. এন,জি,ও কর্মসূচির আওতায় কি কি ট্রেনিং পেয়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2546,6 +2563,7 @@
 
                 <TextView
                     android:id="@+id/lblH1615"
+                    android:text="H1615"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
@@ -2599,7 +2617,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="এন,জি,ও কর্মসূচির আওতায় কি কি গ্রান্ট/অনুদান পেয়েছেন"
+                    android:text="H1616. এন,জি,ও কর্মসূচির আওতায় কি কি গ্রান্ট/অনুদান পেয়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 

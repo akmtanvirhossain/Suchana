@@ -432,6 +432,10 @@ public class NGOWork extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
             seclbH16 = (LinearLayout) findViewById(R.id.seclbH16);
             secH161 = (LinearLayout) findViewById(R.id.secH161);
             lineH161 = (View) findViewById(R.id.lineH161);
@@ -566,6 +570,10 @@ public class NGOWork extends Activity {
                         secH1610.setVisibility(View.GONE);
                         lineH1610.setVisibility(View.GONE);
                         txtH1610.setText("");
+
+                        seclbH163.setVisibility(View.GONE);
+                        seclbH165.setVisibility(View.GONE);
+                        seclbH167.setVisibility(View.GONE);
                     } else {
                         secH162.setVisibility(View.VISIBLE);
                         lineH162.setVisibility(View.VISIBLE);
@@ -643,6 +651,10 @@ public class NGOWork extends Activity {
                         lineH169.setVisibility(View.VISIBLE);
                         secH1610.setVisibility(View.VISIBLE);
                         lineH1610.setVisibility(View.VISIBLE);
+
+                        seclbH163.setVisibility(View.VISIBLE);
+                        seclbH165.setVisibility(View.VISIBLE);
+                        seclbH167.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -662,7 +674,7 @@ public class NGOWork extends Activity {
                 public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH162 = new String[]{"1", " 0"};
+                    String[] d_rdogrpH162 = new String[]{"1", "0"};
                     for (int i = 0; i < rdogrpH162.getChildCount(); i++) {
                         rb = (RadioButton) rdogrpH162.getChildAt(i);
                         if (rb.isChecked()) rbData = d_rdogrpH162[i];
@@ -738,6 +750,9 @@ public class NGOWork extends Activity {
                         secH165i.setVisibility(View.GONE);
                         lineH165i.setVisibility(View.GONE);
                         chkH165i.setChecked(false);
+
+                        seclbH163.setVisibility(View.GONE);
+                        seclbH165.setVisibility(View.GONE);
                     } else {
                         secH163a.setVisibility(View.VISIBLE);
                         lineH163a.setVisibility(View.VISIBLE);
@@ -785,6 +800,9 @@ public class NGOWork extends Activity {
                         lineH16x1.setVisibility(View.VISIBLE);
                         secH165i.setVisibility(View.VISIBLE);
                         lineH165i.setVisibility(View.VISIBLE);
+
+                        seclbH163.setVisibility(View.VISIBLE);
+                        seclbH165.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -898,13 +916,14 @@ public class NGOWork extends Activity {
                 public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH166 = new String[]{"1", " 0"};
+                    String[] d_rdogrpH166 = new String[]{"1", "0"};
                     for (int i = 0; i < rdogrpH166.getChildCount(); i++) {
                         rb = (RadioButton) rdogrpH166.getChildAt(i);
                         if (rb.isChecked()) rbData = d_rdogrpH166[i];
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclbH167.setVisibility(View.GONE);
                         secH167a.setVisibility(View.GONE);
                         lineH167a.setVisibility(View.GONE);
                         chkH167a.setChecked(false);
@@ -939,6 +958,7 @@ public class NGOWork extends Activity {
                         lineH168.setVisibility(View.GONE);
                         txtH168.setText("");
                     } else {
+                        seclbH167.setVisibility(View.VISIBLE);
                         secH167a.setVisibility(View.VISIBLE);
                         lineH167a.setVisibility(View.VISIBLE);
                         secH167b.setVisibility(View.VISIBLE);
@@ -1164,6 +1184,12 @@ public class NGOWork extends Activity {
                         secH1616x.setVisibility(View.GONE);
                         lineH1616x.setVisibility(View.GONE);
                         chkH1616x.setChecked(false);
+
+                        seclb1612.setVisibility(View.GONE);
+                        secH1614.setVisibility(View.GONE);
+                        secH1616.setVisibility(View.GONE);
+                        secH1616x1.setVisibility(View.GONE);
+                        txtH1616x1.setText(null);
                     } else {
                         secH1612a.setVisibility(View.VISIBLE);
                         lineH1612a.setVisibility(View.VISIBLE);
@@ -1229,6 +1255,11 @@ public class NGOWork extends Activity {
                         lineH1616i.setVisibility(View.VISIBLE);
                         secH1616x.setVisibility(View.VISIBLE);
                         lineH1616x.setVisibility(View.VISIBLE);
+
+                        seclb1612.setVisibility(View.VISIBLE);
+                        secH1614.setVisibility(View.VISIBLE);
+                        secH1616.setVisibility(View.VISIBLE);
+                        secH1616x1.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1292,6 +1323,72 @@ public class NGOWork extends Activity {
 
             rdoH16131 = (RadioButton) findViewById(R.id.rdoH16131);
             rdoH16132 = (RadioButton) findViewById(R.id.rdoH16132);
+
+            rdogrpH1613.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH1613 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH1613.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH1613.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH1613[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+
+                        secH1614a.setVisibility(View.GONE);
+                        lineH1614a.setVisibility(View.GONE);
+                        chkH1614a.setChecked(false);
+                        secH1614b.setVisibility(View.GONE);
+                        lineH1614b.setVisibility(View.GONE);
+                        chkH1614b.setChecked(false);
+                        secH1614c.setVisibility(View.GONE);
+                        lineH1614c.setVisibility(View.GONE);
+                        chkH1614c.setChecked(false);
+                        secH1614d.setVisibility(View.GONE);
+                        lineH1614d.setVisibility(View.GONE);
+                        chkH1614d.setChecked(false);
+                        secH1614e.setVisibility(View.GONE);
+                        lineH1614e.setVisibility(View.GONE);
+                        chkH1614e.setChecked(false);
+                        secH1614f.setVisibility(View.GONE);
+                        lineH1614f.setVisibility(View.GONE);
+                        chkH1614f.setChecked(false);
+                        secH1614x.setVisibility(View.GONE);
+                        lineH1614x.setVisibility(View.GONE);
+                        chkH1614x.setChecked(false);
+                        secH1614x1.setVisibility(View.GONE);
+                        lineH1614x1.setVisibility(View.GONE);
+                        txtH1614x1.setText("");
+
+                    } else {
+
+                        secH1614a.setVisibility(View.VISIBLE);
+                        lineH1614a.setVisibility(View.VISIBLE);
+                        secH1614b.setVisibility(View.VISIBLE);
+                        lineH1614b.setVisibility(View.VISIBLE);
+                        secH1614c.setVisibility(View.VISIBLE);
+                        lineH1614c.setVisibility(View.VISIBLE);
+                        secH1614d.setVisibility(View.VISIBLE);
+                        lineH1614d.setVisibility(View.VISIBLE);
+                        secH1614e.setVisibility(View.VISIBLE);
+                        lineH1614e.setVisibility(View.VISIBLE);
+                        secH1614f.setVisibility(View.VISIBLE);
+                        lineH1614f.setVisibility(View.VISIBLE);
+                        secH1614x.setVisibility(View.VISIBLE);
+                        lineH1614x.setVisibility(View.VISIBLE);
+                        secH1614x1.setVisibility(View.VISIBLE);
+                        lineH1614x1.setVisibility(View.VISIBLE);
+
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH1614 = (LinearLayout) findViewById(R.id.secH1614);
             secH1614a = (LinearLayout) findViewById(R.id.secH1614a);
             lineH1614a = (View) findViewById(R.id.lineH1614a);
@@ -1332,6 +1429,86 @@ public class NGOWork extends Activity {
 
             rdoH16151 = (RadioButton) findViewById(R.id.rdoH16151);
             rdoH16152 = (RadioButton) findViewById(R.id.rdoH16152);
+            rdogrpH1615.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH1615 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH1615.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH1615.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH1615[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+
+                        rdogrpH1615.clearCheck();
+                        secH1616a.setVisibility(View.GONE);
+                        lineH1616a.setVisibility(View.GONE);
+                        chkH1616a.setChecked(false);
+                        secH1616b.setVisibility(View.GONE);
+                        lineH1616b.setVisibility(View.GONE);
+                        chkH1616b.setChecked(false);
+                        secH1616c.setVisibility(View.GONE);
+                        lineH1616c.setVisibility(View.GONE);
+                        chkH1616c.setChecked(false);
+                        secH1616d.setVisibility(View.GONE);
+                        lineH1616d.setVisibility(View.GONE);
+                        chkH1616d.setChecked(false);
+                        secH1616e.setVisibility(View.GONE);
+                        lineH1616e.setVisibility(View.GONE);
+                        chkH1616e.setChecked(false);
+                        secH1616f.setVisibility(View.GONE);
+                        lineH1616f.setVisibility(View.GONE);
+                        chkH1616f.setChecked(false);
+                        secH1616g.setVisibility(View.GONE);
+                        lineH1616g.setVisibility(View.GONE);
+                        chkH1616g.setChecked(false);
+                        secH1616h.setVisibility(View.GONE);
+                        lineH1616h.setVisibility(View.GONE);
+                        chkH1616h.setChecked(false);
+                        secH1616i.setVisibility(View.GONE);
+                        lineH1616i.setVisibility(View.GONE);
+                        chkH1616i.setChecked(false);
+                        secH1616x.setVisibility(View.GONE);
+                        lineH1616x.setVisibility(View.GONE);
+                        chkH1616x.setChecked(false);
+
+                        secH1616.setVisibility(View.GONE);
+                        secH1616x1.setVisibility(View.GONE);
+                        txtH1616x1.setText(null);
+                    } else {
+
+                        secH1616a.setVisibility(View.VISIBLE);
+                        lineH1616a.setVisibility(View.VISIBLE);
+                        secH1616b.setVisibility(View.VISIBLE);
+                        lineH1616b.setVisibility(View.VISIBLE);
+                        secH1616c.setVisibility(View.VISIBLE);
+                        lineH1616c.setVisibility(View.VISIBLE);
+                        secH1616d.setVisibility(View.VISIBLE);
+                        lineH1616d.setVisibility(View.VISIBLE);
+                        secH1616e.setVisibility(View.VISIBLE);
+                        lineH1616e.setVisibility(View.VISIBLE);
+                        secH1616f.setVisibility(View.VISIBLE);
+                        lineH1616f.setVisibility(View.VISIBLE);
+                        secH1616g.setVisibility(View.VISIBLE);
+                        lineH1616g.setVisibility(View.VISIBLE);
+                        secH1616h.setVisibility(View.VISIBLE);
+                        lineH1616h.setVisibility(View.VISIBLE);
+                        secH1616i.setVisibility(View.VISIBLE);
+                        lineH1616i.setVisibility(View.VISIBLE);
+                        secH1616x.setVisibility(View.VISIBLE);
+                        lineH1616x.setVisibility(View.VISIBLE);
+
+                        secH1616.setVisibility(View.VISIBLE);
+                        secH1616x1.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH1616 = (LinearLayout) findViewById(R.id.secH1616);
             secH1616a = (LinearLayout) findViewById(R.id.secH1616a);
             lineH1616a = (View) findViewById(R.id.lineH1616a);
@@ -1385,6 +1562,8 @@ public class NGOWork extends Activity {
                     DataSave();
                 }
             });
+
+            DataSearch(RND,SUCHANAID);
         } catch (Exception e) {
             Connection.MessageBox(NGOWork.this, e.getMessage());
             return;
@@ -1495,7 +1674,7 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH161(d_rdogrpH161[i]);
             }
 
-            String[] d_rdogrpH162 = new String[]{"1", " 0"};
+            String[] d_rdogrpH162 = new String[]{"1", "0"};
             objSave.setH162("");
             for (int i = 0; i < rdogrpH162.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH162.getChildAt(i);
@@ -1525,7 +1704,7 @@ public class NGOWork extends Activity {
             objSave.setH165x((chkH165x.isChecked() ? "1" : "2"));
             objSave.setH16x1(txtH16x1.getText().toString());
             objSave.setH165i((chkH165i.isChecked() ? "1" : "2"));
-            String[] d_rdogrpH166 = new String[]{"1", " 0"};
+            String[] d_rdogrpH166 = new String[]{"1", "0"};
             objSave.setH166("");
             for (int i = 0; i < rdogrpH166.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH166.getChildAt(i);
@@ -1640,7 +1819,7 @@ public class NGOWork extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH162 = new String[]{"1", " 0"};
+                String[] d_rdogrpH162 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH162.length; i++) {
                     if (item.getH162().equals(String.valueOf(d_rdogrpH162[i]))) {
                         rb = (RadioButton) rdogrpH162.getChildAt(i);
@@ -1750,7 +1929,7 @@ public class NGOWork extends Activity {
                 } else if (item.getH165i().equals("2")) {
                     chkH165i.setChecked(false);
                 }
-                String[] d_rdogrpH166 = new String[]{"1", " 0"};
+                String[] d_rdogrpH166 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH166.length; i++) {
                     if (item.getH166().equals(String.valueOf(d_rdogrpH166[i]))) {
                         rb = (RadioButton) rdogrpH166.getChildAt(i);

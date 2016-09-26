@@ -252,6 +252,11 @@ public class HFIAS extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+
             seclbl12 = (LinearLayout) findViewById(R.id.seclbl12);
             secH121a = (LinearLayout) findViewById(R.id.secH121a);
             lineH121a = (View) findViewById(R.id.lineH121a);
@@ -293,7 +298,7 @@ public class HFIAS extends Activity {
             rdoH121b1 = (RadioButton) findViewById(R.id.rdoH121b1);
             rdoH121b2 = (RadioButton) findViewById(R.id.rdoH121b2);
             rdoH121b3 = (RadioButton) findViewById(R.id.rdoH121b3);
-            rdoH121b4 = (RadioButton) findViewById(R.id.rdoH121b4);
+
             secH122a = (LinearLayout) findViewById(R.id.secH122a);
             lineH122a = (View) findViewById(R.id.lineH122a);
             VlblH122a = (TextView) findViewById(R.id.VlblH122a);
@@ -334,7 +339,7 @@ public class HFIAS extends Activity {
             rdoH122b1 = (RadioButton) findViewById(R.id.rdoH122b1);
             rdoH122b2 = (RadioButton) findViewById(R.id.rdoH122b2);
             rdoH122b3 = (RadioButton) findViewById(R.id.rdoH122b3);
-            rdoH122b4 = (RadioButton) findViewById(R.id.rdoH122b4);
+
             secH123a = (LinearLayout) findViewById(R.id.secH123a);
             lineH123a = (View) findViewById(R.id.lineH123a);
             VlblH123a = (TextView) findViewById(R.id.VlblH123a);
@@ -375,7 +380,7 @@ public class HFIAS extends Activity {
             rdoH123b1 = (RadioButton) findViewById(R.id.rdoH123b1);
             rdoH123b2 = (RadioButton) findViewById(R.id.rdoH123b2);
             rdoH123b3 = (RadioButton) findViewById(R.id.rdoH123b3);
-            rdoH123b4 = (RadioButton) findViewById(R.id.rdoH123b4);
+
             secH124a = (LinearLayout) findViewById(R.id.secH124a);
             lineH124a = (View) findViewById(R.id.lineH124a);
             VlblH124a = (TextView) findViewById(R.id.VlblH124a);
@@ -416,7 +421,7 @@ public class HFIAS extends Activity {
             rdoH124b1 = (RadioButton) findViewById(R.id.rdoH124b1);
             rdoH124b2 = (RadioButton) findViewById(R.id.rdoH124b2);
             rdoH124b3 = (RadioButton) findViewById(R.id.rdoH124b3);
-            rdoH124b4 = (RadioButton) findViewById(R.id.rdoH124b4);
+
             secH125a = (LinearLayout) findViewById(R.id.secH125a);
             lineH125a = (View) findViewById(R.id.lineH125a);
             VlblH125a = (TextView) findViewById(R.id.VlblH125a);
@@ -457,7 +462,7 @@ public class HFIAS extends Activity {
             rdoH125b1 = (RadioButton) findViewById(R.id.rdoH125b1);
             rdoH125b2 = (RadioButton) findViewById(R.id.rdoH125b2);
             rdoH125b3 = (RadioButton) findViewById(R.id.rdoH125b3);
-            rdoH125b4 = (RadioButton) findViewById(R.id.rdoH125b4);
+
             secH126a = (LinearLayout) findViewById(R.id.secH126a);
             lineH126a = (View) findViewById(R.id.lineH126a);
             VlblH126a = (TextView) findViewById(R.id.VlblH126a);
@@ -498,7 +503,7 @@ public class HFIAS extends Activity {
             rdoH126b1 = (RadioButton) findViewById(R.id.rdoH126b1);
             rdoH126b2 = (RadioButton) findViewById(R.id.rdoH126b2);
             rdoH126b3 = (RadioButton) findViewById(R.id.rdoH126b3);
-            rdoH126b4 = (RadioButton) findViewById(R.id.rdoH126b4);
+
             secH127a = (LinearLayout) findViewById(R.id.secH127a);
             lineH127a = (View) findViewById(R.id.lineH127a);
             VlblH127a = (TextView) findViewById(R.id.VlblH127a);
@@ -539,7 +544,7 @@ public class HFIAS extends Activity {
             rdoH127b1 = (RadioButton) findViewById(R.id.rdoH127b1);
             rdoH127b2 = (RadioButton) findViewById(R.id.rdoH127b2);
             rdoH127b3 = (RadioButton) findViewById(R.id.rdoH127b3);
-            rdoH127b4 = (RadioButton) findViewById(R.id.rdoH127b4);
+
             secH128a = (LinearLayout) findViewById(R.id.secH128a);
             lineH128a = (View) findViewById(R.id.lineH128a);
             VlblH128a = (TextView) findViewById(R.id.VlblH128a);
@@ -580,7 +585,7 @@ public class HFIAS extends Activity {
             rdoH128b1 = (RadioButton) findViewById(R.id.rdoH128b1);
             rdoH128b2 = (RadioButton) findViewById(R.id.rdoH128b2);
             rdoH128b3 = (RadioButton) findViewById(R.id.rdoH128b3);
-            rdoH128b4 = (RadioButton) findViewById(R.id.rdoH128b4);
+
             secH129a = (LinearLayout) findViewById(R.id.secH129a);
             lineH129a = (View) findViewById(R.id.lineH129a);
             VlblH129a = (TextView) findViewById(R.id.VlblH129a);
@@ -600,7 +605,12 @@ public class HFIAS extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        secH129b.setVisibility(View.GONE);
+                        lineH129b.setVisibility(View.GONE);
+                        rdogrpH129b.clearCheck();
                     } else {
+                        secH129b.setVisibility(View.VISIBLE);
+                        lineH129b.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -616,7 +626,7 @@ public class HFIAS extends Activity {
             rdoH129b1 = (RadioButton) findViewById(R.id.rdoH129b1);
             rdoH129b2 = (RadioButton) findViewById(R.id.rdoH129b2);
             rdoH129b3 = (RadioButton) findViewById(R.id.rdoH129b3);
-            rdoH129b4 = (RadioButton) findViewById(R.id.rdoH129b4);
+
             secLb13 = (LinearLayout) findViewById(R.id.secLb13);
 
 
@@ -626,6 +636,8 @@ public class HFIAS extends Activity {
                     DataSave();
                 }
             });
+            DataSearch(RND,SUCHANAID);
+
         } catch (Exception e) {
             Connection.MessageBox(HFIAS.this, e.getMessage());
             return;
@@ -653,7 +665,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (আপনাদের খানায় যথেষ্ট খাবার থাকবে না, বিগত ৪ সপ্তাহে এরকম কোন দুশ্চিন্তা হয়েছিল কী (উত্তর )).");
                 rdoH121a1.requestFocus();
                 return;
-            } else if (!rdoH121b1.isChecked() & !rdoH121b2.isChecked() & !rdoH121b3.isChecked() & !rdoH121b4.isChecked() & secH121b.isShown()) {
+            } else if (!rdoH121b1.isChecked() & !rdoH121b2.isChecked() & !rdoH121b3.isChecked() & secH121b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH121b1.requestFocus();
                 return;
@@ -661,7 +673,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (আপনারা সাধারণত যে ধরনের খাবার খেয়ে থাকেন, গত ৪ সপ্তাহে অভাবের কারনে আপনি বা আপনাদের খানার কোন সদস্য কি  সে ধরনের খাবার খেতে পারেন নি ).");
                 rdoH122a1.requestFocus();
                 return;
-            } else if (!rdoH122b1.isChecked() & !rdoH122b2.isChecked() & !rdoH122b3.isChecked() & !rdoH122b4.isChecked() & secH122b.isShown()) {
+            } else if (!rdoH122b1.isChecked() & !rdoH122b2.isChecked() & !rdoH122b3.isChecked()  & secH122b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH122b1.requestFocus();
                 return;
@@ -669,7 +681,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনি বা আপনাদের খানার কোন সদস্য কি অভাবের কারনে সীমিত রকমের (Variety) খাবার খেতে হয়েছে, অর্থাৎ আগে যত পদ খেতেন গত ৪ সপ্তাহে অভাবের কারনে তার চেয়ে কম পদ খেতে হয়েছে ).");
                 rdoH123a1.requestFocus();
                 return;
-            } else if (!rdoH123b1.isChecked() & !rdoH123b2.isChecked() & !rdoH123b3.isChecked() & !rdoH123b4.isChecked() & secH123b.isShown()) {
+            } else if (!rdoH123b1.isChecked() & !rdoH123b2.isChecked() & !rdoH123b3.isChecked() & secH123b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH123b1.requestFocus();
                 return;
@@ -677,7 +689,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, যে খাবার আপনারা খান না, অভাবের কারনে তা খেয়ে থাকতে হয়েছে কি).");
                 rdoH124a1.requestFocus();
                 return;
-            } else if (!rdoH124b1.isChecked() & !rdoH124b2.isChecked() & !rdoH124b3.isChecked() & !rdoH124b4.isChecked() & secH124b.isShown()) {
+            } else if (!rdoH124b1.isChecked() & !rdoH124b2.isChecked() & !rdoH124b3.isChecked() & secH124b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH124b1.requestFocus();
                 return;
@@ -685,7 +697,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে কি সাধারণত যে খাবার খান, অভাবের কারনে তার থেকে কম খেয়ে থাকতে হয়েছে).");
                 rdoH125a1.requestFocus();
                 return;
-            } else if (!rdoH125b1.isChecked() & !rdoH125b2.isChecked() & !rdoH125b3.isChecked() & !rdoH125b4.isChecked() & secH125b.isShown()) {
+            } else if (!rdoH125b1.isChecked() & !rdoH125b2.isChecked() & !rdoH125b3.isChecked()  & secH125b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH125b1.requestFocus();
                 return;
@@ -693,7 +705,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, অভাবের কারনে কোন বেলা না খেয়ে থাকতে হয়েছে কি).");
                 rdoH126a1.requestFocus();
                 return;
-            } else if (!rdoH126b1.isChecked() & !rdoH126b2.isChecked() & !rdoH126b3.isChecked() & !rdoH126b4.isChecked() & secH126b.isShown()) {
+            } else if (!rdoH126b1.isChecked() & !rdoH126b2.isChecked() & !rdoH126b3.isChecked()  & secH126b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH126b1.requestFocus();
                 return;
@@ -701,7 +713,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে এমনকি হয়েছে যে আপনার খানায় অভাবের কারনে খাওয়ার জন্য কোন খাবার ছিল না).");
                 rdoH127a1.requestFocus();
                 return;
-            } else if (!rdoH127b1.isChecked() & !rdoH127b2.isChecked() & !rdoH127b3.isChecked() & !rdoH127b4.isChecked() & secH127b.isShown()) {
+            } else if (!rdoH127b1.isChecked() & !rdoH127b2.isChecked() & !rdoH127b3.isChecked() & secH127b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH127b1.requestFocus();
                 return;
@@ -709,7 +721,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে).");
                 rdoH128a1.requestFocus();
                 return;
-            } else if (!rdoH128b1.isChecked() & !rdoH128b2.isChecked() & !rdoH128b3.isChecked() & !rdoH128b4.isChecked() & secH128b.isShown()) {
+            } else if (!rdoH128b1.isChecked() & !rdoH128b2.isChecked() & !rdoH128b3.isChecked()  & secH128b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH128b1.requestFocus();
                 return;
@@ -717,7 +729,7 @@ public class HFIAS extends Activity {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে).");
                 rdoH129a1.requestFocus();
                 return;
-            } else if (!rdoH129b1.isChecked() & !rdoH129b2.isChecked() & !rdoH129b3.isChecked() & !rdoH129b4.isChecked() & secH129b.isShown()) {
+            } else if (!rdoH129b1.isChecked() & !rdoH129b2.isChecked() & !rdoH129b3.isChecked()  & secH129b.isShown()) {
                 Connection.MessageBox(HFIAS.this, "Select anyone options from (কত ঘন ঘন এইরূপ ঘটেছে).");
                 rdoH129b1.requestFocus();
                 return;
@@ -736,7 +748,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH121a(d_rdogrpH121a[i]);
             }
 
-            String[] d_rdogrpH121b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH121b = new String[]{"1", "2", "3"};
             objSave.setH121b("");
             for (int i = 0; i < rdogrpH121b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH121b.getChildAt(i);
@@ -750,7 +762,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH122a(d_rdogrpH122a[i]);
             }
 
-            String[] d_rdogrpH122b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH122b = new String[]{"1", "2", "3"};
             objSave.setH122b("");
             for (int i = 0; i < rdogrpH122b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH122b.getChildAt(i);
@@ -764,7 +776,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH123a(d_rdogrpH123a[i]);
             }
 
-            String[] d_rdogrpH123b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH123b = new String[]{"1", "2", "3"};
             objSave.setH123b("");
             for (int i = 0; i < rdogrpH123b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH123b.getChildAt(i);
@@ -778,7 +790,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH124a(d_rdogrpH124a[i]);
             }
 
-            String[] d_rdogrpH124b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH124b = new String[]{"1", "2", "3"};
             objSave.setH124b("");
             for (int i = 0; i < rdogrpH124b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH124b.getChildAt(i);
@@ -792,7 +804,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH125a(d_rdogrpH125a[i]);
             }
 
-            String[] d_rdogrpH125b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH125b = new String[]{"1", "2", "3"};
             objSave.setH125b("");
             for (int i = 0; i < rdogrpH125b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH125b.getChildAt(i);
@@ -806,7 +818,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH126a(d_rdogrpH126a[i]);
             }
 
-            String[] d_rdogrpH126b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH126b = new String[]{"1", "2", "3"};
             objSave.setH126b("");
             for (int i = 0; i < rdogrpH126b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH126b.getChildAt(i);
@@ -820,7 +832,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH127a(d_rdogrpH127a[i]);
             }
 
-            String[] d_rdogrpH127b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH127b = new String[]{"1", "2", "3"};
             objSave.setH127b("");
             for (int i = 0; i < rdogrpH127b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH127b.getChildAt(i);
@@ -834,7 +846,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH128a(d_rdogrpH128a[i]);
             }
 
-            String[] d_rdogrpH128b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH128b = new String[]{"1", "2", "3"};
             objSave.setH128b("");
             for (int i = 0; i < rdogrpH128b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH128b.getChildAt(i);
@@ -848,7 +860,7 @@ public class HFIAS extends Activity {
                 if (rb.isChecked()) objSave.setH129a(d_rdogrpH129a[i]);
             }
 
-            String[] d_rdogrpH129b = new String[]{"1", "2", "3", ""};
+            String[] d_rdogrpH129b = new String[]{"1", "2", "3"};
             objSave.setH129b("");
             for (int i = 0; i < rdogrpH129b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH129b.getChildAt(i);
@@ -892,7 +904,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH121b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH121b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH121b.length; i++) {
                     if (item.getH121b().equals(String.valueOf(d_rdogrpH121b[i]))) {
                         rb = (RadioButton) rdogrpH121b.getChildAt(i);
@@ -906,7 +918,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH122b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH122b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH122b.length; i++) {
                     if (item.getH122b().equals(String.valueOf(d_rdogrpH122b[i]))) {
                         rb = (RadioButton) rdogrpH122b.getChildAt(i);
@@ -920,7 +932,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH123b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH123b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH123b.length; i++) {
                     if (item.getH123b().equals(String.valueOf(d_rdogrpH123b[i]))) {
                         rb = (RadioButton) rdogrpH123b.getChildAt(i);
@@ -934,7 +946,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH124b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH124b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH124b.length; i++) {
                     if (item.getH124b().equals(String.valueOf(d_rdogrpH124b[i]))) {
                         rb = (RadioButton) rdogrpH124b.getChildAt(i);
@@ -948,7 +960,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH125b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH125b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH125b.length; i++) {
                     if (item.getH125b().equals(String.valueOf(d_rdogrpH125b[i]))) {
                         rb = (RadioButton) rdogrpH125b.getChildAt(i);
@@ -962,7 +974,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH126b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH126b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH126b.length; i++) {
                     if (item.getH126b().equals(String.valueOf(d_rdogrpH126b[i]))) {
                         rb = (RadioButton) rdogrpH126b.getChildAt(i);
@@ -976,7 +988,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH127b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH127b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH127b.length; i++) {
                     if (item.getH127b().equals(String.valueOf(d_rdogrpH127b[i]))) {
                         rb = (RadioButton) rdogrpH127b.getChildAt(i);
@@ -990,7 +1002,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH128b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH128b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH128b.length; i++) {
                     if (item.getH128b().equals(String.valueOf(d_rdogrpH128b[i]))) {
                         rb = (RadioButton) rdogrpH128b.getChildAt(i);
@@ -1004,7 +1016,7 @@ public class HFIAS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH129b = new String[]{"1", "2", "3", ""};
+                String[] d_rdogrpH129b = new String[]{"1", "2", "3"};
                 for (int i = 0; i < d_rdogrpH129b.length; i++) {
                     if (item.getH129b().equals(String.valueOf(d_rdogrpH129b[i]))) {
                         rb = (RadioButton) rdogrpH129b.getChildAt(i);

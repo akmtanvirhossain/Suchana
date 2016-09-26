@@ -90,7 +90,7 @@ public class LoginActivity extends Activity {
             if (netwoekAvailable) {
 
                 //Database Structure Update
-                C.Sync_DatabaseStructure(UniqueID);
+               // C.Sync_DatabaseStructure(UniqueID);
 
                 if (!C.Existence("Select * from VillageList limit 1")) {
                     C.Sync_Download("VillageList", UniqueID, "");

@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -99,6 +100,11 @@ public class Agriculture_list extends Activity {
                 }
             });
 
+            Bundle IDbundle = new Bundle();
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
+
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -120,7 +126,7 @@ public class Agriculture_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, SL);
+                    DataSearch(RND, SUCHANAID);
 
                 }
             });
@@ -129,20 +135,27 @@ public class Agriculture_list extends Activity {
             btnAdd.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
-                    Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
-                    IDbundle.putString("Sl", "");
+                    int lineNo = 0;
+                    Cursor cursor = C.GetData("Agriculture", "SUCHANAID",SUCHANAID);
+                    if (cursor.getCount() != 0) {
+                        lineNo = cursor.getCount() + 1;
+                    } else {
+                        lineNo = 1;
+                    }
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd",RND);
+                    IDbundle1.putString("SuchanaID", SUCHANAID);
+                    IDbundle1.putString("Sl", String.valueOf(lineNo));
                     Intent intent = new Intent(getApplicationContext(), Agriculture.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtras(IDbundle);
+                    intent.putExtras(IDbundle1);
                     getApplicationContext().startActivity(intent);
 
                 }
             });
 
 
-            DataSearch(RND, SUCHANAID, SL);
+            DataSearch(RND, SUCHANAID);
 
 
         } catch (Exception e) {
@@ -151,11 +164,11 @@ public class Agriculture_list extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String Sl) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             Agriculture_DataModel d = new Agriculture_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and Sl='" + Sl + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<Agriculture_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -168,6 +181,7 @@ public class Agriculture_list extends Activity {
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
+                map.put("MSlNo", item.getMSlNo());
                 map.put("H151", item.getH151());
                 map.put("Sl", item.getSl());
                 map.put("H152a", item.getH152a());
@@ -230,6 +244,7 @@ public class Agriculture_list extends Activity {
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
+            final TextView MSlNo = (TextView) convertView.findViewById(R.id.MSlNo);
             final TextView H151 = (TextView) convertView.findViewById(R.id.H151);
             final TextView Sl = (TextView) convertView.findViewById(R.id.Sl);
             final TextView H152a = (TextView) convertView.findViewById(R.id.H152a);
@@ -254,6 +269,7 @@ public class Agriculture_list extends Activity {
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
+            MSlNo.setText(o.get("MSlNo"));
             H151.setText(o.get("H151"));
             Sl.setText(o.get("Sl"));
             H152a.setText(o.get("H152a"));

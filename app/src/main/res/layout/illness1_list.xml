@@ -76,7 +76,17 @@
         android:layout_height="1dip"
         android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
-
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/illness1heading" />
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -109,4 +119,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>

@@ -21,127 +21,133 @@
 
         <TextView
             android:id="@+id/SuchanaID"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/MSlNo"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H151"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/Sl"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152a"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152bOth"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152b"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152c"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152d1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152d2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152e1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152e2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152f"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152g"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152h1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152h2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152i1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152i2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152j1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152j2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152k1"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H152k2"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
     </LinearLayout>

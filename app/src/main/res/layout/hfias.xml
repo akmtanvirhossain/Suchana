@@ -104,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
@@ -251,13 +251,6 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH121b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -371,13 +364,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH122b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -491,13 +478,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH123b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -611,13 +592,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH124b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -731,13 +706,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH125b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -851,13 +820,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH126b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -971,13 +934,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH127b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -1091,13 +1048,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH128b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -1211,13 +1162,7 @@
                         android:text=" প্রায়ই"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoH129b4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textSize="20sp" />
+
                 </RadioGroup>
             </LinearLayout>
 
@@ -1238,7 +1183,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খুবই কম-1-2  বার  গত ৪ সপ্তাহে  ,মাঝে মধ্যে -3-10 গত ৪ সপ্তাহে  ,প্রায়ই-10  বেশী বার  গত ৪ সপ্তাহে"
+                    android:text=""
                     android:textSize="20sp" />
             </LinearLayout>
 

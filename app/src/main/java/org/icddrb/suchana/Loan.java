@@ -65,7 +65,7 @@ public class Loan extends Activity {
     LinearLayout secMSlNo;
     View lineMSlNo;
     TextView VlblMSlNo;
-    EditText txtMSlNo;
+    Spinner spnMSlNo;
     LinearLayout secH111;
     View lineH111;
     TextView VlblH111;
@@ -184,14 +184,18 @@ public class Loan extends Activity {
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+
+
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
-            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
             secH111 = (LinearLayout) findViewById(R.id.secH111);
             lineH111 = (View) findViewById(R.id.lineH111);
             VlblH111 = (TextView) findViewById(R.id.VlblH111);
@@ -213,7 +217,7 @@ public class Loan extends Activity {
                     if (rbData.equalsIgnoreCase("0")) {
                         secH112.setVisibility(View.GONE);
                         lineH112.setVisibility(View.GONE);
-                        txtH112.setText("");
+                        //txtH112.setText("");
                         secH113.setVisibility(View.GONE);
                         lineH113.setVisibility(View.GONE);
                         spnH113.setSelection(0);
@@ -241,6 +245,9 @@ public class Loan extends Activity {
                         secH117.setVisibility(View.GONE);
                         lineH117.setVisibility(View.GONE);
                         rdogrpH117.clearCheck();
+                        secH118.setVisibility(View.GONE);
+                        lineH118.setVisibility(View.GONE);
+                        rdogrpH118.clearCheck();
                     } else {
                         secH112.setVisibility(View.VISIBLE);
                         lineH112.setVisibility(View.VISIBLE);
@@ -262,6 +269,8 @@ public class Loan extends Activity {
                         lineH116.setVisibility(View.VISIBLE);
                         secH117.setVisibility(View.VISIBLE);
                         lineH117.setVisibility(View.VISIBLE);
+                        secH118.setVisibility(View.VISIBLE);
+                        lineH118.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -273,6 +282,14 @@ public class Loan extends Activity {
             lineH112 = (View) findViewById(R.id.lineH112);
             VlblH112 = (TextView) findViewById(R.id.VlblH112);
             txtH112 = (EditText) findViewById(R.id.txtH112);
+
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+            txtH112.setText(H112);
+            txtH112.setEnabled(false);
+
             secH113 = (LinearLayout) findViewById(R.id.secH113);
             lineH113 = (View) findViewById(R.id.lineH113);
             VlblH113 = (TextView) findViewById(R.id.VlblH113);
@@ -304,39 +321,13 @@ public class Loan extends Activity {
                     if (spnH113.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH113.getSelectedItem().toString(), "-");
                     if (spnData.equalsIgnoreCase("15")) {
-                        secH113X.setVisibility(View.GONE);
-                        lineH113X.setVisibility(View.GONE);
-                        secH114a.setVisibility(View.GONE);
-                        lineH114a.setVisibility(View.GONE);
-                        secH114b.setVisibility(View.GONE);
-                        lineH114b.setVisibility(View.GONE);
-                        secH114c.setVisibility(View.GONE);
-                        lineH114c.setVisibility(View.GONE);
-                        secH114X.setVisibility(View.GONE);
-                        lineH114X.setVisibility(View.GONE);
-                        secH115.setVisibility(View.GONE);
-                        lineH115.setVisibility(View.GONE);
-                        secH116.setVisibility(View.GONE);
-                        lineH116.setVisibility(View.GONE);
-                        secH117.setVisibility(View.GONE);
-                        lineH117.setVisibility(View.GONE);
-                    } else {
+                        //secH113X.setVisibility(View);
                         secH113X.setVisibility(View.VISIBLE);
                         lineH113X.setVisibility(View.VISIBLE);
-                        secH114a.setVisibility(View.VISIBLE);
-                        lineH114a.setVisibility(View.VISIBLE);
-                        secH114b.setVisibility(View.VISIBLE);
-                        lineH114b.setVisibility(View.VISIBLE);
-                        secH114c.setVisibility(View.VISIBLE);
-                        lineH114c.setVisibility(View.VISIBLE);
-                        secH114X.setVisibility(View.VISIBLE);
-                        lineH114X.setVisibility(View.VISIBLE);
-                        secH115.setVisibility(View.VISIBLE);
-                        lineH115.setVisibility(View.VISIBLE);
-                        secH116.setVisibility(View.VISIBLE);
-                        lineH116.setVisibility(View.VISIBLE);
-                        secH117.setVisibility(View.VISIBLE);
-                        lineH117.setVisibility(View.VISIBLE);
+                    } else {
+                        secH113X.setVisibility(View.GONE);
+                        lineH113X.setVisibility(View.GONE);
+                        txtH113X.setText(null);
                     }
                 }
 
@@ -394,15 +385,17 @@ public class Loan extends Activity {
                         lineH114b.setVisibility(View.GONE);
                         secH114c.setVisibility(View.GONE);
                         lineH114c.setVisibility(View.GONE);
-                        secH114X.setVisibility(View.GONE);
-                        lineH114X.setVisibility(View.GONE);
+                        secH114X.setVisibility(View.VISIBLE);
+                        lineH114X.setVisibility(View.VISIBLE);
+
                     } else {
                         secH114b.setVisibility(View.VISIBLE);
                         lineH114b.setVisibility(View.VISIBLE);
                         secH114c.setVisibility(View.VISIBLE);
                         lineH114c.setVisibility(View.VISIBLE);
-                        secH114X.setVisibility(View.VISIBLE);
-                        lineH114X.setVisibility(View.VISIBLE);
+                        secH114X.setVisibility(View.GONE);
+                        lineH114X.setVisibility(View.GONE);
+                       txtH114X.setText(null);
                     }
                 }
 
@@ -454,13 +447,13 @@ public class Loan extends Activity {
                     if (spnData.equalsIgnoreCase("26")) {
                         secH114c.setVisibility(View.GONE);
                         lineH114c.setVisibility(View.GONE);
-                        secH114X.setVisibility(View.GONE);
-                        lineH114X.setVisibility(View.GONE);
+                        secH114X.setVisibility(View.VISIBLE);
+                        lineH114X.setVisibility(View.VISIBLE);
+
                     } else {
                         secH114c.setVisibility(View.VISIBLE);
                         lineH114c.setVisibility(View.VISIBLE);
-                        secH114X.setVisibility(View.VISIBLE);
-                        lineH114X.setVisibility(View.VISIBLE);
+
                     }
                 }
 
@@ -510,11 +503,12 @@ public class Loan extends Activity {
                     if (spnH114c.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-");
                     if (spnData.equalsIgnoreCase("26")) {
-                        secH114X.setVisibility(View.GONE);
-                        lineH114X.setVisibility(View.GONE);
-                    } else {
                         secH114X.setVisibility(View.VISIBLE);
                         lineH114X.setVisibility(View.VISIBLE);
+
+                    } else {
+                        secH114X.setVisibility(View.GONE);
+                        lineH114X.setVisibility(View.GONE);
                     }
                 }
 
@@ -551,7 +545,10 @@ public class Loan extends Activity {
 
             rdoH1181 = (RadioButton) findViewById(R.id.rdoH1181);
             rdoH1182 = (RadioButton) findViewById(R.id.rdoH1182);
-
+            secH113X.setVisibility(View.GONE);
+            lineH113X.setVisibility(View.GONE);
+            secH114X.setVisibility(View.GONE);
+            lineH114X.setVisibility(View.GONE);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -582,15 +579,17 @@ public class Loan extends Activity {
                 Connection.MessageBox(Loan.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(Loan.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
+               // txtMSlNo.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
-                Connection.MessageBox(Loan.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
-                txtMSlNo.requestFocus();
-                return;
-            } else if (!rdoH1111.isChecked() & !rdoH1112.isChecked() & secH111.isShown()) {
+            }
+            //else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
+             //   Connection.MessageBox(Loan.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
+             //   txtMSlNo.requestFocus();
+             //   return;
+            //}
+            else if (!rdoH1111.isChecked() & !rdoH1112.isChecked() & secH111.isShown()) {
                 Connection.MessageBox(Loan.this, "Select anyone options from (আপনি অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে?).");
                 rdoH1111.requestFocus();
                 return;
@@ -654,7 +653,7 @@ public class Loan extends Activity {
             Loan_DataModel objSave = new Loan_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
             String[] d_rdogrpH111 = new String[]{"1", "0"};
             objSave.setH111("");
             for (int i = 0; i < rdogrpH111.getChildCount(); i++) {
@@ -721,7 +720,7 @@ public class Loan extends Activity {
             for (Loan_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+              //  txtMSlNo.setText(item.getMSlNo());
                 String[] d_rdogrpH111 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH111.length; i++) {
                     if (item.getH111().equals(String.valueOf(d_rdogrpH111[i]))) {
