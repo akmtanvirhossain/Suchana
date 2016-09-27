@@ -367,4 +367,21 @@ public class AssetB_DataModel {
         cur.close();
         return data;
     }
+
+    public List<AssetB_DataModel> SelectH41a(Context context, String SQL) {
+        Connection C = new Connection(context);
+        List<AssetB_DataModel> data = new ArrayList<AssetB_DataModel>();
+        AssetB_DataModel d = new AssetB_DataModel();
+        Cursor cur = C.ReadData(SQL);
+
+        cur.moveToFirst();
+        while (!cur.isAfterLast()) {
+            d = new AssetB_DataModel();
+            d._H41a = cur.getString(cur.getColumnIndex("H41a"));
+            data.add(d);
+            cur.moveToNext();
+        }
+        cur.close();
+        return data;
+    }
 }

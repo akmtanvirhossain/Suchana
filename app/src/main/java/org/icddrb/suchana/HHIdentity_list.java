@@ -105,7 +105,7 @@ public class HHIdentity_list extends Activity {
             StartTime = g.CurrentTime24();
 
             TableName = "HHIdentity";
-            lblHeading = (TextView)findViewById(R.id.lblHeading);
+           /* lblHeading = (TextView)findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -126,7 +126,7 @@ public class HHIdentity_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -137,7 +137,7 @@ public class HHIdentity_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            startActivity(new Intent(HHIdentity_list.this, MainMenu1.class));
                         }});
                     adb.show();
                 }});
