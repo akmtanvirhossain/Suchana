@@ -104,6 +104,7 @@ public class MainMenu extends Activity {
                                         tableList.add("Illness2");
                                         tableList.add("Land");
                                         tableList.add("Loan");
+                                        tableList.add("HFIAS");
                                         tableList.add("LoginUser");
                                         tableList.add("Member");
                                         tableList.add("NGOWork");
