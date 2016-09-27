@@ -257,7 +257,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(HHIdentity.this, MainMenu.class));
+                            startActivity(new Intent(HHIdentity.this, HHIdentity_list.class));
                         }
                     });
                     adb.show();

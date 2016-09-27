@@ -49,6 +49,7 @@ public class Land_list extends Activity {
     Button btnAdd;
     Button btnRefresh;
     String StartTime;
+    Bundle IDbundle;
     private int hour;
     private int minute;
     private int mDay;
@@ -73,7 +74,10 @@ public class Land_list extends Activity {
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
-
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
+            SLNO = IDbundle.getString("SlNo");
             TableName = "Land";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
@@ -108,13 +112,45 @@ public class Land_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            //IDBundle.putString("H21", txtH21.getText().toString());
+                            startActivity(new Intent(Land_list.this, AssetNB.class).putExtras(IDBundle));
                         }
                     });
                     adb.show();
                 }
             });
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (dataList.size() != 0) {
+                        AlertDialog.Builder adb = new AlertDialog.Builder(Land_list.this);
+                        adb.setTitle("সম্পদ নেই! ");
+                        adb.setMessage("কোন সম্পদ ইনপুট দেয়া হয় নাই। পরের ফর্ম এ যেতে চান ? [Yes/No]?");
+                        adb.setNegativeButton("No", null);
+                        adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Bundle IDBundle = new Bundle();
+                                IDBundle.putString("Rnd", RND);
+                                IDBundle.putString("SuchanaID", SUCHANAID);
+                                //IDBundle.putString("H21", txtH21.getText().toString());
+                                startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
+                            }
+                        });
+                        adb.show();
 
+                    } else {
+                        Bundle IDBundle = new Bundle();
+                        IDBundle.putString("Rnd", RND);
+                        IDBundle.putString("SuchanaID", SUCHANAID);
+                        //IDBundle.putString("H21", txtH21.getText().toString());
+                        startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
+
+                    }
+                }
+            });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);
             btnRefresh.setOnClickListener(new View.OnClickListener() {
 
@@ -155,7 +191,7 @@ public class Land_list extends Activity {
         try {
 
             Land_DataModel d = new Land_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SlNo='" + SlNo + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<Land_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -168,9 +204,9 @@ public class Land_list extends Activity {
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
+                map.put("MSlNo", item.getMSlNo());
                 map.put("SlNo", item.getSlNo());
                 map.put("H5", item.getH5());
-                map.put("H5X", item.getH5X());
                 map.put("H5a", item.getH5a());
                 map.put("H5aX", item.getH5aX());
                 map.put("H5b", item.getH5b());
@@ -224,34 +260,45 @@ public class Land_list extends Activity {
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
             final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
             final TextView H5 = (TextView) convertView.findViewById(R.id.H5);
-            final TextView H5X = (TextView) convertView.findViewById(R.id.H5X);
-            final TextView H5a = (TextView) convertView.findViewById(R.id.H5a);
-            final TextView H5aX = (TextView) convertView.findViewById(R.id.H5aX);
-            final TextView H5b = (TextView) convertView.findViewById(R.id.H5b);
-            final TextView H5c = (TextView) convertView.findViewById(R.id.H5c);
-            final TextView H5d = (TextView) convertView.findViewById(R.id.H5d);
-            final TextView H5e = (TextView) convertView.findViewById(R.id.H5e);
-            final TextView H5f = (TextView) convertView.findViewById(R.id.H5f);
-            final TextView H5g = (TextView) convertView.findViewById(R.id.H5g);
-            final TextView H5hY = (TextView) convertView.findViewById(R.id.H5hY);
-            final TextView H5hM = (TextView) convertView.findViewById(R.id.H5hM);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
             SlNo.setText(o.get("SlNo"));
-            H5.setText(o.get("H5"));
-            H5X.setText(o.get("H5X"));
-            H5a.setText(o.get("H5a"));
-            H5aX.setText(o.get("H5aX"));
-            H5b.setText(o.get("H5b"));
-            H5c.setText(o.get("H5c"));
-            H5d.setText(o.get("H5d"));
-            H5e.setText(o.get("H5e"));
-            H5f.setText(o.get("H5f"));
-            H5g.setText(o.get("H5g"));
-            H5hY.setText(o.get("H5hY"));
-            H5hM.setText(o.get("H5hM"));
+
+            switch (Integer.valueOf(o.get("H5"))) {
+                case 1:
+                    H5.setText("1-ভিটেমাটি");
+                    break;
+                case 2:
+                    H5.setText("2-চাষযোগ্য বা আবাদী জমি");
+                    break;
+                case 3:
+                    H5.setText("3-গবাদি পশুর চারণের উপযোগী");
+                    break;
+                case 4:
+                    H5.setText("4-ভূমিঝোপ/জংলা জমি");
+                    break;
+                case 5:
+                    H5.setText("5-চাষযোগ্য পুকুর");
+                    break;
+                case 6:
+                    H5.setText("6-পরিত্যক্ত পুকুর");
+                    break;
+                case 7:
+                    H5.setText("7-বর্জ্য বা অনাবাদি জমি");
+                    break;
+                case 8:
+                    H5.setText("8-নদীগর্ভের বা হাওরের জমি");
+                    break;
+                case 9:
+                    H5.setText("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
+                    break;
+                default:
+                    H5.setText("");
+                    break;
+
+            }
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

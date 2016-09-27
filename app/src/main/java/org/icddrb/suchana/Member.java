@@ -276,10 +276,6 @@ public class Member extends Activity {
                 }
             });
 
-
-
-
-
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);

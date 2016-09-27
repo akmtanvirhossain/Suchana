@@ -92,7 +92,25 @@ public class MainMenu extends Activity {
 
                                         List<String> tableList = new ArrayList<String>();
                                         tableList.add("Village");
-
+                                        tableList.add("AssetB");
+                                        tableList.add("AssetNB");
+                                        tableList.add("Careseek");
+                                        tableList.add("Destruction1");
+                                        tableList.add("Destruction2");
+                                        tableList.add("HDDS");
+                                        tableList.add("HHIdentity");
+                                        tableList.add("IGA");
+                                        tableList.add("Illness1");
+                                        tableList.add("Illness2");
+                                        tableList.add("Land");
+                                        tableList.add("Loan");
+                                        tableList.add("LoginUser");
+                                        tableList.add("Member");
+                                        tableList.add("NGOWork");
+                                        tableList.add("Savings");
+                                        tableList.add("SES");
+                                        tableList.add("UserList");
+                                        tableList.add("VillageList");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 
