@@ -127,8 +127,12 @@ public class MainMenu1 extends Activity {
             cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                    //   startActivity(f1);
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", "");
+                    IDBundle.putString("SuchanaID", "");
+                    Intent f1 = new Intent(getApplicationContext(), HDDS.class);
+                    f1.putExtras(IDBundle);
+                    startActivity(f1);
                 }
             });
             cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);

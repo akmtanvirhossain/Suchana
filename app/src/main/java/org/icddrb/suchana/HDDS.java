@@ -5,11 +5,10 @@ package org.icddrb.suchana;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -99,12 +98,34 @@ public class HDDS extends Activity {
     RadioButton rdoH7c2;
     String StartTime;
     Bundle IDbundle;
+    Button buttonAssetType01;
+    Button buttonAssetType02;
+    Button buttonAssetType03;
+    Button buttonAssetType04;
+    Button buttonAssetType05;
+    Button buttonAssetType06;
+    Button buttonAssetType07;
+    Button buttonAssetType08;
+    Button buttonAssetType09;
+    Button buttonAssetType10;
+    Button buttonAssetType11;
+    Button buttonAssetType12;
+    Button buttonAssetType13;
+    Button buttonAssetType14;
+    Button buttonAssetType15;
+    Button buttonAssetType16;
+    Button buttonAssetType17;
+    Button buttonAssetType18;
+    Button buttonAssetType19;
+    Button buttonAssetType20;
+    Button cmdSave;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
-
+    private boolean allItemsCompleted = false;
+    private View pressedButton;
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -126,7 +147,7 @@ public class HDDS extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            H7 = IDbundle.getString("H7");
+            //  H7 = IDbundle.getString("H7");
 
             TableName = "HDDS";
 
@@ -141,19 +162,26 @@ public class HDDS extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(HDDS.this);
-                    adb.setTitle("Close");
-                    adb.setMessage("Do you want to close this form[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    });
-                    adb.show();
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+
+                    startActivity(new Intent(HDDS.this, Land.class).putExtras(IDBundle));
                 }
             });
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    DataSave();
+                    if (allItemsCompleted) {
+                        Bundle IDBundle = new Bundle();
+                        IDBundle.putString("Rnd", txtRnd.getText().toString());
+                        IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                        //  IDBundle.putString("H41a", "");
+                        startActivity(new Intent(HDDS.this, HDDS.class).putExtras(IDBundle));
+                    }
+                }
+            });
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -163,8 +191,216 @@ public class HDDS extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+
+
             seclblH7 = (LinearLayout) findViewById(R.id.seclblH7);
             seclblH71 = (LinearLayout) findViewById(R.id.seclblH71);
+
+            buttonAssetType01 = (Button) findViewById(R.id.buttonAssetType01);
+            buttonAssetType02 = (Button) findViewById(R.id.buttonAssetType02);
+            buttonAssetType03 = (Button) findViewById(R.id.buttonAssetType03);
+            buttonAssetType04 = (Button) findViewById(R.id.buttonAssetType04);
+            buttonAssetType05 = (Button) findViewById(R.id.buttonAssetType05);
+            buttonAssetType06 = (Button) findViewById(R.id.buttonAssetType06);
+            buttonAssetType07 = (Button) findViewById(R.id.buttonAssetType07);
+            buttonAssetType08 = (Button) findViewById(R.id.buttonAssetType08);
+            buttonAssetType09 = (Button) findViewById(R.id.buttonAssetType09);
+            buttonAssetType10 = (Button) findViewById(R.id.buttonAssetType10);
+            buttonAssetType11 = (Button) findViewById(R.id.buttonAssetType11);
+            buttonAssetType12 = (Button) findViewById(R.id.buttonAssetType12);
+            buttonAssetType13 = (Button) findViewById(R.id.buttonAssetType13);
+            buttonAssetType14 = (Button) findViewById(R.id.buttonAssetType14);
+            buttonAssetType15 = (Button) findViewById(R.id.buttonAssetType15);
+            buttonAssetType16 = (Button) findViewById(R.id.buttonAssetType16);
+            buttonAssetType17 = (Button) findViewById(R.id.buttonAssetType17);
+            buttonAssetType18 = (Button) findViewById(R.id.buttonAssetType18);
+            buttonAssetType19 = (Button) findViewById(R.id.buttonAssetType19);
+            buttonAssetType20 = (Button) findViewById(R.id.buttonAssetType20);
+            buttonColor();
+
+            buttonAssetType01.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+
+
+                }
+            });
+            buttonAssetType02.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType03.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType04.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType05.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType06.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType07.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType08.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType09.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType12.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType13.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType14.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType15.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType16.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType17.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType18.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType19.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType20.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH7.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            
             secH7 = (LinearLayout) findViewById(R.id.secH7);
             lineH7 = (View) findViewById(R.id.lineH7);
             VlblH7 = (TextView) findViewById(R.id.VlblH7);
@@ -194,7 +430,19 @@ public class HDDS extends Activity {
             listH7.add("20-বিবিধ (পানীয়)");
             ArrayAdapter<String> adptrH7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH7);
             spnH7.setAdapter(adptrH7);
+            spnH7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH7.getSelectedItem().toString().length() == 0) return;
 
+                    String spnData = Connection.SelectedSpinnerValue(spnH7.getSelectedItem().toString(), "-");
+                    DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
             secH7a = (LinearLayout) findViewById(R.id.secH7a);
             lineH7a = (View) findViewById(R.id.lineH7a);
             VlblH7a = (TextView) findViewById(R.id.VlblH7a);
@@ -226,6 +474,7 @@ public class HDDS extends Activity {
                         secH7b4.setVisibility(View.GONE);
                         lineH7b4.setVisibility(View.GONE);
                         chkH7b4.setChecked(false);
+
                     } else {
                         secH7b1.setVisibility(View.VISIBLE);
                         lineH7b1.setVisibility(View.VISIBLE);
@@ -235,6 +484,7 @@ public class HDDS extends Activity {
                         lineH7b3.setVisibility(View.VISIBLE);
                         secH7b4.setVisibility(View.VISIBLE);
                         lineH7b4.setVisibility(View.VISIBLE);
+
                     }
                 }
 
@@ -266,16 +516,19 @@ public class HDDS extends Activity {
             rdoH7c1 = (RadioButton) findViewById(R.id.rdoH7c1);
             rdoH7c2 = (RadioButton) findViewById(R.id.rdoH7c2);
 
+            DataSearch(RND, SUCHANAID, H7);
 
-            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
                 }
             });
         } catch (Exception e) {
-            Connection.MessageBox(HDDS.this, e.getMessage());
-            return;
+
+            throw e;
+            // Connection.MessageBox(HDDS.this, e.getMessage());
+            //return;
         }
     }
 
@@ -342,9 +595,18 @@ public class HDDS extends Activity {
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));
 
+
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(HDDS.this, "Saved Successfully");
+                buttonColor();
+                if (allItemsCompleted) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    // IDBundle.putString("H41a", "");
+                    startActivity(new Intent(HDDS.this, HDDS.class).putExtras(IDBundle));
+                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                }
             } else {
                 Connection.MessageBox(HDDS.this, status);
                 return;
@@ -355,12 +617,117 @@ public class HDDS extends Activity {
         }
     }
 
+    private void buttonColor() {
+        buttonAssetType01.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType02.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType03.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType04.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType05.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType06.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType07.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType08.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType09.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType10.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType11.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType12.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType13.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType14.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType15.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType16.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType17.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType18.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType19.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType20.setBackgroundColor(Color.LTGRAY);
+
+        HDDS_DataModel d = new HDDS_DataModel();
+        String SQL = "Select H7 from " + TableName + "  Where Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+        List<HDDS_DataModel> data = d.SelectH7(this, SQL);
+        if (data.size() == 0) {
+            return;
+        }
+        if (data.size() == 20) {
+            allItemsCompleted = true;
+        } else if (data.size() == 19) {
+            cmdSave.setText("Save -> Continue");
+        } else {
+            cmdSave.setText("SAVE");
+        }
+
+        for (HDDS_DataModel item : data) {
+
+            int code = Integer.valueOf(item.getH7());
+            int color = Color.GREEN;
+
+            if (code == 1) {
+                buttonAssetType01.setBackgroundColor(color);
+            }
+
+            if (code == 2) {
+                buttonAssetType02.setBackgroundColor(color);
+            }
+            if (code == 3) {
+                buttonAssetType03.setBackgroundColor(color);
+            }
+            if (code == 4) {
+                buttonAssetType04.setBackgroundColor(color);
+            }
+            if (code == 5) {
+                buttonAssetType05.setBackgroundColor(color);
+            }
+            if (code == 6) {
+                buttonAssetType06.setBackgroundColor(color);
+            }
+            if (code == 7) {
+                buttonAssetType07.setBackgroundColor(color);
+            }
+            if (code == 8) {
+                buttonAssetType08.setBackgroundColor(color);
+            }
+            if (code == 9) {
+                buttonAssetType09.setBackgroundColor(color);
+            }
+            if (code == 10) {
+                buttonAssetType10.setBackgroundColor(color);
+            }
+            if (code == 11) {
+                buttonAssetType11.setBackgroundColor(color);
+            }
+            if (code == 12) {
+                buttonAssetType12.setBackgroundColor(color);
+            }
+            if (code == 13) {
+                buttonAssetType13.setBackgroundColor(color);
+            }
+            if (code == 14) {
+                buttonAssetType14.setBackgroundColor(color);
+            }
+            if (code == 15) {
+                buttonAssetType15.setBackgroundColor(color);
+            }
+            if (code == 16) {
+                buttonAssetType16.setBackgroundColor(color);
+            }
+            if (code == 17) {
+                buttonAssetType17.setBackgroundColor(color);
+            }
+            if (code == 18) {
+                buttonAssetType18.setBackgroundColor(color);
+            }
+            if (code == 19) {
+                buttonAssetType19.setBackgroundColor(color);
+            }
+            if (code == 20) {
+                buttonAssetType20.setBackgroundColor(color);
+            }
+
+        }
+    }
     private void DataSearch(String Rnd, String SuchanaID, String H7) {
         try {
 
             RadioButton rb;
             HDDS_DataModel d = new HDDS_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H7='" + H7 + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<HDDS_DataModel> data = d.SelectAll(this, SQL);
             for (HDDS_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
@@ -404,6 +771,68 @@ public class HDDS extends Activity {
         } catch (Exception e) {
             Connection.MessageBox(HDDS.this, e.getMessage());
             return;
+        }
+    }
+
+    private void DataSearchPartial(String Rnd, String SuchanaID, String H7) {
+        try {
+
+            RadioButton rb;
+            HDDS_DataModel d = new HDDS_DataModel();
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H7='" + H7 + "'";
+            List<HDDS_DataModel> data = d.SelectAll(this, SQL);
+            for (HDDS_DataModel item : data) {
+                // txtRnd.setText(item.getRnd());
+                //   txtSuchanaID.setText(item.getSuchanaID());
+                //   spnH7.setSelection(Global.SpinnerItemPositionAnyLength(spnH7, item.getH7()));
+                String[] d_rdogrpH7a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH7a.length; i++) {
+                    if (item.getH7a().equals(String.valueOf(d_rdogrpH7a[i]))) {
+                        rb = (RadioButton) rdogrpH7a.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                if (item.getH7b1().equals("1")) {
+                    chkH7b1.setChecked(true);
+                } else if (item.getH7b1().equals("2")) {
+                    chkH7b1.setChecked(false);
+                }
+                if (item.getH7b2().equals("1")) {
+                    chkH7b2.setChecked(true);
+                } else if (item.getH7b2().equals("2")) {
+                    chkH7b2.setChecked(false);
+                }
+                if (item.getH7b3().equals("1")) {
+                    chkH7b3.setChecked(true);
+                } else if (item.getH7b3().equals("2")) {
+                    chkH7b3.setChecked(false);
+                }
+                if (item.getH7b4().equals("1")) {
+                    chkH7b4.setChecked(true);
+                } else if (item.getH7b4().equals("2")) {
+                    chkH7b4.setChecked(false);
+                }
+                String[] d_rdogrpH7c = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH7c.length; i++) {
+                    if (item.getH7c().equals(String.valueOf(d_rdogrpH7c[i]))) {
+                        rb = (RadioButton) rdogrpH7c.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+
+                if (data.size() == 0) {
+                    rdogrpH7a.clearCheck();
+                    chkH7b1.setChecked(false);
+                    chkH7b2.setChecked(false);
+                    chkH7b3.setChecked(false);
+                    chkH7b4.setChecked(false);
+                    rdogrpH7c.clearCheck();
+                }
+            }
+        } catch (Exception e) {
+            throw e;
+//            Connection.MessageBox(HDDS.this, e.getMessage());
+            //          return;
         }
     }
 
