@@ -16,12 +16,14 @@ public class Illness2_DataModel {
     private String _SuchanaID = "";
     private String _H172 = "";
     private String _SlNo = "";
+    private String _MSlNo = "";
     private String _H172a = "";
     private String _H172aX = "";
     private String _H172b = "";
     private String _H172cX = "";
     private String _H172cY = "";
     private String _H172cM = "";
+    private String _H172d = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -61,6 +63,13 @@ public class Illness2_DataModel {
 
     public void setSlNo(String newValue) {
         _SlNo = newValue;
+    }
+    public String getMSlNo() {
+        return _MSlNo;
+    }
+
+    public void setMSlNo(String newValue) {
+        _MSlNo = newValue;
     }
 
     public String getH172a() {
@@ -110,6 +119,13 @@ public class Illness2_DataModel {
     public void setH172cM(String newValue) {
         _H172cM = newValue;
     }
+    public String getH172d() {
+        return _H172d;
+    }
+
+    public void setH172d(String newValue) {
+        _H172d = newValue;
+    }
 
     public void setStartTime(String newValue) {
         _StartTime = newValue;
@@ -144,7 +160,7 @@ public class Illness2_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' "))
+            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo +"'"))
                 response = UpdateData(context);
             else
                 response = SaveData(context);
@@ -159,7 +175,7 @@ public class Illness2_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H172,SlNo,H172a,H172aX,H172b,H172cX,H172cY,H172cM,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H172 + "', '" + _SlNo + "', '" + _H172a + "', '" + _H172aX + "', '" + _H172b + "', '" + _H172cX + "', '" + _H172cY + "', '" + _H172cM + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H172,SlNo,MSlNo,H172a,H172aX,H172b,H172cX,H172cY,H172cM,H172d,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H172 + "', '" + _SlNo + "','" + _MSlNo + "', '" + _H172a + "', '" + _H172aX + "', '" + _H172b + "', '" + _H172cX + "', '" + _H172cY + "', '" + _H172cM + "','" + _H172d + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -172,7 +188,7 @@ public class Illness2_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H172 = '" + _H172 + "',SlNo = '" + _SlNo + "',H172a = '" + _H172a + "',H172aX = '" + _H172aX + "',H172b = '" + _H172b + "',H172cX = '" + _H172cX + "',H172cY = '" + _H172cY + "',H172cM = '" + _H172cM + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H172 = '" + _H172 + "',SlNo = '" + _SlNo + "',MSlNo='" + _MSlNo + "',H172a = '" + _H172a + "',H172aX = '" + _H172aX + "',H172b = '" + _H172b + "',H172cX = '" + _H172cX + "',H172cY = '" + _H172cY + "',H172cM = '" + _H172cM + "',H172d = '" + _H172d + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'  and SlNo='" + _SlNo + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -194,12 +210,14 @@ public class Illness2_DataModel {
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._H172 = cur.getString(cur.getColumnIndex("H172"));
             d._SlNo = cur.getString(cur.getColumnIndex("SlNo"));
+            d._MSlNo = cur.getString(cur.getColumnIndex("MSlNo"));
             d._H172a = cur.getString(cur.getColumnIndex("H172a"));
             d._H172aX = cur.getString(cur.getColumnIndex("H172aX"));
             d._H172b = cur.getString(cur.getColumnIndex("H172b"));
             d._H172cX = cur.getString(cur.getColumnIndex("H172cX"));
             d._H172cY = cur.getString(cur.getColumnIndex("H172cY"));
             d._H172cM = cur.getString(cur.getColumnIndex("H172cM"));
+            d._H172d = cur.getString(cur.getColumnIndex("H172d"));
             data.add(d);
 
             cur.moveToNext();
