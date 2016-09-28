@@ -88,14 +88,12 @@ public class LoginActivity extends Activity {
 
             //**************************************************************************************
             if (netwoekAvailable) {
-
                 //Database Structure Update
                 C.Sync_DatabaseStructure(UniqueID);
 
                 if (!C.Existence("Select * from VillageList limit 1")) {
                     C.Sync_Download("VillageList", UniqueID, "");
                 }
-
             }
             //**************************************************************************************
 
@@ -162,7 +160,7 @@ public class LoginActivity extends Activity {
                                     public void run() {
                                         try {
                                             finish();
-                                            Intent f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                                            Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                             startActivity(f1);
                                         } catch (Exception e) {
 
@@ -178,7 +176,7 @@ public class LoginActivity extends Activity {
                                 public void run() {
                                     try {
                                         finish();
-                                        Intent f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                                        Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                         startActivity(f1);
                                     } catch (Exception e) {
 
@@ -196,7 +194,7 @@ public class LoginActivity extends Activity {
                             public void run() {
                                 try {
                                     finish();
-                                    Intent f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                                    Intent f1 = new Intent(getApplicationContext(), MainMenu.class);
                                     startActivity(f1);
                                 } catch (Exception e) {
 

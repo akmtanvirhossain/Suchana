@@ -105,8 +105,8 @@ public class HHIdentity_list extends Activity {
             StartTime = g.CurrentTime24();
 
             TableName = "HHIdentity";
-           /* lblHeading = (TextView)findViewById(R.id.lblHeading);
-            lblHeading.setOnTouchListener(new View.OnTouchListener() {
+            lblHeading = (TextView) findViewById(R.id.lblHeading);
+            /*lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     final int DRAWABLE_RIGHT  = 2;
@@ -137,8 +137,8 @@ public class HHIdentity_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(HHIdentity_list.this, UpdateMenu.class));
                             finish();
+                            startActivity(new Intent(HHIdentity_list.this, MainMenu.class));
                         }});
                     adb.show();
                 }});
@@ -232,7 +232,7 @@ public class HHIdentity_list extends Activity {
     {
         try
         {
-
+            Integer i = 1;
             HHIdentity_DataModel d = new HHIdentity_DataModel();
             String SQL = "";
             SQL = "Select Rnd, SuchanaID, Dist, Upz, Un, Vill, H11, AgeGroup, H17, Result,DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload from HHIdentity i";
@@ -261,11 +261,16 @@ public class HHIdentity_list extends Activity {
                 map.put("Result", item.getResult());
 
                 map.put("Upload",item.getUpload());
+                map.put("sl", i.toString());
+                i += 1;
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(HHIdentity_list.this, dataList, R.layout.hhidentity_list,new String[] {"rowsec"},
                     new int[] {R.id.secListRow});
             list.setAdapter(new DataListAdapter(this, dataAdapter));
+
+            i = i - 1;
+            lblHeading.setText("Suchana: Inteview List [Total: " + i.toString() + "]");
         }
         catch(Exception  e)
         {
@@ -321,6 +326,12 @@ public class HHIdentity_list extends Activity {
             village.setText(": " + o.get("Vill"));
             hhNo.setText(": " + o.get("H11"));
             visitdate.setText(": " + o.get("H17"));
+
+            Integer i = Integer.valueOf(o.get("sl"));
+            if (i % 2 == 0)
+                secListRow.setBackgroundColor(Color.parseColor("#F3F3F3"));
+            else
+                secListRow.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
           //  Upload.setText(o.get("Upload"));
             final TextView Upload = (TextView) convertView.findViewById(R.id.txtUploadStatus);

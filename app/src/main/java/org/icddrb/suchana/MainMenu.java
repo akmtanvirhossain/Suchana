@@ -38,7 +38,6 @@ public class MainMenu extends Activity {
     Button cmdMenuCareseek;
     Button cmdMenuIGA;
     Button cmdMenuStart;
-    Button cmdMenuUpdate;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -63,14 +62,6 @@ public class MainMenu extends Activity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
-                }
-            });
-
-            cmdMenuUpdate = (Button) findViewById(R.id.cmdMenuUpdate);
-            cmdMenuUpdate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(MainMenu.this, HHIdentity_list.class));
                 }
             });
 
@@ -100,26 +91,7 @@ public class MainMenu extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
-                                        tableList.add("Agriculture");
-                                        tableList.add("AssetB");
-                                        tableList.add("AssetNB");
-                                        tableList.add("Careseek");
-                                        tableList.add("Destruction1");
-                                        tableList.add("Destruction2");
-                                        tableList.add("HDDS");
                                         tableList.add("HHIdentity");
-                                        tableList.add("IGA");
-                                        tableList.add("Illness1");
-                                        tableList.add("Illness2");
-                                        tableList.add("Land");
-                                        tableList.add("Loan");
-                                        tableList.add("LoginUser");
-                                        tableList.add("Member");
-                                        tableList.add("NGOWork");
-                                        tableList.add("Savings");
-                                        tableList.add("SES");
-                                        tableList.add("UserList");
-                                        tableList.add("VillageList");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 

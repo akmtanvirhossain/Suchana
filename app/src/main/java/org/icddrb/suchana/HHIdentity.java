@@ -251,7 +251,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(HHIdentity.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -268,22 +268,24 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         }
                     });
                     adb.show();
+
                 }
             });
 
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(HHIdentity.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to return to Home [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            finish();
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
-                            finish();
+
                         }
                     });
                     adb.show();
@@ -508,13 +510,13 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH03.setVisibility(View.VISIBLE);
                         secH04.setVisibility(View.VISIBLE);
                         lineH04.setVisibility(View.VISIBLE);
-                        secH05.setVisibility(View.VISIBLE);
+                        /*secH05.setVisibility(View.VISIBLE);
                         lineH05.setVisibility(View.VISIBLE);
                         secH06.setVisibility(View.VISIBLE);
                         lineH06.setVisibility(View.VISIBLE);
                         secH07.setVisibility(View.VISIBLE);
                         lineH07.setVisibility(View.VISIBLE);
-                        seclblV1.setVisibility(View.VISIBLE);
+                        seclblV1.setVisibility(View.VISIBLE);*/
                         /*secH07a.setVisibility(View.GONE);
                         lineH07a.setVisibility(View.GONE);
                         secH07b.setVisibility(View.GONE);
@@ -567,10 +569,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         secH16X.setVisibility(View.GONE);
                         lineH16X.setVisibility(View.GONE);
                         txtH16X.setText("");
-                    } else if (rbData.equalsIgnoreCase("2")) {
+                    /*} else if (rbData.equalsIgnoreCase("2")) {
                         secH16X.setVisibility(View.GONE);
                         lineH16X.setVisibility(View.GONE);
-                        txtH16X.setText("");
+                        txtH16X.setText("");*/
                     } else {
                         secH16X.setVisibility(View.VISIBLE);
                         lineH16X.setVisibility(View.VISIBLE);
@@ -740,15 +742,39 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             secH08.setVisibility(View.GONE);
 
+            secH05.setVisibility(View.GONE);
+            lineH05.setVisibility(View.GONE);
+            secH06.setVisibility(View.GONE);
+            lineH06.setVisibility(View.GONE);
+            secH07.setVisibility(View.GONE);
+            lineH07.setVisibility(View.GONE);
+            secH07a.setVisibility(View.GONE);
+            lineH07a.setVisibility(View.GONE);
+            secH07b.setVisibility(View.GONE);
+            lineH07b.setVisibility(View.GONE);
+            secH07c.setVisibility(View.GONE);
+            lineH07c.setVisibility(View.GONE);
+            secH07d.setVisibility(View.GONE);
+            lineH07d.setVisibility(View.GONE);
+            secH07e.setVisibility(View.GONE);
+            lineH07e.setVisibility(View.GONE);
+            secH07f.setVisibility(View.GONE);
+            lineH07f.setVisibility(View.GONE);
+            secH07g.setVisibility(View.GONE);
+            lineH07g.setVisibility(View.GONE);
+            secH07h.setVisibility(View.GONE);
+            lineH07h.setVisibility(View.GONE);
+            secH08.setVisibility(View.GONE);
+            lineH08.setVisibility(View.GONE);
+
+
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", RND);
-                    IDBundle.putString("SuchanaId", SUCHANAID);
-                    startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
+
+
                 }
             });
         } catch (Exception e) {
@@ -974,6 +1000,12 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 return;
             }
 
+            if (rdoH071.isChecked() & (!chkH07a.isChecked() & !chkH07b.isChecked() & !chkH07c.isChecked() & !chkH07d.isChecked() & !chkH07e.isChecked() & !chkH07f.isChecked() & !chkH07g.isChecked() & !chkH07h.isChecked())) {
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (দুর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা?).");
+                rdoH071.requestFocus();
+                return;
+            }
+
             String SQL = "";
             RadioButton rb;
 
@@ -1071,13 +1103,39 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Bundle bundle = new Bundle();
+
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", RND);
+                IDBundle.putString("SuchanaId", SUCHANAID);
+
+                if (spnResult.getSelectedItemPosition() == 1) {
+
+                } else {
+                    finish();
+                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                }
+
+                if (rdoH012.isChecked() & rdoH022.isChecked() & rdoH032.isChecked() & rdoH042.isChecked()) {
+                    finish();
+                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                } else if (rdoH051.isChecked() & rdoH061.isChecked() & rdoH072.isChecked()) {
+                    finish();
+                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                } else if (rdoH082.isChecked()) {
+                    finish();
+                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                } else {
+                    finish();
+                    startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
+                }
+
+                /*Bundle bundle = new Bundle();
                 bundle.putString("Rnd", txtRnd.getText().toString());
                 bundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                 Intent intent = new Intent(new Intent(HHIdentity.this, Member_list.class));
                 intent.putExtras(bundle);
                 startActivity(intent);
-                finish();
+                finish();*/
                 //Connection.MessageBox(HHIdentity.this, "Saved Successfully");
 
             } else {
@@ -1228,7 +1286,31 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         rb.setChecked(true);
                     }
                 }
-            
+
+                if (rdoH012.isChecked() && rdoH022.isChecked() && rdoH032.isChecked() && rdoH042.isChecked()) {
+                    rdogrpH05.clearCheck();
+                    rdogrpH06.clearCheck();
+                    rdogrpH07.clearCheck();
+                    rdogrpH08.clearCheck();
+                    secH05.setVisibility(View.GONE);
+                    secH06.setVisibility(View.GONE);
+                    secH07.setVisibility(View.GONE);
+                    secH08.setVisibility(View.GONE);
+
+                } else {
+                    secH05.setVisibility(View.VISIBLE);
+                    secH06.setVisibility(View.VISIBLE);
+                    secH07.setVisibility(View.VISIBLE);
+                    secH08.setVisibility(View.VISIBLE);
+                }
+
+                if (rdoH052.isChecked() || rdoH062.isChecked() || rdoH071.isChecked()) {
+                    secH08.setVisibility(View.VISIBLE);
+                } else {
+                    rdogrpH08.clearCheck();
+                    secH08.setVisibility(View.GONE);
+                }
+
             }
         } catch (Exception e) {
             Connection.MessageBox(HHIdentity.this, e.getMessage());
