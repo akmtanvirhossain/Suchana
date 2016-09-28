@@ -13,7 +13,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -80,7 +79,7 @@ public class Illness2_list extends Activity {
             SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "Illness2";
-            lblHeading = (TextView) findViewById(R.id.lblHeading);
+            /*lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -102,12 +101,12 @@ public class Illness2_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Illness2_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -116,7 +115,8 @@ public class Illness2_list extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Illness1_list.class);
+
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -129,13 +129,13 @@ public class Illness2_list extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Illness2_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to return to Home [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Intent intent = new Intent(getApplicationContext(), Careseek.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();

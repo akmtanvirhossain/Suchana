@@ -785,7 +785,12 @@ public class Destruction2 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Destruction2.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(Destruction2.this, Agriculture_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Destruction2.this, status);
                 return;

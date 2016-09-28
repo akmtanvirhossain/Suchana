@@ -678,7 +678,7 @@ public class HDDS extends Activity {
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                     // IDBundle.putString("H41a", "");
-                    startActivity(new Intent(HDDS.this, HDDS.class).putExtras(IDBundle));
+                    startActivity(new Intent(HDDS.this, Cost1.class).putExtras(IDBundle));
                     // Connection.MessageBox(AssetB.this, "Saved Successfully");
                 }
             } else {

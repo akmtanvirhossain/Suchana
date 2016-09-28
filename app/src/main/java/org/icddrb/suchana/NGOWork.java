@@ -410,7 +410,7 @@ public class NGOWork extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(NGOWork.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -419,7 +419,7 @@ public class NGOWork extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Agriculture_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -432,7 +432,7 @@ public class NGOWork extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    AlertDialog.Builder adb = new AlertDialog.Builder(NGOWork.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to return to Home [Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -1815,7 +1815,12 @@ public class NGOWork extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(NGOWork.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(NGOWork.this, Illness1_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(NGOWork.this, status);
                 return;

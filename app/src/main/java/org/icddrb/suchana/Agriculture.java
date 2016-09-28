@@ -583,6 +583,8 @@ public class Agriculture extends Activity {
             txtSl.setText(SL);
             txtSl.setEnabled(false);
 
+            DataSearch(RND, SUCHANAID, SL);
+
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
