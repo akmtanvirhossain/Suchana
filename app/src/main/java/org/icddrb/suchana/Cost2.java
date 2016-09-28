@@ -1,14 +1,8 @@
 package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Cost2" android:label="Cost2" />
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import android.app.*;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,68 +10,50 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.view.KeyEvent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
-import Common.*;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
 
 public class Cost2 extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
+    static String MSLNO = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event)
-    {
-        if(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME)
-        { return false; }
-        else { return true;  }
-    }
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout secRnd;
     View lineRnd;
@@ -96,7 +72,6 @@ public class Cost2 extends Activity {
     View lineH871a;
     TextView VlblH871a;
     RadioGroup rdogrpH871a;
-
     RadioButton rdoH871a1;
     RadioButton rdoH871a2;
     LinearLayout secH871b;
@@ -107,7 +82,6 @@ public class Cost2 extends Activity {
     View lineH871c;
     TextView VlblH871c;
     RadioGroup rdogrpH871c;
-
     RadioButton rdoH871c1;
     RadioButton rdoH871c2;
     RadioButton rdoH871c3;
@@ -119,7 +93,6 @@ public class Cost2 extends Activity {
     View lineH872a;
     TextView VlblH872a;
     RadioGroup rdogrpH872a;
-
     RadioButton rdoH872a1;
     RadioButton rdoH872a2;
     LinearLayout secH872b;
@@ -130,7 +103,6 @@ public class Cost2 extends Activity {
     View lineH872c;
     TextView VlblH872c;
     RadioGroup rdogrpH872c;
-
     RadioButton rdoH872c1;
     RadioButton rdoH872c2;
     RadioButton rdoH872c3;
@@ -142,7 +114,6 @@ public class Cost2 extends Activity {
     View lineH873a;
     TextView VlblH873a;
     RadioGroup rdogrpH873a;
-
     RadioButton rdoH873a1;
     RadioButton rdoH873a2;
     LinearLayout secH873b;
@@ -153,7 +124,6 @@ public class Cost2 extends Activity {
     View lineH873c;
     TextView VlblH873c;
     RadioGroup rdogrpH873c;
-
     RadioButton rdoH873c1;
     RadioButton rdoH873c2;
     RadioButton rdoH873c3;
@@ -165,7 +135,6 @@ public class Cost2 extends Activity {
     View lineH874a;
     TextView VlblH874a;
     RadioGroup rdogrpH874a;
-
     RadioButton rdoH874a1;
     RadioButton rdoH874a2;
     LinearLayout secH874b;
@@ -176,7 +145,6 @@ public class Cost2 extends Activity {
     View lineH874c;
     TextView VlblH874c;
     RadioGroup rdogrpH874c;
-
     RadioButton rdoH874c1;
     RadioButton rdoH874c2;
     RadioButton rdoH874c3;
@@ -188,7 +156,6 @@ public class Cost2 extends Activity {
     View lineH875a;
     TextView VlblH875a;
     RadioGroup rdogrpH875a;
-
     RadioButton rdoH875a1;
     RadioButton rdoH875a2;
     LinearLayout secH875b;
@@ -199,7 +166,6 @@ public class Cost2 extends Activity {
     View lineH875c;
     TextView VlblH875c;
     RadioGroup rdogrpH875c;
-
     RadioButton rdoH875c1;
     RadioButton rdoH875c2;
     RadioButton rdoH875c3;
@@ -212,7 +178,6 @@ public class Cost2 extends Activity {
     View lineH881a;
     TextView VlblH881a;
     RadioGroup rdogrpH881a;
-
     RadioButton rdoH881a1;
     RadioButton rdoH881a2;
     LinearLayout secH881b;
@@ -223,7 +188,6 @@ public class Cost2 extends Activity {
     View lineH881c;
     TextView VlblH881c;
     RadioGroup rdogrpH881c;
-
     RadioButton rdoH881c1;
     RadioButton rdoH881c2;
     RadioButton rdoH881c3;
@@ -235,7 +199,6 @@ public class Cost2 extends Activity {
     View lineH882a;
     TextView VlblH882a;
     RadioGroup rdogrpH882a;
-
     RadioButton rdoH882a1;
     RadioButton rdoH882a2;
     LinearLayout secH882b;
@@ -246,7 +209,6 @@ public class Cost2 extends Activity {
     View lineH882c;
     TextView VlblH882c;
     RadioGroup rdogrpH882c;
-
     RadioButton rdoH882c1;
     RadioButton rdoH882c2;
     RadioButton rdoH882c3;
@@ -258,7 +220,6 @@ public class Cost2 extends Activity {
     View lineH883a;
     TextView VlblH883a;
     RadioGroup rdogrpH883a;
-
     RadioButton rdoH883a1;
     RadioButton rdoH883a2;
     LinearLayout secH883b;
@@ -269,7 +230,6 @@ public class Cost2 extends Activity {
     View lineH883c;
     TextView VlblH883c;
     RadioGroup rdogrpH883c;
-
     RadioButton rdoH883c1;
     RadioButton rdoH883c2;
     RadioButton rdoH883c3;
@@ -281,7 +241,6 @@ public class Cost2 extends Activity {
     View lineH884a;
     TextView VlblH884a;
     RadioGroup rdogrpH884a;
-
     RadioButton rdoH884a1;
     RadioButton rdoH884a2;
     LinearLayout secH884b;
@@ -292,7 +251,6 @@ public class Cost2 extends Activity {
     View lineH884c;
     TextView VlblH884c;
     RadioGroup rdogrpH884c;
-
     RadioButton rdoH884c1;
     RadioButton rdoH884c2;
     RadioButton rdoH884c3;
@@ -304,7 +262,6 @@ public class Cost2 extends Activity {
     View lineH885a;
     TextView VlblH885a;
     RadioGroup rdogrpH885a;
-
     RadioButton rdoH885a1;
     RadioButton rdoH885a2;
     LinearLayout secH885b;
@@ -315,7 +272,6 @@ public class Cost2 extends Activity {
     View lineH885c;
     TextView VlblH885c;
     RadioGroup rdogrpH885c;
-
     RadioButton rdoH885c1;
     RadioButton rdoH885c2;
     RadioButton rdoH885c3;
@@ -328,7 +284,6 @@ public class Cost2 extends Activity {
     View lineH891a;
     TextView VlblH891a;
     RadioGroup rdogrpH891a;
-
     RadioButton rdoH891a1;
     RadioButton rdoH891a2;
     LinearLayout secH891b;
@@ -339,7 +294,6 @@ public class Cost2 extends Activity {
     View lineH891c;
     TextView VlblH891c;
     RadioGroup rdogrpH891c;
-
     RadioButton rdoH891c1;
     RadioButton rdoH891c2;
     RadioButton rdoH891c3;
@@ -352,7 +306,6 @@ public class Cost2 extends Activity {
     View lineH8101a;
     TextView VlblH8101a;
     RadioGroup rdogrpH8101a;
-
     RadioButton rdoH8101a1;
     RadioButton rdoH8101a2;
     LinearLayout secH8101b;
@@ -363,7 +316,6 @@ public class Cost2 extends Activity {
     View lineH8101c;
     TextView VlblH8101c;
     RadioGroup rdogrpH8101c;
-
     RadioButton rdoH8101c1;
     RadioButton rdoH8101c2;
     RadioButton rdoH8101c3;
@@ -375,7 +327,6 @@ public class Cost2 extends Activity {
     View lineH8102a;
     TextView VlblH8102a;
     RadioGroup rdogrpH8102a;
-
     RadioButton rdoH8102a1;
     RadioButton rdoH8102a2;
     LinearLayout secH8102b;
@@ -386,7 +337,6 @@ public class Cost2 extends Activity {
     View lineH8102c;
     TextView VlblH8102c;
     RadioGroup rdogrpH8102c;
-
     RadioButton rdoH8102c1;
     RadioButton rdoH8102c2;
     RadioButton rdoH8102c3;
@@ -398,7 +348,6 @@ public class Cost2 extends Activity {
     View lineH8103a;
     TextView VlblH8103a;
     RadioGroup rdogrpH8103a;
-
     RadioButton rdoH8103a1;
     RadioButton rdoH8103a2;
     LinearLayout secH8103b;
@@ -409,7 +358,6 @@ public class Cost2 extends Activity {
     View lineH8103c;
     TextView VlblH8103c;
     RadioGroup rdogrpH8103c;
-
     RadioButton rdoH8103c1;
     RadioButton rdoH8103c2;
     RadioButton rdoH8103c3;
@@ -417,12 +365,49 @@ public class Cost2 extends Activity {
     View lineH8103d;
     TextView VlblH8103d;
     EditText txtH8103d;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
-    static String MSLNO = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            //   dtpDate.setText(new StringBuilder()
+            //           .append(Global.Right("00"+mDay,2)).append("/")
+            //           .append(Global.Right("00"+mMonth,2)).append("/")
+            //          .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime;
+
+
+            //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -450,17 +435,25 @@ public class Cost2 extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Cost2.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Cost1.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
-                        }});
+                        }
+                    });
                     adb.show();
-                }});
-
+                }
+            });
 
             secRnd=(LinearLayout)findViewById(R.id.secRnd);
             lineRnd=(View)findViewById(R.id.lineRnd);
@@ -2508,8 +2501,6 @@ public class Cost2 extends Activity {
         }
     }
 
-
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -2522,31 +2513,6 @@ public class Cost2 extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year; mMonth = monthOfYear+1; mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-         //   dtpDate.setText(new StringBuilder()
-         //           .append(Global.Right("00"+mDay,2)).append("/")
-         //           .append(Global.Right("00"+mMonth,2)).append("/")
-          //          .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour; minute = selectedMinute;
-            EditText tpTime;
-
-
-          //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................

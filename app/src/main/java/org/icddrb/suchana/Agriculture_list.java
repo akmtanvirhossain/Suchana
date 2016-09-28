@@ -13,7 +13,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -50,6 +49,7 @@ public class Agriculture_list extends Activity {
     Button btnAdd;
     Button btnRefresh;
     String StartTime;
+    Bundle IDBundle;
     private int hour;
     private int minute;
     private int mDay;
@@ -76,7 +76,7 @@ public class Agriculture_list extends Activity {
             StartTime = g.CurrentTime24();
 
             TableName = "Agriculture";
-            lblHeading = (TextView) findViewById(R.id.lblHeading);
+           /* lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -98,22 +98,29 @@ public class Agriculture_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
-            Bundle IDbundle = new Bundle();
-            IDbundle = getIntent().getExtras();
-            RND = IDbundle.getString("Rnd");
-            SUCHANAID = IDbundle.getString("SuchanaID");
+
+            IDBundle = getIntent().getExtras();
+            RND = IDBundle.getString("Rnd");
+            SUCHANAID = IDBundle.getString("SuchanaID");
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Agriculture_list.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });

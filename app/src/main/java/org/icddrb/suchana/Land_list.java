@@ -106,17 +106,20 @@ public class Land_list extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Land_list.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Bundle IDBundle = new Bundle();
-                            IDBundle.putString("Rnd", RND);
-                            IDBundle.putString("SuchanaID", SUCHANAID);
-                            //IDBundle.putString("H21", txtH21.getText().toString());
-                            startActivity(new Intent(Land_list.this, AssetNB.class).putExtras(IDBundle));
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
                         }
                     });
                     adb.show();

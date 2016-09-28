@@ -1,14 +1,8 @@
 package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Cost1" android:label="Cost1" />
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import android.app.*;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,69 +10,51 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
-import android.provider.Settings;
-//import android.support.v4.view.accessibility.AccessibilityRecordCompatIcs;
-import android.view.KeyEvent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.provider.Settings;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
-import Common.*;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
+
+//import android.support.v4.view.accessibility.AccessibilityRecordCompatIcs;
 
 public class Cost1 extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event)
-    {
-        if(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME)
-        { return false; }
-        else { return true;  }
-    }
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout secRnd;
     View lineRnd;
@@ -97,7 +73,6 @@ public class Cost1 extends Activity {
     View lineH811a;
     TextView VlblH811a;
     RadioGroup rdogrpH811a;
-
     RadioButton rdoH811a1;
     RadioButton rdoH811a2;
     LinearLayout secH811b;
@@ -108,7 +83,6 @@ public class Cost1 extends Activity {
     View lineH811c;
     TextView VlblH811c;
     RadioGroup rdogrpH811c;
-
     RadioButton rdoH811c1;
     RadioButton rdoH811c2;
     RadioButton rdoH811c3;
@@ -120,7 +94,6 @@ public class Cost1 extends Activity {
     View lineH812a;
     TextView VlblH812a;
     RadioGroup rdogrpH812a;
-
     RadioButton rdoH812a1;
     RadioButton rdoH812a2;
     LinearLayout secH812b;
@@ -131,7 +104,6 @@ public class Cost1 extends Activity {
     View lineH812c;
     TextView VlblH812c;
     RadioGroup rdogrpH812c;
-
     RadioButton rdoH812c1;
     RadioButton rdoH812c2;
     RadioButton rdoH812c3;
@@ -143,7 +115,6 @@ public class Cost1 extends Activity {
     View lineH813a;
     TextView VlblH813a;
     RadioGroup rdogrpH813a;
-
     RadioButton rdoH813a1;
     RadioButton rdoH813a2;
     LinearLayout secH813b;
@@ -154,7 +125,6 @@ public class Cost1 extends Activity {
     View lineH813c;
     TextView VlblH813c;
     RadioGroup rdogrpH813c;
-
     RadioButton rdoH813c1;
     RadioButton rdoH813c2;
     RadioButton rdoH813c3;
@@ -166,7 +136,6 @@ public class Cost1 extends Activity {
     View lineH814a;
     TextView VlblH814a;
     RadioGroup rdogrpH814a;
-
     RadioButton rdoH814a1;
     RadioButton rdoH814a2;
     LinearLayout secH814b;
@@ -177,7 +146,6 @@ public class Cost1 extends Activity {
     View lineH814c;
     TextView VlblH814c;
     RadioGroup rdogrpH814c;
-
     RadioButton rdoH814c1;
     RadioButton rdoH814c2;
     RadioButton rdoH814c3;
@@ -189,7 +157,6 @@ public class Cost1 extends Activity {
     View lineH815a;
     TextView VlblH815a;
     RadioGroup rdogrpH815a;
-
     RadioButton rdoH815a1;
     RadioButton rdoH815a2;
     LinearLayout secH815b;
@@ -200,7 +167,6 @@ public class Cost1 extends Activity {
     View lineH815c;
     TextView VlblH815c;
     RadioGroup rdogrpH815c;
-
     RadioButton rdoH815c1;
     RadioButton rdoH815c2;
     RadioButton rdoH815c3;
@@ -212,7 +178,6 @@ public class Cost1 extends Activity {
     View lineH816a;
     TextView VlblH816a;
     RadioGroup rdogrpH816a;
-
     RadioButton rdoH816a1;
     RadioButton rdoH816a2;
     LinearLayout secH816b;
@@ -223,7 +188,6 @@ public class Cost1 extends Activity {
     View lineH816c;
     TextView VlblH816c;
     RadioGroup rdogrpH816c;
-
     RadioButton rdoH816c1;
     RadioButton rdoH816c2;
     RadioButton rdoH816c3;
@@ -236,7 +200,6 @@ public class Cost1 extends Activity {
     View lineH821a;
     TextView VlblH821a;
     RadioGroup rdogrpH821a;
-
     RadioButton rdoH821a1;
     RadioButton rdoH821a2;
     LinearLayout secH821b;
@@ -247,7 +210,6 @@ public class Cost1 extends Activity {
     View lineH821c;
     TextView VlblH821c;
     RadioGroup rdogrpH821c;
-
     RadioButton rdoH821c1;
     RadioButton rdoH821c2;
     RadioButton rdoH821c3;
@@ -260,7 +222,6 @@ public class Cost1 extends Activity {
     View lineH831a;
     TextView VlblH831a;
     RadioGroup rdogrpH831a;
-
     RadioButton rdoH831a1;
     RadioButton rdoH831a2;
     LinearLayout secH831b;
@@ -271,7 +232,6 @@ public class Cost1 extends Activity {
     View lineH831c;
     TextView VlblH831c;
     RadioGroup rdogrpH831c;
-
     RadioButton rdoH831c1;
     RadioButton rdoH831c2;
     RadioButton rdoH831c3;
@@ -283,7 +243,6 @@ public class Cost1 extends Activity {
     View lineH832a;
     TextView VlblH832a;
     RadioGroup rdogrpH832a;
-
     RadioButton rdoH832a1;
     RadioButton rdoH832a2;
     LinearLayout secH832b;
@@ -294,7 +253,6 @@ public class Cost1 extends Activity {
     View lineH832c;
     TextView VlblH832c;
     RadioGroup rdogrpH832c;
-
     RadioButton rdoH832c1;
     RadioButton rdoH832c2;
     RadioButton rdoH832c3;
@@ -307,7 +265,6 @@ public class Cost1 extends Activity {
     View lineH841a;
     TextView VlblH841a;
     RadioGroup rdogrpH841a;
-
     RadioButton rdoH841a1;
     RadioButton rdoH841a2;
     LinearLayout secH841b;
@@ -318,7 +275,6 @@ public class Cost1 extends Activity {
     View lineH841c;
     TextView VlblH841c;
     RadioGroup rdogrpH841c;
-
     RadioButton rdoH841c1;
     RadioButton rdoH841c2;
     RadioButton rdoH841c3;
@@ -330,7 +286,6 @@ public class Cost1 extends Activity {
     View lineH842a;
     TextView VlblH842a;
     RadioGroup rdogrpH842a;
-
     RadioButton rdoH842a1;
     RadioButton rdoH842a2;
     LinearLayout secH842b;
@@ -341,7 +296,6 @@ public class Cost1 extends Activity {
     View lineH842c;
     TextView VlblH842c;
     RadioGroup rdogrpH842c;
-
     RadioButton rdoH842c1;
     RadioButton rdoH842c2;
     RadioButton rdoH842c3;
@@ -354,7 +308,6 @@ public class Cost1 extends Activity {
     View lineH851a;
     TextView VlblH851a;
     RadioGroup rdogrpH851a;
-
     RadioButton rdoH851a1;
     RadioButton rdoH851a2;
     LinearLayout secH851b;
@@ -365,7 +318,6 @@ public class Cost1 extends Activity {
     View lineH851c;
     TextView VlblH851c;
     RadioGroup rdogrpH851c;
-
     RadioButton rdoH851c1;
     RadioButton rdoH851c2;
     RadioButton rdoH851c3;
@@ -378,7 +330,6 @@ public class Cost1 extends Activity {
     View lineH861a;
     TextView VlblH861a;
     RadioGroup rdogrpH861a;
-
     RadioButton rdoH861a1;
     RadioButton rdoH861a2;
     LinearLayout secH861b;
@@ -389,7 +340,6 @@ public class Cost1 extends Activity {
     View lineH861c;
     TextView VlblH861c;
     RadioGroup rdogrpH861c;
-
     RadioButton rdoH861c1;
     RadioButton rdoH861c2;
     RadioButton rdoH861c3;
@@ -401,7 +351,6 @@ public class Cost1 extends Activity {
     View lineH862a;
     TextView VlblH862a;
     RadioGroup rdogrpH862a;
-
     RadioButton rdoH862a1;
     RadioButton rdoH862a2;
     LinearLayout secH862b;
@@ -412,7 +361,6 @@ public class Cost1 extends Activity {
     View lineH862c;
     TextView VlblH862c;
     RadioGroup rdogrpH862c;
-
     RadioButton rdoH862c1;
     RadioButton rdoH862c2;
     RadioButton rdoH862c3;
@@ -420,11 +368,49 @@ public class Cost1 extends Activity {
     View lineH862d;
     TextView VlblH862d;
     EditText txtH862d;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            //dtpDate.setText(new StringBuilder()
+            //        .append(Global.Right("00"+mDay,2)).append("/")
+            //        .append(Global.Right("00"+mMonth,2)).append("/")
+            //        .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime;
+
+
+            //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -451,17 +437,25 @@ public class Cost1 extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(Cost1.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to close this form[Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
-                        }});
+                        }
+                    });
                     adb.show();
-                }});
-
+                }
+            });
 
             secRnd=(LinearLayout)findViewById(R.id.secRnd);
             lineRnd=(View)findViewById(R.id.lineRnd);
@@ -2512,8 +2506,6 @@ public class Cost1 extends Activity {
         }
     }
 
-
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -2526,31 +2518,6 @@ public class Cost1 extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year; mMonth = monthOfYear+1; mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            //dtpDate.setText(new StringBuilder()
-            //        .append(Global.Right("00"+mDay,2)).append("/")
-            //        .append(Global.Right("00"+mMonth,2)).append("/")
-            //        .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour; minute = selectedMinute;
-            EditText tpTime;
-
-
-          //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................
