@@ -600,7 +600,7 @@
 
                 <TextView
                     android:id="@+id/VlblH210"
-                    android:layout_width="250sp"
+                    android:layout_width="160sp"
                     android:layout_height="wrap_content"
                     android:text="ভাষা"
                     android:textSize="20sp" />

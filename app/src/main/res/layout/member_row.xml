@@ -15,31 +15,31 @@
 
         <TextView
             android:id="@+id/Rnd"
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/SuchanaID"
-            android:layout_width="100dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H21"
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H22"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="left" />
 
         <TextView
             android:id="@+id/H23"
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
@@ -51,7 +51,7 @@
 
         <TextView
             android:id="@+id/H25"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 

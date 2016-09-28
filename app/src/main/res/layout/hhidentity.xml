@@ -505,12 +505,6 @@
                         android:textSize="20sp" />
                 </LinearLayout>
 
-                <View
-                    android:id="@+id/lineResultX"
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dip"
-                    android:background="#CCCCCC" />
-
                 <LinearLayout
                     android:id="@+id/secH16"
                     style="@style/rowStyle0"
@@ -527,7 +521,7 @@
 
                     <TextView
                         android:id="@+id/VlblH16"
-                        android:layout_width="250sp"
+                        android:layout_width="230sp"
                         android:layout_height="wrap_content"
                         android:text="খানা’র নৃতাত্ত্বিক  গোষ্ঠী"
                         android:textSize="20sp" />
@@ -564,6 +558,12 @@
                             android:textSize="20sp" />
                     </RadioGroup>
                 </LinearLayout>
+
+                <View
+                    android:id="@+id/lineResultX"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#CCCCCC" />
 
                 <View
                     android:id="@+id/lineH16"

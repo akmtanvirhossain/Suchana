@@ -139,9 +139,9 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1dip"
+        android:layout_height="2dip"
         android:layout_marginBottom="0sp"
-        android:background="#CCCCCC" />
+        android:background="#006699" />
 
     <include
         layout="@layout/common_heading"

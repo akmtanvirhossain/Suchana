@@ -47,7 +47,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="HOME"
+            android:text="NEXT"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -72,6 +72,13 @@
         android:layout_marginTop="5sp"
         android:gravity="end"
         android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="0"
+            android:text="ID: " />
 
         <TextView
             android:id="@+id/lblSuchanaIdHeader"
@@ -159,7 +166,7 @@
                     <ListView
                         android:id="@+id/lstData"
                         android:layout_width="match_parent"
-                        android:layout_height="700dp"
+                        android:layout_height="600dp"
                         android:clickable="true"
                         android:divider="#000000"
                         android:dividerHeight="1px"
