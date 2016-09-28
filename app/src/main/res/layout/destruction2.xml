@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Back"
+            android:text="Destruction 1"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -36,7 +36,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Destruction"
+            android:text="Destruction 2"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -52,7 +52,7 @@
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/cmdForward"
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
@@ -95,7 +95,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -132,7 +132,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
@@ -140,7 +140,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200dp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -190,7 +190,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আগাম চাশাবাদ করা"
                     android:textSize="20sp" />
@@ -206,7 +206,7 @@
                         android:id="@+id/rdoH14b11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -214,7 +214,7 @@
                         android:id="@+id/rdoH14b12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -241,7 +241,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ঘেরা জাইগাই মাছ উৎপাদন করা"
                     android:textSize="20sp" />
@@ -257,7 +257,7 @@
                         android:id="@+id/rdoH14b21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -265,7 +265,7 @@
                         android:id="@+id/rdoH14b22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -292,7 +292,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="উচু জায়গায় বাগান করা"
                     android:textSize="20sp" />
@@ -308,7 +308,7 @@
                         android:id="@+id/rdoH14b31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -316,7 +316,7 @@
                         android:id="@+id/rdoH14b32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -343,7 +343,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="পানি সহিষ্ণু প্রজাতি আবাদ"
                     android:textSize="20sp" />
@@ -359,7 +359,7 @@
                         android:id="@+id/rdoH14b41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -367,7 +367,7 @@
                         android:id="@+id/rdoH14b42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -394,7 +394,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b5"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বহুস্তরী বাগান করা"
                     android:textSize="20sp" />
@@ -410,7 +410,7 @@
                         android:id="@+id/rdoH14b51"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -418,7 +418,7 @@
                         android:id="@+id/rdoH14b52"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -445,7 +445,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b6"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বস্তায় চাষ করা"
                     android:textSize="20sp" />
@@ -461,7 +461,7 @@
                         android:id="@+id/rdoH14b61"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -469,7 +469,7 @@
                         android:id="@+id/rdoH14b62"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -496,7 +496,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b7"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বিকল্প জীবিকানির্বাহ কার্যক্রম"
                     android:textSize="20sp" />
@@ -512,7 +512,7 @@
                         android:id="@+id/rdoH14b71"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -520,7 +520,7 @@
                         android:id="@+id/rdoH14b72"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -547,7 +547,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b8"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অনান্য"
                     android:textSize="20sp" />
@@ -563,7 +563,7 @@
                         android:id="@+id/rdoH14b81"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -571,7 +571,7 @@
                         android:id="@+id/rdoH14b82"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -598,7 +598,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b8X"
-                    android:layout_width="300dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
@@ -606,12 +606,12 @@
                 <EditText
                     android:id="@+id/txtH14b8X"
                     style="@style/customEdit"
-                    android:layout_width="200dp"
+                    android:layout_width="190sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -657,7 +657,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি অথবা আপনার পরিবারের কোনো সদস্য সরকারের তরফ থেকে কোনো ভাতা /বৃত্তি / ক্ষুদ্র ঋণ পেয়েছেন"
                     android:textSize="20sp" />
@@ -673,7 +673,7 @@
                         android:id="@+id/rdoH14c11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যাঁ "
                         android:textSize="20sp" />
 
@@ -681,7 +681,7 @@
                         android:id="@+id/rdoH14c12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না   "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -708,7 +708,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1a"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="মাতৃকালীন ভাতা"
                     android:textSize="20sp" />
@@ -743,7 +743,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1b"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="দরিদ্রদের জন্য  কর্মসংস্থান"
                     android:textSize="20sp" />
@@ -778,7 +778,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1c"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="VGD"
                     android:textSize="20sp" />
@@ -813,7 +813,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1d"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="স্কুল ফিডিং কর্মসূচি"
                     android:textSize="20sp" />
@@ -848,7 +848,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1e"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বয়স্ক ভাতা"
                     android:textSize="20sp" />
@@ -883,7 +883,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1f"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বিধবা/দুঃস্থ নারী ভাতা"
                     android:textSize="20sp" />
@@ -918,7 +918,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1g"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আর্থিকভাবে অসচ্ছল প্রতিবন্ধী"
                     android:textSize="20sp" />
@@ -953,7 +953,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1h"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="দরিদ্র দুগ্ধদানকারী মায়ের ভাতা"
                     android:textSize="20sp" />
@@ -988,7 +988,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1i"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="মুক্তিযোদ্ধাদের জন্য ভাতা"
                     android:textSize="20sp" />
@@ -1023,7 +1023,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1j"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="মুক্তিযোদ্ধাদের জন্য চিকিৎসা ভাতা"
                     android:textSize="20sp" />
@@ -1058,7 +1058,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1k"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শহীদ পরিবার / মুক্তিযোদ্ধাদের জন্য স্বল্প মূল্যে খাদ্য শস্য"
                     android:textSize="20sp" />
@@ -1093,7 +1093,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1l"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="চা বাগান শ্রমিকদের জীবিকার উন্নতি"
                     android:textSize="20sp" />
@@ -1128,7 +1128,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1m"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="প্রতিবন্ধী শিক্ষার্থীদের জন্য উপবৃত্তি"
                     android:textSize="20sp" />
@@ -1163,7 +1163,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1n"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="CMS"
                     android:textSize="20sp" />
@@ -1198,7 +1198,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1o"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="VGF"
                     android:textSize="20sp" />
@@ -1233,7 +1233,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1p"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="Test Relief (TR) খাদ্য"
                     android:textSize="20sp" />
@@ -1268,7 +1268,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1q"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="Gratuitous Relief (GR) খাদ্য"
                     android:textSize="20sp" />
@@ -1303,7 +1303,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1r"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="কাজের বিনিময়ে খাদ্য"
                     android:textSize="20sp" />
@@ -1338,7 +1338,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1s"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="কাজের বিনিময়ে অর্থ"
                     android:textSize="20sp" />
@@ -1373,7 +1373,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1t"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="নারী স্ব -কর্মসংস্থানের জন্য ক্ষুদ্রঋণ"
                     android:textSize="20sp" />
@@ -1408,7 +1408,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1x"
-                    android:layout_width="400sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অনান্য"
                     android:textSize="20sp" />
@@ -1443,7 +1443,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1x1"
-                    android:layout_width="300dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:text="উল্লেখ কর"
@@ -1452,12 +1452,12 @@
                 <EditText
                     android:id="@+id/txtH14c1x1"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="190sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 

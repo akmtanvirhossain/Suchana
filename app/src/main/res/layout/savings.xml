@@ -145,7 +145,7 @@
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -501,6 +501,12 @@
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
+            <View
+                android:id="@+id/lineH1035"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
             <LinearLayout
                 android:id="@+id/secH1035"
                 style="@style/rowStyle0"
@@ -532,12 +538,6 @@
                     android:maxLength="6"
                     android:textSize="20sp" />
             </LinearLayout>
-
-            <View
-                android:id="@+id/lineH1035"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secH1036"
@@ -588,6 +588,7 @@
                     android:id="@+id/lblH1037a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H1037"
                     android:textSize="20sp" />
 
                 <TextView
