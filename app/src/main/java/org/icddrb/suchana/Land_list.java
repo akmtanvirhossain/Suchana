@@ -128,30 +128,19 @@ public class Land_list extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if (dataList.size() != 0) {
-                        AlertDialog.Builder adb = new AlertDialog.Builder(Land_list.this);
-                        adb.setTitle("সম্পদ নেই! ");
-                        adb.setMessage("কোন সম্পদ ইনপুট দেয়া হয় নাই। পরের ফর্ম এ যেতে চান ? [Yes/No]?");
-                        adb.setNegativeButton("No", null);
-                        adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Bundle IDBundle = new Bundle();
-                                IDBundle.putString("Rnd", RND);
-                                IDBundle.putString("SuchanaID", SUCHANAID);
-                                //IDBundle.putString("H21", txtH21.getText().toString());
-                                startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
-                            }
-                        });
-                        adb.show();
-
-                    } else {
-                        Bundle IDBundle = new Bundle();
-                        IDBundle.putString("Rnd", RND);
-                        IDBundle.putString("SuchanaID", SUCHANAID);
-                        //IDBundle.putString("H21", txtH21.getText().toString());
-                        startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
-
-                    }
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);

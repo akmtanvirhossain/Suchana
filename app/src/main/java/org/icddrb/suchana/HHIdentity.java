@@ -273,16 +273,20 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
-                @Override
                 public void onClick(View v) {
-                    Bundle bundle = new Bundle();
-                    bundle.putString("Rnd", txtRnd.getText().toString());
-                    bundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    Intent intent = new Intent(new Intent(HHIdentity.this, Member_list.class));
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-
-                    finish();
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
             seclblH1 = (LinearLayout) findViewById(R.id.seclblH1);

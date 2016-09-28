@@ -267,17 +267,24 @@ public class Member extends Activity {
                 }
             });
 
-       /*     ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                            Bundle IDBundle = new Bundle();
-                            IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    IDBundle.putString("H21", txtH21.getText().toString());
-                            startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
-
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
-            });*/
+            });
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
