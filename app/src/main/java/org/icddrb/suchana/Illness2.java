@@ -22,6 +22,7 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -49,6 +50,7 @@ public class Illness2 extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    static String SlNo = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -77,6 +79,10 @@ public class Illness2 extends Activity {
     View lineSlNo;
     TextView VlblSlNo;
     EditText txtSlNo;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    Spinner spnMSlNo;
     LinearLayout secH172a;
     View lineH172a;
     TextView VlblH172a;
@@ -101,6 +107,14 @@ public class Illness2 extends Activity {
     View lineH172cM;
     TextView VlblH172cM;
     EditText txtH172cM;
+
+    LinearLayout secH172d;
+    View lineH172d;
+    TextView VlblH172d;
+    RadioGroup rdogrpH172d;
+    RadioButton rdoH172d1;
+    RadioButton rdoH172d2;
+
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -155,7 +169,7 @@ public class Illness2 extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-
+            SlNo = IDbundle.getString("SlNo");
             TableName = "Illness2";
 
             //turnGPSOn();
@@ -198,11 +212,71 @@ public class Illness2 extends Activity {
 
             rdoH1721 = (RadioButton) findViewById(R.id.rdoH1721);
             rdoH1722 = (RadioButton) findViewById(R.id.rdoH1722);
+
+            rdogrpH172.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH172 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH172.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH172.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH172[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secSlNo.setVisibility(View.GONE);
+                        lineSlNo.setVisibility(View.GONE);
+                        secMSlNo.setVisibility(View.GONE);
+                        spnMSlNo.setSelection(0);
+                        //txtSlNo.setText("");
+                        seclblH172.setVisibility(View.GONE);
+                        secH172a.setVisibility(View.GONE);
+                        spnH172a.setSelection(0);
+                        secH172aX.setVisibility(View.GONE);
+                        txtH172aX.setText("");
+                        secH172b.setVisibility(View.GONE);
+                        spnH172b.setSelection(0);
+                        secH172cX.setVisibility(View.GONE);
+                        txtH172cX.setText("");
+                        secH172cY.setVisibility(View.GONE);
+                        txtH172cY.setText("");
+                        secH172cM.setVisibility(View.GONE);
+                        txtH172cM.setText("");
+                        secH172d.setVisibility(View.GONE);
+                        rdogrpH172d.clearCheck();;
+
+                    } else {
+                        secSlNo.setVisibility(View.VISIBLE);
+                        lineSlNo.setVisibility(View.VISIBLE);
+                        secMSlNo.setVisibility(View.VISIBLE);
+                        seclblH172.setVisibility(View.VISIBLE);
+                        secH172a.setVisibility(View.VISIBLE);
+                        secH172aX.setVisibility(View.VISIBLE);
+                        secH172b.setVisibility(View.VISIBLE);
+                        secH172cX.setVisibility(View.VISIBLE);
+                        secH172cY.setVisibility(View.VISIBLE);
+                        secH172cM.setVisibility(View.VISIBLE);
+                        secH172d.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             seclblH172 = (LinearLayout) findViewById(R.id.seclblH172);
             secSlNo = (LinearLayout) findViewById(R.id.secSlNo);
             lineSlNo = (View) findViewById(R.id.lineSlNo);
             VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
             secH172a = (LinearLayout) findViewById(R.id.secH172a);
             lineH172a = (View) findViewById(R.id.lineH172a);
             VlblH172a = (TextView) findViewById(R.id.VlblH172a);
@@ -249,7 +323,13 @@ public class Illness2 extends Activity {
             listH172b.add("1-কোনো চিকিৎসা নেয়া হয়নি");
             listH172b.add("2-বাড়তেই সাধারণ চিকিৎসা");
             listH172b.add("3-গ্রাম ডাক্তার");
-            listH172b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA   5-এলোপ্যাথিক ঔষুধ বিক্রেতা");
+            listH172b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA");
+            listH172b.add("5-এলোপ্যাথিক ঔষুধ বিক্রেতা/ফার্মেসিস্ট (রোগ  বুঝে চিকিৎসা দেয়)");
+            listH172b.add("6-যোগ্যতাসম্পন্ন সরকারী/বেসরকারী MBBS ডাক্তার");
+            listH172b.add("7-প্যানেল ডাক্তার (BRAC)");
+            listH172b.add("8-কবিরাজ/হেকিম/বৈদ্য");
+            listH172b.add("9-হোমিওপ্যাথি");
+            listH172b.add("10-অন্যান্য (নির্দিষ্ট করুন)");
             ArrayAdapter<String> adptrH172b = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH172b);
             spnH172b.setAdapter(adptrH172b);
 
@@ -266,13 +346,83 @@ public class Illness2 extends Activity {
             VlblH172cM = (TextView) findViewById(R.id.VlblH172cM);
             txtH172cM = (EditText) findViewById(R.id.txtH172cM);
 
+             secH172d= (LinearLayout) findViewById(R.id.secH172d);
+             lineH172d= (View) findViewById(R.id.lineH172d);
+             VlblH172d= (TextView) findViewById(R.id.VlblH172d);
+             rdogrpH172d= (RadioGroup) findViewById(R.id.rdogrpH172d);
+             rdoH172d1= (RadioButton) findViewById(R.id.rdoH172d1);
+             rdoH172d2= (RadioButton) findViewById(R.id.rdoH172d2);
 
+
+            secH172aX.setVisibility(View.GONE);
+            spnH172a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH172a.getSelectedItem().toString(), "-").equals("22"))
+                        {
+                            secH172aX.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH172aX.setVisibility(View.GONE);
+                            txtH172aX.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+            secH172cX.setVisibility(View.GONE);
+            spnH172b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH172b.getSelectedItem().toString(), "-").equals("10"))
+                        {
+                            secH172cX.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH172cX.setVisibility(View.GONE);
+                            txtH172cX.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+            txtSlNo.setText(SlNo);
+            txtSlNo.setEnabled(false);
+
+
+            DataSearch(RND,SUCHANAID,SlNo);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
                 }
             });
+
+
         } catch (Exception e) {
             Connection.MessageBox(Illness2.this, e.getMessage());
             return;
@@ -304,7 +454,12 @@ public class Illness2 extends Activity {
                 Connection.MessageBox(Illness2.this, "Required field: লাইন নং.");
                 txtSlNo.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "1" : txtSlNo.getText().toString()) < 1 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "40" : txtSlNo.getText().toString()) > 40) {
+            }
+            else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Illness2.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                // txtMSlNo.requestFocus();
+                return;
+            }else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "1" : txtSlNo.getText().toString()) < 1 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "40" : txtSlNo.getText().toString()) > 40) {
                 Connection.MessageBox(Illness2.this, "Value should be between 1 and 40(লাইন নং).");
                 txtSlNo.requestFocus();
                 return;
@@ -341,6 +496,11 @@ public class Illness2 extends Activity {
                 txtH172cM.requestFocus();
                 return;
             }
+            else if (!rdoH172d1.isChecked() & !rdoH172d2.isChecked() & secH172d.isShown()) {
+                Connection.MessageBox(Illness2.this, "Select anyone options from (এই খানায় 5 years or below কোন জীবিত শিশুর মৃত্যু হয়েছে গত 5 years ).");
+                rdoH172d1.requestFocus();
+                return;
+            }
 
             String SQL = "";
             RadioButton rb;
@@ -356,12 +516,19 @@ public class Illness2 extends Activity {
             }
 
             objSave.setSlNo(txtSlNo.getText().toString());
+            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
             objSave.setH172a((spnH172a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH172a.getSelectedItem().toString(), "-")));
             objSave.setH172aX(txtH172aX.getText().toString());
             objSave.setH172b((spnH172b.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH172b.getSelectedItem().toString(), "-")));
             objSave.setH172cX(txtH172cX.getText().toString());
             objSave.setH172cY(txtH172cY.getText().toString());
             objSave.setH172cM(txtH172cM.getText().toString());
+            String[] d_rdogrpH172d = new String[]{"1", "0"};
+            objSave.setH172d("");
+            for (int i = 0; i < rdogrpH172d.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH172d.getChildAt(i);
+                if (rb.isChecked()) objSave.setH172d(d_rdogrpH172d[i]);
+            }
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -382,12 +549,12 @@ public class Illness2 extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID) {
+    private void DataSearch(String Rnd, String SuchanaID,String Slno) {
         try {
 
             RadioButton rb;
             Illness2_DataModel d = new Illness2_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SlNo='" + Slno + "'";
             List<Illness2_DataModel> data = d.SelectAll(this, SQL);
             for (Illness2_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
@@ -406,6 +573,13 @@ public class Illness2 extends Activity {
                 txtH172cX.setText(item.getH172cX());
                 txtH172cY.setText(item.getH172cY());
                 txtH172cM.setText(item.getH172cM());
+                String[] d_rdogrpH172d = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH172d.length; i++) {
+                    if (item.getH172d().equals(String.valueOf(d_rdogrpH172d[i]))) {
+                        rb = (RadioButton) rdogrpH172d.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
             }
         } catch (Exception e) {
             Connection.MessageBox(Illness2.this, e.getMessage());

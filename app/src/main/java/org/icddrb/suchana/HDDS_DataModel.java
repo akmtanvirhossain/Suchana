@@ -197,4 +197,22 @@ public class HDDS_DataModel {
         cur.close();
         return data;
     }
+
+    public List<HDDS_DataModel> SelectH7(Context context, String SQL) {
+        Connection C = new Connection(context);
+        List<HDDS_DataModel> data = new ArrayList<HDDS_DataModel>();
+        HDDS_DataModel d = new HDDS_DataModel();
+        Cursor cur = C.ReadData(SQL);
+
+        cur.moveToFirst();
+        while (!cur.isAfterLast()) {
+            d = new HDDS_DataModel();
+            d._H7 = cur.getString(cur.getColumnIndex("H7"));
+            data.add(d);
+
+            cur.moveToNext();
+        }
+        cur.close();
+        return data;
+    }
 }

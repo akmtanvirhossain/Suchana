@@ -97,7 +97,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -134,7 +134,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -142,7 +142,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -193,7 +193,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি সাস্থ্য কেন্দ্র/হাসপাতাল যান"
                     android:textSize="20sp" />
@@ -245,7 +245,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -282,7 +282,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -321,7 +321,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -358,7 +358,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -397,7 +397,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -434,7 +434,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -473,7 +473,7 @@
 
                 <TextView
                     android:id="@+id/VlblH181a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -511,7 +511,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি স্থানীয় দোকান যান"
                     android:textSize="20sp" />
@@ -563,7 +563,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -600,7 +600,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -639,7 +639,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -676,7 +676,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -715,7 +715,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -752,7 +752,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -791,7 +791,7 @@
 
                 <TextView
                     android:id="@+id/VlblH182a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -829,7 +829,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি সাপ্তাহিক হাট/বাজার যান"
                     android:textSize="20sp" />
@@ -881,7 +881,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -918,7 +918,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -957,7 +957,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -994,7 +994,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1033,7 +1033,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -1070,7 +1070,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1109,7 +1109,7 @@
 
                 <TextView
                     android:id="@+id/VlblH183a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -1147,7 +1147,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি ব্যাঙ্ক যান"
                     android:textSize="20sp" />
@@ -1199,7 +1199,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -1236,7 +1236,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1275,7 +1275,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -1312,7 +1312,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1351,7 +1351,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -1388,7 +1388,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1427,7 +1427,7 @@
 
                 <TextView
                     android:id="@+id/VlblH184a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -1465,7 +1465,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যকেনারজন্যে) যান"
                     android:textSize="20sp" />
@@ -1517,7 +1517,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -1554,7 +1554,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1593,7 +1593,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -1630,7 +1630,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1669,7 +1669,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -1706,7 +1706,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1745,7 +1745,7 @@
 
                 <TextView
                     android:id="@+id/VlblH185a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -1783,7 +1783,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যবিক্রিরজন্যে)যান"
                     android:textSize="20sp" />
@@ -1835,7 +1835,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -1872,7 +1872,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1911,7 +1911,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -1948,7 +1948,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -1987,7 +1987,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -2024,7 +2024,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2063,7 +2063,7 @@
 
                 <TextView
                     android:id="@+id/VlblH186a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -2101,7 +2101,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনারবাড়ির কোনো সদস্য কি সরকারী কৃষিসেবায় যান"
                     android:textSize="20sp" />
@@ -2153,7 +2153,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -2190,7 +2190,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2229,7 +2229,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -2266,7 +2266,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2305,7 +2305,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -2342,7 +2342,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2381,7 +2381,7 @@
 
                 <TextView
                     android:id="@+id/VlblH187a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -2419,7 +2419,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার বাড়ির কোনো সদস্য কি মৎস্য বিভাগ যান"
                     android:textSize="20sp" />
@@ -2471,7 +2471,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -2508,7 +2508,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2547,7 +2547,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -2584,7 +2584,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2623,7 +2623,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -2660,7 +2660,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1881a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2699,7 +2699,7 @@
 
                 <TextView
                     android:id="@+id/VlblH188a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -2737,7 +2737,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বেসরকারীখাত-মাছেরপোনা, চুন ও খাদ্য প্রদানকারী কেন্দ্র গুলোতে যান"
                     android:textSize="20sp" />
@@ -2789,7 +2789,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -2826,7 +2826,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2865,7 +2865,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -2902,7 +2902,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -2941,7 +2941,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -2978,7 +2978,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3017,7 +3017,7 @@
 
                 <TextView
                     android:id="@+id/VlblH189a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -3055,7 +3055,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বেসরকারীখাত- বীজও সার প্রদানকারী কেন্দ্র গুলোতে যান"
                     android:textSize="20sp" />
@@ -3107,7 +3107,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -3144,7 +3144,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3183,7 +3183,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -3220,7 +3220,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3259,7 +3259,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -3296,7 +3296,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3335,7 +3335,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1810a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -3373,7 +3373,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সরকারীখাত-মাছেরপোনা, চুনওখাদ্য প্রদানকারী কেন্দ্র গুলোতে যান"
                     android:textSize="20sp" />
@@ -3425,7 +3425,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -3462,7 +3462,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3501,7 +3501,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -3538,7 +3538,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3577,7 +3577,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -3614,7 +3614,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3653,7 +3653,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1811a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />
@@ -3691,7 +3691,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সরকারীখাত- বীজওসারপ্রদানকারী কেন্দ্র গুলোতে যান"
                     android:textSize="20sp" />
@@ -3743,7 +3743,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a1"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম বাহন"
                     android:textSize="20sp" />
@@ -3780,7 +3780,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a1X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3819,7 +3819,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a2"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দ্বিতীয় বাহন"
                     android:textSize="20sp" />
@@ -3856,7 +3856,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a2X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3895,7 +3895,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a3"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তৃতীয় বাহন"
                     android:textSize="20sp" />
@@ -3932,7 +3932,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a3X"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -3971,7 +3971,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1812a4"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="দূরত্ব KM"
                     android:textSize="20sp" />

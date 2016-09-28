@@ -334,10 +334,12 @@ public class Savings extends Activity {
             spnH1037a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH1037a.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH1037a.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("16")) {
+                    if (spnH1037a.getSelectedItemPosition() != 16 & spnH1037b.getSelectedItemPosition() != 16 &
+                            spnH1037c.getSelectedItemPosition() != 16 & spnH1037d.getSelectedItemPosition() != 16) {
+                        txtH1037X.setText("");
+                        secH1037X.setVisibility(View.GONE);
                     } else {
+                        secH1037X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -374,10 +376,12 @@ public class Savings extends Activity {
             spnH1037b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH1037b.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH1037b.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("16")) {
+                    if (spnH1037a.getSelectedItemPosition() != 16 & spnH1037b.getSelectedItemPosition() != 16 &
+                            spnH1037c.getSelectedItemPosition() != 16 & spnH1037d.getSelectedItemPosition() != 16) {
+                        txtH1037X.setText("");
+                        secH1037X.setVisibility(View.GONE);
                     } else {
+                        secH1037X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -414,10 +418,12 @@ public class Savings extends Activity {
             spnH1037c.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH1037c.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH1037c.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("16")) {
+                    if (spnH1037a.getSelectedItemPosition() != 16 & spnH1037b.getSelectedItemPosition() != 16 &
+                            spnH1037c.getSelectedItemPosition() != 16 & spnH1037d.getSelectedItemPosition() != 16) {
+                        txtH1037X.setText("");
+                        secH1037X.setVisibility(View.GONE);
                     } else {
+                        secH1037X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -454,10 +460,12 @@ public class Savings extends Activity {
             spnH1037d.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH1037d.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH1037d.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("16")) {
+                    if (spnH1037a.getSelectedItemPosition() != 16 & spnH1037b.getSelectedItemPosition() != 16 &
+                            spnH1037c.getSelectedItemPosition() != 16 & spnH1037d.getSelectedItemPosition() != 16) {
+                        txtH1037X.setText("");
+                        secH1037X.setVisibility(View.GONE);
                     } else {
+                        secH1037X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -471,6 +479,7 @@ public class Savings extends Activity {
             txtH1037X = (EditText) findViewById(R.id.txtH1037X);
 
 
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

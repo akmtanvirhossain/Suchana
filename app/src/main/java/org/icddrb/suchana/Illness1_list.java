@@ -274,6 +274,7 @@ public class Illness1_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                    IDbundle.putString("SlNo", o.get("SlNo"));
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), Illness1.class);
                     f1.putExtras(IDbundle);

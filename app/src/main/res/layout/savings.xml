@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:scrollbars="vertical">
 
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="45sp"
@@ -19,14 +20,45 @@
             android:src="@drawable/back" />
 
         <TextView
-            android:id="@+id/lblHeading"
-            android:layout_width="match_parent"
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Savings"
+            android:text="COST"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="SAVINGS"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="LOAN"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cmdForward"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
     </LinearLayout>
 
     <View
@@ -61,12 +93,11 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -99,12 +130,11 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে"
                     android:textSize="20sp" />
@@ -112,10 +142,10 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -137,12 +167,11 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
@@ -180,7 +209,7 @@
 
                 <TextView
                     android:id="@+id/VlblH101"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি  বা আপনার স্ত্রী বা পরিবারের অন্যান্য সদস্য কি কোন সমব্যয় সমিতি  বা এলাকার সঞ্চয়ী কমিটির সদস্য (সুচনা বহির্ভূত)"
                     android:textSize="20sp" />
@@ -196,7 +225,7 @@
                         android:id="@+id/rdoH1011"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -204,7 +233,7 @@
                         android:id="@+id/rdoH1012"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -232,7 +261,7 @@
 
                 <TextView
                     android:id="@+id/VlblH102"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি সুচনা সঞ্চয়ী গ্রুপের সদস্য"
                     android:textSize="20sp" />
@@ -248,7 +277,7 @@
                         android:id="@+id/rdoH1021"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -256,7 +285,7 @@
                         android:id="@+id/rdoH1022"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -284,7 +313,7 @@
 
                 <TextView
                     android:id="@+id/VlblH103"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার এবং / অথবা আপনার স্ত্রী কোন সঞ্চয় আছে"
                     android:textSize="20sp" />
@@ -300,7 +329,7 @@
                         android:id="@+id/rdoH1031"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -308,7 +337,7 @@
                         android:id="@+id/rdoH1032"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -336,7 +365,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1031"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ঘরে সঞ্চয়/ মাটির ব্যাঙ্ক/সিন্দুকে সঞ্চয় (টাকা)"
                     android:textSize="20sp" />
@@ -344,7 +373,7 @@
                 <EditText
                     android:id="@+id/txtH1031"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -374,7 +403,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1032"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ব্যাংক / পোস্ট অফিস (টাকা)"
                     android:textSize="20sp" />
@@ -382,7 +411,7 @@
                 <EditText
                     android:id="@+id/txtH1032"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -412,7 +441,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1033"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="এনজিও (টাকা)"
                     android:textSize="20sp" />
@@ -420,7 +449,7 @@
                 <EditText
                     android:id="@+id/txtH1033"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -450,7 +479,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1034"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ক্ষুদ্রঋণ দানকারী প্রতিষ্ঠান (টাকা)"
                     android:textSize="20sp" />
@@ -458,7 +487,7 @@
                 <EditText
                     android:id="@+id/txtH1034"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -468,6 +497,12 @@
 
             <View
                 android:id="@+id/lineH1034"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <View
+                android:id="@+id/lineH1035"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -488,7 +523,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1035"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সুচনা সঞ্চয়ী গ্রুপ (টাকা)"
                     android:textSize="20sp" />
@@ -496,19 +531,13 @@
                 <EditText
                     android:id="@+id/txtH1035"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="6"
                     android:textSize="20sp" />
             </LinearLayout>
-
-            <View
-                android:id="@+id/lineH1035"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secH1036"
@@ -526,7 +555,7 @@
 
                 <TextView
                     android:id="@+id/VlblH1036"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য (টাকা)"
                     android:textSize="20sp" />
@@ -534,7 +563,7 @@
                 <EditText
                     android:id="@+id/txtH1036"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -559,12 +588,12 @@
                     android:id="@+id/lblH1037a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1037a"
+                    android:text="H1037"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1037a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="১. কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
@@ -596,12 +625,11 @@
                     android:id="@+id/lblH1037b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1037b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1037b"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="২.কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
@@ -633,12 +661,11 @@
                     android:id="@+id/lblH1037c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1037c"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1037c"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="৩. কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
@@ -670,12 +697,11 @@
                     android:id="@+id/lblH1037d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1037d"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1037d"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="৪. কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
@@ -707,12 +733,11 @@
                     android:id="@+id/lblH1037X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1037X"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1037X"
-                    android:layout_width="220sp"
+                    android:layout_width="230sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
@@ -720,10 +745,10 @@
                 <EditText
                     android:id="@+id/txtH1037X"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:maxLength="60"
                     android:textSize="20sp" />
             </LinearLayout>

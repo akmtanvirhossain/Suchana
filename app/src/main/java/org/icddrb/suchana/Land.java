@@ -174,7 +174,7 @@ public class Land extends Activity {
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    //IDBundle.putString("H21", txtH21.getText().toString());
+                    //  IDBundle.putString("H21", txtH21.getText().toString());
                     startActivity(new Intent(Land.this, HDDS.class).putExtras(IDBundle));
 
                 }

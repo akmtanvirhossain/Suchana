@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -324,10 +325,31 @@ public class Destruction2 extends Activity {
 
             rdoH14b81 = (RadioButton) findViewById(R.id.rdoH14b81);
             rdoH14b82 = (RadioButton) findViewById(R.id.rdoH14b82);
+            rdogrpH14b8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH14b8 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH14b8.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH14b8.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH14b8[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        txtH14b8X.setText("");
+                        secH14b8X.setVisibility(View.GONE);
+                    } else {
+                        secH14b8X.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            });
             secH14b8X = (LinearLayout) findViewById(R.id.secH14b8X);
             lineH14b8X = (View) findViewById(R.id.lineH14b8X);
             VlblH14b8X = (TextView) findViewById(R.id.VlblH14b8X);
             txtH14b8X = (EditText) findViewById(R.id.txtH14b8X);
+            secH14b8X.setVisibility(View.GONE);
             seclb14c = (LinearLayout) findViewById(R.id.seclb14c);
             secH14c1 = (LinearLayout) findViewById(R.id.secH14c1);
             lineH14c1 = (View) findViewById(R.id.lineH14c1);
@@ -410,6 +432,7 @@ public class Destruction2 extends Activity {
                         chkH14c1t.setChecked(false);
                         secH14c1x.setVisibility(View.GONE);
                         lineH14c1x.setVisibility(View.GONE);
+                        chkH14c1x.setChecked(true);
                         chkH14c1x.setChecked(false);
                     } else {
                         secH14c1a.setVisibility(View.VISIBLE);
@@ -545,6 +568,17 @@ public class Destruction2 extends Activity {
             lineH14c1x = (View) findViewById(R.id.lineH14c1x);
             VlblH14c1x = (TextView) findViewById(R.id.VlblH14c1x);
             chkH14c1x = (CheckBox) findViewById(R.id.chkH14c1x);
+            chkH14c1x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        secH14c1x1.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH14c1x1.setText("");
+                        secH14c1x1.setVisibility(View.GONE);
+                    }
+                }
+            });
             secH14c1x1 = (LinearLayout) findViewById(R.id.secH14c1x1);
             lineH14c1x1 = (View) findViewById(R.id.lineH14c1x1);
             VlblH14c1x1 = (TextView) findViewById(R.id.VlblH14c1x1);
