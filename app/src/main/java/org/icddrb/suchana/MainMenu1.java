@@ -115,8 +115,11 @@ public class MainMenu1 extends Activity {
             cmdMenuLand.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Land_list.class);
-                    startActivity(f1);
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", "");
+                    IDBundle.putString("SuchanaID", "");
+                    IDBundle.putString("SlNo", "");
+                    startActivity(new Intent(MainMenu1.this, Land_list.class).putExtras(IDBundle));
                 }
             });
 
@@ -124,8 +127,12 @@ public class MainMenu1 extends Activity {
             cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                    //   startActivity(f1);
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", "");
+                    IDBundle.putString("SuchanaID", "");
+                    Intent f1 = new Intent(getApplicationContext(), HDDS.class);
+                    f1.putExtras(IDBundle);
+                    startActivity(f1);
                 }
             });
             cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);
@@ -141,8 +148,12 @@ public class MainMenu1 extends Activity {
             cmdMenuSavings.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //  Intent f1 = new Intent(getApplicationContext(), Savings_list.class);
-                    //  startActivity(f1);
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", "");
+                    IDBundle.putString("SuchanaID", "");
+                    Intent f1 = new Intent(getApplicationContext(), Savings_list.class);
+                    f1.putExtras(IDBundle);
+                    startActivity(f1);
                 }
             });
 
@@ -249,7 +260,6 @@ public class MainMenu1 extends Activity {
             });
 
 
-
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
@@ -275,13 +285,28 @@ public class MainMenu1 extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
-                                        tableList.add("Screening");
-                                        tableList.add("idnHistory");
-                                        tableList.add("medRecord");
-                                        tableList.add("Admission");
-                                        tableList.add("Folup");
-                                        tableList.add("Medicine");
-                                        tableList.add("OthInvestig");
+
+                                        tableList.add("Agriculture");
+                                        tableList.add("AssetB");
+                                        tableList.add("AssetNB");
+                                        tableList.add("Careseek");
+                                        tableList.add("Destruction1");
+                                        tableList.add("Destruction2");
+                                        tableList.add("HDDS");
+                                        tableList.add("HHIdentity");
+                                        tableList.add("IGA");
+                                        tableList.add("Illness1");
+                                        tableList.add("Illness2");
+                                        tableList.add("Land");
+                                        tableList.add("Loan");
+                                        tableList.add("LoginUser");
+                                        tableList.add("Member");
+                                        tableList.add("NGOWork");
+                                        tableList.add("Savings");
+                                        tableList.add("SES");
+                                        tableList.add("UserList");
+                                        tableList.add("VillageList");
+
 
                                         //Lab
                                         tableList.add("SampleAnalysis");

@@ -15,91 +15,25 @@
 
         <TextView
             android:id="@+id/Rnd"
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/SuchanaID"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/SlNo"
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H5"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5X"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5a"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5aX"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5b"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5c"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5d"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5e"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5f"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5g"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5hY"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/H5hM"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center" />
     </LinearLayout>

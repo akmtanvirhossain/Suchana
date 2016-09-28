@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -18,6 +19,7 @@ import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -168,11 +170,36 @@ public class AssetB extends Activity {
     EditText txtH41o4X;
     String StartTime;
     Bundle IDbundle;
+    Button buttonAssetType01;
+    Button buttonAssetType02;
+    Button buttonAssetType03;
+    Button buttonAssetType04;
+    Button buttonAssetType05;
+    Button buttonAssetType06;
+    Button buttonAssetType07;
+    Button buttonAssetType08;
+    Button buttonAssetType09;
+    Button buttonAssetType10;
+    Button buttonAssetType11;
+    Button buttonAssetType12;
+    Button buttonAssetType13;
+    Button buttonAssetType14;
+    Button buttonAssetType15;
+    Button buttonAssetType16;
+    Button buttonAssetType17;
+    Button buttonAssetType18;
+    Button buttonAssetType19;
+    Button buttonAssetType20;
+    Button buttonAssetType21;
+    Button buttonAssetType22;
+    Button cmdSave;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
+    private boolean allItemsCompleted = false;
+    private View pressedButton;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -214,7 +241,6 @@ public class AssetB extends Activity {
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
 
-
                     startActivity(new Intent(AssetB.this, SES.class).putExtras(IDBundle));
                 }
             });
@@ -222,15 +248,16 @@ public class AssetB extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    IDBundle.putString("H41a", "");
-                    startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
-
+                    DataSave();
+                    if (allItemsCompleted) {
+                        Bundle IDBundle = new Bundle();
+                        IDBundle.putString("Rnd", txtRnd.getText().toString());
+                        IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                        IDBundle.putString("H41a", "");
+                        startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
+                    }
                 }
             });
-
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -245,11 +272,249 @@ public class AssetB extends Activity {
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
             seclblH4 = (LinearLayout) findViewById(R.id.seclblH4);
+
+            buttonAssetType01 = (Button) findViewById(R.id.buttonAssetType01);
+            buttonAssetType02 = (Button) findViewById(R.id.buttonAssetType02);
+            buttonAssetType03 = (Button) findViewById(R.id.buttonAssetType03);
+            buttonAssetType04 = (Button) findViewById(R.id.buttonAssetType04);
+            buttonAssetType05 = (Button) findViewById(R.id.buttonAssetType05);
+            buttonAssetType06 = (Button) findViewById(R.id.buttonAssetType06);
+            buttonAssetType07 = (Button) findViewById(R.id.buttonAssetType07);
+            buttonAssetType08 = (Button) findViewById(R.id.buttonAssetType08);
+            buttonAssetType09 = (Button) findViewById(R.id.buttonAssetType09);
+            buttonAssetType10 = (Button) findViewById(R.id.buttonAssetType10);
+            buttonAssetType11 = (Button) findViewById(R.id.buttonAssetType11);
+            buttonAssetType12 = (Button) findViewById(R.id.buttonAssetType12);
+            buttonAssetType13 = (Button) findViewById(R.id.buttonAssetType13);
+            buttonAssetType14 = (Button) findViewById(R.id.buttonAssetType14);
+            buttonAssetType15 = (Button) findViewById(R.id.buttonAssetType15);
+            buttonAssetType16 = (Button) findViewById(R.id.buttonAssetType16);
+            buttonAssetType17 = (Button) findViewById(R.id.buttonAssetType17);
+            buttonAssetType18 = (Button) findViewById(R.id.buttonAssetType18);
+            buttonAssetType19 = (Button) findViewById(R.id.buttonAssetType19);
+            buttonAssetType20 = (Button) findViewById(R.id.buttonAssetType20);
+            buttonAssetType21 = (Button) findViewById(R.id.buttonAssetType21);
+            buttonAssetType22 = (Button) findViewById(R.id.buttonAssetType22);
+
+            buttonColor();
+
+            buttonAssetType01.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+
+
+                }
+            });
+            buttonAssetType02.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType03.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType04.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType05.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType06.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType07.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType08.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType09.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType12.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType13.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType14.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType15.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType16.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType17.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType18.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType19.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType20.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType22.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+
+
             seclblH41 = (LinearLayout) findViewById(R.id.seclblH41);
             secH41a = (LinearLayout) findViewById(R.id.secH41a);
             lineH41a = (View) findViewById(R.id.lineH41a);
             VlblH41a = (TextView) findViewById(R.id.VlblH41a);
             spnH41a = (Spinner) findViewById(R.id.spnH41a);
+            spnH41a.setClickable(false);
+            spnH41a.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        // Toast.makeText(SpinnerActivity.this, "Catch it!", Toast.LENGTH_SHORT).show();
+                    }
+                    return true;
+                }
+            });
             List<String> listH41a = new ArrayList<String>();
 
             listH41a.add("");
@@ -282,10 +547,26 @@ public class AssetB extends Activity {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH41a.getSelectedItem().toString().length() == 0) return;
+
                     String spnData = Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("21")) {
-                    } else if (spnData.equalsIgnoreCase("22")) {
+                    DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+                    if (Integer.parseInt(spnData) < 8) {
+                        seclblH41a.setVisibility(View.VISIBLE);
+                        secH41i.setVisibility(View.VISIBLE);
                     } else {
+
+                        spnH41k.setSelection(0);
+                        seclblH41a.setVisibility(View.GONE);
+                        secH41i.setVisibility(View.GONE);
+                    }
+
+                    if (spnData.equalsIgnoreCase("21")) {
+                        secH41aX.setVisibility(View.VISIBLE);
+                    } else if (spnData.equalsIgnoreCase("22")) {
+                        secH41aX.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH41aX.setText("");
+                        secH41aX.setVisibility(View.GONE);
                     }
                 }
 
@@ -314,7 +595,7 @@ public class AssetB extends Activity {
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (Integer.parseInt(txtH41b.getText().toString()) == 0) {
+                    if (Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "0" : txtH41b.getText().toString()) == 0) {
                         secH41c.setVisibility(View.GONE);
                         lineH41c.setVisibility(View.GONE);
                         secH41d.setVisibility(View.GONE);
@@ -505,7 +786,7 @@ public class AssetB extends Activity {
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (Integer.parseInt(txtH41i.getText().toString()) == 0) {
+                    if (Integer.valueOf((txtH41i.getText().toString().length() == 0) ? "0" : txtH41i.getText().toString()) == 0) {
                         secH41j.setVisibility(View.GONE);
                         lineH41j.setVisibility(View.GONE);
                         secH41k.setVisibility(View.GONE);
@@ -587,7 +868,7 @@ public class AssetB extends Activity {
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (Integer.parseInt(txtH41l.getText().toString()) == 0) {
+                    if (Integer.valueOf((txtH41l.getText().toString().length() == 0) ? "1" : txtH41l.getText().toString()) == 0) {
                         secH41m.setVisibility(View.GONE);
                         lineH41m.setVisibility(View.GONE);
                         secH41n.setVisibility(View.GONE);
@@ -683,7 +964,7 @@ public class AssetB extends Activity {
 
             DataSearch(RND, SUCHANAID, H41A);
 
-            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
@@ -693,6 +974,122 @@ public class AssetB extends Activity {
             Connection.MessageBox(AssetB.this, e.getMessage());
             return;
         }
+    }
+
+    private void buttonColor() {
+        buttonAssetType01.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType02.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType03.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType04.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType05.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType06.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType07.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType08.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType09.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType10.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType11.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType12.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType13.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType14.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType15.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType16.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType17.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType18.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType19.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType20.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType21.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType22.setBackgroundColor(Color.LTGRAY);
+
+        AssetB_DataModel d = new AssetB_DataModel();
+        String SQL = "Select H41a from " + TableName + "  Where Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+        List<AssetB_DataModel> data = d.SelectH41a(this, SQL);
+        if (data.size() == 0) {
+            return;
+        }
+        if (data.size() == 22) {
+            allItemsCompleted = true;
+        } else if (data.size() == 21) {
+            cmdSave.setText("Save -> Continue");
+        } else {
+            cmdSave.setText("SAVE");
+        }
+
+        for (AssetB_DataModel item : data) {
+
+            int code = Integer.valueOf(item.getH41a());
+            int color = Color.GREEN;
+
+            if (code == 1) {
+                buttonAssetType01.setBackgroundColor(color);
+            }
+
+            if (code == 2) {
+                buttonAssetType02.setBackgroundColor(color);
+            }
+            if (code == 3) {
+                buttonAssetType03.setBackgroundColor(color);
+            }
+            if (code == 4) {
+                buttonAssetType04.setBackgroundColor(color);
+            }
+            if (code == 5) {
+                buttonAssetType05.setBackgroundColor(color);
+            }
+            if (code == 6) {
+                buttonAssetType06.setBackgroundColor(color);
+            }
+            if (code == 7) {
+                buttonAssetType07.setBackgroundColor(color);
+            }
+            if (code == 8) {
+                buttonAssetType08.setBackgroundColor(color);
+            }
+            if (code == 9) {
+                buttonAssetType09.setBackgroundColor(color);
+            }
+            if (code == 10) {
+                buttonAssetType10.setBackgroundColor(color);
+            }
+            if (code == 11) {
+                buttonAssetType11.setBackgroundColor(color);
+            }
+            if (code == 12) {
+                buttonAssetType12.setBackgroundColor(color);
+            }
+            if (code == 13) {
+                buttonAssetType13.setBackgroundColor(color);
+            }
+            if (code == 14) {
+                buttonAssetType14.setBackgroundColor(color);
+            }
+            if (code == 15) {
+                buttonAssetType15.setBackgroundColor(color);
+            }
+            if (code == 16) {
+                buttonAssetType16.setBackgroundColor(color);
+            }
+            if (code == 17) {
+                buttonAssetType17.setBackgroundColor(color);
+            }
+            if (code == 18) {
+                buttonAssetType18.setBackgroundColor(color);
+            }
+            if (code == 19) {
+                buttonAssetType19.setBackgroundColor(color);
+            }
+            if (code == 20) {
+                buttonAssetType20.setBackgroundColor(color);
+            }
+            if (code == 21) {
+                buttonAssetType21.setBackgroundColor(color);
+            }
+            if (code == 22) {
+                buttonAssetType22.setBackgroundColor(color);
+            }
+        }
+
+        // ((Button)pressedButton).setBackgroundColor(Color.CYAN);
+
     }
 
     private void DataSave() {
@@ -879,13 +1276,15 @@ public class AssetB extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-
-                Bundle IDBundle = new Bundle();
-                IDBundle.putString("Rnd", txtRnd.getText().toString());
-                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                IDBundle.putString("H41a", "");
-                startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
-                // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                buttonColor();
+                if (allItemsCompleted) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H41a", "");
+                    startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
+                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                }
             } else {
                 Connection.MessageBox(AssetB.this, status);
                 return;
@@ -901,7 +1300,7 @@ public class AssetB extends Activity {
 
             RadioButton rb;
             AssetB_DataModel d = new AssetB_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H41a='" + H41a + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<AssetB_DataModel> data = d.SelectAll(this, SQL);
             for (AssetB_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
@@ -959,6 +1358,98 @@ public class AssetB extends Activity {
         }
     }
 
+    private void DataSearchPartial(String Rnd, String SuchanaID, String H41a) {
+        try {
+
+            RadioButton rb;
+            AssetB_DataModel d = new AssetB_DataModel();
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H41a='" + H41a + "'";
+            List<AssetB_DataModel> data = d.SelectAll(this, SQL);
+            for (AssetB_DataModel item : data) {
+                // txtRnd.setText(item.getRnd());
+                //txtSuchanaID.setText(item.getSuchanaID());
+                // txtMSlNo.setText(item.getMSlNo());
+                spnH41a.setSelection(Global.SpinnerItemPositionAnyLength(spnH41a, item.getH41a()));
+                txtH41aX.setText(item.getH41aX());
+                txtH41b.setText(item.getH41b());
+                txtH41c.setText(item.getH41c());
+                txtH41d.setText(item.getH41d());
+                spnH41e.setSelection(Global.SpinnerItemPositionAnyLength(spnH41e, item.getH41e()));
+                txtH41eX.setText(item.getH41eX());
+                spnH41f.setSelection(Global.SpinnerItemPositionAnyLength(spnH41f, item.getH41f()));
+                txtH41fX.setText(item.getH41fX());
+                String[] d_rdogrpH41g = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH41g.length; i++) {
+                    if (item.getH41g().equals(String.valueOf(d_rdogrpH41g[i]))) {
+                        rb = (RadioButton) rdogrpH41g.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH41h.setText(item.getH41h());
+                txtH41i.setText(item.getH41i());
+                txtH41j.setText(item.getH41j());
+                spnH41k.setSelection(Global.SpinnerItemPositionAnyLength(spnH41k, item.getH41k()));
+                txtH41kX.setText(item.getH41kX());
+                txtH41l.setText(item.getH41l());
+                txtH41m.setText(item.getH41m());
+                txtH41n.setText(item.getH41n());
+                if (item.getH41o1().equals("1")) {
+                    chkH41o1.setChecked(true);
+                } else if (item.getH41o1().equals("2")) {
+                    chkH41o1.setChecked(false);
+                }
+                if (item.getH41o2().equals("1")) {
+                    chkH41o2.setChecked(true);
+                } else if (item.getH41o2().equals("2")) {
+                    chkH41o2.setChecked(false);
+                }
+                if (item.getH41o3().equals("1")) {
+                    chkH41o3.setChecked(true);
+                } else if (item.getH41o3().equals("2")) {
+                    chkH41o3.setChecked(false);
+                }
+                if (item.getH41o4().equals("1")) {
+                    chkH41o4.setChecked(true);
+                } else if (item.getH41o4().equals("2")) {
+                    chkH41o4.setChecked(false);
+                }
+                txtH41o4X.setText(item.getH41o4X());
+            }
+
+
+            if (data.size() == 0) {
+                //spnH41a.setSelection(0);
+                txtH41aX.setText("");
+                txtH41b.setText("");
+                txtH41c.setText("");
+                txtH41d.setText("");
+                spnH41e.setSelection(0);
+                txtH41eX.setText("");
+                spnH41f.setSelection(0);
+                txtH41fX.setText("");
+                rdogrpH41g.clearCheck();
+
+                txtH41h.setText("");
+                txtH41i.setText("");
+                txtH41j.setText("");
+                spnH41k.setSelection(0);
+                txtH41kX.setText("");
+                txtH41l.setText("");
+                txtH41m.setText("");
+                txtH41n.setText("");
+                chkH41o1.setChecked(false);
+                chkH41o2.setChecked(false);
+                chkH41o3.setChecked(true);
+                chkH41o3.setChecked(false);
+                chkH41o4.setChecked(false);
+
+                txtH41o4X.setText("");
+            }
+        } catch (Exception e) {
+            Connection.MessageBox(AssetB.this, e.getMessage());
+            return;
+        }
+    }
 
     //GPS Reading
     //.....................................................................................................

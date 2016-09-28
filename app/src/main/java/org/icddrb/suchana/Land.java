@@ -3,28 +3,18 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Land" android:label="Land" />
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -32,10 +22,8 @@ import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -66,6 +54,10 @@ public class Land extends Activity {
     View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    EditText txtMSlNo;
     LinearLayout seclb50;
     LinearLayout seclb501;
     LinearLayout secSlNo;
@@ -76,10 +68,6 @@ public class Land extends Activity {
     View lineH5;
     TextView VlblH5;
     Spinner spnH5;
-    LinearLayout secH5X;
-    View lineH5X;
-    TextView VlblH5X;
-    EditText txtH5X;
     LinearLayout secH5a;
     View lineH5a;
     TextView VlblH5a;
@@ -127,31 +115,6 @@ public class Land extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate = null;
-
-
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -195,10 +158,25 @@ public class Land extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", txtRnd.getText().toString());
+                            IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                            IDbundle.putString("SlNo", txtSlNo.getText().toString());
+                            startActivity(new Intent(Land.this, Land_list.class).putExtras(IDBundle));
                         }
                     });
                     adb.show();
+                }
+            });
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    //  IDBundle.putString("H21", txtH21.getText().toString());
+                    startActivity(new Intent(Land.this, HDDS.class).putExtras(IDBundle));
+
                 }
             });
 
@@ -211,12 +189,26 @@ public class Land extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
             seclb50 = (LinearLayout) findViewById(R.id.seclb50);
             seclb501 = (LinearLayout) findViewById(R.id.seclb501);
             secSlNo = (LinearLayout) findViewById(R.id.secSlNo);
             lineSlNo = (View) findViewById(R.id.lineSlNo);
             VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
+
+            //txtSlNo.setEnabled(false);
+            int mSlNo = 0;
+            Cursor cursor = C.GetData("Member", "suchanaid", SUCHANAID);
+            if (cursor.getCount() != 0) {
+                mSlNo = cursor.getCount() + 1;
+            } else {
+                mSlNo = 1;
+            }
+            txtSlNo.setText(String.valueOf(mSlNo));
             secH5 = (LinearLayout) findViewById(R.id.secH5);
             lineH5 = (View) findViewById(R.id.lineH5);
             VlblH5 = (TextView) findViewById(R.id.VlblH5);
@@ -236,10 +228,6 @@ public class Land extends Activity {
             ArrayAdapter<String> adptrH5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5);
             spnH5.setAdapter(adptrH5);
 
-            secH5X = (LinearLayout) findViewById(R.id.secH5X);
-            lineH5X = (View) findViewById(R.id.lineH5X);
-            VlblH5X = (TextView) findViewById(R.id.VlblH5X);
-            txtH5X = (EditText) findViewById(R.id.txtH5X);
             secH5a = (LinearLayout) findViewById(R.id.secH5a);
             lineH5a = (View) findViewById(R.id.lineH5a);
             VlblH5a = (TextView) findViewById(R.id.VlblH5a);
@@ -258,6 +246,24 @@ public class Land extends Activity {
             ArrayAdapter<String> adptrH5a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5a);
             spnH5a.setAdapter(adptrH5a);
 
+            spnH5a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH5a.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH5a.getSelectedItem().toString(), "-");
+                    if (!spnData.equalsIgnoreCase("7")) {
+                        secH5aX.setVisibility(View.GONE);
+                        lineH5aX.setVisibility(View.GONE);
+                    } else {
+                        secH5aX.setVisibility(View.VISIBLE);
+                        lineH5aX.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
             secH5aX = (LinearLayout) findViewById(R.id.secH5aX);
             lineH5aX = (View) findViewById(R.id.lineH5aX);
             VlblH5aX = (TextView) findViewById(R.id.VlblH5aX);
@@ -306,6 +312,27 @@ public class Land extends Activity {
             ArrayAdapter<String> adptrH5e = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5e);
             spnH5e.setAdapter(adptrH5e);
 
+            spnH5e.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH5e.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH5e.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("3")) {
+                        secH5f.setVisibility(View.GONE);
+                        lineH5f.setVisibility(View.GONE);
+                    } else if (spnData.equalsIgnoreCase("6")) {
+                        secH5f.setVisibility(View.GONE);
+                        lineH5f.setVisibility(View.GONE);
+                    } else {
+                        secH5f.setVisibility(View.VISIBLE);
+                        lineH5f.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
             secH5f = (LinearLayout) findViewById(R.id.secH5f);
             lineH5f = (View) findViewById(R.id.lineH5f);
             VlblH5f = (TextView) findViewById(R.id.VlblH5f);
@@ -324,10 +351,12 @@ public class Land extends Activity {
             txtH5hM = (EditText) findViewById(R.id.txtH5hM);
 
 
+            DataSearch(RND, SUCHANAID, SLNO);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
+
                 }
             });
         } catch (Exception e) {
@@ -353,6 +382,14 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
+            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                txtMSlNo.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
+                Connection.MessageBox(Land.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
+                txtMSlNo.requestFocus();
+                return;
             } else if (txtSlNo.getText().toString().length() == 0 & secSlNo.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: Serial No.");
                 txtSlNo.requestFocus();
@@ -365,16 +402,12 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: জমির  বিবরণ.");
                 spnH5.requestFocus();
                 return;
-            } else if (txtH5X.getText().toString().length() == 0 & secH5X.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: অন্যান্য.");
-                txtH5X.requestFocus();
-                return;
             } else if (spnH5a.getSelectedItemPosition() == 0 & secH5a.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: এই সম্পদ দিয়ে কি উত্পাদন করা হয়.");
                 spnH5a.requestFocus();
                 return;
             } else if (txtH5aX.getText().toString().length() == 0 & secH5aX.isShown()) {
-                Connection.MessageBox(Land.this, "Required field:  অনান্য উল্লেখ কর.");
+                Connection.MessageBox(Land.this, "Required field: অনান্য উল্লেখ করুন.");
                 txtH5aX.requestFocus();
                 return;
             } else if (txtH5b.getText().toString().length() == 0 & secH5b.isShown()) {
@@ -386,11 +419,11 @@ public class Land extends Activity {
                 txtH5b.requestFocus();
                 return;
             } else if (txtH5c.getText().toString().length() == 0 & secH5c.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: জমির পরিমান (শতাংশ).");
+                Connection.MessageBox(Land.this, "Required field: আয়তন/জমির পরিমান (শতাংশ).");
                 txtH5c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "2" : txtH5c.getText().toString()) > 2) {
-                Connection.MessageBox(Land.this, "Value should be between 1 and 2(জমির পরিমান (শতাংশ)).");
+            } else if (Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
+                Connection.MessageBox(Land.this, "Value should be between 1 and 100(আয়তন/জমির পরিমান (শতাংশ)).");
                 txtH5c.requestFocus();
                 return;
             } else if (spnH5d.getSelectedItemPosition() == 0 & secH5d.isShown()) {
@@ -405,16 +438,16 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন.");
                 txtH5f.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "00000" : txtH5f.getText().toString()) < 00000 || Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "99999" : txtH5f.getText().toString()) > 99999) {
-                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন).");
+            } else if (Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "000000" : txtH5f.getText().toString()) < 000000 || Integer.valueOf(txtH5f.getText().toString().length() == 0 ? "999999" : txtH5f.getText().toString()) > 999999) {
+                Connection.MessageBox(Land.this, "Value should be between 000000 and 999999(জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন).");
                 txtH5f.requestFocus();
                 return;
             } else if (txtH5g.getText().toString().length() == 0 & secH5g.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: জমির বর্তমান বাজার মূল্য.");
                 txtH5g.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "00000" : txtH5g.getText().toString()) < 00000 || Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "99999" : txtH5g.getText().toString()) > 99999) {
-                Connection.MessageBox(Land.this, "Value should be between 00000 and 99999(জমির বর্তমান বাজার মূল্য).");
+            } else if (Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "000000" : txtH5g.getText().toString()) < 000000 || Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "999999" : txtH5g.getText().toString()) > 999999) {
+                Connection.MessageBox(Land.this, "Value should be between 000000 and 999999(জমির বর্তমান বাজার মূল্য).");
                 txtH5g.requestFocus();
                 return;
             } else if (txtH5hY.getText().toString().length() == 0 & secH5hY.isShown()) {
@@ -441,9 +474,9 @@ public class Land extends Activity {
             Land_DataModel objSave = new Land_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
+            objSave.setMSlNo(txtMSlNo.getText().toString());
             objSave.setSlNo(txtSlNo.getText().toString());
             objSave.setH5((spnH5.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5.getSelectedItem().toString(), "-")));
-            objSave.setH5X(txtH5X.getText().toString());
             objSave.setH5a((spnH5a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5a.getSelectedItem().toString(), "-")));
             objSave.setH5aX(txtH5aX.getText().toString());
             objSave.setH5b(txtH5b.getText().toString());
@@ -463,7 +496,12 @@ public class Land extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Land.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("SlNo", txtSlNo.getText().toString());
+                startActivity(new Intent(Land.this, Land_list.class).putExtras(IDBundle));
+                //Connection.MessageBox(Land.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(Land.this, status);
                 return;
@@ -484,9 +522,9 @@ public class Land extends Activity {
             for (Land_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                txtMSlNo.setText(item.getMSlNo());
                 txtSlNo.setText(item.getSlNo());
                 spnH5.setSelection(Global.SpinnerItemPositionAnyLength(spnH5, item.getH5()));
-                txtH5X.setText(item.getH5X());
                 spnH5a.setSelection(Global.SpinnerItemPositionAnyLength(spnH5a, item.getH5a()));
                 txtH5aX.setText(item.getH5aX());
                 txtH5b.setText(item.getH5b());
@@ -504,91 +542,12 @@ public class Land extends Activity {
         }
     }
 
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute, false);
-        }
-        return null;
-    }
-
-    //GPS Reading
-    //.....................................................................................................
-    public void FindLocation() {
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                updateLocation(location);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            public void onProviderEnabled(String provider) {
-            }
-
-            public void onProviderDisabled(String provider) {
-            }
-        };
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-    }
-
-    void updateLocation(Location location) {
-        currentLocation = location;
-        currentLatitude = currentLocation.getLatitude();
-        currentLongitude = currentLocation.getLongitude();
-    }
-
-
-    // Method to turn on GPS
-    public void turnGPSOn() {
-        try {
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if (!provider.contains("gps")) { //if gps is disabled
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        } catch (Exception e) {
-        }
-    }
-
-    // Method to turn off the GPS
-    public void turnGPSOff() {
-        String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-
-        if (provider.contains("gps")) { //if gps is enabled
-            final Intent poke = new Intent();
-            poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-            poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-            poke.setData(Uri.parse("3"));
-            sendBroadcast(poke);
-        }
-    }
 
     // turning off the GPS if its in on state. to avoid the battery drain.
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
-        turnGPSOff();
+
     }
 }

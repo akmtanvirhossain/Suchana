@@ -11,99 +11,42 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="#C2E0EC"
+        android:background="@color/HeadingCyan"
         android:orientation="horizontal"
         android:paddingBottom="5px"
         android:paddingTop="5px">
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Rnd" />
+            android:text="Rnd"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SuchanaID" />
+            android:text="SuchanaID"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SlNo" />
+            android:text="SlNo"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H5" />
+            android:text="জমির  বিবরণ"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5X" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5a" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5aX" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5b" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5c" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5d" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5e" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5f" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5g" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5hY" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H5hM" />
     </LinearLayout>
 </LinearLayout>

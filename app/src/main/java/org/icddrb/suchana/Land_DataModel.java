@@ -14,9 +14,9 @@ public class Land_DataModel {
     Connection C;
     private String _Rnd = "";
     private String _SuchanaID = "";
+    private String _MSlNo = "";
     private String _SlNo = "";
     private String _H5 = "";
-    private String _H5X = "";
     private String _H5a = "";
     private String _H5aX = "";
     private String _H5b = "";
@@ -52,6 +52,14 @@ public class Land_DataModel {
         _SuchanaID = newValue;
     }
 
+    public String getMSlNo() {
+        return _MSlNo;
+    }
+
+    public void setMSlNo(String newValue) {
+        _MSlNo = newValue;
+    }
+
     public String getSlNo() {
         return _SlNo;
     }
@@ -66,14 +74,6 @@ public class Land_DataModel {
 
     public void setH5(String newValue) {
         _H5 = newValue;
-    }
-
-    public String getH5X() {
-        return _H5X;
-    }
-
-    public void setH5X(String newValue) {
-        _H5X = newValue;
     }
 
     public String getH5a() {
@@ -204,7 +204,7 @@ public class Land_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,SlNo,H5,H5X,H5a,H5aX,H5b,H5c,H5d,H5e,H5f,H5g,H5hY,H5hM,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _SlNo + "', '" + _H5 + "', '" + _H5X + "', '" + _H5a + "', '" + _H5aX + "', '" + _H5b + "', '" + _H5c + "', '" + _H5d + "', '" + _H5e + "', '" + _H5f + "', '" + _H5g + "', '" + _H5hY + "', '" + _H5hM + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,SlNo,H5,H5a,H5aX,H5b,H5c,H5d,H5e,H5f,H5g,H5hY,H5hM,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _SlNo + "', '" + _H5 + "', '" + _H5a + "', '" + _H5aX + "', '" + _H5b + "', '" + _H5c + "', '" + _H5d + "', '" + _H5e + "', '" + _H5f + "', '" + _H5g + "', '" + _H5hY + "', '" + _H5hM + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -217,7 +217,7 @@ public class Land_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',SlNo = '" + _SlNo + "',H5 = '" + _H5 + "',H5X = '" + _H5X + "',H5a = '" + _H5a + "',H5aX = '" + _H5aX + "',H5b = '" + _H5b + "',H5c = '" + _H5c + "',H5d = '" + _H5d + "',H5e = '" + _H5e + "',H5f = '" + _H5f + "',H5g = '" + _H5g + "',H5hY = '" + _H5hY + "',H5hM = '" + _H5hM + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',SlNo = '" + _SlNo + "',H5 = '" + _H5 + "',H5a = '" + _H5a + "',H5aX = '" + _H5aX + "',H5b = '" + _H5b + "',H5c = '" + _H5c + "',H5d = '" + _H5d + "',H5e = '" + _H5e + "',H5f = '" + _H5f + "',H5g = '" + _H5g + "',H5hY = '" + _H5hY + "',H5hM = '" + _H5hM + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and SlNo='" + _SlNo + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -237,9 +237,9 @@ public class Land_DataModel {
             d = new Land_DataModel();
             d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
+            d._MSlNo = cur.getString(cur.getColumnIndex("MSlNo"));
             d._SlNo = cur.getString(cur.getColumnIndex("SlNo"));
             d._H5 = cur.getString(cur.getColumnIndex("H5"));
-            d._H5X = cur.getString(cur.getColumnIndex("H5X"));
             d._H5a = cur.getString(cur.getColumnIndex("H5a"));
             d._H5aX = cur.getString(cur.getColumnIndex("H5aX"));
             d._H5b = cur.getString(cur.getColumnIndex("H5b"));

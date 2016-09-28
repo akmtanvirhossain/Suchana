@@ -91,7 +91,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -129,7 +129,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -167,7 +167,7 @@
 
                 <TextView
                     android:id="@+id/VlblH21"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লাইন  #"
                     android:textSize="20sp" />
@@ -205,7 +205,7 @@
 
                 <TextView
                     android:id="@+id/VlblH22"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="নাম  (জাতীয় পরিচয়পত্র অথবা জন্মনিবন্ধন সনদ/ টিকা কার্ড   দেখে নিশ্চিত হোন)"
                     android:textSize="20sp" />
@@ -213,13 +213,13 @@
                 <EditText
                     android:id="@+id/txtH22"
                     style="@style/customEdit"
-                    android:layout_width="170dp"
+                    android:layout_width="170sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
+                    android:layout_marginRight="0sp"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="20"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -245,7 +245,7 @@
 
                 <TextView
                     android:id="@+id/VlblH23"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="লিঙ্গ"
                     android:textSize="20sp" />
@@ -261,7 +261,7 @@
                         android:id="@+id/rdoH231"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="পুরুষ"
                         android:textSize="20sp" />
 
@@ -269,7 +269,7 @@
                         android:id="@+id/rdoH232"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="মহিলা"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -297,7 +297,7 @@
 
                 <TextView
                     android:id="@+id/VlblH24"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="পিতা’র লাইন নম্বর"
                     android:textSize="20sp" />
@@ -335,7 +335,7 @@
 
                 <TextView
                     android:id="@+id/VlblH25"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="খানা প্রধানের সাথে সম্পর্ক"
                     android:textSize="20sp" />
@@ -393,7 +393,7 @@
 
                 <TextView
                     android:id="@+id/VlblH26Y"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বছর"
                     android:textSize="20sp" />
@@ -431,7 +431,7 @@
 
                 <TextView
                     android:id="@+id/VlblH26M"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="মাস"
                     android:textSize="20sp" />
@@ -469,7 +469,7 @@
 
                 <TextView
                     android:id="@+id/VlblH27"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বৈবাহিক অবস্থা"
                     android:textSize="20sp" />
@@ -506,7 +506,7 @@
 
                 <TextView
                     android:id="@+id/VlblH28"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বিয়ের সময় বয়স (বছর)"
                     android:textSize="20sp" />
@@ -544,7 +544,7 @@
 
                 <TextView
                     android:id="@+id/VlblH29"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ধর্ম"
                     android:textSize="20sp" />
@@ -580,7 +580,7 @@
 
                 <TextView
                     android:id="@+id/VlblH29X"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -588,12 +588,12 @@
                 <EditText
                     android:id="@+id/txtH29X"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -619,7 +619,7 @@
 
                 <TextView
                     android:id="@+id/VlblH210"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ভাষা"
                     android:textSize="20sp" />
@@ -635,7 +635,7 @@
                         android:id="@+id/rdoH2101"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="বাংলা"
                         android:textSize="20sp" />
 
@@ -643,7 +643,7 @@
                         android:id="@+id/rdoH2102"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="আদিবাসী ভাষা"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -671,7 +671,7 @@
 
                 <TextView
                     android:id="@+id/VlblH211"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সাক্ষর জ্ঞান"
                     android:textSize="20sp" />
@@ -708,7 +708,7 @@
 
                 <TextView
                     android:id="@+id/VlblH212"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="শিক্ষা (সর্বোচ্চ ক্লাস পাস)"
                     android:textSize="20sp" />
@@ -744,7 +744,7 @@
 
                 <TextView
                     android:id="@+id/VlblH212X"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -752,12 +752,12 @@
                 <EditText
                     android:id="@+id/txtH212X"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -783,7 +783,7 @@
 
                 <TextView
                     android:id="@+id/VlblH213"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="স্কুলের ধরন"
                     android:textSize="20sp" />
@@ -820,7 +820,7 @@
 
                 <TextView
                     android:id="@+id/VlblH214"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="এনজিও সদস্য"
                     android:textSize="20sp" />
@@ -836,7 +836,7 @@
                         android:id="@+id/rdoH2141"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -844,7 +844,7 @@
                         android:id="@+id/rdoH2142"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -872,7 +872,7 @@
 
                 <TextView
                     android:id="@+id/VlblH215"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="পেশা  প্রধান"
                     android:textSize="20sp" />
@@ -908,7 +908,7 @@
 
                 <TextView
                     android:id="@+id/VlblH215X"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -916,12 +916,12 @@
                 <EditText
                     android:id="@+id/txtH215X"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -947,7 +947,7 @@
 
                 <TextView
                     android:id="@+id/VlblH216"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="পেশা  দ্বিতীয়"
                     android:textSize="20sp" />
@@ -983,7 +983,7 @@
 
                 <TextView
                     android:id="@+id/VlblH216X"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -991,12 +991,12 @@
                 <EditText
                     android:id="@+id/txtH216X"
                     style="@style/customEdit"
-                    android:layout_width="195dp"
+                    android:layout_width="195sp"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
-                    android:minHeight="40dp"
+                    android:minHeight="40sp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1022,7 +1022,7 @@
 
                 <TextView
                     android:id="@+id/VlblH217"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রধান পেশা থেকে গত মাসের আয়"
                     android:textSize="20sp" />
@@ -1030,7 +1030,7 @@
                 <EditText
                     android:id="@+id/txtH217"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1060,7 +1060,7 @@
 
                 <TextView
                     android:id="@+id/VlblH218"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সকল উৎস থেকে গত মাসের আয়"
                     android:textSize="20sp" />
@@ -1068,7 +1068,7 @@
                 <EditText
                     android:id="@+id/txtH218"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1098,7 +1098,7 @@
 
                 <TextView
                     android:id="@+id/VlblH219"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="সকল উৎস থেকে গত বছরের আয়"
                     android:textSize="20sp" />
@@ -1106,7 +1106,7 @@
                 <EditText
                     android:id="@+id/txtH219"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1136,7 +1136,7 @@
 
                 <TextView
                     android:id="@+id/VlblH220"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="ইনডেক্স শিশু লাইন নম্বর"
                     android:textSize="20sp" />
@@ -1144,7 +1144,7 @@
                 <EditText
                     android:id="@+id/txtH220"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1174,7 +1174,7 @@
 
                 <TextView
                     android:id="@+id/VlblH221"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="মায়ের লাইন নম্বর"
                     android:textSize="20sp" />
@@ -1182,7 +1182,7 @@
                 <EditText
                     android:id="@+id/txtH221"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1212,7 +1212,7 @@
 
                 <TextView
                     android:id="@+id/VlblH222"
-                    android:layout_width="250dp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="স্বামী অথবা স্ত্রী  লাইন নম্বর"
                     android:textSize="20sp" />
@@ -1220,7 +1220,7 @@
                 <EditText
                     android:id="@+id/txtH222"
                     style="@style/customEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
