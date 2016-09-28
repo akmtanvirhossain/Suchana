@@ -322,6 +322,7 @@
                     android:layout_height="1dip"
                     android:background="#CCCCCC" />
 
+
                 <LinearLayout
                     android:id="@+id/secSuchanaID"
                     style="@style/rowStyle0"
