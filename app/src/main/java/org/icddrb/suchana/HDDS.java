@@ -120,6 +120,7 @@ public class HDDS extends Activity {
     Button buttonAssetType19;
     Button buttonAssetType20;
     Button cmdSave;
+    List<String> listH7L;
     private int hour;
     private int minute;
     private int mDay;
@@ -127,6 +128,8 @@ public class HDDS extends Activity {
     private int mYear;
     private boolean allItemsCompleted = false;
     private View pressedButton;
+    private TextView VlblH7L;
+
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -429,6 +432,34 @@ public class HDDS extends Activity {
             listH7.add("18-মিষ্টান্ন্য");
             listH7.add("19-মশলা, আচার/সস জাতিও খাবার");
             listH7.add("20-বিবিধ (পানীয়)");
+
+            listH7L = new ArrayList<String>();
+            listH7L.add("");
+            listH7L.add("01-ভুট্টা,চাল,গম বা এই সব শস্য দ্বারা অন্য কোন খাবার তৈরী হয়েছে (যেমন:রুটি,নুডলস,সুজি বা অন্যান্য শস্য পণ্য)");
+            listH7L.add("02-সাদা আলু, সাদা মিষ্টি আলু, বা অন্য শিকড় থেকে তৈরি খাবার");
+            listH7L.add("03-কুমড়া,গাজর বা মিষ্টি আলু যার রং ভিতরে কমলা ও স্থানীয় ভিটামিন এ সমৃদ্ধ শাক সবজি");
+            listH7L.add("04-গাঢ় সবুজ শাক শাক সবজি ও স্থানীয় ভাবে পাওয়া ভিটামিন এ সমৃদ্ধ শাক যেমন পালং শাক");
+            listH7L.add("05-অন্যান্য সবজি যেমন টমেটো,পেঁয়াজ,বেগুন) ও স্থানীয় ভাবে পাওয়া অন্যান্য সহজ লভ্য শাকসবজি");
+            listH7L.add("06-পাকা আম, পাকা পেঁপে এবং তাদের 100% ফলের রস + অন্যান্য স্থানীয় ভাবে পাওয়া ভিটামিন এ সমৃদ্ধ ফল");
+            listH7L.add("07-বন্য ফলসহ অনান্য ফল এবং তাদের 100% ফলের রস");
+            listH7L.add("08-কলিজা, কিডনি এবং অন্যান্য অঙ্গের মাংস");
+            listH7L.add("09-গরুর মাংস,ভেড়ার মাংস,ছাগল,খরগোশ,খেলা,মুরগি,হাঁস,অন্যান্য পাখির মাংস");
+            listH7L.add("10-মুরগি,হাঁস,কোয়েল ডিম বা অন্য কোন ডিম");
+            listH7L.add("11-তাজা ছোট মাছ");
+            listH7L.add("12-তাজা মাঝারি ও বৃহৎ মাছ");
+            listH7L.add("13-শুঁটকি মাছ");
+            listH7L.add("14-খোলশওয়ালা মাছ (যেমন কাকড়া)");
+            listH7L.add("15-প্যাকেটজাত শুকনো মটর শুটি ও শুকনো ডাল,গম,মসুরি,বাদাম,বীজ বা এই থেকে তৈরি খাবার (যেমন চীন বাদাম ও বাদামের মাখন)");
+            listH7L.add("16-দুধ,পনির,দই বা অন্যান্য দুগ্ধজাত খাবার");
+            listH7L.add("17-খাবারে যোগ করা বা রান্নার জন্য তেল, চর্বি বা মাখন খাদ্য যোগ");
+            listH7L.add("18-চিনি,মধু,মিষ্টি যুক্ত সোডা বা মিষ্টি যুক্ত রসের পানীয় বা চিনি যুক্ত খাবার যেমন চকলেট,ক্যান্ডি,কুকিজ এবং কেক");
+            listH7L.add("19-মশলা,কালো মরিচ,আচার/সস জাতীয় খাবার যেমন সয়া সস");
+            listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফি ");
+
+            VlblH7L = (TextView) findViewById(R.id.VlblH7L);
+
+            
+            
             ArrayAdapter<String> adptrH7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH7);
             spnH7.setAdapter(adptrH7);
             spnH7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -438,6 +469,7 @@ public class HDDS extends Activity {
 
                     String spnData = Connection.SelectedSpinnerValue(spnH7.getSelectedItem().toString(), "-");
                     DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+                    VlblH7L.setText(listH7L.get(Integer.valueOf(spnData)));
                 }
 
                 @Override
@@ -569,7 +601,7 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (গত ২৪ ঘন্টায় খেয়েছেন).");
                 rdoH7a1.requestFocus();
                 return;
-            } else if (!chkH7b1.isChecked() && !chkH7b2.isChecked() && !chkH7b3.isChecked() && !chkH7b4.isChecked()) {
+            } else if (chkH7b1.isShown() && !chkH7b1.isChecked() && !chkH7b2.isChecked() && !chkH7b3.isChecked() && !chkH7b4.isChecked()) {
                 Connection.MessageBox(HDDS.this, "Select anyone options from checklist");
                 chkH7b1.requestFocus();
                 return;
@@ -578,7 +610,13 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (বিগত 7 দিনে এই খাবার সমূহ খাওয়া হয়েছিল).");
                 rdoH7c1.requestFocus();
                 return;
+            } else if (rdoH7a1.isChecked() & rdoH7c2.isChecked()) {
+                Connection.MessageBox(HDDS.this, "২৪ ঘন্টায় খাওয়া হয়েছে ! বিগত 7 দিনে এই খাবার সমূহ খাওয়া হয়েছিল কিনা ? উত্তর না হবেনা ! ");
+                rdoH7c1.requestFocus();
+                return;
             }
+
+
 
             String SQL = "";
             RadioButton rb;

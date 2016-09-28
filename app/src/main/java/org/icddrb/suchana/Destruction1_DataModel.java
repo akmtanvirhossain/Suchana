@@ -517,4 +517,22 @@ public class Destruction1_DataModel {
         cur.close();
         return data;
     }
+
+    public List<Destruction1_DataModel> SelectH14a(Context context, String SQL) {
+        Connection C = new Connection(context);
+        List<Destruction1_DataModel> data = new ArrayList<Destruction1_DataModel>();
+        Destruction1_DataModel d = new Destruction1_DataModel();
+        Cursor cur = C.ReadData(SQL);
+
+        cur.moveToFirst();
+        while (!cur.isAfterLast()) {
+            d = new Destruction1_DataModel();
+            d._H14a = cur.getString(cur.getColumnIndex("H14a"));
+            data.add(d);
+
+            cur.moveToNext();
+        }
+        cur.close();
+        return data;
+    }
 }
