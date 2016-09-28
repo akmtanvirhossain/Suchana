@@ -143,7 +143,7 @@ public class MainMenu1 extends Activity {
                     IDbundle1.putString("Rnd", "1");
                     IDbundle1.putString("SuchanaID", "1234");
                     Intent f1 = new Intent(getApplicationContext(), Cost1.class);
-                    f1.putExtras(IDBundle);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
