@@ -16,7 +16,6 @@ import Common.Connection;
 import Common.Global;
 
 public class MainMenu1 extends Activity {
-
     static String USERID = "";
     Button cmdMenuIdentity;
     Button cmdMenuMember;
