@@ -264,7 +264,7 @@ public class Member extends Activity {
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+       /*     ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                             Bundle IDBundle = new Bundle();
@@ -274,7 +274,7 @@ public class Member extends Activity {
                             startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
 
                 }
-            });
+            });*/
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
