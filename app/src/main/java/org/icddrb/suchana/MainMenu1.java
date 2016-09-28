@@ -139,8 +139,12 @@ public class MainMenu1 extends Activity {
             cmdMenuCost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //   Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                    //   startActivity(f1);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), Cost1.class);
+                    f1.putExtras(IDBundle);
+                    startActivity(f1);
                 }
             });
 
@@ -238,7 +242,11 @@ public class MainMenu1 extends Activity {
             cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
                     Intent f1 = new Intent(getApplicationContext(), Illness2_list.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
@@ -246,7 +254,11 @@ public class MainMenu1 extends Activity {
             cmdMenuCareseek.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Careseek_list.class);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), Careseek.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
@@ -254,7 +266,11 @@ public class MainMenu1 extends Activity {
             cmdMenuIGA.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), IGA_list.class);
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", "1");
+                    IDbundle1.putString("SuchanaID", "1234");
+                    Intent f1 = new Intent(getApplicationContext(), IGA.class);
+                    f1.putExtras(IDbundle1);
                     startActivity(f1);
                 }
             });
@@ -285,6 +301,7 @@ public class MainMenu1 extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
+
 
                                         tableList.add("Agriculture");
                                         tableList.add("AssetB");
