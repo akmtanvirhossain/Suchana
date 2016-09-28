@@ -138,6 +138,7 @@ public class HHIdentity_list extends Activity {
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             startActivity(new Intent(HHIdentity_list.this, UpdateMenu.class));
+                            finish();
                         }});
                     adb.show();
                 }});
@@ -339,7 +340,7 @@ public class HHIdentity_list extends Activity {
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
                     Intent f1;
-                    f1 = new Intent(getApplicationContext(), HHIdentity.class);
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
                 }

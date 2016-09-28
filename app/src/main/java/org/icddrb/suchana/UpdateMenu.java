@@ -147,7 +147,7 @@ public class UpdateMenu extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Loan.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
@@ -176,7 +176,7 @@ public class UpdateMenu extends Activity {
             cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Agriculture.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, Agriculture_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuNGO = (Button) findViewById(R.id.cmdMenuNGO);
@@ -190,14 +190,14 @@ public class UpdateMenu extends Activity {
             cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Illness1.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, Illness1_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuIllness2 = (Button) findViewById(R.id.cmdMenuIllness2);
             cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Illness2.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, Illness2_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuCareseek = (Button) findViewById(R.id.cmdMenuCareseek);
@@ -241,8 +241,6 @@ public class UpdateMenu extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
-
-
                                         tableList.add("Agriculture");
                                         tableList.add("AssetB");
                                         tableList.add("AssetNB");
