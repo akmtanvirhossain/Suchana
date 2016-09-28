@@ -56,7 +56,8 @@
         <activity android:name=".Land_list" />
         <activity android:name=".HDDS" />
         <activity android:name=".HDDS_list" />
-
+        <activity android:name=".Savings" />
+        <activity android:name=".Savings_list" />
         <activity android:name=".Destruction1" />
         <activity android:name=".Destruction1_list" />
         <activity android:name=".Destruction2" />

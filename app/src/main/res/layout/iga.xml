@@ -135,7 +135,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে"
                     android:textSize="20sp" />
@@ -172,26 +172,7 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <View
-                android:id="@+id/lineH18b1"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
 
-            <LinearLayout
-                android:id="@+id/seclb18b2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblHlb18b2"
-                    style="@style/rowHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
-                    android:textSize="20sp" />
-            </LinearLayout>
 
             <View
                 android:id="@+id/linelb18b2"
@@ -243,6 +224,44 @@
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH18b2a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/lblHlb18b2a"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2a"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -585,6 +604,44 @@
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/lineH18b2a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2b"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2b"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -930,6 +987,43 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH18b2c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2c"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2c"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
                 android:id="@+id/lineH18b1c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
@@ -1269,6 +1363,42 @@
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH18b2d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2d"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2d"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2d"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -1614,6 +1744,43 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH18b2e"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2e"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2e"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2e"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
                 android:id="@+id/lineH18b1e"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
@@ -1953,6 +2120,44 @@
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/lineH18b2f"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2f"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2f"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2f"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -2297,6 +2502,45 @@
                 </RadioGroup>
             </LinearLayout>
 
+
+            <View
+                android:id="@+id/lineH18b2g"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2g"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2g"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2g"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
             <View
                 android:id="@+id/lineH18b1g"
                 android:layout_width="fill_parent"
@@ -2638,6 +2882,46 @@
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/lineH18b2h"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2h"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2h"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
 
             <View
                 android:id="@+id/lineH18b1h"
@@ -2982,6 +3266,43 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/lineH18b2i"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2i"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2i"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2i"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
                 android:id="@+id/lineH18b1i"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
@@ -3250,6 +3571,45 @@
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
+
+
+            <View
+                android:id="@+id/lineH18b2j"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclb18b2j"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb18b2j"
+                    style="@style/rowHeading"
+                    android:layout_width="370sp"
+                    android:layout_height="wrap_content"
+                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH18b1a"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkHl8b2j"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
 
             <View
                 android:id="@+id/lineH18b1j"
@@ -3520,6 +3880,7 @@
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
+
 
             <View
                 android:id="@+id/lineH18b1k"

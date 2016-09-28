@@ -70,6 +70,7 @@ public class IGA extends Activity {
     LinearLayout seclb18b2;
     LinearLayout secH18b1a;
     View lineH18b1a;
+
     TextView VlblH18b1a;
     RadioGroup rdogrpH18b1a;
     RadioButton rdoH18b1a1;
@@ -442,6 +443,32 @@ public class IGA extends Activity {
     View lineH18b2kX;
     TextView VlblH18b2kX;
     EditText txtH18b2kX;
+
+    LinearLayout seclb18b2a;
+    CheckBox chkHl8b2a;
+    LinearLayout seclb18b2b;
+    CheckBox chkHl8b2b;
+    LinearLayout seclb18b2c;
+    CheckBox chkHl8b2c;
+    LinearLayout seclb18b2d;
+    CheckBox chkHl8b2d;
+    LinearLayout seclb18b2e;
+    CheckBox chkHl8b2e;
+    LinearLayout seclb18b2f;
+    CheckBox chkHl8b2f;
+    LinearLayout seclb18b2g;
+    CheckBox chkHl8b2g;
+    LinearLayout seclb18b2h;
+    CheckBox chkHl8b2h;
+    LinearLayout seclb18b2i;
+    CheckBox chkHl8b2i;
+    LinearLayout seclb18b2j;
+    CheckBox chkHl8b2j;
+    LinearLayout seclb18b2k;
+    CheckBox chkHl8b2k;
+
+
+
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -494,7 +521,7 @@ public class IGA extends Activity {
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
             IDbundle = getIntent().getExtras();
-            RND = IDbundle.getString("RND");
+            RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "IGA";
@@ -533,7 +560,60 @@ public class IGA extends Activity {
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             secH18b1 = (LinearLayout) findViewById(R.id.secH18b1);
-            seclb18b2 = (LinearLayout) findViewById(R.id.seclb18b2);
+            seclb18b2a = (LinearLayout) findViewById(R.id.seclb18b2a);
+            chkHl8b2a = (CheckBox) findViewById(R.id.chkHl8b2a);
+
+            chkHl8b2a.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+
+                        secH18b2a1.setVisibility(View.VISIBLE);
+                        lineH18b2a1.setVisibility(View.VISIBLE);
+                        secH18b2a2.setVisibility(View.VISIBLE);
+                        lineH18b2a2.setVisibility(View.VISIBLE);
+                        secH18b2a3.setVisibility(View.VISIBLE);
+                        lineH18b2a3.setVisibility(View.VISIBLE);
+                        secH18b2a4.setVisibility(View.VISIBLE);
+                        lineH18b2a4.setVisibility(View.VISIBLE);
+                        secH18b2a5.setVisibility(View.VISIBLE);
+                        lineH18b2a5.setVisibility(View.VISIBLE);
+                        secH18b2a6.setVisibility(View.VISIBLE);
+                        lineH18b2a6.setVisibility(View.VISIBLE);
+                        secH18b2a7.setVisibility(View.VISIBLE);
+                        lineH18b2a7.setVisibility(View.VISIBLE);
+                        secH18b2a7X.setVisibility(View.VISIBLE);
+                        lineH18b2a7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2a1.setVisibility(View.GONE);
+                        lineH18b2a1.setVisibility(View.GONE);
+                        chkH18b2a1.setChecked(false);
+                        secH18b2a2.setVisibility(View.GONE);
+                        lineH18b2a2.setVisibility(View.GONE);
+                        chkH18b2a2.setChecked(false);
+                        secH18b2a3.setVisibility(View.GONE);
+                        lineH18b2a3.setVisibility(View.GONE);
+                        chkH18b2a3.setChecked(false);
+                        secH18b2a4.setVisibility(View.GONE);
+                        lineH18b2a4.setVisibility(View.GONE);
+                        chkH18b2a4.setChecked(false);
+                        secH18b2a5.setVisibility(View.GONE);
+                        lineH18b2a5.setVisibility(View.GONE);
+                        chkH18b2a5.setChecked(false);
+                        secH18b2a6.setVisibility(View.GONE);
+                        lineH18b2a6.setVisibility(View.GONE);
+                        chkH18b2a6.setChecked(false);
+                        secH18b2a7.setVisibility(View.GONE);
+                        lineH18b2a7.setVisibility(View.GONE);
+                        chkH18b2a7.setChecked(false);
+                        secH18b2a7X.setVisibility(View.GONE);
+                        lineH18b2a7X.setVisibility(View.GONE);
+                        txtH18b2a7X.setText("");
+
+                    }
+                }
+            });
             secH18b1a = (LinearLayout) findViewById(R.id.secH18b1a);
             lineH18b1a = (View) findViewById(R.id.lineH18b1a);
             VlblH18b1a = (TextView) findViewById(R.id.VlblH18b1a);
@@ -553,6 +633,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2a.setVisibility(View.GONE);
+                        chkHl8b2a.setChecked(false);
                         secH18b2a1.setVisibility(View.GONE);
                         lineH18b2a1.setVisibility(View.GONE);
                         chkH18b2a1.setChecked(false);
@@ -578,6 +660,7 @@ public class IGA extends Activity {
                         lineH18b2a7X.setVisibility(View.GONE);
                         txtH18b2a7X.setText("");
                     } else {
+                        seclb18b2a.setVisibility(View.VISIBLE);
                         secH18b2a1.setVisibility(View.VISIBLE);
                         lineH18b2a1.setVisibility(View.VISIBLE);
                         secH18b2a2.setVisibility(View.VISIBLE);
@@ -635,9 +718,14 @@ public class IGA extends Activity {
                         secH18b2a7X.setVisibility(View.GONE);
                         lineH18b2a7X.setVisibility(View.GONE);
                         txtH18b2a7X.setText("");
-                        secH18b1b.setVisibility(View.GONE);
-                        lineH18b1b.setVisibility(View.GONE);
-                        rdogrpH18b1b.clearCheck();
+                    //    secH18b1b.setVisibility(View.GONE);
+                     //   lineH18b1b.setVisibility(View.GONE);
+                     //   rdogrpH18b1b.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2a7X.setVisibility(View.VISIBLE);
+                        lineH18b2a7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -645,10 +733,67 @@ public class IGA extends Activity {
             lineH18b2a7X = (View) findViewById(R.id.lineH18b2a7X);
             VlblH18b2a7X = (TextView) findViewById(R.id.VlblH18b2a7X);
             txtH18b2a7X = (EditText) findViewById(R.id.txtH18b2a7X);
+
+            secH18b2a7X.setVisibility(View.GONE);
+            lineH18b2a7X.setVisibility(View.GONE);
+
             secH18b1b = (LinearLayout) findViewById(R.id.secH18b1b);
             lineH18b1b = (View) findViewById(R.id.lineH18b1b);
             VlblH18b1b = (TextView) findViewById(R.id.VlblH18b1b);
             rdogrpH18b1b = (RadioGroup) findViewById(R.id.rdogrpH18b1b);
+            seclb18b2b = (LinearLayout) findViewById(R.id.seclb18b2b);
+            chkHl8b2b = (CheckBox) findViewById(R.id.chkHl8b2b);
+
+            chkHl8b2b.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+
+                        secH18b2b1.setVisibility(View.VISIBLE);
+                        lineH18b2b1.setVisibility(View.VISIBLE);
+                        secH18b2b2.setVisibility(View.VISIBLE);
+                        lineH18b2b2.setVisibility(View.VISIBLE);
+                        secH18b2b3.setVisibility(View.VISIBLE);
+                        lineH18b2b3.setVisibility(View.VISIBLE);
+                        secH18b2b4.setVisibility(View.VISIBLE);
+                        lineH18b2b4.setVisibility(View.VISIBLE);
+                        secH18b2b5.setVisibility(View.VISIBLE);
+                        lineH18b2b5.setVisibility(View.VISIBLE);
+                        secH18b2b6.setVisibility(View.VISIBLE);
+                        lineH18b2b6.setVisibility(View.VISIBLE);
+                        secH18b2b7.setVisibility(View.VISIBLE);
+                        lineH18b2b7.setVisibility(View.VISIBLE);
+                        secH18b2b7X.setVisibility(View.VISIBLE);
+                        lineH18b2b7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2b1.setVisibility(View.GONE);
+                        lineH18b2b1.setVisibility(View.GONE);
+                        chkH18b2b1.setChecked(false);
+                        secH18b2b2.setVisibility(View.GONE);
+                        lineH18b2b2.setVisibility(View.GONE);
+                        chkH18b2b2.setChecked(false);
+                        secH18b2b3.setVisibility(View.GONE);
+                        lineH18b2b3.setVisibility(View.GONE);
+                        chkH18b2b3.setChecked(false);
+                        secH18b2b4.setVisibility(View.GONE);
+                        lineH18b2b4.setVisibility(View.GONE);
+                        chkH18b2b4.setChecked(false);
+                        secH18b2b5.setVisibility(View.GONE);
+                        lineH18b2b5.setVisibility(View.GONE);
+                        chkH18b2b5.setChecked(false);
+                        secH18b2b6.setVisibility(View.GONE);
+                        lineH18b2b6.setVisibility(View.GONE);
+                        chkH18b2b6.setChecked(false);
+                        secH18b2b7.setVisibility(View.GONE);
+                        lineH18b2b7.setVisibility(View.GONE);
+                        chkH18b2b7.setChecked(false);
+                        secH18b2b7X.setVisibility(View.GONE);
+                        lineH18b2b7X.setVisibility(View.GONE);
+                        txtH18b2b7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1b1 = (RadioButton) findViewById(R.id.rdoH18b1b1);
             rdoH18b1b2 = (RadioButton) findViewById(R.id.rdoH18b1b2);
@@ -664,6 +809,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2b.setVisibility(View.GONE);
+                        chkHl8b2b.setChecked(false);
                         secH18b2b1.setVisibility(View.GONE);
                         lineH18b2b1.setVisibility(View.GONE);
                         chkH18b2b1.setChecked(false);
@@ -689,6 +836,8 @@ public class IGA extends Activity {
                         lineH18b2b7X.setVisibility(View.GONE);
                         txtH18b2b7X.setText("");
                     } else {
+                        seclb18b2b.setVisibility(View.VISIBLE);
+
                         secH18b2b1.setVisibility(View.VISIBLE);
                         lineH18b2b1.setVisibility(View.VISIBLE);
                         secH18b2b2.setVisibility(View.VISIBLE);
@@ -746,9 +895,14 @@ public class IGA extends Activity {
                         secH18b2b7X.setVisibility(View.GONE);
                         lineH18b2b7X.setVisibility(View.GONE);
                         txtH18b2b7X.setText("");
-                        secH18b1c.setVisibility(View.GONE);
-                        lineH18b1c.setVisibility(View.GONE);
-                        rdogrpH18b1c.clearCheck();
+                       // secH18b1c.setVisibility(View.GONE);
+                      //  lineH18b1c.setVisibility(View.GONE);
+                       // rdogrpH18b1c.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2b7X.setVisibility(View.VISIBLE);
+                        lineH18b2b7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -756,10 +910,67 @@ public class IGA extends Activity {
             lineH18b2b7X = (View) findViewById(R.id.lineH18b2b7X);
             VlblH18b2b7X = (TextView) findViewById(R.id.VlblH18b2b7X);
             txtH18b2b7X = (EditText) findViewById(R.id.txtH18b2b7X);
+
+            secH18b2b7X.setVisibility(View.GONE);
+            lineH18b2b7X.setVisibility(View.GONE);
+
             secH18b1c = (LinearLayout) findViewById(R.id.secH18b1c);
             lineH18b1c = (View) findViewById(R.id.lineH18b1c);
             VlblH18b1c = (TextView) findViewById(R.id.VlblH18b1c);
             rdogrpH18b1c = (RadioGroup) findViewById(R.id.rdogrpH18b1c);
+            seclb18b2c = (LinearLayout) findViewById(R.id.seclb18b2c);
+            chkHl8b2c = (CheckBox) findViewById(R.id.chkHl8b2c);
+
+            chkHl8b2c.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+
+                        secH18b2c1.setVisibility(View.VISIBLE);
+                        lineH18b2c1.setVisibility(View.VISIBLE);
+                        secH18b2c2.setVisibility(View.VISIBLE);
+                        lineH18b2c2.setVisibility(View.VISIBLE);
+                        secH18b2c3.setVisibility(View.VISIBLE);
+                        lineH18b2c3.setVisibility(View.VISIBLE);
+                        secH18b2c4.setVisibility(View.VISIBLE);
+                        lineH18b2c4.setVisibility(View.VISIBLE);
+                        secH18b2c5.setVisibility(View.VISIBLE);
+                        lineH18b2c5.setVisibility(View.VISIBLE);
+                        secH18b2c6.setVisibility(View.VISIBLE);
+                        lineH18b2c6.setVisibility(View.VISIBLE);
+                        secH18b2c7.setVisibility(View.VISIBLE);
+                        lineH18b2c7.setVisibility(View.VISIBLE);
+                        secH18b2c7X.setVisibility(View.VISIBLE);
+                        lineH18b2c7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2c1.setVisibility(View.GONE);
+                        lineH18b2c1.setVisibility(View.GONE);
+                        chkH18b2c1.setChecked(false);
+                        secH18b2c2.setVisibility(View.GONE);
+                        lineH18b2c2.setVisibility(View.GONE);
+                        chkH18b2c2.setChecked(false);
+                        secH18b2c3.setVisibility(View.GONE);
+                        lineH18b2c3.setVisibility(View.GONE);
+                        chkH18b2c3.setChecked(false);
+                        secH18b2c4.setVisibility(View.GONE);
+                        lineH18b2c4.setVisibility(View.GONE);
+                        chkH18b2c4.setChecked(false);
+                        secH18b2c5.setVisibility(View.GONE);
+                        lineH18b2c5.setVisibility(View.GONE);
+                        chkH18b2c5.setChecked(false);
+                        secH18b2c6.setVisibility(View.GONE);
+                        lineH18b2c6.setVisibility(View.GONE);
+                        chkH18b2c6.setChecked(false);
+                        secH18b2c7.setVisibility(View.GONE);
+                        lineH18b2c7.setVisibility(View.GONE);
+                        chkH18b2c7.setChecked(false);
+                        secH18b2c7X.setVisibility(View.GONE);
+                        lineH18b2c7X.setVisibility(View.GONE);
+                        txtH18b2c7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1c1 = (RadioButton) findViewById(R.id.rdoH18b1c1);
             rdoH18b1c2 = (RadioButton) findViewById(R.id.rdoH18b1c2);
@@ -775,6 +986,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2c.setVisibility(View.GONE);
+                        chkHl8b2c.setChecked(false);
                         secH18b2c1.setVisibility(View.GONE);
                         lineH18b2c1.setVisibility(View.GONE);
                         chkH18b2c1.setChecked(false);
@@ -800,6 +1013,8 @@ public class IGA extends Activity {
                         lineH18b2c7X.setVisibility(View.GONE);
                         txtH18b2c7X.setText("");
                     } else {
+                        seclb18b2c.setVisibility(View.INVISIBLE);
+
                         secH18b2c1.setVisibility(View.VISIBLE);
                         lineH18b2c1.setVisibility(View.VISIBLE);
                         secH18b2c2.setVisibility(View.VISIBLE);
@@ -857,9 +1072,14 @@ public class IGA extends Activity {
                         secH18b2c7X.setVisibility(View.GONE);
                         lineH18b2c7X.setVisibility(View.GONE);
                         txtH18b2c7X.setText("");
-                        secH18b1d.setVisibility(View.GONE);
-                        lineH18b1d.setVisibility(View.GONE);
-                        rdogrpH18b1d.clearCheck();
+                      //  secH18b1d.setVisibility(View.GONE);
+                      //  lineH18b1d.setVisibility(View.GONE);
+                      //  rdogrpH18b1d.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2c7X.setVisibility(View.VISIBLE);
+                        lineH18b2c7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -867,10 +1087,67 @@ public class IGA extends Activity {
             lineH18b2c7X = (View) findViewById(R.id.lineH18b2c7X);
             VlblH18b2c7X = (TextView) findViewById(R.id.VlblH18b2c7X);
             txtH18b2c7X = (EditText) findViewById(R.id.txtH18b2c7X);
+
+            secH18b2c7X.setVisibility(View.GONE);
+            lineH18b2c7X.setVisibility(View.GONE);
+
             secH18b1d = (LinearLayout) findViewById(R.id.secH18b1d);
             lineH18b1d = (View) findViewById(R.id.lineH18b1d);
             VlblH18b1d = (TextView) findViewById(R.id.VlblH18b1d);
             rdogrpH18b1d = (RadioGroup) findViewById(R.id.rdogrpH18b1d);
+            seclb18b2d = (LinearLayout) findViewById(R.id.seclb18b2d);
+            chkHl8b2d = (CheckBox) findViewById(R.id.chkHl8b2d);
+
+            chkHl8b2d.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+
+                        secH18b2d1.setVisibility(View.VISIBLE);
+                        lineH18b2d1.setVisibility(View.VISIBLE);
+                        secH18b2d2.setVisibility(View.VISIBLE);
+                        lineH18b2d2.setVisibility(View.VISIBLE);
+                        secH18b2d3.setVisibility(View.VISIBLE);
+                        lineH18b2d3.setVisibility(View.VISIBLE);
+                        secH18b2d4.setVisibility(View.VISIBLE);
+                        lineH18b2d4.setVisibility(View.VISIBLE);
+                        secH18b2d5.setVisibility(View.VISIBLE);
+                        lineH18b2d5.setVisibility(View.VISIBLE);
+                        secH18b2d6.setVisibility(View.VISIBLE);
+                        lineH18b2d6.setVisibility(View.VISIBLE);
+                        secH18b2d7.setVisibility(View.VISIBLE);
+                        lineH18b2d7.setVisibility(View.VISIBLE);
+                        secH18b2d7X.setVisibility(View.VISIBLE);
+                        lineH18b2d7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2d1.setVisibility(View.GONE);
+                        lineH18b2d1.setVisibility(View.GONE);
+                        chkH18b2d1.setChecked(false);
+                        secH18b2d2.setVisibility(View.GONE);
+                        lineH18b2d2.setVisibility(View.GONE);
+                        chkH18b2d2.setChecked(false);
+                        secH18b2d3.setVisibility(View.GONE);
+                        lineH18b2d3.setVisibility(View.GONE);
+                        chkH18b2d3.setChecked(false);
+                        secH18b2d4.setVisibility(View.GONE);
+                        lineH18b2d4.setVisibility(View.GONE);
+                        chkH18b2d4.setChecked(false);
+                        secH18b2d5.setVisibility(View.GONE);
+                        lineH18b2d5.setVisibility(View.GONE);
+                        chkH18b2d5.setChecked(false);
+                        secH18b2d6.setVisibility(View.GONE);
+                        lineH18b2d6.setVisibility(View.GONE);
+                        chkH18b2d6.setChecked(false);
+                        secH18b2d7.setVisibility(View.GONE);
+                        lineH18b2d7.setVisibility(View.GONE);
+                        chkH18b2d7.setChecked(false);
+                        secH18b2d7X.setVisibility(View.GONE);
+                        lineH18b2d7X.setVisibility(View.GONE);
+                        txtH18b2d7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1d1 = (RadioButton) findViewById(R.id.rdoH18b1d1);
             rdoH18b1d2 = (RadioButton) findViewById(R.id.rdoH18b1d2);
@@ -886,6 +1163,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2d.setVisibility(View.GONE);
+                        chkHl8b2d.setChecked(false);
                         secH18b2d1.setVisibility(View.GONE);
                         lineH18b2d1.setVisibility(View.GONE);
                         chkH18b2d1.setChecked(false);
@@ -911,6 +1190,8 @@ public class IGA extends Activity {
                         lineH18b2d7X.setVisibility(View.GONE);
                         txtH18b2d7X.setText("");
                     } else {
+                        seclb18b2d.setVisibility(View.VISIBLE);
+
                         secH18b2d1.setVisibility(View.VISIBLE);
                         lineH18b2d1.setVisibility(View.VISIBLE);
                         secH18b2d2.setVisibility(View.VISIBLE);
@@ -968,9 +1249,14 @@ public class IGA extends Activity {
                         secH18b2d7X.setVisibility(View.GONE);
                         lineH18b2d7X.setVisibility(View.GONE);
                         txtH18b2d7X.setText("");
-                        secH18b1e.setVisibility(View.GONE);
-                        lineH18b1e.setVisibility(View.GONE);
-                        rdogrpH18b1e.clearCheck();
+                       // secH18b1e.setVisibility(View.GONE);
+                      //  lineH18b1e.setVisibility(View.GONE);
+                       // rdogrpH18b1e.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2d7X.setVisibility(View.VISIBLE);
+                        lineH18b2d7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -978,10 +1264,67 @@ public class IGA extends Activity {
             lineH18b2d7X = (View) findViewById(R.id.lineH18b2d7X);
             VlblH18b2d7X = (TextView) findViewById(R.id.VlblH18b2d7X);
             txtH18b2d7X = (EditText) findViewById(R.id.txtH18b2d7X);
+
+            secH18b2d7X.setVisibility(View.GONE);
+            lineH18b2d7X.setVisibility(View.GONE);
+
             secH18b1e = (LinearLayout) findViewById(R.id.secH18b1e);
             lineH18b1e = (View) findViewById(R.id.lineH18b1e);
             VlblH18b1e = (TextView) findViewById(R.id.VlblH18b1e);
             rdogrpH18b1e = (RadioGroup) findViewById(R.id.rdogrpH18b1e);
+            seclb18b2e = (LinearLayout) findViewById(R.id.seclb18b2e);
+            chkHl8b2e = (CheckBox) findViewById(R.id.chkHl8b2e);
+
+            chkHl8b2e.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+
+                        secH18b2e1.setVisibility(View.VISIBLE);
+                        lineH18b2e1.setVisibility(View.VISIBLE);
+                        secH18b2e2.setVisibility(View.VISIBLE);
+                        lineH18b2e2.setVisibility(View.VISIBLE);
+                        secH18b2e3.setVisibility(View.VISIBLE);
+                        lineH18b2e3.setVisibility(View.VISIBLE);
+                        secH18b2e4.setVisibility(View.VISIBLE);
+                        lineH18b2e4.setVisibility(View.VISIBLE);
+                        secH18b2e5.setVisibility(View.VISIBLE);
+                        lineH18b2e5.setVisibility(View.VISIBLE);
+                        secH18b2e6.setVisibility(View.VISIBLE);
+                        lineH18b2e6.setVisibility(View.VISIBLE);
+                        secH18b2e7.setVisibility(View.VISIBLE);
+                        lineH18b2e7.setVisibility(View.VISIBLE);
+                        secH18b2e7X.setVisibility(View.VISIBLE);
+                        lineH18b2e7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2e1.setVisibility(View.GONE);
+                        lineH18b2e1.setVisibility(View.GONE);
+                        chkH18b2e1.setChecked(false);
+                        secH18b2e2.setVisibility(View.GONE);
+                        lineH18b2e2.setVisibility(View.GONE);
+                        chkH18b2e2.setChecked(false);
+                        secH18b2e3.setVisibility(View.GONE);
+                        lineH18b2e3.setVisibility(View.GONE);
+                        chkH18b2e3.setChecked(false);
+                        secH18b2e4.setVisibility(View.GONE);
+                        lineH18b2e4.setVisibility(View.GONE);
+                        chkH18b2e4.setChecked(false);
+                        secH18b2e5.setVisibility(View.GONE);
+                        lineH18b2e5.setVisibility(View.GONE);
+                        chkH18b2e5.setChecked(false);
+                        secH18b2e6.setVisibility(View.GONE);
+                        lineH18b2e6.setVisibility(View.GONE);
+                        chkH18b2e6.setChecked(false);
+                        secH18b2e7.setVisibility(View.GONE);
+                        lineH18b2e7.setVisibility(View.GONE);
+                        chkH18b2e7.setChecked(false);
+                        secH18b2e7X.setVisibility(View.GONE);
+                        lineH18b2e7X.setVisibility(View.GONE);
+                        txtH18b2e7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1e1 = (RadioButton) findViewById(R.id.rdoH18b1e1);
             rdoH18b1e2 = (RadioButton) findViewById(R.id.rdoH18b1e2);
@@ -997,6 +1340,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2e.setVisibility(View.GONE);
+                        chkHl8b2e.setChecked(false);
                         secH18b2e1.setVisibility(View.GONE);
                         lineH18b2e1.setVisibility(View.GONE);
                         chkH18b2e1.setChecked(false);
@@ -1022,6 +1367,7 @@ public class IGA extends Activity {
                         lineH18b2e7X.setVisibility(View.GONE);
                         txtH18b2e7X.setText("");
                     } else {
+                        seclb18b2e.setVisibility(View.VISIBLE);
                         secH18b2e1.setVisibility(View.VISIBLE);
                         lineH18b2e1.setVisibility(View.VISIBLE);
                         secH18b2e2.setVisibility(View.VISIBLE);
@@ -1079,9 +1425,14 @@ public class IGA extends Activity {
                         secH18b2e7X.setVisibility(View.GONE);
                         lineH18b2e7X.setVisibility(View.GONE);
                         txtH18b2e7X.setText("");
-                        secH18b1f.setVisibility(View.GONE);
-                        lineH18b1f.setVisibility(View.GONE);
-                        rdogrpH18b1f.clearCheck();
+                       // secH18b1f.setVisibility(View.GONE);
+                      //  lineH18b1f.setVisibility(View.GONE);
+                      //  rdogrpH18b1f.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2e7X.setVisibility(View.VISIBLE);
+                        lineH18b2e7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1089,10 +1440,65 @@ public class IGA extends Activity {
             lineH18b2e7X = (View) findViewById(R.id.lineH18b2e7X);
             VlblH18b2e7X = (TextView) findViewById(R.id.VlblH18b2e7X);
             txtH18b2e7X = (EditText) findViewById(R.id.txtH18b2e7X);
+
+            secH18b2e7X.setVisibility(View.GONE);
+            lineH18b2e7X.setVisibility(View.GONE);
+
             secH18b1f = (LinearLayout) findViewById(R.id.secH18b1f);
             lineH18b1f = (View) findViewById(R.id.lineH18b1f);
             VlblH18b1f = (TextView) findViewById(R.id.VlblH18b1f);
             rdogrpH18b1f = (RadioGroup) findViewById(R.id.rdogrpH18b1f);
+            seclb18b2f = (LinearLayout) findViewById(R.id.seclb18b2f);
+            chkHl8b2f = (CheckBox) findViewById(R.id.chkHl8b2f);
+
+            chkHl8b2f.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        lineH18b2f1.setVisibility(View.VISIBLE);
+                        secH18b2f2.setVisibility(View.VISIBLE);
+                        lineH18b2f2.setVisibility(View.VISIBLE);
+                        secH18b2f3.setVisibility(View.VISIBLE);
+                        lineH18b2f3.setVisibility(View.VISIBLE);
+                        secH18b2f4.setVisibility(View.VISIBLE);
+                        lineH18b2f4.setVisibility(View.VISIBLE);
+                        secH18b2f5.setVisibility(View.VISIBLE);
+                        lineH18b2f5.setVisibility(View.VISIBLE);
+                        secH18b2f6.setVisibility(View.VISIBLE);
+                        lineH18b2f6.setVisibility(View.VISIBLE);
+                        secH18b2f7.setVisibility(View.VISIBLE);
+                        lineH18b2f7.setVisibility(View.VISIBLE);
+                        secH18b2f7X.setVisibility(View.VISIBLE);
+                        lineH18b2f7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2f1.setVisibility(View.GONE);
+                        lineH18b2f1.setVisibility(View.GONE);
+                        chkH18b2f1.setChecked(false);
+                        secH18b2f2.setVisibility(View.GONE);
+                        lineH18b2f2.setVisibility(View.GONE);
+                        chkH18b2f2.setChecked(false);
+                        secH18b2f3.setVisibility(View.GONE);
+                        lineH18b2f3.setVisibility(View.GONE);
+                        chkH18b2f3.setChecked(false);
+                        secH18b2f4.setVisibility(View.GONE);
+                        lineH18b2f4.setVisibility(View.GONE);
+                        chkH18b2f4.setChecked(false);
+                        secH18b2f5.setVisibility(View.GONE);
+                        lineH18b2f5.setVisibility(View.GONE);
+                        chkH18b2f5.setChecked(false);
+                        secH18b2f6.setVisibility(View.GONE);
+                        lineH18b2f6.setVisibility(View.GONE);
+                        chkH18b2f6.setChecked(false);
+                        secH18b2f7.setVisibility(View.GONE);
+                        lineH18b2f7.setVisibility(View.GONE);
+                        chkH18b2f7.setChecked(false);
+                        secH18b2f7X.setVisibility(View.GONE);
+                        lineH18b2f7X.setVisibility(View.GONE);
+                        txtH18b2f7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1f1 = (RadioButton) findViewById(R.id.rdoH18b1f1);
             rdoH18b1f2 = (RadioButton) findViewById(R.id.rdoH18b1f2);
@@ -1108,6 +1514,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2f.setVisibility(View.GONE);
+                        chkHl8b2f.setChecked(false);
                         secH18b2f1.setVisibility(View.GONE);
                         lineH18b2f1.setVisibility(View.GONE);
                         chkH18b2f1.setChecked(false);
@@ -1133,6 +1541,8 @@ public class IGA extends Activity {
                         lineH18b2f7X.setVisibility(View.GONE);
                         txtH18b2f7X.setText("");
                     } else {
+                        seclb18b2f.setVisibility(View.VISIBLE);
+
                         secH18b2f1.setVisibility(View.VISIBLE);
                         lineH18b2f1.setVisibility(View.VISIBLE);
                         secH18b2f2.setVisibility(View.VISIBLE);
@@ -1190,9 +1600,14 @@ public class IGA extends Activity {
                         secH18b2f7X.setVisibility(View.GONE);
                         lineH18b2f7X.setVisibility(View.GONE);
                         txtH18b2f7X.setText("");
-                        secH18b1g.setVisibility(View.GONE);
-                        lineH18b1g.setVisibility(View.GONE);
-                        rdogrpH18b1g.clearCheck();
+                       // secH18b1g.setVisibility(View.GONE);
+                      //  lineH18b1g.setVisibility(View.GONE);
+                      //  rdogrpH18b1g.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2f7X.setVisibility(View.VISIBLE);
+                        lineH18b2f7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1200,10 +1615,67 @@ public class IGA extends Activity {
             lineH18b2f7X = (View) findViewById(R.id.lineH18b2f7X);
             VlblH18b2f7X = (TextView) findViewById(R.id.VlblH18b2f7X);
             txtH18b2f7X = (EditText) findViewById(R.id.txtH18b2f7X);
+
+            secH18b2f7X.setVisibility(View.GONE);
+            lineH18b2f7X.setVisibility(View.GONE);
+
             secH18b1g = (LinearLayout) findViewById(R.id.secH18b1g);
             lineH18b1g = (View) findViewById(R.id.lineH18b1g);
             VlblH18b1g = (TextView) findViewById(R.id.VlblH18b1g);
             rdogrpH18b1g = (RadioGroup) findViewById(R.id.rdogrpH18b1g);
+            seclb18b2g = (LinearLayout) findViewById(R.id.seclb18b2g);
+            chkHl8b2g = (CheckBox) findViewById(R.id.chkHl8b2g);
+
+            chkHl8b2g.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH18b2g1.setVisibility(View.VISIBLE);
+                        lineH18b2g1.setVisibility(View.VISIBLE);
+                        secH18b2g2.setVisibility(View.VISIBLE);
+                        lineH18b2g2.setVisibility(View.VISIBLE);
+                        secH18b2g3.setVisibility(View.VISIBLE);
+                        lineH18b2g3.setVisibility(View.VISIBLE);
+                        secH18b2g4.setVisibility(View.VISIBLE);
+                        lineH18b2g4.setVisibility(View.VISIBLE);
+                        secH18b2g5.setVisibility(View.VISIBLE);
+                        lineH18b2g5.setVisibility(View.VISIBLE);
+                        secH18b2g6.setVisibility(View.VISIBLE);
+                        lineH18b2g6.setVisibility(View.VISIBLE);
+                        secH18b2g7.setVisibility(View.VISIBLE);
+                        lineH18b2g7.setVisibility(View.VISIBLE);
+                        secH18b2g7X.setVisibility(View.VISIBLE);
+                        lineH18b2g7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2g1.setVisibility(View.GONE);
+                        lineH18b2g1.setVisibility(View.GONE);
+                        chkH18b2g1.setChecked(false);
+                        secH18b2g2.setVisibility(View.GONE);
+                        lineH18b2g2.setVisibility(View.GONE);
+                        chkH18b2g2.setChecked(false);
+                        secH18b2g3.setVisibility(View.GONE);
+                        lineH18b2g3.setVisibility(View.GONE);
+                        chkH18b2g3.setChecked(false);
+                        secH18b2g4.setVisibility(View.GONE);
+                        lineH18b2g4.setVisibility(View.GONE);
+                        chkH18b2g4.setChecked(false);
+                        secH18b2g5.setVisibility(View.GONE);
+                        lineH18b2g5.setVisibility(View.GONE);
+                        chkH18b2g5.setChecked(false);
+                        secH18b2g6.setVisibility(View.GONE);
+                        lineH18b2g6.setVisibility(View.GONE);
+                        chkH18b2g6.setChecked(false);
+                        secH18b2g7.setVisibility(View.GONE);
+                        lineH18b2g7.setVisibility(View.GONE);
+                        chkH18b2g7.setChecked(false);
+                        secH18b2g7X.setVisibility(View.GONE);
+                        lineH18b2g7X.setVisibility(View.GONE);
+                        txtH18b2g7X.setText("");
+                    }
+                }
+            });
+
 
             rdoH18b1g1 = (RadioButton) findViewById(R.id.rdoH18b1g1);
             rdoH18b1g2 = (RadioButton) findViewById(R.id.rdoH18b1g2);
@@ -1219,6 +1691,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2g.setVisibility(View.GONE);
+                        chkHl8b2g.setChecked(false);
                         secH18b2g1.setVisibility(View.GONE);
                         lineH18b2g1.setVisibility(View.GONE);
                         chkH18b2g1.setChecked(false);
@@ -1244,6 +1718,8 @@ public class IGA extends Activity {
                         lineH18b2g7X.setVisibility(View.GONE);
                         txtH18b2g7X.setText("");
                     } else {
+                        seclb18b2g.setVisibility(View.VISIBLE);
+
                         secH18b2g1.setVisibility(View.VISIBLE);
                         lineH18b2g1.setVisibility(View.VISIBLE);
                         secH18b2g2.setVisibility(View.VISIBLE);
@@ -1301,9 +1777,14 @@ public class IGA extends Activity {
                         secH18b2g7X.setVisibility(View.GONE);
                         lineH18b2g7X.setVisibility(View.GONE);
                         txtH18b2g7X.setText("");
-                        secH18b1h.setVisibility(View.GONE);
-                        lineH18b1h.setVisibility(View.GONE);
-                        rdogrpH18b1h.clearCheck();
+                       // secH18b1h.setVisibility(View.GONE);
+                      //  lineH18b1h.setVisibility(View.GONE);
+                      //  rdogrpH18b1h.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2g7X.setVisibility(View.VISIBLE);
+                        lineH18b2g7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1311,10 +1792,66 @@ public class IGA extends Activity {
             lineH18b2g7X = (View) findViewById(R.id.lineH18b2g7X);
             VlblH18b2g7X = (TextView) findViewById(R.id.VlblH18b2g7X);
             txtH18b2g7X = (EditText) findViewById(R.id.txtH18b2g7X);
+
+            secH18b2g7X.setVisibility(View.GONE);
+            lineH18b2g7X.setVisibility(View.GONE);
+
             secH18b1h = (LinearLayout) findViewById(R.id.secH18b1h);
             lineH18b1h = (View) findViewById(R.id.lineH18b1h);
             VlblH18b1h = (TextView) findViewById(R.id.VlblH18b1h);
             rdogrpH18b1h = (RadioGroup) findViewById(R.id.rdogrpH18b1h);
+            seclb18b2h = (LinearLayout) findViewById(R.id.seclb18b2h);
+            chkHl8b2h = (CheckBox) findViewById(R.id.chkHl8b2h);
+
+            chkHl8b2h.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH18b2h1.setVisibility(View.VISIBLE);
+                        lineH18b2h1.setVisibility(View.VISIBLE);
+                        secH18b2h2.setVisibility(View.VISIBLE);
+                        lineH18b2h2.setVisibility(View.VISIBLE);
+                        secH18b2h3.setVisibility(View.VISIBLE);
+                        lineH18b2h3.setVisibility(View.VISIBLE);
+                        secH18b2h4.setVisibility(View.VISIBLE);
+                        lineH18b2h4.setVisibility(View.VISIBLE);
+                        secH18b2h5.setVisibility(View.VISIBLE);
+                        lineH18b2h5.setVisibility(View.VISIBLE);
+                        secH18b2h6.setVisibility(View.VISIBLE);
+                        lineH18b2h6.setVisibility(View.VISIBLE);
+                        secH18b2h7.setVisibility(View.VISIBLE);
+                        lineH18b2h7.setVisibility(View.VISIBLE);
+                        secH18b2h7X.setVisibility(View.VISIBLE);
+                        lineH18b2h7X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2h1.setVisibility(View.GONE);
+                        lineH18b2h1.setVisibility(View.GONE);
+                        chkH18b2h1.setChecked(false);
+                        secH18b2h2.setVisibility(View.GONE);
+                        lineH18b2h2.setVisibility(View.GONE);
+                        chkH18b2h2.setChecked(false);
+                        secH18b2h3.setVisibility(View.GONE);
+                        lineH18b2h3.setVisibility(View.GONE);
+                        chkH18b2h3.setChecked(false);
+                        secH18b2h4.setVisibility(View.GONE);
+                        lineH18b2h4.setVisibility(View.GONE);
+                        chkH18b2h4.setChecked(false);
+                        secH18b2h5.setVisibility(View.GONE);
+                        lineH18b2h5.setVisibility(View.GONE);
+                        chkH18b2h5.setChecked(false);
+                        secH18b2h6.setVisibility(View.GONE);
+                        lineH18b2h6.setVisibility(View.GONE);
+                        chkH18b2h6.setChecked(false);
+                        secH18b2h7.setVisibility(View.GONE);
+                        lineH18b2h7.setVisibility(View.GONE);
+                        chkH18b2h7.setChecked(false);
+                        secH18b2h7X.setVisibility(View.GONE);
+                        lineH18b2h7X.setVisibility(View.GONE);
+                        txtH18b2h7X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1h1 = (RadioButton) findViewById(R.id.rdoH18b1h1);
             rdoH18b1h2 = (RadioButton) findViewById(R.id.rdoH18b1h2);
@@ -1330,6 +1867,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2h.setVisibility(View.GONE);
+                        chkHl8b2h.setChecked(false);
                         secH18b2h1.setVisibility(View.GONE);
                         lineH18b2h1.setVisibility(View.GONE);
                         chkH18b2h1.setChecked(false);
@@ -1355,6 +1894,8 @@ public class IGA extends Activity {
                         lineH18b2h7X.setVisibility(View.GONE);
                         txtH18b2h7X.setText("");
                     } else {
+                        seclb18b2h.setVisibility(View.VISIBLE);
+
                         secH18b2h1.setVisibility(View.VISIBLE);
                         lineH18b2h1.setVisibility(View.VISIBLE);
                         secH18b2h2.setVisibility(View.VISIBLE);
@@ -1412,9 +1953,14 @@ public class IGA extends Activity {
                         secH18b2h7X.setVisibility(View.GONE);
                         lineH18b2h7X.setVisibility(View.GONE);
                         txtH18b2h7X.setText("");
-                        secH18b1i.setVisibility(View.GONE);
-                        lineH18b1i.setVisibility(View.GONE);
-                        rdogrpH18b1i.clearCheck();
+                      //  secH18b1i.setVisibility(View.GONE);
+                      //  lineH18b1i.setVisibility(View.GONE);
+                      //  rdogrpH18b1i.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2h7X.setVisibility(View.VISIBLE);
+                        lineH18b2h7X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1422,10 +1968,56 @@ public class IGA extends Activity {
             lineH18b2h7X = (View) findViewById(R.id.lineH18b2h7X);
             VlblH18b2h7X = (TextView) findViewById(R.id.VlblH18b2h7X);
             txtH18b2h7X = (EditText) findViewById(R.id.txtH18b2h7X);
+
+            secH18b2h7X.setVisibility(View.GONE);
+            lineH18b2h7X.setVisibility(View.GONE);
+
             secH18b1i = (LinearLayout) findViewById(R.id.secH18b1i);
             lineH18b1i = (View) findViewById(R.id.lineH18b1i);
             VlblH18b1i = (TextView) findViewById(R.id.VlblH18b1i);
             rdogrpH18b1i = (RadioGroup) findViewById(R.id.rdogrpH18b1i);
+            seclb18b2i = (LinearLayout) findViewById(R.id.seclb18b2i);
+            chkHl8b2i = (CheckBox) findViewById(R.id.chkHl8b2i);
+
+            chkHl8b2i.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH18b2i1.setVisibility(View.VISIBLE);
+                        lineH18b2i1.setVisibility(View.VISIBLE);
+                        secH18b2i2.setVisibility(View.VISIBLE);
+                        lineH18b2i2.setVisibility(View.VISIBLE);
+                        secH18b2i3.setVisibility(View.VISIBLE);
+                        lineH18b2i3.setVisibility(View.VISIBLE);
+                        secH18b2i4.setVisibility(View.VISIBLE);
+                        lineH18b2i4.setVisibility(View.VISIBLE);
+                        secH18b2i5.setVisibility(View.VISIBLE);
+                        lineH18b2i5.setVisibility(View.VISIBLE);
+                        secH18b2i5X.setVisibility(View.VISIBLE);
+                        lineH18b2i5X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2i1.setVisibility(View.GONE);
+                        lineH18b2i1.setVisibility(View.GONE);
+                        chkH18b2i1.setChecked(false);
+                        secH18b2i2.setVisibility(View.GONE);
+                        lineH18b2i2.setVisibility(View.GONE);
+                        chkH18b2i2.setChecked(false);
+                        secH18b2i3.setVisibility(View.GONE);
+                        lineH18b2i3.setVisibility(View.GONE);
+                        chkH18b2i3.setChecked(false);
+                        secH18b2i4.setVisibility(View.GONE);
+                        lineH18b2i4.setVisibility(View.GONE);
+                        chkH18b2i4.setChecked(false);
+                        secH18b2i5.setVisibility(View.GONE);
+                        lineH18b2i5.setVisibility(View.GONE);
+                        chkH18b2i5.setChecked(false);
+                        secH18b2i5X.setVisibility(View.GONE);
+                        lineH18b2i5X.setVisibility(View.GONE);
+                        txtH18b2i5X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1i1 = (RadioButton) findViewById(R.id.rdoH18b1i1);
             rdoH18b1i2 = (RadioButton) findViewById(R.id.rdoH18b1i2);
@@ -1441,6 +2033,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2i.setVisibility(View.GONE);
+                        chkHl8b2i.setChecked(false);
                         secH18b2i1.setVisibility(View.GONE);
                         lineH18b2i1.setVisibility(View.GONE);
                         chkH18b2i1.setChecked(false);
@@ -1460,6 +2054,8 @@ public class IGA extends Activity {
                         lineH18b2i5X.setVisibility(View.GONE);
                         txtH18b2i5X.setText("");
                     } else {
+                        seclb18b2i.setVisibility(View.VISIBLE);
+
                         secH18b2i1.setVisibility(View.VISIBLE);
                         lineH18b2i1.setVisibility(View.VISIBLE);
                         secH18b2i2.setVisibility(View.VISIBLE);
@@ -1505,9 +2101,14 @@ public class IGA extends Activity {
                         secH18b2i5X.setVisibility(View.GONE);
                         lineH18b2i5X.setVisibility(View.GONE);
                         txtH18b2i5X.setText("");
-                        secH18b1j.setVisibility(View.GONE);
-                        lineH18b1j.setVisibility(View.GONE);
-                        rdogrpH18b1j.clearCheck();
+                      //  secH18b1j.setVisibility(View.GONE);
+                      //  lineH18b1j.setVisibility(View.GONE);
+                      //  rdogrpH18b1j.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2i5X.setVisibility(View.VISIBLE);
+                        lineH18b2i5X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1515,10 +2116,56 @@ public class IGA extends Activity {
             lineH18b2i5X = (View) findViewById(R.id.lineH18b2i5X);
             VlblH18b2i5X = (TextView) findViewById(R.id.VlblH18b2i5X);
             txtH18b2i5X = (EditText) findViewById(R.id.txtH18b2i5X);
+
+            secH18b2i5X.setVisibility(View.GONE);
+            lineH18b2i5X.setVisibility(View.GONE);
+
             secH18b1j = (LinearLayout) findViewById(R.id.secH18b1j);
             lineH18b1j = (View) findViewById(R.id.lineH18b1j);
             VlblH18b1j = (TextView) findViewById(R.id.VlblH18b1j);
             rdogrpH18b1j = (RadioGroup) findViewById(R.id.rdogrpH18b1j);
+            seclb18b2j = (LinearLayout) findViewById(R.id.seclb18b2j);
+            chkHl8b2j = (CheckBox) findViewById(R.id.chkHl8b2j);
+
+            chkHl8b2j.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH18b2j1.setVisibility(View.VISIBLE);
+                        lineH18b2j1.setVisibility(View.VISIBLE);
+                        secH18b2j2.setVisibility(View.VISIBLE);
+                        lineH18b2j2.setVisibility(View.VISIBLE);
+                        secH18b2j3.setVisibility(View.VISIBLE);
+                        lineH18b2j3.setVisibility(View.VISIBLE);
+                        secH18b2j4.setVisibility(View.VISIBLE);
+                        lineH18b2j4.setVisibility(View.VISIBLE);
+                        secH18b2j5.setVisibility(View.VISIBLE);
+                        lineH18b2j5.setVisibility(View.VISIBLE);
+                        secH18b2j5X.setVisibility(View.VISIBLE);
+                        lineH18b2j5X.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        secH18b2j1.setVisibility(View.GONE);
+                        lineH18b2j1.setVisibility(View.GONE);
+                        chkH18b2j1.setChecked(false);
+                        secH18b2j2.setVisibility(View.GONE);
+                        lineH18b2j2.setVisibility(View.GONE);
+                        chkH18b2j2.setChecked(false);
+                        secH18b2j3.setVisibility(View.GONE);
+                        lineH18b2j3.setVisibility(View.GONE);
+                        chkH18b2j3.setChecked(false);
+                        secH18b2j4.setVisibility(View.GONE);
+                        lineH18b2j4.setVisibility(View.GONE);
+                        chkH18b2j4.setChecked(false);
+                        secH18b2j5.setVisibility(View.GONE);
+                        lineH18b2j5.setVisibility(View.GONE);
+                        chkH18b2j5.setChecked(false);
+                        secH18b2j5X.setVisibility(View.GONE);
+                        lineH18b2j5X.setVisibility(View.GONE);
+                        txtH18b2j5X.setText("");
+                    }
+                }
+            });
 
             rdoH18b1j1 = (RadioButton) findViewById(R.id.rdoH18b1j1);
             rdoH18b1j2 = (RadioButton) findViewById(R.id.rdoH18b1j2);
@@ -1534,6 +2181,8 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclb18b2j.setVisibility(View.GONE);
+                        chkHl8b2j.setChecked(false);
                         secH18b2j1.setVisibility(View.GONE);
                         lineH18b2j1.setVisibility(View.GONE);
                         chkH18b2j1.setChecked(false);
@@ -1553,6 +2202,8 @@ public class IGA extends Activity {
                         lineH18b2j5X.setVisibility(View.GONE);
                         txtH18b2j5X.setText("");
                     } else {
+                        seclb18b2j.setVisibility(View.GONE);
+
                         secH18b2j1.setVisibility(View.VISIBLE);
                         lineH18b2j1.setVisibility(View.VISIBLE);
                         secH18b2j2.setVisibility(View.VISIBLE);
@@ -1598,9 +2249,14 @@ public class IGA extends Activity {
                         secH18b2j5X.setVisibility(View.GONE);
                         lineH18b2j5X.setVisibility(View.GONE);
                         txtH18b2j5X.setText("");
-                        secH18b1k.setVisibility(View.GONE);
-                        lineH18b1k.setVisibility(View.GONE);
-                        rdogrpH18b1k.clearCheck();
+                       // secH18b1k.setVisibility(View.GONE);
+                       // lineH18b1k.setVisibility(View.GONE);
+                      //  rdogrpH18b1k.clearCheck();
+                    }
+                    else
+                    {
+                        secH18b2j5X.setVisibility(View.VISIBLE);
+                        lineH18b2j5X.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1608,6 +2264,10 @@ public class IGA extends Activity {
             lineH18b2j5X = (View) findViewById(R.id.lineH18b2j5X);
             VlblH18b2j5X = (TextView) findViewById(R.id.VlblH18b2j5X);
             txtH18b2j5X = (EditText) findViewById(R.id.txtH18b2j5X);
+
+            secH18b2j5X.setVisibility(View.GONE);
+            lineH18b2j5X.setVisibility(View.GONE);
+
             secH18b1k = (LinearLayout) findViewById(R.id.secH18b1k);
             lineH18b1k = (View) findViewById(R.id.lineH18b1k);
             VlblH18b1k = (TextView) findViewById(R.id.VlblH18b1k);
@@ -1627,7 +2287,11 @@ public class IGA extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        secH18b2kX.setVisibility(View.GONE);
+
+                        txtH18b2kX.setText("");
                     } else {
+                        secH18b2kX.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1640,6 +2304,12 @@ public class IGA extends Activity {
             VlblH18b2kX = (TextView) findViewById(R.id.VlblH18b2kX);
             txtH18b2kX = (EditText) findViewById(R.id.txtH18b2kX);
 
+            txtRND.setText(RND);
+            txtRND.setEnabled(false);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
+
+            DataSearch(RND,SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -1772,7 +2442,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1a.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1a(d_rdogrpH18b1a[i]);
             }
-
+            objSave.setH18b2a((chkHl8b2a.isChecked() ? "1" : "2"));
             objSave.setH18b2a1((chkH18b2a1.isChecked() ? "1" : "2"));
             objSave.setH18b2a2((chkH18b2a2.isChecked() ? "1" : "2"));
             objSave.setH18b2a3((chkH18b2a3.isChecked() ? "1" : "2"));
@@ -1787,7 +2457,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1b.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1b(d_rdogrpH18b1b[i]);
             }
-
+            objSave.setH18b2b((chkHl8b2b.isChecked() ? "1" : "2"));
             objSave.setH18b2b1((chkH18b2b1.isChecked() ? "1" : "2"));
             objSave.setH18b2b2((chkH18b2b2.isChecked() ? "1" : "2"));
             objSave.setH18b2b3((chkH18b2b3.isChecked() ? "1" : "2"));
@@ -1802,7 +2472,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1c.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1c(d_rdogrpH18b1c[i]);
             }
-
+            objSave.setH18b2c((chkHl8b2c.isChecked() ? "1" : "2"));
             objSave.setH18b2c1((chkH18b2c1.isChecked() ? "1" : "2"));
             objSave.setH18b2c2((chkH18b2c2.isChecked() ? "1" : "2"));
             objSave.setH18b2c3((chkH18b2c3.isChecked() ? "1" : "2"));
@@ -1817,7 +2487,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1d.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1d(d_rdogrpH18b1d[i]);
             }
-
+            objSave.setH18b2d((chkHl8b2d.isChecked() ? "1" : "2"));
             objSave.setH18b2d1((chkH18b2d1.isChecked() ? "1" : "2"));
             objSave.setH18b2d2((chkH18b2d2.isChecked() ? "1" : "2"));
             objSave.setH18b2d3((chkH18b2d3.isChecked() ? "1" : "2"));
@@ -1832,7 +2502,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1e.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1e(d_rdogrpH18b1e[i]);
             }
-
+            objSave.setH18b2e((chkHl8b2e.isChecked() ? "1" : "2"));
             objSave.setH18b2e1((chkH18b2e1.isChecked() ? "1" : "2"));
             objSave.setH18b2e2((chkH18b2e2.isChecked() ? "1" : "2"));
             objSave.setH18b2e3((chkH18b2e3.isChecked() ? "1" : "2"));
@@ -1847,7 +2517,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1f.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1f(d_rdogrpH18b1f[i]);
             }
-
+            objSave.setH18b2f((chkHl8b2f.isChecked() ? "1" : "2"));
             objSave.setH18b2f1((chkH18b2f1.isChecked() ? "1" : "2"));
             objSave.setH18b2f2((chkH18b2f2.isChecked() ? "1" : "2"));
             objSave.setH18b2f3((chkH18b2f3.isChecked() ? "1" : "2"));
@@ -1862,7 +2532,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1g.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1g(d_rdogrpH18b1g[i]);
             }
-
+            objSave.setH18b2g((chkHl8b2g.isChecked() ? "1" : "2"));
             objSave.setH18b2g1((chkH18b2g1.isChecked() ? "1" : "2"));
             objSave.setH18b2g2((chkH18b2g2.isChecked() ? "1" : "2"));
             objSave.setH18b2g3((chkH18b2g3.isChecked() ? "1" : "2"));
@@ -1877,7 +2547,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1h.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1h(d_rdogrpH18b1h[i]);
             }
-
+            objSave.setH18b2h((chkHl8b2h.isChecked() ? "1" : "2"));
             objSave.setH18b2h1((chkH18b2h1.isChecked() ? "1" : "2"));
             objSave.setH18b2h2((chkH18b2h2.isChecked() ? "1" : "2"));
             objSave.setH18b2h3((chkH18b2h3.isChecked() ? "1" : "2"));
@@ -1892,7 +2562,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1i.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1i(d_rdogrpH18b1i[i]);
             }
-
+            objSave.setH18b2i((chkHl8b2i.isChecked() ? "1" : "2"));
             objSave.setH18b2i1((chkH18b2i1.isChecked() ? "1" : "2"));
             objSave.setH18b2i2((chkH18b2i2.isChecked() ? "1" : "2"));
             objSave.setH18b2i3((chkH18b2i3.isChecked() ? "1" : "2"));
@@ -1905,7 +2575,7 @@ public class IGA extends Activity {
                 rb = (RadioButton) rdogrpH18b1j.getChildAt(i);
                 if (rb.isChecked()) objSave.setH18b1j(d_rdogrpH18b1j[i]);
             }
-
+            objSave.setH18b2j((chkHl8b2j.isChecked() ? "1" : "2"));
             objSave.setH18b2j1((chkH18b2j1.isChecked() ? "1" : "2"));
             objSave.setH18b2j2((chkH18b2j2.isChecked() ? "1" : "2"));
             objSave.setH18b2j3((chkH18b2j3.isChecked() ? "1" : "2"));
@@ -1957,6 +2627,11 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+                if (item.getH18b2a().equals("1")) {
+                    chkHl8b2a.setChecked(true);
+                } else if (item.getH18b2a().equals("2")) {
+                    chkHl8b2a.setChecked(false);
+                }
                 if (item.getH18b2a1().equals("1")) {
                     chkH18b2a1.setChecked(true);
                 } else if (item.getH18b2a1().equals("2")) {
@@ -1999,6 +2674,11 @@ public class IGA extends Activity {
                         rb = (RadioButton) rdogrpH18b1b.getChildAt(i);
                         rb.setChecked(true);
                     }
+                }
+                if (item.getH18b2b().equals("1")) {
+                    chkHl8b2b.setChecked(true);
+                } else if (item.getH18b2b().equals("2")) {
+                    chkHl8b2b.setChecked(false);
                 }
                 if (item.getH18b2b1().equals("1")) {
                     chkH18b2b1.setChecked(true);
@@ -2043,6 +2723,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2c().equals("1")) {
+                    chkHl8b2c.setChecked(true);
+                } else if (item.getH18b2c().equals("2")) {
+                    chkHl8b2c.setChecked(false);
+                }
+
                 if (item.getH18b2c1().equals("1")) {
                     chkH18b2c1.setChecked(true);
                 } else if (item.getH18b2c1().equals("2")) {
@@ -2086,6 +2773,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2d().equals("1")) {
+                    chkHl8b2d.setChecked(true);
+                } else if (item.getH18b2d().equals("2")) {
+                    chkHl8b2d.setChecked(false);
+                }
+
                 if (item.getH18b2d1().equals("1")) {
                     chkH18b2d1.setChecked(true);
                 } else if (item.getH18b2d1().equals("2")) {
@@ -2129,6 +2823,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2e().equals("1")) {
+                    chkHl8b2e.setChecked(true);
+                } else if (item.getH18b2e().equals("2")) {
+                    chkHl8b2e.setChecked(false);
+                }
+
                 if (item.getH18b2e1().equals("1")) {
                     chkH18b2e1.setChecked(true);
                 } else if (item.getH18b2e1().equals("2")) {
@@ -2172,6 +2873,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2f().equals("1")) {
+                    chkHl8b2f.setChecked(true);
+                } else if (item.getH18b2f().equals("2")) {
+                    chkHl8b2f.setChecked(false);
+                }
+
                 if (item.getH18b2f1().equals("1")) {
                     chkH18b2f1.setChecked(true);
                 } else if (item.getH18b2f1().equals("2")) {
@@ -2215,6 +2923,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2g().equals("1")) {
+                    chkHl8b2g.setChecked(true);
+                } else if (item.getH18b2g().equals("2")) {
+                    chkHl8b2g.setChecked(false);
+                }
+
                 if (item.getH18b2g1().equals("1")) {
                     chkH18b2g1.setChecked(true);
                 } else if (item.getH18b2g1().equals("2")) {
@@ -2258,6 +2973,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2h().equals("1")) {
+                    chkHl8b2h.setChecked(true);
+                } else if (item.getH18b2h().equals("2")) {
+                    chkHl8b2h.setChecked(false);
+                }
+
                 if (item.getH18b2h1().equals("1")) {
                     chkH18b2h1.setChecked(true);
                 } else if (item.getH18b2h1().equals("2")) {
@@ -2301,6 +3023,13 @@ public class IGA extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH18b2i().equals("1")) {
+                    chkHl8b2i.setChecked(true);
+                } else if (item.getH18b2i().equals("2")) {
+                    chkHl8b2i.setChecked(false);
+                }
+
                 if (item.getH18b2i1().equals("1")) {
                     chkH18b2i1.setChecked(true);
                 } else if (item.getH18b2i1().equals("2")) {
@@ -2333,6 +3062,12 @@ public class IGA extends Activity {
                         rb = (RadioButton) rdogrpH18b1j.getChildAt(i);
                         rb.setChecked(true);
                     }
+                }
+
+                if (item.getH18b2j().equals("1")) {
+                    chkHl8b2j.setChecked(true);
+                } else if (item.getH18b2j().equals("2")) {
+                    chkHl8b2j.setChecked(false);
                 }
                 if (item.getH18b2j1().equals("1")) {
                     chkH18b2j1.setChecked(true);

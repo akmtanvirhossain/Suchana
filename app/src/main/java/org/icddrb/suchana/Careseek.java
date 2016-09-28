@@ -555,11 +555,37 @@ public class Careseek extends Activity {
                         secH181a1X.setVisibility(View.GONE);
                         lineH181a1X.setVisibility(View.GONE);
                         txtH181a1X.setText("");
+
+                        secH181a2.setVisibility(View.GONE);
+                        lineH181a2.setVisibility(View.GONE);
+                        spnH181a2.setSelection(0);
+                        secH181a2X.setVisibility(View.GONE);
+                        lineH181a2X.setVisibility(View.GONE);
+                        txtH181a2X.setText("");
+                        secH181a3.setVisibility(View.GONE);
+                        lineH181a3.setVisibility(View.GONE);
+                        spnH181a3.setSelection(0);
+                        secH181a3X.setVisibility(View.GONE);
+                        lineH181a3X.setVisibility(View.GONE);
+                        txtH181a3X.setText("");
+                        secH181a4.setVisibility(View.GONE);
+                        txtH181a4.setText("");
+
                     } else {
                         secH181a1.setVisibility(View.VISIBLE);
                         lineH181a1.setVisibility(View.VISIBLE);
-                        secH181a1X.setVisibility(View.VISIBLE);
-                        lineH181a1X.setVisibility(View.VISIBLE);
+                      //  secH181a1X.setVisibility(View.VISIBLE);
+                      //  lineH181a1X.setVisibility(View.VISIBLE);
+
+                        secH181a2.setVisibility(View.VISIBLE);
+                        lineH181a2.setVisibility(View.VISIBLE);
+                      //  secH181a2X.setVisibility(View.VISIBLE);
+                      //  lineH181a2X.setVisibility(View.VISIBLE);
+                        secH181a3.setVisibility(View.VISIBLE);
+                        lineH181a3.setVisibility(View.VISIBLE);
+                       // secH181a3X.setVisibility(View.VISIBLE);
+                      //  lineH181a3X.setVisibility(View.VISIBLE);
+                        secH181a4.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -588,6 +614,35 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH181a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH181a1);
             spnH181a1.setAdapter(adptrH181a1);
 
+
+            spnH181a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH181a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH181a1X.setVisibility(View.VISIBLE);
+                            lineH181a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH181a1X.setVisibility(View.GONE);
+                            lineH181a1X.setVisibility(View.GONE);
+                            txtH181a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH181a1X = (LinearLayout) findViewById(R.id.secH181a1X);
             lineH181a1X = (View) findViewById(R.id.lineH181a1X);
             VlblH181a1X = (TextView) findViewById(R.id.VlblH181a1X);
@@ -613,6 +668,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH181a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH181a2);
             spnH181a2.setAdapter(adptrH181a2);
 
+            spnH181a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH181a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH181a2X.setVisibility(View.VISIBLE);
+                            lineH181a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH181a2X.setVisibility(View.GONE);
+                            lineH181a2X.setVisibility(View.GONE);
+                            txtH181a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH181a2X = (LinearLayout) findViewById(R.id.secH181a2X);
             lineH181a2X = (View) findViewById(R.id.lineH181a2X);
             VlblH181a2X = (TextView) findViewById(R.id.VlblH181a2X);
@@ -637,6 +719,34 @@ public class Careseek extends Activity {
             listH181a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH181a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH181a3);
             spnH181a3.setAdapter(adptrH181a3);
+
+            spnH181a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH181a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH181a3X.setVisibility(View.VISIBLE);
+                            lineH181a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH181a3X.setVisibility(View.GONE);
+                            lineH181a3X.setVisibility(View.GONE);
+                            txtH181a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
 
             secH181a3X = (LinearLayout) findViewById(R.id.secH181a3X);
             lineH181a3X = (View) findViewById(R.id.lineH181a3X);
@@ -689,16 +799,16 @@ public class Careseek extends Activity {
                     } else {
                         secH182a1.setVisibility(View.VISIBLE);
                         lineH182a1.setVisibility(View.VISIBLE);
-                        secH182a1X.setVisibility(View.VISIBLE);
-                        lineH182a1X.setVisibility(View.VISIBLE);
+                      //  secH182a1X.setVisibility(View.VISIBLE);
+                      //  lineH182a1X.setVisibility(View.VISIBLE);
                         secH182a2.setVisibility(View.VISIBLE);
                         lineH182a2.setVisibility(View.VISIBLE);
-                        secH182a2X.setVisibility(View.VISIBLE);
-                        lineH182a2X.setVisibility(View.VISIBLE);
+                      //  secH182a2X.setVisibility(View.VISIBLE);
+                      //  lineH182a2X.setVisibility(View.VISIBLE);
                         secH182a3.setVisibility(View.VISIBLE);
                         lineH182a3.setVisibility(View.VISIBLE);
-                        secH182a3X.setVisibility(View.VISIBLE);
-                        lineH182a3X.setVisibility(View.VISIBLE);
+                     //   secH182a3X.setVisibility(View.VISIBLE);
+                      //  lineH182a3X.setVisibility(View.VISIBLE);
                         secH182a4.setVisibility(View.VISIBLE);
                         lineH182a4.setVisibility(View.VISIBLE);
                     }
@@ -729,6 +839,34 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH182a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH182a1);
             spnH182a1.setAdapter(adptrH182a1);
 
+            spnH182a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH182a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH182a1X.setVisibility(View.VISIBLE);
+                            lineH182a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH182a1X.setVisibility(View.GONE);
+                            lineH182a1X.setVisibility(View.GONE);
+                            txtH182a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH182a1X = (LinearLayout) findViewById(R.id.secH182a1X);
             lineH182a1X = (View) findViewById(R.id.lineH182a1X);
             VlblH182a1X = (TextView) findViewById(R.id.VlblH182a1X);
@@ -754,6 +892,34 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH182a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH182a2);
             spnH182a2.setAdapter(adptrH182a2);
 
+            spnH182a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH182a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH182a2X.setVisibility(View.VISIBLE);
+                            lineH182a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH182a2X.setVisibility(View.GONE);
+                            lineH182a2X.setVisibility(View.GONE);
+                            txtH182a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH182a2X = (LinearLayout) findViewById(R.id.secH182a2X);
             lineH182a2X = (View) findViewById(R.id.lineH182a2X);
             VlblH182a2X = (TextView) findViewById(R.id.VlblH182a2X);
@@ -778,6 +944,34 @@ public class Careseek extends Activity {
             listH182a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH182a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH182a3);
             spnH182a3.setAdapter(adptrH182a3);
+
+            spnH182a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH182a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH182a3X.setVisibility(View.VISIBLE);
+                            lineH182a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH182a3X.setVisibility(View.GONE);
+                            lineH182a3X.setVisibility(View.GONE);
+                            txtH182a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
 
             secH182a3X = (LinearLayout) findViewById(R.id.secH182a3X);
             lineH182a3X = (View) findViewById(R.id.lineH182a3X);
@@ -830,16 +1024,16 @@ public class Careseek extends Activity {
                     } else {
                         secH183a1.setVisibility(View.VISIBLE);
                         lineH183a1.setVisibility(View.VISIBLE);
-                        secH183a1X.setVisibility(View.VISIBLE);
-                        lineH183a1X.setVisibility(View.VISIBLE);
+                      //  secH183a1X.setVisibility(View.VISIBLE);
+                      //  lineH183a1X.setVisibility(View.VISIBLE);
                         secH183a2.setVisibility(View.VISIBLE);
                         lineH183a2.setVisibility(View.VISIBLE);
-                        secH183a2X.setVisibility(View.VISIBLE);
-                        lineH183a2X.setVisibility(View.VISIBLE);
+                     //   secH183a2X.setVisibility(View.VISIBLE);
+                     //   lineH183a2X.setVisibility(View.VISIBLE);
                         secH183a3.setVisibility(View.VISIBLE);
                         lineH183a3.setVisibility(View.VISIBLE);
-                        secH183a3X.setVisibility(View.VISIBLE);
-                        lineH183a3X.setVisibility(View.VISIBLE);
+                      //  secH183a3X.setVisibility(View.VISIBLE);
+                      //  lineH183a3X.setVisibility(View.VISIBLE);
                         secH183a4.setVisibility(View.VISIBLE);
                         lineH183a4.setVisibility(View.VISIBLE);
                     }
@@ -870,6 +1064,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH183a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH183a1);
             spnH183a1.setAdapter(adptrH183a1);
 
+            spnH183a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH183a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH183a1X.setVisibility(View.VISIBLE);
+                            lineH183a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH183a1X.setVisibility(View.GONE);
+                            lineH183a1X.setVisibility(View.GONE);
+                            txtH183a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH183a1X = (LinearLayout) findViewById(R.id.secH183a1X);
             lineH183a1X = (View) findViewById(R.id.lineH183a1X);
             VlblH183a1X = (TextView) findViewById(R.id.VlblH183a1X);
@@ -895,6 +1116,32 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH183a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH183a2);
             spnH183a2.setAdapter(adptrH183a2);
 
+            spnH183a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH183a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH183a2X.setVisibility(View.VISIBLE);
+                            lineH183a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH183a2X.setVisibility(View.GONE);
+                            lineH183a2X.setVisibility(View.GONE);
+                            txtH183a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH183a2X = (LinearLayout) findViewById(R.id.secH183a2X);
             lineH183a2X = (View) findViewById(R.id.lineH183a2X);
             VlblH183a2X = (TextView) findViewById(R.id.VlblH183a2X);
@@ -919,6 +1166,33 @@ public class Careseek extends Activity {
             listH183a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH183a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH183a3);
             spnH183a3.setAdapter(adptrH183a3);
+
+            spnH183a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH183a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH183a3X.setVisibility(View.VISIBLE);
+                            lineH183a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH183a3X.setVisibility(View.GONE);
+                            lineH183a3X.setVisibility(View.GONE);
+                            txtH183a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH183a3X = (LinearLayout) findViewById(R.id.secH183a3X);
             lineH183a3X = (View) findViewById(R.id.lineH183a3X);
@@ -971,16 +1245,16 @@ public class Careseek extends Activity {
                     } else {
                         secH184a1.setVisibility(View.VISIBLE);
                         lineH184a1.setVisibility(View.VISIBLE);
-                        secH184a1X.setVisibility(View.VISIBLE);
-                        lineH184a1X.setVisibility(View.VISIBLE);
+                      //  secH184a1X.setVisibility(View.VISIBLE);
+                     //   lineH184a1X.setVisibility(View.VISIBLE);
                         secH184a2.setVisibility(View.VISIBLE);
                         lineH184a2.setVisibility(View.VISIBLE);
-                        secH184a2X.setVisibility(View.VISIBLE);
-                        lineH184a2X.setVisibility(View.VISIBLE);
+                     //   secH184a2X.setVisibility(View.VISIBLE);
+                    //    lineH184a2X.setVisibility(View.VISIBLE);
                         secH184a3.setVisibility(View.VISIBLE);
                         lineH184a3.setVisibility(View.VISIBLE);
-                        secH184a3X.setVisibility(View.VISIBLE);
-                        lineH184a3X.setVisibility(View.VISIBLE);
+                   //     secH184a3X.setVisibility(View.VISIBLE);
+                    //    lineH184a3X.setVisibility(View.VISIBLE);
                         secH184a4.setVisibility(View.VISIBLE);
                         lineH184a4.setVisibility(View.VISIBLE);
                     }
@@ -1011,6 +1285,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH184a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH184a1);
             spnH184a1.setAdapter(adptrH184a1);
 
+            spnH184a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH184a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH184a1X.setVisibility(View.VISIBLE);
+                            lineH184a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH184a1X.setVisibility(View.GONE);
+                            lineH184a1X.setVisibility(View.GONE);
+                            txtH184a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH184a1X = (LinearLayout) findViewById(R.id.secH184a1X);
             lineH184a1X = (View) findViewById(R.id.lineH184a1X);
             VlblH184a1X = (TextView) findViewById(R.id.VlblH184a1X);
@@ -1036,6 +1337,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH184a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH184a2);
             spnH184a2.setAdapter(adptrH184a2);
 
+            spnH184a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH184a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH184a2X.setVisibility(View.VISIBLE);
+                            lineH184a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH184a2X.setVisibility(View.GONE);
+                            lineH184a2X.setVisibility(View.GONE);
+                            txtH184a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH184a2X = (LinearLayout) findViewById(R.id.secH184a2X);
             lineH184a2X = (View) findViewById(R.id.lineH184a2X);
             VlblH184a2X = (TextView) findViewById(R.id.VlblH184a2X);
@@ -1060,6 +1388,33 @@ public class Careseek extends Activity {
             listH184a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH184a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH184a3);
             spnH184a3.setAdapter(adptrH184a3);
+
+            spnH184a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH184a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH184a3X.setVisibility(View.VISIBLE);
+                            lineH184a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH184a3X.setVisibility(View.GONE);
+                            lineH184a3X.setVisibility(View.GONE);
+                            txtH184a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH184a3X = (LinearLayout) findViewById(R.id.secH184a3X);
             lineH184a3X = (View) findViewById(R.id.lineH184a3X);
@@ -1112,16 +1467,16 @@ public class Careseek extends Activity {
                     } else {
                         secH185a1.setVisibility(View.VISIBLE);
                         lineH185a1.setVisibility(View.VISIBLE);
-                        secH185a1X.setVisibility(View.VISIBLE);
-                        lineH185a1X.setVisibility(View.VISIBLE);
+                    //    secH185a1X.setVisibility(View.VISIBLE);
+                    //    lineH185a1X.setVisibility(View.VISIBLE);
                         secH185a2.setVisibility(View.VISIBLE);
                         lineH185a2.setVisibility(View.VISIBLE);
-                        secH185a2X.setVisibility(View.VISIBLE);
-                        lineH185a2X.setVisibility(View.VISIBLE);
+                   //     secH185a2X.setVisibility(View.VISIBLE);
+                   //     lineH185a2X.setVisibility(View.VISIBLE);
                         secH185a3.setVisibility(View.VISIBLE);
                         lineH185a3.setVisibility(View.VISIBLE);
-                        secH185a3X.setVisibility(View.VISIBLE);
-                        lineH185a3X.setVisibility(View.VISIBLE);
+                     //   secH185a3X.setVisibility(View.VISIBLE);
+                    //    lineH185a3X.setVisibility(View.VISIBLE);
                         secH185a4.setVisibility(View.VISIBLE);
                         lineH185a4.setVisibility(View.VISIBLE);
                     }
@@ -1152,6 +1507,32 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH185a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH185a1);
             spnH185a1.setAdapter(adptrH185a1);
 
+            spnH185a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH185a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH185a1X.setVisibility(View.VISIBLE);
+                            lineH185a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH185a1X.setVisibility(View.GONE);
+                            lineH185a1X.setVisibility(View.GONE);
+                            txtH185a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH185a1X = (LinearLayout) findViewById(R.id.secH185a1X);
             lineH185a1X = (View) findViewById(R.id.lineH185a1X);
             VlblH185a1X = (TextView) findViewById(R.id.VlblH185a1X);
@@ -1177,6 +1558,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH185a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH185a2);
             spnH185a2.setAdapter(adptrH185a2);
 
+            spnH185a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH185a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH185a2X.setVisibility(View.VISIBLE);
+                            lineH185a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH185a2X.setVisibility(View.GONE);
+                            lineH185a2X.setVisibility(View.GONE);
+                            txtH185a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH185a2X = (LinearLayout) findViewById(R.id.secH185a2X);
             lineH185a2X = (View) findViewById(R.id.lineH185a2X);
             VlblH185a2X = (TextView) findViewById(R.id.VlblH185a2X);
@@ -1201,6 +1609,33 @@ public class Careseek extends Activity {
             listH185a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH185a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH185a3);
             spnH185a3.setAdapter(adptrH185a3);
+
+            spnH185a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH185a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH185a3X.setVisibility(View.VISIBLE);
+                            lineH185a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH185a3X.setVisibility(View.GONE);
+                            lineH185a3X.setVisibility(View.GONE);
+                            txtH185a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH185a3X = (LinearLayout) findViewById(R.id.secH185a3X);
             lineH185a3X = (View) findViewById(R.id.lineH185a3X);
@@ -1253,16 +1688,16 @@ public class Careseek extends Activity {
                     } else {
                         secH186a1.setVisibility(View.VISIBLE);
                         lineH186a1.setVisibility(View.VISIBLE);
-                        secH186a1X.setVisibility(View.VISIBLE);
-                        lineH186a1X.setVisibility(View.VISIBLE);
+                     //   secH186a1X.setVisibility(View.VISIBLE);
+                    //    lineH186a1X.setVisibility(View.VISIBLE);
                         secH186a2.setVisibility(View.VISIBLE);
                         lineH186a2.setVisibility(View.VISIBLE);
-                        secH186a2X.setVisibility(View.VISIBLE);
-                        lineH186a2X.setVisibility(View.VISIBLE);
+                      //  secH186a2X.setVisibility(View.VISIBLE);
+                    //    lineH186a2X.setVisibility(View.VISIBLE);
                         secH186a3.setVisibility(View.VISIBLE);
                         lineH186a3.setVisibility(View.VISIBLE);
-                        secH186a3X.setVisibility(View.VISIBLE);
-                        lineH186a3X.setVisibility(View.VISIBLE);
+                     //   secH186a3X.setVisibility(View.VISIBLE);
+                     //   lineH186a3X.setVisibility(View.VISIBLE);
                         secH186a4.setVisibility(View.VISIBLE);
                         lineH186a4.setVisibility(View.VISIBLE);
                     }
@@ -1293,6 +1728,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH186a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH186a1);
             spnH186a1.setAdapter(adptrH186a1);
 
+            spnH186a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH186a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH186a1X.setVisibility(View.VISIBLE);
+                            lineH186a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH186a1X.setVisibility(View.GONE);
+                            lineH186a1X.setVisibility(View.GONE);
+                            txtH186a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH186a1X = (LinearLayout) findViewById(R.id.secH186a1X);
             lineH186a1X = (View) findViewById(R.id.lineH186a1X);
             VlblH186a1X = (TextView) findViewById(R.id.VlblH186a1X);
@@ -1318,6 +1780,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH186a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH186a2);
             spnH186a2.setAdapter(adptrH186a2);
 
+            spnH186a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH186a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH186a2X.setVisibility(View.VISIBLE);
+                            lineH186a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH186a2X.setVisibility(View.GONE);
+                            lineH186a2X.setVisibility(View.GONE);
+                            txtH186a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH186a2X = (LinearLayout) findViewById(R.id.secH186a2X);
             lineH186a2X = (View) findViewById(R.id.lineH186a2X);
             VlblH186a2X = (TextView) findViewById(R.id.VlblH186a2X);
@@ -1342,6 +1831,33 @@ public class Careseek extends Activity {
             listH186a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH186a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH186a3);
             spnH186a3.setAdapter(adptrH186a3);
+
+            spnH186a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH186a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH186a3X.setVisibility(View.VISIBLE);
+                            lineH186a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH186a3X.setVisibility(View.GONE);
+                            lineH186a3X.setVisibility(View.GONE);
+                            txtH186a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH186a3X = (LinearLayout) findViewById(R.id.secH186a3X);
             lineH186a3X = (View) findViewById(R.id.lineH186a3X);
@@ -1394,16 +1910,16 @@ public class Careseek extends Activity {
                     } else {
                         secH187a1.setVisibility(View.VISIBLE);
                         lineH187a1.setVisibility(View.VISIBLE);
-                        secH187a1X.setVisibility(View.VISIBLE);
-                        lineH187a1X.setVisibility(View.VISIBLE);
+                     //   secH187a1X.setVisibility(View.VISIBLE);
+                     //   lineH187a1X.setVisibility(View.VISIBLE);
                         secH187a2.setVisibility(View.VISIBLE);
                         lineH187a2.setVisibility(View.VISIBLE);
-                        secH187a2X.setVisibility(View.VISIBLE);
-                        lineH187a2X.setVisibility(View.VISIBLE);
+                     //   secH187a2X.setVisibility(View.VISIBLE);
+                     //   lineH187a2X.setVisibility(View.VISIBLE);
                         secH187a3.setVisibility(View.VISIBLE);
                         lineH187a3.setVisibility(View.VISIBLE);
-                        secH187a3X.setVisibility(View.VISIBLE);
-                        lineH187a3X.setVisibility(View.VISIBLE);
+                      //  secH187a3X.setVisibility(View.VISIBLE);
+                      //  lineH187a3X.setVisibility(View.VISIBLE);
                         secH187a4.setVisibility(View.VISIBLE);
                         lineH187a4.setVisibility(View.VISIBLE);
                     }
@@ -1434,6 +1950,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH187a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH187a1);
             spnH187a1.setAdapter(adptrH187a1);
 
+            spnH187a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH187a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH187a1X.setVisibility(View.VISIBLE);
+                            lineH187a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH187a1X.setVisibility(View.GONE);
+                            lineH187a1X.setVisibility(View.GONE);
+                            txtH187a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH187a1X = (LinearLayout) findViewById(R.id.secH187a1X);
             lineH187a1X = (View) findViewById(R.id.lineH187a1X);
             VlblH187a1X = (TextView) findViewById(R.id.VlblH187a1X);
@@ -1459,6 +2002,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH187a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH187a2);
             spnH187a2.setAdapter(adptrH187a2);
 
+            spnH187a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH187a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH187a2X.setVisibility(View.VISIBLE);
+                            lineH187a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH187a2X.setVisibility(View.GONE);
+                            lineH187a2X.setVisibility(View.GONE);
+                            txtH187a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH187a2X = (LinearLayout) findViewById(R.id.secH187a2X);
             lineH187a2X = (View) findViewById(R.id.lineH187a2X);
             VlblH187a2X = (TextView) findViewById(R.id.VlblH187a2X);
@@ -1483,6 +2053,33 @@ public class Careseek extends Activity {
             listH187a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH187a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH187a3);
             spnH187a3.setAdapter(adptrH187a3);
+
+            spnH187a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH187a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH187a3X.setVisibility(View.VISIBLE);
+                            lineH187a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH187a3X.setVisibility(View.GONE);
+                            lineH187a3X.setVisibility(View.GONE);
+                            txtH187a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH187a3X = (LinearLayout) findViewById(R.id.secH187a3X);
             lineH187a3X = (View) findViewById(R.id.lineH187a3X);
@@ -1535,16 +2132,16 @@ public class Careseek extends Activity {
                     } else {
                         secH188a1.setVisibility(View.VISIBLE);
                         lineH188a1.setVisibility(View.VISIBLE);
-                        secH188a1X.setVisibility(View.VISIBLE);
-                        lineH188a1X.setVisibility(View.VISIBLE);
+                     //   secH188a1X.setVisibility(View.VISIBLE);
+                     //   lineH188a1X.setVisibility(View.VISIBLE);
                         secH188a2.setVisibility(View.VISIBLE);
                         lineH188a2.setVisibility(View.VISIBLE);
-                        secH188a2X.setVisibility(View.VISIBLE);
-                        lineH188a2X.setVisibility(View.VISIBLE);
+                     //   secH188a2X.setVisibility(View.VISIBLE);
+                     //   lineH188a2X.setVisibility(View.VISIBLE);
                         secH188a3.setVisibility(View.VISIBLE);
                         lineH188a3.setVisibility(View.VISIBLE);
-                        secH1881a3X.setVisibility(View.VISIBLE);
-                        lineH1881a3X.setVisibility(View.VISIBLE);
+                     //   secH1881a3X.setVisibility(View.VISIBLE);
+                    //    lineH1881a3X.setVisibility(View.VISIBLE);
                         secH188a4.setVisibility(View.VISIBLE);
                         lineH188a4.setVisibility(View.VISIBLE);
                     }
@@ -1575,6 +2172,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH188a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH188a1);
             spnH188a1.setAdapter(adptrH188a1);
 
+            spnH188a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH188a1X.setVisibility(View.VISIBLE);
+                            lineH188a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH188a1X.setVisibility(View.GONE);
+                            lineH188a1X.setVisibility(View.GONE);
+                            txtH188a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH188a1X = (LinearLayout) findViewById(R.id.secH188a1X);
             lineH188a1X = (View) findViewById(R.id.lineH188a1X);
             VlblH188a1X = (TextView) findViewById(R.id.VlblH188a1X);
@@ -1600,6 +2224,34 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH188a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH188a2);
             spnH188a2.setAdapter(adptrH188a2);
 
+            spnH188a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH188a2X.setVisibility(View.VISIBLE);
+                            lineH188a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH188a2X.setVisibility(View.GONE);
+                            lineH188a2X.setVisibility(View.GONE);
+                            txtH188a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH188a2X = (LinearLayout) findViewById(R.id.secH188a2X);
             lineH188a2X = (View) findViewById(R.id.lineH188a2X);
             VlblH188a2X = (TextView) findViewById(R.id.VlblH188a2X);
@@ -1624,6 +2276,34 @@ public class Careseek extends Activity {
             listH188a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH188a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH188a3);
             spnH188a3.setAdapter(adptrH188a3);
+
+            spnH188a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1881a3X.setVisibility(View.VISIBLE);
+                            lineH1881a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1881a3X.setVisibility(View.GONE);
+                            lineH1881a3X.setVisibility(View.GONE);
+                            txtH1881a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
 
             secH1881a3X = (LinearLayout) findViewById(R.id.secH1881a3X);
             lineH1881a3X = (View) findViewById(R.id.lineH1881a3X);
@@ -1676,16 +2356,16 @@ public class Careseek extends Activity {
                     } else {
                         secH189a1.setVisibility(View.VISIBLE);
                         lineH189a1.setVisibility(View.VISIBLE);
-                        secH189a1X.setVisibility(View.VISIBLE);
-                        lineH189a1X.setVisibility(View.VISIBLE);
+                     //   secH189a1X.setVisibility(View.VISIBLE);
+                     //   lineH189a1X.setVisibility(View.VISIBLE);
                         secH189a2.setVisibility(View.VISIBLE);
                         lineH189a2.setVisibility(View.VISIBLE);
-                        secH189a2X.setVisibility(View.VISIBLE);
-                        lineH189a2X.setVisibility(View.VISIBLE);
+                     //   secH189a2X.setVisibility(View.VISIBLE);
+                     //   lineH189a2X.setVisibility(View.VISIBLE);
                         secH189a3.setVisibility(View.VISIBLE);
                         lineH189a3.setVisibility(View.VISIBLE);
-                        secH189a3X.setVisibility(View.VISIBLE);
-                        lineH189a3X.setVisibility(View.VISIBLE);
+                     //   secH189a3X.setVisibility(View.VISIBLE);
+                     //   lineH189a3X.setVisibility(View.VISIBLE);
                         secH189a4.setVisibility(View.VISIBLE);
                         lineH189a4.setVisibility(View.VISIBLE);
                     }
@@ -1716,6 +2396,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH189a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH189a1);
             spnH189a1.setAdapter(adptrH189a1);
 
+            spnH189a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH189a1X.setVisibility(View.VISIBLE);
+                            lineH189a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH189a1X.setVisibility(View.GONE);
+                            lineH189a1X.setVisibility(View.GONE);
+                            txtH189a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH189a1X = (LinearLayout) findViewById(R.id.secH189a1X);
             lineH189a1X = (View) findViewById(R.id.lineH189a1X);
             VlblH189a1X = (TextView) findViewById(R.id.VlblH189a1X);
@@ -1741,6 +2448,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH189a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH189a2);
             spnH189a2.setAdapter(adptrH189a2);
 
+            spnH189a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH189a2X.setVisibility(View.VISIBLE);
+                            lineH189a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH189a2X.setVisibility(View.GONE);
+                            lineH189a2X.setVisibility(View.GONE);
+                            txtH189a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH189a2X = (LinearLayout) findViewById(R.id.secH189a2X);
             lineH189a2X = (View) findViewById(R.id.lineH189a2X);
             VlblH189a2X = (TextView) findViewById(R.id.VlblH189a2X);
@@ -1765,6 +2499,33 @@ public class Careseek extends Activity {
             listH189a3.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH189a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH189a3);
             spnH189a3.setAdapter(adptrH189a3);
+
+            spnH189a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH188a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH189a3X.setVisibility(View.VISIBLE);
+                            lineH189a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH189a3X.setVisibility(View.GONE);
+                            lineH189a3X.setVisibility(View.GONE);
+                            txtH189a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH189a3X = (LinearLayout) findViewById(R.id.secH189a3X);
             lineH189a3X = (View) findViewById(R.id.lineH189a3X);
@@ -1817,16 +2578,16 @@ public class Careseek extends Activity {
                     } else {
                         secH1810a1.setVisibility(View.VISIBLE);
                         lineH1810a1.setVisibility(View.VISIBLE);
-                        secH1810a1X.setVisibility(View.VISIBLE);
-                        lineH1810a1X.setVisibility(View.VISIBLE);
+                     //   secH1810a1X.setVisibility(View.VISIBLE);
+                     //   lineH1810a1X.setVisibility(View.VISIBLE);
                         secH1810a2.setVisibility(View.VISIBLE);
                         lineH1810a2.setVisibility(View.VISIBLE);
-                        secH1810a2X.setVisibility(View.VISIBLE);
-                        lineH1810a2X.setVisibility(View.VISIBLE);
+                     //   secH1810a2X.setVisibility(View.VISIBLE);
+                     //   lineH1810a2X.setVisibility(View.VISIBLE);
                         secH1810a3.setVisibility(View.VISIBLE);
                         lineH1810a3.setVisibility(View.VISIBLE);
-                        secH1810a3X.setVisibility(View.VISIBLE);
-                        lineH1810a3X.setVisibility(View.VISIBLE);
+                     //   secH1810a3X.setVisibility(View.VISIBLE);
+                     //   lineH1810a3X.setVisibility(View.VISIBLE);
                         secH1810a4.setVisibility(View.VISIBLE);
                         lineH1810a4.setVisibility(View.VISIBLE);
                     }
@@ -1857,6 +2618,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1810a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1810a1);
             spnH1810a1.setAdapter(adptrH1810a1);
 
+            spnH1810a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1810a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1810a1X.setVisibility(View.VISIBLE);
+                            lineH1810a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1810a1X.setVisibility(View.GONE);
+                            lineH1810a1X.setVisibility(View.GONE);
+                            txtH1810a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH1810a1X = (LinearLayout) findViewById(R.id.secH1810a1X);
             lineH1810a1X = (View) findViewById(R.id.lineH1810a1X);
             VlblH1810a1X = (TextView) findViewById(R.id.VlblH1810a1X);
@@ -1881,6 +2669,33 @@ public class Careseek extends Activity {
             listH1810a2.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH1810a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1810a2);
             spnH1810a2.setAdapter(adptrH1810a2);
+
+            spnH1810a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1810a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1810a2X.setVisibility(View.VISIBLE);
+                            lineH1810a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1810a2X.setVisibility(View.GONE);
+                            lineH1810a2X.setVisibility(View.GONE);
+                            txtH1810a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH1810a2X = (LinearLayout) findViewById(R.id.secH1810a2X);
             lineH1810a2X = (View) findViewById(R.id.lineH1810a2X);
@@ -1907,6 +2722,32 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1810a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1810a3);
             spnH1810a3.setAdapter(adptrH1810a3);
 
+            spnH1810a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1810a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1810a3X.setVisibility(View.VISIBLE);
+                            lineH1810a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1810a3X.setVisibility(View.GONE);
+                            lineH1810a3X.setVisibility(View.GONE);
+                            txtH1810a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH1810a3X = (LinearLayout) findViewById(R.id.secH1810a3X);
             lineH1810a3X = (View) findViewById(R.id.lineH1810a3X);
             VlblH1810a3X = (TextView) findViewById(R.id.VlblH1810a3X);
@@ -1958,16 +2799,16 @@ public class Careseek extends Activity {
                     } else {
                         secH1811a1.setVisibility(View.VISIBLE);
                         lineH1811a1.setVisibility(View.VISIBLE);
-                        secH1811a1X.setVisibility(View.VISIBLE);
-                        lineH1811a1X.setVisibility(View.VISIBLE);
+                      //  secH1811a1X.setVisibility(View.VISIBLE);
+                      //  lineH1811a1X.setVisibility(View.VISIBLE);
                         secH1811a2.setVisibility(View.VISIBLE);
                         lineH1811a2.setVisibility(View.VISIBLE);
-                        secH1811a2X.setVisibility(View.VISIBLE);
-                        lineH1811a2X.setVisibility(View.VISIBLE);
+                      //  secH1811a2X.setVisibility(View.VISIBLE);
+                     //   lineH1811a2X.setVisibility(View.VISIBLE);
                         secH1811a3.setVisibility(View.VISIBLE);
                         lineH1811a3.setVisibility(View.VISIBLE);
-                        secH1811a3X.setVisibility(View.VISIBLE);
-                        lineH1811a3X.setVisibility(View.VISIBLE);
+                     //   secH1811a3X.setVisibility(View.VISIBLE);
+                     //   lineH1811a3X.setVisibility(View.VISIBLE);
                         secH1811a4.setVisibility(View.VISIBLE);
                         lineH1811a4.setVisibility(View.VISIBLE);
                     }
@@ -1998,6 +2839,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1811a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1811a1);
             spnH1811a1.setAdapter(adptrH1811a1);
 
+            spnH1811a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1811a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1811a1X.setVisibility(View.VISIBLE);
+                            lineH1811a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1811a1X.setVisibility(View.GONE);
+                            lineH1811a1X.setVisibility(View.GONE);
+                            txtH1811a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH1811a1X = (LinearLayout) findViewById(R.id.secH1811a1X);
             lineH1811a1X = (View) findViewById(R.id.lineH1811a1X);
             VlblH1811a1X = (TextView) findViewById(R.id.VlblH1811a1X);
@@ -2022,6 +2890,33 @@ public class Careseek extends Activity {
             listH1811a2.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH1811a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1811a2);
             spnH1811a2.setAdapter(adptrH1811a2);
+
+            spnH1811a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1811a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1811a2X.setVisibility(View.VISIBLE);
+                            lineH1811a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1811a2X.setVisibility(View.GONE);
+                            lineH1811a2X.setVisibility(View.GONE);
+                            txtH1811a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH1811a2X = (LinearLayout) findViewById(R.id.secH1811a2X);
             lineH1811a2X = (View) findViewById(R.id.lineH1811a2X);
@@ -2048,6 +2943,33 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1811a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1811a3);
             spnH1811a3.setAdapter(adptrH1811a3);
 
+            spnH1811a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1811a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1811a3X.setVisibility(View.VISIBLE);
+                            lineH1811a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1811a3X.setVisibility(View.GONE);
+                            lineH1811a3X.setVisibility(View.GONE);
+                            txtH1811a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH1811a3X = (LinearLayout) findViewById(R.id.secH1811a3X);
             lineH1811a3X = (View) findViewById(R.id.lineH1811a3X);
             VlblH1811a3X = (TextView) findViewById(R.id.VlblH1811a3X);
@@ -2063,6 +2985,63 @@ public class Careseek extends Activity {
 
             rdoH1812a1 = (RadioButton) findViewById(R.id.rdoH1812a1);
             rdoH1812a2 = (RadioButton) findViewById(R.id.rdoH1812a2);
+
+            rdogrpH1812a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH1812a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH1812a.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH1812a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH1812a[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH1812a1.setVisibility(View.GONE);
+                        lineH1812a1.setVisibility(View.GONE);
+                        spnH1812a1.setSelection(0);
+                        secH1812a1X.setVisibility(View.GONE);
+                        lineH1812a1X.setVisibility(View.GONE);
+                        txtH1812a1X.setText("");
+                        secH1812a2.setVisibility(View.GONE);
+                        lineH1812a2.setVisibility(View.GONE);
+                        spnH1812a2.setSelection(0);
+                        secH1812a2X.setVisibility(View.GONE);
+                        lineH1812a2X.setVisibility(View.GONE);
+                        txtH1812a2X.setText("");
+                        secH1812a3.setVisibility(View.GONE);
+                        lineH1812a3.setVisibility(View.GONE);
+                        spnH1812a3.setSelection(0);
+                        secH1812a3X.setVisibility(View.GONE);
+                        lineH1812a3X.setVisibility(View.GONE);
+                        txtH1812a3X.setText("");
+                        secH1812a4.setVisibility(View.GONE);
+                        lineH1812a4.setVisibility(View.GONE);
+                        txtH1812a4.setText("");
+                    } else {
+                        secH1812a1.setVisibility(View.VISIBLE);
+                        lineH1812a1.setVisibility(View.VISIBLE);
+                      //  secH1812a1X.setVisibility(View.VISIBLE);
+                      //  lineH1812a1X.setVisibility(View.VISIBLE);
+                        secH1812a2.setVisibility(View.VISIBLE);
+                        lineH1812a2.setVisibility(View.VISIBLE);
+                      //  secH1812a2X.setVisibility(View.VISIBLE);
+                     //   lineH1812a2X.setVisibility(View.VISIBLE);
+                        secH1812a3.setVisibility(View.VISIBLE);
+                        lineH1812a3.setVisibility(View.VISIBLE);
+                     //   secH1812a3X.setVisibility(View.VISIBLE);
+                     //   lineH1812a3X.setVisibility(View.VISIBLE);
+                        secH1812a4.setVisibility(View.VISIBLE);
+                        lineH1812a4.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secH1812a1 = (LinearLayout) findViewById(R.id.secH1812a1);
             lineH1812a1 = (View) findViewById(R.id.lineH1812a1);
             VlblH1812a1 = (TextView) findViewById(R.id.VlblH1812a1);
@@ -2083,6 +3062,33 @@ public class Careseek extends Activity {
             listH1812a1.add("11-অন্যান্য");
             ArrayAdapter<String> adptrH1812a1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1812a1);
             spnH1812a1.setAdapter(adptrH1812a1);
+
+            spnH1812a1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1812a1.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1812a1X.setVisibility(View.VISIBLE);
+                            lineH1812a1X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1812a1X.setVisibility(View.GONE);
+                            lineH1812a1X.setVisibility(View.GONE);
+                            txtH1812a1X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
             secH1812a1X = (LinearLayout) findViewById(R.id.secH1812a1X);
             lineH1812a1X = (View) findViewById(R.id.lineH1812a1X);
@@ -2109,6 +3115,34 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1812a2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1812a2);
             spnH1812a2.setAdapter(adptrH1812a2);
 
+            spnH1812a2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1812a2.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1812a2X.setVisibility(View.VISIBLE);
+                            lineH1812a2X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1812a2X.setVisibility(View.GONE);
+                            lineH1812a2X.setVisibility(View.GONE);
+                            txtH1812a2X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH1812a2X = (LinearLayout) findViewById(R.id.secH1812a2X);
             lineH1812a2X = (View) findViewById(R.id.lineH1812a2X);
             VlblH1812a2X = (TextView) findViewById(R.id.VlblH1812a2X);
@@ -2134,6 +3168,34 @@ public class Careseek extends Activity {
             ArrayAdapter<String> adptrH1812a3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1812a3);
             spnH1812a3.setAdapter(adptrH1812a3);
 
+            spnH1812a3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        if(Connection.SelectedSpinnerValue(spnH1812a3.getSelectedItem().toString(), "-").equals("11"))
+                        {
+                            secH1812a3X.setVisibility(View.VISIBLE);
+                            lineH1812a3X.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secH1812a3X.setVisibility(View.GONE);
+                            lineH1812a3X.setVisibility(View.GONE);
+                            txtH1812a3X.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
+
             secH1812a3X = (LinearLayout) findViewById(R.id.secH1812a3X);
             lineH1812a3X = (View) findViewById(R.id.lineH1812a3X);
             VlblH1812a3X = (TextView) findViewById(R.id.VlblH1812a3X);
@@ -2143,6 +3205,12 @@ public class Careseek extends Activity {
             VlblH1812a4 = (TextView) findViewById(R.id.VlblH1812a4);
             txtH1812a4 = (EditText) findViewById(R.id.txtH1812a4);
 
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+
+            DataSearch(RND,SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -2181,7 +3249,10 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: প্রথম বাহন.");
                 spnH181a1.requestFocus();
                 return;
-            } else if (txtH181a1X.getText().toString().length() == 0 & secH181a1X.isShown()) {
+            }
+
+
+            else if (txtH181a1X.getText().toString().length() == 0 & secH181a1X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH181a1X.requestFocus();
                 return;
@@ -2606,6 +3677,120 @@ public class Careseek extends Activity {
                 txtH1812a4.requestFocus();
                 return;
             }
+
+            if (rdoH181a1.isChecked())
+            {
+                if(spnH181a1.getSelectedItem().equals(spnH181a2.getSelectedItem()) || spnH181a1.getSelectedItem().equals(spnH181a3.getSelectedItem()) || spnH181a2.getSelectedItem().equals(spnH181a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H181");
+                    spnH181a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH182a1.isChecked())
+            {
+                if(spnH182a1.getSelectedItem().equals(spnH182a2.getSelectedItem()) || spnH182a1.getSelectedItem().equals(spnH182a3.getSelectedItem()) || spnH182a2.getSelectedItem().equals(spnH182a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H182");
+                    spnH182a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH183a1.isChecked())
+            {
+                if(spnH183a1.getSelectedItem().equals(spnH183a2.getSelectedItem()) || spnH183a1.getSelectedItem().equals(spnH183a3.getSelectedItem()) || spnH183a2.getSelectedItem().equals(spnH183a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H183");
+                    spnH183a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH184a1.isChecked())
+            {
+                if(spnH184a1.getSelectedItem().equals(spnH184a2.getSelectedItem()) || spnH184a1.getSelectedItem().equals(spnH184a3.getSelectedItem()) || spnH184a2.getSelectedItem().equals(spnH184a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H184");
+                    spnH184a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH185a1.isChecked())
+            {
+                if(spnH185a1.getSelectedItem().equals(spnH185a2.getSelectedItem()) || spnH185a1.getSelectedItem().equals(spnH185a3.getSelectedItem()) || spnH185a2.getSelectedItem().equals(spnH185a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H185");
+                    spnH185a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH186a1.isChecked())
+            {
+                if(spnH186a1.getSelectedItem().equals(spnH186a2.getSelectedItem()) || spnH186a1.getSelectedItem().equals(spnH186a3.getSelectedItem()) || spnH186a2.getSelectedItem().equals(spnH186a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H186");
+                    spnH186a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH187a1.isChecked())
+            {
+                if(spnH187a1.getSelectedItem().equals(spnH187a2.getSelectedItem()) || spnH187a1.getSelectedItem().equals(spnH187a3.getSelectedItem()) || spnH187a2.getSelectedItem().equals(spnH187a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H187");
+                    spnH187a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH188a1.isChecked())
+            {
+                if(spnH188a1.getSelectedItem().equals(spnH188a2.getSelectedItem()) || spnH188a1.getSelectedItem().equals(spnH188a3.getSelectedItem()) || spnH188a2.getSelectedItem().equals(spnH188a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H188");
+                    spnH188a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH189a1.isChecked())
+            {
+                if(spnH189a1.getSelectedItem().equals(spnH189a2.getSelectedItem()) || spnH189a1.getSelectedItem().equals(spnH189a3.getSelectedItem()) || spnH189a2.getSelectedItem().equals(spnH189a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H189");
+                    spnH189a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH1810a1.isChecked())
+            {
+                if(spnH1810a1.getSelectedItem().equals(spnH1810a2.getSelectedItem()) || spnH1810a1.getSelectedItem().equals(spnH1810a3.getSelectedItem()) || spnH1810a2.getSelectedItem().equals(spnH1810a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H1810");
+                    spnH1810a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH1811a1.isChecked())
+            {
+                if(spnH1811a1.getSelectedItem().equals(spnH1811a2.getSelectedItem()) || spnH1811a1.getSelectedItem().equals(spnH1811a3.getSelectedItem()) || spnH1811a2.getSelectedItem().equals(spnH1811a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H1811");
+                    spnH1811a1.requestFocus();
+                    return;
+                }
+            }
+            else  if (rdoH1812a1.isChecked())
+            {
+                if(spnH1812a1.getSelectedItem().equals(spnH1812a2.getSelectedItem()) || spnH1812a1.getSelectedItem().equals(spnH1812a3.getSelectedItem()) || spnH1812a2.getSelectedItem().equals(spnH1812a3.getSelectedItem()))
+                {
+                    Connection.MessageBox(Careseek.this, "Some data inconsistent in H1812");
+                    spnH1812a1.requestFocus();
+                    return;
+                }
+            }
+
+
+
+
+
 
             String SQL = "";
             RadioButton rb;

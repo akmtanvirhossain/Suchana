@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -53,6 +54,7 @@ public class Illness2_list extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
+    Bundle IDbundle;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -72,6 +74,10 @@ public class Illness2_list extends Activity {
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
+
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "Illness2";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
@@ -128,12 +134,20 @@ public class Illness2_list extends Activity {
             btnAdd.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
-                    Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
+                    int lineNo = 0;
+                    Cursor cursor = C.GetData("Illness2", "SuchanaID", SUCHANAID);
+                    if (cursor.getCount() != 0) {
+                        lineNo = cursor.getCount() + 1;
+                    } else {
+                        lineNo = 1;
+                    }
+                    Bundle IDbundle1 = new Bundle();
+                    IDbundle1.putString("Rnd", RND);
+                    IDbundle1.putString("SuchanaID", SUCHANAID);
+                    IDbundle1.putString("SlNo",String.valueOf(lineNo));
                     Intent intent = new Intent(getApplicationContext(), Illness2.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtras(IDbundle);
+                    intent.putExtras(IDbundle1);
                     getApplicationContext().startActivity(intent);
 
                 }
@@ -174,6 +188,7 @@ public class Illness2_list extends Activity {
                 map.put("H172cX", item.getH172cX());
                 map.put("H172cY", item.getH172cY());
                 map.put("H172cM", item.getH172cM());
+                map.put("H172d", item.getH172d());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(Illness2_list.this, dataList, R.layout.illness2_list, new String[]{"rowsec"},
@@ -224,6 +239,7 @@ public class Illness2_list extends Activity {
             final TextView H172cX = (TextView) convertView.findViewById(R.id.H172cX);
             final TextView H172cY = (TextView) convertView.findViewById(R.id.H172cY);
             final TextView H172cM = (TextView) convertView.findViewById(R.id.H172cM);
+            final TextView H172d = (TextView) convertView.findViewById(R.id.H172d);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
@@ -236,6 +252,7 @@ public class Illness2_list extends Activity {
             H172cX.setText(o.get("H172cX"));
             H172cY.setText(o.get("H172cY"));
             H172cM.setText(o.get("H172cM"));
+            H172d.setText(o.get("H172d"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -243,6 +260,8 @@ public class Illness2_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                    IDbundle.putString("SlNo", o.get("SlNo"));
+
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), Illness2.class);
                     f1.putExtras(IDbundle);

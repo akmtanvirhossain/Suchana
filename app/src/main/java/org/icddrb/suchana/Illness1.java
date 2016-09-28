@@ -184,6 +184,7 @@ public class Illness1 extends Activity {
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
             IDbundle = getIntent().getExtras();
+
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
             SlNo = IDbundle.getString("SlNo");
@@ -511,7 +512,7 @@ public class Illness1 extends Activity {
                     return;
                 }
             });
-
+            DataSearch(RND,SUCHANAID,SlNo);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -681,12 +682,12 @@ public class Illness1 extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID) {
+    private void DataSearch(String Rnd, String SuchanaID,String Slno) {
         try {
 
             RadioButton rb;
             Illness1_DataModel d = new Illness1_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SlNo='" + Slno +"'";
             List<Illness1_DataModel> data = d.SelectAll(this, SQL);
             for (Illness1_DataModel item : data) {
                 txtRnd.setText(item.getRnd());

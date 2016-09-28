@@ -15,6 +15,7 @@ public class IGA_DataModel {
     private String _RND = "";
     private String _SuchanaID = "";
     private String _H18b1a = "";
+    private String _H18b2a = "";
     private String _H18b2a1 = "";
     private String _H18b2a2 = "";
     private String _H18b2a3 = "";
@@ -24,6 +25,7 @@ public class IGA_DataModel {
     private String _H18b2a7 = "";
     private String _H18b2a7X = "";
     private String _H18b1b = "";
+    private String _H18b2b = "";
     private String _H18b2b1 = "";
     private String _H18b2b2 = "";
     private String _H18b2b3 = "";
@@ -33,6 +35,7 @@ public class IGA_DataModel {
     private String _H18b2b7 = "";
     private String _H18b2b7X = "";
     private String _H18b1c = "";
+    private String _H18b2c = "";
     private String _H18b2c1 = "";
     private String _H18b2c2 = "";
     private String _H18b2c3 = "";
@@ -42,6 +45,7 @@ public class IGA_DataModel {
     private String _H18b2c7 = "";
     private String _H18b2c7X = "";
     private String _H18b1d = "";
+    private String _H18b2d = "";
     private String _H18b2d1 = "";
     private String _H18b2d2 = "";
     private String _H18b2d3 = "";
@@ -51,6 +55,7 @@ public class IGA_DataModel {
     private String _H18b2d7 = "";
     private String _H18b2d7X = "";
     private String _H18b1e = "";
+    private String _H18b2e = "";
     private String _H18b2e1 = "";
     private String _H18b2e2 = "";
     private String _H18b2e3 = "";
@@ -60,6 +65,7 @@ public class IGA_DataModel {
     private String _H18b2e7 = "";
     private String _H18b2e7X = "";
     private String _H18b1f = "";
+    private String _H18b2f = "";
     private String _H18b2f1 = "";
     private String _H18b2f2 = "";
     private String _H18b2f3 = "";
@@ -69,6 +75,7 @@ public class IGA_DataModel {
     private String _H18b2f7 = "";
     private String _H18b2f7X = "";
     private String _H18b1g = "";
+    private String _H18b2g = "";
     private String _H18b2g1 = "";
     private String _H18b2g2 = "";
     private String _H18b2g3 = "";
@@ -78,6 +85,7 @@ public class IGA_DataModel {
     private String _H18b2g7 = "";
     private String _H18b2g7X = "";
     private String _H18b1h = "";
+    private String _H18b2h = "";
     private String _H18b2h1 = "";
     private String _H18b2h2 = "";
     private String _H18b2h3 = "";
@@ -87,6 +95,7 @@ public class IGA_DataModel {
     private String _H18b2h7 = "";
     private String _H18b2h7X = "";
     private String _H18b1i = "";
+    private String _H18b2i = "";
     private String _H18b2i1 = "";
     private String _H18b2i2 = "";
     private String _H18b2i3 = "";
@@ -94,6 +103,7 @@ public class IGA_DataModel {
     private String _H18b2i5 = "";
     private String _H18b2i5X = "";
     private String _H18b1j = "";
+    private String _H18b2j = "";
     private String _H18b2j1 = "";
     private String _H18b2j2 = "";
     private String _H18b2j3 = "";
@@ -134,10 +144,19 @@ public class IGA_DataModel {
     public void setH18b1a(String newValue) {
         _H18b1a = newValue;
     }
+    public String getH18b2a() {
+        return _H18b2a;
+    }
+    public void setH18b2a(String newValue) {
+        _H18b2a = newValue;
+    }
+
 
     public String getH18b2a1() {
         return _H18b2a1;
     }
+
+
 
     public void setH18b2a1(String newValue) {
         _H18b2a1 = newValue;
@@ -206,6 +225,13 @@ public class IGA_DataModel {
     public void setH18b1b(String newValue) {
         _H18b1b = newValue;
     }
+    public String getH18b2b() {
+        return _H18b2b;
+    }
+    public void setH18b2b(String newValue) {
+        _H18b2b = newValue;
+    }
+
 
     public String getH18b2b1() {
         return _H18b2b1;
@@ -279,6 +305,14 @@ public class IGA_DataModel {
         _H18b1c = newValue;
     }
 
+    public String getH18b2c() {
+        return _H18b2c;
+    }
+    public void setH18b2c(String newValue) {
+        _H18b2c = newValue;
+    }
+
+
     public String getH18b2c1() {
         return _H18b2c1;
     }
@@ -350,6 +384,14 @@ public class IGA_DataModel {
     public void setH18b1d(String newValue) {
         _H18b1d = newValue;
     }
+
+    public String getH18b2d() {
+        return _H18b2d;
+    }
+    public void setH18b2d(String newValue) {
+        _H18b2d = newValue;
+    }
+
 
     public String getH18b2d1() {
         return _H18b2d1;
@@ -423,6 +465,14 @@ public class IGA_DataModel {
         _H18b1e = newValue;
     }
 
+    public String getH18b2e() {
+        return _H18b2e;
+    }
+    public void setH18b2e(String newValue) {
+        _H18b2e = newValue;
+    }
+
+
     public String getH18b2e1() {
         return _H18b2e1;
     }
@@ -430,6 +480,7 @@ public class IGA_DataModel {
     public void setH18b2e1(String newValue) {
         _H18b2e1 = newValue;
     }
+
 
     public String getH18b2e2() {
         return _H18b2e2;
@@ -494,6 +545,14 @@ public class IGA_DataModel {
     public void setH18b1f(String newValue) {
         _H18b1f = newValue;
     }
+
+    public String getH18b2f() {
+        return _H18b2f;
+    }
+    public void setH18b2f(String newValue) {
+        _H18b2f = newValue;
+    }
+
 
     public String getH18b2f1() {
         return _H18b2f1;
@@ -567,6 +626,14 @@ public class IGA_DataModel {
         _H18b1g = newValue;
     }
 
+    public String getH18b2g() {
+        return _H18b2g;
+    }
+    public void setH18b2g(String newValue) {
+        _H18b2g = newValue;
+    }
+
+
     public String getH18b2g1() {
         return _H18b2g1;
     }
@@ -638,6 +705,14 @@ public class IGA_DataModel {
     public void setH18b1h(String newValue) {
         _H18b1h = newValue;
     }
+
+    public String getH18b2h() {
+        return _H18b2h;
+    }
+    public void setH18b2h(String newValue) {
+        _H18b2h = newValue;
+    }
+
 
     public String getH18b2h1() {
         return _H18b2h1;
@@ -711,6 +786,14 @@ public class IGA_DataModel {
         _H18b1i = newValue;
     }
 
+    public String getH18b2i() {
+        return _H18b2i;
+    }
+    public void setH18b2i(String newValue) {
+        _H18b2i = newValue;
+    }
+
+
     public String getH18b2i1() {
         return _H18b2i1;
     }
@@ -766,6 +849,14 @@ public class IGA_DataModel {
     public void setH18b1j(String newValue) {
         _H18b1j = newValue;
     }
+
+    public String getH18b2j() {
+        return _H18b2j;
+    }
+    public void setH18b2j(String newValue) {
+        _H18b2j = newValue;
+    }
+
 
     public String getH18b2j1() {
         return _H18b2j1;
@@ -879,7 +970,7 @@ public class IGA_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (RND,SuchanaID,H18b1a,H18b2a1,H18b2a2,H18b2a3,H18b2a4,H18b2a5,H18b2a6,H18b2a7,H18b2a7X,H18b1b,H18b2b1,H18b2b2,H18b2b3,H18b2b4,H18b2b5,H18b2b6,H18b2b7,H18b2b7X,H18b1c,H18b2c1,H18b2c2,H18b2c3,H18b2c4,H18b2c5,H18b2c6,H18b2c7,H18b2c7X,H18b1d,H18b2d1,H18b2d2,H18b2d3,H18b2d4,H18b2d5,H18b2d6,H18b2d7,H18b2d7X,H18b1e,H18b2e1,H18b2e2,H18b2e3,H18b2e4,H18b2e5,H18b2e6,H18b2e7,H18b2e7X,H18b1f,H18b2f1,H18b2f2,H18b2f3,H18b2f4,H18b2f5,H18b2f6,H18b2f7,H18b2f7X,H18b1g,H18b2g1,H18b2g2,H18b2g3,H18b2g4,H18b2g5,H18b2g6,H18b2g7,H18b2g7X,H18b1h,H18b2h1,H18b2h2,H18b2h3,H18b2h4,H18b2h5,H18b2h6,H18b2h7,H18b2h7X,H18b1i,H18b2i1,H18b2i2,H18b2i3,H18b2i4,H18b2i5,H18b2i5X,H18b1j,H18b2j1,H18b2j2,H18b2j3,H18b2j4,H18b2j5,H18b2j5X,H18b1k,H18b2kX,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _RND + "', '" + _SuchanaID + "', '" + _H18b1a + "', '" + _H18b2a1 + "', '" + _H18b2a2 + "', '" + _H18b2a3 + "', '" + _H18b2a4 + "', '" + _H18b2a5 + "', '" + _H18b2a6 + "', '" + _H18b2a7 + "', '" + _H18b2a7X + "', '" + _H18b1b + "', '" + _H18b2b1 + "', '" + _H18b2b2 + "', '" + _H18b2b3 + "', '" + _H18b2b4 + "', '" + _H18b2b5 + "', '" + _H18b2b6 + "', '" + _H18b2b7 + "', '" + _H18b2b7X + "', '" + _H18b1c + "', '" + _H18b2c1 + "', '" + _H18b2c2 + "', '" + _H18b2c3 + "', '" + _H18b2c4 + "', '" + _H18b2c5 + "', '" + _H18b2c6 + "', '" + _H18b2c7 + "', '" + _H18b2c7X + "', '" + _H18b1d + "', '" + _H18b2d1 + "', '" + _H18b2d2 + "', '" + _H18b2d3 + "', '" + _H18b2d4 + "', '" + _H18b2d5 + "', '" + _H18b2d6 + "', '" + _H18b2d7 + "', '" + _H18b2d7X + "', '" + _H18b1e + "', '" + _H18b2e1 + "', '" + _H18b2e2 + "', '" + _H18b2e3 + "', '" + _H18b2e4 + "', '" + _H18b2e5 + "', '" + _H18b2e6 + "', '" + _H18b2e7 + "', '" + _H18b2e7X + "', '" + _H18b1f + "', '" + _H18b2f1 + "', '" + _H18b2f2 + "', '" + _H18b2f3 + "', '" + _H18b2f4 + "', '" + _H18b2f5 + "', '" + _H18b2f6 + "', '" + _H18b2f7 + "', '" + _H18b2f7X + "', '" + _H18b1g + "', '" + _H18b2g1 + "', '" + _H18b2g2 + "', '" + _H18b2g3 + "', '" + _H18b2g4 + "', '" + _H18b2g5 + "', '" + _H18b2g6 + "', '" + _H18b2g7 + "', '" + _H18b2g7X + "', '" + _H18b1h + "', '" + _H18b2h1 + "', '" + _H18b2h2 + "', '" + _H18b2h3 + "', '" + _H18b2h4 + "', '" + _H18b2h5 + "', '" + _H18b2h6 + "', '" + _H18b2h7 + "', '" + _H18b2h7X + "', '" + _H18b1i + "', '" + _H18b2i1 + "', '" + _H18b2i2 + "', '" + _H18b2i3 + "', '" + _H18b2i4 + "', '" + _H18b2i5 + "', '" + _H18b2i5X + "', '" + _H18b1j + "', '" + _H18b2j1 + "', '" + _H18b2j2 + "', '" + _H18b2j3 + "', '" + _H18b2j4 + "', '" + _H18b2j5 + "', '" + _H18b2j5X + "', '" + _H18b1k + "', '" + _H18b2kX + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (RND,SuchanaID,H18b1a,H18b2a,H18b2a1,H18b2a2,H18b2a3,H18b2a4,H18b2a5,H18b2a6,H18b2a7,H18b2a7X,H18b1b,H18b2b,H18b2b1,H18b2b2,H18b2b3,H18b2b4,H18b2b5,H18b2b6,H18b2b7,H18b2b7X,H18b1c,H18b2c,H18b2c1,H18b2c2,H18b2c3,H18b2c4,H18b2c5,H18b2c6,H18b2c7,H18b2c7X,H18b1d,H18b2d,H18b2d1,H18b2d2,H18b2d3,H18b2d4,H18b2d5,H18b2d6,H18b2d7,H18b2d7X,H18b1e,H18b2e,H18b2e1,H18b2e2,H18b2e3,H18b2e4,H18b2e5,H18b2e6,H18b2e7,H18b2e7X,H18b1f,H18b2f,H18b2f1,H18b2f2,H18b2f3,H18b2f4,H18b2f5,H18b2f6,H18b2f7,H18b2f7X,H18b1g,H18b2g,H18b2g1,H18b2g2,H18b2g3,H18b2g4,H18b2g5,H18b2g6,H18b2g7,H18b2g7X,H18b1h,H18b2h,H18b2h1,H18b2h2,H18b2h3,H18b2h4,H18b2h5,H18b2h6,H18b2h7,H18b2h7X,H18b1i,H18b2i,H18b2i1,H18b2i2,H18b2i3,H18b2i4,H18b2i5,H18b2i5X,H18b1j,H18b2j,H18b2j1,H18b2j2,H18b2j3,H18b2j4,H18b2j5,H18b2j5X,H18b1k,H18b2kX,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _RND + "', '" + _SuchanaID + "', '" + _H18b1a + "','" + _H18b2a + "', '" + _H18b2a1 + "', '" + _H18b2a2 + "', '" + _H18b2a3 + "', '" + _H18b2a4 + "', '" + _H18b2a5 + "', '" + _H18b2a6 + "', '" + _H18b2a7 + "', '" + _H18b2a7X + "', '" + _H18b1b + "','" + _H18b2b + "', '" + _H18b2b1 + "', '" + _H18b2b2 + "', '" + _H18b2b3 + "', '" + _H18b2b4 + "', '" + _H18b2b5 + "', '" + _H18b2b6 + "', '" + _H18b2b7 + "', '" + _H18b2b7X + "', '" + _H18b1c + "','" + _H18b2c + "', '" + _H18b2c1 + "', '" + _H18b2c2 + "', '" + _H18b2c3 + "', '" + _H18b2c4 + "', '" + _H18b2c5 + "', '" + _H18b2c6 + "', '" + _H18b2c7 + "', '" + _H18b2c7X + "', '" + _H18b1d + "','" + _H18b2d + "', '" + _H18b2d1 + "', '" + _H18b2d2 + "', '" + _H18b2d3 + "', '" + _H18b2d4 + "', '" + _H18b2d5 + "', '" + _H18b2d6 + "', '" + _H18b2d7 + "', '" + _H18b2d7X + "', '" + _H18b1e + "','" + _H18b2e + "', '" + _H18b2e1 + "', '" + _H18b2e2 + "', '" + _H18b2e3 + "', '" + _H18b2e4 + "', '" + _H18b2e5 + "', '" + _H18b2e6 + "', '" + _H18b2e7 + "', '" + _H18b2e7X + "', '" + _H18b1f + "','" + _H18b2f + "', '" + _H18b2f1 + "', '" + _H18b2f2 + "', '" + _H18b2f3 + "', '" + _H18b2f4 + "', '" + _H18b2f5 + "', '" + _H18b2f6 + "', '" + _H18b2f7 + "', '" + _H18b2f7X + "', '" + _H18b1g + "','" + _H18b2g + "', '" + _H18b2g1 + "', '" + _H18b2g2 + "', '" + _H18b2g3 + "', '" + _H18b2g4 + "', '" + _H18b2g5 + "', '" + _H18b2g6 + "', '" + _H18b2g7 + "', '" + _H18b2g7X + "', '" + _H18b1h + "','" + _H18b2h + "', '" + _H18b2h1 + "', '" + _H18b2h2 + "', '" + _H18b2h3 + "', '" + _H18b2h4 + "', '" + _H18b2h5 + "', '" + _H18b2h6 + "', '" + _H18b2h7 + "', '" + _H18b2h7X + "', '" + _H18b1i + "','" + _H18b2i + "', '" + _H18b2i1 + "', '" + _H18b2i2 + "', '" + _H18b2i3 + "', '" + _H18b2i4 + "', '" + _H18b2i5 + "', '" + _H18b2i5X + "', '" + _H18b1j + "','" + _H18b2j + "', '" + _H18b2j1 + "', '" + _H18b2j2 + "', '" + _H18b2j3 + "', '" + _H18b2j4 + "', '" + _H18b2j5 + "', '" + _H18b2j5X + "', '" + _H18b1k + "', '" + _H18b2kX + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -892,7 +983,7 @@ public class IGA_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',RND = '" + _RND + "',SuchanaID = '" + _SuchanaID + "',H18b1a = '" + _H18b1a + "',H18b2a1 = '" + _H18b2a1 + "',H18b2a2 = '" + _H18b2a2 + "',H18b2a3 = '" + _H18b2a3 + "',H18b2a4 = '" + _H18b2a4 + "',H18b2a5 = '" + _H18b2a5 + "',H18b2a6 = '" + _H18b2a6 + "',H18b2a7 = '" + _H18b2a7 + "',H18b2a7X = '" + _H18b2a7X + "',H18b1b = '" + _H18b1b + "',H18b2b1 = '" + _H18b2b1 + "',H18b2b2 = '" + _H18b2b2 + "',H18b2b3 = '" + _H18b2b3 + "',H18b2b4 = '" + _H18b2b4 + "',H18b2b5 = '" + _H18b2b5 + "',H18b2b6 = '" + _H18b2b6 + "',H18b2b7 = '" + _H18b2b7 + "',H18b2b7X = '" + _H18b2b7X + "',H18b1c = '" + _H18b1c + "',H18b2c1 = '" + _H18b2c1 + "',H18b2c2 = '" + _H18b2c2 + "',H18b2c3 = '" + _H18b2c3 + "',H18b2c4 = '" + _H18b2c4 + "',H18b2c5 = '" + _H18b2c5 + "',H18b2c6 = '" + _H18b2c6 + "',H18b2c7 = '" + _H18b2c7 + "',H18b2c7X = '" + _H18b2c7X + "',H18b1d = '" + _H18b1d + "',H18b2d1 = '" + _H18b2d1 + "',H18b2d2 = '" + _H18b2d2 + "',H18b2d3 = '" + _H18b2d3 + "',H18b2d4 = '" + _H18b2d4 + "',H18b2d5 = '" + _H18b2d5 + "',H18b2d6 = '" + _H18b2d6 + "',H18b2d7 = '" + _H18b2d7 + "',H18b2d7X = '" + _H18b2d7X + "',H18b1e = '" + _H18b1e + "',H18b2e1 = '" + _H18b2e1 + "',H18b2e2 = '" + _H18b2e2 + "',H18b2e3 = '" + _H18b2e3 + "',H18b2e4 = '" + _H18b2e4 + "',H18b2e5 = '" + _H18b2e5 + "',H18b2e6 = '" + _H18b2e6 + "',H18b2e7 = '" + _H18b2e7 + "',H18b2e7X = '" + _H18b2e7X + "',H18b1f = '" + _H18b1f + "',H18b2f1 = '" + _H18b2f1 + "',H18b2f2 = '" + _H18b2f2 + "',H18b2f3 = '" + _H18b2f3 + "',H18b2f4 = '" + _H18b2f4 + "',H18b2f5 = '" + _H18b2f5 + "',H18b2f6 = '" + _H18b2f6 + "',H18b2f7 = '" + _H18b2f7 + "',H18b2f7X = '" + _H18b2f7X + "',H18b1g = '" + _H18b1g + "',H18b2g1 = '" + _H18b2g1 + "',H18b2g2 = '" + _H18b2g2 + "',H18b2g3 = '" + _H18b2g3 + "',H18b2g4 = '" + _H18b2g4 + "',H18b2g5 = '" + _H18b2g5 + "',H18b2g6 = '" + _H18b2g6 + "',H18b2g7 = '" + _H18b2g7 + "',H18b2g7X = '" + _H18b2g7X + "',H18b1h = '" + _H18b1h + "',H18b2h1 = '" + _H18b2h1 + "',H18b2h2 = '" + _H18b2h2 + "',H18b2h3 = '" + _H18b2h3 + "',H18b2h4 = '" + _H18b2h4 + "',H18b2h5 = '" + _H18b2h5 + "',H18b2h6 = '" + _H18b2h6 + "',H18b2h7 = '" + _H18b2h7 + "',H18b2h7X = '" + _H18b2h7X + "',H18b1i = '" + _H18b1i + "',H18b2i1 = '" + _H18b2i1 + "',H18b2i2 = '" + _H18b2i2 + "',H18b2i3 = '" + _H18b2i3 + "',H18b2i4 = '" + _H18b2i4 + "',H18b2i5 = '" + _H18b2i5 + "',H18b2i5X = '" + _H18b2i5X + "',H18b1j = '" + _H18b1j + "',H18b2j1 = '" + _H18b2j1 + "',H18b2j2 = '" + _H18b2j2 + "',H18b2j3 = '" + _H18b2j3 + "',H18b2j4 = '" + _H18b2j4 + "',H18b2j5 = '" + _H18b2j5 + "',H18b2j5X = '" + _H18b2j5X + "',H18b1k = '" + _H18b1k + "',H18b2kX = '" + _H18b2kX + "'  Where RND='" + _RND + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',RND = '" + _RND + "',SuchanaID = '" + _SuchanaID + "',H18b1a = '" + _H18b1a + "',H18b2a = '" + _H18b2a + "',H18b2a1 = '" + _H18b2a1 + "',H18b2a2 = '" + _H18b2a2 + "',H18b2a3 = '" + _H18b2a3 + "',H18b2a4 = '" + _H18b2a4 + "',H18b2a5 = '" + _H18b2a5 + "',H18b2a6 = '" + _H18b2a6 + "',H18b2a7 = '" + _H18b2a7 + "',H18b2a7X = '" + _H18b2a7X + "',H18b1b = '" + _H18b1b + "',H18b2b = '" + _H18b2b + "',H18b2b1 = '" + _H18b2b1 + "',H18b2b2 = '" + _H18b2b2 + "',H18b2b3 = '" + _H18b2b3 + "',H18b2b4 = '" + _H18b2b4 + "',H18b2b5 = '" + _H18b2b5 + "',H18b2b6 = '" + _H18b2b6 + "',H18b2b7 = '" + _H18b2b7 + "',H18b2b7X = '" + _H18b2b7X + "',H18b1c = '" + _H18b1c + "',H18b2c = '" + _H18b2c + "',H18b2c1 = '" + _H18b2c1 + "',H18b2c2 = '" + _H18b2c2 + "',H18b2c3 = '" + _H18b2c3 + "',H18b2c4 = '" + _H18b2c4 + "',H18b2c5 = '" + _H18b2c5 + "',H18b2c6 = '" + _H18b2c6 + "',H18b2c7 = '" + _H18b2c7 + "',H18b2c7X = '" + _H18b2c7X + "',H18b1d = '" + _H18b1d + "',H18b2d = '" + _H18b2d + "',H18b2d1 = '" + _H18b2d1 + "',H18b2d2 = '" + _H18b2d2 + "',H18b2d3 = '" + _H18b2d3 + "',H18b2d4 = '" + _H18b2d4 + "',H18b2d5 = '" + _H18b2d5 + "',H18b2d6 = '" + _H18b2d6 + "',H18b2d7 = '" + _H18b2d7 + "',H18b2d7X = '" + _H18b2d7X + "',H18b1e = '" + _H18b1e + "',H18b2e = '" + _H18b2e + "',H18b2e1 = '" + _H18b2e1 + "',H18b2e2 = '" + _H18b2e2 + "',H18b2e3 = '" + _H18b2e3 + "',H18b2e4 = '" + _H18b2e4 + "',H18b2e5 = '" + _H18b2e5 + "',H18b2e6 = '" + _H18b2e6 + "',H18b2e7 = '" + _H18b2e7 + "',H18b2e7X = '" + _H18b2e7X + "',H18b1f = '" + _H18b1f + "',H18b2f = '" + _H18b2f + "',H18b2f1 = '" + _H18b2f1 + "',H18b2f2 = '" + _H18b2f2 + "',H18b2f3 = '" + _H18b2f3 + "',H18b2f4 = '" + _H18b2f4 + "',H18b2f5 = '" + _H18b2f5 + "',H18b2f6 = '" + _H18b2f6 + "',H18b2f7 = '" + _H18b2f7 + "',H18b2f7X = '" + _H18b2f7X + "',H18b1g = '" + _H18b1g + "',H18b2g = '" + _H18b2g + "',H18b2g1 = '" + _H18b2g1 + "',H18b2g2 = '" + _H18b2g2 + "',H18b2g3 = '" + _H18b2g3 + "',H18b2g4 = '" + _H18b2g4 + "',H18b2g5 = '" + _H18b2g5 + "',H18b2g6 = '" + _H18b2g6 + "',H18b2g7 = '" + _H18b2g7 + "',H18b2g7X = '" + _H18b2g7X + "',H18b1h = '" + _H18b1h + "',H18b2h = '" + _H18b2h + "',H18b2h1 = '" + _H18b2h1 + "',H18b2h2 = '" + _H18b2h2 + "',H18b2h3 = '" + _H18b2h3 + "',H18b2h4 = '" + _H18b2h4 + "',H18b2h5 = '" + _H18b2h5 + "',H18b2h6 = '" + _H18b2h6 + "',H18b2h7 = '" + _H18b2h7 + "',H18b2h7X = '" + _H18b2h7X + "',H18b1i = '" + _H18b1i + "',H18b2i = '" + _H18b2i + "',H18b2i1 = '" + _H18b2i1 + "',H18b2i2 = '" + _H18b2i2 + "',H18b2i3 = '" + _H18b2i3 + "',H18b2i4 = '" + _H18b2i4 + "',H18b2i5 = '" + _H18b2i5 + "',H18b2i5X = '" + _H18b2i5X + "',H18b1j = '" + _H18b1j + "',H18b2j = '" + _H18b2j + "',H18b2j1 = '" + _H18b2j1 + "',H18b2j2 = '" + _H18b2j2 + "',H18b2j3 = '" + _H18b2j3 + "',H18b2j4 = '" + _H18b2j4 + "',H18b2j5 = '" + _H18b2j5 + "',H18b2j5X = '" + _H18b2j5X + "',H18b1k = '" + _H18b1k + "',H18b2kX = '" + _H18b2kX + "'  Where RND='" + _RND + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -910,9 +1001,10 @@ public class IGA_DataModel {
         cur.moveToFirst();
         while (!cur.isAfterLast()) {
             d = new IGA_DataModel();
-            d._RND = cur.getString(cur.getColumnIndex("RND"));
+            d._RND = cur.getString(cur.getColumnIndex("Rnd"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._H18b1a = cur.getString(cur.getColumnIndex("H18b1a"));
+            d._H18b2a = cur.getString(cur.getColumnIndex("H18b2a"));
             d._H18b2a1 = cur.getString(cur.getColumnIndex("H18b2a1"));
             d._H18b2a2 = cur.getString(cur.getColumnIndex("H18b2a2"));
             d._H18b2a3 = cur.getString(cur.getColumnIndex("H18b2a3"));
@@ -922,6 +1014,7 @@ public class IGA_DataModel {
             d._H18b2a7 = cur.getString(cur.getColumnIndex("H18b2a7"));
             d._H18b2a7X = cur.getString(cur.getColumnIndex("H18b2a7X"));
             d._H18b1b = cur.getString(cur.getColumnIndex("H18b1b"));
+            d._H18b2b = cur.getString(cur.getColumnIndex("H18b2b"));
             d._H18b2b1 = cur.getString(cur.getColumnIndex("H18b2b1"));
             d._H18b2b2 = cur.getString(cur.getColumnIndex("H18b2b2"));
             d._H18b2b3 = cur.getString(cur.getColumnIndex("H18b2b3"));
@@ -931,6 +1024,7 @@ public class IGA_DataModel {
             d._H18b2b7 = cur.getString(cur.getColumnIndex("H18b2b7"));
             d._H18b2b7X = cur.getString(cur.getColumnIndex("H18b2b7X"));
             d._H18b1c = cur.getString(cur.getColumnIndex("H18b1c"));
+            d._H18b2c = cur.getString(cur.getColumnIndex("H18b2c"));
             d._H18b2c1 = cur.getString(cur.getColumnIndex("H18b2c1"));
             d._H18b2c2 = cur.getString(cur.getColumnIndex("H18b2c2"));
             d._H18b2c3 = cur.getString(cur.getColumnIndex("H18b2c3"));
@@ -940,6 +1034,7 @@ public class IGA_DataModel {
             d._H18b2c7 = cur.getString(cur.getColumnIndex("H18b2c7"));
             d._H18b2c7X = cur.getString(cur.getColumnIndex("H18b2c7X"));
             d._H18b1d = cur.getString(cur.getColumnIndex("H18b1d"));
+            d._H18b2d = cur.getString(cur.getColumnIndex("H18b2d"));
             d._H18b2d1 = cur.getString(cur.getColumnIndex("H18b2d1"));
             d._H18b2d2 = cur.getString(cur.getColumnIndex("H18b2d2"));
             d._H18b2d3 = cur.getString(cur.getColumnIndex("H18b2d3"));
@@ -949,6 +1044,7 @@ public class IGA_DataModel {
             d._H18b2d7 = cur.getString(cur.getColumnIndex("H18b2d7"));
             d._H18b2d7X = cur.getString(cur.getColumnIndex("H18b2d7X"));
             d._H18b1e = cur.getString(cur.getColumnIndex("H18b1e"));
+            d._H18b2e = cur.getString(cur.getColumnIndex("H18b2e"));
             d._H18b2e1 = cur.getString(cur.getColumnIndex("H18b2e1"));
             d._H18b2e2 = cur.getString(cur.getColumnIndex("H18b2e2"));
             d._H18b2e3 = cur.getString(cur.getColumnIndex("H18b2e3"));
@@ -958,6 +1054,7 @@ public class IGA_DataModel {
             d._H18b2e7 = cur.getString(cur.getColumnIndex("H18b2e7"));
             d._H18b2e7X = cur.getString(cur.getColumnIndex("H18b2e7X"));
             d._H18b1f = cur.getString(cur.getColumnIndex("H18b1f"));
+            d._H18b2f = cur.getString(cur.getColumnIndex("H18b2f"));
             d._H18b2f1 = cur.getString(cur.getColumnIndex("H18b2f1"));
             d._H18b2f2 = cur.getString(cur.getColumnIndex("H18b2f2"));
             d._H18b2f3 = cur.getString(cur.getColumnIndex("H18b2f3"));
@@ -967,6 +1064,7 @@ public class IGA_DataModel {
             d._H18b2f7 = cur.getString(cur.getColumnIndex("H18b2f7"));
             d._H18b2f7X = cur.getString(cur.getColumnIndex("H18b2f7X"));
             d._H18b1g = cur.getString(cur.getColumnIndex("H18b1g"));
+            d._H18b2g = cur.getString(cur.getColumnIndex("H18b2g"));
             d._H18b2g1 = cur.getString(cur.getColumnIndex("H18b2g1"));
             d._H18b2g2 = cur.getString(cur.getColumnIndex("H18b2g2"));
             d._H18b2g3 = cur.getString(cur.getColumnIndex("H18b2g3"));
@@ -976,6 +1074,7 @@ public class IGA_DataModel {
             d._H18b2g7 = cur.getString(cur.getColumnIndex("H18b2g7"));
             d._H18b2g7X = cur.getString(cur.getColumnIndex("H18b2g7X"));
             d._H18b1h = cur.getString(cur.getColumnIndex("H18b1h"));
+            d._H18b2h = cur.getString(cur.getColumnIndex("H18b2h"));
             d._H18b2h1 = cur.getString(cur.getColumnIndex("H18b2h1"));
             d._H18b2h2 = cur.getString(cur.getColumnIndex("H18b2h2"));
             d._H18b2h3 = cur.getString(cur.getColumnIndex("H18b2h3"));
@@ -985,6 +1084,7 @@ public class IGA_DataModel {
             d._H18b2h7 = cur.getString(cur.getColumnIndex("H18b2h7"));
             d._H18b2h7X = cur.getString(cur.getColumnIndex("H18b2h7X"));
             d._H18b1i = cur.getString(cur.getColumnIndex("H18b1i"));
+            d._H18b2i = cur.getString(cur.getColumnIndex("H18b2i"));
             d._H18b2i1 = cur.getString(cur.getColumnIndex("H18b2i1"));
             d._H18b2i2 = cur.getString(cur.getColumnIndex("H18b2i2"));
             d._H18b2i3 = cur.getString(cur.getColumnIndex("H18b2i3"));
@@ -992,6 +1092,7 @@ public class IGA_DataModel {
             d._H18b2i5 = cur.getString(cur.getColumnIndex("H18b2i5"));
             d._H18b2i5X = cur.getString(cur.getColumnIndex("H18b2i5X"));
             d._H18b1j = cur.getString(cur.getColumnIndex("H18b1j"));
+            d._H18b2j = cur.getString(cur.getColumnIndex("H18b2j"));
             d._H18b2j1 = cur.getString(cur.getColumnIndex("H18b2j1"));
             d._H18b2j2 = cur.getString(cur.getColumnIndex("H18b2j2"));
             d._H18b2j3 = cur.getString(cur.getColumnIndex("H18b2j3"));
