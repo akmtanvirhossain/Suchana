@@ -612,7 +612,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কতটা বিক্রি  করেছিলেন"
+                    android:text="কতটা বিক্রি করেছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 

@@ -120,7 +120,6 @@ public class HDDS extends Activity {
     Button buttonAssetType19;
     Button buttonAssetType20;
     Button cmdSave;
-    List<String> listH7L;
     private int hour;
     private int minute;
     private int mDay;
@@ -128,8 +127,6 @@ public class HDDS extends Activity {
     private int mYear;
     private boolean allItemsCompleted = false;
     private View pressedButton;
-    private TextView VlblH7L;
-
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -430,17 +427,17 @@ public class HDDS extends Activity {
             listH7.add("16-দুধ এবং দুগ্ধজাত খাদ্য");
             listH7.add("17-তেল এবং চর্বি");
             listH7.add("18-মিষ্টান্ন্য");
-            listH7.add("19-মশলা, আচার/সস জাতিও খাবার");
+            listH7.add("19-মশলা,আচার/সস জাতিও খাবার");
             listH7.add("20-বিবিধ (পানীয়)");
 
-            listH7L = new ArrayList<String>();
-            listH7L.add("");
+            List<String> listH7L = new ArrayList<String>();
+
             listH7L.add("01-ভুট্টা,চাল,গম বা এই সব শস্য দ্বারা অন্য কোন খাবার তৈরী হয়েছে (যেমন:রুটি,নুডলস,সুজি বা অন্যান্য শস্য পণ্য)");
             listH7L.add("02-সাদা আলু, সাদা মিষ্টি আলু, বা অন্য শিকড় থেকে তৈরি খাবার");
             listH7L.add("03-কুমড়া,গাজর বা মিষ্টি আলু যার রং ভিতরে কমলা ও স্থানীয় ভিটামিন এ সমৃদ্ধ শাক সবজি");
             listH7L.add("04-গাঢ় সবুজ শাক শাক সবজি ও স্থানীয় ভাবে পাওয়া ভিটামিন এ সমৃদ্ধ শাক যেমন পালং শাক");
             listH7L.add("05-অন্যান্য সবজি যেমন টমেটো,পেঁয়াজ,বেগুন) ও স্থানীয় ভাবে পাওয়া অন্যান্য সহজ লভ্য শাকসবজি");
-            listH7L.add("06-পাকা আম, পাকা পেঁপে এবং তাদের 100% ফলের রস + অন্যান্য স্থানীয় ভাবে পাওয়া ভিটামিন এ সমৃদ্ধ ফল");
+            listH7L.add("06-পাকা আম,পাকা পেঁপে এবং তাদের 100% ফলের রস + অন্যান্য স্থানীয় ভাবে পাওয়া ভিটামিন এ সমৃদ্ধ ফল");
             listH7L.add("07-বন্য ফলসহ অনান্য ফল এবং তাদের 100% ফলের রস");
             listH7L.add("08-কলিজা, কিডনি এবং অন্যান্য অঙ্গের মাংস");
             listH7L.add("09-গরুর মাংস,ভেড়ার মাংস,ছাগল,খরগোশ,খেলা,মুরগি,হাঁস,অন্যান্য পাখির মাংস");
@@ -454,11 +451,7 @@ public class HDDS extends Activity {
             listH7L.add("17-খাবারে যোগ করা বা রান্নার জন্য তেল, চর্বি বা মাখন খাদ্য যোগ");
             listH7L.add("18-চিনি,মধু,মিষ্টি যুক্ত সোডা বা মিষ্টি যুক্ত রসের পানীয় বা চিনি যুক্ত খাবার যেমন চকলেট,ক্যান্ডি,কুকিজ এবং কেক");
             listH7L.add("19-মশলা,কালো মরিচ,আচার/সস জাতীয় খাবার যেমন সয়া সস");
-            listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফি ");
-
-            VlblH7L = (TextView) findViewById(R.id.VlblH7L);
-
-            
+            listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফি");
             
             ArrayAdapter<String> adptrH7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH7);
             spnH7.setAdapter(adptrH7);
@@ -469,7 +462,6 @@ public class HDDS extends Activity {
 
                     String spnData = Connection.SelectedSpinnerValue(spnH7.getSelectedItem().toString(), "-");
                     DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
-                    VlblH7L.setText(listH7L.get(Integer.valueOf(spnData)));
                 }
 
                 @Override

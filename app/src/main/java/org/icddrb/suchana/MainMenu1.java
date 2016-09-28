@@ -127,12 +127,8 @@ public class MainMenu1 extends Activity {
             cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", "");
-                    IDBundle.putString("SuchanaID", "");
-                    Intent f1 = new Intent(getApplicationContext(), HDDS.class);
-                    f1.putExtras(IDBundle);
-                    startActivity(f1);
+                       Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
+                       startActivity(f1);
                 }
             });
             cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);
@@ -152,11 +148,7 @@ public class MainMenu1 extends Activity {
             cmdMenuSavings.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", "");
-                    IDBundle.putString("SuchanaID", "");
                     Intent f1 = new Intent(getApplicationContext(), Savings_list.class);
-                    f1.putExtras(IDBundle);
                     startActivity(f1);
                 }
             });
@@ -274,6 +266,7 @@ public class MainMenu1 extends Activity {
                     startActivity(f1);
                 }
             });
+
 
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
