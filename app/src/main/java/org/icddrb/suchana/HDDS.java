@@ -569,7 +569,7 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (গত ২৪ ঘন্টায় খেয়েছেন).");
                 rdoH7a1.requestFocus();
                 return;
-            } else if (!chkH7b1.isChecked() && !chkH7b2.isChecked() && !chkH7b3.isChecked() && !chkH7b4.isChecked()) {
+            } else if (chkH7b1.isShown() && !chkH7b1.isChecked() && !chkH7b2.isChecked() && !chkH7b3.isChecked() && !chkH7b4.isChecked()) {
                 Connection.MessageBox(HDDS.this, "Select anyone options from checklist");
                 chkH7b1.requestFocus();
                 return;
@@ -578,7 +578,13 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (বিগত 7 দিনে এই খাবার সমূহ খাওয়া হয়েছিল).");
                 rdoH7c1.requestFocus();
                 return;
+            } else if (rdoH7a1.isChecked() & rdoH7c2.isChecked()) {
+                Connection.MessageBox(HDDS.this, "২৪ ঘন্টায় খাওয়া হয়েছে ! বিগত 7 দিনে এই খাবার সমূহ খাওয়া হয়েছিল কিনা ? উত্তর না হবেনা ! ");
+                rdoH7c1.requestFocus();
+                return;
             }
+
+
 
             String SQL = "";
             RadioButton rb;

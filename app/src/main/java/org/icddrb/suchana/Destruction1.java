@@ -7,16 +7,19 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -220,11 +223,34 @@ public class Destruction1 extends Activity {
     EditText txtH14a4x3;
     String StartTime;
     Bundle IDbundle;
+    Button buttonAssetType01;
+    Button buttonAssetType02;
+    Button buttonAssetType03;
+    Button buttonAssetType04;
+    Button buttonAssetType05;
+    Button buttonAssetType06;
+    Button buttonAssetType07;
+    Button buttonAssetType08;
+    Button buttonAssetType09;
+    Button buttonAssetType10;
+    Button buttonAssetType11;
+    Button buttonAssetType12;
+    Button buttonAssetType13;
+    Button buttonAssetType14;
+    Button buttonAssetType15;
+    Button buttonAssetType16;
+    Button buttonAssetType17;
+    Button buttonAssetType18;
+    Button buttonAssetType19;
+    Button buttonAssetType20;
+    Button cmdSave;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
+    private boolean allItemsCompleted = false;
+    private View pressedButton;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -285,6 +311,213 @@ public class Destruction1 extends Activity {
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             seclb14a1 = (LinearLayout) findViewById(R.id.seclb14a1);
+
+
+            buttonAssetType01 = (Button) findViewById(R.id.buttonAssetType01);
+            buttonAssetType02 = (Button) findViewById(R.id.buttonAssetType02);
+            buttonAssetType03 = (Button) findViewById(R.id.buttonAssetType03);
+            buttonAssetType04 = (Button) findViewById(R.id.buttonAssetType04);
+            buttonAssetType05 = (Button) findViewById(R.id.buttonAssetType05);
+            buttonAssetType06 = (Button) findViewById(R.id.buttonAssetType06);
+            buttonAssetType07 = (Button) findViewById(R.id.buttonAssetType07);
+            buttonAssetType08 = (Button) findViewById(R.id.buttonAssetType08);
+            buttonAssetType09 = (Button) findViewById(R.id.buttonAssetType09);
+            buttonAssetType10 = (Button) findViewById(R.id.buttonAssetType10);
+            buttonAssetType11 = (Button) findViewById(R.id.buttonAssetType11);
+            buttonAssetType12 = (Button) findViewById(R.id.buttonAssetType12);
+            buttonAssetType13 = (Button) findViewById(R.id.buttonAssetType13);
+            buttonAssetType14 = (Button) findViewById(R.id.buttonAssetType14);
+            buttonAssetType15 = (Button) findViewById(R.id.buttonAssetType15);
+            buttonAssetType16 = (Button) findViewById(R.id.buttonAssetType16);
+            buttonAssetType17 = (Button) findViewById(R.id.buttonAssetType17);
+            buttonAssetType18 = (Button) findViewById(R.id.buttonAssetType18);
+            buttonAssetType19 = (Button) findViewById(R.id.buttonAssetType19);
+            buttonAssetType20 = (Button) findViewById(R.id.buttonAssetType20);
+            buttonColor();
+
+            buttonAssetType01.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+
+
+                }
+            });
+            buttonAssetType02.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType03.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType04.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType05.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType06.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType07.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType08.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType09.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType12.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType13.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType14.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType15.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType16.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType17.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType18.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType19.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+            buttonAssetType20.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    buttonColor();
+                    (v).setBackgroundColor(Color.CYAN);
+                    ;
+                    spnH14a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                }
+            });
+
             secH14a = (LinearLayout) findViewById(R.id.secH14a);
             lineH14a = (View) findViewById(R.id.lineH14a);
 
@@ -314,11 +547,43 @@ public class Destruction1 extends Activity {
             listH14a.add("20-অন্যান্য (নির্দিষ্ট করুন) ");
             ArrayAdapter<String> adptrH14a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH14a);
             spnH14a.setAdapter(adptrH14a);
+            spnH14a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnH14a.getSelectedItem().toString().length() == 0) return;
+
+                    String spnData = Connection.SelectedSpinnerValue(spnH14a.getSelectedItem().toString(), "-");
+                    DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+
+                    if (spnData.equals("20")) {
+                        secH14ax.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH14ax.setText("");
+                        secH14ax.setVisibility(View.GONE);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+
+            spnH14a.setClickable(false);
+            spnH14a.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        // Toast.makeText(SpinnerActivity.this, "Catch it!", Toast.LENGTH_SHORT).show();
+                    }
+                    return true;
+                }
+            });
 
             secH14ax = (LinearLayout) findViewById(R.id.secH14ax);
             lineH14ax = (View) findViewById(R.id.lineH14ax);
             VlblH14ax = (TextView) findViewById(R.id.VlblH14ax);
             txtH14ax = (EditText) findViewById(R.id.txtH14ax);
+            secH14ax.setVisibility(View.GONE);
             secH14a1 = (LinearLayout) findViewById(R.id.secH14a1);
             lineH14a1 = (View) findViewById(R.id.lineH14a1);
             VlblH14a1 = (TextView) findViewById(R.id.VlblH14a1);
@@ -329,13 +594,15 @@ public class Destruction1 extends Activity {
             rdogrpH14a1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH14a1 = new String[]{"1", " 0"};
+                    String[] d_rdogrpH14a1 = new String[]{"1", "0"};
                     for (int i = 0; i < rdogrpH14a1.getChildCount(); i++) {
                         rb = (RadioButton) rdogrpH14a1.getChildAt(i);
                         if (rb.isChecked()) rbData = d_rdogrpH14a1[i];
                     }
+
 
                     if (rbData.equalsIgnoreCase("0")) {
                         secH14a2.setVisibility(View.GONE);
@@ -443,6 +710,11 @@ public class Destruction1 extends Activity {
                         secH14a4x2.setVisibility(View.GONE);
                         lineH14a4x2.setVisibility(View.GONE);
                         txtH14a4x2.setText("");
+                        secH14a4x3.setVisibility(View.GONE);
+                        lineH14a4x3.setVisibility(View.GONE);
+                        txtH14a4x3.setText("");
+                        seclbH14a3.setVisibility(View.GONE);
+                        seclbH14a4.setVisibility(View.GONE);
                     } else {
                         secH14a2.setVisibility(View.VISIBLE);
                         lineH14a2.setVisibility(View.VISIBLE);
@@ -473,13 +745,13 @@ public class Destruction1 extends Activity {
                         secH14a3m.setVisibility(View.VISIBLE);
                         lineH14a3m.setVisibility(View.VISIBLE);
                         secH14a3x.setVisibility(View.VISIBLE);
-                        lineH14a3x.setVisibility(View.VISIBLE);
+                        lineH14a3x.setVisibility(View.VISIBLE);/*
                         secH14a3x1.setVisibility(View.VISIBLE);
                         lineH14a3x1.setVisibility(View.VISIBLE);
                         secH14a3x2.setVisibility(View.VISIBLE);
                         lineH14a3x2.setVisibility(View.VISIBLE);
                         secH14a3x3.setVisibility(View.VISIBLE);
-                        lineH14a3x3.setVisibility(View.VISIBLE);
+                        lineH14a3x3.setVisibility(View.VISIBLE);*/
                         secH14a4a.setVisibility(View.VISIBLE);
                         lineH14a4a.setVisibility(View.VISIBLE);
                         secH14a4b.setVisibility(View.VISIBLE);
@@ -509,11 +781,16 @@ public class Destruction1 extends Activity {
                         secH14a14n.setVisibility(View.VISIBLE);
                         lineH14a14n.setVisibility(View.VISIBLE);
                         secH14a4x.setVisibility(View.VISIBLE);
-                        lineH14a4x.setVisibility(View.VISIBLE);
+                        lineH14a4x.setVisibility(View.VISIBLE);/*
                         secH14a4x1.setVisibility(View.VISIBLE);
                         lineH14a4x1.setVisibility(View.VISIBLE);
                         secH14a4x2.setVisibility(View.VISIBLE);
                         lineH14a4x2.setVisibility(View.VISIBLE);
+                        secH14a4x3.setVisibility(View.VISIBLE);
+                        lineH14a4x3.setVisibility(View.VISIBLE);*/
+
+                        seclbH14a3.setVisibility(View.VISIBLE);
+                        seclbH14a4.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -582,6 +859,32 @@ public class Destruction1 extends Activity {
             lineH14a3x = (View) findViewById(R.id.lineH14a3x);
             VlblH14a3x = (TextView) findViewById(R.id.VlblH14a3x);
             chkH14a3x = (CheckBox) findViewById(R.id.chkH14a3x);
+            chkH14a3x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        secH14a3x1.setVisibility(View.VISIBLE);
+                        secH14a3x2.setVisibility(View.VISIBLE);
+                        secH14a3x3.setVisibility(View.VISIBLE);
+
+                        lineH14a3x1.setVisibility(View.VISIBLE);
+                        lineH14a3x2.setVisibility(View.VISIBLE);
+                        lineH14a3x3.setVisibility(View.VISIBLE);
+
+                    } else {
+                        txtH14a3x1.setText("");
+                        txtH14a3x2.setText("");
+                        txtH14a3x3.setText("");
+                        secH14a3x1.setVisibility(View.GONE);
+                        secH14a3x2.setVisibility(View.GONE);
+                        secH14a3x3.setVisibility(View.GONE);
+                        lineH14a3x1.setVisibility(View.GONE);
+                        lineH14a3x2.setVisibility(View.GONE);
+                        lineH14a3x3.setVisibility(View.GONE);
+
+                    }
+                }
+            });
             secH14a3x1 = (LinearLayout) findViewById(R.id.secH14a3x1);
             lineH14a3x1 = (View) findViewById(R.id.lineH14a3x1);
             VlblH14a3x1 = (TextView) findViewById(R.id.VlblH14a3x1);
@@ -655,6 +958,30 @@ public class Destruction1 extends Activity {
             lineH14a4x = (View) findViewById(R.id.lineH14a4x);
             VlblH14a4x = (TextView) findViewById(R.id.VlblH14a4x);
             chkH14a4x = (CheckBox) findViewById(R.id.chkH14a4x);
+            chkH14a4x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        secH14a4x1.setVisibility(View.VISIBLE);
+                        secH14a4x2.setVisibility(View.VISIBLE);
+                        secH14a4x3.setVisibility(View.VISIBLE);
+                        lineH14a4x1.setVisibility(View.VISIBLE);
+                        lineH14a4x2.setVisibility(View.VISIBLE);
+                        lineH14a4x3.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH14a4x1.setText("");
+                        txtH14a4x2.setText("");
+                        txtH14a4x3.setText("");
+                        secH14a4x1.setVisibility(View.GONE);
+                        secH14a4x2.setVisibility(View.GONE);
+                        secH14a4x3.setVisibility(View.GONE);
+                        lineH14a4x1.setVisibility(View.GONE);
+                        lineH14a4x2.setVisibility(View.GONE);
+                        lineH14a4x3.setVisibility(View.GONE);
+
+                    }
+                }
+            });
             secH14a4x1 = (LinearLayout) findViewById(R.id.secH14a4x1);
             lineH14a4x1 = (View) findViewById(R.id.lineH14a4x1);
             VlblH14a4x1 = (TextView) findViewById(R.id.VlblH14a4x1);
@@ -668,8 +995,21 @@ public class Destruction1 extends Activity {
             VlblH14a4x3 = (TextView) findViewById(R.id.VlblH14a4x3);
             txtH14a4x3 = (EditText) findViewById(R.id.txtH14a4x3);
 
+            secH14a3x1.setVisibility(View.GONE);
+            secH14a3x2.setVisibility(View.GONE);
+            secH14a3x3.setVisibility(View.GONE);
+            lineH14a3x1.setVisibility(View.GONE);
+            lineH14a3x2.setVisibility(View.GONE);
+            lineH14a3x3.setVisibility(View.GONE);
 
-            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            secH14a4x1.setVisibility(View.GONE);
+            secH14a4x2.setVisibility(View.GONE);
+            secH14a4x3.setVisibility(View.GONE);
+            lineH14a4x1.setVisibility(View.GONE);
+            lineH14a4x2.setVisibility(View.GONE);
+            lineH14a4x3.setVisibility(View.GONE);
+
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
@@ -681,6 +1021,111 @@ public class Destruction1 extends Activity {
         }
     }
 
+    private void buttonColor() {
+        buttonAssetType01.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType02.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType03.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType04.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType05.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType06.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType07.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType08.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType09.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType10.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType11.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType12.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType13.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType14.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType15.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType16.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType17.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType18.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType19.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType20.setBackgroundColor(Color.LTGRAY);
+
+        Destruction1_DataModel d = new Destruction1_DataModel();
+        String SQL = "Select H14a from " + TableName + "  Where Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+        List<Destruction1_DataModel> data = d.SelectH14a(this, SQL);
+        if (data.size() == 0) {
+            return;
+        }
+        if (data.size() == 20) {
+            allItemsCompleted = true;
+        } else if (data.size() == 19) {
+            cmdSave.setText("Save -> Continue");
+        } else {
+            cmdSave.setText("SAVE");
+        }
+
+        for (Destruction1_DataModel item : data) {
+
+            int code = Integer.valueOf(item.getH14a());
+            int color = Color.GREEN;
+
+            if (code == 1) {
+                buttonAssetType01.setBackgroundColor(color);
+            }
+
+            if (code == 2) {
+                buttonAssetType02.setBackgroundColor(color);
+            }
+            if (code == 3) {
+                buttonAssetType03.setBackgroundColor(color);
+            }
+            if (code == 4) {
+                buttonAssetType04.setBackgroundColor(color);
+            }
+            if (code == 5) {
+                buttonAssetType05.setBackgroundColor(color);
+            }
+            if (code == 6) {
+                buttonAssetType06.setBackgroundColor(color);
+            }
+            if (code == 7) {
+                buttonAssetType07.setBackgroundColor(color);
+            }
+            if (code == 8) {
+                buttonAssetType08.setBackgroundColor(color);
+            }
+            if (code == 9) {
+                buttonAssetType09.setBackgroundColor(color);
+            }
+            if (code == 10) {
+                buttonAssetType10.setBackgroundColor(color);
+            }
+            if (code == 11) {
+                buttonAssetType11.setBackgroundColor(color);
+            }
+            if (code == 12) {
+                buttonAssetType12.setBackgroundColor(color);
+            }
+            if (code == 13) {
+                buttonAssetType13.setBackgroundColor(color);
+            }
+            if (code == 14) {
+                buttonAssetType14.setBackgroundColor(color);
+            }
+            if (code == 15) {
+                buttonAssetType15.setBackgroundColor(color);
+            }
+            if (code == 16) {
+                buttonAssetType16.setBackgroundColor(color);
+            }
+            if (code == 17) {
+                buttonAssetType17.setBackgroundColor(color);
+            }
+            if (code == 18) {
+                buttonAssetType18.setBackgroundColor(color);
+            }
+            if (code == 19) {
+                buttonAssetType19.setBackgroundColor(color);
+            }
+            if (code == 20) {
+                buttonAssetType20.setBackgroundColor(color);
+            }
+
+        }
+    }
     private void DataSave() {
         try {
 
@@ -804,7 +1249,15 @@ public class Destruction1 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Destruction1.this, "Saved Successfully");
+                buttonColor();
+                if (allItemsCompleted) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    // IDBundle.putString("H41a", "");
+                    startActivity(new Intent(Destruction1.this, Destruction2.class).putExtras(IDBundle));
+                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                }
             } else {
                 Connection.MessageBox(Destruction1.this, status);
                 return;
@@ -993,7 +1446,236 @@ public class Destruction1 extends Activity {
         }
     }
 
+    private void DataSearchPartial(String Rnd, String SuchanaID, String H14a) {
+        try {
 
+            RadioButton rb;
+            Destruction1_DataModel d = new Destruction1_DataModel();
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H14a='" + H14a + "'";
+            List<Destruction1_DataModel> data = d.SelectAll(this, SQL);
+            for (Destruction1_DataModel item : data) {
+                //txtRnd.setText(item.getRnd());
+                // txtSuchanaID.setText(item.getSuchanaID());
+                // spnH14a.setSelection(Global.SpinnerItemPositionAnyLength(spnH14a, item.getH14a()));
+                txtH14ax.setText(item.getH14ax());
+                String[] d_rdogrpH14a1 = new String[]{"1", " 0"};
+                for (int i = 0; i < d_rdogrpH14a1.length; i++) {
+                    if (item.getH14a1().equals(String.valueOf(d_rdogrpH14a1[i]))) {
+                        rb = (RadioButton) rdogrpH14a1.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH14a2.setText(item.getH14a2());
+                if (item.getH14a3a().equals("1")) {
+                    chkH14a3a.setChecked(true);
+                } else if (item.getH14a3a().equals("2")) {
+                    chkH14a3a.setChecked(false);
+                }
+                if (item.getH14a3b().equals("1")) {
+                    chkH14a3b.setChecked(true);
+                } else if (item.getH14a3b().equals("2")) {
+                    chkH14a3b.setChecked(false);
+                }
+                if (item.getH14a3c().equals("1")) {
+                    chkH14a3c.setChecked(true);
+                } else if (item.getH14a3c().equals("2")) {
+                    chkH14a3c.setChecked(false);
+                }
+                if (item.getH14a3d().equals("1")) {
+                    chkH14a3d.setChecked(true);
+                } else if (item.getH14a3d().equals("2")) {
+                    chkH14a3d.setChecked(false);
+                }
+                if (item.getH14a3e().equals("1")) {
+                    chkH14a3e.setChecked(true);
+                } else if (item.getH14a3e().equals("2")) {
+                    chkH14a3e.setChecked(false);
+                }
+                if (item.getH14a3f().equals("1")) {
+                    chkH14a3f.setChecked(true);
+                } else if (item.getH14a3f().equals("2")) {
+                    chkH14a3f.setChecked(false);
+                }
+                if (item.getH14a3g().equals("1")) {
+                    chkH14a3g.setChecked(true);
+                } else if (item.getH14a3g().equals("2")) {
+                    chkH14a3g.setChecked(false);
+                }
+                if (item.getH14a3h().equals("1")) {
+                    chkH14a3h.setChecked(true);
+                } else if (item.getH14a3h().equals("2")) {
+                    chkH14a3h.setChecked(false);
+                }
+                if (item.getH14a3i().equals("1")) {
+                    chkH14a3i.setChecked(true);
+                } else if (item.getH14a3i().equals("2")) {
+                    chkH14a3i.setChecked(false);
+                }
+                if (item.getH14a3j().equals("1")) {
+                    chkH14a3j.setChecked(true);
+                } else if (item.getH14a3j().equals("2")) {
+                    chkH14a3j.setChecked(false);
+                }
+                if (item.getH14a3k().equals("1")) {
+                    chkH14a3k.setChecked(true);
+                } else if (item.getH14a3k().equals("2")) {
+                    chkH14a3k.setChecked(false);
+                }
+                if (item.getH14a3l().equals("1")) {
+                    chkH14a3l.setChecked(true);
+                } else if (item.getH14a3l().equals("2")) {
+                    chkH14a3l.setChecked(false);
+                }
+                if (item.getH14a3m().equals("1")) {
+                    chkH14a3m.setChecked(true);
+                } else if (item.getH14a3m().equals("2")) {
+                    chkH14a3m.setChecked(false);
+                }
+                if (item.getH14a3x().equals("1")) {
+                    chkH14a3x.setChecked(true);
+                } else if (item.getH14a3x().equals("2")) {
+                    chkH14a3x.setChecked(true);
+                    chkH14a3x.setChecked(false);
+                }
+                txtH14a3x1.setText(item.getH14a3x1());
+                txtH14a3x2.setText(item.getH14a3x2());
+                txtH14a3x3.setText(item.getH14a3x3());
+                if (item.getH14a4a().equals("1")) {
+                    chkH14a4a.setChecked(true);
+                } else if (item.getH14a4a().equals("2")) {
+                    chkH14a4a.setChecked(false);
+                }
+                if (item.getH14a4b().equals("1")) {
+                    chkH14a4b.setChecked(true);
+                } else if (item.getH14a4b().equals("2")) {
+                    chkH14a4b.setChecked(false);
+                }
+                if (item.getH14a4c().equals("1")) {
+                    chkH14a4c.setChecked(true);
+                } else if (item.getH14a4c().equals("2")) {
+                    chkH14a4c.setChecked(false);
+                }
+                if (item.getH14a4d().equals("1")) {
+                    chkH14a4d.setChecked(true);
+                } else if (item.getH14a4d().equals("2")) {
+                    chkH14a4d.setChecked(false);
+                }
+                if (item.getH14a4e().equals("1")) {
+                    chkH14a4e.setChecked(true);
+                } else if (item.getH14a4e().equals("2")) {
+                    chkH14a4e.setChecked(false);
+                }
+                if (item.getH14a4f().equals("1")) {
+                    chkH14a4f.setChecked(true);
+                } else if (item.getH14a4f().equals("2")) {
+                    chkH14a4f.setChecked(false);
+                }
+                if (item.getH14a4g().equals("1")) {
+                    chkH14a4g.setChecked(true);
+                } else if (item.getH14a4g().equals("2")) {
+                    chkH14a4g.setChecked(false);
+                }
+                if (item.getH14a4h().equals("1")) {
+                    chkH14a4h.setChecked(true);
+                } else if (item.getH14a4h().equals("2")) {
+                    chkH14a4h.setChecked(false);
+                }
+                if (item.getH14a4i().equals("1")) {
+                    chkH14a4i.setChecked(true);
+                } else if (item.getH14a4i().equals("2")) {
+                    chkH14a4i.setChecked(false);
+                }
+                if (item.getH14a4j().equals("1")) {
+                    chkH14a4j.setChecked(true);
+                } else if (item.getH14a4j().equals("2")) {
+                    chkH14a4j.setChecked(false);
+                }
+                if (item.getH14a4k().equals("1")) {
+                    chkH14a4k.setChecked(true);
+                } else if (item.getH14a4k().equals("2")) {
+                    chkH14a4k.setChecked(false);
+                }
+                if (item.getH14a4l().equals("1")) {
+                    chkH14a4l.setChecked(true);
+                } else if (item.getH14a4l().equals("2")) {
+                    chkH14a4l.setChecked(false);
+                }
+                if (item.getH14a4m().equals("1")) {
+                    chkH14a4m.setChecked(true);
+                } else if (item.getH14a4m().equals("2")) {
+                    chkH14a4m.setChecked(false);
+                }
+                if (item.getH14a14n().equals("1")) {
+                    chkH14a14n.setChecked(true);
+                } else if (item.getH14a14n().equals("2")) {
+                    chkH14a14n.setChecked(false);
+                }
+                if (item.getH14a4x().equals("1")) {
+                    chkH14a4x.setChecked(true);
+                } else if (item.getH14a4x().equals("2")) {
+                    chkH14a4x.setChecked(true);
+                    chkH14a4x.setChecked(false);
+                }
+                txtH14a4x1.setText(item.getH14a4x1());
+                txtH14a4x2.setText(item.getH14a4x2());
+                txtH14a4x3.setText(item.getH14a4x3());
+
+            }
+
+
+            if (data.size() == 0) {
+                txtH14ax.setText("");
+                rdogrpH14a1.clearCheck();
+
+                txtH14a2.setText("");
+                chkH14a3a.setChecked(false);
+                chkH14a3b.setChecked(false);
+                chkH14a3c.setChecked(false);
+                chkH14a3d.setChecked(false);
+                chkH14a3e.setChecked(false);
+                chkH14a3f.setChecked(false);
+                chkH14a3g.setChecked(false);
+                chkH14a3h.setChecked(false);
+
+                chkH14a3i.setChecked(false);
+                chkH14a3j.setChecked(false);
+                chkH14a3k.setChecked(false);
+                chkH14a3l.setChecked(false);
+                chkH14a3m.setChecked(false);
+                chkH14a3x.setChecked(true);
+                chkH14a3x.setChecked(false);
+
+                txtH14a3x1.setText("");
+                txtH14a3x2.setText("");
+                txtH14a3x3.setText("");
+                chkH14a4a.setChecked(false);
+                chkH14a4b.setChecked(false);
+
+                chkH14a4c.setChecked(false);
+                chkH14a4d.setChecked(false);
+                chkH14a4e.setChecked(false);
+                chkH14a4f.setChecked(false);
+                chkH14a4g.setChecked(false);
+                chkH14a4h.setChecked(false);
+                chkH14a4i.setChecked(false);
+                chkH14a4j.setChecked(false);
+                chkH14a4k.setChecked(false);
+                chkH14a4l.setChecked(false);
+                chkH14a4m.setChecked(false);
+                chkH14a14n.setChecked(false);
+                chkH14a4x.setChecked(true);
+                chkH14a4x.setChecked(false);
+
+                txtH14a4x1.setText("");
+                txtH14a4x2.setText("");
+                txtH14a4x3.setText("");
+            }
+
+        } catch (Exception e) {
+            Connection.MessageBox(Destruction1.this, e.getMessage());
+            return;
+        }
+    }
     void updateLocation(Location location) {
         currentLocation = location;
         currentLatitude = currentLocation.getLatitude();
