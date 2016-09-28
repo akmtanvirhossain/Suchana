@@ -55,7 +55,6 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:visibility="gone" />
-
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
