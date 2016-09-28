@@ -2188,7 +2188,15 @@ public class Cost1 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if(status.length()==0) {
+
                 Connection.MessageBox(Cost1.this, "Saved Successfully");
+                finish();
+                Bundle IDbundle1 = new Bundle();
+                IDbundle1.putString("Rnd", RND);
+                IDbundle1.putString("SuchanaID", SUCHANAID);
+                Intent f1 = new Intent(getApplicationContext(), Cost2.class);
+                f1.putExtras(IDbundle1);
+                startActivity(f1);
             }
             else{
                 Connection.MessageBox(Cost1.this, status);
