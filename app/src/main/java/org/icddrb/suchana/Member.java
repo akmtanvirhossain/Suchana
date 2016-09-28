@@ -267,7 +267,7 @@ public class Member extends Activity {
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            /*ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
@@ -285,7 +285,7 @@ public class Member extends Activity {
                     adb.show();
                 }
             });
-
+*/
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
