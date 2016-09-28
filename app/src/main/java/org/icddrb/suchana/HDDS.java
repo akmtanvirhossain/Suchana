@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -443,6 +444,17 @@ public class HDDS extends Activity {
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
+
+            spnH7.setClickable(false);
+            spnH7.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        // Toast.makeText(SpinnerActivity.this, "Catch it!", Toast.LENGTH_SHORT).show();
+                    }
+                    return true;
+                }
+            });
             secH7a = (LinearLayout) findViewById(R.id.secH7a);
             lineH7a = (View) findViewById(R.id.lineH7a);
             VlblH7a = (TextView) findViewById(R.id.VlblH7a);
@@ -545,7 +557,7 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
                 txtRnd.requestFocus();
                 return;
-            } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
+            } else if (txtSuchanaID.getText().toString().length() != 12 & secSuchanaID.isShown()) {
                 Connection.MessageBox(HDDS.this, "Required field: উপকারভোগী/সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
@@ -557,6 +569,11 @@ public class HDDS extends Activity {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (গত ২৪ ঘন্টায় খেয়েছেন).");
                 rdoH7a1.requestFocus();
                 return;
+            } else if (!chkH7b1.isChecked() && !chkH7b2.isChecked() && !chkH7b3.isChecked() && !chkH7b4.isChecked()) {
+                Connection.MessageBox(HDDS.this, "Select anyone options from checklist");
+                chkH7b1.requestFocus();
+                return;
+
             } else if (!rdoH7c1.isChecked() & !rdoH7c2.isChecked() & secH7c.isShown()) {
                 Connection.MessageBox(HDDS.this, "Select anyone options from (বিগত 7 দিনে এই খাবার সমূহ খাওয়া হয়েছিল).");
                 rdoH7c1.requestFocus();
@@ -783,7 +800,7 @@ public class HDDS extends Activity {
             List<HDDS_DataModel> data = d.SelectAll(this, SQL);
             for (HDDS_DataModel item : data) {
                 // txtRnd.setText(item.getRnd());
-                //   txtSuchanaID.setText(item.getSuchanaID());
+                //   txtSuchanaID.setText(item.getSuchanaID());+
                 //   spnH7.setSelection(Global.SpinnerItemPositionAnyLength(spnH7, item.getH7()));
                 String[] d_rdogrpH7a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH7a.length; i++) {
@@ -819,7 +836,7 @@ public class HDDS extends Activity {
                         rb.setChecked(true);
                     }
                 }
-
+            }
                 if (data.size() == 0) {
                     rdogrpH7a.clearCheck();
                     chkH7b1.setChecked(false);
@@ -828,7 +845,7 @@ public class HDDS extends Activity {
                     chkH7b4.setChecked(false);
                     rdogrpH7c.clearCheck();
                 }
-            }
+
         } catch (Exception e) {
             throw e;
 //            Connection.MessageBox(HDDS.this, e.getMessage());
