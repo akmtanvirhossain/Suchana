@@ -137,8 +137,7 @@ public class HHIdentity_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                            startActivity(new Intent(HHIdentity_list.this, MainMenu.class));
+                            startActivity(new Intent(HHIdentity_list.this, MainMenu1.class));
                         }});
                     adb.show();
                 }});

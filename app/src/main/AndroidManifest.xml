@@ -41,7 +41,7 @@
         <activity
             android:name="org.icddrb.suchana.MainMenu"
             android:label="Main Menu" />
-        <activity android:name=".MainMenu1" />
+        <activity android:name=".UpdateMenu" />
         <activity android:name=".HHIdentity" />
         <activity android:name=".HHIdentity_list" />
         <activity android:name=".Member" />
@@ -77,6 +77,9 @@
         <activity android:name=".Loan" />
         <activity android:name=".Loan_list" />
         <activity android:name=".HFIAS" />
+        <activity android:name=".Cost1" />
+        <activity android:name=".Cost2" />
+        <activity android:name=".Cost3" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 
