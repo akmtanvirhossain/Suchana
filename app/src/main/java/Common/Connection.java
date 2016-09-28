@@ -81,7 +81,7 @@ public class Connection extends SQLiteOpenHelper {
         builder.setMessage(Msg)
                 .setTitle("Message")
                 .setCancelable(true)
-                //.setIcon(R.drawable.logo)
+                        //.setIcon(R.drawable.logo)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -968,9 +968,7 @@ public class Connection extends SQLiteOpenHelper {
 
             //Project Specific Database Sync
             //--------------------------------------------------------------------------------------
-            //Sync_Download_Rebuild("Country", "");
-            //Sync_Download_Rebuild("Sites", "SiteCode='"+ Site +"'");
-
+            Sync_Download_Rebuild("VillageList", "UserId='" + UserID + "'");
 
             //Update status on server
             //--------------------------------------------------------------------------------------
@@ -1506,4 +1504,228 @@ public class Connection extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("SELECT * FROM " + TableName, null);
         return res;
     }
+
+    //TableStructureSync
+    public void TableStructureSync(String TableName) {
+        //Creating Table if not exists
+        String tableScript  = ReturnSingleValue("Select TableScript from DatabaseTab where TableName='"+ TableName +"'");
+        CreateTable(TableName, tableScript);
+
+        //Local database
+        String[] local = GetColumnListArray(TableName);
+
+        //Server database
+        String[] Server = ReturnSingleValue("select ColumnList from DatabaseTab where TableName='"+ TableName +"'").toString().split(",");
+
+        String[] C;
+        Boolean matched = false;
+        String newVariable = "";
+
+        //matched database columns(local and server)
+        for (int i = 0; i < Server.length; i++) {
+            matched = false;
+            for (int j = 0; j < local.length; j++) {
+                newVariable = Server[i].toString();
+                if (Server[i].toString().toLowerCase().equals(local[j].toString().toLowerCase())) {
+                    matched = true;
+                    j = local.length;
+                }
+            }
+            if (matched == false) {
+                Save("Alter table " + TableName + " add column " + newVariable + " varchar(50) default ''");
+            }
+        }
+    }
+
+    //TableStructureSync
+    public void Sync_DatabaseStructure(String UserId)
+    {
+        //Retrieve sync parameter
+        //------------------------------------------------------------------------------------------
+        String TableName = "DatabaseTab";
+        String[] SyncParam = Sync_Parameter(TableName);
+
+        String SQLStr       = SyncParam[0];
+        String VariableList = SyncParam[1];
+        String UniqueField  = SyncParam[2];
+        String SQL_VariableList  = SyncParam[3];
+        String Res = "";
+        String SQL = "";
+
+        //Generate Unique ID field
+        //------------------------------------------------------------------------------------------
+        String[] U = UniqueField.split(",");
+        String UID = "";
+        //String UID_Sync = "";
+        for(int i=0; i<U.length; i++){
+            if(i==0)
+                UID = "cast(t."+ U[i] +" as varchar(50))";
+            else
+                UID += "+cast(t."+ U[i] +" as varchar(50))";
+        }
+
+        SQL  = "Select "+ SQL_VariableList +" from "+ TableName +" as t";
+        SQL += " where not exists(select * from Sync_Management where";
+        SQL += " lower(TableName)  = lower('"+ TableName +"') and";
+        SQL += " UniqueID   = "+ UID +" and";
+        SQL += " convert(varchar(19),modifydate,120) = convert(varchar(19),t.modifydate,120) and";
+        SQL += " UserId   ='"+ UserId +"')";
+
+        Res = Sync_DatabaseTab_Management(SQL, TableName, VariableList, UniqueField, UserId);
+    }
+
+    //TableStructureSync
+    private String Sync_DatabaseTab_Management(String SQL, String TableName,String ColumnList, String UniqueField, String UserId)
+    {
+        String WhereClause="";
+        int varPos=0;
+
+        String response = "";
+        String resp = "";
+
+        try{
+
+            DownloadDataJSON dload = new DownloadDataJSON();
+            response=dload.execute(SQL).get();
+
+            //Process Response
+            downloadClass d = new downloadClass();
+            Gson gson = new Gson();
+            Type collType = new TypeToken<downloadClass>(){}.getType();
+            downloadClass responseData = (downloadClass) gson.fromJson(response,collType);
+
+            String UField[]  = UniqueField.split(",");
+            String VarList[] = ColumnList.split(",");
+
+            List<String> dataStatus = new ArrayList<>();
+            String modifyDate = "";
+            String UID        = "";
+            String USID       = "";
+            String DataList = "";
+            DataClassProperty dd;
+            List<DataClassProperty> data = new ArrayList<DataClassProperty>();
+            String rowTableName = "";
+            for(int i=0; i<responseData.getdata().size(); i++)
+            {
+                String VarData[] = split(responseData.getdata().get(i).toString(),'^');
+
+                //Generate where clause
+                SQL="";
+                WhereClause="";
+                varPos=0;
+                for(int j=0; j< UField.length; j++)
+                {
+                    varPos = VarPosition(UField[j].toString(),VarList);
+                    if(j==0)
+                    {
+                        WhereClause = UField[j].toString()+"="+ "'"+ VarData[varPos].toString().replace("'","") +"'";
+                        UID = VarData[varPos].toString();
+                    }
+                    else
+                    {
+                        WhereClause += " and "+ UField[j].toString()+"="+ "'"+ VarData[varPos].toString().replace("'","") +"'";
+                        UID += VarData[varPos].toString();
+                    }
+                }
+
+                //Update command
+                if(Existence("Select "+ VarList[0] +" from "+ TableName +" Where "+ WhereClause))
+                {
+                    for(int r=0;r<VarList.length;r++)
+                    {
+                        if(r==0)
+                        {
+                            SQL = "Update "+ TableName +" Set ";
+                            SQL+= VarList[r] + " = '"+ VarData[r].toString().replace("'","") +"'";
+                        }
+                        else
+                        {
+                            if(r == VarData.length-1)
+                            {
+                                SQL+= ","+ VarList[r] + " = '"+ VarData[r].toString().replace("'","") +"'";
+                                SQL += " Where "+ WhereClause;
+                            }
+                            else
+                            {
+                                SQL+= ","+ VarList[r] + " = '"+ VarData[r].toString().replace("'","") +"'";
+                            }
+                        }
+
+                        if(VarList[r].toString().toLowerCase().equals("modifydate"))
+                            modifyDate = VarData[r].toString();
+
+                        if(VarList[r].toString().toLowerCase().equals("tablename"))
+                            rowTableName = VarData[r].toString();
+
+                    }
+
+                    Save(SQL);
+
+                    TableStructureSync(rowTableName);
+                }
+                //Insert command
+                else
+                {
+                    for(int r=0;r<VarList.length;r++)
+                    {
+                        if(r==0)
+                        {
+                            SQL = "Insert into "+ TableName +"("+ ColumnList +")Values(";
+                            SQL+= "'"+ VarData[r].toString().replace("'","") +"'";
+                        }
+                        else
+                        {
+                            SQL+= ",'"+ VarData[r].toString().replace("'","") +"'";
+                        }
+
+                        if(VarList[r].toString().toLowerCase().equals("modifydate"))
+                            modifyDate = VarData[r].toString();
+
+                        if(VarList[r].toString().toLowerCase().equals("tablename"))
+                            rowTableName = VarData[r].toString();
+                    }
+                    SQL += ")";
+
+                    Save(SQL);
+                    TableStructureSync(rowTableName);
+                }
+
+                DataList = TableName + "^" + UID + "^"+ UserId + "^" + modifyDate;
+                dd = new DataClassProperty();
+                dd.setdatalist(DataList);
+                dd.setuniquefieldwithdata("" +
+                        "TableName='"+ TableName +"' and " +
+                        "UniqueID='"+ UID +"' and " +
+                        "UserId='"+ UserId +"' and " +
+                        "modifyDate='"+ modifyDate +"'");
+                data.add(dd);
+            }
+
+            DataClass dt = new DataClass();
+            dt.settablename("Sync_Management");
+            dt.setcolumnlist("TableName, UniqueID, UserId, modifyDate");
+            dt.setdata(data);
+
+            Gson gson1   = new Gson();
+            String json1 = gson1.toJson(dt);
+            String resp1 = "";
+
+            UploadDataJSON u = new UploadDataJSON();
+
+            try{
+                resp1=u.execute(json1).get();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+        } catch (Exception e) {
+            resp = e.getMessage();
+            e.printStackTrace();
+        }
+
+        return resp;
+    }
+
 }
