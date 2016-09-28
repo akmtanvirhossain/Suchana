@@ -12,7 +12,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -71,7 +70,7 @@ public class Member_list extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaId");
             TableName = "Member";
-            lblHeading = (TextView) findViewById(R.id.lblHeading);
+            /*lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -93,7 +92,7 @@ public class Member_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +106,7 @@ public class Member_list extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);

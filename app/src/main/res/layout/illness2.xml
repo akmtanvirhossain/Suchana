@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Back"
+            android:text="Illness2 List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -36,7 +36,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="ILLNESS"
+            android:text="Illness 2"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -47,12 +47,12 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Next"
+            android:text="HOME"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/cmdForward"
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
@@ -382,9 +382,9 @@
 
                 <TextView
                     android:id="@+id/lblH172b"
-                    android:text="B. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -458,9 +458,9 @@
 
                 <TextView
                     android:id="@+id/lblH172cY"
-                    android:text="C. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -497,9 +497,9 @@
 
                 <TextView
                     android:id="@+id/lblH172cM"
-                    android:text="C. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C. "
                     android:textSize="20sp" />
 
                 <TextView
