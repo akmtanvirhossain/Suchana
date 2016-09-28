@@ -276,6 +276,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     Intent intent = new Intent(new Intent(HHIdentity.this, Member_list.class));
                     intent.putExtras(bundle);
                     startActivity(intent);
+
                     finish();
                 }
             });
