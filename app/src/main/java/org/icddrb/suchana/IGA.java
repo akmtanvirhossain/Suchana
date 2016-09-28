@@ -2621,7 +2621,12 @@ public class IGA extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(IGA.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRND.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+
+                startActivity(new Intent(IGA.this, HHIdentity_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(IGA.this, status);
                 return;

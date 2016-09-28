@@ -13,7 +13,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -80,7 +79,7 @@ public class Illness1_list extends Activity {
             SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "Illness1";
-            lblHeading = (TextView) findViewById(R.id.lblHeading);
+           /* lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -102,7 +101,7 @@ public class Illness1_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +134,7 @@ public class Illness1_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Intent intent = new Intent(getApplicationContext(), Illness2_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();

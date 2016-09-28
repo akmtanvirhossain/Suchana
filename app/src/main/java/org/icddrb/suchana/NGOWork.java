@@ -1815,7 +1815,12 @@ public class NGOWork extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(NGOWork.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(NGOWork.this, Illness1_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(NGOWork.this, status);
                 return;

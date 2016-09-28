@@ -562,7 +562,11 @@ public class Illness2 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Illness2.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(Illness2.this, Illness2_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Illness2.this, status);
                 return;

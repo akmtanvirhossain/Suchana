@@ -671,7 +671,11 @@ public class Savings extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Savings.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(Savings.this, Loan_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Savings.this, status);
                 return;

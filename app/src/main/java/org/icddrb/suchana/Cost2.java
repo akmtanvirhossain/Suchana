@@ -441,6 +441,7 @@ public class Cost2 extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            finish();
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
@@ -448,7 +449,7 @@ public class Cost2 extends Activity {
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
-                            finish();
+
                         }
                     });
                     adb.show();
@@ -2195,7 +2196,6 @@ public class Cost2 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if(status.length()==0) {
-                Connection.MessageBox(Cost2.this, "Saved Successfully");
                 finish();
                 Bundle IDbundle1 = new Bundle();
                 IDbundle1.putString("Rnd", RND);

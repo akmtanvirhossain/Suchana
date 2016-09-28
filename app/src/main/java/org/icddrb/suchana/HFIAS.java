@@ -900,7 +900,12 @@ public class HFIAS extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(HFIAS.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(HFIAS.this, Destruction1.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(HFIAS.this, status);
                 return;

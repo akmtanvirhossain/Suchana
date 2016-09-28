@@ -3999,7 +3999,13 @@ public class Careseek extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Careseek.this, "Saved Successfully");
+                finish();
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(Careseek.this, IGA.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Careseek.this, status);
                 return;

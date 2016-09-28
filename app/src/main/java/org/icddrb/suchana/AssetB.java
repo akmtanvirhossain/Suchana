@@ -1297,6 +1297,7 @@ public class AssetB extends Activity {
             if (status.length() == 0) {
                 buttonColor();
                 if (allItemsCompleted) {
+                    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
