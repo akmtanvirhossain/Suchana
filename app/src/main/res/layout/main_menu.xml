@@ -39,7 +39,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Start Interview"
+                android:text="ইন্টার্ভিউ শুরু"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 

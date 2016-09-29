@@ -9,7 +9,8 @@
         android:layout_width="fill_parent"
         android:layout_height="45sp"
         android:background="@color/pageHeadingBack"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageButton
             android:id="@+id/cmdBack"
@@ -87,6 +88,19 @@
             android:paddingTop="0sp">
 
             <Button
+                android:id="@+id/cmdMenuInterviewList"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_blue"
+                android:gravity="center|center_vertical"
+                android:text="ইন্টার্ভিউর তালিকা"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/cmdMenuIdentity"
                 style="@style/menuButtonStyle"
                 android:layout_width="fill_parent"
@@ -95,7 +109,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="IDENTITY"
+                android:text="খানা সনাক্তকরণ"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -110,7 +124,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="MEMBER"
+                android:text="সদস্যের তালিকা"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -124,7 +138,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="SES"
+                android:text="খানার অবস্থা"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -139,7 +153,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="ASSET Business"
+                android:text="সম্পদঃ ব্যাবসায়িক"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -154,7 +168,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="ASSET Non Business"
+                android:text="সম্পদঃ অব্যাবসায়িক"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -168,7 +182,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="LAND"
+                android:text="ভূমি ও জলাশয়"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -182,7 +196,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="HDDS"
+                android:text="খাদ্য তালিকাগত বৈচিত্রের স্কোর"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -197,7 +211,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="COST"
+                android:text="খাদ্যের জন্য ব্যায়"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -211,7 +225,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="SAVINGS"
+                android:text="সঞ্চয়"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -225,7 +239,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Loan"
+                android:text="লোন/ ঋণ"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -239,7 +253,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="HFIAS"
+                android:text="খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -253,7 +267,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Destruction 1"
+                android:text="দুর্যোগঃ বিগত বছরের দুর্যোগ মোকাবেলা"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -268,7 +282,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Destruction 2"
+                android:text="দুর্যোগঃ দুর্যোগ সহনীয় প্রযুক্তির ব্যাবহার"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -283,7 +297,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Agriculture"
+                android:text="কৃষি/ মৎস খাত"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -298,7 +312,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="NGO Worker"
+                android:text="সামাজিক প্রোগ্রামে/এন,জি,ও কার্যক্রমে অংশগ্রহণ"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -313,7 +327,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Illness 1"
+                android:text="অসুস্থতাঃ ১৫ দিনের মধ্যে"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -327,7 +341,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Illness 2"
+                android:text="অসুস্থতাঃ ১ বছর বা বেশী সময় ধরে"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -342,7 +356,7 @@
                 android:layout_marginRight="20sp"
                 android:background="@drawable/button_style_gray"
                 android:gravity="center|center_vertical"
-                android:text="Careseek"
+                android:text="সেবা গ্রহন"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 

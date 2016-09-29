@@ -291,7 +291,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH24"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -1168,7 +1179,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH221"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -1206,7 +1228,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH222"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
