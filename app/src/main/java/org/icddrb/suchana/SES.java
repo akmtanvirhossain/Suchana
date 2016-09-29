@@ -653,7 +653,7 @@ public class SES extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Intent intent = new Intent(getApplicationContext(), AssetB.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -742,6 +742,7 @@ public class SES extends Activity {
                 }
             });
             secH321X = (LinearLayout) findViewById(R.id.secH321X);
+
             lineH321X = (View) findViewById(R.id.lineH321X);
             VlblH321X = (TextView) findViewById(R.id.VlblH321X);
             txtH321X = (EditText) findViewById(R.id.txtH321X);
@@ -2147,6 +2148,31 @@ public class SES extends Activity {
 
             rdoH6201 = (RadioButton) findViewById(R.id.rdoH6201);
             rdoH6202 = (RadioButton) findViewById(R.id.rdoH6202);
+
+
+            secH321X.setVisibility(View.GONE);
+            secH322X.setVisibility(View.GONE);
+            secH323X.setVisibility(View.GONE);
+            secH324X.setVisibility(View.GONE);
+            secH325X.setVisibility(View.GONE);
+            secH610RX.setVisibility(View.GONE);
+            secH610DX.setVisibility(View.GONE);
+            secH610b5X.setVisibility(View.GONE);
+            secH611RX.setVisibility(View.GONE);
+            secH611DX.setVisibility(View.GONE);
+            secH611b5X.setVisibility(View.GONE);
+            secH612RX.setVisibility(View.GONE);
+            secH612DX.setVisibility(View.GONE);
+            secH612b5X.setVisibility(View.GONE);
+            secH613RX.setVisibility(View.GONE);
+            secH613DX.setVisibility(View.GONE);
+            secH613b5X.setVisibility(View.GONE);
+            secH614RX.setVisibility(View.GONE);
+            secH614DX.setVisibility(View.GONE);
+            secH614b5X.setVisibility(View.GONE);
+
+            secH618X.setVisibility(View.GONE);
+
 
             DataSearch(RND, SUCHANAID);
 
