@@ -59,6 +59,10 @@ public class SES extends Activity {
     View lineSuchanaID;
     TextView VlblSuchanaID;
     EditText txtSuchanaID;
+    LinearLayout secMSlNo;
+    View lineMSlNo;
+    TextView VlblMSlNo;
+    EditText txtMSlNo;
     LinearLayout secH311;
     View lineH311;
     TextView VlblH311;
@@ -240,15 +244,15 @@ public class SES extends Activity {
     RadioGroup rdogrpH69;
     RadioButton rdoH691;
     RadioButton rdoH692;
-    LinearLayout seclblH610;
-    LinearLayout secH610;
-    View lineH610;
-    TextView VlblH610;
-    Spinner spnH610;
-    LinearLayout secH610X;
-    View lineH610X;
-    TextView VlblH610X;
-    EditText txtH610X;
+    LinearLayout seclblH610R;
+    LinearLayout secH610R;
+    View lineH610R;
+    TextView VlblH610R;
+    Spinner spnH610R;
+    LinearLayout secH610RX;
+    View lineH610RX;
+    TextView VlblH610RX;
+    EditText txtH610RX;
     LinearLayout secH610D;
     View lineH610D;
     TextView VlblH610D;
@@ -616,6 +620,7 @@ public class SES extends Activity {
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
+
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -648,7 +653,7 @@ public class SES extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Intent intent = new Intent(getApplicationContext(), AssetB.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -671,6 +676,11 @@ public class SES extends Activity {
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             txtSuchanaID.setText(SUCHANAID);
             txtSuchanaID.setEnabled(false);
+            secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
+            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
+            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+
             secH311 = (LinearLayout) findViewById(R.id.secH311);
             lineH311 = (View) findViewById(R.id.lineH311);
             VlblH311 = (TextView) findViewById(R.id.VlblH311);
@@ -732,6 +742,7 @@ public class SES extends Activity {
                 }
             });
             secH321X = (LinearLayout) findViewById(R.id.secH321X);
+
             lineH321X = (View) findViewById(R.id.lineH321X);
             VlblH321X = (TextView) findViewById(R.id.VlblH321X);
             txtH321X = (EditText) findViewById(R.id.txtH321X);
@@ -1328,11 +1339,11 @@ public class SES extends Activity {
 
             rdoH691 = (RadioButton) findViewById(R.id.rdoH691);
             rdoH692 = (RadioButton) findViewById(R.id.rdoH692);
-            seclblH610 = (LinearLayout) findViewById(R.id.seclblH610);
-            secH610 = (LinearLayout) findViewById(R.id.secH610);
-            lineH610 = (View) findViewById(R.id.lineH610);
-            VlblH610 = (TextView) findViewById(R.id.VlblH610);
-            spnH610 = (Spinner) findViewById(R.id.spnH610);
+            seclblH610R = (LinearLayout) findViewById(R.id.seclblH610R);
+            secH610R = (LinearLayout) findViewById(R.id.secH610R);
+            lineH610R = (View) findViewById(R.id.lineH610R);
+            VlblH610R = (TextView) findViewById(R.id.VlblH610R);
+            spnH610R = (Spinner) findViewById(R.id.spnH610R);
             List<String> listH610 = new ArrayList<String>();
 
             listH610.add("");
@@ -1342,30 +1353,30 @@ public class SES extends Activity {
             listH610.add("3-বৃষ্টির পানি");
             listH610.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH610 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH610);
-            spnH610.setAdapter(adptrH610);
+            spnH610R.setAdapter(adptrH610);
 
-            spnH610.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spnH610R.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnH610.getSelectedItem().toString().length() == 0) return;
-                    String spnData = Connection.SelectedSpinnerValue(spnH610.getSelectedItem().toString(), "-");
+                    if (spnH610R.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH610R.getSelectedItem().toString(), "-");
                     if (!spnData.equalsIgnoreCase("4")) {
-                        txtH610X.setText("");
-                        secH610X.setVisibility(View.GONE);
-                        lineH610X.setVisibility(View.GONE);
+                        txtH610RX.setText("");
+                        secH610RX.setVisibility(View.GONE);
+                        lineH610RX.setVisibility(View.GONE);
                     } else {
-                        secH610X.setVisibility(View.VISIBLE);
-                        lineH610X.setVisibility(View.VISIBLE);
+                        secH610RX.setVisibility(View.VISIBLE);
+                        lineH610RX.setVisibility(View.VISIBLE);
                     }
                 }
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
-            secH610X = (LinearLayout) findViewById(R.id.secH610X);
-            lineH610X = (View) findViewById(R.id.lineH610X);
-            VlblH610X = (TextView) findViewById(R.id.VlblH610X);
-            txtH610X = (EditText) findViewById(R.id.txtH610X);
+            secH610RX = (LinearLayout) findViewById(R.id.secH610RX);
+            lineH610RX = (View) findViewById(R.id.lineH610RX);
+            VlblH610RX = (TextView) findViewById(R.id.VlblH610RX);
+            txtH610RX = (EditText) findViewById(R.id.txtH610RX);
             secH610D = (LinearLayout) findViewById(R.id.secH610D);
             lineH610D = (View) findViewById(R.id.lineH610D);
             VlblH610D = (TextView) findViewById(R.id.VlblH610D);
@@ -1439,13 +1450,11 @@ public class SES extends Activity {
                         secH610b5X.setVisibility(View.GONE);
                         lineH610b5X.setVisibility(View.GONE);
                         txtH610b5X.setText("");
-                        secH610b6.setVisibility(View.GONE);
-                        lineH610b6.setVisibility(View.GONE);
+
                     } else {
                         secH610b5X.setVisibility(View.VISIBLE);
                         lineH610b5X.setVisibility(View.VISIBLE);
-                        secH610b6.setVisibility(View.VISIBLE);
-                        lineH610b6.setVisibility(View.VISIBLE);
+
                     }
                 }
             });
@@ -1896,7 +1905,7 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH614R.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH614R.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("4")) {
+                    if (!spnData.equalsIgnoreCase("4")) {
                         txtH614RX.setText("");
                         secH614RX.setVisibility(View.GONE);
                         lineH614RX.setVisibility(View.GONE);
@@ -2085,7 +2094,7 @@ public class SES extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH618.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH618.getSelectedItem().toString(), "-");
-                    if (!spnData.equalsIgnoreCase("7")) {
+                    if (!spnData.equalsIgnoreCase("6")) {
                         txtH618X.setText("");
                         secH618X.setVisibility(View.GONE);
                         lineH618X.setVisibility(View.GONE);
@@ -2121,7 +2130,10 @@ public class SES extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        rdogrpH620.clearCheck();
+                        secH620.setVisibility(View.GONE);
                     } else {
+                        secH620.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -2136,6 +2148,31 @@ public class SES extends Activity {
 
             rdoH6201 = (RadioButton) findViewById(R.id.rdoH6201);
             rdoH6202 = (RadioButton) findViewById(R.id.rdoH6202);
+
+
+            secH321X.setVisibility(View.GONE);
+            secH322X.setVisibility(View.GONE);
+            secH323X.setVisibility(View.GONE);
+            secH324X.setVisibility(View.GONE);
+            secH325X.setVisibility(View.GONE);
+            secH610RX.setVisibility(View.GONE);
+            secH610DX.setVisibility(View.GONE);
+            secH610b5X.setVisibility(View.GONE);
+            secH611RX.setVisibility(View.GONE);
+            secH611DX.setVisibility(View.GONE);
+            secH611b5X.setVisibility(View.GONE);
+            secH612RX.setVisibility(View.GONE);
+            secH612DX.setVisibility(View.GONE);
+            secH612b5X.setVisibility(View.GONE);
+            secH613RX.setVisibility(View.GONE);
+            secH613DX.setVisibility(View.GONE);
+            secH613b5X.setVisibility(View.GONE);
+            secH614RX.setVisibility(View.GONE);
+            secH614DX.setVisibility(View.GONE);
+            secH614b5X.setVisibility(View.GONE);
+
+            secH618X.setVisibility(View.GONE);
+
 
             DataSearch(RND, SUCHANAID);
 
@@ -2167,6 +2204,14 @@ public class SES extends Activity {
             } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
+                return;
+            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(SES.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                txtMSlNo.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
+                Connection.MessageBox(SES.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
+                txtMSlNo.requestFocus();
                 return;
             } else if (spnH311.getSelectedItemPosition() == 0 & secH311.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খানার মালিকানা.");
@@ -2340,13 +2385,13 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Select anyone options from (শিশুর হাত পরিষ্কার আছে? ).");
                 rdoH691.requestFocus();
                 return;
-            } else if (spnH610.getSelectedItemPosition() == 0 & secH610.isShown()) {
+            } else if (spnH610R.getSelectedItemPosition() == 0 & secH610R.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খাবার পানির উৎস (বর্ষার মৌসুমে).");
-                spnH610.requestFocus();
+                spnH610R.requestFocus();
                 return;
-            } else if (txtH610X.getText().toString().length() == 0 & secH610X.isShown()) {
+            } else if (txtH610RX.getText().toString().length() == 0 & secH610RX.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH610X.requestFocus();
+                txtH610RX.requestFocus();
                 return;
             } else if (spnH610D.getSelectedItemPosition() == 0 & secH610D.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খাবার পানি উৎস (শুকনো মৌসুমে ).");
@@ -2528,6 +2573,7 @@ public class SES extends Activity {
             SES_DataModel objSave = new SES_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
+            objSave.setMSlNo(txtMSlNo.getText().toString());
 
             objSave.setH311((spnH311.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH311.getSelectedItem().toString(), "-")));
             objSave.setH312(txtH312.getText().toString());
@@ -2626,8 +2672,8 @@ public class SES extends Activity {
                 if (rb.isChecked()) objSave.setH69(d_rdogrpH69[i]);
             }
 
-            objSave.setH610((spnH610.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610.getSelectedItem().toString(), "-")));
-            objSave.setH610X(txtH610X.getText().toString());
+            objSave.setH610R((spnH610R.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610R.getSelectedItem().toString(), "-")));
+            objSave.setH610RX(txtH610RX.getText().toString());
             objSave.setH610D((spnH610D.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH610D.getSelectedItem().toString(), "-")));
             objSave.setH610DX(txtH610DX.getText().toString());
             String[] d_rdogrpH610a = new String[]{"1", "2", "3"};
@@ -2818,6 +2864,7 @@ public class SES extends Activity {
             for (SES_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                txtMSlNo.setText(item.getMSlNo());
                 spnH311.setSelection(Global.SpinnerItemPositionAnyLength(spnH311, item.getH311()));
                 txtH312.setText(item.getH312());
                 txtH313.setText(item.getH313());
@@ -2915,8 +2962,8 @@ public class SES extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                spnH610.setSelection(Global.SpinnerItemPositionAnyLength(spnH610, item.getH610()));
-                txtH610X.setText(item.getH610X());
+                spnH610R.setSelection(Global.SpinnerItemPositionAnyLength(spnH610R, item.getH610R()));
+                txtH610RX.setText(item.getH610RX());
                 spnH610D.setSelection(Global.SpinnerItemPositionAnyLength(spnH610D, item.getH610D()));
                 txtH610DX.setText(item.getH610DX());
                 String[] d_rdogrpH610a = new String[]{"1", "2", "3"};

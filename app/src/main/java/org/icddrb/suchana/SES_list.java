@@ -202,8 +202,8 @@ public class SES_list extends Activity {
                 map.put("H67", item.getH67());
                 map.put("H68", item.getH68());
                 map.put("H69", item.getH69());
-                map.put("H610", item.getH610());
-                map.put("H610X", item.getH610X());
+                map.put("H610", item.getH610R());
+                map.put("H610X", item.getH610RX());
                 map.put("H610D", item.getH610D());
                 map.put("H610DX", item.getH610DX());
                 map.put("H610a", item.getH610a());
