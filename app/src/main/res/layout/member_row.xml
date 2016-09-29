@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="5px"
+        android:paddingTop="5px">
 
         <TextView
             android:id="@+id/Rnd"
@@ -45,103 +47,103 @@
 
         <TextView
             android:id="@+id/H24"
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H25"
-            android:layout_width="100dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H26Y"
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H26M"
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H27"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H28"
-            android:layout_width="50dp"
+            android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H29"
-            android:layout_width="50dp"
+            android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H29X"
-            android:layout_width="50dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H210"
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H211"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H212"
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H212X"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H213"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H214"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H215"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H215X"
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
         <TextView
             android:id="@+id/H216"
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 

@@ -68,7 +68,7 @@ public class Member_list extends Activity {
             StartTime = g.CurrentTime24();
             Bundle IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
-            SUCHANAID = IDbundle.getString("SuchanaId");
+            SUCHANAID = IDbundle.getString("SuchanaID");
             TableName = "Member";
             /*lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {

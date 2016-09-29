@@ -305,35 +305,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/cmdDataSync"
-                style="@style/menuButtonStyle"
-                android:layout_width="fill_parent"
-                android:layout_marginBottom="5sp"
-                android:layout_marginLeft="20sp"
-                android:layout_marginRight="20sp"
-                android:layout_marginTop="20sp"
-                android:background="@drawable/button_style_blue"
-                android:gravity="center|center_vertical"
-                android:text="Data Sync"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/cmdExit"
-                style="@style/menuButtonStyle"
-                android:layout_width="fill_parent"
-                android:layout_marginBottom="5sp"
-                android:layout_marginLeft="20sp"
-                android:layout_marginRight="20sp"
-                android:layout_marginTop="20sp"
-                android:background="@drawable/button_style_blue"
-                android:gravity="center|center_vertical"
-                android:text="Exit"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
-
-
         </LinearLayout>
     </ScrollView>
 
