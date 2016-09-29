@@ -1119,7 +1119,7 @@
                     android:id="@+id/VlblH220"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ইনডেক্স শিশু লাইন নম্বর"
+                    android:text="সদস্য কি রেফারেন্স শিশু ? "
                     android:textSize="20sp" />
 
                 <EditText

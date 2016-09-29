@@ -2,15 +2,12 @@ package org.icddrb.suchana;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.ImageButton;
 
 import Common.Connection;
 import Common.Global;
@@ -72,6 +69,47 @@ public class UpdateMenu extends Activity {
                     startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
                 }
             });*/
+            ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
+            cmdBack.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to close this form[Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
+
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
 
             cmdMenuIdentity = (Button) findViewById(R.id.cmdMenuIdentity);
             cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
@@ -216,7 +254,7 @@ public class UpdateMenu extends Activity {
             });
 
 
-            cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
+           /* cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     //Check for Internet connectivity
@@ -292,7 +330,7 @@ public class UpdateMenu extends Activity {
                     adb.show();
                 }
             });
-
+*/
         } catch (Exception ex) {
             Connection.MessageBox(UpdateMenu.this, ex.getMessage());
         }

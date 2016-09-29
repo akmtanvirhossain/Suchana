@@ -21,6 +21,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -217,6 +219,7 @@ public class Member extends Activity {
         }
     };
 
+
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -227,6 +230,7 @@ public class Member extends Activity {
             return true;
         }
     }
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -355,11 +359,149 @@ public class Member extends Activity {
             ArrayAdapter<String> adptrH25 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH25);
             spnH25.setAdapter(adptrH25);
 
+            spnH25.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if (position == 10) {
+
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
             seclblH26 = (LinearLayout) findViewById(R.id.seclblH26);
             secH26Y = (LinearLayout) findViewById(R.id.secH26Y);
             lineH26Y = (View) findViewById(R.id.lineH26Y);
             VlblH26Y = (TextView) findViewById(R.id.VlblH26Y);
             txtH26Y = (EditText) findViewById(R.id.txtH26Y);
+            txtH26Y.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH26Y.getText().toString().length() != 0) {
+                        if (Integer.valueOf(txtH26Y.getText().toString()) < 05) {
+                            txtH26M.setText("");
+                            spnH27.setSelection(0);
+                            txtH28.setText("");
+                            spnH29.setSelection(0);
+                            txtH29X.setText("");
+                            rdogrpH210.clearCheck();
+                            spnH211.setSelection(0);
+                            spnH212.setSelection(0);
+                            txtH212X.setText("");
+                            spnH213.setSelection(0);
+                            rdogrpH214.clearCheck();
+                            spnH215.setSelection(0);
+                            txtH215X.setText("");
+                            spnH216.setSelection(0);
+                            txtH216X.setText("");
+                            txtH217.setText("");
+                            txtH218.setText("");
+                            txtH219.setText("");
+                            txtH220.setText("");
+                            txtH221.setText("");
+                            txtH222.setText("");
+
+                            secH27.setVisibility(View.GONE);
+                            lineH27.setVisibility(View.GONE);
+                            secH28.setVisibility(View.GONE);
+                            lineH28.setVisibility(View.GONE);
+                            secH29.setVisibility(View.GONE);
+                            lineH29.setVisibility(View.GONE);
+                            secH29X.setVisibility(View.GONE);
+                            lineH29X.setVisibility(View.GONE);
+                            secH210.setVisibility(View.GONE);
+                            lineH210.setVisibility(View.GONE);
+                            secH211.setVisibility(View.GONE);
+                            lineH211.setVisibility(View.GONE);
+                            secH212.setVisibility(View.GONE);
+                            lineH212.setVisibility(View.GONE);
+                            secH212X.setVisibility(View.GONE);
+                            lineH212X.setVisibility(View.GONE);
+                            secH213.setVisibility(View.GONE);
+                            lineH213.setVisibility(View.GONE);
+                            secH214.setVisibility(View.GONE);
+                            lineH214.setVisibility(View.GONE);
+                            secH215.setVisibility(View.GONE);
+                            lineH215.setVisibility(View.GONE);
+                            secH215X.setVisibility(View.GONE);
+                            lineH215X.setVisibility(View.GONE);
+                            secH216.setVisibility(View.GONE);
+                            lineH216.setVisibility(View.GONE);
+                            secH216X.setVisibility(View.GONE);
+                            lineH216X.setVisibility(View.GONE);
+                            secH217.setVisibility(View.GONE);
+                            lineH217.setVisibility(View.GONE);
+                            secH218.setVisibility(View.GONE);
+                            lineH218.setVisibility(View.GONE);
+                            secH219.setVisibility(View.GONE);
+                            lineH219.setVisibility(View.GONE);
+                            secH220.setVisibility(View.GONE);
+                            lineH220.setVisibility(View.GONE);
+                            secH221.setVisibility(View.GONE);
+                            lineH221.setVisibility(View.GONE);
+                            secH222.setVisibility(View.GONE);
+                            lineH222.setVisibility(View.GONE);
+
+                        } else {
+                            txtH26M.setText("");
+                            secH27.setVisibility(View.VISIBLE);
+                            lineH27.setVisibility(View.VISIBLE);
+                            secH28.setVisibility(View.VISIBLE);
+                            lineH28.setVisibility(View.VISIBLE);
+                            secH29.setVisibility(View.VISIBLE);
+                            lineH29.setVisibility(View.VISIBLE);
+                            secH29X.setVisibility(View.VISIBLE);
+                            lineH29X.setVisibility(View.VISIBLE);
+                            secH210.setVisibility(View.VISIBLE);
+                            lineH210.setVisibility(View.VISIBLE);
+                            secH211.setVisibility(View.VISIBLE);
+                            lineH211.setVisibility(View.VISIBLE);
+                            secH212.setVisibility(View.VISIBLE);
+                            lineH212.setVisibility(View.VISIBLE);
+                            secH212X.setVisibility(View.VISIBLE);
+                            lineH212X.setVisibility(View.VISIBLE);
+                            secH213.setVisibility(View.VISIBLE);
+                            lineH213.setVisibility(View.VISIBLE);
+                            secH214.setVisibility(View.VISIBLE);
+                            lineH214.setVisibility(View.VISIBLE);
+                            secH215.setVisibility(View.VISIBLE);
+                            lineH215.setVisibility(View.VISIBLE);
+                            secH215X.setVisibility(View.VISIBLE);
+                            lineH215X.setVisibility(View.VISIBLE);
+                            secH216.setVisibility(View.VISIBLE);
+                            lineH216.setVisibility(View.VISIBLE);
+                            secH216X.setVisibility(View.VISIBLE);
+                            lineH216X.setVisibility(View.VISIBLE);
+                            secH217.setVisibility(View.VISIBLE);
+                            lineH217.setVisibility(View.VISIBLE);
+                            secH218.setVisibility(View.VISIBLE);
+                            lineH218.setVisibility(View.VISIBLE);
+                            secH219.setVisibility(View.VISIBLE);
+                            lineH219.setVisibility(View.VISIBLE);
+                            secH220.setVisibility(View.VISIBLE);
+                            lineH220.setVisibility(View.VISIBLE);
+                            secH221.setVisibility(View.VISIBLE);
+                            lineH221.setVisibility(View.VISIBLE);
+                            secH222.setVisibility(View.VISIBLE);
+                            lineH222.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
             secH26M = (LinearLayout) findViewById(R.id.secH26M);
             lineH26M = (View) findViewById(R.id.lineH26M);
             VlblH26M = (TextView) findViewById(R.id.VlblH26M);
@@ -586,6 +728,13 @@ public class Member extends Activity {
                         secH215X.setVisibility(View.VISIBLE);
                         lineH215X.setVisibility(View.VISIBLE);
                     }
+
+                    if (spnData.equalsIgnoreCase("28")) {
+                        txtH217.setText("");
+                        secH217.setVisibility(View.GONE);
+                    } else {
+                        secH217.setVisibility(View.VISIBLE);
+                    }
                 }
 
                 @Override
@@ -705,6 +854,7 @@ public class Member extends Activity {
         }
     }
 
+
     private void DataSave() {
         try {
 
@@ -742,11 +892,24 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: পিতা’র লাইন নম্বর.");
                 txtH24.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH24.getText().toString().length() == 0 ? "0" : txtH24.getText().toString()) < 0 || Integer.valueOf(txtH24.getText().toString().length() == 0 ? "25" : txtH24.getText().toString()) > 25) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 25(পিতা’র লাইন নম্বর).");
-                txtH24.requestFocus();
-                return;
-            } else if (spnH25.getSelectedItemPosition() == 0 & secH25.isShown()) {
+            } else if (txtH24.getText().toString().length() != 0) {
+                boolean b = false;
+                Integer[] QH24Array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 96, 97};
+                for (Integer aQH24Array : QH24Array) {
+                    if (Integer.parseInt(txtH24.getText().toString()) == aQH24Array) {
+                        b = true;
+                    } else {
+                    }
+                }
+                if (!b) {
+                    Connection.MessageBox(Member.this, "Value should be- 0,1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,96,97");
+                    txtH24.requestFocus();
+                    return;
+                }
+            }
+
+
+            if (spnH25.getSelectedItemPosition() == 0 & secH25.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: খানা প্রধানের সাথে সম্পর্ক.");
                 spnH25.requestFocus();
                 return;
@@ -754,8 +917,8 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: বছর.");
                 txtH26Y.requestFocus();
                 return;
-            } else if (spnH25.getSelectedItemPosition() == 10 && Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "7" : txtH26Y.getText().toString()) < 7) {
-                Connection.MessageBox(Member.this, "খানা প্রধান এর বয়স ৭ বছরের কম হতে পারবেনা ");
+            } else if (spnH25.getSelectedItemPosition() == 10 && Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "15" : txtH26Y.getText().toString()) < 15) {
+                Connection.MessageBox(Member.this, "খানা প্রধান এর বয়স ১৫ বছরের কম হতে পারবেনা ");
                 txtH26Y.requestFocus();
                 return;
             } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "1" : txtH26Y.getText().toString()) < 1 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
@@ -778,11 +941,11 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: বিয়ের সময় বয়স (বছর).");
                 txtH28.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH28.getText().toString().length() == 0 ? "12" : txtH28.getText().toString()) < 12 || Integer.valueOf(txtH28.getText().toString().length() == 0 ? "60" : txtH28.getText().toString()) > 60) {
+            } /*else if (Integer.valueOf(txtH28.getText().toString().length() == 0 ? "12" : txtH28.getText().toString()) < 12 || Integer.valueOf(txtH28.getText().toString().length() == 0 ? "60" : txtH28.getText().toString()) > 60) {
                 Connection.MessageBox(Member.this, "Value should be between 12 and 60(বিয়ের সময় বয়স (বছর)).");
                 txtH28.requestFocus();
                 return;
-            } else if (spnH29.getSelectedItemPosition() == 0 & secH29.isShown()) {
+            } */ else if (spnH29.getSelectedItemPosition() == 0 & secH29.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: ধর্ম.");
                 spnH29.requestFocus();
                 return;
@@ -802,6 +965,10 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: শিক্ষা (সর্বোচ্চ ক্লাস পাস).");
                 spnH212.requestFocus();
                 return;
+            } else if (spnH211.getSelectedItemPosition() == 1 && spnH212.getSelectedItemPosition() == 14) {
+                Connection.MessageBox(Member.this, "সাক্ষর জ্ঞ্যান এবং সর্বোচ্চ ক্লাস পাস অমিল");
+                spnH212.requestFocus();
+                return;
             } else if (txtH212X.getText().toString().length() == 0 & secH212X.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: অন্যান্য.");
                 txtH212X.requestFocus();
@@ -818,12 +985,24 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: পেশা  প্রধান.");
                 spnH215.requestFocus();
                 return;
+            } else if (spnH215.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 05) {
+                Connection.MessageBox(Member.this, "Required field: বয়স এবং পেশা ঠিক নেই");
+                spnH215.requestFocus();
+                return;
             } else if (txtH215X.getText().toString().length() == 0 & secH215X.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: অন্যান্য.");
                 txtH215X.requestFocus();
                 return;
             } else if (spnH216.getSelectedItemPosition() == 0 & secH216.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: পেশা  দ্বিতীয়.");
+                spnH216.requestFocus();
+                return;
+            } else if (spnH216.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 05) {
+                Connection.MessageBox(Member.this, "Required field: বয়স এবং দ্বিতীয় পেশা ঠিক নেই");
+                spnH216.requestFocus();
+                return;
+            } else if (spnH215.getSelectedItemPosition() == 28 & spnH216.getSelectedItemPosition() != 28) {
+                Connection.MessageBox(Member.this, "Required field: পেশা এবং দ্বিতীয় পেশা ঠিক নেই");
                 spnH216.requestFocus();
                 return;
             } else if (txtH216X.getText().toString().length() == 0 & secH216X.isShown()) {
@@ -834,43 +1013,70 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: প্রধান পেশা থেকে গত মাসের আয়.");
                 txtH217.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "0" : txtH217.getText().toString()) < 0 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999" : txtH217.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(প্রধান পেশা থেকে গত মাসের আয়).");
-                txtH217.requestFocus();
-                return;
+            }
+            if (txtH217.getText().toString().length() != 0 & secH217.isShown()) {
+                if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "0" : txtH217.getText().toString()) < 0 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999" : txtH217.getText().toString()) > 999999) {
+                    Connection.MessageBox(Member.this, "Value should be between 0 and 999999(প্রধান পেশা থেকে গত মাসের আয়).");
+                    txtH217.requestFocus();
+                    return;
+                }
             } else if (txtH218.getText().toString().length() == 0 & secH218.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত মাসের আয়.");
                 txtH218.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "0" : txtH218.getText().toString()) < 0 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999" : txtH218.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(সকল উৎস থেকে গত মাসের আয়).");
-                txtH218.requestFocus();
-                return;
-            } else if (txtH219.getText().toString().length() == 0 & secH219.isShown()) {
+            }
+            if (secH218.isShown()) {
+                if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "0" : txtH218.getText().toString()) < 0 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999" : txtH218.getText().toString()) > 999999) {
+                    Connection.MessageBox(Member.this, "Value should be between 0 and 999999(সকল উৎস থেকে গত মাসের আয়).");
+                    txtH218.requestFocus();
+                    return;
+                }
+            }
+            if (txtH219.getText().toString().length() == 0 & secH219.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত বছরের আয়.");
                 txtH219.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "0" : txtH219.getText().toString()) < 0 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999" : txtH219.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(সকল উৎস থেকে গত বছরের আয়).");
-                txtH219.requestFocus();
-                return;
-            } else if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
+            }
+            if (txtH219.getText().toString().length() != 0 & secH219.isShown()) {
+                if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "0" : txtH219.getText().toString()) < 0 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999" : txtH219.getText().toString()) > 999999) {
+                    Connection.MessageBox(Member.this, "বছরের আয় পেশা থেকে মাসিক আয়ের থেকে কম হবেনা ");
+                    txtH219.requestFocus();
+                    return;
+                }
+            }
+            if (txtH219.getText().toString().length() != 0 & secH219.isShown()) {
+                if (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH217.getText().toString()) || (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH218.getText().toString()))) {
+                    Connection.MessageBox(Member.this, "বছরের আয় মাসিক আয়ের থেকে কম হবেনা ");
+                    txtH219.requestFocus();
+                    return;
+                }
+            }
+            if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: ইনডেক্স শিশু লাইন নম্বর.");
                 txtH220.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH220.getText().toString().length() == 0 ? "1" : txtH220.getText().toString()) < 1 || Integer.valueOf(txtH220.getText().toString().length() == 0 ? "2" : txtH220.getText().toString()) > 2) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 2(ইনডেক্স শিশু লাইন নম্বর).");
-                txtH220.requestFocus();
-                return;
-            } else if (txtH221.getText().toString().length() == 0 & secH221.isShown()) {
+            }
+            if (txtH220.getText().toString().length() != 0 & secH220.isShown()) {
+                if (Integer.valueOf(txtH220.getText().toString().length() == 0 ? "1" : txtH220.getText().toString()) < 1 || Integer.valueOf(txtH220.getText().toString().length() == 0 ? "2" : txtH220.getText().toString()) > 2) {
+                    Connection.MessageBox(Member.this, "Value should be between 1 and 2(ইনডেক্স শিশু লাইন নম্বর).");
+                    txtH220.requestFocus();
+                    return;
+                }
+            }
+            if (txtH221.getText().toString().length() == 0 & secH221.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
                 txtH221.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH221.getText().toString().length() == 0 ? "0" : txtH221.getText().toString()) < 0 || Integer.valueOf(txtH221.getText().toString().length() == 0 ? "25" : txtH221.getText().toString()) > 25) {
-                Connection.MessageBox(Member.this, "Value should be between 0 and 25(মায়ের লাইন নম্বর).");
-                txtH221.requestFocus();
-                return;
-            } else if (txtH222.getText().toString().length() == 0 & secH222.isShown()) {
+            }
+            if (txtH221.getText().toString().length() != 0 & secH221.isShown()) {
+
+                if (Integer.valueOf(txtH221.getText().toString().length() == 0 ? "0" : txtH221.getText().toString()) < 0 || Integer.valueOf(txtH221.getText().toString().length() == 0 ? "25" : txtH221.getText().toString()) > 25) {
+                    Connection.MessageBox(Member.this, "Value should be between 0 and 25(মায়ের লাইন নম্বর).");
+                    txtH221.requestFocus();
+                    return;
+                }
+            }
+            if (txtH222.getText().toString().length() == 0 & secH222.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: স্বামী অথবা স্ত্রী  লাইন নম্বর.");
                 txtH222.requestFocus();
                 return;
@@ -951,10 +1157,11 @@ public class Member extends Activity {
                 return;
             }
         } catch (Exception e) {
-            Connection.MessageBox(Member.this, e.getMessage());
-            return;
+            throw e;
+
         }
     }
+
 
     private void DataSearch(String Rnd, String SuchanaID, String H21) {
         try {
