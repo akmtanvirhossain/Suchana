@@ -19,14 +19,45 @@
             android:src="@drawable/back" />
 
         <TextView
-            android:id="@+id/lblHeading"
-            android:layout_width="match_parent"
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Member"
+            android:text="Identity List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="Member List"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="NEXT"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cmdForward"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
     </LinearLayout>
 
     <View
@@ -34,7 +65,6 @@
         android:layout_height="1dip"
         android:layout_marginBottom="5sp"
         android:background="#CCCCCC" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -43,10 +73,39 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="0"
+            android:text="Suchana ID: " />
+
+        <TextView
             android:id="@+id/lblSuchanaIdHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMemberName"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_style_blue"
+            android:text=" member name list "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnRefresh"
@@ -116,7 +175,7 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
+                android:layout_marginLeft="0sp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -128,7 +187,7 @@
                     <ListView
                         android:id="@+id/lstData"
                         android:layout_width="match_parent"
-                        android:layout_height="700dp"
+                        android:layout_height="600dp"
                         android:clickable="true"
                         android:divider="#000000"
                         android:dividerHeight="1px"

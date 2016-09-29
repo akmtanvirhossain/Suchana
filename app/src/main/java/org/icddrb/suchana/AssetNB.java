@@ -5,10 +5,12 @@ package org.icddrb.suchana;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -189,8 +191,6 @@ public class AssetNB extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            H42A = IDbundle.getString("H42a");
-
             TableName = "AssetNB";
 
             //turnGPSOn();
@@ -200,31 +200,53 @@ public class AssetNB extends Activity {
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
+            cmdSave = (Button) findViewById(R.id.cmdSave);
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    startActivity(new Intent(AssetNB.this, AssetB.class).putExtras(IDBundle));
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetNB.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to close this form[Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), AssetB.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
 
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    DataSave();
-                    if (allItemsCompleted) {
-                        Bundle IDBundle = new Bundle();
-                        IDBundle.putString("Rnd", txtRnd.getText().toString());
-                        IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                        IDBundle.putString("H42a", "");
-                        startActivity(new Intent(AssetNB.this, Land.class).putExtras(IDBundle));
-                    }
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetNB.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
-
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -554,7 +576,7 @@ public class AssetNB extends Activity {
 
             DataSearch(RND, SUCHANAID, H42A);
 
-            cmdSave = (Button) findViewById(R.id.cmdSave);
+
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
@@ -741,6 +763,7 @@ public class AssetNB extends Activity {
             if (status.length() == 0) {
                 buttonColor();
                 if (allItemsCompleted) {
+                    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());

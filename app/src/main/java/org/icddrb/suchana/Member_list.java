@@ -5,16 +5,21 @@ package org.icddrb.suchana;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -69,9 +74,9 @@ public class Member_list extends Activity {
             StartTime = g.CurrentTime24();
             Bundle IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
-            SUCHANAID = IDbundle.getString("SuchanaId");
+            SUCHANAID = IDbundle.getString("SuchanaID");
             TableName = "Member";
-            lblHeading = (TextView) findViewById(R.id.lblHeading);
+            /*lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -93,7 +98,7 @@ public class Member_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -107,22 +112,53 @@ public class Member_list extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
+                            finish();
                         }
                     });
                     adb.show();
                 }
             });
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to go to next [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), SES.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);
             btnRefresh.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
                     //write your code here
                     DataSearch(RND, SUCHANAID);
+
+                }
+            });
+
+            Button btnMemberName = (Button) findViewById(R.id.btnMemberName);
+            btnMemberName.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    MemberNameForm(RND, SUCHANAID);
 
                 }
             });
@@ -212,6 +248,100 @@ public class Member_list extends Activity {
         }
     }
 
+    private void MemberNameForm(final String Rnd, final String SuchanaID) {
+        try {
+            final Dialog dialog = new Dialog(Member_list.this);
+            dialog.setTitle("Member Name Form");
+            //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.member_name);
+            dialog.setCanceledOnTouchOutside(true);
+            dialog.setCancelable(true);
+
+            Window window = dialog.getWindow();
+            WindowManager.LayoutParams wlp = window.getAttributes();
+
+            wlp.gravity = Gravity.TOP;
+            wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+            window.setAttributes(wlp);
+
+            final TextView txtRnd = (TextView) dialog.findViewById(R.id.txtRnd);
+            final TextView txtSuchanaID = (TextView) dialog.findViewById(R.id.txtSuchanaID);
+            final TextView txtH21 = (TextView) dialog.findViewById(R.id.txtH21);
+            final TextView txtH22 = (TextView) dialog.findViewById(R.id.txtH22);
+            txtRnd.setText(Rnd);
+            txtSuchanaID.setText(SuchanaID);
+
+            txtH21.setEnabled(false);
+
+            txtH21.setText(String.valueOf(MemSlNo()));
+            Button cmdContactNoSave = (Button) dialog.findViewById(R.id.cmdSave);
+            cmdContactNoSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View arg0) {
+                    /*
+                    String SQL = "";
+                    SQL = "Insert into Member(Rnd, SuchanaID, H21, H22,StartTime, EndTime, UserId, EntryUser, Lat, Lon, EnDt, Upload)Values(";
+                    SQL += "'"+ txtRnd.getText().toString() +"',";
+                    SQL += "'"+ txtSuchanaID.getText().toString() +"',";
+                    SQL += "'"+ txtH21.getText().toString() +"',";
+                    SQL += "'"+ txtH22.getText().toString() +"',";
+                    SQL += "'"+ g.CurrentTime24() +"',";
+                    SQL += "'"+ g.CurrentTime24() +"',";
+                    SQL += "'"+ g.getUserId() +"',";
+                    SQL += "'"+ g.getUserId() +"',";
+                    SQL += "'',";
+                    SQL += "'',";
+                    SQL += "'"+ Global.DateTimeNowYMDHMS()  +"',";
+                    SQL += "'2')";
+
+                    C.Save(SQL);*/
+
+
+                    //***
+                    Member_DataModel objSave = new Member_DataModel();
+                    objSave.setRnd(txtRnd.getText().toString());
+                    objSave.setSuchanaID(txtSuchanaID.getText().toString());
+                    objSave.setH21(txtH21.getText().toString());
+                    objSave.setH22(txtH22.getText().toString());
+                    objSave.setStartTime(StartTime);
+                    objSave.setEndTime(g.CurrentTime24());
+                    objSave.setUserId(g.getUserId());
+                    objSave.setEntryUser(g.getUserId()); //from data entry user list
+                    String status = objSave.SaveUpdateData(Member_list.this);
+
+                    DataSearch(Rnd, SuchanaID);
+                    txtH21.setText(String.valueOf(MemSlNo()));
+                    txtH22.setText("");
+                    txtH21.requestFocus();
+
+                }
+            });
+
+   /*         Button cmdContactNoClose = (Button)dialog.findViewById(R.id.cmdContactNoClose);
+            cmdContactNoClose.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View arg0) {
+                    dialog.dismiss();
+                }
+            });*/
+
+
+            dialog.show();
+        } catch (Exception e) {
+            Connection.MessageBox(Member_list.this, e.getMessage());
+            return;
+        }
+    }
+
+    private int MemSlNo() {
+        int lineNo = 0;
+        Cursor cursor = C.GetData("Member", "suchanaid", SUCHANAID);
+        if (cursor.getCount() != 0) {
+            lineNo = cursor.getCount() + 1;
+        } else {
+            lineNo = 1;
+        }
+
+        return lineNo;
+    }
 
     public class DataListAdapter extends BaseAdapter {
         private Context context;
@@ -301,7 +431,15 @@ public class Member_list extends Activity {
             H221.setText(o.get("H221"));
             H222.setText(o.get("H222"));
 
-
+            if (o.get("H23").length() == 0) {
+                SuchanaID.setTextColor(Color.RED);
+                H21.setTextColor(Color.RED);
+                H22.setTextColor(Color.RED);
+            } else {
+                SuchanaID.setTextColor(Color.BLACK);
+                H21.setTextColor(Color.BLACK);
+                H22.setTextColor(Color.BLACK);
+            }
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     //Write your code here
@@ -320,6 +458,4 @@ public class Member_list extends Activity {
             return convertView;
         }
     }
-
-
 }

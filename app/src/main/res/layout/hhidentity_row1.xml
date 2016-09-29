@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="110sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="সূচনা আইডি"
@@ -35,7 +35,7 @@
                 android:textColor="#006699" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="100sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="খানা নম্বর" />
@@ -62,7 +62,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="110sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="জেলা" />
@@ -74,7 +74,7 @@
                 android:gravity="left" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="100sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="উপজেলা" />
@@ -101,7 +101,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="110sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="ইউনিয়ন" />
@@ -113,7 +113,7 @@
                 android:gravity="left" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="100sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="গ্রাম" />
@@ -140,7 +140,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="120sp"
+                android:layout_width="110sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="তারিখ " />

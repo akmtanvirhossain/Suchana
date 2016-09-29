@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Back"
+            android:text="Identity List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -47,19 +47,18 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Next"
+            android:text="HOME"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/cmdForward"
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
             android:src="@drawable/forward" />
 
     </LinearLayout>
-
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"

@@ -55,11 +55,10 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:visibility="gone" />
-
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
             android:layout_marginBottom="10sp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
@@ -67,7 +66,7 @@
             android:background="@drawable/button_style_blue"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
-            android:text="   New Interview   "
+            android:text="   নতুন ইন্টার্ভিউ   "
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -87,39 +86,39 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="110sp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="Date From"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/dtpFDate"
             style="@style/customEdit"
-            android:layout_width="150sp"
+            android:layout_width="140sp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
             android:drawableRight="@drawable/calendersmall"
             android:focusable="false"
             android:inputType="text"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
-            android:layout_width="40sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="To"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/dtpTDate"
             style="@style/customEdit"
-            android:layout_width="150sp"
+            android:layout_width="140sp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
             android:drawableRight="@drawable/calendersmall"
             android:focusable="false"
             android:inputType="text"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnSearch"
@@ -140,9 +139,9 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1dip"
+        android:layout_height="2dip"
         android:layout_marginBottom="0sp"
-        android:background="#CCCCCC" />
+        android:background="#006699" />
 
     <include
         layout="@layout/common_heading"

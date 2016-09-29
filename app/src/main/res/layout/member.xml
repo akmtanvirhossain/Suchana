@@ -22,10 +22,9 @@
             android:id="@+id/lblBack"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Back"
+            android:text="Member List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -39,24 +38,6 @@
             android:text="MEMBER"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/lblNext"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight=".2"
-            android:gravity="center_vertical|right"
-            android:paddingLeft="10sp"
-            android:text="Next"
-            android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
-
-        <ImageButton
-            android:id="@+id/cmdForward"
-            android:layout_width="50sp"
-            android:layout_height="match_parent"
-            android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward" />
 
 
     </LinearLayout>
@@ -310,7 +291,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH24"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -619,7 +611,7 @@
 
                 <TextView
                     android:id="@+id/VlblH210"
-                    android:layout_width="250sp"
+                    android:layout_width="160sp"
                     android:layout_height="wrap_content"
                     android:text="ভাষা"
                     android:textSize="20sp" />
@@ -1138,7 +1130,7 @@
                     android:id="@+id/VlblH220"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ইনডেক্স শিশু লাইন নম্বর"
+                    android:text="সদস্য কি রেফারেন্স শিশু ? "
                     android:textSize="20sp" />
 
                 <EditText
@@ -1187,7 +1179,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH221"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View
@@ -1225,7 +1228,18 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="2"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spnH222"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <View

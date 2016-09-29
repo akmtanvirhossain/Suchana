@@ -17,145 +17,145 @@
         android:paddingTop="5px">
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Rnd" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="SuchanaID" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H21" />
+            android:text="লাইন#" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="নাম" />
+
+        <TextView
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H22" />
+            android:text="লিঙ্গ" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H23" />
+            android:text="পিতা#" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H24" />
+            android:text="সম্পর্ক" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H25" />
+            android:text="বয়স(Y)" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H26Y" />
+            android:text="বয়স(M)" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H26M" />
+            android:text="বৈবাহিক অবস্থা" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H27" />
+            android:text="বিয়ের সময় বয়স (বছর)" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H28" />
+            android:text="ধর্ম" />
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H29" />
-
-        <TextView
-            android:layout_width="50dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H29X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H210" />
+            android:text="ভাষা" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H211" />
+            android:text="সাক্ষর জ্ঞান" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H212" />
+            android:text="শিক্ষা" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H212X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H213" />
+            android:text="স্কুলের ধরন" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H214" />
+            android:text="এনজিও সদস্য" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H215" />
+            android:text="পেশা  প্রধান" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H215X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H216" />
+            android:text="পেশা  দ্বিতীয়" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H216X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H217" />
