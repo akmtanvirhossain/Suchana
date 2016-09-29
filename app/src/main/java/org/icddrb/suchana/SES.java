@@ -49,6 +49,8 @@ public class SES extends Activity {
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
+
+    Spinner spnMSlNo;
     TextView lblHeading;
     LinearLayout seclblH311;
     LinearLayout secRnd;
@@ -662,6 +664,9 @@ public class SES extends Activity {
                     adb.show();
                 }
             });
+
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
 
             seclblH311 = (LinearLayout) findViewById(R.id.seclblH311);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
@@ -1443,7 +1448,7 @@ public class SES extends Activity {
             lineH610b5 = (View) findViewById(R.id.lineH610b5);
             VlblH610b5 = (TextView) findViewById(R.id.VlblH610b5);
             chkH610b5 = (CheckBox) findViewById(R.id.chkH610b5);
-            chkH610b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+/*            chkH610b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (!isChecked) {
@@ -1457,7 +1462,7 @@ public class SES extends Activity {
 
                     }
                 }
-            });
+            });*/
 
             secH610b5X = (LinearLayout) findViewById(R.id.secH610b5X);
             lineH610b5X = (View) findViewById(R.id.lineH610b5X);
@@ -1467,6 +1472,76 @@ public class SES extends Activity {
             lineH610b6 = (View) findViewById(R.id.lineH610b6);
             VlblH610b6 = (TextView) findViewById(R.id.VlblH610b6);
             chkH610b6 = (CheckBox) findViewById(R.id.chkH610b6);
+            chkH610b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH610b1.setChecked(false);
+                        chkH610b2.setChecked(false);
+                        chkH610b3.setChecked(false);
+                        chkH610b4.setChecked(false);
+                        chkH610b5.setChecked(false);
+                        secH610c.setVisibility(View.GONE);
+                        rdogrpH610c.clearCheck();
+                    } else
+                        secH610c.setVisibility(View.VISIBLE);
+
+                }
+            });
+
+            chkH610b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH610b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH610b2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH610b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH610b3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH610b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH610b4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH610b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH610b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secH610b5X.setVisibility(View.GONE);
+                        lineH610b5X.setVisibility(View.GONE);
+                        txtH610b5X.setText("");
+
+                    } else {
+                        chkH610b6.setChecked(false);
+                        secH610b5X.setVisibility(View.VISIBLE);
+                        lineH610b5X.setVisibility(View.VISIBLE);
+
+                    }
+                }
+            });
+
             secH610c = (LinearLayout) findViewById(R.id.secH610c);
             lineH610c = (View) findViewById(R.id.lineH610c);
             VlblH610c = (TextView) findViewById(R.id.VlblH610c);
@@ -1578,7 +1653,7 @@ public class SES extends Activity {
             lineH611b5 = (View) findViewById(R.id.lineH611b5);
             VlblH611b5 = (TextView) findViewById(R.id.VlblH611b5);
             chkH611b5 = (CheckBox) findViewById(R.id.chkH611b5);
-            chkH611b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+/*            chkH611b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (!isChecked) {
@@ -1594,7 +1669,7 @@ public class SES extends Activity {
                         lineH611b6.setVisibility(View.VISIBLE);
                     }
                 }
-            });
+            });*/
             secH611b5X = (LinearLayout) findViewById(R.id.secH611b5X);
             lineH611b5X = (View) findViewById(R.id.lineH611b5X);
             VlblH611b5X = (TextView) findViewById(R.id.VlblH611b5X);
@@ -1603,6 +1678,78 @@ public class SES extends Activity {
             lineH611b6 = (View) findViewById(R.id.lineH611b6);
             VlblH611b6 = (TextView) findViewById(R.id.VlblH611b6);
             chkH611b6 = (CheckBox) findViewById(R.id.chkH611b6);
+            chkH611b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH611b1.setChecked(false);
+                        chkH611b2.setChecked(false);
+                        chkH611b3.setChecked(false);
+                        chkH611b4.setChecked(false);
+                        chkH611b5.setChecked(false);
+                        secH611c.setVisibility(View.GONE);
+                        rdogrpH611c.clearCheck();
+                    } else
+                        secH611c.setVisibility(View.VISIBLE);
+
+                }
+            });
+            chkH611b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH611b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH611b2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH611b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH611b3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH611b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH611b4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH611b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH611b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secH611b5X.setVisibility(View.GONE);
+                        lineH611b5X.setVisibility(View.GONE);
+                        txtH611b5X.setText("");
+                        //secH611b6.setVisibility(View.GONE);
+                        //lineH611b6.setVisibility(View.GONE);
+                    } else {
+                        chkH611b6.setChecked(false);
+
+                        secH611b5X.setVisibility(View.VISIBLE);
+                        lineH611b5X.setVisibility(View.VISIBLE);
+                        //secH611b6.setVisibility(View.VISIBLE);
+                        //lineH611b6.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
             secH611c = (LinearLayout) findViewById(R.id.secH611c);
             lineH611c = (View) findViewById(R.id.lineH611c);
             VlblH611c = (TextView) findViewById(R.id.VlblH611c);
@@ -1714,7 +1861,7 @@ public class SES extends Activity {
             lineH612b5 = (View) findViewById(R.id.lineH612b5);
             VlblH612b5 = (TextView) findViewById(R.id.VlblH612b5);
             chkH612b5 = (CheckBox) findViewById(R.id.chkH612b5);
-            chkH612b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+/*            chkH612b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (!isChecked) {
@@ -1730,7 +1877,7 @@ public class SES extends Activity {
                         lineH612b6.setVisibility(View.VISIBLE);
                     }
                 }
-            });
+            });*/
 
             secH612b5X = (LinearLayout) findViewById(R.id.secH612b5X);
             lineH612b5X = (View) findViewById(R.id.lineH612b5X);
@@ -1740,6 +1887,78 @@ public class SES extends Activity {
             lineH612b6 = (View) findViewById(R.id.lineH612b6);
             VlblH612b6 = (TextView) findViewById(R.id.VlblH612b6);
             chkH612b6 = (CheckBox) findViewById(R.id.chkH612b6);
+            chkH612b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH612b1.setChecked(false);
+                        chkH612b2.setChecked(false);
+                        chkH612b3.setChecked(false);
+                        chkH612b4.setChecked(false);
+                        chkH612b5.setChecked(false);
+                        secH612c.setVisibility(View.GONE);
+                        rdogrpH612c.clearCheck();
+                    } else
+                        secH612c.setVisibility(View.VISIBLE);
+
+                }
+            });
+            chkH612b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH612b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH612b2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH612b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH612b3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH612b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH612b4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH612b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH612b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secH612b5X.setVisibility(View.GONE);
+                        lineH612b5X.setVisibility(View.GONE);
+                        txtH612b5X.setText("");
+                        //secH612b6.setVisibility(View.GONE);
+                        //lineH612b6.setVisibility(View.GONE);
+                    } else {
+                        chkH612b6.setChecked(false);
+                        secH612b5X.setVisibility(View.VISIBLE);
+                        lineH612b5X.setVisibility(View.VISIBLE);
+                        //secH612b6.setVisibility(View.VISIBLE);
+                        //lineH612b6.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+
             secH612c = (LinearLayout) findViewById(R.id.secH612c);
             lineH612c = (View) findViewById(R.id.lineH612c);
             VlblH612c = (TextView) findViewById(R.id.VlblH612c);
@@ -1851,7 +2070,7 @@ public class SES extends Activity {
             lineH613b5 = (View) findViewById(R.id.lineH613b5);
             VlblH613b5 = (TextView) findViewById(R.id.VlblH613b5);
             chkH613b5 = (CheckBox) findViewById(R.id.chkH613b5);
-            chkH613b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+/*            chkH613b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (!isChecked) {
@@ -1867,7 +2086,7 @@ public class SES extends Activity {
                         lineH613b6.setVisibility(View.VISIBLE);
                     }
                 }
-            });
+            });*/
 
             secH613b5X = (LinearLayout) findViewById(R.id.secH613b5X);
             lineH613b5X = (View) findViewById(R.id.lineH613b5X);
@@ -1877,6 +2096,80 @@ public class SES extends Activity {
             lineH613b6 = (View) findViewById(R.id.lineH613b6);
             VlblH613b6 = (TextView) findViewById(R.id.VlblH613b6);
             chkH613b6 = (CheckBox) findViewById(R.id.chkH613b6);
+            chkH613b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH613b1.setChecked(false);
+                        chkH613b2.setChecked(false);
+                        chkH613b3.setChecked(false);
+                        chkH613b4.setChecked(false);
+                        chkH613b5.setChecked(false);
+                        secH613c.setVisibility(View.GONE);
+                        rdogrpH613c.clearCheck();
+                    } else
+                        secH613c.setVisibility(View.VISIBLE);
+
+                }
+            });
+            chkH613b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH613b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH613b2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH613b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH613b3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH613b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH613b4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH613b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH613b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secH613b5X.setVisibility(View.GONE);
+                        lineH613b5X.setVisibility(View.GONE);
+                        txtH613b5X.setText("");
+                        //secH613b6.setVisibility(View.GONE);
+                        //lineH613b6.setVisibility(View.GONE);
+                    } else {
+                        chkH613b6.setChecked(false);
+                        secH613b5X.setVisibility(View.VISIBLE);
+                        lineH613b5X.setVisibility(View.VISIBLE);
+                        //secH613b6.setVisibility(View.VISIBLE);
+                        //lineH613b6.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+
+
+
             secH613c = (LinearLayout) findViewById(R.id.secH613c);
             lineH613c = (View) findViewById(R.id.lineH613c);
             VlblH613c = (TextView) findViewById(R.id.VlblH613c);
@@ -1988,7 +2281,7 @@ public class SES extends Activity {
             lineH614b5 = (View) findViewById(R.id.lineH614b5);
             VlblH614b5 = (TextView) findViewById(R.id.VlblH614b5);
             chkH614b5 = (CheckBox) findViewById(R.id.chkH614b5);
-            chkH614b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            /*chkH614b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (!isChecked) {
@@ -2004,7 +2297,7 @@ public class SES extends Activity {
                         lineH614b6.setVisibility(View.VISIBLE);
                     }
                 }
-            });
+            });*/
             secH614b5X = (LinearLayout) findViewById(R.id.secH614b5X);
             lineH614b5X = (View) findViewById(R.id.lineH614b5X);
             VlblH614b5X = (TextView) findViewById(R.id.VlblH614b5X);
@@ -2013,6 +2306,80 @@ public class SES extends Activity {
             lineH614b6 = (View) findViewById(R.id.lineH614b6);
             VlblH614b6 = (TextView) findViewById(R.id.VlblH614b6);
             chkH614b6 = (CheckBox) findViewById(R.id.chkH614b6);
+            chkH614b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH614b1.setChecked(false);
+                        chkH614b2.setChecked(false);
+                        chkH614b3.setChecked(false);
+                        chkH614b4.setChecked(false);
+                        chkH614b5.setChecked(false);
+                        secH614c.setVisibility(View.GONE);
+                        rdogrpH614c.clearCheck();
+                    } else
+                        secH614c.setVisibility(View.VISIBLE);
+
+                }
+            });
+            chkH614b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH614b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH614b2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH614b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH614b3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH614b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH614b4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH614b6.setChecked(false);
+                    }
+
+                }
+            });
+            chkH614b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secH614b5X.setVisibility(View.GONE);
+                        lineH614b5X.setVisibility(View.GONE);
+                        txtH614b5X.setText("");
+                        //secH614b6.setVisibility(View.GONE);
+                        //lineH614b6.setVisibility(View.GONE);
+                    } else {
+                        chkH614b6.setChecked(false);
+
+                        secH614b5X.setVisibility(View.VISIBLE);
+                        lineH614b5X.setVisibility(View.VISIBLE);
+                        //secH614b6.setVisibility(View.VISIBLE);
+                        //lineH614b6.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+
+
             secH614c = (LinearLayout) findViewById(R.id.secH614c);
             lineH614c = (View) findViewById(R.id.lineH614c);
             VlblH614c = (TextView) findViewById(R.id.VlblH614c);
@@ -2205,15 +2572,18 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
+                spnMSlNo.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
+            }
+            /*else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
                 Connection.MessageBox(SES.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
                 txtMSlNo.requestFocus();
                 return;
-            } else if (spnH311.getSelectedItemPosition() == 0 & secH311.isShown()) {
+            }*/
+
+            else if (spnH311.getSelectedItemPosition() == 0 & secH311.isShown()) {
                 Connection.MessageBox(SES.this, "Required field: খানার মালিকানা.");
                 spnH311.requestFocus();
                 return;
@@ -2573,7 +2943,7 @@ public class SES extends Activity {
             SES_DataModel objSave = new SES_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
 
             objSave.setH311((spnH311.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH311.getSelectedItem().toString(), "-")));
             objSave.setH312(txtH312.getText().toString());
@@ -2864,7 +3234,8 @@ public class SES extends Activity {
             for (SES_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+                //txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 spnH311.setSelection(Global.SpinnerItemPositionAnyLength(spnH311, item.getH311()));
                 txtH312.setText(item.getH312());
                 txtH313.setText(item.getH313());
