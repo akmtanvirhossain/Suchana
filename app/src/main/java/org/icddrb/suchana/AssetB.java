@@ -579,7 +579,7 @@ public class AssetB extends Activity {
 
                     String spnData = Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-");
                     DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
-                    if (Integer.parseInt(spnData) < 8 | Integer.parseInt(spnData) > 19) {
+                    if (Integer.parseInt(spnData) < 8 | Integer.parseInt(spnData) > 20) {
                         seclblH41a.setVisibility(View.VISIBLE);
                         secH41i.setVisibility(View.VISIBLE);
                     } else {
