@@ -133,8 +133,13 @@ public class Land_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+
                             Intent intent = new Intent(getApplicationContext(), HDDS.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }
@@ -157,8 +162,8 @@ public class Land_list extends Activity {
 
                 public void onClick(View view) {
                     Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
                     IDbundle.putString("SlNo", "");
                     Intent intent = new Intent(getApplicationContext(), Land.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
