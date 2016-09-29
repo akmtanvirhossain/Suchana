@@ -5,7 +5,9 @@ package org.icddrb.suchana;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -237,25 +239,42 @@ public class AssetB extends Activity {
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-
-                    startActivity(new Intent(AssetB.this, SES.class).putExtras(IDBundle));
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to close this form[Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), SES.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
 
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    DataSave();
-                    if (allItemsCompleted) {
-                        Bundle IDBundle = new Bundle();
-                        IDBundle.putString("Rnd", txtRnd.getText().toString());
-                        IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                        IDBundle.putString("H41a", "");
-                        startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
-                    }
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
 
@@ -1278,6 +1297,7 @@ public class AssetB extends Activity {
             if (status.length() == 0) {
                 buttonColor();
                 if (allItemsCompleted) {
+                    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());

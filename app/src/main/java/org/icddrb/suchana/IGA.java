@@ -533,7 +533,6 @@ public class IGA extends Activity {
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
-
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -543,14 +542,37 @@ public class IGA extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Careseek.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
                     adb.show();
                 }
             });
-
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(IGA.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
             secRND = (LinearLayout) findViewById(R.id.secRND);
             lineRND = (View) findViewById(R.id.lineRND);
             VlblRND = (TextView) findViewById(R.id.VlblRND);
@@ -2599,7 +2621,12 @@ public class IGA extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(IGA.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRND.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+
+                startActivity(new Intent(IGA.this, HHIdentity_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(IGA.this, status);
                 return;

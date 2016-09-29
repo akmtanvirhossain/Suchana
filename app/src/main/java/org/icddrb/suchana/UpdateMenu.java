@@ -15,8 +15,12 @@ import java.util.List;
 import Common.Connection;
 import Common.Global;
 
-public class MainMenu1 extends Activity {
+public class UpdateMenu extends Activity {
+
     static String USERID = "";
+    static String RND = "";
+    static String SUCHANAID = "";
+    static String H7 = "";
     Button cmdMenuIdentity;
     Button cmdMenuMember;
     Button cmdMenuSES;
@@ -37,19 +41,18 @@ public class MainMenu1 extends Activity {
     Button cmdMenuCareseek;
     Button cmdMenuIGA;
     Button cmdMenuStart;
-
     Button cmdDataUpload;
     Button cmdDataSync;
-
     Connection C;
     Global g;
+    Bundle IDBundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
             //getLayoutInflater().inflate(R.layout.main_menu, frameLayout);
-            setContentView(R.layout.main_menu_dev);
+            setContentView(R.layout.update_menu);
             //  setContentView(R.layout.main_menu);
 
             C = new Connection(this);
@@ -57,6 +60,10 @@ public class MainMenu1 extends Activity {
 
             USERID = g.getUserId();
 
+
+            IDBundle = getIntent().getExtras();
+            RND = IDBundle.getString("Rnd");
+            SUCHANAID = IDBundle.getString("SuchanaID");
 
         /*    cmdMenuStart = (Button) findViewById(R.id.cmdMenuStart);
             cmdMenuStart.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +77,7 @@ public class MainMenu1 extends Activity {
             cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), HHIdentity_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, HHIdentity_list.class).putExtras(IDBundle));
                 }
             });
 
@@ -79,16 +85,14 @@ public class MainMenu1 extends Activity {
             cmdMenuMember.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Member_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Member_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuSES = (Button) findViewById(R.id.cmdMenuSES);
             cmdMenuSES.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), SES_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, SES.class).putExtras(IDBundle));
                 }
             });
 
@@ -96,8 +100,7 @@ public class MainMenu1 extends Activity {
             cmdMenuAssetB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), AssetB_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, AssetB.class).putExtras(IDBundle));
                 }
             });
 
@@ -105,8 +108,7 @@ public class MainMenu1 extends Activity {
             cmdMenuAssetNB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), AssetNB_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, AssetNB.class).putExtras(IDBundle));
                 }
             });
 
@@ -114,11 +116,7 @@ public class MainMenu1 extends Activity {
             cmdMenuLand.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", "");
-                    IDBundle.putString("SuchanaID", "");
-                    IDBundle.putString("SlNo", "");
-                    startActivity(new Intent(MainMenu1.this, Land_list.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, Land_list.class).putExtras(IDBundle));
                 }
             });
 
@@ -126,20 +124,14 @@ public class MainMenu1 extends Activity {
             cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                       Intent f1 = new Intent(getApplicationContext(), HDDS_list.class);
-                       startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, HDDS.class).putExtras(IDBundle));
                 }
             });
             cmdMenuCost = (Button) findViewById(R.id.cmdMenuCost);
             cmdMenuCost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Cost1.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Cost1.class).putExtras(IDBundle));
                 }
             });
 
@@ -147,8 +139,7 @@ public class MainMenu1 extends Activity {
             cmdMenuSavings.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Savings_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Savings.class).putExtras(IDBundle));
                 }
             });
 
@@ -156,40 +147,28 @@ public class MainMenu1 extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Loan_list.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
             cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), HFIAS.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, HFIAS.class).putExtras(IDBundle));
                 }
             });
             cmdMenuDestruction1 = (Button) findViewById(R.id.cmdMenuDestruction1);
             cmdMenuDestruction1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Destruction1_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Destruction1.class).putExtras(IDBundle));
                 }
             });
             cmdMenuDestruction2 = (Button) findViewById(R.id.cmdMenuDestruction2);
             cmdMenuDestruction2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent f1 = new Intent(getApplicationContext(), Destruction2_list.class);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Destruction2.class).putExtras(IDBundle));
                 }
             });
 
@@ -197,95 +176,64 @@ public class MainMenu1 extends Activity {
             cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Agriculture_list.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Agriculture_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuNGO = (Button) findViewById(R.id.cmdMenuNGO);
             cmdMenuNGO.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), NGOWork.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, NGOWork.class).putExtras(IDBundle));
                 }
             });
             cmdMenuIllness1 = (Button) findViewById(R.id.cmdMenuIllness1);
             cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Illness1_list.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Illness1_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuIllness2 = (Button) findViewById(R.id.cmdMenuIllness2);
             cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Illness2_list.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Illness2_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuCareseek = (Button) findViewById(R.id.cmdMenuCareseek);
             cmdMenuCareseek.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), Careseek.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, Careseek.class).putExtras(IDBundle));
                 }
             });
             cmdMenuIGA = (Button) findViewById(R.id.cmdMenuIGA);
             cmdMenuIGA.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle1 = new Bundle();
-                    IDbundle1.putString("Rnd", "1");
-                    IDbundle1.putString("SuchanaID", "1234");
-                    Intent f1 = new Intent(getApplicationContext(), IGA.class);
-                    f1.putExtras(IDbundle1);
-                    startActivity(f1);
+                    startActivity(new Intent(UpdateMenu.this, IGA.class).putExtras(IDBundle));
                 }
             });
-
 
 
             cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
             cmdDataSync.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     //Check for Internet connectivity
-                    if (Connection.haveNetworkConnection(MainMenu1.this)) {
+                    if (Connection.haveNetworkConnection(UpdateMenu.this)) {
                     } else {
-                        Connection.MessageBox(MainMenu1.this, "Internet connection is not available for Data Sync.");
+                        Connection.MessageBox(UpdateMenu.this, "Internet connection is not available for Data Sync.");
                         return;
                     }
 
-                    AlertDialog.Builder adb = new AlertDialog.Builder(MainMenu1.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
                     adb.setTitle("Data Sync");
                     adb.setMessage("Do you want to Sync Data[Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            C = new Connection(MainMenu1.this);
-                            final ProgressDialog progDailog = ProgressDialog.show(MainMenu1.this, "", "Please Wait . . .", true);
+                            C = new Connection(UpdateMenu.this);
+                            final ProgressDialog progDailog = ProgressDialog.show(UpdateMenu.this, "", "Please Wait . . .", true);
 
                             new Thread() {
                                 public void run() {
@@ -293,8 +241,6 @@ public class MainMenu1 extends Activity {
                                         //C.DataSync_UploadDownload(USERID);
 
                                         List<String> tableList = new ArrayList<String>();
-
-
                                         tableList.add("Agriculture");
                                         tableList.add("AssetB");
                                         tableList.add("AssetNB");
@@ -316,11 +262,6 @@ public class MainMenu1 extends Activity {
                                         tableList.add("UserList");
                                         tableList.add("VillageList");
 
-
-                                        //Lab
-                                        tableList.add("SampleAnalysis");
-                                        tableList.add("LabResult");
-
                                         C.DataSync_UploadDownload(tableList, USERID);
 
                                     } catch (Exception e) {
@@ -339,7 +280,7 @@ public class MainMenu1 extends Activity {
             Button cmdExit = (Button) findViewById(R.id.cmdExit);
             cmdExit.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(MainMenu1.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
                     adb.setTitle("Exit");
                     adb.setMessage("Do you want to exit from the system[Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -353,7 +294,7 @@ public class MainMenu1 extends Activity {
             });
 
         } catch (Exception ex) {
-            Connection.MessageBox(MainMenu1.this, ex.getMessage());
+            Connection.MessageBox(UpdateMenu.this, ex.getMessage());
         }
     }
 }

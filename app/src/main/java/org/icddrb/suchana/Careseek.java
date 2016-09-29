@@ -513,13 +513,37 @@ public class Careseek extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Illness2_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
                     adb.show();
                 }
             });
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Careseek.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -3975,7 +3999,13 @@ public class Careseek extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Careseek.this, "Saved Successfully");
+                finish();
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(Careseek.this, IGA.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Careseek.this, status);
                 return;

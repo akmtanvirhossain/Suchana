@@ -12,7 +12,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -80,7 +79,7 @@ public class Land_list extends Activity {
             SLNO = IDbundle.getString("SlNo");
             TableName = "Land";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
-            lblHeading.setOnTouchListener(new View.OnTouchListener() {
+          /*  lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     final int DRAWABLE_RIGHT = 2;
@@ -101,7 +100,7 @@ public class Land_list extends Activity {
                     }
                     return false;
                 }
-            });
+            });*/
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -112,11 +111,14 @@ public class Land_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Bundle IDBundle = new Bundle();
-                            IDBundle.putString("Rnd", RND);
-                            IDBundle.putString("SuchanaID", SUCHANAID);
-                            //IDBundle.putString("H21", txtH21.getText().toString());
-                            startActivity(new Intent(Land_list.this, AssetNB.class).putExtras(IDBundle));
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
                         }
                     });
                     adb.show();
@@ -125,30 +127,19 @@ public class Land_list extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if (dataList.size() != 0) {
-                        AlertDialog.Builder adb = new AlertDialog.Builder(Land_list.this);
-                        adb.setTitle("সম্পদ নেই! ");
-                        adb.setMessage("কোন সম্পদ ইনপুট দেয়া হয় নাই। পরের ফর্ম এ যেতে চান ? [Yes/No]?");
-                        adb.setNegativeButton("No", null);
-                        adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Bundle IDBundle = new Bundle();
-                                IDBundle.putString("Rnd", RND);
-                                IDBundle.putString("SuchanaID", SUCHANAID);
-                                //IDBundle.putString("H21", txtH21.getText().toString());
-                                startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
-                            }
-                        });
-                        adb.show();
-
-                    } else {
-                        Bundle IDBundle = new Bundle();
-                        IDBundle.putString("Rnd", RND);
-                        IDBundle.putString("SuchanaID", SUCHANAID);
-                        //IDBundle.putString("H21", txtH21.getText().toString());
-                        startActivity(new Intent(Land_list.this, HDDS.class).putExtras(IDBundle));
-
-                    }
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Land_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), HDDS.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);

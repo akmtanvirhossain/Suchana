@@ -26,7 +26,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="SES"
+            android:text="Identity List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -37,7 +37,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Asset B"
+            android:text="Asset"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -48,7 +48,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Asset NB"
+            android:text="HOME"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 

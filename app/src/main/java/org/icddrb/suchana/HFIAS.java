@@ -236,6 +236,13 @@ public class HFIAS extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Loan_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
@@ -243,7 +250,24 @@ public class HFIAS extends Activity {
                 }
             });
 
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(HFIAS.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -876,7 +900,12 @@ public class HFIAS extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(HFIAS.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                IDBundle.putString("H41a", "");
+                startActivity(new Intent(HFIAS.this, Destruction1.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(HFIAS.this, status);
                 return;

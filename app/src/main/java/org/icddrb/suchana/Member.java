@@ -253,28 +253,38 @@ public class Member extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Bundle IDBundle = new Bundle();
-                            IDBundle.putString("Rnd", txtRnd.getText().toString());
-                            IDBundle.putString("SuchanaId", txtSuchanaID.getText().toString());
-
-                            startActivity(new Intent(Member.this, Member_list.class).putExtras(IDBundle));
+                            /*Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Member_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);*/
+                            finish();
                         }
                     });
                     adb.show();
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            /*ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                            Bundle IDBundle = new Bundle();
-                            IDBundle.putString("Rnd", txtRnd.getText().toString());
-                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    IDBundle.putString("H21", txtH21.getText().toString());
-                            startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
-
+                    AlertDialog.Builder adb = new AlertDialog.Builder(getApplicationContext());
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
                 }
-            });
+            });*/
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -824,24 +834,24 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: প্রধান পেশা থেকে গত মাসের আয়.");
                 txtH217.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "1" : txtH217.getText().toString()) < 1 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999" : txtH217.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(প্রধান পেশা থেকে গত মাসের আয়).");
+            } else if (Integer.valueOf(txtH217.getText().toString().length() == 0 ? "0" : txtH217.getText().toString()) < 0 || Integer.valueOf(txtH217.getText().toString().length() == 0 ? "999999" : txtH217.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(প্রধান পেশা থেকে গত মাসের আয়).");
                 txtH217.requestFocus();
                 return;
             } else if (txtH218.getText().toString().length() == 0 & secH218.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত মাসের আয়.");
                 txtH218.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "1" : txtH218.getText().toString()) < 1 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999" : txtH218.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(সকল উৎস থেকে গত মাসের আয়).");
+            } else if (Integer.valueOf(txtH218.getText().toString().length() == 0 ? "0" : txtH218.getText().toString()) < 0 || Integer.valueOf(txtH218.getText().toString().length() == 0 ? "999999" : txtH218.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(সকল উৎস থেকে গত মাসের আয়).");
                 txtH218.requestFocus();
                 return;
             } else if (txtH219.getText().toString().length() == 0 & secH219.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: সকল উৎস থেকে গত বছরের আয়.");
                 txtH219.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "1" : txtH219.getText().toString()) < 1 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999" : txtH219.getText().toString()) > 999999) {
-                Connection.MessageBox(Member.this, "Value should be between 1 and 999999(সকল উৎস থেকে গত বছরের আয়).");
+            } else if (Integer.valueOf(txtH219.getText().toString().length() == 0 ? "0" : txtH219.getText().toString()) < 0 || Integer.valueOf(txtH219.getText().toString().length() == 0 ? "999999" : txtH219.getText().toString()) > 999999) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 999999(সকল উৎস থেকে গত বছরের আয়).");
                 txtH219.requestFocus();
                 return;
             } else if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
@@ -930,11 +940,11 @@ public class Member extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-
-                Bundle IDBundle = new Bundle();
+                finish();
+                /*Bundle IDBundle = new Bundle();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));
+                startActivity(new Intent(Member.this, SES.class).putExtras(IDBundle));*/
                 //  Connection.MessageBox(Member.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(Member.this, status);

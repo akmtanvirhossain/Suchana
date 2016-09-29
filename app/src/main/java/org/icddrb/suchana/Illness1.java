@@ -20,7 +20,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
-//import android.support.v4.view.accessibility.AccessibilityRecordCompatIcs;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,6 +43,8 @@ import java.util.List;
 
 import Common.Connection;
 import Common.Global;
+
+//import android.support.v4.view.accessibility.AccessibilityRecordCompatIcs;
 
 public class Illness1 extends Activity {
     static final int DATE_DIALOG = 1;
@@ -208,6 +209,13 @@ public class Illness1 extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Illness1_list.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
@@ -215,7 +223,24 @@ public class Illness1 extends Activity {
                 }
             });
 
-
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Illness1.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -671,7 +696,11 @@ public class Illness1 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Illness1.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(Illness1.this, Illness1_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Illness1.this, status);
                 return;
