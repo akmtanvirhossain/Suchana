@@ -191,8 +191,6 @@ public class AssetNB extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            H42A = IDbundle.getString("H42a");
-
             TableName = "AssetNB";
 
             //turnGPSOn();
@@ -202,6 +200,7 @@ public class AssetNB extends Activity {
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
+            cmdSave = (Button) findViewById(R.id.cmdSave);
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
@@ -235,8 +234,12 @@ public class AssetNB extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
                             Intent intent = new Intent(getApplicationContext(), MainMenu.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }
@@ -573,7 +576,7 @@ public class AssetNB extends Activity {
 
             DataSearch(RND, SUCHANAID, H42A);
 
-            cmdSave = (Button) findViewById(R.id.cmdSave);
+
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
