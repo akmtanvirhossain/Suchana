@@ -657,6 +657,10 @@ public class SES extends Activity {
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intent = new Intent(getApplicationContext(), AssetB.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }

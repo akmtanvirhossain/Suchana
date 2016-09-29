@@ -225,7 +225,7 @@ public class AssetB extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            H41A = IDbundle.getString("H41a");
+
 
             TableName = "AssetB";
 
@@ -235,6 +235,7 @@ public class AssetB extends Activity {
             //FindLocation();
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
@@ -265,12 +266,16 @@ public class AssetB extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start AssetB [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }
@@ -283,10 +288,14 @@ public class AssetB extends Activity {
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
@@ -570,7 +579,7 @@ public class AssetB extends Activity {
 
                     String spnData = Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-");
                     DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
-                    if (Integer.parseInt(spnData) < 8) {
+                    if (Integer.parseInt(spnData) < 8 | Integer.parseInt(spnData) > 19) {
                         seclblH41a.setVisibility(View.VISIBLE);
                         secH41i.setVisibility(View.VISIBLE);
                     } else {
@@ -685,13 +694,17 @@ public class AssetB extends Activity {
                     if (spnH41e.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH41e.getSelectedItem().toString(), "-");
                     if (!spnData.equalsIgnoreCase("1")) {
-                        secH41eX.setVisibility(View.GONE);
-                        lineH41eX.setVisibility(View.GONE);
+                        spnH41f.setSelection(0);
                         secH41f.setVisibility(View.GONE);
                         lineH41f.setVisibility(View.GONE);
                         secH41fX.setVisibility(View.GONE);
                         lineH41fX.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("10")) {
+                    } else {
+                        secH41f.setVisibility(View.VISIBLE);
+                        lineH41f.setVisibility(View.VISIBLE);
+
+                    }
+                    if (spnData.equalsIgnoreCase("10")) {
                         secH41eX.setVisibility(View.VISIBLE);
                         lineH41eX.setVisibility(View.VISIBLE);
                     } else {
@@ -822,8 +835,7 @@ public class AssetB extends Activity {
                         lineH41j.setVisibility(View.VISIBLE);
                         secH41k.setVisibility(View.VISIBLE);
                         lineH41k.setVisibility(View.VISIBLE);
-                        secH41kX.setVisibility(View.VISIBLE);
-                        lineH41kX.setVisibility(View.VISIBLE);
+
                     }
                 }
             });
@@ -870,6 +882,7 @@ public class AssetB extends Activity {
             lineH41kX = (View) findViewById(R.id.lineH41kX);
             VlblH41kX = (TextView) findViewById(R.id.VlblH41kX);
             txtH41kX = (EditText) findViewById(R.id.txtH41kX);
+            secH41kX.setVisibility(View.GONE);
             seclblH41b = (LinearLayout) findViewById(R.id.seclblH41b);
             secH41l = (LinearLayout) findViewById(R.id.secH41l);
             lineH41l = (View) findViewById(R.id.lineH41l);
@@ -917,9 +930,7 @@ public class AssetB extends Activity {
                         VlblH41o4.setVisibility(View.GONE);
                         chkH41o4.setVisibility(View.GONE);
                         secH41o4X.setVisibility(View.GONE);
-                        lineH41o4X.setVisibility(View.GONE);
-                        VlblH41o4X.setVisibility(View.GONE);
-                        txtH41o4X.setVisibility(View.GONE);
+
 
 
                     } else {
@@ -944,10 +955,7 @@ public class AssetB extends Activity {
                         lineH41o4.setVisibility(View.VISIBLE);
                         VlblH41o4.setVisibility(View.VISIBLE);
                         chkH41o4.setVisibility(View.VISIBLE);
-                        secH41o4X.setVisibility(View.VISIBLE);
-                        lineH41o4X.setVisibility(View.VISIBLE);
-                        VlblH41o4X.setVisibility(View.VISIBLE);
-                        txtH41o4X.setVisibility(View.VISIBLE);
+
 
                     }
                 }
@@ -981,30 +989,33 @@ public class AssetB extends Activity {
             lineH41o4X = (View) findViewById(R.id.lineH41o4X);
             VlblH41o4X = (TextView) findViewById(R.id.VlblH41o4X);
             txtH41o4X = (EditText) findViewById(R.id.txtH41o4X);
-            txtH41o4X.setVisibility(View.GONE);
+            secH41o4X.setVisibility(View.GONE);
             chkH41o4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        txtH41o4X.setVisibility(View.VISIBLE);
+                        secH41o4X.setVisibility(View.VISIBLE);
                     } else {
                         txtH41o4X.setText("");
-                        txtH41o4X.setVisibility(View.GONE);
+                        secH41o4X.setVisibility(View.GONE);
                     }
                 }
             });
 
+            secH41aX.setVisibility(View.GONE);
+
             DataSearch(RND, SUCHANAID, H41A);
 
-            cmdSave = (Button) findViewById(R.id.cmdSave);
+
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
                 }
             });
         } catch (Exception e) {
-            Connection.MessageBox(AssetB.this, e.getMessage());
-            return;
+            throw e;
+            // Connection.MessageBox(AssetB.this, e.getMessage());
+            // return;
         }
     }
 
