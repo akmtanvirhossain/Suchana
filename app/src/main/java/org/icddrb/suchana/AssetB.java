@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -683,7 +684,7 @@ public class AssetB extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH41e.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH41e.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
+                    if (!spnData.equalsIgnoreCase("1")) {
                         secH41eX.setVisibility(View.GONE);
                         lineH41eX.setVisibility(View.GONE);
                         secH41f.setVisibility(View.GONE);
@@ -980,6 +981,18 @@ public class AssetB extends Activity {
             lineH41o4X = (View) findViewById(R.id.lineH41o4X);
             VlblH41o4X = (TextView) findViewById(R.id.VlblH41o4X);
             txtH41o4X = (EditText) findViewById(R.id.txtH41o4X);
+            txtH41o4X.setVisibility(View.GONE);
+            chkH41o4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        txtH41o4X.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH41o4X.setText("");
+                        txtH41o4X.setVisibility(View.GONE);
+                    }
+                }
+            });
 
             DataSearch(RND, SUCHANAID, H41A);
 
@@ -1368,6 +1381,7 @@ public class AssetB extends Activity {
                 if (item.getH41o4().equals("1")) {
                     chkH41o4.setChecked(true);
                 } else if (item.getH41o4().equals("2")) {
+                    chkH41o4.setChecked(true);
                     chkH41o4.setChecked(false);
                 }
                 txtH41o4X.setText(item.getH41o4X());
@@ -1431,6 +1445,7 @@ public class AssetB extends Activity {
                 if (item.getH41o4().equals("1")) {
                     chkH41o4.setChecked(true);
                 } else if (item.getH41o4().equals("2")) {
+                    chkH41o4.setChecked(true);
                     chkH41o4.setChecked(false);
                 }
                 txtH41o4X.setText(item.getH41o4X());
@@ -1461,6 +1476,7 @@ public class AssetB extends Activity {
                 chkH41o2.setChecked(false);
                 chkH41o3.setChecked(true);
                 chkH41o3.setChecked(false);
+                chkH41o4.setChecked(true);
                 chkH41o4.setChecked(false);
 
                 txtH41o4X.setText("");
