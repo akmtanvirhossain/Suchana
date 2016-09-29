@@ -663,10 +663,14 @@ public class SES extends Activity {
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
+            txtRnd.setText(RND);
+            txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
             secH311 = (LinearLayout) findViewById(R.id.secH311);
             lineH311 = (View) findViewById(R.id.lineH311);
             VlblH311 = (TextView) findViewById(R.id.VlblH311);
@@ -2133,6 +2137,7 @@ public class SES extends Activity {
             rdoH6201 = (RadioButton) findViewById(R.id.rdoH6201);
             rdoH6202 = (RadioButton) findViewById(R.id.rdoH6202);
 
+            DataSearch(RND, SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -2523,6 +2528,7 @@ public class SES extends Activity {
             SES_DataModel objSave = new SES_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
+
             objSave.setH311((spnH311.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH311.getSelectedItem().toString(), "-")));
             objSave.setH312(txtH312.getText().toString());
             objSave.setH313(txtH313.getText().toString());

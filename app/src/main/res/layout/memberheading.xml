@@ -47,7 +47,7 @@
             android:text="লিঙ্গ" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="পিতা#" />
@@ -89,7 +89,7 @@
             android:text="ধর্ম" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H29X" />
@@ -101,7 +101,7 @@
             android:text="ভাষা" />
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="সাক্ষর জ্ঞান" />
@@ -113,25 +113,25 @@
             android:text="শিক্ষা" />
 
         <TextView
-            android:layout_width="70sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H212X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="স্কুলের ধরন" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="এনজিও সদস্য" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="পেশা  প্রধান" />
@@ -143,7 +143,7 @@
             android:text="H215X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="পেশা  দ্বিতীয়" />
@@ -155,7 +155,7 @@
             android:text="H216X" />
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="H217" />
