@@ -62,6 +62,12 @@ public class Member extends Activity {
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
+
+
+    Spinner spnH24;
+    Spinner spnH221;
+    Spinner spnH222;
+
     TextView lblHeading;
     LinearLayout secRnd;
     View lineRnd;
@@ -289,6 +295,15 @@ public class Member extends Activity {
                     adb.show();
                 }
             });*/
+
+            spnH24 = (Spinner) findViewById(R.id.spnH24);
+            spnH24.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '96-মৃত' union Select '97-অন্যত্র থাকে'"));
+
+            spnH221 = (Spinner) findViewById(R.id.spnH221);
+            spnH221.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '96-মৃত' union Select '97-অন্যত্র থাকে'"));
+
+            spnH222 = (Spinner) findViewById(R.id.spnH222);
+            spnH222.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '96-মৃত' union Select '97-অন্যত্র থাকে'"));
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -888,11 +903,13 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Select anyone options from (লিঙ্গ ).");
                 rdoH231.requestFocus();
                 return;
-            } else if (txtH24.getText().toString().length() == 0 & secH24.isShown()) {
+            } else if (spnH24.getSelectedItemPosition() == 0 & secH24.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: পিতা’র লাইন নম্বর.");
-                txtH24.requestFocus();
+                spnH24.requestFocus();
                 return;
-            } else if (txtH24.getText().toString().length() != 0) {
+            }
+
+            /*else if (txtH24.getText().toString().length() != 0) {
                 boolean b = false;
                 Integer[] QH24Array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 96, 97};
                 for (Integer aQH24Array : QH24Array) {
@@ -906,7 +923,7 @@ public class Member extends Activity {
                     txtH24.requestFocus();
                     return;
                 }
-            }
+            }*/
 
 
             if (spnH25.getSelectedItemPosition() == 0 & secH25.isShown()) {
@@ -985,8 +1002,8 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: পেশা  প্রধান.");
                 spnH215.requestFocus();
                 return;
-            } else if (spnH215.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 05) {
-                Connection.MessageBox(Member.this, "Required field: বয়স এবং পেশা ঠিক নেই");
+            } else if (spnH215.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 5) {
+                Connection.MessageBox(Member.this, "Required field: বয়সের সাথে পেশা ঠিক নেই");
                 spnH215.requestFocus();
                 return;
             } else if (txtH215X.getText().toString().length() == 0 & secH215X.isShown()) {
@@ -997,12 +1014,12 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "Required field: পেশা  দ্বিতীয়.");
                 spnH216.requestFocus();
                 return;
-            } else if (spnH216.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 05) {
-                Connection.MessageBox(Member.this, "Required field: বয়স এবং দ্বিতীয় পেশা ঠিক নেই");
+            } else if (spnH216.getSelectedItemPosition() == 30 & Integer.valueOf(txtH26Y.getText().toString()) > 5) {
+                Connection.MessageBox(Member.this, "Required field: বয়সের সাথে দ্বিতীয় পেশা ঠিক নেই");
                 spnH216.requestFocus();
                 return;
             } else if (spnH215.getSelectedItemPosition() == 28 & spnH216.getSelectedItemPosition() != 28) {
-                Connection.MessageBox(Member.this, "Required field: পেশা এবং দ্বিতীয় পেশা ঠিক নেই");
+                Connection.MessageBox(Member.this, "Required field: প্রথম এবং দ্বিতীয় পেশা ঠিক নয়");
                 spnH216.requestFocus();
                 return;
             } else if (txtH216X.getText().toString().length() == 0 & secH216X.isShown()) {
@@ -1063,28 +1080,80 @@ public class Member extends Activity {
                     return;
                 }
             }
-            if (txtH221.getText().toString().length() == 0 & secH221.isShown()) {
+            if (spnH221.getSelectedItemPosition() == 0 & secH221.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
-                txtH221.requestFocus();
+                spnH221.requestFocus();
                 return;
             }
-            if (txtH221.getText().toString().length() != 0 & secH221.isShown()) {
+            /*if (txtH221.getText().toString().length() != 0 & secH221.isShown()) {
 
                 if (Integer.valueOf(txtH221.getText().toString().length() == 0 ? "0" : txtH221.getText().toString()) < 0 || Integer.valueOf(txtH221.getText().toString().length() == 0 ? "25" : txtH221.getText().toString()) > 25) {
                     Connection.MessageBox(Member.this, "Value should be between 0 and 25(মায়ের লাইন নম্বর).");
                     txtH221.requestFocus();
                     return;
                 }
-            }
-            if (txtH222.getText().toString().length() == 0 & secH222.isShown()) {
+            }*/
+
+
+            if (spnH222.getSelectedItemPosition() == 0 & secH222.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: স্বামী অথবা স্ত্রী  লাইন নম্বর.");
-                txtH222.requestFocus();
+                spnH222.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH222.getText().toString().length() == 0 ? "0" : txtH222.getText().toString()) < 0 || Integer.valueOf(txtH222.getText().toString().length() == 0 ? "25" : txtH222.getText().toString()) > 25) {
+            }
+
+            /*else if (Integer.valueOf(txtH222.getText().toString().length() == 0 ? "0" : txtH222.getText().toString()) < 0 || Integer.valueOf(txtH222.getText().toString().length() == 0 ? "25" : txtH222.getText().toString()) > 25) {
                 Connection.MessageBox(Member.this, "Value should be between 0 and 25(স্বামী অথবা স্ত্রী  লাইন নম্বর).");
                 txtH222.requestFocus();
                 return;
+            }*/
+
+            String[] RTH = spnH25.getSelectedItem().toString().split("-");
+            String[] MS = spnH27.getSelectedItem().toString().split("-");
+
+            if ((RTH[0].equals("1") | RTH[0].equals("2") | RTH[0].equals("4") | RTH[0].equals("6") | RTH[0].equals("11")) & MS[0].equals("1")) {
+                Connection.MessageBox(Member.this, "খানা প্রধানের সাথে সম্পর্ক ১,২,৪,৬,১১ হলে বৈবাহিক অবস্থা অবিবাহিত হতে পারে না.");
+                spnH25.requestFocus();
+                return;
+            } else if (RTH[0].equals("6") & rdoH232.isChecked()) {
+                Connection.MessageBox(Member.this, "খানা প্রধানের বাবা মহিলা হবে না");
+                spnH25.requestFocus();
+                return;
+            } else if (RTH[0].equals("1") & rdoH231.isChecked()) {
+                Connection.MessageBox(Member.this, "খানা প্রধানের মা পুরুষ হবে না");
+                spnH25.requestFocus();
+                return;
             }
+
+            Integer H217 = Integer.valueOf(txtH217.getText().toString().length() == 0 ? "0" : txtH217.getText().toString());
+            Integer H218 = Integer.valueOf(txtH218.getText().toString().length() == 0 ? "0" : txtH218.getText().toString());
+            Integer H219 = Integer.valueOf(txtH219.getText().toString().length() == 0 ? "0" : txtH219.getText().toString());
+
+            if (H217 > H218) {
+                Connection.MessageBox(Member.this, "প্রধান পেশা থেকে গত মাসের আয় অবশ্যই সকল উৎস থেকে গত মাসের আয় এর সমান অথবা কম হবে");
+                txtH217.requestFocus();
+                return;
+            } else if (H218 > H219) {
+                Connection.MessageBox(Member.this, "সকল উৎস থেকে গত মাসের আয় অবশ্যই সকল উৎস থেকে গত বছরের আয় এর সমান অথবা কম হবে");
+                txtH218.requestFocus();
+                return;
+            }
+
+            if ((RTH[0].equals("1") | RTH[0].equals("6")) & Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString()) < 15) {
+                Connection.MessageBox(Member.this, "খানা প্রধানের বাবা/মা এর বয়স অবশ্যই ১৫ বছরের বেশী হবে");
+                txtH26Y.requestFocus();
+                return;
+            }
+
+
+            Integer H26Y = Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString());
+            Integer H28 = Integer.valueOf(txtH28.getText().toString().length() == 0 ? "0" : txtH28.getText().toString());
+            if (H28 > H26Y) {
+                Connection.MessageBox(Member.this, "সদস্যের বয়স, বিয়ের সময় বয়সের সমান অথবা বেশী হবে");
+                txtH217.requestFocus();
+                return;
+            }
+
+
 
             String SQL = "";
             RadioButton rb;
@@ -1101,7 +1170,8 @@ public class Member extends Activity {
                 if (rb.isChecked()) objSave.setH23(d_rdogrpH23[i]);
             }
 
-            objSave.setH24(txtH24.getText().toString());
+            //objSave.setH24(txtH24.getText().toString());
+            objSave.setH24((spnH24.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-")));
             objSave.setH25((spnH25.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH25.getSelectedItem().toString(), "-")));
             objSave.setH26Y(txtH26Y.getText().toString());
             objSave.setH26M(txtH26M.getText().toString());
@@ -1135,8 +1205,12 @@ public class Member extends Activity {
             objSave.setH218(txtH218.getText().toString());
             objSave.setH219(txtH219.getText().toString());
             objSave.setH220(txtH220.getText().toString());
-            objSave.setH221(txtH221.getText().toString());
-            objSave.setH222(txtH222.getText().toString());
+            //objSave.setH221(txtH221.getText().toString());
+            objSave.setH221((spnH221.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-")));
+
+            //objSave.setH222(txtH222.getText().toString());
+            objSave.setH222((spnH222.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-")));
+
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1182,7 +1256,8 @@ public class Member extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                txtH24.setText(item.getH24());
+                //txtH24.setText(item.getH24());
+                spnH24.setSelection(Global.SpinnerItemPositionAnyLength(spnH24, item.getH24()));
                 spnH25.setSelection(Global.SpinnerItemPositionAnyLength(spnH25, item.getH25()));
                 txtH26Y.setText(item.getH26Y());
                 txtH26M.setText(item.getH26M());
@@ -1216,8 +1291,11 @@ public class Member extends Activity {
                 txtH218.setText(item.getH218());
                 txtH219.setText(item.getH219());
                 txtH220.setText(item.getH220());
-                txtH221.setText(item.getH221());
-                txtH222.setText(item.getH222());
+
+                //txtH221.setText(item.getH221());
+                spnH221.setSelection(Global.SpinnerItemPositionAnyLength(spnH221, item.getH221()));
+                //txtH222.setText(item.getH222());
+                spnH222.setSelection(Global.SpinnerItemPositionAnyLength(spnH222, item.getH222()));
             }
         } catch (Exception e) {
             Connection.MessageBox(Member.this, e.getMessage());
@@ -1312,4 +1390,6 @@ public class Member extends Activity {
         super.onDestroy();
         turnGPSOff();
     }
+
+
 }
