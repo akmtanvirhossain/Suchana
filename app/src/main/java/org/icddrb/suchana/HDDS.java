@@ -164,7 +164,7 @@ public class HDDS extends Activity {
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
-
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -192,11 +192,16 @@ public class HDDS extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(HDDS.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start Cost [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+
+                            Intent intent = new Intent(getApplicationContext(), Cost1.class);
+                            intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -215,6 +220,10 @@ public class HDDS extends Activity {
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
 
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
 
             seclblH7 = (LinearLayout) findViewById(R.id.seclblH7);
             seclblH71 = (LinearLayout) findViewById(R.id.seclblH71);
@@ -537,8 +546,13 @@ public class HDDS extends Activity {
                         secH7b4.setVisibility(View.GONE);
                         lineH7b4.setVisibility(View.GONE);
                         chkH7b4.setChecked(false);
+                        rdoH7c2.setEnabled(true);
+                        rdogrpH7c.clearCheck();
 
                     } else {
+
+                        rdoH7c1.setChecked(true);
+                        rdoH7c2.setEnabled(false);
                         secH7b1.setVisibility(View.VISIBLE);
                         lineH7b1.setVisibility(View.VISIBLE);
                         secH7b2.setVisibility(View.VISIBLE);
@@ -581,7 +595,7 @@ public class HDDS extends Activity {
 
             DataSearch(RND, SUCHANAID, H7);
 
-            cmdSave = (Button) findViewById(R.id.cmdSave);
+
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
