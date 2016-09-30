@@ -216,16 +216,22 @@ public class Agriculture extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+
+                            Bundle IDBundle = new Bundle();
+                            finish();
+                            IDBundle.putString("Rnd", txtRnd.getText().toString());
+                            IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                             Intent intent = new Intent(getApplicationContext(), Agriculture_list.class);
+                            intent.putExtras(IDBundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
-                            finish();
+
                         }
                     });
                     adb.show();
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+           /* ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Agriculture.this);
@@ -243,7 +249,7 @@ public class Agriculture extends Activity {
                     adb.show();
                 }
             });
-
+*/
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -257,7 +263,7 @@ public class Agriculture extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where cast(H26Y as int)>15"));
             seclbH151 = (LinearLayout) findViewById(R.id.seclbH151);
             secH151 = (LinearLayout) findViewById(R.id.secH151);
             lineH151 = (View) findViewById(R.id.lineH151);
@@ -280,7 +286,7 @@ public class Agriculture extends Activity {
                     if (rbData.equalsIgnoreCase("0")) {
                         secSl.setVisibility(View.GONE);
                         lineSl.setVisibility(View.GONE);
-                        txtSl.setText("");
+                      //  txtSl.setText("");
 
                         secH152a.setVisibility(View.GONE);
                         lineH152a.setVisibility(View.GONE);
@@ -354,8 +360,8 @@ public class Agriculture extends Activity {
                         lineSl.setVisibility(View.VISIBLE);
                         secH152a.setVisibility(View.VISIBLE);
                         lineH152a.setVisibility(View.VISIBLE);
-                        secH152bOth.setVisibility(View.VISIBLE);
-                        lineH152bOth.setVisibility(View.VISIBLE);
+                       // secH152bOth.setVisibility(View.VISIBLE);
+                     //   lineH152bOth.setVisibility(View.VISIBLE);
                         secH152b.setVisibility(View.VISIBLE);
                         lineH152b.setVisibility(View.VISIBLE);
                         secH152c.setVisibility(View.VISIBLE);
@@ -466,6 +472,10 @@ public class Agriculture extends Activity {
             lineH152bOth = (View) findViewById(R.id.lineH152bOth);
             VlblH152bOth = (TextView) findViewById(R.id.VlblH152bOth);
             txtH152bOth = (EditText) findViewById(R.id.txtH152bOth);
+
+            secH152bOth.setVisibility(View.GONE);
+            lineH152bOth.setVisibility(View.GONE);
+
             secLb1H151b = (LinearLayout) findViewById(R.id.secLb1H151b);
             secH152b = (LinearLayout) findViewById(R.id.secH152b);
             lineH152b = (View) findViewById(R.id.lineH152b);
@@ -736,6 +746,12 @@ public class Agriculture extends Activity {
                 return;
             }
 
+            if(Integer.valueOf(txtH152d1.getText().toString())<(Integer.valueOf(txtH152e1.getText().toString())+Integer.valueOf(txtH152g.getText().toString())+Integer.valueOf(txtH152h1.getText().toString())+Integer.valueOf(txtH152i1.getText().toString())+Integer.valueOf(txtH152j1.getText().toString())+Integer.valueOf(txtH152k1.getText().toString())))
+            {
+                Connection.MessageBox(Agriculture.this, "Production quantity and expenditure inconsistent .");
+                return;
+            }
+
             String SQL = "";
             RadioButton rb;
 
@@ -814,7 +830,13 @@ public class Agriculture extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Agriculture.this, "Saved Successfully");
+                Bundle IDBundle = new Bundle();
+                finish();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(Agriculture.this, Agriculture_list.class).putExtras(IDBundle));
+
+
             } else {
                 Connection.MessageBox(Agriculture.this, status);
                 return;
