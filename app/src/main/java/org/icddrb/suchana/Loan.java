@@ -172,6 +172,7 @@ public class Loan extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            finish();
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
@@ -185,7 +186,7 @@ public class Loan extends Activity {
                     adb.show();
                 }
             });
-
+/*
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -203,7 +204,7 @@ public class Loan extends Activity {
                     });
                     adb.show();
                 }
-            });
+            });*/
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -219,7 +220,7 @@ public class Loan extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where cast(H26Y as int)>15"));
             secH111 = (LinearLayout) findViewById(R.id.secH111);
             lineH111 = (View) findViewById(R.id.lineH111);
             VlblH111 = (TextView) findViewById(R.id.VlblH111);
@@ -277,16 +278,16 @@ public class Loan extends Activity {
                         lineH112.setVisibility(View.VISIBLE);
                         secH113.setVisibility(View.VISIBLE);
                         lineH113.setVisibility(View.VISIBLE);
-                        secH113X.setVisibility(View.VISIBLE);
-                        lineH113X.setVisibility(View.VISIBLE);
+                      //  secH113X.setVisibility(View.VISIBLE);
+                     //   lineH113X.setVisibility(View.VISIBLE);
                         secH114a.setVisibility(View.VISIBLE);
                         lineH114a.setVisibility(View.VISIBLE);
                         secH114b.setVisibility(View.VISIBLE);
                         lineH114b.setVisibility(View.VISIBLE);
                         secH114c.setVisibility(View.VISIBLE);
                         lineH114c.setVisibility(View.VISIBLE);
-                        secH114X.setVisibility(View.VISIBLE);
-                        lineH114X.setVisibility(View.VISIBLE);
+                       // secH114X.setVisibility(View.VISIBLE);
+                      //  lineH114X.setVisibility(View.VISIBLE);
                         secH115.setVisibility(View.VISIBLE);
                         lineH115.setVisibility(View.VISIBLE);
                         secH116.setVisibility(View.VISIBLE);
@@ -573,7 +574,7 @@ public class Loan extends Activity {
             lineH113X.setVisibility(View.GONE);
             secH114X.setVisibility(View.GONE);
             lineH114X.setVisibility(View.GONE);
-
+            DataSearch(RND,SUCHANAID,H112);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -724,6 +725,7 @@ public class Loan extends Activity {
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 Bundle IDBundle = new Bundle();
+                finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                 IDBundle.putString("H41a", "");
