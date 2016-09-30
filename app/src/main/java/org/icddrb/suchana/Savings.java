@@ -173,7 +173,7 @@ public class Savings extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), Cost1.class);
+                            Intent intent = new Intent(getApplicationContext(), Cost3.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -188,11 +188,15 @@ public class Savings extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Savings.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start Loan [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Loan_list.class);
+                            intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -210,6 +214,12 @@ public class Savings extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
@@ -277,6 +287,10 @@ public class Savings extends Activity {
                         secH1037d.setVisibility(View.GONE);
                         lineH1037d.setVisibility(View.GONE);
                         spnH1037d.setSelection(0);
+
+                        secH1037X.setVisibility(View.GONE);
+                        txtH1037X.setText("");
+                        lineH1037X.setVisibility(View.GONE);
                     } else {
                         secH1031.setVisibility(View.VISIBLE);
                         lineH1031.setVisibility(View.VISIBLE);
@@ -502,6 +516,7 @@ public class Savings extends Activity {
             VlblH1037X = (TextView) findViewById(R.id.VlblH1037X);
             txtH1037X = (EditText) findViewById(R.id.txtH1037X);
 
+            secH1037X.setVisibility(View.GONE);
 
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);

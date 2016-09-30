@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Identity List"
+            android:text="Land"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -47,7 +47,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="HOME"
+            android:text="Cost1"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -59,12 +59,6 @@
             android:src="@drawable/forward" />
 
     </LinearLayout>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginBottom="5sp"
-        android:background="#CCCCCC" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -213,49 +207,56 @@
                         android:id="@+id/buttonAssetType01"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="01" />
 
                     <Button
                         android:id="@+id/buttonAssetType02"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="02" />
 
                     <Button
                         android:id="@+id/buttonAssetType03"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="03" />
 
                     <Button
                         android:id="@+id/buttonAssetType04"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="04" />
 
                     <Button
                         android:id="@+id/buttonAssetType05"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="05" />
 
                     <Button
                         android:id="@+id/buttonAssetType06"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="06" />
 
                     <Button
                         android:id="@+id/buttonAssetType07"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="07" />
 
 
@@ -272,49 +273,56 @@
                         android:id="@+id/buttonAssetType08"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="08" />
 
                     <Button
                         android:id="@+id/buttonAssetType09"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="09" />
 
                     <Button
                         android:id="@+id/buttonAssetType10"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="10" />
 
                     <Button
                         android:id="@+id/buttonAssetType11"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="11" />
 
                     <Button
                         android:id="@+id/buttonAssetType12"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="12" />
 
                     <Button
                         android:id="@+id/buttonAssetType13"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="13" />
 
                     <Button
                         android:id="@+id/buttonAssetType14"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="1"
                         android:text="14" />
 
 
@@ -332,42 +340,48 @@
                         android:id="@+id/buttonAssetType15"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="15" />
 
                     <Button
                         android:id="@+id/buttonAssetType16"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="16" />
 
                     <Button
                         android:id="@+id/buttonAssetType17"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="17" />
 
                     <Button
                         android:id="@+id/buttonAssetType18"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="18" />
 
                     <Button
                         android:id="@+id/buttonAssetType19"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="19" />
 
                     <Button
                         android:id="@+id/buttonAssetType20"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
-                        android:layout_margin="2sp"
+                        android:layout_margin="5sp"
+                        android:layout_weight="0.17"
                         android:text="20" />
 
                 </LinearLayout>
@@ -706,4 +720,11 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
 </LinearLayout>

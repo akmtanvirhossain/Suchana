@@ -745,7 +745,7 @@
                 <EditText
                     android:id="@+id/txtH1037X"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="220sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
