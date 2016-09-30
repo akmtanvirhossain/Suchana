@@ -284,7 +284,7 @@ public class Destruction1 extends Activity {
             // Double.toString(currentLatitude);
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
-
+            cmdSave = (Button) findViewById(R.id.cmdSave);
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -313,7 +313,7 @@ public class Destruction1 extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Destruction1.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start Destruction 2 [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -1033,7 +1033,25 @@ public class Destruction1 extends Activity {
             lineH14a4x2.setVisibility(View.GONE);
             lineH14a4x3.setVisibility(View.GONE);
 
-            cmdSave = (Button) findViewById(R.id.cmdSave);
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+            secH14a3x1.setVisibility(View.GONE);
+            lineH14a3x1.setVisibility(View.GONE);
+            secH14a3x2.setVisibility(View.GONE);
+            lineH14a3x2.setVisibility(View.GONE);
+            secH14a3x3.setVisibility(View.GONE);
+            lineH14a3x3.setVisibility(View.GONE);
+            secH14a4x1.setVisibility(View.GONE);
+            lineH14a4x1.setVisibility(View.GONE);
+            secH14a4x2.setVisibility(View.GONE);
+            lineH14a4x2.setVisibility(View.GONE);
+            secH14a4x3.setVisibility(View.GONE);
+            lineH14a4x3.setVisibility(View.GONE);
+
+
+            DataSearch(RND, SUCHANAID, H14A);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
@@ -1187,11 +1205,28 @@ public class Destruction1 extends Activity {
                 Connection.MessageBox(Destruction1.this, "Value should be between 1 and 999999(আপনি কত টাকা  খরচ করেছেন অথবা কত ক্ষতি হয়েছে).");
                 txtH14a2.requestFocus();
                 return;
+            } else if (secH14a3a.isShown() & (!chkH14a3a.isChecked() &
+                    !chkH14a3b.isChecked() &
+                    !chkH14a3c.isChecked() &
+                    !chkH14a3d.isChecked() &
+                    !chkH14a3e.isChecked() &
+                    !chkH14a3f.isChecked() &
+                    !chkH14a3g.isChecked() &
+                    !chkH14a3h.isChecked() &
+                    !chkH14a3i.isChecked() &
+                    !chkH14a3j.isChecked() &
+                    !chkH14a3k.isChecked() &
+                    !chkH14a3l.isChecked() &
+                    !chkH14a3m.isChecked() &
+                    !chkH14a3x.isChecked())) {
+                Connection.MessageBox(Destruction1.this, "Required field: CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secH14a3a.requestFocus();
+                return;
             } else if (txtH14a3x1.getText().toString().length() == 0 & secH14a3x1.isShown()) {
                 Connection.MessageBox(Destruction1.this, "Required field: নির্দিষ্ট করুন.");
                 txtH14a3x1.requestFocus();
                 return;
-            } else if (txtH14a3x2.getText().toString().length() == 0 & secH14a3x2.isShown()) {
+            } /*else if (txtH14a3x2.getText().toString().length() == 0 & secH14a3x2.isShown()) {
                 Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
                 txtH14a3x2.requestFocus();
                 return;
@@ -1199,11 +1234,30 @@ public class Destruction1 extends Activity {
                 Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
                 txtH14a3x3.requestFocus();
                 return;
+
+            }*/ else if (secH14a4a.isShown() & (!chkH14a4a.isChecked() &
+                    !chkH14a4b.isChecked() &
+                    !chkH14a4c.isChecked() &
+                    !chkH14a4d.isChecked() &
+                    !chkH14a4e.isChecked() &
+                    !chkH14a4f.isChecked() &
+                    !chkH14a4g.isChecked() &
+                    !chkH14a4h.isChecked() &
+                    !chkH14a4i.isChecked() &
+                    !chkH14a4j.isChecked() &
+                    !chkH14a4k.isChecked() &
+                    !chkH14a4l.isChecked() &
+                    !chkH14a4m.isChecked() &
+                    !chkH14a14n.isChecked() &
+                    !chkH14a4x.isChecked())) {
+                Connection.MessageBox(Destruction1.this, "Required field: CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secH14a4a.requestFocus();
+                return;
             } else if (txtH14a4x1.getText().toString().length() == 0 & secH14a4x1.isShown()) {
                 Connection.MessageBox(Destruction1.this, "Required field: নির্দিষ্ট করুন.");
                 txtH14a4x1.requestFocus();
                 return;
-            } else if (txtH14a4x2.getText().toString().length() == 0 & secH14a4x2.isShown()) {
+            } /*else if (txtH14a4x2.getText().toString().length() == 0 & secH14a4x2.isShown()) {
                 Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
                 txtH14a4x2.requestFocus();
                 return;
@@ -1211,7 +1265,8 @@ public class Destruction1 extends Activity {
                 Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
                 txtH14a4x3.requestFocus();
                 return;
-            }
+            }*/
+
 
             String SQL = "";
             RadioButton rb;
@@ -1297,7 +1352,7 @@ public class Destruction1 extends Activity {
 
             RadioButton rb;
             Destruction1_DataModel d = new Destruction1_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H14a='" + H14a + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<Destruction1_DataModel> data = d.SelectAll(this, SQL);
             for (Destruction1_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
@@ -1380,6 +1435,7 @@ public class Destruction1 extends Activity {
                 if (item.getH14a3x().equals("1")) {
                     chkH14a3x.setChecked(true);
                 } else if (item.getH14a3x().equals("2")) {
+                    chkH14a3x.setChecked(true);
                     chkH14a3x.setChecked(false);
                 }
                 txtH14a3x1.setText(item.getH14a3x1());
@@ -1458,11 +1514,15 @@ public class Destruction1 extends Activity {
                 if (item.getH14a4x().equals("1")) {
                     chkH14a4x.setChecked(true);
                 } else if (item.getH14a4x().equals("2")) {
+                    chkH14a4x.setChecked(true);
                     chkH14a4x.setChecked(false);
                 }
                 txtH14a4x1.setText(item.getH14a4x1());
                 txtH14a4x2.setText(item.getH14a4x2());
                 txtH14a4x3.setText(item.getH14a4x3());
+
+
+                buttonColor();
             }
         } catch (Exception e) {
             Connection.MessageBox(Destruction1.this, e.getMessage());
