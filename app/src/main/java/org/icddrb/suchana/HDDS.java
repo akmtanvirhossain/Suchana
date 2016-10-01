@@ -667,6 +667,7 @@ public class HDDS extends Activity {
                 rb = (RadioButton) rdogrpH7c.getChildAt(i);
                 if (rb.isChecked()) objSave.setH7c(d_rdogrpH7c[i]);
             }
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
 
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -680,6 +681,9 @@ public class HDDS extends Activity {
             if (status.length() == 0) {
                 buttonColor();
                 if (allItemsCompleted) {
+                    EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                    e.SaveUpdateData(this);
+                    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());

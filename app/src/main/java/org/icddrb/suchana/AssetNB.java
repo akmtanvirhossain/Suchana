@@ -76,7 +76,7 @@ public class AssetNB extends Activity {
     LinearLayout secMSlNo;
     View lineMSlNo;
     TextView VlblMSlNo;
-    EditText txtMSlNo;
+    Spinner spnMSlNo;
     LinearLayout seclblH42;
     LinearLayout secH42a;
     View lineH42a;
@@ -205,7 +205,19 @@ public class AssetNB extends Activity {
             // Double.toString(currentLongitude);
             lblHeading = (TextView) findViewById(R.id.lblHeading);
             cmdSave = (Button) findViewById(R.id.cmdSave);
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
 
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -262,7 +274,8 @@ public class AssetNB extends Activity {
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
-            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
 
             txtRnd.setText(RND);
             txtSuchanaID.setText(SUCHANAID);
@@ -709,13 +722,9 @@ public class AssetNB extends Activity {
                 Connection.MessageBox(AssetNB.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(AssetNB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
-                Connection.MessageBox(AssetNB.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
-                txtMSlNo.requestFocus();
+                spnMSlNo.requestFocus();
                 return;
             } else if (spnH42a.getSelectedItemPosition() == 0 & secH42a.isShown()) {
                 Connection.MessageBox(AssetNB.this, "Required field: সম্পদ.");
@@ -765,7 +774,7 @@ public class AssetNB extends Activity {
             AssetNB_DataModel objSave = new AssetNB_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
             objSave.setH42a((spnH42a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH42a.getSelectedItem().toString(), "-")));
             objSave.setH42aX(txtH42aX.getText().toString());
             objSave.setH42b(txtH42b.getText().toString());
@@ -783,11 +792,15 @@ public class AssetNB extends Activity {
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 buttonColor();
                 if (allItemsCompleted) {
+                    EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                    e.SaveUpdateData(this);
+
                     finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
@@ -816,7 +829,7 @@ public class AssetNB extends Activity {
             for (AssetNB_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 spnH42a.setSelection(Global.SpinnerItemPositionAnyLength(spnH42a, item.getH42a()));
                 txtH42aX.setText(item.getH42aX());
                 txtH42b.setText(item.getH42b());

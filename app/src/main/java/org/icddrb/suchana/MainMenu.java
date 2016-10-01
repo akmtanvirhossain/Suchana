@@ -88,29 +88,31 @@ public class MainMenu extends Activity {
                             new Thread() {
                                 public void run() {
                                     try {
-                                        //C.DataSync_UploadDownload(USERID);
-
                                         List<String> tableList = new ArrayList<String>();
+                                        tableList.add("EntryStatus");
+
+                                        //Household
                                         tableList.add("HHIdentity");
-                                        tableList.add("Agriculture");
+                                        tableList.add("Member");
+                                        tableList.add("SES");
                                         tableList.add("AssetB");
                                         tableList.add("AssetNB");
-                                        tableList.add("Careseek");
+                                        tableList.add("Land");
+                                        tableList.add("HDDS");
+                                        tableList.add("Cost");
+                                        tableList.add("Savings");
+                                        tableList.add("Loan");
+                                        tableList.add("HFIAS");
                                         tableList.add("Destruction1");
                                         tableList.add("Destruction2");
-                                        tableList.add("HDDS");
-                                        tableList.add("IGA");
+                                        tableList.add("Agriculture");
+                                        tableList.add("NGOWork");
                                         tableList.add("Illness1");
                                         tableList.add("Illness2");
-                                        tableList.add("Land");
-                                        tableList.add("Loan");
-                                        tableList.add("LoginUser");
-                                        tableList.add("Member");
-                                        tableList.add("NGOWork");
-                                        tableList.add("Savings");
-                                        tableList.add("SES");
-                                        tableList.add("UserList");
-                                        tableList.add("VillageList");
+                                        tableList.add("Careseek");
+                                        tableList.add("IGA");
+
+                                        //Woman, Child
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 

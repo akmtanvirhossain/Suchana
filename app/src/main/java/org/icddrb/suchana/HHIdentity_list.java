@@ -238,6 +238,7 @@ public class HHIdentity_list extends Activity {
             SQL = "Select Rnd, SuchanaID, Dist, Upz, Un, Vill, H11, AgeGroup, H17, Result,DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload from HHIdentity i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where date(H17) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
+            SQL += " order by date(H17) desc, date(EnDt) desc";
 
             List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
             dataList.clear();

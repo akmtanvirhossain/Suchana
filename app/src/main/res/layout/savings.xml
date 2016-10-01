@@ -12,6 +12,10 @@
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
@@ -176,14 +180,13 @@
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/txtMSlNo"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
+                <Spinner
+                    android:id="@+id/spnMSlNo"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 

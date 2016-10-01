@@ -214,6 +214,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     String UPZ = "";
     String UN = "";
     String VILL = "";
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
@@ -307,17 +309,17 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     startActivity(f1);
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(HHIdentity.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to go to next form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Member_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
 
@@ -326,6 +328,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     adb.show();
                 }
             });
+            lblNext = (TextView) findViewById(R.id.lblNext);
+            lblNext.setVisibility(View.INVISIBLE);
+            cmdForward.setVisibility(View.INVISIBLE);
+
             seclblH1 = (LinearLayout) findViewById(R.id.seclblH1);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -468,6 +474,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listResult.add("2-উত্তরদাত্রী/প্রধান মহিলা বাড়ি ছিলেননা");
             listResult.add("3-অংশগ্রহনে অসম্মতি");
             listResult.add("4-অন্যান্য");
+            listResult.add("5-ইন্টারভিউ আংশিক সম্পন্ন");
             ArrayAdapter<String> adptrResult = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listResult);
             spnResult.setAdapter(adptrResult);
 
@@ -486,47 +493,67 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineResultX.setVisibility(View.GONE);
                     }
 
-                    if (!spnData.equalsIgnoreCase("1")) {
+                    if (!spnData.equalsIgnoreCase("1") & !spnData.equalsIgnoreCase("5")) {
+                        txtResultX.setText("");
                         secH16.setVisibility(View.GONE);
+                        rdogrpH16.clearCheck();
                         lineH16.setVisibility(View.GONE);
                         secH16X.setVisibility(View.GONE);
                         lineH16X.setVisibility(View.GONE);
                         secH13.setVisibility(View.GONE);
                         lineH13.setVisibility(View.GONE);
+                        txtH13.setText("");
                         secH14.setVisibility(View.GONE);
                         lineH14.setVisibility(View.GONE);
+                        spnH14.setSelection(0);
                         secH01.setVisibility(View.GONE);
                         lineH01.setVisibility(View.GONE);
+                        rdogrpH01.clearCheck();
                         secH02.setVisibility(View.GONE);
                         lineH02.setVisibility(View.GONE);
+                        rdogrpH02.clearCheck();
                         secH03.setVisibility(View.GONE);
                         lineH03.setVisibility(View.GONE);
+                        rdogrpH03.clearCheck();
                         secH04.setVisibility(View.GONE);
                         lineH04.setVisibility(View.GONE);
+                        rdogrpH04.clearCheck();
                         secH05.setVisibility(View.GONE);
                         lineH05.setVisibility(View.GONE);
+                        rdogrpH05.clearCheck();
                         secH06.setVisibility(View.GONE);
                         lineH06.setVisibility(View.GONE);
+                        rdogrpH06.clearCheck();
                         secH07.setVisibility(View.GONE);
                         lineH07.setVisibility(View.GONE);
+                        rdogrpH07.clearCheck();
                         secH07a.setVisibility(View.GONE);
                         lineH07a.setVisibility(View.GONE);
+                        chkH07a.setChecked(false);
                         secH07b.setVisibility(View.GONE);
                         lineH07b.setVisibility(View.GONE);
+                        chkH07b.setChecked(false);
                         secH07c.setVisibility(View.GONE);
                         lineH07c.setVisibility(View.GONE);
+                        chkH07c.setChecked(false);
                         secH07d.setVisibility(View.GONE);
                         lineH07d.setVisibility(View.GONE);
+                        chkH07d.setChecked(false);
                         secH07e.setVisibility(View.GONE);
                         lineH07e.setVisibility(View.GONE);
+                        chkH07e.setChecked(false);
                         secH07f.setVisibility(View.GONE);
                         lineH07f.setVisibility(View.GONE);
+                        chkH07g.setChecked(false);
                         secH07g.setVisibility(View.GONE);
                         lineH07g.setVisibility(View.GONE);
+                        chkH07g.setChecked(false);
                         secH07h.setVisibility(View.GONE);
                         lineH07h.setVisibility(View.GONE);
+                        chkH07h.setChecked(false);
                         secH08.setVisibility(View.GONE);
                         lineH08.setVisibility(View.GONE);
+                        rdogrpH08.clearCheck();
                         seclblV1.setVisibility(View.GONE);
                     } else {
                         secH16.setVisibility(View.VISIBLE);
@@ -1129,6 +1156,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 rb = (RadioButton) rdogrpH08.getChildAt(i);
                 if (rb.isChecked()) objSave.setH08(d_rdogrpH08[i]);
             }
+
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1194,6 +1223,9 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
             for (HHIdentity_DataModel item : data) {
+                lblNext.setVisibility(View.GONE);
+                cmdForward.setVisibility(View.GONE);
+
                 Status = "update";
                 txtRnd.setText(item.getRnd());
                 spnDist.setSelection(Global.SpinnerItemPositionAnyLength(spnDist, item.getDist()));

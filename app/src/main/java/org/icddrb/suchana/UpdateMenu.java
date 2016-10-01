@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,8 @@ public class UpdateMenu extends Activity {
     Button cmdMenuStart;
     Button cmdDataUpload;
     Button cmdDataSync;
+    Button cmdMenuInterviewList;
+
     Connection C;
     Global g;
     Bundle IDBundle;
@@ -108,6 +111,14 @@ public class UpdateMenu extends Activity {
                         }
                     });
                     adb.show();
+                }
+            });
+
+            cmdMenuInterviewList = (Button) findViewById(R.id.cmdMenuInterviewList);
+            cmdMenuInterviewList.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, HHIdentity_list.class).putExtras(IDBundle));
                 }
             });
 
@@ -185,10 +196,7 @@ public class UpdateMenu extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", RND);
-                    IDbundle.putString("SuchanaID", SUCHANAID);
-                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDbundle));
+                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDBundle));
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);
@@ -256,86 +264,116 @@ public class UpdateMenu extends Activity {
                 }
             });
 
+            cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+            //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
 
-           /* cmdDataSync = (Button) findViewById(R.id.cmdDataSync);
-            cmdDataSync.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View view) {
-                    //Check for Internet connectivity
-                    if (Connection.haveNetworkConnection(UpdateMenu.this)) {
-                    } else {
-                        Connection.MessageBox(UpdateMenu.this, "Internet connection is not available for Data Sync.");
-                        return;
-                    }
 
-                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
-                    adb.setTitle("Data Sync");
-                    adb.setMessage("Do you want to Sync Data[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            C = new Connection(UpdateMenu.this);
-                            final ProgressDialog progDailog = ProgressDialog.show(UpdateMenu.this, "", "Please Wait . . .", true);
+            Cursor cur = C.ReadData("Select * from EntryStatus where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'");
+            cur.moveToFirst();
+            while (!cur.isAfterLast()) {
+                //T1-Identity
+                //T2-Member
+                //T3-SES
+                if (cur.getString(cur.getColumnIndex("T1")).equals("1")) {
+                    cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                            new Thread() {
-                                public void run() {
-                                    try {
-                                        //C.DataSync_UploadDownload(USERID);
+                if ((cur.getString(cur.getColumnIndex("T2")) == null ? "" : cur.getString(cur.getColumnIndex("T2"))).equals("1")) {
+                    cmdMenuMember.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuMember.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                                        List<String> tableList = new ArrayList<String>();
-                                        tableList.add("Agriculture");
-                                        tableList.add("AssetB");
-                                        tableList.add("AssetNB");
-                                        tableList.add("Careseek");
-                                        tableList.add("Destruction1");
-                                        tableList.add("Destruction2");
-                                        tableList.add("HDDS");
-                                        tableList.add("HHIdentity");
-                                        tableList.add("IGA");
-                                        tableList.add("Illness1");
-                                        tableList.add("Illness2");
-                                        tableList.add("Land");
-                                        tableList.add("Loan");
-                                        tableList.add("LoginUser");
-                                        tableList.add("Member");
-                                        tableList.add("NGOWork");
-                                        tableList.add("Savings");
-                                        tableList.add("SES");
-                                        tableList.add("UserList");
-                                        tableList.add("VillageList");
+                if ((cur.getString(cur.getColumnIndex("T3")) == null ? "" : cur.getString(cur.getColumnIndex("T3"))).equals("1")) {
+                    cmdMenuSES.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuSES.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                                        C.DataSync_UploadDownload(tableList, USERID);
+                if ((cur.getString(cur.getColumnIndex("T4")) == null ? "" : cur.getString(cur.getColumnIndex("T4"))).equals("1")) {
+                    cmdMenuAssetB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuAssetB.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                                    } catch (Exception e) {
+                if ((cur.getString(cur.getColumnIndex("T5")) == null ? "" : cur.getString(cur.getColumnIndex("T5"))).equals("1")) {
+                    cmdMenuAssetNB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuAssetNB.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                                    }
-                                    progDailog.dismiss();
-                                }
-                            }.start();
+                if ((cur.getString(cur.getColumnIndex("T6")) == null ? "" : cur.getString(cur.getColumnIndex("T6"))).equals("1")) {
+                    cmdMenuLand.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuLand.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-                        }
-                    });
-                    adb.show();
-                }
-            });
+                if ((cur.getString(cur.getColumnIndex("T7")) == null ? "" : cur.getString(cur.getColumnIndex("T7"))).equals("1")) {
+                    cmdMenuHDDS.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuHDDS.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-            Button cmdExit = (Button) findViewById(R.id.cmdExit);
-            cmdExit.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View view) {
-                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
-                    adb.setTitle("Exit");
-                    adb.setMessage("Do you want to exit from the system[Yes/No]?");
-                    adb.setNegativeButton("No", null);
-                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    });
-                    adb.show();
-                }
-            });
-*/
+                if ((cur.getString(cur.getColumnIndex("T8")) == null ? "" : cur.getString(cur.getColumnIndex("T8"))).equals("1")) {
+                    cmdMenuCost.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuCost.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T9")) == null ? "" : cur.getString(cur.getColumnIndex("T9"))).equals("1")) {
+                    cmdMenuSavings.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuSavings.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T10")) == null ? "" : cur.getString(cur.getColumnIndex("T10"))).equals("1")) {
+                    cmdMenuLoan.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuLoan.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T11")) == null ? "" : cur.getString(cur.getColumnIndex("T11"))).equals("1")) {
+                    cmdMenuHFIAS.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuHFIAS.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T12")) == null ? "" : cur.getString(cur.getColumnIndex("T12"))).equals("1")) {
+                    cmdMenuDestruction1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuDestruction1.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T13")) == null ? "" : cur.getString(cur.getColumnIndex("T13"))).equals("1")) {
+                    cmdMenuDestruction2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuDestruction2.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T14")) == null ? "" : cur.getString(cur.getColumnIndex("T14"))).equals("1")) {
+                    cmdMenuAgriculture.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuAgriculture.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T15")) == null ? "" : cur.getString(cur.getColumnIndex("T15"))).equals("1")) {
+                    cmdMenuNGO.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuNGO.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T16")) == null ? "" : cur.getString(cur.getColumnIndex("T16"))).equals("1")) {
+                    cmdMenuIllness1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuIllness1.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T17")) == null ? "" : cur.getString(cur.getColumnIndex("T17"))).equals("1")) {
+                    cmdMenuIllness2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuIllness2.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T18")) == null ? "" : cur.getString(cur.getColumnIndex("T18"))).equals("1")) {
+                    cmdMenuCareseek.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuCareseek.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T19")) == null ? "" : cur.getString(cur.getColumnIndex("T19"))).equals("1")) {
+                    cmdMenuIGA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuIGA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                //Mother, Child
+                /*if((cur.getString(cur.getColumnIndex("T20"))==null?"":cur.getString(cur.getColumnIndex("T20"))).equals("1")) {
+                    cmdMenu.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept , 0, 0, 0);
+                }else cmdMenuHDDS.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
+                */
+
+
+                cur.moveToNext();
+            }
+            cur.close();
+
         } catch (Exception ex) {
             Connection.MessageBox(UpdateMenu.this, ex.getMessage());
         }
     }
+
+/*    public void EntryStatusUpdate(String TableName, String Round, String SuchanaId)
+    {
+        Connection Con = new Connection(this);
+        if(TableName.toLowerCase().equals("hhidentity"))
+            C.Save("Update EntryStatus set T1='1' where Rnd='"+ Round +"' and SuchanaId='"+ SuchanaId +"'");
+        else if(TableName.toLowerCase().equals("member"))
+            Con.Save("Update EntryStatus set T2='1' where Rnd='"+ Round +"' and SuchanaId='"+ SuchanaId +"'");
+        else if(TableName.toLowerCase().equals("ses"))
+            Con.Save("Update EntryStatus set T3='1' where Rnd='"+ Round +"' and SuchanaId='"+ SuchanaId +"'");
+    }*/
 }

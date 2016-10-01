@@ -183,7 +183,11 @@ public class Member extends Activity {
     LinearLayout secH220;
     View lineH220;
     TextView VlblH220;
-    EditText txtH220;
+    //EditText txtH220;
+    RadioGroup rdogrpH220;
+    RadioButton rdoH2201;
+    RadioButton rdoH2202;
+
     LinearLayout secH221;
     View lineH221;
     TextView VlblH221;
@@ -426,9 +430,10 @@ public class Member extends Activity {
                             txtH217.setText("");
                             txtH218.setText("");
                             txtH219.setText("");
-                            txtH220.setText("");
+                            rdogrpH220.clearCheck();
+                            /*txtH220.setText("");
                             txtH221.setText("");
-                            txtH222.setText("");
+                            txtH222.setText("");*/
 
                             secH27.setVisibility(View.GONE);
                             lineH27.setVisibility(View.GONE);
@@ -653,9 +658,15 @@ public class Member extends Activity {
                         txtH212X.setText("");
                         secH212X.setVisibility(View.GONE);
                         lineH212X.setVisibility(View.GONE);
+                        if (spnData.equalsIgnoreCase("86")) {
+                            secH213.setVisibility(View.GONE);
+                            lineH213.setVisibility(View.GONE);
+                            spnH213.setSelection(0);
+                        }
                     } else {
                         secH212X.setVisibility(View.VISIBLE);
                         lineH212X.setVisibility(View.VISIBLE);
+                        secH213.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -838,7 +849,10 @@ public class Member extends Activity {
             secH220 = (LinearLayout) findViewById(R.id.secH220);
             lineH220 = (View) findViewById(R.id.lineH220);
             VlblH220 = (TextView) findViewById(R.id.VlblH220);
-            txtH220 = (EditText) findViewById(R.id.txtH220);
+            rdogrpH220 = (RadioGroup) findViewById(R.id.rdogrpH220);
+            rdoH2201 = (RadioButton) findViewById(R.id.rdoH2201);
+            rdoH2202 = (RadioButton) findViewById(R.id.rdoH2202);
+
             secH221 = (LinearLayout) findViewById(R.id.secH221);
             lineH221 = (View) findViewById(R.id.lineH221);
             VlblH221 = (TextView) findViewById(R.id.VlblH221);
@@ -1068,17 +1082,10 @@ public class Member extends Activity {
                     return;
                 }
             }
-            if (txtH220.getText().toString().length() == 0 & secH220.isShown()) {
-                Connection.MessageBox(Member.this, "Required field: ইনডেক্স শিশু লাইন নম্বর.");
-                txtH220.requestFocus();
+            if (!rdoH2201.isChecked() & !rdoH2202.isChecked() & secH220.isShown()) {
+                Connection.MessageBox(Member.this, "Required field: সদস্য কি রেফারেন্স শিশু ?");
+                rdogrpH220.requestFocus();
                 return;
-            }
-            if (txtH220.getText().toString().length() != 0 & secH220.isShown()) {
-                if (Integer.valueOf(txtH220.getText().toString().length() == 0 ? "1" : txtH220.getText().toString()) < 1 || Integer.valueOf(txtH220.getText().toString().length() == 0 ? "2" : txtH220.getText().toString()) > 2) {
-                    Connection.MessageBox(Member.this, "Value should be between 1 and 2(ইনডেক্স শিশু লাইন নম্বর).");
-                    txtH220.requestFocus();
-                    return;
-                }
             }
             if (spnH221.getSelectedItemPosition() == 0 & secH221.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
@@ -1204,13 +1211,23 @@ public class Member extends Activity {
             objSave.setH217(txtH217.getText().toString());
             objSave.setH218(txtH218.getText().toString());
             objSave.setH219(txtH219.getText().toString());
-            objSave.setH220(txtH220.getText().toString());
+
+            //objSave.setH220(txtH220.getText().toString());
+            String[] d_rdogrpH220 = new String[]{"1", "0"};
+            objSave.setH220("");
+            for (int i = 0; i < rdogrpH220.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH220.getChildAt(i);
+                if (rb.isChecked()) objSave.setH220(d_rdogrpH220[i]);
+            }
+
+
             //objSave.setH221(txtH221.getText().toString());
             objSave.setH221((spnH221.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-")));
 
             //objSave.setH222(txtH222.getText().toString());
             objSave.setH222((spnH222.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-")));
 
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1293,7 +1310,14 @@ public class Member extends Activity {
                 txtH217.setText(item.getH217());
                 txtH218.setText(item.getH218());
                 txtH219.setText(item.getH219());
-                txtH220.setText(item.getH220());
+                //txtH220.setText(item.getH220());
+                String[] d_rdogrpH220 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH220.length; i++) {
+                    if (item.getH220().equals(String.valueOf(d_rdogrpH220[i]))) {
+                        rb = (RadioButton) rdogrpH220.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
 
                 //txtH221.setText(item.getH221());
                 spnH221.setSelection(Global.SpinnerItemPositionAnyLength(spnH221, item.getH221()));
