@@ -235,7 +235,7 @@
                     android:id="@+id/VlblH312"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="এই খানায়ে কয়টি কক্ষ আছে"
+                    android:text="এই খানায় কয়টি কক্ষ আছে"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1054,7 +1054,7 @@
 
                 <TextView
                     android:id="@+id/VlblH61"
-                    android:layout_width="250sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:text="আপনাদের কি কোন শৌচাগার আছে"
                     android:textSize="20sp" />
@@ -1114,7 +1114,7 @@
 
                 <TextView
                     android:id="@+id/VlblH62"
-                    android:layout_width="250sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:text="কি ধরনের শৌচাগার ব্যবহার করেন"
                     android:textSize="20sp" />
@@ -1229,7 +1229,7 @@
                     android:id="@+id/VlblH63A"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="a) রান্নাঘরেরবর্জ্য"
+                    android:text="a) রান্নাঘরের বর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -4831,6 +4831,12 @@
                     android:inputType="number"
                     android:maxLength="3"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  মিটার"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
@@ -4868,6 +4874,12 @@
                     android:layout_marginRight="10sp"
                     android:inputType="number"
                     android:maxLength="3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  মিটার"
                     android:textSize="20sp" />
             </LinearLayout>
 
