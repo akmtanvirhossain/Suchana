@@ -92,7 +92,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -130,14 +130,14 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
@@ -168,7 +168,7 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
+                    android:text="MS SL."
                     android:textSize="20sp" />
 
                 <TextView
@@ -204,9 +204,9 @@
 
                 <TextView
                     android:id="@+id/lblH111"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H111"
+                    android:text="H111. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -256,9 +256,9 @@
 
                 <TextView
                     android:id="@+id/lblH112"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H112"
+                    android:text="H112. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -271,7 +271,7 @@
                 <EditText
                     android:id="@+id/txtH112"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -294,9 +294,9 @@
 
                 <TextView
                     android:id="@+id/lblH113"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H113"
+                    android:text="H113. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -331,9 +331,9 @@
 
                 <TextView
                     android:id="@+id/lblH113X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H113X"
+                    android:text="H113X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -369,9 +369,9 @@
 
                 <TextView
                     android:id="@+id/lblH114a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H114a"
+                    android:text="H114A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -406,9 +406,9 @@
 
                 <TextView
                     android:id="@+id/lblH114b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H114b"
+                    android:text="B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -443,9 +443,9 @@
 
                 <TextView
                     android:id="@+id/lblH114c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H114c"
+                    android:text="C. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -480,9 +480,9 @@
 
                 <TextView
                     android:id="@+id/lblH114X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H114X"
+                    android:text="X"
                     android:textSize="20sp" />
 
                 <TextView
@@ -518,9 +518,9 @@
 
                 <TextView
                     android:id="@+id/lblH115"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H115"
+                    android:text="H115. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -570,9 +570,9 @@
 
                 <TextView
                     android:id="@+id/lblH116"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H116"
+                    android:text="H116. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -608,9 +608,9 @@
 
                 <TextView
                     android:id="@+id/lblH117"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H117"
+                    android:text="H117. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -660,9 +660,9 @@
 
                 <TextView
                     android:id="@+id/lblH118"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H118"
+                    android:text="H118. "
                     android:textSize="20sp" />
 
                 <TextView
