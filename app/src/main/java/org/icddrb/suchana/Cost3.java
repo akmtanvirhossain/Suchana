@@ -7,15 +7,10 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -635,7 +630,6 @@ public class Cost3 extends Activity {
 
         }
     };
-
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -697,13 +691,17 @@ public class Cost3 extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Cost3.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start Savings [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Savings.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
 
                         }
@@ -2696,9 +2694,13 @@ public class Cost3 extends Activity {
             txtRnd.setEnabled(false);
             txtSuchanaID.setEnabled(false);
 
+            secH8121x1.setVisibility(View.GONE);
+            lineH8121x1.setVisibility(View.GONE);
+
+            secH8112x1.setVisibility(View.GONE);
+            lineH8112x1.setVisibility(View.GONE);
+
             DataSearch(RND,SUCHANAID);
-
-
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -4261,11 +4263,11 @@ public class Cost3 extends Activity {
 
             RadioButton rb;
             Cost3_DataModel d = new Cost3_DataModel();
-            String SQL = "Select * from "+ TableName +"  Where Rnd='"+ Rnd +"' and SuchanaID='"+ SuchanaID +"'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H8111a NOT NULL";
             List<Cost3_DataModel> data = d.SelectAll(this, SQL);
             for(Cost3_DataModel item : data){
-                txtRnd.setText(item.getRnd());
-                txtSuchanaID.setText(item.getSuchanaID());
+                //   txtRnd.setText(item.getRnd());
+                //    txtSuchanaID.setText(item.getSuchanaID());
                 //txtMSlNo.setText(item.getMSlNo());
                 String[] d_rdogrpH8111a = new String[] {"1","0"};
                 for (int i = 0; i < d_rdogrpH8111a.length; i++)
@@ -4702,67 +4704,11 @@ public class Cost3 extends Activity {
         return null;
     }
 
-    //GPS Reading
-    //.....................................................................................................
-    public void FindLocation() {
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                updateLocation(location);
-            }
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-            public void onProviderEnabled(String provider) {
-            }
-            public void onProviderDisabled(String provider) {
-            }
-        };
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-    }
-
-    void updateLocation(Location location) {
-        currentLocation  = location;
-        currentLatitude  = currentLocation.getLatitude();
-        currentLongitude = currentLocation.getLongitude();
-    }
-
-
-    // Method to turn on GPS
-    public void turnGPSOn(){
-        try
-        {
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if(!provider.contains("gps")){ //if gps is disabled
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        }
-        catch (Exception e) {
-        }
-    }
-
-    // Method to turn off the GPS
-    public void turnGPSOff(){
-        String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-
-        if(provider.contains("gps")){ //if gps is enabled
-            final Intent poke = new Intent();
-            poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-            poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-            poke.setData(Uri.parse("3"));
-            sendBroadcast(poke);
-        }
-    }
-
     // turning off the GPS if its in on state. to avoid the battery drain.
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
-        turnGPSOff();
+
     }
 }
