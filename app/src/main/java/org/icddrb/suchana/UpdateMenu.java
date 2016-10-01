@@ -185,7 +185,10 @@ public class UpdateMenu extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDBundle));
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDbundle));
                 }
             });
             cmdMenuHFIAS = (Button) findViewById(R.id.cmdMenuHFIAS);

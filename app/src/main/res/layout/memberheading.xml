@@ -9,8 +9,6 @@
         android:id="@+id/secListRow"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:layout_marginTop="5sp"
         android:background="@color/HeadingCyan"
         android:orientation="horizontal"
         android:paddingBottom="5px"
@@ -20,174 +18,203 @@
             android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Rnd" />
+            android:text="Rnd"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SuchanaID" />
+            android:text="SuchanaID"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="লাইন#" />
+            android:text="লাইন#"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:text="নাম" />
+            android:text="নাম"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="লিঙ্গ" />
+            android:text="লিঙ্গ"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="পিতা#" />
+            android:text="পিতা#"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="সম্পর্ক" />
+            android:text="সম্পর্ক"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="বয়স(Y)" />
+            android:text="বয়স(Y)"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="বয়স(M)" />
+            android:text="বয়স(M)"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="বৈবাহিক অবস্থা" />
+            android:text="বৈবাহিক অবস্থা"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="বিয়ের সময় বয়স (বছর)" />
+            android:text="বিয়ের সময় বয়স (বছর)"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="ধর্ম" />
+            android:text="ধর্ম"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H29X" />
+            android:text="H29X"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="ভাষা" />
+            android:text="ভাষা"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="সাক্ষর জ্ঞান" />
+            android:text="সাক্ষর জ্ঞান"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="শিক্ষা" />
+            android:text="শিক্ষা"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H212X" />
+            android:text="H212X"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="স্কুলের ধরন" />
+            android:text="স্কুলের ধরন"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="এনজিও সদস্য" />
+            android:text="এনজিও সদস্য"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="পেশা  প্রধান" />
+            android:text="পেশা  প্রধান"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H215X" />
+            android:text="H215X"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="পেশা  দ্বিতীয়" />
+            android:text="পেশা  দ্বিতীয়"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H216X" />
+            android:text="H216X"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H217" />
+            android:text="H217"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H218" />
+            android:text="H218"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H219" />
+            android:text="H219"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H220" />
+            android:text="H220"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H221" />
+            android:text="H221"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H222" />
+            android:text="H222"
+            android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>

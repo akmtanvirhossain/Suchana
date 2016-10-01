@@ -40,23 +40,7 @@
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/lblNext"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight=".2"
-            android:gravity="center_vertical|right"
-            android:paddingLeft="10sp"
-            android:text="HOME"
-            android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/cmdForward"
-            android:layout_width="50sp"
-            android:layout_height="match_parent"
-            android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward" />
 
     </LinearLayout>
 
@@ -141,7 +125,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -198,7 +182,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1 আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
+                    android:text="আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -349,7 +333,7 @@
 
                 <TextView
                     android:id="@+id/VlblH152bOth"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -528,7 +512,7 @@
                     android:id="@+id/VlblH152d1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -639,7 +623,7 @@
                     android:id="@+id/VlblH152e1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -756,7 +740,7 @@
                 <EditText
                     android:id="@+id/txtH152f"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -868,7 +852,7 @@
                     android:id="@+id/VlblH152h1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -979,7 +963,7 @@
                     android:id="@+id/VlblH152i1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1090,7 +1074,7 @@
                     android:id="@+id/VlblH152j1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1201,7 +1185,7 @@
                     android:id="@+id/VlblH152k1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কিলো/সংখ্যা"
+                    android:text="পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText

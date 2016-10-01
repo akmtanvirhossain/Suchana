@@ -22,7 +22,6 @@
             android:id="@+id/lblBack"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
             android:text="Land List"
@@ -49,14 +48,16 @@
             android:paddingLeft="10sp"
             android:text="HOME"
             android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/cmdForward"
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward" />
+            android:src="@drawable/forward"
+            android:visibility="gone" />
 
     </LinearLayout>
 

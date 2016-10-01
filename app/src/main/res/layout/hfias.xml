@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Identity List"
+            android:text="Loan"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -47,7 +47,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="HOME"
+            android:text="DESTRUCTION"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -143,7 +143,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"

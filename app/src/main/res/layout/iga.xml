@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Identity List"
+            android:text="CARE SEEKING"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 

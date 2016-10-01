@@ -236,6 +236,7 @@ public class HFIAS extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            finish();
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
@@ -243,7 +244,7 @@ public class HFIAS extends Activity {
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
-                            finish();
+
                         }
                     });
                     adb.show();
@@ -259,10 +260,16 @@ public class HFIAS extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            getApplicationContext().startActivity(intent);
                             finish();
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            IDbundle.putString("H14a", "");
+                            Intent intent = new Intent(getApplicationContext(), Destruction1.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+
                         }
                     });
                     adb.show();

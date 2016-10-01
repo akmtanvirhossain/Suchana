@@ -171,7 +171,7 @@ public class Land extends Activity {
                     adb.show();
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+          /*  ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Land.this);
@@ -188,7 +188,7 @@ public class Land extends Activity {
                     });
                     adb.show();
                 }
-            });
+            });*/
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -198,6 +198,11 @@ public class Land extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
@@ -359,6 +364,7 @@ public class Land extends Activity {
             VlblH5hM = (TextView) findViewById(R.id.VlblH5hM);
             txtH5hM = (EditText) findViewById(R.id.txtH5hM);
 
+            secH5aX.setVisibility(View.GONE);
 
             DataSearch(RND, SUCHANAID, SLNO);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);

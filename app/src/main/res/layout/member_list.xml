@@ -12,6 +12,14 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/cmdHome"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:background="#ffffff"
+            android:src="@drawable/home" />
+
+        <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
             android:layout_height="match_parent"
@@ -28,7 +36,6 @@
             android:text="Identity List"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
-
         <TextView
             android:id="@+id/lblHeading"
             android:layout_width="wrap_content"
@@ -47,7 +54,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="NEXT"
+            android:text="SES"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -103,7 +110,7 @@
             android:layout_marginRight="20sp"
             android:layout_marginTop="5dip"
             android:background="@drawable/button_style_blue"
-            android:text=" member name list "
+            android:text=" Member Name List "
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -116,7 +123,7 @@
             android:background="@drawable/button_style_blue"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
-            android:text=" refresh "
+            android:text=" Refresh "
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 

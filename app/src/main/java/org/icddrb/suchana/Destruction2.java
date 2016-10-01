@@ -271,11 +271,15 @@ public class Destruction2 extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Destruction2.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start Agriculture [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Agriculture_list.class);
+                            intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -292,6 +296,12 @@ public class Destruction2 extends Activity {
             lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+
             seclb14b = (LinearLayout) findViewById(R.id.seclb14b);
             secH14b1 = (LinearLayout) findViewById(R.id.secH14b1);
             lineH14b1 = (View) findViewById(R.id.lineH14b1);
@@ -607,8 +617,9 @@ public class Destruction2 extends Activity {
             lineH14c1x1 = (View) findViewById(R.id.lineH14c1x1);
             VlblH14c1x1 = (TextView) findViewById(R.id.VlblH14c1x1);
             txtH14c1x1 = (EditText) findViewById(R.id.txtH14c1x1);
+            secH14c1x1.setVisibility(View.GONE);
 
-
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -677,6 +688,30 @@ public class Destruction2 extends Activity {
             } else if (!rdoH14c11.isChecked() & !rdoH14c12.isChecked() & secH14c1.isShown()) {
                 Connection.MessageBox(Destruction2.this, "Select anyone options from (আপনি অথবা আপনার পরিবারের কোনো সদস্য সরকারের তরফ থেকে কোনো ভাতা /বৃত্তি / ক্ষুদ্র ঋণ পেয়েছেন).");
                 rdoH14c11.requestFocus();
+                return;
+            } else if (secH14c1a.isShown() & (!chkH14c1a.isChecked() &
+                    !chkH14c1b.isChecked() &
+                    !chkH14c1c.isChecked() &
+                    !chkH14c1d.isChecked() &
+                    !chkH14c1e.isChecked() &
+                    !chkH14c1f.isChecked() &
+                    !chkH14c1g.isChecked() &
+                    !chkH14c1h.isChecked() &
+                    !chkH14c1i.isChecked() &
+                    !chkH14c1j.isChecked() &
+                    !chkH14c1k.isChecked() &
+                    !chkH14c1l.isChecked() &
+                    !chkH14c1m.isChecked() &
+                    !chkH14c1n.isChecked() &
+                    !chkH14c1o.isChecked() &
+                    !chkH14c1p.isChecked() &
+                    !chkH14c1q.isChecked() &
+                    !chkH14c1r.isChecked() &
+                    !chkH14c1s.isChecked() &
+                    !chkH14c1t.isChecked() &
+                    !chkH14c1x.isChecked())) {
+                Connection.MessageBox(Destruction2.this, "Required field: CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secH14c1a.requestFocus();
                 return;
             } else if (txtH14c1x1.getText().toString().length() == 0 & secH14c1x1.isShown()) {
                 Connection.MessageBox(Destruction2.this, "Required field: উল্লেখ কর.");
