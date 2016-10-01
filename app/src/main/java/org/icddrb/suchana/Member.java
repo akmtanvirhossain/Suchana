@@ -1211,6 +1211,7 @@ public class Member extends Activity {
             //objSave.setH222(txtH222.getText().toString());
             objSave.setH222((spnH222.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-")));
 
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
