@@ -96,7 +96,6 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
                     android:textSize="20sp" />
 
                 <TextView
@@ -134,12 +133,11 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -147,7 +145,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="145sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -172,7 +170,6 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
                     android:textSize="20sp" />
 
                 <TextView
@@ -184,7 +181,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="200sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -251,7 +248,7 @@
                         android:id="@+id/rdoH8111a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -259,7 +256,7 @@
                         android:id="@+id/rdoH8111a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -341,7 +338,7 @@
                         android:id="@+id/rdoH8111c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
@@ -349,7 +346,7 @@
                         android:id="@+id/rdoH8111c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
@@ -357,7 +354,7 @@
                         android:id="@+id/rdoH8111c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -460,7 +457,7 @@
                         android:id="@+id/rdoH8121a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -468,7 +465,7 @@
                         android:id="@+id/rdoH8121a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -588,7 +585,7 @@
                         android:id="@+id/rdoH8121c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
@@ -596,7 +593,7 @@
                         android:id="@+id/rdoH8121c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
@@ -604,7 +601,7 @@
                         android:id="@+id/rdoH8121c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -707,7 +704,7 @@
                         android:id="@+id/rdoH8122a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -715,7 +712,7 @@
                         android:id="@+id/rdoH8122a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -835,7 +832,7 @@
                         android:id="@+id/rdoH8122c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
@@ -843,7 +840,7 @@
                         android:id="@+id/rdoH8122c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
@@ -851,7 +848,7 @@
                         android:id="@+id/rdoH8122c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -954,7 +951,7 @@
                         android:id="@+id/rdoH9a1a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -962,7 +959,7 @@
                         android:id="@+id/rdoH9a1a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1103,7 +1100,7 @@
                         android:id="@+id/rdoH9a2a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1111,7 +1108,7 @@
                         android:id="@+id/rdoH9a2a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1252,7 +1249,7 @@
                         android:id="@+id/rdoH9a3a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1260,7 +1257,7 @@
                         android:id="@+id/rdoH9a3a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1401,7 +1398,7 @@
                         android:id="@+id/rdoH9a4a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1409,7 +1406,7 @@
                         android:id="@+id/rdoH9a4a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1550,7 +1547,7 @@
                         android:id="@+id/rdoH9a5a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1558,7 +1555,7 @@
                         android:id="@+id/rdoH9a5a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1699,7 +1696,7 @@
                         android:id="@+id/rdoH9b1a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1707,7 +1704,7 @@
                         android:id="@+id/rdoH9b1a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1848,7 +1845,7 @@
                         android:id="@+id/rdoH9b2a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -1856,7 +1853,7 @@
                         android:id="@+id/rdoH9b2a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -1997,7 +1994,7 @@
                         android:id="@+id/rdoH9b3a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2005,7 +2002,7 @@
                         android:id="@+id/rdoH9b3a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2146,7 +2143,7 @@
                         android:id="@+id/rdoH9b4a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2154,7 +2151,7 @@
                         android:id="@+id/rdoH9b4a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2295,7 +2292,7 @@
                         android:id="@+id/rdoH9b5a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2303,7 +2300,7 @@
                         android:id="@+id/rdoH9b5a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2444,7 +2441,7 @@
                         android:id="@+id/rdoH9b6a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2452,7 +2449,7 @@
                         android:id="@+id/rdoH9b6a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2593,7 +2590,7 @@
                         android:id="@+id/rdoH9b7a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2601,7 +2598,7 @@
                         android:id="@+id/rdoH9b7a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2742,7 +2739,7 @@
                         android:id="@+id/rdoH9b8a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2750,7 +2747,7 @@
                         android:id="@+id/rdoH9b8a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -2891,7 +2888,7 @@
                         android:id="@+id/rdoH9b9a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -2899,7 +2896,7 @@
                         android:id="@+id/rdoH9b9a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3040,7 +3037,7 @@
                         android:id="@+id/rdoH9b10a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3048,7 +3045,7 @@
                         android:id="@+id/rdoH9b10a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3189,7 +3186,7 @@
                         android:id="@+id/rdoH9b11a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3197,7 +3194,7 @@
                         android:id="@+id/rdoH9b11a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3338,7 +3335,7 @@
                         android:id="@+id/rdoH9b121"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা "
                         android:textSize="20sp" />
 
@@ -3346,7 +3343,7 @@
                         android:id="@+id/rdoH9b122"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3390,7 +3387,7 @@
                         android:id="@+id/rdoH9b12a11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3398,7 +3395,7 @@
                         android:id="@+id/rdoH9b12a12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3518,7 +3515,7 @@
                         android:id="@+id/rdoH9b12b11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3526,7 +3523,7 @@
                         android:id="@+id/rdoH9b12b12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3646,7 +3643,7 @@
                         android:id="@+id/rdoH9b12c11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3654,7 +3651,7 @@
                         android:id="@+id/rdoH9b12c12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3774,7 +3771,7 @@
                         android:id="@+id/rdoH9b12d11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3782,7 +3779,7 @@
                         android:id="@+id/rdoH9b12d12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -3902,7 +3899,7 @@
                         android:id="@+id/rdoH9b12e11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -3910,7 +3907,7 @@
                         android:id="@+id/rdoH9b12e12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4030,7 +4027,7 @@
                         android:id="@+id/rdoH9b12f11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4038,7 +4035,7 @@
                         android:id="@+id/rdoH9b12f12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4158,7 +4155,7 @@
                         android:id="@+id/rdoH9b12g11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4166,7 +4163,7 @@
                         android:id="@+id/rdoH9b12g12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4286,7 +4283,7 @@
                         android:id="@+id/rdoH9b12h11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4294,7 +4291,7 @@
                         android:id="@+id/rdoH9b12h12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4414,7 +4411,7 @@
                         android:id="@+id/rdoH9b12i11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4422,7 +4419,7 @@
                         android:id="@+id/rdoH9b12i12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4542,7 +4539,7 @@
                         android:id="@+id/rdoH9b12j11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4550,7 +4547,7 @@
                         android:id="@+id/rdoH9b12j12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4670,7 +4667,7 @@
                         android:id="@+id/rdoH9b12k11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4678,7 +4675,7 @@
                         android:id="@+id/rdoH9b12k12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4798,7 +4795,7 @@
                         android:id="@+id/rdoH9b12l11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4806,7 +4803,7 @@
                         android:id="@+id/rdoH9b12l12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -4926,7 +4923,7 @@
                         android:id="@+id/rdoH9b12m11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -4934,7 +4931,7 @@
                         android:id="@+id/rdoH9b12m12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -5075,7 +5072,7 @@
                         android:id="@+id/rdoH9b13a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -5083,7 +5080,7 @@
                         android:id="@+id/rdoH9b13a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -5203,7 +5200,7 @@
                         android:id="@+id/rdoH9b14a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
@@ -5211,7 +5208,7 @@
                         android:id="@+id/rdoH9b14a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10dp"
+                        android:paddingRight="10sp"
                         android:text=" না  "
                         android:textSize="20sp" />
                 </RadioGroup>

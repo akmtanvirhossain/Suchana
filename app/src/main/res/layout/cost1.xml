@@ -96,7 +96,6 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
                     android:textSize="20sp" />
 
                 <TextView
@@ -134,12 +133,11 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -147,7 +145,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="145sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -184,7 +182,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="200sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
