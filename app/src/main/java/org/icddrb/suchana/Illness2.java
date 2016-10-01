@@ -301,7 +301,7 @@ public class Illness2 extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "'"));
             secH172a = (LinearLayout) findViewById(R.id.secH172a);
             lineH172a = (View) findViewById(R.id.lineH172a);
             VlblH172a = (TextView) findViewById(R.id.VlblH172a);
@@ -563,6 +563,10 @@ public class Illness2 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
+
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+                finish();
                 Bundle IDBundle = new Bundle();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());

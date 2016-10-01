@@ -195,6 +195,9 @@ public class HFIAS extends Activity {
     private int mMonth;
     private int mYear;
 
+    ImageButton cmdForward;
+    TextView lblNext;
+
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -251,7 +254,7 @@ public class HFIAS extends Activity {
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(HFIAS.this);
@@ -273,6 +276,20 @@ public class HFIAS extends Activity {
                         }
                     });
                     adb.show();
+                }
+            });
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
                 }
             });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
@@ -660,6 +677,9 @@ public class HFIAS extends Activity {
 
             secLb13 = (LinearLayout) findViewById(R.id.secLb13);
 
+            lblNext= (TextView) findViewById(R.id.lblNext);
+            lblNext.setEnabled(false);
+            cmdForward.setEnabled(false);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -907,6 +927,10 @@ public class HFIAS extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
+
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+                finish();
                 Bundle IDBundle = new Bundle();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
@@ -931,6 +955,10 @@ public class HFIAS extends Activity {
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<HFIAS_DataModel> data = d.SelectAll(this, SQL);
             for (HFIAS_DataModel item : data) {
+
+                cmdForward.setEnabled(true);
+                lblNext.setEnabled(true);
+
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
                 String[] d_rdogrpH121a = new String[]{"1", "0"};
