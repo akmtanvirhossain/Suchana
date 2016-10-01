@@ -33,7 +33,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Identity List"
+            android:text="তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -44,7 +44,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Identity"
+            android:text="খানা সনাক্তকরণ"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="HOME"
+            android:text="সদস্যের তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -166,7 +166,7 @@
                         android:id="@+id/VlblDist"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="District"
+                        android:text="জেলা"
                         android:textSize="20sp" />
 
                     <Spinner
@@ -202,7 +202,7 @@
                         android:id="@+id/VlblUpz"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="Upazila"
+                        android:text="উপজেলা"
                         android:textSize="20sp" />
 
                     <Spinner
@@ -238,7 +238,7 @@
                         android:id="@+id/VlblUn"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="Union"
+                        android:text="ইউনিয়ন"
                         android:textSize="20sp" />
 
                     <Spinner
@@ -274,7 +274,7 @@
                         android:id="@+id/VlblVill"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="Village"
+                        android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <Spinner

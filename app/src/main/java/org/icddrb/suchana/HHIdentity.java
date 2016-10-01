@@ -214,6 +214,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     String UPZ = "";
     String UN = "";
     String VILL = "";
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
@@ -307,17 +309,17 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     startActivity(f1);
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(HHIdentity.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to go to next form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Member_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
 
@@ -326,6 +328,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     adb.show();
                 }
             });
+            lblNext = (TextView) findViewById(R.id.lblNext);
+            lblNext.setVisibility(View.INVISIBLE);
+            cmdForward.setVisibility(View.INVISIBLE);
+
             seclblH1 = (LinearLayout) findViewById(R.id.seclblH1);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -1129,6 +1135,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 rb = (RadioButton) rdogrpH08.getChildAt(i);
                 if (rb.isChecked()) objSave.setH08(d_rdogrpH08[i]);
             }
+
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1194,6 +1202,9 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
             for (HHIdentity_DataModel item : data) {
+                lblNext.setVisibility(View.GONE);
+                cmdForward.setVisibility(View.GONE);
+
                 Status = "update";
                 txtRnd.setText(item.getRnd());
                 spnDist.setSelection(Global.SpinnerItemPositionAnyLength(spnDist, item.getDist()));

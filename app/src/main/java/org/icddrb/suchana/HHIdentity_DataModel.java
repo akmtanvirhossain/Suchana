@@ -421,6 +421,7 @@ public class HHIdentity_DataModel {
             d._H07g = cur.getString(cur.getColumnIndex("H07g"));
             d._H07h = cur.getString(cur.getColumnIndex("H07h"));
             d._H08 = cur.getString(cur.getColumnIndex("H08"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
             data.add(d);
 
             cur.moveToNext();
@@ -469,6 +470,7 @@ public class HHIdentity_DataModel {
             d._upzName = cur.getString(cur.getColumnIndex("UPZName"));
             d._unName = cur.getString(cur.getColumnIndex("UNName"));
             d._villName = cur.getString(cur.getColumnIndex("VillName"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
 
             data.add(d);
 

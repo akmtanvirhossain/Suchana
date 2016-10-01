@@ -31,7 +31,58 @@ public class EntryStatus_DataModel {
             setT("T2");
         else if (TableName.toLowerCase().equals("ses"))
             setT("T3");
-
+        else if (TableName.toLowerCase().equals("assetb"))
+            setT("T4");
+        else if (TableName.toLowerCase().equals("assetnb"))
+            setT("T5");
+        else if (TableName.toLowerCase().equals("land"))
+            setT("T6");
+        else if (TableName.toLowerCase().equals("hdds"))
+            setT("T7");
+        else if (TableName.toLowerCase().equals("cost"))
+            setT("T8");
+        else if (TableName.toLowerCase().equals("savings"))
+            setT("T9");
+        else if (TableName.toLowerCase().equals("loan"))
+            setT("T10");
+        else if (TableName.toLowerCase().equals("hfias"))
+            setT("T11");
+        else if (TableName.toLowerCase().equals("destruction1"))
+            setT("T12");
+        else if (TableName.toLowerCase().equals("destruction2"))
+            setT("T13");
+        else if (TableName.toLowerCase().equals("agriculture"))
+            setT("T14");
+        else if (TableName.toLowerCase().equals("ngowork"))
+            setT("T15");
+        else if (TableName.toLowerCase().equals("illness1"))
+            setT("T16");
+        else if (TableName.toLowerCase().equals("illness2"))
+            setT("T17");
+        else if (TableName.toLowerCase().equals("careseek"))
+            setT("T18");
+        else if (TableName.toLowerCase().equals("iga"))
+            setT("T19");
+        else if (TableName.toLowerCase().equals("preghis"))
+            setT("T20");
+        else if (TableName.toLowerCase().equals("knowledge"))
+            setT("T21");
+        else if (TableName.toLowerCase().equals("fdhabitknow"))
+            setT("T22");
+        else if (TableName.toLowerCase().equals("handwash"))
+            setT("T23");
+        else if (TableName.toLowerCase().equals("nuthealth"))
+            setT("T24");
+        else if (TableName.toLowerCase().equals("womenemp"))
+            setT("T25");
+        else if (TableName.toLowerCase().equals("domviolence"))
+            setT("T26");
+        else if (TableName.toLowerCase().equals("fooddiversity"))
+            setT("T27");
+        else if (TableName.toLowerCase().equals("fdhabit"))
+            setT("T28");
+        else if (TableName.toLowerCase().equals("anthro"))
+            setT("T29");
     }
 
     private void setRnd(String newValue) {
@@ -66,7 +117,6 @@ public class EntryStatus_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            //SQL = "Insert into EntryStatus(Rnd,SuchanaID,"+ _VariableName +",Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _T + "', '2')";
             SQL = "Insert into EntryStatus(Rnd,SuchanaID," + _T + ")Values('" + _Rnd + "', '" + _SuchanaID + "', '1')";
             C.Save(SQL);
         } catch (Exception e) {
@@ -80,7 +130,6 @@ public class EntryStatus_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            //SQL = "Update EntryStatus Set Upload='2',"+ _VariableName +"='1'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             SQL = "Update EntryStatus Set " + _T + "='1'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
