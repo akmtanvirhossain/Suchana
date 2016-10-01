@@ -378,9 +378,9 @@ public class Loan extends Activity {
             listH114a.add("05-সেচ সরঞ্জাম কিনতে");
             listH114a.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
             listH114a.add("07-সেচের জন্য পানি কিনতে");
-            listH114a.add("08-কৃষির জন্য ডিজেল  বিদ্যুৎ খরচ");
+            listH114a.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
             listH114a.add("09-কৃষি শ্রম মজুরি");
-            listH114a.add("10-কৃষির জন্য ভাড়া করা মেশিন পশুদের খরচ");
+            listH114a.add("10-কৃষির জন্য ভাড়া করা মেশিন/ পশুদের খরচ");
             listH114a.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
             listH114a.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
             listH114a.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
@@ -388,7 +388,7 @@ public class Loan extends Activity {
             listH114a.add("15-গরু ছাগল ক্রয়ের জন্য");
             listH114a.add("16-চিকিৎসার জন্য");
             listH114a.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
-            listH114a.add("18-খানা ভাড়া ক্রয় উন্নয়নের জন্য");
+            listH114a.add("18-খানা ভাড়া /ক্রয়/ উন্নয়নের জন্য");
             listH114a.add("19-শিক্ষার খরচের জন্য");
             listH114a.add("20-বিয়ের জন্য ব্যয়");
             listH114a.add("21-যৌতুক");
@@ -442,9 +442,9 @@ public class Loan extends Activity {
             listH114b.add("05-সেচ সরঞ্জাম কিনতে");
             listH114b.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
             listH114b.add("07-সেচের জন্য পানি কিনতে");
-            listH114b.add("08-কৃষির জন্য ডিজেল  বিদ্যুৎ খরচ");
+            listH114b.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
             listH114b.add("09-কৃষি শ্রম মজুরি");
-            listH114b.add("10-কৃষির জন্য ভাড়া করা মেশিন পশুদের খরচ");
+            listH114b.add("10-কৃষির জন্য ভাড়া করা মেশিন/ পশুদের খরচ");
             listH114b.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
             listH114b.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
             listH114b.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
@@ -452,7 +452,7 @@ public class Loan extends Activity {
             listH114b.add("15-গরু ছাগল ক্রয়ের জন্য");
             listH114b.add("16-চিকিৎসার জন্য");
             listH114b.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
-            listH114b.add("18-খানা ভাড়া ক্রয় উন্নয়নের জন্য");
+            listH114b.add("18-খানা ভাড়া /ক্রয/় উন্নয়নের জন্য");
             listH114b.add("19-শিক্ষার খরচের জন্য");
             listH114b.add("20-বিয়ের জন্য ব্যয়");
             listH114b.add("21-যৌতুক");
@@ -500,9 +500,9 @@ public class Loan extends Activity {
             listH114c.add("05-সেচ সরঞ্জাম কিনতে");
             listH114c.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
             listH114c.add("07-সেচের জন্য পানি কিনতে");
-            listH114c.add("08-কৃষির জন্য ডিজেল  বিদ্যুৎ খরচ");
+            listH114c.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
             listH114c.add("09-কৃষি শ্রম মজুরি");
-            listH114c.add("10-কৃষির জন্য ভাড়া করা মেশিন পশুদের খরচ");
+            listH114c.add("10-কৃষির জন্য ভাড়া করা মেশিন /পশুদের খরচ");
             listH114c.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
             listH114c.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
             listH114c.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
@@ -510,7 +510,7 @@ public class Loan extends Activity {
             listH114c.add("15-গরু ছাগল ক্রয়ের জন্য");
             listH114c.add("16-চিকিৎসার জন্য");
             listH114c.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
-            listH114c.add("18-খানা ভাড়া ক্রয় উন্নয়নের জন্য");
+            listH114c.add("18-খানা ভাড়া /ক্রয/় উন্নয়নের জন্য");
             listH114c.add("19-শিক্ষার খরচের জন্য");
             listH114c.add("20-বিয়ের জন্য ব্যয়");
             listH114c.add("21-যৌতুক");
@@ -671,6 +671,11 @@ public class Loan extends Activity {
                 rdoH1181.requestFocus();
                 return;
             }
+            if((Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-"))))
+            {
+                Connection.MessageBox(Loan.this, "Duplicate in loan amount use");
+                return;
+            }
 
             String SQL = "";
             RadioButton rb;
@@ -727,13 +732,25 @@ public class Loan extends Activity {
 
                 EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                 e.SaveUpdateData(this);
+                if(rdoH1112.isChecked()==true)
+                {
+                    Bundle IDBundle = new Bundle();
+                    finish();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H41a", "");
+                    startActivity(new Intent(Loan.this, HFIAS.class).putExtras(IDBundle));
+                }
+                else
+                {
+                    Bundle IDBundle = new Bundle();
+                    finish();
+                    IDBundle.putString("Rnd", txtRnd.getText().toString());
+                    IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                    IDBundle.putString("H41a", "");
+                    startActivity(new Intent(Loan.this, Loan_list.class).putExtras(IDBundle));
+                }
 
-                Bundle IDBundle = new Bundle();
-                finish();
-                IDBundle.putString("Rnd", txtRnd.getText().toString());
-                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                IDBundle.putString("H41a", "");
-                startActivity(new Intent(Loan.this, Loan_list.class).putExtras(IDBundle));
 
             } else {
                 Connection.MessageBox(Loan.this, status);

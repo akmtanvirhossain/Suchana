@@ -327,7 +327,7 @@ public class Agriculture extends Activity {
                         lineH152g.setVisibility(View.GONE);
                         txtH152g.setText("");
                         secH152g2.setVisibility(View.GONE);
-                        lineH152g2.setVisibility(View.GONE);
+                       // lineH152g2.setVisibility(View.GONE);
                         rdogrpH152g2.clearCheck();
                         secH152h1.setVisibility(View.GONE);
                         lineH152h1.setVisibility(View.GONE);
@@ -390,7 +390,7 @@ public class Agriculture extends Activity {
                         secH152g.setVisibility(View.VISIBLE);
                         lineH152g.setVisibility(View.VISIBLE);
                         secH152g2.setVisibility(View.VISIBLE);
-                        lineH152g2.setVisibility(View.VISIBLE);
+                        //lineH152g2.setVisibility(View.VISIBLE);
                         secH152h1.setVisibility(View.VISIBLE);
                         lineH152h1.setVisibility(View.VISIBLE);
                         secH152h2.setVisibility(View.VISIBLE);
