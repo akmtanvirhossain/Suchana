@@ -479,6 +479,20 @@ public class Cost2 extends Activity {
                     adb.show();
                 }
             });
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -1928,6 +1942,10 @@ public class Cost2 extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
+
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
                 finish();
                 Bundle IDbundle1 = new Bundle();
                 IDbundle1.putString("Rnd", RND);

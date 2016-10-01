@@ -56,6 +56,9 @@ public class Agriculture_list extends Activity {
     private int mMonth;
     private int mYear;
 
+    ImageButton cmdForward;
+    TextView lblNext;
+
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -128,7 +131,8 @@ public class Agriculture_list extends Activity {
                     adb.show();
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Agriculture_list.this);
@@ -151,6 +155,20 @@ public class Agriculture_list extends Activity {
                     adb.show();
                 }
             });
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);
             btnRefresh.setOnClickListener(new View.OnClickListener() {
 
@@ -160,6 +178,8 @@ public class Agriculture_list extends Activity {
 
                 }
             });
+
+
 
             btnAdd = (Button) findViewById(R.id.btnAdd);
             btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -183,8 +203,9 @@ public class Agriculture_list extends Activity {
 
                 }
             });
-
-
+            lblNext= (TextView) findViewById(R.id.lblNext);
+            lblNext.setEnabled(false);
+            cmdForward.setEnabled(false);
             DataSearch(RND, SUCHANAID);
 
 
@@ -208,6 +229,8 @@ public class Agriculture_list extends Activity {
             HashMap<String, String> map;
 
             for (Agriculture_DataModel item : data) {
+                cmdForward.setEnabled(true);
+                lblNext.setEnabled(true);
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());

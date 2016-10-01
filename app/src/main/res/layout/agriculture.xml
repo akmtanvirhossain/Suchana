@@ -144,7 +144,7 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
+                    android:text="M.SL"
                     android:textSize="20sp" />
 
                 <TextView
@@ -255,7 +255,7 @@
                     android:id="@+id/lblSl"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Sl"
+                    android:text="SL."
                     android:textSize="20sp" />
 
                 <TextView
@@ -367,7 +367,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="জমি/জলাশয়ের"
+                    android:text="H152B. জমি/জলাশয়ের"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -388,7 +388,7 @@
                     android:id="@+id/lblH152b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -425,7 +425,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="জমি/পানির মাপ (জল আয়তন)"
+                    android:text="H152C.জমি/পানির মাপ (জল আয়তন)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -446,7 +446,7 @@
                     android:id="@+id/lblH152c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -484,7 +484,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="মোট উৎপাদন"
+                    android:text="H152D. মোট উৎপাদন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -505,7 +505,7 @@
                     android:id="@+id/lblH152d1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152d1"
+                    android:text="D1."
                     android:textSize="20sp" />
 
                 <TextView
@@ -543,7 +543,7 @@
                     android:id="@+id/lblH152d2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152d2"
+                    android:text="D2."
                     android:textSize="20sp" />
 
                 <TextView
@@ -595,7 +595,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কতটা বিক্রি  করেছিলেন"
+                    android:text="H152E. কতটা বিক্রি  করেছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -616,7 +616,7 @@
                     android:id="@+id/lblH152e1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152e1"
+                    android:text="E1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -654,7 +654,7 @@
                     android:id="@+id/lblH152e2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152e2"
+                    android:text="E2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -706,7 +706,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="বিক্রি করে কত টাকা পেয়েছিলেন"
+                    android:text="H152F. বিক্রি করে কত টাকা পেয়েছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -727,7 +727,7 @@
                     android:id="@+id/lblH152f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152f"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -765,7 +765,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কতটা খেয়েছিলেন"
+                    android:text="H152G. কতটা খেয়েছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -786,7 +786,7 @@
                     android:id="@+id/lblH152g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152g"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -824,7 +824,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="পরবর্তী ফসলি ঋতুর জন্যে কতটুকু রেখেছিলেন"
+                    android:text="H152H. পরবর্তী ফসলি ঋতুর জন্যে কতটুকু রেখেছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -845,7 +845,7 @@
                     android:id="@+id/lblH152h1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152h1"
+                    android:text="H1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -883,7 +883,7 @@
                     android:id="@+id/lblH152h2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152h2"
+                    android:text="H2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -935,7 +935,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="অন্যদের কতটুক দিয়ে দিয়েছিলেন"
+                    android:text="H152I. অন্যদের কতটুক দিয়ে দিয়েছিলেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -956,7 +956,7 @@
                     android:id="@+id/lblH152i1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152i1"
+                    android:text="I1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -994,7 +994,7 @@
                     android:id="@+id/lblH152i2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152i2"
+                    android:text="I2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1046,7 +1046,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="গবাদিপশু/হাস-মুরগি/মাছের খাদ্যর জন্য কতটুক রেখেছেন"
+                    android:text="H152J. গবাদিপশু/হাস-মুরগি/মাছের খাদ্যর জন্য কতটুক রেখেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1067,7 +1067,7 @@
                     android:id="@+id/lblH152j1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152j1"
+                    android:text="J1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1105,7 +1105,7 @@
                     android:id="@+id/lblH152j2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152j2"
+                    android:text="J2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1157,7 +1157,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="অপচয় কতটুক হয়েছিল"
+                    android:text="H152K. অপচয় কতটুক হয়েছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1178,7 +1178,7 @@
                     android:id="@+id/lblH152k1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152k1"
+                    android:text="K1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1216,7 +1216,7 @@
                     android:id="@+id/lblH152k2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H152k2"
+                    android:text="K2. "
                     android:textSize="20sp" />
 
                 <TextView
