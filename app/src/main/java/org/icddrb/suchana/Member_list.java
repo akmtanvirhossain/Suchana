@@ -112,7 +112,7 @@ public class Member_list extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);

@@ -418,16 +418,18 @@
                         android:text="প্রথম পরিদর্শনের তরিখ"
                         android:textSize="20sp" />
 
+
                     <EditText
                         android:id="@+id/dtpH17"
                         style="@style/customEdit"
-                        android:layout_width="150sp"
+                        android:layout_width="140sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10sp"
                         android:drawableRight="@drawable/calendersmall"
                         android:focusable="false"
                         android:inputType="text"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
+
                 </LinearLayout>
 
                 <View

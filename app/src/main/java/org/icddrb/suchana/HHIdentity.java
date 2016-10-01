@@ -6,6 +6,8 @@ package org.icddrb.suchana;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -26,6 +28,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -36,6 +39,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -215,6 +219,25 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     private int mDay;
     private int mMonth;
     private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            dtpDate = (EditText) findViewById(R.id.dtpH17);
+            if (VariableID.equals("dtpH17")) {
+                dtpDate = (EditText) findViewById(R.id.dtpH17);
+            }
+
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -668,7 +691,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             rdogrpH01.setOnCheckedChangeListener(this);
             rdogrpH01.setOnCheckedChangeListener(this);
             rdogrpH07.setOnCheckedChangeListener(this);
-        
+
             secH07a = (LinearLayout) findViewById(R.id.secH07a);
             lineH07a = (View) findViewById(R.id.lineH07a);
             VlblH07a = (TextView) findViewById(R.id.VlblH07a);
@@ -711,6 +734,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             rdoH081 = (RadioButton) findViewById(R.id.rdoH081);
             rdoH082 = (RadioButton) findViewById(R.id.rdoH082);
+
 
 
             dtpH17.setOnTouchListener(new View.OnTouchListener() {
@@ -879,7 +903,6 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         }
 
     }
-
 
     private void DataSave() {
         try {
@@ -1104,6 +1127,9 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
 
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
                 Bundle IDBundle = new Bundle();
                 IDBundle.putString("Rnd", RND);
                 IDBundle.putString("SuchanaId", SUCHANAID);
@@ -1318,7 +1344,6 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         }
     }
 
-
     //GPS Reading
     //.....................................................................................................
     public void FindLocation() {
@@ -1357,7 +1382,6 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         currentLongitude = currentLocation.getLongitude();
     }
 
-
     // Method to turn on GPS
     public void turnGPSOn() {
         try {
@@ -1394,7 +1418,6 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         turnGPSOff();
     }
 
-
     private void GenerateSuchanaID() {
         String D = spnDist.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-") : "";
         String U = spnUpz.getSelectedItemPosition() > 0 ? Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-") : "";
@@ -1404,4 +1427,16 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
         txtSuchanaID.setText(SID);
     }
 
+    protected Dialog onCreateDialog(int id) {
+        final Calendar c = Calendar.getInstance();
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
+        switch (id) {
+            case DATE_DIALOG:
+                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
+            //case TIME_DIALOG:
+            //    return new TimePickerDialog(this, timePickerListener, hour, minute,false);
+        }
+        return null;
+    }
 }

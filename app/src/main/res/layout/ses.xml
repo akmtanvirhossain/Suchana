@@ -113,14 +113,13 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বর"
                     android:textSize="20sp" />
 
                 <EditText
@@ -151,14 +150,13 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
@@ -330,6 +328,7 @@
                     android:id="@+id/VlblH321"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="বসত ঘরের মেঝে কি দিয়ে তৈরী?"
                     android:textSize="20sp" />
 
@@ -360,7 +359,7 @@
                     android:id="@+id/lblH321X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H321X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -406,6 +405,7 @@
                     android:id="@+id/VlblH322"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="বসত ঘরের চাল/ছাদ কি দিয়ে তৈরী"
                     android:textSize="20sp" />
 
@@ -482,6 +482,7 @@
                     android:id="@+id/VlblH323"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="বসত ঘরের দেয়াল কি দিয়ে তৈরী (বাহিরের দিকে)"
                     android:textSize="20sp" />
 
@@ -558,6 +559,7 @@
                     android:id="@+id/VlblH324"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="এই ঘরের আলোর বর্তমান প্রধান উৎস কী"
                     android:textSize="20sp" />
 
@@ -634,6 +636,7 @@
                     android:id="@+id/VlblH325"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="আপনার খানার রান্নার কাজে প্রধানত কি জ্বালানী ব্যবহার করেন"
                     android:textSize="20sp" />
 
@@ -725,12 +728,14 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="MSlNo"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
 
@@ -832,14 +837,14 @@
                     android:id="@+id/lblH332A"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H332A"
+                    android:text="H332"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH332A"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="(বাংলাদেশ) যদিএই অর্থ দেশের ভেতর বা বিদেশ থেকে পেয়ে থাকেন তো গত ১ বছরে সর্বমোট কত টাকা পেয়েছেন (উত্তর জানা না থাকলে উল্লেখ কর: 888888)"
+                    android:text="a) (বাংলাদেশ) যদিএই অর্থ দেশের ভেতর বা বিদেশ থেকে পেয়ে থাকেন তো গত ১ বছরে সর্বমোট কত টাকা পেয়েছেন (উত্তর জানা না থাকলে উল্লেখ কর: 888888)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -870,14 +875,14 @@
                     android:id="@+id/lblH332B"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H332B"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH332B"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="(বিদেশ) যদিএই অর্থ দেশের ভেতর বা বিদেশ থেকে পেয়ে থাকেন তো গত ১ বছরে সর্বমোট কত টাকা পেয়েছেন (উত্তর জানা না থাকলে উল্লেখ কর: 888888)"
+                    android:text="b) (বিদেশ) যদিএই অর্থ দেশের ভেতর বা বিদেশ থেকে পেয়ে থাকেন তো গত ১ বছরে সর্বমোট কত টাকা পেয়েছেন (উত্তর জানা না থাকলে উল্লেখ কর: 888888)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1213,14 +1218,14 @@
                     android:id="@+id/lblH63A"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63A"
+                    android:text="H63"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH63A"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রান্নাঘরেরবর্জ্য"
+                    android:text="a) রান্নাঘরেরবর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -1250,7 +1255,7 @@
                     android:id="@+id/lblH63AX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63AX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1289,14 +1294,14 @@
                     android:id="@+id/lblH63B"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63B"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH63B"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="শিশুর পায়েখানা"
+                    android:text="b) শিশুর পায়েখানা"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -1326,7 +1331,7 @@
                     android:id="@+id/lblH63BX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63BX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1365,14 +1370,14 @@
                     android:id="@+id/lblH63C"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63C"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH63C"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="হাস মুরগির বর্জ্য"
+                    android:text="c) হাস মুরগির বর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -1402,7 +1407,7 @@
                     android:id="@+id/lblH63CX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63CX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1441,14 +1446,14 @@
                     android:id="@+id/lblH63D"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63D"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH63D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="গরু ছাগলের বর্জ্য"
+                    android:text="d) গরু ছাগলের বর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -1478,7 +1483,7 @@
                     android:id="@+id/lblH63DX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1517,14 +1522,14 @@
                     android:id="@+id/lblH63E"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H63E"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH63E"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="গৃহস্তলির বর্জ্য"
+                    android:text="e) গৃহস্তলির বর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -1985,7 +1990,7 @@
 
                 <TextView
                     android:id="@+id/lblH610R"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H610R"
                     android:textSize="20sp" />
@@ -1994,6 +1999,7 @@
                     android:id="@+id/VlblH610R"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার পানির উৎস (বর্ষার মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -2024,7 +2030,7 @@
                     android:id="@+id/lblH610RX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H610X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2061,7 +2067,7 @@
 
                 <TextView
                     android:id="@+id/lblH610D"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H610D"
                     android:textSize="20sp" />
@@ -2070,6 +2076,7 @@
                     android:id="@+id/VlblH610D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার পানি উৎস (শুকনো মৌসুমে )"
                     android:textSize="20sp" />
 
@@ -2100,7 +2107,7 @@
                     android:id="@+id/lblH610DX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H610DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2137,9 +2144,9 @@
 
                 <TextView
                     android:id="@+id/lblH610a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610a"
+                    android:text="H610A"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2218,16 +2225,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b1"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b1"
+                    android:text="H610b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কলস"
+                    android:text="1) কলস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2254,16 +2261,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b2"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বালতি"
+                    android:text="2) বালতি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2290,16 +2297,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b3"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জালা/মটকা"
+                    android:text="3) জালা/মটকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2326,16 +2333,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b4"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b4"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ড্রাম"
+                    android:text="4) ড্রাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2362,16 +2369,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b5"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b5"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="5) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2398,9 +2405,9 @@
 
                 <TextView
                     android:id="@+id/lblH610b5X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b5X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2437,16 +2444,16 @@
 
                 <TextView
                     android:id="@+id/lblH610b6"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H610b6"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH610b6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সংরক্ষণ করে না"
+                    android:text="6) সংরক্ষণ করে না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2473,7 +2480,7 @@
 
                 <TextView
                     android:id="@+id/lblH610c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H610c"
                     android:textSize="20sp" />
@@ -2546,7 +2553,7 @@
 
                 <TextView
                     android:id="@+id/lblH611R"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H611R"
                     android:textSize="20sp" />
@@ -2555,6 +2562,7 @@
                     android:id="@+id/VlblH611R"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="রান্না করার পানি (বর্ষার মৌসুমে )"
                     android:textSize="20sp" />
 
@@ -2585,7 +2593,7 @@
                     android:id="@+id/lblH611RX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H611RX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2622,7 +2630,7 @@
 
                 <TextView
                     android:id="@+id/lblH611D"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H611D"
                     android:textSize="20sp" />
@@ -2631,6 +2639,7 @@
                     android:id="@+id/VlblH611D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="রান্না করার পানি (শুকনো মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -2661,7 +2670,7 @@
                     android:id="@+id/lblH611DX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H611DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2698,7 +2707,7 @@
 
                 <TextView
                     android:id="@+id/lblH611a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H611a"
                     android:textSize="20sp" />
@@ -2779,16 +2788,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b1"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b1"
+                    android:text="H611b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কলস"
+                    android:text="1) কলস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2815,16 +2824,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b2"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বালতি"
+                    android:text="2) বালতি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2851,16 +2860,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b3"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জালা বা মটকা"
+                    android:text="3) জালা বা মটকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2887,16 +2896,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b4"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b4"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ড্রাম"
+                    android:text="4) ড্রাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2923,16 +2932,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b5"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b5"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="5) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2959,9 +2968,9 @@
 
                 <TextView
                     android:id="@+id/lblH611b5X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b5X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2998,16 +3007,16 @@
 
                 <TextView
                     android:id="@+id/lblH611b6"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H611b6"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH611b6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সংরক্ষণ করে না"
+                    android:text="6) সংরক্ষণ করে না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3034,7 +3043,7 @@
 
                 <TextView
                     android:id="@+id/lblH611c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H611c"
                     android:textSize="20sp" />
@@ -3107,7 +3116,7 @@
 
                 <TextView
                     android:id="@+id/lblH612R"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H612R"
                     android:textSize="20sp" />
@@ -3116,6 +3125,7 @@
                     android:id="@+id/VlblH612R"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="ধোয়া মোছার জন্য পানি (বর্ষার মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -3144,9 +3154,9 @@
 
                 <TextView
                     android:id="@+id/lblH612RX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612RX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3183,7 +3193,7 @@
 
                 <TextView
                     android:id="@+id/lblH612D"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H612D"
                     android:textSize="20sp" />
@@ -3192,6 +3202,7 @@
                     android:id="@+id/VlblH612D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="ধোয়া মোছার জন্য পানি শুকনো মৌসুমে"
                     android:textSize="20sp" />
 
@@ -3220,9 +3231,9 @@
 
                 <TextView
                     android:id="@+id/lblH612DX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3259,7 +3270,7 @@
 
                 <TextView
                     android:id="@+id/lblH612a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H612a"
                     android:textSize="20sp" />
@@ -3268,6 +3279,7 @@
                     android:id="@+id/VlblH612a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="এই খানার কি কোনো নিজেস্য পানির উত্স্য আছে"
                     android:textSize="20sp" />
 
@@ -3340,16 +3352,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b1"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b1"
+                    android:text="H612b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কলস"
+                    android:text="1) কলস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3376,16 +3388,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b2"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বালতি"
+                    android:text="2) বালতি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3412,16 +3424,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b3"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জালা বা মটকা"
+                    android:text="3) জালা বা মটকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3448,16 +3460,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b4"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b4"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ড্রাম"
+                    android:text="4) ড্রাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3484,16 +3496,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b5"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b5"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="5) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3520,9 +3532,9 @@
 
                 <TextView
                     android:id="@+id/lblH612b5X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b5X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3559,16 +3571,16 @@
 
                 <TextView
                     android:id="@+id/lblH612b6"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H612b6"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH612b6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সংরক্ষণ করে না"
+                    android:text="6) সংরক্ষণ করে না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3595,7 +3607,7 @@
 
                 <TextView
                     android:id="@+id/lblH612c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H612c"
                     android:textSize="20sp" />
@@ -3668,7 +3680,7 @@
 
                 <TextView
                     android:id="@+id/lblH613R"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H613R"
                     android:textSize="20sp" />
@@ -3677,6 +3689,7 @@
                     android:id="@+id/VlblH613R"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার দেয়ার আগে হাত ধোয়ার জন্য পানি (বর্ষার মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -3705,9 +3718,9 @@
 
                 <TextView
                     android:id="@+id/lblH613RX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613RX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3744,7 +3757,7 @@
 
                 <TextView
                     android:id="@+id/lblH613D"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H613D"
                     android:textSize="20sp" />
@@ -3753,6 +3766,7 @@
                     android:id="@+id/VlblH613D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার দেয়ার আগে হাত ধোয়ার জন্য পানি  শুকনো মৌসুমে"
                     android:textSize="20sp" />
 
@@ -3781,9 +3795,9 @@
 
                 <TextView
                     android:id="@+id/lblH613DX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3820,7 +3834,7 @@
 
                 <TextView
                     android:id="@+id/lblH613a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H613a"
                     android:textSize="20sp" />
@@ -3901,16 +3915,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b1"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b1"
+                    android:text="H613b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কলস"
+                    android:text="1) কলস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3937,16 +3951,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b2"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বালতি"
+                    android:text="2) বালতি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3973,16 +3987,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b3"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জালা বা মটকা"
+                    android:text="3) জালা বা মটকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4009,16 +4023,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b4"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b4"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ড্রাম"
+                    android:text="4) ড্রাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4045,16 +4059,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b5"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b5"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="5) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4081,9 +4095,9 @@
 
                 <TextView
                     android:id="@+id/lblH613b5X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b5X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -4120,16 +4134,16 @@
 
                 <TextView
                     android:id="@+id/lblH613b6"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H613b6"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH613b6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সংরক্ষণ করে না"
+                    android:text="6) সংরক্ষণ করে না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4156,7 +4170,7 @@
 
                 <TextView
                     android:id="@+id/lblH613c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H613c"
                     android:textSize="20sp" />
@@ -4229,7 +4243,7 @@
 
                 <TextView
                     android:id="@+id/lblH614R"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H614R"
                     android:textSize="20sp" />
@@ -4238,6 +4252,7 @@
                     android:id="@+id/VlblH614R"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার খাওয়ার  আগে হাত ধোয়ার জন্য (বর্ষার মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -4266,9 +4281,9 @@
 
                 <TextView
                     android:id="@+id/lblH614RX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614RX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -4305,7 +4320,7 @@
 
                 <TextView
                     android:id="@+id/lblH614D"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H614D"
                     android:textSize="20sp" />
@@ -4314,6 +4329,7 @@
                     android:id="@+id/VlblH614D"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="খাবার খাওয়ার  আগে হাত ধোয়ার জন্য পানি (শুকনো মৌসুমে)"
                     android:textSize="20sp" />
 
@@ -4342,9 +4358,9 @@
 
                 <TextView
                     android:id="@+id/lblH614DX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614DX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -4381,7 +4397,7 @@
 
                 <TextView
                     android:id="@+id/lblH614a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H614a"
                     android:textSize="20sp" />
@@ -4462,16 +4478,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b1"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b1"
+                    android:text="H614b"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কলস"
+                    android:text="1) কলস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4498,16 +4514,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b2"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বালতি"
+                    android:text="2) বালতি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4534,16 +4550,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b3"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জালা বা মটকা"
+                    android:text="3) জালা বা মটকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4570,16 +4586,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b4"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b4"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ড্রাম"
+                    android:text="4) ড্রাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4606,16 +4622,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b5"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b5"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="5) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4642,9 +4658,9 @@
 
                 <TextView
                     android:id="@+id/lblH614b5X"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b5X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -4681,16 +4697,16 @@
 
                 <TextView
                     android:id="@+id/lblH614b6"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H614b6"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH614b6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সংরক্ষণ করে না"
+                    android:text="6) সংরক্ষণ করে না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4717,7 +4733,7 @@
 
                 <TextView
                     android:id="@+id/lblH614c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H614c"
                     android:textSize="20sp" />
@@ -4790,7 +4806,7 @@
 
                 <TextView
                     android:id="@+id/lblH615a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H615a"
                     android:textSize="20sp" />
@@ -4828,7 +4844,7 @@
 
                 <TextView
                     android:id="@+id/lblH615b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:text="H615b"
                     android:textSize="20sp" />
@@ -4979,6 +4995,7 @@
                     android:id="@+id/VlblH618"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="পানিকে বিশুদ্ধ করার জন্য আপনি সাধারনত কি করেন"
                     android:textSize="20sp" />
 

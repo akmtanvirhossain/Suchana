@@ -31,11 +31,12 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="250sp"
+                    android:layout_width="140sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -70,11 +71,12 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="250sp"
+                    android:layout_width="140sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -113,7 +115,7 @@
 
                 <TextView
                     android:id="@+id/VlblH21"
-                    android:layout_width="250sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
                     android:text="লাইন  #"
                     android:textSize="20sp" />
@@ -151,15 +153,15 @@
 
                 <TextView
                     android:id="@+id/VlblH22"
-                    android:layout_width="250sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="নাম  (জাতীয় পরিচয়পত্র অথবা জন্মনিবন্ধন সনদ/ টিকা কার্ড   দেখে নিশ্চিত হোন)"
+                    android:text="নাম"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH22"
                     style="@style/customEdit"
-                    android:layout_width="170sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="0sp"
                     android:gravity="top|left"
@@ -169,6 +171,25 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
+            <LinearLayout
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(জাতীয় পরিচয়পত্র অথবা জন্মনিবন্ধন সনদ/ টিকা কার্ড   দেখে নিশ্চিত হোন)"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
 
             <View
                 android:id="@+id/lineH222"
