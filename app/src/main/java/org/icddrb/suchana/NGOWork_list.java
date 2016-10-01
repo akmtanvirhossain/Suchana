@@ -202,7 +202,7 @@ public class NGOWork_list extends Activity {
                 map.put("H167i", item.getH167i());
                 map.put("H167x", item.getH167x());
                 map.put("H167x1", item.getH167x1());
-                map.put("H168", item.getH168());
+                map.put("H168", item.getH168x());
                 map.put("H169", item.getH169());
                 map.put("H1610", item.getH1610());
                 map.put("H1611", item.getH1611());
