@@ -58,7 +58,7 @@ public class Savings extends Activity {
     LinearLayout secMSlNo;
     View lineMSlNo;
     TextView VlblMSlNo;
-    EditText txtMSlNo;
+    Spinner spnMSlNo;
     LinearLayout secH101;
     View lineH101;
     TextView VlblH101;
@@ -218,6 +218,7 @@ public class Savings extends Activity {
                 }
             });
 
+
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -235,7 +236,10 @@ public class Savings extends Activity {
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
-            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            //txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
+
             secH101 = (LinearLayout) findViewById(R.id.secH101);
             lineH101 = (View) findViewById(R.id.lineH101);
             VlblH101 = (TextView) findViewById(R.id.VlblH101);
@@ -560,13 +564,9 @@ public class Savings extends Activity {
                 Connection.MessageBox(Savings.this, "Required field: উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(Savings.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
-                Connection.MessageBox(Savings.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
-                txtMSlNo.requestFocus();
+                spnMSlNo.requestFocus();
                 return;
             } else if (!rdoH1011.isChecked() & !rdoH1012.isChecked() & secH101.isShown()) {
                 Connection.MessageBox(Savings.this, "Select anyone options from (আপনি  বা আপনার স্ত্রী বা পরিবারের অন্যান্য সদস্য কি কোন সমব্যয় সমিতি  বা এলাকার সঞ্চয়ী কমিটির সদস্য (সুচনা বহির্ভূত) ).");
@@ -656,7 +656,7 @@ public class Savings extends Activity {
             Savings_DataModel objSave = new Savings_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
             String[] d_rdogrpH101 = new String[]{"1", "0"};
             objSave.setH101("");
             for (int i = 0; i < rdogrpH101.getChildCount(); i++) {
@@ -727,7 +727,7 @@ public class Savings extends Activity {
             for (Savings_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 String[] d_rdogrpH101 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH101.length; i++) {
                     if (item.getH101().equals(String.valueOf(d_rdogrpH101[i]))) {

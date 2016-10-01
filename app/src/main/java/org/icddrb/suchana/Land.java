@@ -57,7 +57,7 @@ public class Land extends Activity {
     LinearLayout secMSlNo;
     View lineMSlNo;
     TextView VlblMSlNo;
-    EditText txtMSlNo;
+    Spinner spnMSlNo;
     LinearLayout seclb50;
     LinearLayout seclb501;
     LinearLayout secSlNo;
@@ -218,7 +218,8 @@ public class Land extends Activity {
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
-            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             seclb50 = (LinearLayout) findViewById(R.id.seclb50);
             seclb501 = (LinearLayout) findViewById(R.id.seclb501);
             secSlNo = (LinearLayout) findViewById(R.id.secSlNo);
@@ -227,14 +228,14 @@ public class Land extends Activity {
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
 
             //txtSlNo.setEnabled(false);
-            int mSlNo = 0;
-            Cursor cursor = C.GetData("Member", "suchanaid", SUCHANAID);
+            int SlNo = 0;
+            Cursor cursor = C.GetData("Land", "suchanaid", SUCHANAID);
             if (cursor.getCount() != 0) {
-                mSlNo = cursor.getCount() + 1;
+                SlNo = cursor.getCount() + 1;
             } else {
-                mSlNo = 1;
+                SlNo = 1;
             }
-            txtSlNo.setText(String.valueOf(mSlNo));
+            txtSlNo.setText(String.valueOf(SlNo));
             secH5 = (LinearLayout) findViewById(R.id.secH5);
             lineH5 = (View) findViewById(R.id.lineH5);
             VlblH5 = (TextView) findViewById(R.id.VlblH5);
@@ -409,13 +410,9 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
-                Connection.MessageBox(Land.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
-                txtMSlNo.requestFocus();
+                spnMSlNo.requestFocus();
                 return;
             } else if (txtSlNo.getText().toString().length() == 0 & secSlNo.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: Serial No.");
@@ -501,7 +498,7 @@ public class Land extends Activity {
             Land_DataModel objSave = new Land_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
             objSave.setSlNo(txtSlNo.getText().toString());
             objSave.setH5((spnH5.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5.getSelectedItem().toString(), "-")));
             objSave.setH5a((spnH5a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5a.getSelectedItem().toString(), "-")));
@@ -554,7 +551,7 @@ public class Land extends Activity {
             for (Land_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 txtSlNo.setText(item.getSlNo());
                 spnH5.setSelection(Global.SpinnerItemPositionAnyLength(spnH5, item.getH5()));
                 spnH5a.setSelection(Global.SpinnerItemPositionAnyLength(spnH5a, item.getH5a()));

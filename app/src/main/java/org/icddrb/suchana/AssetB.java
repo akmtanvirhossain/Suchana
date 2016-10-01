@@ -71,7 +71,7 @@ public class AssetB extends Activity {
     LinearLayout secMSlNo;
     View lineMSlNo;
     TextView VlblMSlNo;
-    EditText txtMSlNo;
+    Spinner spnMSlNo;
     LinearLayout seclblH4;
     LinearLayout seclblH41;
     LinearLayout secH41a;
@@ -311,7 +311,8 @@ public class AssetB extends Activity {
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
-            txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             seclblH4 = (LinearLayout) findViewById(R.id.seclblH4);
 
             buttonAssetType01 = (Button) findViewById(R.id.buttonAssetType01);
@@ -1164,13 +1165,9 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtMSlNo.getText().toString().length() == 0 & secMSlNo.isShown()) {
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                txtMSlNo.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "1" : txtMSlNo.getText().toString()) < 1 || Integer.valueOf(txtMSlNo.getText().toString().length() == 0 ? "99" : txtMSlNo.getText().toString()) > 99) {
-                Connection.MessageBox(AssetB.this, "Value should be between 1 and 99(তথ্যদানে সহায়তাকারীর লাইন নম্বর #).");
-                txtMSlNo.requestFocus();
+                spnMSlNo.requestFocus();
                 return;
             } else if (spnH41a.getSelectedItemPosition() == 0 & secH41a.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: সম্পদ.");
@@ -1292,7 +1289,7 @@ public class AssetB extends Activity {
             AssetB_DataModel objSave = new AssetB_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(txtMSlNo.getText().toString());
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
             objSave.setH41a((spnH41a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-")));
             objSave.setH41aX(txtH41aX.getText().toString());
             objSave.setH41b(txtH41b.getText().toString());
@@ -1365,7 +1362,7 @@ public class AssetB extends Activity {
             for (AssetB_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 spnH41a.setSelection(Global.SpinnerItemPositionAnyLength(spnH41a, item.getH41a()));
                 txtH41aX.setText(item.getH41aX());
                 txtH41b.setText(item.getH41b());

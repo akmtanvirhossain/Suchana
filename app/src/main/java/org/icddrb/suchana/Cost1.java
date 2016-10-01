@@ -504,7 +504,7 @@ public class Cost1 extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             secLBH8 = (LinearLayout) findViewById(R.id.secLBH8);
             secH811a = (LinearLayout) findViewById(R.id.secH811a);
             lineH811a = (View) findViewById(R.id.lineH811a);
