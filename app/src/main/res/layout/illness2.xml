@@ -40,23 +40,6 @@
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/lblNext"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight=".2"
-            android:gravity="center_vertical|right"
-            android:paddingLeft="10sp"
-            android:text="HOME"
-            android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
-
-        <ImageButton
-            android:id="@+id/cmdForward"
-            android:layout_width="50sp"
-            android:layout_height="match_parent"
-            android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward" />
 
     </LinearLayout>
 

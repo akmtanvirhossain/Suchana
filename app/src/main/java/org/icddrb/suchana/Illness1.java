@@ -222,7 +222,7 @@ public class Illness1 extends Activity {
                     adb.show();
                 }
             });
-
+/*
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -240,7 +240,7 @@ public class Illness1 extends Activity {
                     });
                     adb.show();
                 }
-            });
+            });*/
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
