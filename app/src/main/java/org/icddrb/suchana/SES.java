@@ -1368,7 +1368,7 @@ public class SES extends Activity {
             List<String> listH610 = new ArrayList<String>();
 
             listH610.add("");
-            listH610.add("0-হাত ধোয়ে না");
+            listH610.add("0-হাত ধোয়না");
             listH610.add("1-টিউবওয়েল");
             listH610.add("2-নদী/খাল/পুকুর");
             listH610.add("3-বৃষ্টির পানি");
@@ -1405,7 +1405,7 @@ public class SES extends Activity {
             List<String> listH610D = new ArrayList<String>();
 
             listH610D.add("");
-            listH610D.add("0-হাত ধোয়ে না");
+            listH610D.add("0-হাত ধোয়না");
             listH610D.add("1-টিউবওয়েল");
             listH610D.add("2-নদী/খাল/পুকুর");
             listH610D.add("3-বৃষ্টির পানি");
@@ -1573,7 +1573,7 @@ public class SES extends Activity {
             List<String> listH611R = new ArrayList<String>();
 
             listH611R.add("");
-            listH611R.add("0-হাত ধোয়ে না");
+            listH611R.add("0-হাত ধোয়না");
             listH611R.add("1-টিউবওয়েল");
             listH611R.add("2-নদী/খাল/পুকুর");
             listH611R.add("3-বৃষ্টির পানি");
@@ -1610,7 +1610,7 @@ public class SES extends Activity {
             List<String> listH611D = new ArrayList<String>();
 
             listH611D.add("");
-            listH611D.add("0-হাত ধোয়ে না");
+            listH611D.add("0-হাত ধোয়না");
             listH611D.add("1-টিউবওয়েল");
             listH611D.add("2-নদী/খাল/পুকুর");
             listH611D.add("3-বৃষ্টির পানি");
@@ -1781,7 +1781,7 @@ public class SES extends Activity {
             List<String> listH612R = new ArrayList<String>();
 
             listH612R.add("");
-            listH612R.add("0-হাত ধোয়ে না");
+            listH612R.add("0-হাত ধোয়না");
             listH612R.add("1-টিউবওয়েল");
             listH612R.add("2-নদী বা খাল পুকুর");
             listH612R.add("3-বৃষ্টির পানি");
@@ -1818,7 +1818,7 @@ public class SES extends Activity {
             List<String> listH612D = new ArrayList<String>();
 
             listH612D.add("");
-            listH612D.add("0-হাত ধোয়ে না");
+            listH612D.add("0-হাত ধোয়না");
             listH612D.add("1-টিউবওয়েল");
             listH612D.add("2-নদী বা খাল পুকুর");
             listH612D.add("3-বৃষ্টির পানি");
@@ -1990,7 +1990,7 @@ public class SES extends Activity {
             List<String> listH613R = new ArrayList<String>();
 
             listH613R.add("");
-            listH613R.add("0-হাত ধোয়ে না");
+            listH613R.add("0-হাত ধোয়না");
             listH613R.add("1-টিউবওয়েল");
             listH613R.add("2-নদী বা খাল পুকুর");
             listH613R.add("3-বৃষ্টির পানি");
@@ -2027,7 +2027,7 @@ public class SES extends Activity {
             List<String> listH613D = new ArrayList<String>();
 
             listH613D.add("");
-            listH613D.add("0-হাত ধোয়ে না");
+            listH613D.add("0-হাত ধোয়না");
             listH613D.add("1-টিউবওয়েল");
             listH613D.add("2-নদী বা খাল পুকুর");
             listH613D.add("3-বৃষ্টির পানি");
@@ -2201,7 +2201,7 @@ public class SES extends Activity {
             List<String> listH614R = new ArrayList<String>();
 
             listH614R.add("");
-            listH614R.add("0-হাত ধোয়ে না");
+            listH614R.add("0-হাত ধোয়না");
             listH614R.add("1-টিউবওয়েল");
             listH614R.add("2-নদী বা খাল পুকুর");
             listH614R.add("3-বৃষ্টির পানি");
@@ -2238,7 +2238,7 @@ public class SES extends Activity {
             List<String> listH614D = new ArrayList<String>();
 
             listH614D.add("");
-            listH614D.add("0-হাত ধোয়ে না");
+            listH614D.add("0-হাত ধোয়না");
             listH614D.add("1-টিউবওয়েল");
             listH614D.add("2-নদী বা খাল পুকুর");
             listH614D.add("3-বৃষ্টির পানি");
@@ -2338,6 +2338,7 @@ public class SES extends Activity {
 
                 }
             });
+
             chkH614b1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
