@@ -474,6 +474,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             listResult.add("2-উত্তরদাত্রী/প্রধান মহিলা বাড়ি ছিলেননা");
             listResult.add("3-অংশগ্রহনে অসম্মতি");
             listResult.add("4-অন্যান্য");
+            listResult.add("5-ইন্টারভিউ আংশিক সম্পন্ন");
             ArrayAdapter<String> adptrResult = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listResult);
             spnResult.setAdapter(adptrResult);
 
@@ -492,47 +493,67 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineResultX.setVisibility(View.GONE);
                     }
 
-                    if (!spnData.equalsIgnoreCase("1")) {
+                    if (!spnData.equalsIgnoreCase("1") & !spnData.equalsIgnoreCase("5")) {
+                        txtResultX.setText("");
                         secH16.setVisibility(View.GONE);
+                        rdogrpH16.clearCheck();
                         lineH16.setVisibility(View.GONE);
                         secH16X.setVisibility(View.GONE);
                         lineH16X.setVisibility(View.GONE);
                         secH13.setVisibility(View.GONE);
                         lineH13.setVisibility(View.GONE);
+                        txtH13.setText("");
                         secH14.setVisibility(View.GONE);
                         lineH14.setVisibility(View.GONE);
+                        spnH14.setSelection(0);
                         secH01.setVisibility(View.GONE);
                         lineH01.setVisibility(View.GONE);
+                        rdogrpH01.clearCheck();
                         secH02.setVisibility(View.GONE);
                         lineH02.setVisibility(View.GONE);
+                        rdogrpH02.clearCheck();
                         secH03.setVisibility(View.GONE);
                         lineH03.setVisibility(View.GONE);
+                        rdogrpH03.clearCheck();
                         secH04.setVisibility(View.GONE);
                         lineH04.setVisibility(View.GONE);
+                        rdogrpH04.clearCheck();
                         secH05.setVisibility(View.GONE);
                         lineH05.setVisibility(View.GONE);
+                        rdogrpH05.clearCheck();
                         secH06.setVisibility(View.GONE);
                         lineH06.setVisibility(View.GONE);
+                        rdogrpH06.clearCheck();
                         secH07.setVisibility(View.GONE);
                         lineH07.setVisibility(View.GONE);
+                        rdogrpH07.clearCheck();
                         secH07a.setVisibility(View.GONE);
                         lineH07a.setVisibility(View.GONE);
+                        chkH07a.setChecked(false);
                         secH07b.setVisibility(View.GONE);
                         lineH07b.setVisibility(View.GONE);
+                        chkH07b.setChecked(false);
                         secH07c.setVisibility(View.GONE);
                         lineH07c.setVisibility(View.GONE);
+                        chkH07c.setChecked(false);
                         secH07d.setVisibility(View.GONE);
                         lineH07d.setVisibility(View.GONE);
+                        chkH07d.setChecked(false);
                         secH07e.setVisibility(View.GONE);
                         lineH07e.setVisibility(View.GONE);
+                        chkH07e.setChecked(false);
                         secH07f.setVisibility(View.GONE);
                         lineH07f.setVisibility(View.GONE);
+                        chkH07g.setChecked(false);
                         secH07g.setVisibility(View.GONE);
                         lineH07g.setVisibility(View.GONE);
+                        chkH07g.setChecked(false);
                         secH07h.setVisibility(View.GONE);
                         lineH07h.setVisibility(View.GONE);
+                        chkH07h.setChecked(false);
                         secH08.setVisibility(View.GONE);
                         lineH08.setVisibility(View.GONE);
+                        rdogrpH08.clearCheck();
                         seclblV1.setVisibility(View.GONE);
                     } else {
                         secH16.setVisibility(View.VISIBLE);
