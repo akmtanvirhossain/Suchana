@@ -134,11 +134,12 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="370sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -146,7 +147,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="150dp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -281,10 +282,10 @@
 
             <View
                 android:id="@+id/lineH162"
-                android:text="H163"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
-                android:background="#CCCCCC" />
+                android:background="#CCCCCC"
+                android:text="H163" />
 
             <LinearLayout
                 android:id="@+id/seclbH163"
@@ -697,34 +698,33 @@
 
             <LinearLayout
                 android:id="@+id/secH164"
-                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblH164"
                     android:layout_width="60sp"
-                    android:text="H164"
                     android:layout_height="wrap_content"
+                    android:text="H164"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH164"
-                    android:layout_width="300dp"
+                    android:layout_width="350sp"
                     android:layout_height="wrap_content"
-                    android:text="H164. আপনি সুচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন"
+                    android:layout_marginBottom="10sp"
+                    android:text="আপনি সুচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH164"
                     style="@style/customEdit"
-                    android:layout_width="200dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="100"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:minHeight="40dp"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -742,19 +742,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                android:id="@+id/lblH165"
-                android:text="H165"
+                    android:id="@+id/lblH165"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp" />
+                    android:text="H165"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
-
                     android:id="@+id/lblHlbH165"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ট্রেনিং সেশনগুলো কে/করা পরিচালিত করেছিল"
+                    android:text="H165. ট্রেনিং সেশনগুলো কে/করা পরিচালিত করেছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1161,9 +1161,9 @@
 
                 <TextView
                     android:id="@+id/lblH166"
-                    android:text="H166"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H166"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1261,6 +1261,43 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH168a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168a"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH167b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1291,6 +1328,43 @@
 
             <View
                 android:id="@+id/lineH167b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH168b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168b"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1331,6 +1405,43 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH168c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168c"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH167d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1361,6 +1472,43 @@
 
             <View
                 android:id="@+id/lineH167d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH168d"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168d"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168d"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168d"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1401,6 +1549,43 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH168e"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168e"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168e"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168e"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168e"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH167f"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1431,6 +1616,43 @@
 
             <View
                 android:id="@+id/lineH167f"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH168f"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168f"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168f"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168f"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168f"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1471,6 +1693,115 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH168g"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168g"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168g"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168g"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168g"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH167h"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH167h"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH167h"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য এন, জি, ওর সাথে  যোগাযোগ স্থাপন"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkH167h"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH167h"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH168h"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168h"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168h"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168h"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168h"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH167i"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1501,6 +1832,43 @@
 
             <View
                 android:id="@+id/lineH167i"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH168i"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH168i"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH168i"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH168i"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168i"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1579,28 +1947,28 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH168"
+                android:id="@+id/secH168x"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH168"
-                    android:text="H168"
+                    android:id="@+id/lblH168x"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H168x"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH168"
+                    android:id="@+id/VlblH168x"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH168"
+                    android:id="@+id/txtH168x"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1609,6 +1977,12 @@
                     android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
+
+            <View
+                android:id="@+id/lineH168x"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
 
             <View
                 android:id="@+id/lineH168"
@@ -1625,9 +1999,9 @@
 
                 <TextView
                     android:id="@+id/lblH169"
-                    android:text="H169"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H169"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1677,9 +2051,9 @@
 
                 <TextView
                     android:id="@+id/lblH1610"
-                    android:text="H1610"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H1610"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1696,7 +2070,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
-                    android:maxLength="1"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1716,8 +2090,8 @@
                 <TextView
                     android:id="@+id/lblH1611"
                     android:layout_width="60sp"
-                    android:text="H1611"
                     android:layout_height="wrap_content"
+                    android:text="H1611"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2211,9 +2585,9 @@
 
                 <TextView
                     android:id="@+id/lblH1613"
-                    android:text="H1613"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H1613"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2256,10 +2630,10 @@
 
             <LinearLayout
                 android:id="@+id/secH1614"
-                android:text="H1614"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:text="H1614">
 
                 <TextView
                     android:id="@+id/lblHH1614"
@@ -2568,9 +2942,9 @@
 
                 <TextView
                     android:id="@+id/lblH1615"
-                    android:text="H1615"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H1615"
                     android:textSize="20sp" />
 
                 <TextView

@@ -145,13 +145,19 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="150sp"
+                    android:layout_width="145sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
+
+            <View
+                android:id="@+id/lineSuchanaID"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secMSlNo"
@@ -185,12 +191,6 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineSuchanaID"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <View
                 android:id="@+id/lineMSlNo"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
@@ -213,6 +213,58 @@
 
             <View
                 android:id="@+id/lineLBH8"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH81"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH81"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H81"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH81"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে চাল / গম / রুটি কিনেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH811"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH812"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH81"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -446,7 +498,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না   "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -544,7 +596,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -634,7 +686,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -732,7 +784,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -822,7 +874,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -920,7 +972,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1010,7 +1062,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1108,7 +1160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1198,7 +1250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1296,7 +1348,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1384,7 +1436,7 @@
                     android:id="@+id/VlblH821a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ডাল  কিনেছে"
+                    android:text="আপনি গত মাসে ডাল ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1407,7 +1459,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1505,7 +1557,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1576,6 +1628,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH83"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH83"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H83"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH83"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে ভোজ্য তেল ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH831"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH832"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH83"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH831a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1616,7 +1720,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1714,7 +1818,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1804,7 +1908,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1902,7 +2006,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1973,6 +2077,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH84"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH84"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H84"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH84"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে মাংস/  মাছ ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH84"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH841"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH842"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH84"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH841a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -2013,7 +2169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2111,7 +2267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2201,7 +2357,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2299,7 +2455,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2387,7 +2543,7 @@
                     android:id="@+id/VlblH851a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ডিম  কিনেছে"
+                    android:text="আপনি গত মাসে ডিম ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2410,7 +2566,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2508,7 +2664,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2579,6 +2735,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH86"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH86"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H86"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH86"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে দুধ বা দুগ্ধজাত খাদ্য ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH86"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH861"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH862"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH86"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH861a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -2619,7 +2827,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2717,7 +2925,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2807,7 +3015,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2905,7 +3113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>

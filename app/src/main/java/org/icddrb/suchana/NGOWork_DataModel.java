@@ -41,16 +41,26 @@ public class NGOWork_DataModel {
     private String _H165i = "";
     private String _H166 = "";
     private String _H167a = "";
+    private String _H168a = "";
     private String _H167b = "";
+    private String _H168b = "";
     private String _H167c = "";
+    private String _H168c = "";
     private String _H167d = "";
+    private String _H168d = "";
     private String _H167e = "";
+    private String _H168e = "";
     private String _H167f = "";
+    private String _H168f = "";
     private String _H167g = "";
+    private String _H168g = "";
+    private String _H167h = "";
+    private String _H168h = "";
     private String _H167i = "";
+    private String _H168i = "";
     private String _H167x = "";
     private String _H167x1 = "";
-    private String _H168 = "";
+    private String _H168x = "";
     private String _H169 = "";
     private String _H1610 = "";
     private String _H1611 = "";
@@ -328,12 +338,28 @@ public class NGOWork_DataModel {
         _H167a = newValue;
     }
 
+    public String getH168a() {
+        return _H168a;
+    }
+
+    public void setH168a(String newValue) {
+        _H168a = newValue;
+    }
+
     public String getH167b() {
         return _H167b;
     }
 
     public void setH167b(String newValue) {
         _H167b = newValue;
+    }
+
+    public String getH168b() {
+        return _H168b;
+    }
+
+    public void setH168b(String newValue) {
+        _H168b = newValue;
     }
 
     public String getH167c() {
@@ -344,12 +370,28 @@ public class NGOWork_DataModel {
         _H167c = newValue;
     }
 
+    public String getH168c() {
+        return _H168c;
+    }
+
+    public void setH168c(String newValue) {
+        _H168c = newValue;
+    }
+
     public String getH167d() {
         return _H167d;
     }
 
     public void setH167d(String newValue) {
         _H167d = newValue;
+    }
+
+    public String getH168d() {
+        return _H168d;
+    }
+
+    public void setH168d(String newValue) {
+        _H168d = newValue;
     }
 
     public String getH167e() {
@@ -360,12 +402,28 @@ public class NGOWork_DataModel {
         _H167e = newValue;
     }
 
+    public String getH168e() {
+        return _H168e;
+    }
+
+    public void setH168e(String newValue) {
+        _H168e = newValue;
+    }
+
     public String getH167f() {
         return _H167f;
     }
 
     public void setH167f(String newValue) {
         _H167f = newValue;
+    }
+
+    public String getH168f() {
+        return _H168f;
+    }
+
+    public void setH168f(String newValue) {
+        _H168f = newValue;
     }
 
     public String getH167g() {
@@ -376,12 +434,44 @@ public class NGOWork_DataModel {
         _H167g = newValue;
     }
 
+    public String getH168g() {
+        return _H168g;
+    }
+
+    public void setH168g(String newValue) {
+        _H168g = newValue;
+    }
+
+    public String getH167h() {
+        return _H167h;
+    }
+
+    public void setH167h(String newValue) {
+        _H167h = newValue;
+    }
+
+    public String getH168h() {
+        return _H168h;
+    }
+
+    public void setH168h(String newValue) {
+        _H168h = newValue;
+    }
+
     public String getH167i() {
         return _H167i;
     }
 
     public void setH167i(String newValue) {
         _H167i = newValue;
+    }
+
+    public String getH168i() {
+        return _H168i;
+    }
+
+    public void setH168i(String newValue) {
+        _H168i = newValue;
     }
 
     public String getH167x() {
@@ -400,12 +490,12 @@ public class NGOWork_DataModel {
         _H167x1 = newValue;
     }
 
-    public String getH168() {
-        return _H168;
+    public String getH168x() {
+        return _H168x;
     }
 
-    public void setH168(String newValue) {
-        _H168 = newValue;
+    public void setH168x(String newValue) {
+        _H168x = newValue;
     }
 
     public String getH169() {
@@ -744,7 +834,7 @@ public class NGOWork_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H161,H162,H163a,H163b,H163c,H163d,H163e,H163f,H163g,H163h,H163i,H163x,H163oth,H164,H165a,H165b,H165c,H165d,H165e,H165f,H165g,H165h,H165x,H16x1,H165i,H166,H167a,H167b,H167c,H167d,H167e,H167f,H167g,H167i,H167x,H167x1,H168,H169,H1610,H1611,H1612a,H1612b,H1612c,H1612d,H1612e,H1612f,H1612g,H1612h,H1612i,H1612j,H1612x,H1612x1,H1613,H1614a,H1614b,H1614c,H1614d,H1614e,H1614f,H1614x,H1614x1,H1615,H1616a,H1616b,H1616c,H1616d,H1616e,H1616f,H1616g,H1616h,H1616i,H1616x,H1616x1,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H161 + "', '" + _H162 + "', '" + _H163a + "', '" + _H163b + "', '" + _H163c + "', '" + _H163d + "', '" + _H163e + "', '" + _H163f + "', '" + _H163g + "', '" + _H163h + "', '" + _H163i + "', '" + _H163x + "', '" + _H163oth + "', '" + _H164 + "', '" + _H165a + "', '" + _H165b + "', '" + _H165c + "', '" + _H165d + "', '" + _H165e + "', '" + _H165f + "', '" + _H165g + "', '" + _H165h + "', '" + _H165x + "', '" + _H16x1 + "', '" + _H165i + "', '" + _H166 + "', '" + _H167a + "', '" + _H167b + "', '" + _H167c + "', '" + _H167d + "', '" + _H167e + "', '" + _H167f + "', '" + _H167g + "', '" + _H167i + "', '" + _H167x + "', '" + _H167x1 + "', '" + _H168 + "', '" + _H169 + "', '" + _H1610 + "', '" + _H1611 + "', '" + _H1612a + "', '" + _H1612b + "', '" + _H1612c + "', '" + _H1612d + "', '" + _H1612e + "', '" + _H1612f + "', '" + _H1612g + "', '" + _H1612h + "', '" + _H1612i + "', '" + _H1612j + "', '" + _H1612x + "', '" + _H1612x1 + "', '" + _H1613 + "', '" + _H1614a + "', '" + _H1614b + "', '" + _H1614c + "', '" + _H1614d + "', '" + _H1614e + "', '" + _H1614f + "', '" + _H1614x + "', '" + _H1614x1 + "', '" + _H1615 + "', '" + _H1616a + "', '" + _H1616b + "', '" + _H1616c + "', '" + _H1616d + "', '" + _H1616e + "', '" + _H1616f + "', '" + _H1616g + "', '" + _H1616h + "', '" + _H1616i + "', '" + _H1616x + "', '" + _H1616x1 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H161,H162,H163a,H163b,H163c,H163d,H163e,H163f,H163g,H163h,H163i,H163x,H163oth,H164,H165a,H165b,H165c,H165d,H165e,H165f,H165g,H165h,H165x,H16x1,H165i,H166,H167a,H168a,H167b,H168b,H167c,H168c,H167d,H168d,H167e,H168e,H167f,H168f,H167g,H168g,H167h,H168h,H167i,H168i,H167x,H167x1,H168x,H169,H1610,H1611,H1612a,H1612b,H1612c,H1612d,H1612e,H1612f,H1612g,H1612h,H1612i,H1612j,H1612x,H1612x1,H1613,H1614a,H1614b,H1614c,H1614d,H1614e,H1614f,H1614x,H1614x1,H1615,H1616a,H1616b,H1616c,H1616d,H1616e,H1616f,H1616g,H1616h,H1616i,H1616x,H1616x1,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H161 + "', '" + _H162 + "', '" + _H163a + "', '" + _H163b + "', '" + _H163c + "', '" + _H163d + "', '" + _H163e + "', '" + _H163f + "', '" + _H163g + "', '" + _H163h + "', '" + _H163i + "', '" + _H163x + "', '" + _H163oth + "', '" + _H164 + "', '" + _H165a + "', '" + _H165b + "', '" + _H165c + "', '" + _H165d + "', '" + _H165e + "', '" + _H165f + "', '" + _H165g + "', '" + _H165h + "', '" + _H165x + "', '" + _H16x1 + "', '" + _H165i + "', '" + _H166 + "', '" + _H167a + "', '" + _H168a + "', '" + _H167b + "', '" + _H168b + "', '" + _H167c + "', '" + _H168c + "', '" + _H167d + "', '" + _H168d + "', '" + _H167e + "', '" + _H168e + "', '" + _H167f + "', '" + _H168f + "', '" + _H167g + "', '" + _H168g + "', '" + _H167h + "', '" + _H168h + "', '" + _H167i + "', '" + _H168i + "', '" + _H167x + "', '" + _H167x1 + "', '" + _H168x + "', '" + _H169 + "', '" + _H1610 + "', '" + _H1611 + "', '" + _H1612a + "', '" + _H1612b + "', '" + _H1612c + "', '" + _H1612d + "', '" + _H1612e + "', '" + _H1612f + "', '" + _H1612g + "', '" + _H1612h + "', '" + _H1612i + "', '" + _H1612j + "', '" + _H1612x + "', '" + _H1612x1 + "', '" + _H1613 + "', '" + _H1614a + "', '" + _H1614b + "', '" + _H1614c + "', '" + _H1614d + "', '" + _H1614e + "', '" + _H1614f + "', '" + _H1614x + "', '" + _H1614x1 + "', '" + _H1615 + "', '" + _H1616a + "', '" + _H1616b + "', '" + _H1616c + "', '" + _H1616d + "', '" + _H1616e + "', '" + _H1616f + "', '" + _H1616g + "', '" + _H1616h + "', '" + _H1616i + "', '" + _H1616x + "', '" + _H1616x1 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -757,7 +847,7 @@ public class NGOWork_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H161 = '" + _H161 + "',H162 = '" + _H162 + "',H163a = '" + _H163a + "',H163b = '" + _H163b + "',H163c = '" + _H163c + "',H163d = '" + _H163d + "',H163e = '" + _H163e + "',H163f = '" + _H163f + "',H163g = '" + _H163g + "',H163h = '" + _H163h + "',H163i = '" + _H163i + "',H163x = '" + _H163x + "',H163oth = '" + _H163oth + "',H164 = '" + _H164 + "',H165a = '" + _H165a + "',H165b = '" + _H165b + "',H165c = '" + _H165c + "',H165d = '" + _H165d + "',H165e = '" + _H165e + "',H165f = '" + _H165f + "',H165g = '" + _H165g + "',H165h = '" + _H165h + "',H165x = '" + _H165x + "',H16x1 = '" + _H16x1 + "',H165i = '" + _H165i + "',H166 = '" + _H166 + "',H167a = '" + _H167a + "',H167b = '" + _H167b + "',H167c = '" + _H167c + "',H167d = '" + _H167d + "',H167e = '" + _H167e + "',H167f = '" + _H167f + "',H167g = '" + _H167g + "',H167i = '" + _H167i + "',H167x = '" + _H167x + "',H167x1 = '" + _H167x1 + "',H168 = '" + _H168 + "',H169 = '" + _H169 + "',H1610 = '" + _H1610 + "',H1611 = '" + _H1611 + "',H1612a = '" + _H1612a + "',H1612b = '" + _H1612b + "',H1612c = '" + _H1612c + "',H1612d = '" + _H1612d + "',H1612e = '" + _H1612e + "',H1612f = '" + _H1612f + "',H1612g = '" + _H1612g + "',H1612h = '" + _H1612h + "',H1612i = '" + _H1612i + "',H1612j = '" + _H1612j + "',H1612x = '" + _H1612x + "',H1612x1 = '" + _H1612x1 + "',H1613 = '" + _H1613 + "',H1614a = '" + _H1614a + "',H1614b = '" + _H1614b + "',H1614c = '" + _H1614c + "',H1614d = '" + _H1614d + "',H1614e = '" + _H1614e + "',H1614f = '" + _H1614f + "',H1614x = '" + _H1614x + "',H1614x1 = '" + _H1614x1 + "',H1615 = '" + _H1615 + "',H1616a = '" + _H1616a + "',H1616b = '" + _H1616b + "',H1616c = '" + _H1616c + "',H1616d = '" + _H1616d + "',H1616e = '" + _H1616e + "',H1616f = '" + _H1616f + "',H1616g = '" + _H1616g + "',H1616h = '" + _H1616h + "',H1616i = '" + _H1616i + "',H1616x = '" + _H1616x + "',H1616x1 = '" + _H1616x1 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H161 = '" + _H161 + "',H162 = '" + _H162 + "',H163a = '" + _H163a + "',H163b = '" + _H163b + "',H163c = '" + _H163c + "',H163d = '" + _H163d + "',H163e = '" + _H163e + "',H163f = '" + _H163f + "',H163g = '" + _H163g + "',H163h = '" + _H163h + "',H163i = '" + _H163i + "',H163x = '" + _H163x + "',H163oth = '" + _H163oth + "',H164 = '" + _H164 + "',H165a = '" + _H165a + "',H165b = '" + _H165b + "',H165c = '" + _H165c + "',H165d = '" + _H165d + "',H165e = '" + _H165e + "',H165f = '" + _H165f + "',H165g = '" + _H165g + "',H165h = '" + _H165h + "',H165x = '" + _H165x + "',H16x1 = '" + _H16x1 + "',H165i = '" + _H165i + "',H166 = '" + _H166 + "',H167a = '" + _H167a + "',H168a = '" + _H168a + "',H167b = '" + _H167b + "',H168b = '" + _H168b + "',H167c = '" + _H167c + "',H168c = '" + _H168c + "',H167d = '" + _H167d + "',H168d = '" + _H168d + "',H167e = '" + _H167e + "',H168e = '" + _H168e + "',H167f = '" + _H167f + "',H168f = '" + _H168f + "',H167g = '" + _H167g + "',H168g = '" + _H168g + "',H167h = '" + _H167h + "',H168h = '" + _H168h + "',H167i = '" + _H167i + "',H168i = '" + _H168i + "',H167x = '" + _H167x + "',H167x1 = '" + _H167x1 + "',H168x = '" + _H168x + "',H169 = '" + _H169 + "',H1610 = '" + _H1610 + "',H1611 = '" + _H1611 + "',H1612a = '" + _H1612a + "',H1612b = '" + _H1612b + "',H1612c = '" + _H1612c + "',H1612d = '" + _H1612d + "',H1612e = '" + _H1612e + "',H1612f = '" + _H1612f + "',H1612g = '" + _H1612g + "',H1612h = '" + _H1612h + "',H1612i = '" + _H1612i + "',H1612j = '" + _H1612j + "',H1612x = '" + _H1612x + "',H1612x1 = '" + _H1612x1 + "',H1613 = '" + _H1613 + "',H1614a = '" + _H1614a + "',H1614b = '" + _H1614b + "',H1614c = '" + _H1614c + "',H1614d = '" + _H1614d + "',H1614e = '" + _H1614e + "',H1614f = '" + _H1614f + "',H1614x = '" + _H1614x + "',H1614x1 = '" + _H1614x1 + "',H1615 = '" + _H1615 + "',H1616a = '" + _H1616a + "',H1616b = '" + _H1616b + "',H1616c = '" + _H1616c + "',H1616d = '" + _H1616d + "',H1616e = '" + _H1616e + "',H1616f = '" + _H1616f + "',H1616g = '" + _H1616g + "',H1616h = '" + _H1616h + "',H1616i = '" + _H1616i + "',H1616x = '" + _H1616x + "',H1616x1 = '" + _H1616x1 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -804,16 +894,26 @@ public class NGOWork_DataModel {
             d._H165i = cur.getString(cur.getColumnIndex("H165i"));
             d._H166 = cur.getString(cur.getColumnIndex("H166"));
             d._H167a = cur.getString(cur.getColumnIndex("H167a"));
+            d._H168a = cur.getString(cur.getColumnIndex("H168a"));
             d._H167b = cur.getString(cur.getColumnIndex("H167b"));
+            d._H168b = cur.getString(cur.getColumnIndex("H168b"));
             d._H167c = cur.getString(cur.getColumnIndex("H167c"));
+            d._H168c = cur.getString(cur.getColumnIndex("H168c"));
             d._H167d = cur.getString(cur.getColumnIndex("H167d"));
+            d._H168d = cur.getString(cur.getColumnIndex("H168d"));
             d._H167e = cur.getString(cur.getColumnIndex("H167e"));
+            d._H168e = cur.getString(cur.getColumnIndex("H168e"));
             d._H167f = cur.getString(cur.getColumnIndex("H167f"));
+            d._H168f = cur.getString(cur.getColumnIndex("H168f"));
             d._H167g = cur.getString(cur.getColumnIndex("H167g"));
+            d._H168g = cur.getString(cur.getColumnIndex("H168g"));
+            d._H167h = cur.getString(cur.getColumnIndex("H167h"));
+            d._H168h = cur.getString(cur.getColumnIndex("H168h"));
             d._H167i = cur.getString(cur.getColumnIndex("H167i"));
+            d._H168i = cur.getString(cur.getColumnIndex("H168i"));
             d._H167x = cur.getString(cur.getColumnIndex("H167x"));
             d._H167x1 = cur.getString(cur.getColumnIndex("H167x1"));
-            d._H168 = cur.getString(cur.getColumnIndex("H168"));
+            d._H168x = cur.getString(cur.getColumnIndex("H168x"));
             d._H169 = cur.getString(cur.getColumnIndex("H169"));
             d._H1610 = cur.getString(cur.getColumnIndex("H1610"));
             d._H1611 = cur.getString(cur.getColumnIndex("H1611"));
