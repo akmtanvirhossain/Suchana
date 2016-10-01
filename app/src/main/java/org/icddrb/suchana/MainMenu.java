@@ -89,6 +89,8 @@ public class MainMenu extends Activity {
                                 public void run() {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
+                                        tableList.add("EntryStatus");
+
                                         //Household
                                         tableList.add("HHIdentity");
                                         tableList.add("Member");

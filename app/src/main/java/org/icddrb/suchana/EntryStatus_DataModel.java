@@ -117,7 +117,7 @@ public class EntryStatus_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into EntryStatus(Rnd,SuchanaID," + _T + ")Values('" + _Rnd + "', '" + _SuchanaID + "', '1')";
+            SQL = "Insert into EntryStatus(Rnd,SuchanaID," + _T + ",Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '1','2')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -130,7 +130,7 @@ public class EntryStatus_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update EntryStatus Set " + _T + "='1'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update EntryStatus Set " + _T + "='1',Upload='2'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
