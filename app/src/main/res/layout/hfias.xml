@@ -11,6 +11,11 @@
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
@@ -81,6 +86,26 @@
             android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
+
+            <LinearLayout
+                android:id="@+id/secRND1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRND1"
+                    style="@style/rowHeading"
+                    android:layout_width="500sp"
+                    android:layout_height="wrap_content"
+                    android:text="খুবই কম-১ থেকে ২ বার গত ৪ সপ্তহে, মাঝে মধ্যে-৩ থেকে ১০ বার গত ৪ সপ্তহে, প্রায়ই-১০ এর বেশী  গত ৪ সপ্তহে"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
             <LinearLayout
                 android:id="@+id/secRnd"
                 style="@style/rowStyle0"
@@ -92,7 +117,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -130,14 +155,14 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
@@ -187,9 +212,9 @@
 
                 <TextView
                     android:id="@+id/lblH121a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H121a"
+                    android:text="H121A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -239,9 +264,9 @@
 
                 <TextView
                     android:id="@+id/lblH121b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H121b"
+                    android:text="H121B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -300,9 +325,9 @@
 
                 <TextView
                     android:id="@+id/lblH122a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H122a"
+                    android:text="H122A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -352,9 +377,9 @@
 
                 <TextView
                     android:id="@+id/lblH122b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H122b"
+                    android:text="H122B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -414,9 +439,9 @@
 
                 <TextView
                     android:id="@+id/lblH123a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H123a"
+                    android:text="H123A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -466,9 +491,9 @@
 
                 <TextView
                     android:id="@+id/lblH123b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H123b"
+                    android:text="H123B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -528,9 +553,9 @@
 
                 <TextView
                     android:id="@+id/lblH124a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H124a"
+                    android:text="H124A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -580,9 +605,9 @@
 
                 <TextView
                     android:id="@+id/lblH124b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H124b"
+                    android:text="H124B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -642,9 +667,9 @@
 
                 <TextView
                     android:id="@+id/lblH125a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H125a"
+                    android:text="H125A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -694,9 +719,9 @@
 
                 <TextView
                     android:id="@+id/lblH125b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H125b"
+                    android:text="H125B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -756,9 +781,9 @@
 
                 <TextView
                     android:id="@+id/lblH126a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H126a"
+                    android:text="H126A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -808,9 +833,9 @@
 
                 <TextView
                     android:id="@+id/lblH126b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H126b"
+                    android:text="H126B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -870,9 +895,9 @@
 
                 <TextView
                     android:id="@+id/lblH127a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H127a"
+                    android:text="H127A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -922,9 +947,9 @@
 
                 <TextView
                     android:id="@+id/lblH127b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H127b"
+                    android:text="H127B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -984,9 +1009,9 @@
 
                 <TextView
                     android:id="@+id/lblH128a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H128a"
+                    android:text="H128A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1036,9 +1061,9 @@
 
                 <TextView
                     android:id="@+id/lblH128b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H128b"
+                    android:text="H128B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1098,9 +1123,9 @@
 
                 <TextView
                     android:id="@+id/lblH129a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H129a"
+                    android:text="H129A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1150,9 +1175,9 @@
 
                 <TextView
                     android:id="@+id/lblH129b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H129b"
+                    android:text="H129B. "
                     android:textSize="20sp" />
 
                 <TextView

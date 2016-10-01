@@ -54,6 +54,8 @@ public class Illness2_list extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
+    ImageButton cmdForward;
+    TextView lblNext;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -127,7 +129,7 @@ public class Illness2_list extends Activity {
                     adb.show();
                 }
             });
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Illness2_list.this);
@@ -148,6 +150,20 @@ public class Illness2_list extends Activity {
                         }
                     });
                     adb.show();
+                }
+            });
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
                 }
             });
             btnRefresh = (Button) findViewById(R.id.btnRefresh);
@@ -183,7 +199,9 @@ public class Illness2_list extends Activity {
                 }
             });
 
-
+            lblNext= (TextView) findViewById(R.id.lblNext);
+            lblNext.setEnabled(false);
+            cmdForward.setEnabled(false);
             DataSearch(RND, SUCHANAID);
 
 
@@ -208,6 +226,10 @@ public class Illness2_list extends Activity {
 
             for (Illness2_DataModel item : data) {
                 map = new HashMap<String, String>();
+
+                cmdForward.setEnabled(true);
+                lblNext.setEnabled(true);
+
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
                 map.put("H172", item.getH172());

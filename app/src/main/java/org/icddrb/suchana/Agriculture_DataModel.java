@@ -27,6 +27,7 @@ public class Agriculture_DataModel {
     private String _H152e2 = "";
     private String _H152f = "";
     private String _H152g = "";
+    private String _H152g2 = "";
     private String _H152h1 = "";
     private String _H152h2 = "";
     private String _H152i1 = "";
@@ -162,7 +163,12 @@ public class Agriculture_DataModel {
     public void setH152g(String newValue) {
         _H152g = newValue;
     }
-
+    public String getH152g2() {
+        return _H152g2;
+    }
+    public void setH152g2(String newValue) {
+        _H152g2 = newValue;
+    }
     public String getH152h1() {
         return _H152h1;
     }
@@ -275,7 +281,7 @@ public class Agriculture_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H151,Sl,H152a,H152bOth,H152b,H152c,H152d1,H152d2,H152e1,H152e2,H152f,H152g,H152h1,H152h2,H152i1,H152i2,H152j1,H152j2,H152k1,H152k2,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "','" + _MSlNo + "', '" + _H151 + "', '" + _Sl + "', '" + _H152a + "', '" + _H152bOth + "', '" + _H152b + "', '" + _H152c + "', '" + _H152d1 + "', '" + _H152d2 + "', '" + _H152e1 + "', '" + _H152e2 + "', '" + _H152f + "', '" + _H152g + "', '" + _H152h1 + "', '" + _H152h2 + "', '" + _H152i1 + "', '" + _H152i2 + "', '" + _H152j1 + "', '" + _H152j2 + "', '" + _H152k1 + "', '" + _H152k2 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H151,Sl,H152a,H152bOth,H152b,H152c,H152d1,H152d2,H152e1,H152e2,H152f,H152g,H152g2,H152h1,H152h2,H152i1,H152i2,H152j1,H152j2,H152k1,H152k2,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "','" + _MSlNo + "', '" + _H151 + "', '" + _Sl + "', '" + _H152a + "', '" + _H152bOth + "', '" + _H152b + "', '" + _H152c + "', '" + _H152d1 + "', '" + _H152d2 + "', '" + _H152e1 + "', '" + _H152e2 + "', '" + _H152f + "', '" + _H152g + "', '" + _H152g2 + "', '" + _H152h1 + "', '" + _H152h2 + "', '" + _H152i1 + "', '" + _H152i2 + "', '" + _H152j1 + "', '" + _H152j2 + "', '" + _H152k1 + "', '" + _H152k2 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -288,7 +294,7 @@ public class Agriculture_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo='" + _MSlNo + "',H151 = '" + _H151 + "',Sl = '" + _Sl + "',H152a = '" + _H152a + "',H152bOth = '" + _H152bOth + "',H152b = '" + _H152b + "',H152c = '" + _H152c + "',H152d1 = '" + _H152d1 + "',H152d2 = '" + _H152d2 + "',H152e1 = '" + _H152e1 + "',H152e2 = '" + _H152e2 + "',H152f = '" + _H152f + "',H152g = '" + _H152g + "',H152h1 = '" + _H152h1 + "',H152h2 = '" + _H152h2 + "',H152i1 = '" + _H152i1 + "',H152i2 = '" + _H152i2 + "',H152j1 = '" + _H152j1 + "',H152j2 = '" + _H152j2 + "',H152k1 = '" + _H152k1 + "',H152k2 = '" + _H152k2 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and Sl='" + _Sl + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo='" + _MSlNo + "',H151 = '" + _H151 + "',Sl = '" + _Sl + "',H152a = '" + _H152a + "',H152bOth = '" + _H152bOth + "',H152b = '" + _H152b + "',H152c = '" + _H152c + "',H152d1 = '" + _H152d1 + "',H152d2 = '" + _H152d2 + "',H152e1 = '" + _H152e1 + "',H152e2 = '" + _H152e2 + "',H152f = '" + _H152f + "',H152g = '" + _H152g + "',H152g2 = '" + _H152g2 + "',H152h1 = '" + _H152h1 + "',H152h2 = '" + _H152h2 + "',H152i1 = '" + _H152i1 + "',H152i2 = '" + _H152i2 + "',H152j1 = '" + _H152j1 + "',H152j2 = '" + _H152j2 + "',H152k1 = '" + _H152k1 + "',H152k2 = '" + _H152k2 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and Sl='" + _Sl + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -321,6 +327,7 @@ public class Agriculture_DataModel {
             d._H152e2 = cur.getString(cur.getColumnIndex("H152e2"));
             d._H152f = cur.getString(cur.getColumnIndex("H152f"));
             d._H152g = cur.getString(cur.getColumnIndex("H152g"));
+            d._H152g2 = cur.getString(cur.getColumnIndex("H152g2"));
             d._H152h1 = cur.getString(cur.getColumnIndex("H152h1"));
             d._H152h2 = cur.getString(cur.getColumnIndex("H152h2"));
             d._H152i1 = cur.getString(cur.getColumnIndex("H152i1"));

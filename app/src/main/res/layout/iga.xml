@@ -11,6 +11,11 @@
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
@@ -80,6 +85,8 @@
             android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
+
+
             <LinearLayout
                 android:id="@+id/secRND"
                 style="@style/rowStyle0"
@@ -91,7 +98,7 @@
                     android:id="@+id/lblRND"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="RND"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -129,20 +136,20 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -188,9 +195,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1a"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1a"
+                    android:text="H18B1A. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -241,9 +248,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2a"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2A. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -278,9 +285,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a1"
+                    android:text="A1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -314,9 +321,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a2"
+                    android:text="A2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -350,9 +357,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a3"
+                    android:text="A3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -386,9 +393,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a4"
+                    android:text="A4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -422,9 +429,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a5"
+                    android:text="A5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -458,9 +465,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a6"
+                    android:text="A6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -494,9 +501,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a7"
+                    android:text="A7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -530,9 +537,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2a7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2a7X"
+                    android:text="A7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -568,9 +575,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1b"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1b"
+                    android:text="H18B1B. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -621,9 +628,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2b"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2B. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -658,9 +665,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b1"
+                    android:text="B1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -694,9 +701,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b2"
+                    android:text="B2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -730,9 +737,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b3"
+                    android:text="B3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -766,9 +773,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b4"
+                    android:text="B4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -802,9 +809,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b5"
+                    android:text="B5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -838,9 +845,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b6"
+                    android:text="B6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -874,9 +881,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b7"
+                    android:text="B7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -910,9 +917,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2b7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2b7X"
+                    android:text="B7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -948,9 +955,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1c"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1c"
+                    android:text="H18B1C. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1000,9 +1007,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2c"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2C. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1037,9 +1044,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c1"
+                    android:text="C1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1073,9 +1080,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c2"
+                    android:text="C2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1109,9 +1116,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c3"
+                    android:text="C3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1145,9 +1152,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c4"
+                    android:text="C4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1181,9 +1188,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c5"
+                    android:text="C5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1217,9 +1224,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c6"
+                    android:text="C6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1253,9 +1260,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c7"
+                    android:text="C7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1289,9 +1296,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2c7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2c7X"
+                    android:text="C7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1327,9 +1334,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1d"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1d"
+                    android:text="H18B1D. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1379,9 +1386,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2d"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2D. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
                 <TextView
                     android:id="@+id/VlblH18b1a"
@@ -1415,9 +1422,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d1"
+                    android:text="D1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1451,9 +1458,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d2"
+                    android:text="D2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1487,9 +1494,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d3"
+                    android:text="D3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1523,9 +1530,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d4"
+                    android:text="D4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1559,9 +1566,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d5"
+                    android:text="D5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1595,9 +1602,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d6"
+                    android:text="D6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1631,9 +1638,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d7"
+                    android:text="D7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1667,9 +1674,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2d7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2d7X"
+                    android:text="D7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1705,9 +1712,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1e"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1e"
+                    android:text="H18B1E. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1757,9 +1764,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2e"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2E. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1794,9 +1801,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e1"
+                    android:text="E1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1830,9 +1837,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e2"
+                    android:text="E2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1866,9 +1873,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e3"
+                    android:text="E3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1902,9 +1909,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e4"
+                    android:text="E4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1938,9 +1945,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e5"
+                    android:text="E5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1974,9 +1981,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e6"
+                    android:text="E6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2010,9 +2017,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e7"
+                    android:text="E7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2046,9 +2053,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2e7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2e7X"
+                    android:text="E7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2084,9 +2091,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1f"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1f"
+                    android:text="H18B1F. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2137,9 +2144,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2f"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2F. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2174,9 +2181,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f1"
+                    android:text="F1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2210,9 +2217,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f2"
+                    android:text="F2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2246,9 +2253,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f3"
+                    android:text="F3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2282,9 +2289,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f4"
+                    android:text="F4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2318,9 +2325,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f5"
+                    android:text="F5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2354,9 +2361,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f6"
+                    android:text="F6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2390,9 +2397,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f7"
+                    android:text="F7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2426,9 +2433,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2f7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2f7X"
+                    android:text="F7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2464,9 +2471,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1g"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1g"
+                    android:text="H18B1G. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2517,9 +2524,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2g"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2G. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2555,9 +2562,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g1"
+                    android:text="G1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2591,9 +2598,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g2"
+                    android:text="G2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2627,9 +2634,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g3"
+                    android:text="G3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2663,9 +2670,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g4"
+                    android:text="G4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2699,9 +2706,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g5"
+                    android:text="G5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2735,9 +2742,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g6"
+                    android:text="G6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2771,9 +2778,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g7"
+                    android:text="G7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2807,9 +2814,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2g7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2g7X"
+                    android:text="G7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2845,9 +2852,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1h"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1h"
+                    android:text="H18B1H. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2899,9 +2906,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2h"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2H. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
                 <TextView
                     android:id="@+id/VlblH18b1a"
@@ -2937,9 +2944,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h1"
+                    android:text="H1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2973,9 +2980,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h2"
+                    android:text="H2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3009,9 +3016,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h3"
+                    android:text="H3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3045,9 +3052,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h4"
+                    android:text="H4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3081,9 +3088,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h5"
+                    android:text="H5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3117,9 +3124,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h6"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h6"
+                    android:text="H6. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3153,9 +3160,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h7"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h7"
+                    android:text="H7. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3189,9 +3196,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2h7X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2h7X"
+                    android:text="H7X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3227,9 +3234,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1i"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1i"
+                    android:text="H18B1I. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3279,9 +3286,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2i"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2I. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -3316,9 +3323,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i1"
+                    android:text="I1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3352,9 +3359,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i2"
+                    android:text="I2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3388,9 +3395,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i3"
+                    android:text="I3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3424,9 +3431,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i4"
+                    android:text="I4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3460,9 +3467,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i5"
+                    android:text="I5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3496,9 +3503,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2i5X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2i5X"
+                    android:text="I5X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3534,9 +3541,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1j"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1j"
+                    android:text="H18B1J. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3587,9 +3594,9 @@
                 <TextView
                     android:id="@+id/lblHlb18b2j"
                     style="@style/rowHeading"
-                    android:layout_width="370sp"
+                    android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2J. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -3625,9 +3632,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j1"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j1"
+                    android:text="J1. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3661,9 +3668,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j2"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j2"
+                    android:text="J2. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3697,9 +3704,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j3"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j3"
+                    android:text="J3. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3733,9 +3740,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j4"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j4"
+                    android:text="J4. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3769,9 +3776,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j5"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j5"
+                    android:text="J5. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3805,9 +3812,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2j5X"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2j5X"
+                    android:text="J5X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3843,9 +3850,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b1k"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b1k"
+                    android:text="H18B1K. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3896,9 +3903,9 @@
 
                 <TextView
                     android:id="@+id/lblH18b2kX"
-                    android:layout_width="60sp"
+                    android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H18b2kX"
+                    android:text="KX. "
                     android:textSize="20sp" />
 
                 <TextView

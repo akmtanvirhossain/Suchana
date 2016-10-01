@@ -125,7 +125,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -169,14 +169,14 @@
 
                 <TextView
                     android:id="@+id/lblH171"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H171"
+                    android:text="H171. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="গত ১৫ দিনে  খানার কোন  সদস্য অসুস্থ হয়েছে"
                     android:textSize="20sp" />
@@ -206,6 +206,38 @@
                 </RadioGroup>
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/secMSlNo"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblMSlNo"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:text="M.SL"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblMSlNo"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="লাইন নম্বর #"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnMSlNo"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
             <View
                 android:id="@+id/lineH171"
                 android:layout_width="fill_parent"
@@ -221,22 +253,22 @@
 
                 <TextView
                     android:id="@+id/lblSlNo"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="SlNo"
+                    android:text="SL. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSlNo"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="লাইন নং"
+                    android:text="Illness No."
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSlNo"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -244,37 +276,7 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/secMSlNo"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/lblMSlNo"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="MSlNo"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblMSlNo"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnMSlNo"
-                    android:layout_width="200sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
             <View
                 android:id="@+id/lineSlNo"
                 android:layout_width="fill_parent"
@@ -290,14 +292,14 @@
 
                 <TextView
                     android:id="@+id/lblH171a"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H171a"
+                    android:text="H171A. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171a"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="বিগত 15 দিনের মধ্যে অসুস্থতার ধরন"
                     android:textSize="20sp" />
@@ -327,13 +329,13 @@
 
                 <TextView
                     android:id="@+id/lblH171aX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171aX"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -366,14 +368,14 @@
 
                 <TextView
                     android:id="@+id/lblH171b"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H171b"
+                    android:text="H171B. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171b"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম কোন চিকিৎসা নেয়া হয়েছিল"
                     android:textSize="20sp" />
@@ -403,13 +405,13 @@
 
                 <TextView
                     android:id="@+id/lblH171bX"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171bX"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />
@@ -442,14 +444,14 @@
 
                 <TextView
                     android:id="@+id/lblH171c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H171c"
+                    android:text="H171C. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171c"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="যদি প্রথম চিকিৎসা HCP হয়, তবে অসুস্থতা শুরুর কত দিন পরে গিয়েছিলেন"
                     android:textSize="20sp" />
@@ -457,7 +459,7 @@
                 <EditText
                     android:id="@+id/txtH171c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -480,14 +482,14 @@
 
                 <TextView
                     android:id="@+id/lblH171d"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H171d"
+                    android:text="H171D. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171d"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অসুস্থতার মোট সময়কাল (শুরু থেকে সুস্থ হওয়া পর্যন্ত) (দিন)"
                     android:textSize="20sp" />
@@ -495,7 +497,7 @@
                 <EditText
                     android:id="@+id/txtH171d"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -539,13 +541,14 @@
 
                 <TextView
                     android:id="@+id/lblH171VCost"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="A. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171VCost"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="চিকিৎসার জন্য খরচ: ভিজিট"
                     android:textSize="20sp" />
@@ -553,7 +556,7 @@
                 <EditText
                     android:id="@+id/txtH171VCost"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -576,13 +579,14 @@
 
                 <TextView
                     android:id="@+id/lblH171TCost"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="B. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171TCost"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="চিকিৎসার জন্য খরচ: পরীক্ষা"
                     android:textSize="20sp" />
@@ -590,7 +594,7 @@
                 <EditText
                     android:id="@+id/txtH171TCost"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -613,13 +617,14 @@
 
                 <TextView
                     android:id="@+id/lblH171TrCost"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="C. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171TrCost"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="চিকিৎসার জন্য খরচ: যাতায়াত"
                     android:textSize="20sp" />
@@ -627,7 +632,7 @@
                 <EditText
                     android:id="@+id/txtH171TrCost"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -650,13 +655,14 @@
 
                 <TextView
                     android:id="@+id/lblH171f"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="D. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171f"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আয়মূলক কর্মকান্ডে কি এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)"
                     android:textSize="20sp" />
@@ -709,13 +715,14 @@
 
                 <TextView
                     android:id="@+id/lblH171g"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
+                    android:text="E. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH171g"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="হ্যাঁ হলে কত দিনের জন্যে?"
                     android:textSize="20sp" />
@@ -723,7 +730,7 @@
                 <EditText
                     android:id="@+id/txtH171g"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
