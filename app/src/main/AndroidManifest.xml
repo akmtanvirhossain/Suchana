@@ -41,7 +41,9 @@
         <activity
             android:name="org.icddrb.suchana.MainMenu"
             android:label="Main Menu" />
-        <activity android:name=".UpdateMenu" />
+        <activity
+            android:name=".UpdateMenu"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
         <activity android:name=".HHIdentity" />
         <activity android:name=".HHIdentity_list" />
         <activity android:name=".Member" />

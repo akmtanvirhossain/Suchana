@@ -294,7 +294,19 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 }
             });
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
 
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -1132,7 +1144,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 Bundle IDBundle = new Bundle();
                 IDBundle.putString("Rnd", RND);
-                IDBundle.putString("SuchanaId", SUCHANAID);
+                IDBundle.putString("SuchanaID", SUCHANAID);
 
                 if (spnResult.getSelectedItemPosition() == 1) {
 

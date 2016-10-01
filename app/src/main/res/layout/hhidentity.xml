@@ -12,6 +12,14 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/cmdHome"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:background="#ffffff"
+            android:src="@drawable/home" />
+
+        <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
             android:layout_height="match_parent"
