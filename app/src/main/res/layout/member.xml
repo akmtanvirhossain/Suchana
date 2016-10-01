@@ -1153,15 +1153,29 @@
                     android:text="সদস্য কি রেফারেন্স শিশু ? "
                     android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/txtH220"
-                    style="@style/customEdit"
-                    android:layout_width="100sp"
+                <RadioGroup
+                    android:id="@+id/rdogrpH220"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="1"
-                    android:textSize="20sp" />
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH2201"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10sp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH2202"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10sp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
             </LinearLayout>
 
             <View

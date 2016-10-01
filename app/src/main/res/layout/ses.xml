@@ -1670,7 +1670,7 @@
                     android:id="@+id/VlblH64"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="হাত ধোয়ার জন্য নির্দিষ্ট স্থান আছে (যেখানে পানি ও সাবান  বা অন্যান্য জিনিস বা সাবানের বিকল্প আছে)"
+                    android:text="হাত ধোয়ার জন্য নির্দিষ্ট স্থান আছে (যেখানে পানি ও সাবান / ছাই/কাদা আছে)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1826,7 +1826,7 @@
                     android:id="@+id/VlblH67"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="টয়লেটের জায়গা থেকে ৩০ ফিট এর মধ্যে পানি ও সাবান/সাবানের বিকল্প সহ হাত ধোয়ার জায়গা আছে"
+                    android:text="টয়লেটের জায়গা থেকে 30 feet এর মধ্যে পানি ও সাবান/ছাই/কাদা  সহ হাত ধোয়ার জায়গা আছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1975,7 +1975,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খাবার পানির নিরাপদ ব্যবহার"
+                    android:text="পানির নিরাপদ ব্যবহার"
                     android:textSize="20sp" />
             </LinearLayout>
 
