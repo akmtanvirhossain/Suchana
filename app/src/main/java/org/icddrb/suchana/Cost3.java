@@ -1,12 +1,10 @@
 package org.icddrb.suchana;
+
 //Android Manifest Code
 //<activity android:name=".Cost3" android:label="Cost3" />
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
@@ -15,7 +13,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -24,10 +21,8 @@ import android.widget.RadioGroup;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,7 +35,6 @@ public class Cost3 extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    static String MSLNO = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
@@ -85,12 +79,12 @@ public class Cost3 extends Activity {
     TextView VlblH8111d;
     EditText txtH8111d;
     LinearLayout seclbH121;
-    LinearLayout secH121a;
-    View lineH121a;
-    TextView VlblH121a;
-    RadioGroup rdogrpH121a;
-    RadioButton rdoH121a1;
-    RadioButton rdoH121a2;
+    LinearLayout secH8121a;
+    View lineH8121a;
+    TextView VlblH8121a;
+    RadioGroup rdogrpH8121a;
+    RadioButton rdoH8121a1;
+    RadioButton rdoH8121a2;
     LinearLayout secH8121x1;
     View lineH8121x1;
     TextView VlblH8121x1;
@@ -110,33 +104,33 @@ public class Cost3 extends Activity {
     View lineH8121d;
     TextView VlblH8121d;
     EditText txtH8121d;
-    LinearLayout secLBH8112;
-    LinearLayout secH8112a;
-    View lineH8112a;
-    TextView VlblH8112a;
-    RadioGroup rdogrpH8112a;
-    RadioButton rdoH8112a1;
-    RadioButton rdoH8112a2;
-    LinearLayout secH8112x1;
-    View lineH8112x1;
-    TextView VlblH8112x1;
-    EditText txtH8112x1;
-    LinearLayout secH8112b;
-    View lineH8112b;
-    TextView VlblH8112b;
-    EditText txtH8112b;
-    LinearLayout secH8112c;
-    View lineH8112c;
-    TextView VlblH8112c;
-    RadioGroup rdogrpH8112c;
-    RadioButton rdoH8112c1;
-    RadioButton rdoH8112c2;
-    RadioButton rdoH8112c3;
-    LinearLayout secH8112d;
-    View lineH8112d;
-    TextView VlblH8112d;
-    EditText txtH8112d;
-    LinearLayout secLBH9a;
+    LinearLayout secLBH8122;
+    LinearLayout secH8122a;
+    View lineH8122a;
+    TextView VlblH8122a;
+    RadioGroup rdogrpH8122a;
+    RadioButton rdoH8122a1;
+    RadioButton rdoH8122a2;
+    LinearLayout secH8122x1;
+    View lineH8122x1;
+    TextView VlblH8122x1;
+    EditText txtH8122x1;
+    LinearLayout secH8122b;
+    View lineH8122b;
+    TextView VlblH8122b;
+    EditText txtH8122b;
+    LinearLayout secH8122c;
+    View lineH8122c;
+    TextView VlblH8122c;
+    RadioGroup rdogrpH8122c;
+    RadioButton rdoH8122c1;
+    RadioButton rdoH8122c2;
+    RadioButton rdoH8122c3;
+    LinearLayout secH8122d;
+    View lineH8122d;
+    TextView VlblH8122d;
+    EditText txtH8122d;
+    LinearLayout seclblH9a;
     LinearLayout secH9a1a;
     View lineH9a1a;
     TextView VlblH9a1a;
@@ -151,7 +145,7 @@ public class Cost3 extends Activity {
     View lineH9a1c;
     TextView VlblH9a1c;
     EditText txtH9a1c;
-    LinearLayout secLBH9a2;
+    LinearLayout seclblH9a2;
     LinearLayout secH9a2a;
     View lineH9a2a;
     TextView VlblH9a2a;
@@ -166,7 +160,7 @@ public class Cost3 extends Activity {
     View lineH9a2c;
     TextView VlblH9a2c;
     EditText txtH9a2c;
-    LinearLayout secLBH9a3;
+    LinearLayout seclblH9a3;
     LinearLayout secH9a3a;
     View lineH9a3a;
     TextView VlblH9a3a;
@@ -376,7 +370,7 @@ public class Cost3 extends Activity {
     View lineH9b11c;
     TextView VlblH9b11c;
     EditText txtH9b11c;
-    LinearLayout secLBH9b12;
+    LinearLayout seclblH9b12;
     LinearLayout secH9b12;
     View lineH9b12;
     TextView VlblH9b12;
@@ -605,31 +599,7 @@ public class Cost3 extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate;
 
-
-            //dtpDate.setText(new StringBuilder()
-            //          .append(Global.Right("00"+mDay,2)).append("/")
-            //        .append(Global.Right("00"+mMonth,2)).append("/")
-            //        .append(mYear));
-        }
-    };
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime;
-
-
-            //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -652,7 +622,6 @@ public class Cost3 extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            MSLNO = IDbundle.getString("MSlNo");
 
             TableName = "Cost";
 
@@ -766,6 +735,318 @@ public class Cost3 extends Activity {
                         secH8111d.setVisibility(View.GONE);
                         lineH8111d.setVisibility(View.GONE);
                         txtH8111d.setText("");
+                        secH8121a.setVisibility(View.GONE);
+                        lineH8121a.setVisibility(View.GONE);
+                        rdogrpH8121a.clearCheck();
+                        secH8121x1.setVisibility(View.GONE);
+                        lineH8121x1.setVisibility(View.GONE);
+                        txtH8121x1.setText("");
+                        secH8121b.setVisibility(View.GONE);
+                        lineH8121b.setVisibility(View.GONE);
+                        txtH8121b.setText("");
+                        secH8121c.setVisibility(View.GONE);
+                        lineH8121c.setVisibility(View.GONE);
+                        rdogrpH8121c.clearCheck();
+                        secH8121d.setVisibility(View.GONE);
+                        lineH8121d.setVisibility(View.GONE);
+                        txtH8121d.setText("");
+                        secH8122a.setVisibility(View.GONE);
+                        lineH8122a.setVisibility(View.GONE);
+                        rdogrpH8122a.clearCheck();
+                        secH8122x1.setVisibility(View.GONE);
+                        lineH8122x1.setVisibility(View.GONE);
+                        txtH8122x1.setText("");
+                        secH8122b.setVisibility(View.GONE);
+                        lineH8122b.setVisibility(View.GONE);
+                        txtH8122b.setText("");
+                        secH8122c.setVisibility(View.GONE);
+                        lineH8122c.setVisibility(View.GONE);
+                        rdogrpH8122c.clearCheck();
+                        secH8122d.setVisibility(View.GONE);
+                        lineH8122d.setVisibility(View.GONE);
+                        txtH8122d.setText("");
+                        secH9a1a.setVisibility(View.GONE);
+                        lineH9a1a.setVisibility(View.GONE);
+                        rdogrpH9a1a.clearCheck();
+                        secH9a1b.setVisibility(View.GONE);
+                        lineH9a1b.setVisibility(View.GONE);
+                        txtH9a1b.setText("");
+                        secH9a1c.setVisibility(View.GONE);
+                        lineH9a1c.setVisibility(View.GONE);
+                        txtH9a1c.setText("");
+                        secH9a2a.setVisibility(View.GONE);
+                        lineH9a2a.setVisibility(View.GONE);
+                        rdogrpH9a2a.clearCheck();
+                        secH9a2b.setVisibility(View.GONE);
+                        lineH9a2b.setVisibility(View.GONE);
+                        txtH9a2b.setText("");
+                        secH9a2c.setVisibility(View.GONE);
+                        lineH9a2c.setVisibility(View.GONE);
+                        txtH9a2c.setText("");
+                        secH9a3a.setVisibility(View.GONE);
+                        lineH9a3a.setVisibility(View.GONE);
+                        rdogrpH9a3a.clearCheck();
+                        secH9a3b.setVisibility(View.GONE);
+                        lineH9a3b.setVisibility(View.GONE);
+                        txtH9a3b.setText("");
+                        secH9a3c.setVisibility(View.GONE);
+                        lineH9a3c.setVisibility(View.GONE);
+                        txtH9a3c.setText("");
+                        secH9a4a.setVisibility(View.GONE);
+                        lineH9a4a.setVisibility(View.GONE);
+                        rdogrpH9a4a.clearCheck();
+                        secH9a4b.setVisibility(View.GONE);
+                        lineH9a4b.setVisibility(View.GONE);
+                        txtH9a4b.setText("");
+                        secH9a4c.setVisibility(View.GONE);
+                        lineH9a4c.setVisibility(View.GONE);
+                        txtH9a4c.setText("");
+                        secH9a5a.setVisibility(View.GONE);
+                        lineH9a5a.setVisibility(View.GONE);
+                        rdogrpH9a5a.clearCheck();
+                        secH9a5b.setVisibility(View.GONE);
+                        lineH9a5b.setVisibility(View.GONE);
+                        txtH9a5b.setText("");
+                        secH9a5c.setVisibility(View.GONE);
+                        lineH9a5c.setVisibility(View.GONE);
+                        txtH9a5c.setText("");
+                        secH9b1a.setVisibility(View.GONE);
+                        lineH9b1a.setVisibility(View.GONE);
+                        rdogrpH9b1a.clearCheck();
+                        secH9b1b.setVisibility(View.GONE);
+                        lineH9b1b.setVisibility(View.GONE);
+                        txtH9b1b.setText("");
+                        secH9b1c.setVisibility(View.GONE);
+                        lineH9b1c.setVisibility(View.GONE);
+                        txtH9b1c.setText("");
+                        secH9b2a.setVisibility(View.GONE);
+                        lineH9b2a.setVisibility(View.GONE);
+                        rdogrpH9b2a.clearCheck();
+                        secH9b2b.setVisibility(View.GONE);
+                        lineH9b2b.setVisibility(View.GONE);
+                        txtH9b2b.setText("");
+                        secH9b2c.setVisibility(View.GONE);
+                        lineH9b2c.setVisibility(View.GONE);
+                        txtH9b2c.setText("");
+                        secH9b3a.setVisibility(View.GONE);
+                        lineH9b3a.setVisibility(View.GONE);
+                        rdogrpH9b3a.clearCheck();
+                        secH9b3b.setVisibility(View.GONE);
+                        lineH9b3b.setVisibility(View.GONE);
+                        txtH9b3b.setText("");
+                        secH9b3c.setVisibility(View.GONE);
+                        lineH9b3c.setVisibility(View.GONE);
+                        txtH9b3c.setText("");
+                        secH9b4a.setVisibility(View.GONE);
+                        lineH9b4a.setVisibility(View.GONE);
+                        rdogrpH9b4a.clearCheck();
+                        secH9b4b.setVisibility(View.GONE);
+                        lineH9b4b.setVisibility(View.GONE);
+                        txtH9b4b.setText("");
+                        secH9b4c.setVisibility(View.GONE);
+                        lineH9b4c.setVisibility(View.GONE);
+                        txtH9b4c.setText("");
+                        secH9b5a.setVisibility(View.GONE);
+                        lineH9b5a.setVisibility(View.GONE);
+                        rdogrpH9b5a.clearCheck();
+                        secH9b5b.setVisibility(View.GONE);
+                        lineH9b5b.setVisibility(View.GONE);
+                        txtH9b5b.setText("");
+                        secH9b5c.setVisibility(View.GONE);
+                        lineH9b5c.setVisibility(View.GONE);
+                        txtH9b5c.setText("");
+                        secH9b6a.setVisibility(View.GONE);
+                        lineH9b6a.setVisibility(View.GONE);
+                        rdogrpH9b6a.clearCheck();
+                        secH9b6b.setVisibility(View.GONE);
+                        lineH9b6b.setVisibility(View.GONE);
+                        txtH9b6b.setText("");
+                        secH9b6c.setVisibility(View.GONE);
+                        lineH9b6c.setVisibility(View.GONE);
+                        txtH9b6c.setText("");
+                        secH9b7a.setVisibility(View.GONE);
+                        lineH9b7a.setVisibility(View.GONE);
+                        rdogrpH9b7a.clearCheck();
+                        secH9b7b.setVisibility(View.GONE);
+                        lineH9b7b.setVisibility(View.GONE);
+                        txtH9b7b.setText("");
+                        secH9b7c.setVisibility(View.GONE);
+                        lineH9b7c.setVisibility(View.GONE);
+                        txtH9b7c.setText("");
+                        secH9b8a.setVisibility(View.GONE);
+                        lineH9b8a.setVisibility(View.GONE);
+                        rdogrpH9b8a.clearCheck();
+                        secH9b8b.setVisibility(View.GONE);
+                        lineH9b8b.setVisibility(View.GONE);
+                        txtH9b8b.setText("");
+                        secH9b8c.setVisibility(View.GONE);
+                        lineH9b8c.setVisibility(View.GONE);
+                        txtH9b8c.setText("");
+                        secH9b9a.setVisibility(View.GONE);
+                        lineH9b9a.setVisibility(View.GONE);
+                        rdogrpH9b9a.clearCheck();
+                        secH9b9b.setVisibility(View.GONE);
+                        lineH9b9b.setVisibility(View.GONE);
+                        txtH9b9b.setText("");
+                        secH9b9c.setVisibility(View.GONE);
+                        lineH9b9c.setVisibility(View.GONE);
+                        txtH9b9c.setText("");
+                        secH9b10a.setVisibility(View.GONE);
+                        lineH9b10a.setVisibility(View.GONE);
+                        rdogrpH9b10a.clearCheck();
+                        secH9b10b.setVisibility(View.GONE);
+                        lineH9b10b.setVisibility(View.GONE);
+                        txtH9b10b.setText("");
+                        secH9b10c.setVisibility(View.GONE);
+                        lineH9b10c.setVisibility(View.GONE);
+                        txtH9b10c.setText("");
+                        secH9b11a.setVisibility(View.GONE);
+                        lineH9b11a.setVisibility(View.GONE);
+                        rdogrpH9b11a.clearCheck();
+                        secH9b11b.setVisibility(View.GONE);
+                        lineH9b11b.setVisibility(View.GONE);
+                        txtH9b11b.setText("");
+                        secH9b11c.setVisibility(View.GONE);
+                        lineH9b11c.setVisibility(View.GONE);
+                        txtH9b11c.setText("");
+                        secH9b12.setVisibility(View.GONE);
+                        lineH9b12.setVisibility(View.GONE);
+                        rdogrpH9b12.clearCheck();
+                        secH9b12a1.setVisibility(View.GONE);
+                        lineH9b12a1.setVisibility(View.GONE);
+                        rdogrpH9b12a1.clearCheck();
+                        secH9b12a2.setVisibility(View.GONE);
+                        lineH9b12a2.setVisibility(View.GONE);
+                        txtH9b12a2.setText("");
+                        secH9b12a3.setVisibility(View.GONE);
+                        lineH9b12a3.setVisibility(View.GONE);
+                        txtH9b12a3.setText("");
+                        secH9b12b1.setVisibility(View.GONE);
+                        lineH9b12b1.setVisibility(View.GONE);
+                        rdogrpH9b12b1.clearCheck();
+                        secH9b12b2.setVisibility(View.GONE);
+                        lineH9b12b2.setVisibility(View.GONE);
+                        txtH9b12b2.setText("");
+                        secH9b12b3.setVisibility(View.GONE);
+                        lineH9b12b3.setVisibility(View.GONE);
+                        txtH9b12b3.setText("");
+                        secH9b12c1.setVisibility(View.GONE);
+                        lineH9b12c1.setVisibility(View.GONE);
+                        rdogrpH9b12c1.clearCheck();
+                        secH9b12c2.setVisibility(View.GONE);
+                        lineH9b12c2.setVisibility(View.GONE);
+                        txtH9b12c2.setText("");
+                        secH9b12c3.setVisibility(View.GONE);
+                        lineH9b12c3.setVisibility(View.GONE);
+                        txtH9b12c3.setText("");
+                        secH9b12d1.setVisibility(View.GONE);
+                        lineH9b12d1.setVisibility(View.GONE);
+                        rdogrpH9b12d1.clearCheck();
+                        secH9b12d2.setVisibility(View.GONE);
+                        lineH9b12d2.setVisibility(View.GONE);
+                        txtH9b12d2.setText("");
+                        secH9b12d3.setVisibility(View.GONE);
+                        lineH9b12d3.setVisibility(View.GONE);
+                        txtH9b12d3.setText("");
+                        secH9b12e1.setVisibility(View.GONE);
+                        lineH9b12e1.setVisibility(View.GONE);
+                        rdogrpH9b12e1.clearCheck();
+                        secH9b12e2.setVisibility(View.GONE);
+                        lineH9b12e2.setVisibility(View.GONE);
+                        txtH9b12e2.setText("");
+                        secH9b12e3.setVisibility(View.GONE);
+                        lineH9b12e3.setVisibility(View.GONE);
+                        txtH9b12e3.setText("");
+                        secH9b12f1.setVisibility(View.GONE);
+                        lineH9b12f1.setVisibility(View.GONE);
+                        rdogrpH9b12f1.clearCheck();
+                        secH9b12f2.setVisibility(View.GONE);
+                        lineH9b12f2.setVisibility(View.GONE);
+                        txtH9b12f2.setText("");
+                        secH9b12f3.setVisibility(View.GONE);
+                        lineH9b12f3.setVisibility(View.GONE);
+                        txtH9b12f3.setText("");
+                        secH9b12g1.setVisibility(View.GONE);
+                        lineH9b12g1.setVisibility(View.GONE);
+                        rdogrpH9b12g1.clearCheck();
+                        secH9b12g2.setVisibility(View.GONE);
+                        lineH9b12g2.setVisibility(View.GONE);
+                        txtH9b12g2.setText("");
+                        secH9b12g3.setVisibility(View.GONE);
+                        lineH9b12g3.setVisibility(View.GONE);
+                        txtH9b12g3.setText("");
+                        secH9b12h1.setVisibility(View.GONE);
+                        lineH9b12h1.setVisibility(View.GONE);
+                        rdogrpH9b12h1.clearCheck();
+                        secH9b12h2.setVisibility(View.GONE);
+                        lineH9b12h2.setVisibility(View.GONE);
+                        txtH9b12h2.setText("");
+                        secH9b12h3.setVisibility(View.GONE);
+                        lineH9b12h3.setVisibility(View.GONE);
+                        txtH9b12h3.setText("");
+                        secH9b12i1.setVisibility(View.GONE);
+                        lineH9b12i1.setVisibility(View.GONE);
+                        rdogrpH9b12i1.clearCheck();
+                        secH9b12i2.setVisibility(View.GONE);
+                        lineH9b12i2.setVisibility(View.GONE);
+                        txtH9b12i2.setText("");
+                        secH9b12i3.setVisibility(View.GONE);
+                        lineH9b12i3.setVisibility(View.GONE);
+                        txtH9b12i3.setText("");
+                        secH9b12j1.setVisibility(View.GONE);
+                        lineH9b12j1.setVisibility(View.GONE);
+                        rdogrpH9b12j1.clearCheck();
+                        secH9b12j2.setVisibility(View.GONE);
+                        lineH9b12j2.setVisibility(View.GONE);
+                        txtH9b12j2.setText("");
+                        secH9b12j3.setVisibility(View.GONE);
+                        lineH9b12j3.setVisibility(View.GONE);
+                        txtH9b12j3.setText("");
+                        secH9b12k1.setVisibility(View.GONE);
+                        lineH9b12k1.setVisibility(View.GONE);
+                        rdogrpH9b12k1.clearCheck();
+                        secH9b12k2.setVisibility(View.GONE);
+                        lineH9b12k2.setVisibility(View.GONE);
+                        txtH9b12k2.setText("");
+                        secH9b12k3.setVisibility(View.GONE);
+                        lineH9b12k3.setVisibility(View.GONE);
+                        txtH9b12k3.setText("");
+                        secH9b12l1.setVisibility(View.GONE);
+                        lineH9b12l1.setVisibility(View.GONE);
+                        rdogrpH9b12l1.clearCheck();
+                        secH9b12l2.setVisibility(View.GONE);
+                        lineH9b12l2.setVisibility(View.GONE);
+                        txtH9b12l2.setText("");
+                        secH9b12l3.setVisibility(View.GONE);
+                        lineH9b12l3.setVisibility(View.GONE);
+                        txtH9b12l3.setText("");
+                        secH9b12m1.setVisibility(View.GONE);
+                        lineH9b12m1.setVisibility(View.GONE);
+                        rdogrpH9b12m1.clearCheck();
+                        secH9b12m2.setVisibility(View.GONE);
+                        lineH9b12m2.setVisibility(View.GONE);
+                        txtH9b12m2.setText("");
+                        secH9b12m3.setVisibility(View.GONE);
+                        lineH9b12m3.setVisibility(View.GONE);
+                        txtH9b12m3.setText("");
+                        secH9b13a.setVisibility(View.GONE);
+                        lineH9b13a.setVisibility(View.GONE);
+                        rdogrpH9b13a.clearCheck();
+                        secH9b13b.setVisibility(View.GONE);
+                        lineH9b13b.setVisibility(View.GONE);
+                        txtH9b13b.setText("");
+                        secH9b13c.setVisibility(View.GONE);
+                        lineH9b13c.setVisibility(View.GONE);
+                        txtH9b13c.setText("");
+                        secH9b14a.setVisibility(View.GONE);
+                        lineH9b14a.setVisibility(View.GONE);
+                        rdogrpH9b14a.clearCheck();
+                        secH9b14x1.setVisibility(View.GONE);
+                        lineH9b14x1.setVisibility(View.GONE);
+                        txtH9b14x1.setText("");
+                        secH9b14b.setVisibility(View.GONE);
+                        lineH9b14b.setVisibility(View.GONE);
+                        txtH9b14b.setText("");
                     }
                     else
                     {
@@ -775,6 +1056,214 @@ public class Cost3 extends Activity {
                         lineH8111c.setVisibility(View.VISIBLE);
                         secH8111d.setVisibility(View.VISIBLE);
                         lineH8111d.setVisibility(View.VISIBLE);
+                        secH8121a.setVisibility(View.VISIBLE);
+                        lineH8121a.setVisibility(View.VISIBLE);
+                        secH8121x1.setVisibility(View.VISIBLE);
+                        lineH8121x1.setVisibility(View.VISIBLE);
+                        secH8121b.setVisibility(View.VISIBLE);
+                        lineH8121b.setVisibility(View.VISIBLE);
+                        secH8121c.setVisibility(View.VISIBLE);
+                        lineH8121c.setVisibility(View.VISIBLE);
+                        secH8121d.setVisibility(View.VISIBLE);
+                        lineH8121d.setVisibility(View.VISIBLE);
+                        secH8122a.setVisibility(View.VISIBLE);
+                        lineH8122a.setVisibility(View.VISIBLE);
+                        secH8122x1.setVisibility(View.VISIBLE);
+                        lineH8122x1.setVisibility(View.VISIBLE);
+                        secH8122b.setVisibility(View.VISIBLE);
+                        lineH8122b.setVisibility(View.VISIBLE);
+                        secH8122c.setVisibility(View.VISIBLE);
+                        lineH8122c.setVisibility(View.VISIBLE);
+                        secH8122d.setVisibility(View.VISIBLE);
+                        lineH8122d.setVisibility(View.VISIBLE);
+                        secH9a1a.setVisibility(View.VISIBLE);
+                        lineH9a1a.setVisibility(View.VISIBLE);
+                        secH9a1b.setVisibility(View.VISIBLE);
+                        lineH9a1b.setVisibility(View.VISIBLE);
+                        secH9a1c.setVisibility(View.VISIBLE);
+                        lineH9a1c.setVisibility(View.VISIBLE);
+                        secH9a2a.setVisibility(View.VISIBLE);
+                        lineH9a2a.setVisibility(View.VISIBLE);
+                        secH9a2b.setVisibility(View.VISIBLE);
+                        lineH9a2b.setVisibility(View.VISIBLE);
+                        secH9a2c.setVisibility(View.VISIBLE);
+                        lineH9a2c.setVisibility(View.VISIBLE);
+                        secH9a3a.setVisibility(View.VISIBLE);
+                        lineH9a3a.setVisibility(View.VISIBLE);
+                        secH9a3b.setVisibility(View.VISIBLE);
+                        lineH9a3b.setVisibility(View.VISIBLE);
+                        secH9a3c.setVisibility(View.VISIBLE);
+                        lineH9a3c.setVisibility(View.VISIBLE);
+                        secH9a4a.setVisibility(View.VISIBLE);
+                        lineH9a4a.setVisibility(View.VISIBLE);
+                        secH9a4b.setVisibility(View.VISIBLE);
+                        lineH9a4b.setVisibility(View.VISIBLE);
+                        secH9a4c.setVisibility(View.VISIBLE);
+                        lineH9a4c.setVisibility(View.VISIBLE);
+                        secH9a5a.setVisibility(View.VISIBLE);
+                        lineH9a5a.setVisibility(View.VISIBLE);
+                        secH9a5b.setVisibility(View.VISIBLE);
+                        lineH9a5b.setVisibility(View.VISIBLE);
+                        secH9a5c.setVisibility(View.VISIBLE);
+                        lineH9a5c.setVisibility(View.VISIBLE);
+                        secH9b1a.setVisibility(View.VISIBLE);
+                        lineH9b1a.setVisibility(View.VISIBLE);
+                        secH9b1b.setVisibility(View.VISIBLE);
+                        lineH9b1b.setVisibility(View.VISIBLE);
+                        secH9b1c.setVisibility(View.VISIBLE);
+                        lineH9b1c.setVisibility(View.VISIBLE);
+                        secH9b2a.setVisibility(View.VISIBLE);
+                        lineH9b2a.setVisibility(View.VISIBLE);
+                        secH9b2b.setVisibility(View.VISIBLE);
+                        lineH9b2b.setVisibility(View.VISIBLE);
+                        secH9b2c.setVisibility(View.VISIBLE);
+                        lineH9b2c.setVisibility(View.VISIBLE);
+                        secH9b3a.setVisibility(View.VISIBLE);
+                        lineH9b3a.setVisibility(View.VISIBLE);
+                        secH9b3b.setVisibility(View.VISIBLE);
+                        lineH9b3b.setVisibility(View.VISIBLE);
+                        secH9b3c.setVisibility(View.VISIBLE);
+                        lineH9b3c.setVisibility(View.VISIBLE);
+                        secH9b4a.setVisibility(View.VISIBLE);
+                        lineH9b4a.setVisibility(View.VISIBLE);
+                        secH9b4b.setVisibility(View.VISIBLE);
+                        lineH9b4b.setVisibility(View.VISIBLE);
+                        secH9b4c.setVisibility(View.VISIBLE);
+                        lineH9b4c.setVisibility(View.VISIBLE);
+                        secH9b5a.setVisibility(View.VISIBLE);
+                        lineH9b5a.setVisibility(View.VISIBLE);
+                        secH9b5b.setVisibility(View.VISIBLE);
+                        lineH9b5b.setVisibility(View.VISIBLE);
+                        secH9b5c.setVisibility(View.VISIBLE);
+                        lineH9b5c.setVisibility(View.VISIBLE);
+                        secH9b6a.setVisibility(View.VISIBLE);
+                        lineH9b6a.setVisibility(View.VISIBLE);
+                        secH9b6b.setVisibility(View.VISIBLE);
+                        lineH9b6b.setVisibility(View.VISIBLE);
+                        secH9b6c.setVisibility(View.VISIBLE);
+                        lineH9b6c.setVisibility(View.VISIBLE);
+                        secH9b7a.setVisibility(View.VISIBLE);
+                        lineH9b7a.setVisibility(View.VISIBLE);
+                        secH9b7b.setVisibility(View.VISIBLE);
+                        lineH9b7b.setVisibility(View.VISIBLE);
+                        secH9b7c.setVisibility(View.VISIBLE);
+                        lineH9b7c.setVisibility(View.VISIBLE);
+                        secH9b8a.setVisibility(View.VISIBLE);
+                        lineH9b8a.setVisibility(View.VISIBLE);
+                        secH9b8b.setVisibility(View.VISIBLE);
+                        lineH9b8b.setVisibility(View.VISIBLE);
+                        secH9b8c.setVisibility(View.VISIBLE);
+                        lineH9b8c.setVisibility(View.VISIBLE);
+                        secH9b9a.setVisibility(View.VISIBLE);
+                        lineH9b9a.setVisibility(View.VISIBLE);
+                        secH9b9b.setVisibility(View.VISIBLE);
+                        lineH9b9b.setVisibility(View.VISIBLE);
+                        secH9b9c.setVisibility(View.VISIBLE);
+                        lineH9b9c.setVisibility(View.VISIBLE);
+                        secH9b10a.setVisibility(View.VISIBLE);
+                        lineH9b10a.setVisibility(View.VISIBLE);
+                        secH9b10b.setVisibility(View.VISIBLE);
+                        lineH9b10b.setVisibility(View.VISIBLE);
+                        secH9b10c.setVisibility(View.VISIBLE);
+                        lineH9b10c.setVisibility(View.VISIBLE);
+                        secH9b11a.setVisibility(View.VISIBLE);
+                        lineH9b11a.setVisibility(View.VISIBLE);
+                        secH9b11b.setVisibility(View.VISIBLE);
+                        lineH9b11b.setVisibility(View.VISIBLE);
+                        secH9b11c.setVisibility(View.VISIBLE);
+                        lineH9b11c.setVisibility(View.VISIBLE);
+                        secH9b12.setVisibility(View.VISIBLE);
+                        lineH9b12.setVisibility(View.VISIBLE);
+                        secH9b12a1.setVisibility(View.VISIBLE);
+                        lineH9b12a1.setVisibility(View.VISIBLE);
+                        secH9b12a2.setVisibility(View.VISIBLE);
+                        lineH9b12a2.setVisibility(View.VISIBLE);
+                        secH9b12a3.setVisibility(View.VISIBLE);
+                        lineH9b12a3.setVisibility(View.VISIBLE);
+                        secH9b12b1.setVisibility(View.VISIBLE);
+                        lineH9b12b1.setVisibility(View.VISIBLE);
+                        secH9b12b2.setVisibility(View.VISIBLE);
+                        lineH9b12b2.setVisibility(View.VISIBLE);
+                        secH9b12b3.setVisibility(View.VISIBLE);
+                        lineH9b12b3.setVisibility(View.VISIBLE);
+                        secH9b12c1.setVisibility(View.VISIBLE);
+                        lineH9b12c1.setVisibility(View.VISIBLE);
+                        secH9b12c2.setVisibility(View.VISIBLE);
+                        lineH9b12c2.setVisibility(View.VISIBLE);
+                        secH9b12c3.setVisibility(View.VISIBLE);
+                        lineH9b12c3.setVisibility(View.VISIBLE);
+                        secH9b12d1.setVisibility(View.VISIBLE);
+                        lineH9b12d1.setVisibility(View.VISIBLE);
+                        secH9b12d2.setVisibility(View.VISIBLE);
+                        lineH9b12d2.setVisibility(View.VISIBLE);
+                        secH9b12d3.setVisibility(View.VISIBLE);
+                        lineH9b12d3.setVisibility(View.VISIBLE);
+                        secH9b12e1.setVisibility(View.VISIBLE);
+                        lineH9b12e1.setVisibility(View.VISIBLE);
+                        secH9b12e2.setVisibility(View.VISIBLE);
+                        lineH9b12e2.setVisibility(View.VISIBLE);
+                        secH9b12e3.setVisibility(View.VISIBLE);
+                        lineH9b12e3.setVisibility(View.VISIBLE);
+                        secH9b12f1.setVisibility(View.VISIBLE);
+                        lineH9b12f1.setVisibility(View.VISIBLE);
+                        secH9b12f2.setVisibility(View.VISIBLE);
+                        lineH9b12f2.setVisibility(View.VISIBLE);
+                        secH9b12f3.setVisibility(View.VISIBLE);
+                        lineH9b12f3.setVisibility(View.VISIBLE);
+                        secH9b12g1.setVisibility(View.VISIBLE);
+                        lineH9b12g1.setVisibility(View.VISIBLE);
+                        secH9b12g2.setVisibility(View.VISIBLE);
+                        lineH9b12g2.setVisibility(View.VISIBLE);
+                        secH9b12g3.setVisibility(View.VISIBLE);
+                        lineH9b12g3.setVisibility(View.VISIBLE);
+                        secH9b12h1.setVisibility(View.VISIBLE);
+                        lineH9b12h1.setVisibility(View.VISIBLE);
+                        secH9b12h2.setVisibility(View.VISIBLE);
+                        lineH9b12h2.setVisibility(View.VISIBLE);
+                        secH9b12h3.setVisibility(View.VISIBLE);
+                        lineH9b12h3.setVisibility(View.VISIBLE);
+                        secH9b12i1.setVisibility(View.VISIBLE);
+                        lineH9b12i1.setVisibility(View.VISIBLE);
+                        secH9b12i2.setVisibility(View.VISIBLE);
+                        lineH9b12i2.setVisibility(View.VISIBLE);
+                        secH9b12i3.setVisibility(View.VISIBLE);
+                        lineH9b12i3.setVisibility(View.VISIBLE);
+                        secH9b12j1.setVisibility(View.VISIBLE);
+                        lineH9b12j1.setVisibility(View.VISIBLE);
+                        secH9b12j2.setVisibility(View.VISIBLE);
+                        lineH9b12j2.setVisibility(View.VISIBLE);
+                        secH9b12j3.setVisibility(View.VISIBLE);
+                        lineH9b12j3.setVisibility(View.VISIBLE);
+                        secH9b12k1.setVisibility(View.VISIBLE);
+                        lineH9b12k1.setVisibility(View.VISIBLE);
+                        secH9b12k2.setVisibility(View.VISIBLE);
+                        lineH9b12k2.setVisibility(View.VISIBLE);
+                        secH9b12k3.setVisibility(View.VISIBLE);
+                        lineH9b12k3.setVisibility(View.VISIBLE);
+                        secH9b12l1.setVisibility(View.VISIBLE);
+                        lineH9b12l1.setVisibility(View.VISIBLE);
+                        secH9b12l2.setVisibility(View.VISIBLE);
+                        lineH9b12l2.setVisibility(View.VISIBLE);
+                        secH9b12l3.setVisibility(View.VISIBLE);
+                        lineH9b12l3.setVisibility(View.VISIBLE);
+                        secH9b12m1.setVisibility(View.VISIBLE);
+                        lineH9b12m1.setVisibility(View.VISIBLE);
+                        secH9b12m2.setVisibility(View.VISIBLE);
+                        lineH9b12m2.setVisibility(View.VISIBLE);
+                        secH9b12m3.setVisibility(View.VISIBLE);
+                        lineH9b12m3.setVisibility(View.VISIBLE);
+                        secH9b13a.setVisibility(View.VISIBLE);
+                        lineH9b13a.setVisibility(View.VISIBLE);
+                        secH9b13b.setVisibility(View.VISIBLE);
+                        lineH9b13b.setVisibility(View.VISIBLE);
+                        secH9b13c.setVisibility(View.VISIBLE);
+                        lineH9b13c.setVisibility(View.VISIBLE);
+                        secH9b14a.setVisibility(View.VISIBLE);
+                        lineH9b14a.setVisibility(View.VISIBLE);
+                        secH9b14x1.setVisibility(View.VISIBLE);
+                        lineH9b14x1.setVisibility(View.VISIBLE);
+                        secH9b14b.setVisibility(View.VISIBLE);
+                        lineH9b14b.setVisibility(View.VISIBLE);
                     }
                 }
                 public void onNothingSelected(AdapterView<?> adapterView) {
@@ -798,23 +1287,23 @@ public class Cost3 extends Activity {
             VlblH8111d=(TextView) findViewById(R.id.VlblH8111d);
             txtH8111d=(EditText) findViewById(R.id.txtH8111d);
             seclbH121=(LinearLayout)findViewById(R.id.seclbH121);
-            secH121a=(LinearLayout)findViewById(R.id.secH121a);
-            lineH121a=(View)findViewById(R.id.lineH121a);
-            VlblH121a = (TextView) findViewById(R.id.VlblH121a);
-            rdogrpH121a = (RadioGroup) findViewById(R.id.rdogrpH121a);
+            secH8121a = (LinearLayout) findViewById(R.id.secH8121a);
+            lineH8121a = (View) findViewById(R.id.lineH8121a);
+            VlblH8121a = (TextView) findViewById(R.id.VlblH8121a);
+            rdogrpH8121a = (RadioGroup) findViewById(R.id.rdogrpH8121a);
 
-            rdoH121a1 = (RadioButton) findViewById(R.id.rdoH121a1);
-            rdoH121a2 = (RadioButton) findViewById(R.id.rdoH121a2);
-            rdogrpH121a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            rdoH8121a1 = (RadioButton) findViewById(R.id.rdoH8121a1);
+            rdoH8121a2 = (RadioButton) findViewById(R.id.rdoH8121a2);
+            rdogrpH8121a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup,int radioButtonID) {
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH121a = new String[] {"1","0"};
-                    for (int i = 0; i < rdogrpH121a.getChildCount(); i++)
+                    String[] d_rdogrpH8121a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH8121a.getChildCount(); i++)
                     {
-                        rb = (RadioButton)rdogrpH121a.getChildAt(i);
-                        if (rb.isChecked()) rbData = d_rdogrpH121a[i];
+                        rb = (RadioButton) rdogrpH8121a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH8121a[i];
                     }
 
                     if(rbData.equalsIgnoreCase("0"))
@@ -831,6 +1320,303 @@ public class Cost3 extends Activity {
                         secH8121d.setVisibility(View.GONE);
                         lineH8121d.setVisibility(View.GONE);
                         txtH8121d.setText("");
+                        secH8122a.setVisibility(View.GONE);
+                        lineH8122a.setVisibility(View.GONE);
+                        rdogrpH8122a.clearCheck();
+                        secH8122x1.setVisibility(View.GONE);
+                        lineH8122x1.setVisibility(View.GONE);
+                        txtH8122x1.setText("");
+                        secH8122b.setVisibility(View.GONE);
+                        lineH8122b.setVisibility(View.GONE);
+                        txtH8122b.setText("");
+                        secH8122c.setVisibility(View.GONE);
+                        lineH8122c.setVisibility(View.GONE);
+                        rdogrpH8122c.clearCheck();
+                        secH8122d.setVisibility(View.GONE);
+                        lineH8122d.setVisibility(View.GONE);
+                        txtH8122d.setText("");
+                        secH9a1a.setVisibility(View.GONE);
+                        lineH9a1a.setVisibility(View.GONE);
+                        rdogrpH9a1a.clearCheck();
+                        secH9a1b.setVisibility(View.GONE);
+                        lineH9a1b.setVisibility(View.GONE);
+                        txtH9a1b.setText("");
+                        secH9a1c.setVisibility(View.GONE);
+                        lineH9a1c.setVisibility(View.GONE);
+                        txtH9a1c.setText("");
+                        secH9a2a.setVisibility(View.GONE);
+                        lineH9a2a.setVisibility(View.GONE);
+                        rdogrpH9a2a.clearCheck();
+                        secH9a2b.setVisibility(View.GONE);
+                        lineH9a2b.setVisibility(View.GONE);
+                        txtH9a2b.setText("");
+                        secH9a2c.setVisibility(View.GONE);
+                        lineH9a2c.setVisibility(View.GONE);
+                        txtH9a2c.setText("");
+                        secH9a3a.setVisibility(View.GONE);
+                        lineH9a3a.setVisibility(View.GONE);
+                        rdogrpH9a3a.clearCheck();
+                        secH9a3b.setVisibility(View.GONE);
+                        lineH9a3b.setVisibility(View.GONE);
+                        txtH9a3b.setText("");
+                        secH9a3c.setVisibility(View.GONE);
+                        lineH9a3c.setVisibility(View.GONE);
+                        txtH9a3c.setText("");
+                        secH9a4a.setVisibility(View.GONE);
+                        lineH9a4a.setVisibility(View.GONE);
+                        rdogrpH9a4a.clearCheck();
+                        secH9a4b.setVisibility(View.GONE);
+                        lineH9a4b.setVisibility(View.GONE);
+                        txtH9a4b.setText("");
+                        secH9a4c.setVisibility(View.GONE);
+                        lineH9a4c.setVisibility(View.GONE);
+                        txtH9a4c.setText("");
+                        secH9a5a.setVisibility(View.GONE);
+                        lineH9a5a.setVisibility(View.GONE);
+                        rdogrpH9a5a.clearCheck();
+                        secH9a5b.setVisibility(View.GONE);
+                        lineH9a5b.setVisibility(View.GONE);
+                        txtH9a5b.setText("");
+                        secH9a5c.setVisibility(View.GONE);
+                        lineH9a5c.setVisibility(View.GONE);
+                        txtH9a5c.setText("");
+                        secH9b1a.setVisibility(View.GONE);
+                        lineH9b1a.setVisibility(View.GONE);
+                        rdogrpH9b1a.clearCheck();
+                        secH9b1b.setVisibility(View.GONE);
+                        lineH9b1b.setVisibility(View.GONE);
+                        txtH9b1b.setText("");
+                        secH9b1c.setVisibility(View.GONE);
+                        lineH9b1c.setVisibility(View.GONE);
+                        txtH9b1c.setText("");
+                        secH9b2a.setVisibility(View.GONE);
+                        lineH9b2a.setVisibility(View.GONE);
+                        rdogrpH9b2a.clearCheck();
+                        secH9b2b.setVisibility(View.GONE);
+                        lineH9b2b.setVisibility(View.GONE);
+                        txtH9b2b.setText("");
+                        secH9b2c.setVisibility(View.GONE);
+                        lineH9b2c.setVisibility(View.GONE);
+                        txtH9b2c.setText("");
+                        secH9b3a.setVisibility(View.GONE);
+                        lineH9b3a.setVisibility(View.GONE);
+                        rdogrpH9b3a.clearCheck();
+                        secH9b3b.setVisibility(View.GONE);
+                        lineH9b3b.setVisibility(View.GONE);
+                        txtH9b3b.setText("");
+                        secH9b3c.setVisibility(View.GONE);
+                        lineH9b3c.setVisibility(View.GONE);
+                        txtH9b3c.setText("");
+                        secH9b4a.setVisibility(View.GONE);
+                        lineH9b4a.setVisibility(View.GONE);
+                        rdogrpH9b4a.clearCheck();
+                        secH9b4b.setVisibility(View.GONE);
+                        lineH9b4b.setVisibility(View.GONE);
+                        txtH9b4b.setText("");
+                        secH9b4c.setVisibility(View.GONE);
+                        lineH9b4c.setVisibility(View.GONE);
+                        txtH9b4c.setText("");
+                        secH9b5a.setVisibility(View.GONE);
+                        lineH9b5a.setVisibility(View.GONE);
+                        rdogrpH9b5a.clearCheck();
+                        secH9b5b.setVisibility(View.GONE);
+                        lineH9b5b.setVisibility(View.GONE);
+                        txtH9b5b.setText("");
+                        secH9b5c.setVisibility(View.GONE);
+                        lineH9b5c.setVisibility(View.GONE);
+                        txtH9b5c.setText("");
+                        secH9b6a.setVisibility(View.GONE);
+                        lineH9b6a.setVisibility(View.GONE);
+                        rdogrpH9b6a.clearCheck();
+                        secH9b6b.setVisibility(View.GONE);
+                        lineH9b6b.setVisibility(View.GONE);
+                        txtH9b6b.setText("");
+                        secH9b6c.setVisibility(View.GONE);
+                        lineH9b6c.setVisibility(View.GONE);
+                        txtH9b6c.setText("");
+                        secH9b7a.setVisibility(View.GONE);
+                        lineH9b7a.setVisibility(View.GONE);
+                        rdogrpH9b7a.clearCheck();
+                        secH9b7b.setVisibility(View.GONE);
+                        lineH9b7b.setVisibility(View.GONE);
+                        txtH9b7b.setText("");
+                        secH9b7c.setVisibility(View.GONE);
+                        lineH9b7c.setVisibility(View.GONE);
+                        txtH9b7c.setText("");
+                        secH9b8a.setVisibility(View.GONE);
+                        lineH9b8a.setVisibility(View.GONE);
+                        rdogrpH9b8a.clearCheck();
+                        secH9b8b.setVisibility(View.GONE);
+                        lineH9b8b.setVisibility(View.GONE);
+                        txtH9b8b.setText("");
+                        secH9b8c.setVisibility(View.GONE);
+                        lineH9b8c.setVisibility(View.GONE);
+                        txtH9b8c.setText("");
+                        secH9b9a.setVisibility(View.GONE);
+                        lineH9b9a.setVisibility(View.GONE);
+                        rdogrpH9b9a.clearCheck();
+                        secH9b9b.setVisibility(View.GONE);
+                        lineH9b9b.setVisibility(View.GONE);
+                        txtH9b9b.setText("");
+                        secH9b9c.setVisibility(View.GONE);
+                        lineH9b9c.setVisibility(View.GONE);
+                        txtH9b9c.setText("");
+                        secH9b10a.setVisibility(View.GONE);
+                        lineH9b10a.setVisibility(View.GONE);
+                        rdogrpH9b10a.clearCheck();
+                        secH9b10b.setVisibility(View.GONE);
+                        lineH9b10b.setVisibility(View.GONE);
+                        txtH9b10b.setText("");
+                        secH9b10c.setVisibility(View.GONE);
+                        lineH9b10c.setVisibility(View.GONE);
+                        txtH9b10c.setText("");
+                        secH9b11a.setVisibility(View.GONE);
+                        lineH9b11a.setVisibility(View.GONE);
+                        rdogrpH9b11a.clearCheck();
+                        secH9b11b.setVisibility(View.GONE);
+                        lineH9b11b.setVisibility(View.GONE);
+                        txtH9b11b.setText("");
+                        secH9b11c.setVisibility(View.GONE);
+                        lineH9b11c.setVisibility(View.GONE);
+                        txtH9b11c.setText("");
+                        secH9b12.setVisibility(View.GONE);
+                        lineH9b12.setVisibility(View.GONE);
+                        rdogrpH9b12.clearCheck();
+                        secH9b12a1.setVisibility(View.GONE);
+                        lineH9b12a1.setVisibility(View.GONE);
+                        rdogrpH9b12a1.clearCheck();
+                        secH9b12a2.setVisibility(View.GONE);
+                        lineH9b12a2.setVisibility(View.GONE);
+                        txtH9b12a2.setText("");
+                        secH9b12a3.setVisibility(View.GONE);
+                        lineH9b12a3.setVisibility(View.GONE);
+                        txtH9b12a3.setText("");
+                        secH9b12b1.setVisibility(View.GONE);
+                        lineH9b12b1.setVisibility(View.GONE);
+                        rdogrpH9b12b1.clearCheck();
+                        secH9b12b2.setVisibility(View.GONE);
+                        lineH9b12b2.setVisibility(View.GONE);
+                        txtH9b12b2.setText("");
+                        secH9b12b3.setVisibility(View.GONE);
+                        lineH9b12b3.setVisibility(View.GONE);
+                        txtH9b12b3.setText("");
+                        secH9b12c1.setVisibility(View.GONE);
+                        lineH9b12c1.setVisibility(View.GONE);
+                        rdogrpH9b12c1.clearCheck();
+                        secH9b12c2.setVisibility(View.GONE);
+                        lineH9b12c2.setVisibility(View.GONE);
+                        txtH9b12c2.setText("");
+                        secH9b12c3.setVisibility(View.GONE);
+                        lineH9b12c3.setVisibility(View.GONE);
+                        txtH9b12c3.setText("");
+                        secH9b12d1.setVisibility(View.GONE);
+                        lineH9b12d1.setVisibility(View.GONE);
+                        rdogrpH9b12d1.clearCheck();
+                        secH9b12d2.setVisibility(View.GONE);
+                        lineH9b12d2.setVisibility(View.GONE);
+                        txtH9b12d2.setText("");
+                        secH9b12d3.setVisibility(View.GONE);
+                        lineH9b12d3.setVisibility(View.GONE);
+                        txtH9b12d3.setText("");
+                        secH9b12e1.setVisibility(View.GONE);
+                        lineH9b12e1.setVisibility(View.GONE);
+                        rdogrpH9b12e1.clearCheck();
+                        secH9b12e2.setVisibility(View.GONE);
+                        lineH9b12e2.setVisibility(View.GONE);
+                        txtH9b12e2.setText("");
+                        secH9b12e3.setVisibility(View.GONE);
+                        lineH9b12e3.setVisibility(View.GONE);
+                        txtH9b12e3.setText("");
+                        secH9b12f1.setVisibility(View.GONE);
+                        lineH9b12f1.setVisibility(View.GONE);
+                        rdogrpH9b12f1.clearCheck();
+                        secH9b12f2.setVisibility(View.GONE);
+                        lineH9b12f2.setVisibility(View.GONE);
+                        txtH9b12f2.setText("");
+                        secH9b12f3.setVisibility(View.GONE);
+                        lineH9b12f3.setVisibility(View.GONE);
+                        txtH9b12f3.setText("");
+                        secH9b12g1.setVisibility(View.GONE);
+                        lineH9b12g1.setVisibility(View.GONE);
+                        rdogrpH9b12g1.clearCheck();
+                        secH9b12g2.setVisibility(View.GONE);
+                        lineH9b12g2.setVisibility(View.GONE);
+                        txtH9b12g2.setText("");
+                        secH9b12g3.setVisibility(View.GONE);
+                        lineH9b12g3.setVisibility(View.GONE);
+                        txtH9b12g3.setText("");
+                        secH9b12h1.setVisibility(View.GONE);
+                        lineH9b12h1.setVisibility(View.GONE);
+                        rdogrpH9b12h1.clearCheck();
+                        secH9b12h2.setVisibility(View.GONE);
+                        lineH9b12h2.setVisibility(View.GONE);
+                        txtH9b12h2.setText("");
+                        secH9b12h3.setVisibility(View.GONE);
+                        lineH9b12h3.setVisibility(View.GONE);
+                        txtH9b12h3.setText("");
+                        secH9b12i1.setVisibility(View.GONE);
+                        lineH9b12i1.setVisibility(View.GONE);
+                        rdogrpH9b12i1.clearCheck();
+                        secH9b12i2.setVisibility(View.GONE);
+                        lineH9b12i2.setVisibility(View.GONE);
+                        txtH9b12i2.setText("");
+                        secH9b12i3.setVisibility(View.GONE);
+                        lineH9b12i3.setVisibility(View.GONE);
+                        txtH9b12i3.setText("");
+                        secH9b12j1.setVisibility(View.GONE);
+                        lineH9b12j1.setVisibility(View.GONE);
+                        rdogrpH9b12j1.clearCheck();
+                        secH9b12j2.setVisibility(View.GONE);
+                        lineH9b12j2.setVisibility(View.GONE);
+                        txtH9b12j2.setText("");
+                        secH9b12j3.setVisibility(View.GONE);
+                        lineH9b12j3.setVisibility(View.GONE);
+                        txtH9b12j3.setText("");
+                        secH9b12k1.setVisibility(View.GONE);
+                        lineH9b12k1.setVisibility(View.GONE);
+                        rdogrpH9b12k1.clearCheck();
+                        secH9b12k2.setVisibility(View.GONE);
+                        lineH9b12k2.setVisibility(View.GONE);
+                        txtH9b12k2.setText("");
+                        secH9b12k3.setVisibility(View.GONE);
+                        lineH9b12k3.setVisibility(View.GONE);
+                        txtH9b12k3.setText("");
+                        secH9b12l1.setVisibility(View.GONE);
+                        lineH9b12l1.setVisibility(View.GONE);
+                        rdogrpH9b12l1.clearCheck();
+                        secH9b12l2.setVisibility(View.GONE);
+                        lineH9b12l2.setVisibility(View.GONE);
+                        txtH9b12l2.setText("");
+                        secH9b12l3.setVisibility(View.GONE);
+                        lineH9b12l3.setVisibility(View.GONE);
+                        txtH9b12l3.setText("");
+                        secH9b12m1.setVisibility(View.GONE);
+                        lineH9b12m1.setVisibility(View.GONE);
+                        rdogrpH9b12m1.clearCheck();
+                        secH9b12m2.setVisibility(View.GONE);
+                        lineH9b12m2.setVisibility(View.GONE);
+                        txtH9b12m2.setText("");
+                        secH9b12m3.setVisibility(View.GONE);
+                        lineH9b12m3.setVisibility(View.GONE);
+                        txtH9b12m3.setText("");
+                        secH9b13a.setVisibility(View.GONE);
+                        lineH9b13a.setVisibility(View.GONE);
+                        rdogrpH9b13a.clearCheck();
+                        secH9b13b.setVisibility(View.GONE);
+                        lineH9b13b.setVisibility(View.GONE);
+                        txtH9b13b.setText("");
+                        secH9b13c.setVisibility(View.GONE);
+                        lineH9b13c.setVisibility(View.GONE);
+                        txtH9b13c.setText("");
+                        secH9b14a.setVisibility(View.GONE);
+                        lineH9b14a.setVisibility(View.GONE);
+                        rdogrpH9b14a.clearCheck();
+                        secH9b14x1.setVisibility(View.GONE);
+                        lineH9b14x1.setVisibility(View.GONE);
+                        txtH9b14x1.setText("");
+                        secH9b14b.setVisibility(View.GONE);
+                        lineH9b14b.setVisibility(View.GONE);
+                        txtH9b14b.setText("");
                     }
                     else
                     {
@@ -842,6 +1628,204 @@ public class Cost3 extends Activity {
                         lineH8121c.setVisibility(View.VISIBLE);
                         secH8121d.setVisibility(View.VISIBLE);
                         lineH8121d.setVisibility(View.VISIBLE);
+                        secH8122a.setVisibility(View.VISIBLE);
+                        lineH8122a.setVisibility(View.VISIBLE);
+                        secH8122x1.setVisibility(View.VISIBLE);
+                        lineH8122x1.setVisibility(View.VISIBLE);
+                        secH8122b.setVisibility(View.VISIBLE);
+                        lineH8122b.setVisibility(View.VISIBLE);
+                        secH8122c.setVisibility(View.VISIBLE);
+                        lineH8122c.setVisibility(View.VISIBLE);
+                        secH8122d.setVisibility(View.VISIBLE);
+                        lineH8122d.setVisibility(View.VISIBLE);
+                        secH9a1a.setVisibility(View.VISIBLE);
+                        lineH9a1a.setVisibility(View.VISIBLE);
+                        secH9a1b.setVisibility(View.VISIBLE);
+                        lineH9a1b.setVisibility(View.VISIBLE);
+                        secH9a1c.setVisibility(View.VISIBLE);
+                        lineH9a1c.setVisibility(View.VISIBLE);
+                        secH9a2a.setVisibility(View.VISIBLE);
+                        lineH9a2a.setVisibility(View.VISIBLE);
+                        secH9a2b.setVisibility(View.VISIBLE);
+                        lineH9a2b.setVisibility(View.VISIBLE);
+                        secH9a2c.setVisibility(View.VISIBLE);
+                        lineH9a2c.setVisibility(View.VISIBLE);
+                        secH9a3a.setVisibility(View.VISIBLE);
+                        lineH9a3a.setVisibility(View.VISIBLE);
+                        secH9a3b.setVisibility(View.VISIBLE);
+                        lineH9a3b.setVisibility(View.VISIBLE);
+                        secH9a3c.setVisibility(View.VISIBLE);
+                        lineH9a3c.setVisibility(View.VISIBLE);
+                        secH9a4a.setVisibility(View.VISIBLE);
+                        lineH9a4a.setVisibility(View.VISIBLE);
+                        secH9a4b.setVisibility(View.VISIBLE);
+                        lineH9a4b.setVisibility(View.VISIBLE);
+                        secH9a4c.setVisibility(View.VISIBLE);
+                        lineH9a4c.setVisibility(View.VISIBLE);
+                        secH9a5a.setVisibility(View.VISIBLE);
+                        lineH9a5a.setVisibility(View.VISIBLE);
+                        secH9a5b.setVisibility(View.VISIBLE);
+                        lineH9a5b.setVisibility(View.VISIBLE);
+                        secH9a5c.setVisibility(View.VISIBLE);
+                        lineH9a5c.setVisibility(View.VISIBLE);
+                        secH9b1a.setVisibility(View.VISIBLE);
+                        lineH9b1a.setVisibility(View.VISIBLE);
+                        secH9b1b.setVisibility(View.VISIBLE);
+                        lineH9b1b.setVisibility(View.VISIBLE);
+                        secH9b1c.setVisibility(View.VISIBLE);
+                        lineH9b1c.setVisibility(View.VISIBLE);
+                        secH9b2a.setVisibility(View.VISIBLE);
+                        lineH9b2a.setVisibility(View.VISIBLE);
+                        secH9b2b.setVisibility(View.VISIBLE);
+                        lineH9b2b.setVisibility(View.VISIBLE);
+                        secH9b2c.setVisibility(View.VISIBLE);
+                        lineH9b2c.setVisibility(View.VISIBLE);
+                        secH9b3a.setVisibility(View.VISIBLE);
+                        lineH9b3a.setVisibility(View.VISIBLE);
+                        secH9b3b.setVisibility(View.VISIBLE);
+                        lineH9b3b.setVisibility(View.VISIBLE);
+                        secH9b3c.setVisibility(View.VISIBLE);
+                        lineH9b3c.setVisibility(View.VISIBLE);
+                        secH9b4a.setVisibility(View.VISIBLE);
+                        lineH9b4a.setVisibility(View.VISIBLE);
+                        secH9b4b.setVisibility(View.VISIBLE);
+                        lineH9b4b.setVisibility(View.VISIBLE);
+                        secH9b4c.setVisibility(View.VISIBLE);
+                        lineH9b4c.setVisibility(View.VISIBLE);
+                        secH9b5a.setVisibility(View.VISIBLE);
+                        lineH9b5a.setVisibility(View.VISIBLE);
+                        secH9b5b.setVisibility(View.VISIBLE);
+                        lineH9b5b.setVisibility(View.VISIBLE);
+                        secH9b5c.setVisibility(View.VISIBLE);
+                        lineH9b5c.setVisibility(View.VISIBLE);
+                        secH9b6a.setVisibility(View.VISIBLE);
+                        lineH9b6a.setVisibility(View.VISIBLE);
+                        secH9b6b.setVisibility(View.VISIBLE);
+                        lineH9b6b.setVisibility(View.VISIBLE);
+                        secH9b6c.setVisibility(View.VISIBLE);
+                        lineH9b6c.setVisibility(View.VISIBLE);
+                        secH9b7a.setVisibility(View.VISIBLE);
+                        lineH9b7a.setVisibility(View.VISIBLE);
+                        secH9b7b.setVisibility(View.VISIBLE);
+                        lineH9b7b.setVisibility(View.VISIBLE);
+                        secH9b7c.setVisibility(View.VISIBLE);
+                        lineH9b7c.setVisibility(View.VISIBLE);
+                        secH9b8a.setVisibility(View.VISIBLE);
+                        lineH9b8a.setVisibility(View.VISIBLE);
+                        secH9b8b.setVisibility(View.VISIBLE);
+                        lineH9b8b.setVisibility(View.VISIBLE);
+                        secH9b8c.setVisibility(View.VISIBLE);
+                        lineH9b8c.setVisibility(View.VISIBLE);
+                        secH9b9a.setVisibility(View.VISIBLE);
+                        lineH9b9a.setVisibility(View.VISIBLE);
+                        secH9b9b.setVisibility(View.VISIBLE);
+                        lineH9b9b.setVisibility(View.VISIBLE);
+                        secH9b9c.setVisibility(View.VISIBLE);
+                        lineH9b9c.setVisibility(View.VISIBLE);
+                        secH9b10a.setVisibility(View.VISIBLE);
+                        lineH9b10a.setVisibility(View.VISIBLE);
+                        secH9b10b.setVisibility(View.VISIBLE);
+                        lineH9b10b.setVisibility(View.VISIBLE);
+                        secH9b10c.setVisibility(View.VISIBLE);
+                        lineH9b10c.setVisibility(View.VISIBLE);
+                        secH9b11a.setVisibility(View.VISIBLE);
+                        lineH9b11a.setVisibility(View.VISIBLE);
+                        secH9b11b.setVisibility(View.VISIBLE);
+                        lineH9b11b.setVisibility(View.VISIBLE);
+                        secH9b11c.setVisibility(View.VISIBLE);
+                        lineH9b11c.setVisibility(View.VISIBLE);
+                        secH9b12.setVisibility(View.VISIBLE);
+                        lineH9b12.setVisibility(View.VISIBLE);
+                        secH9b12a1.setVisibility(View.VISIBLE);
+                        lineH9b12a1.setVisibility(View.VISIBLE);
+                        secH9b12a2.setVisibility(View.VISIBLE);
+                        lineH9b12a2.setVisibility(View.VISIBLE);
+                        secH9b12a3.setVisibility(View.VISIBLE);
+                        lineH9b12a3.setVisibility(View.VISIBLE);
+                        secH9b12b1.setVisibility(View.VISIBLE);
+                        lineH9b12b1.setVisibility(View.VISIBLE);
+                        secH9b12b2.setVisibility(View.VISIBLE);
+                        lineH9b12b2.setVisibility(View.VISIBLE);
+                        secH9b12b3.setVisibility(View.VISIBLE);
+                        lineH9b12b3.setVisibility(View.VISIBLE);
+                        secH9b12c1.setVisibility(View.VISIBLE);
+                        lineH9b12c1.setVisibility(View.VISIBLE);
+                        secH9b12c2.setVisibility(View.VISIBLE);
+                        lineH9b12c2.setVisibility(View.VISIBLE);
+                        secH9b12c3.setVisibility(View.VISIBLE);
+                        lineH9b12c3.setVisibility(View.VISIBLE);
+                        secH9b12d1.setVisibility(View.VISIBLE);
+                        lineH9b12d1.setVisibility(View.VISIBLE);
+                        secH9b12d2.setVisibility(View.VISIBLE);
+                        lineH9b12d2.setVisibility(View.VISIBLE);
+                        secH9b12d3.setVisibility(View.VISIBLE);
+                        lineH9b12d3.setVisibility(View.VISIBLE);
+                        secH9b12e1.setVisibility(View.VISIBLE);
+                        lineH9b12e1.setVisibility(View.VISIBLE);
+                        secH9b12e2.setVisibility(View.VISIBLE);
+                        lineH9b12e2.setVisibility(View.VISIBLE);
+                        secH9b12e3.setVisibility(View.VISIBLE);
+                        lineH9b12e3.setVisibility(View.VISIBLE);
+                        secH9b12f1.setVisibility(View.VISIBLE);
+                        lineH9b12f1.setVisibility(View.VISIBLE);
+                        secH9b12f2.setVisibility(View.VISIBLE);
+                        lineH9b12f2.setVisibility(View.VISIBLE);
+                        secH9b12f3.setVisibility(View.VISIBLE);
+                        lineH9b12f3.setVisibility(View.VISIBLE);
+                        secH9b12g1.setVisibility(View.VISIBLE);
+                        lineH9b12g1.setVisibility(View.VISIBLE);
+                        secH9b12g2.setVisibility(View.VISIBLE);
+                        lineH9b12g2.setVisibility(View.VISIBLE);
+                        secH9b12g3.setVisibility(View.VISIBLE);
+                        lineH9b12g3.setVisibility(View.VISIBLE);
+                        secH9b12h1.setVisibility(View.VISIBLE);
+                        lineH9b12h1.setVisibility(View.VISIBLE);
+                        secH9b12h2.setVisibility(View.VISIBLE);
+                        lineH9b12h2.setVisibility(View.VISIBLE);
+                        secH9b12h3.setVisibility(View.VISIBLE);
+                        lineH9b12h3.setVisibility(View.VISIBLE);
+                        secH9b12i1.setVisibility(View.VISIBLE);
+                        lineH9b12i1.setVisibility(View.VISIBLE);
+                        secH9b12i2.setVisibility(View.VISIBLE);
+                        lineH9b12i2.setVisibility(View.VISIBLE);
+                        secH9b12i3.setVisibility(View.VISIBLE);
+                        lineH9b12i3.setVisibility(View.VISIBLE);
+                        secH9b12j1.setVisibility(View.VISIBLE);
+                        lineH9b12j1.setVisibility(View.VISIBLE);
+                        secH9b12j2.setVisibility(View.VISIBLE);
+                        lineH9b12j2.setVisibility(View.VISIBLE);
+                        secH9b12j3.setVisibility(View.VISIBLE);
+                        lineH9b12j3.setVisibility(View.VISIBLE);
+                        secH9b12k1.setVisibility(View.VISIBLE);
+                        lineH9b12k1.setVisibility(View.VISIBLE);
+                        secH9b12k2.setVisibility(View.VISIBLE);
+                        lineH9b12k2.setVisibility(View.VISIBLE);
+                        secH9b12k3.setVisibility(View.VISIBLE);
+                        lineH9b12k3.setVisibility(View.VISIBLE);
+                        secH9b12l1.setVisibility(View.VISIBLE);
+                        lineH9b12l1.setVisibility(View.VISIBLE);
+                        secH9b12l2.setVisibility(View.VISIBLE);
+                        lineH9b12l2.setVisibility(View.VISIBLE);
+                        secH9b12l3.setVisibility(View.VISIBLE);
+                        lineH9b12l3.setVisibility(View.VISIBLE);
+                        secH9b12m1.setVisibility(View.VISIBLE);
+                        lineH9b12m1.setVisibility(View.VISIBLE);
+                        secH9b12m2.setVisibility(View.VISIBLE);
+                        lineH9b12m2.setVisibility(View.VISIBLE);
+                        secH9b12m3.setVisibility(View.VISIBLE);
+                        lineH9b12m3.setVisibility(View.VISIBLE);
+                        secH9b13a.setVisibility(View.VISIBLE);
+                        lineH9b13a.setVisibility(View.VISIBLE);
+                        secH9b13b.setVisibility(View.VISIBLE);
+                        lineH9b13b.setVisibility(View.VISIBLE);
+                        secH9b13c.setVisibility(View.VISIBLE);
+                        lineH9b13c.setVisibility(View.VISIBLE);
+                        secH9b14a.setVisibility(View.VISIBLE);
+                        lineH9b14a.setVisibility(View.VISIBLE);
+                        secH9b14x1.setVisibility(View.VISIBLE);
+                        lineH9b14x1.setVisibility(View.VISIBLE);
+                        secH9b14b.setVisibility(View.VISIBLE);
+                        lineH9b14b.setVisibility(View.VISIBLE);
                     }
                 }
                 public void onNothingSelected(AdapterView<?> adapterView) {
@@ -868,78 +1852,78 @@ public class Cost3 extends Activity {
             lineH8121d=(View)findViewById(R.id.lineH8121d);
             VlblH8121d=(TextView) findViewById(R.id.VlblH8121d);
             txtH8121d=(EditText) findViewById(R.id.txtH8121d);
-            secLBH8112=(LinearLayout)findViewById(R.id.secLBH8112);
-            secH8112a=(LinearLayout)findViewById(R.id.secH8112a);
-            lineH8112a=(View)findViewById(R.id.lineH8112a);
-            VlblH8112a = (TextView) findViewById(R.id.VlblH8112a);
-            rdogrpH8112a = (RadioGroup) findViewById(R.id.rdogrpH8112a);
+            secLBH8122 = (LinearLayout) findViewById(R.id.secLBH8122);
+            secH8122a = (LinearLayout) findViewById(R.id.secH8122a);
+            lineH8122a = (View) findViewById(R.id.lineH8122a);
+            VlblH8122a = (TextView) findViewById(R.id.VlblH8122a);
+            rdogrpH8122a = (RadioGroup) findViewById(R.id.rdogrpH8122a);
 
-            rdoH8112a1 = (RadioButton) findViewById(R.id.rdoH8112a1);
-            rdoH8112a2 = (RadioButton) findViewById(R.id.rdoH8112a2);
-            rdogrpH8112a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            rdoH8122a1 = (RadioButton) findViewById(R.id.rdoH8122a1);
+            rdoH8122a2 = (RadioButton) findViewById(R.id.rdoH8122a2);
+            rdogrpH8122a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup,int radioButtonID) {
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH8112a = new String[] {"1","0"};
-                    for (int i = 0; i < rdogrpH8112a.getChildCount(); i++)
+                    String[] d_rdogrpH8122a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH8122a.getChildCount(); i++)
                     {
-                        rb = (RadioButton)rdogrpH8112a.getChildAt(i);
-                        if (rb.isChecked()) rbData = d_rdogrpH8112a[i];
+                        rb = (RadioButton) rdogrpH8122a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH8122a[i];
                     }
 
                     if(rbData.equalsIgnoreCase("0"))
                     {
-                        secH8112x1.setVisibility(View.GONE);
-                        lineH8112x1.setVisibility(View.GONE);
-                        txtH8112x1.setText("");
-                        secH8112b.setVisibility(View.GONE);
-                        lineH8112b.setVisibility(View.GONE);
-                        txtH8112b.setText("");
-                        secH8112c.setVisibility(View.GONE);
-                        lineH8112c.setVisibility(View.GONE);
-                        rdogrpH8112c.clearCheck();
-                        secH8112d.setVisibility(View.GONE);
-                        lineH8112d.setVisibility(View.GONE);
-                        txtH8112d.setText("");
+                        secH8122x1.setVisibility(View.GONE);
+                        lineH8122x1.setVisibility(View.GONE);
+                        txtH8122x1.setText("");
+                        secH8122b.setVisibility(View.GONE);
+                        lineH8122b.setVisibility(View.GONE);
+                        txtH8122b.setText("");
+                        secH8122c.setVisibility(View.GONE);
+                        lineH8122c.setVisibility(View.GONE);
+                        rdogrpH8122c.clearCheck();
+                        secH8122d.setVisibility(View.GONE);
+                        lineH8122d.setVisibility(View.GONE);
+                        txtH8122d.setText("");
                     }
                     else
                     {
-                        secH8112x1.setVisibility(View.VISIBLE);
-                        lineH8112x1.setVisibility(View.VISIBLE);
-                        secH8112b.setVisibility(View.VISIBLE);
-                        lineH8112b.setVisibility(View.VISIBLE);
-                        secH8112c.setVisibility(View.VISIBLE);
-                        lineH8112c.setVisibility(View.VISIBLE);
-                        secH8112d.setVisibility(View.VISIBLE);
-                        lineH8112d.setVisibility(View.VISIBLE);
+                        secH8122x1.setVisibility(View.VISIBLE);
+                        lineH8122x1.setVisibility(View.VISIBLE);
+                        secH8122b.setVisibility(View.VISIBLE);
+                        lineH8122b.setVisibility(View.VISIBLE);
+                        secH8122c.setVisibility(View.VISIBLE);
+                        lineH8122c.setVisibility(View.VISIBLE);
+                        secH8122d.setVisibility(View.VISIBLE);
+                        lineH8122d.setVisibility(View.VISIBLE);
                     }
                 }
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
             });
-            secH8112x1=(LinearLayout)findViewById(R.id.secH8112x1);
-            lineH8112x1=(View)findViewById(R.id.lineH8112x1);
-            VlblH8112x1=(TextView) findViewById(R.id.VlblH8112x1);
-            txtH8112x1=(EditText) findViewById(R.id.txtH8112x1);
-            secH8112b=(LinearLayout)findViewById(R.id.secH8112b);
-            lineH8112b=(View)findViewById(R.id.lineH8112b);
-            VlblH8112b=(TextView) findViewById(R.id.VlblH8112b);
-            txtH8112b=(EditText) findViewById(R.id.txtH8112b);
-            secH8112c=(LinearLayout)findViewById(R.id.secH8112c);
-            lineH8112c=(View)findViewById(R.id.lineH8112c);
-            VlblH8112c = (TextView) findViewById(R.id.VlblH8112c);
-            rdogrpH8112c = (RadioGroup) findViewById(R.id.rdogrpH8112c);
+            secH8122x1 = (LinearLayout) findViewById(R.id.secH8122x1);
+            lineH8122x1 = (View) findViewById(R.id.lineH8122x1);
+            VlblH8122x1 = (TextView) findViewById(R.id.VlblH8122x1);
+            txtH8122x1 = (EditText) findViewById(R.id.txtH8122x1);
+            secH8122b = (LinearLayout) findViewById(R.id.secH8122b);
+            lineH8122b = (View) findViewById(R.id.lineH8122b);
+            VlblH8122b = (TextView) findViewById(R.id.VlblH8122b);
+            txtH8122b = (EditText) findViewById(R.id.txtH8122b);
+            secH8122c = (LinearLayout) findViewById(R.id.secH8122c);
+            lineH8122c = (View) findViewById(R.id.lineH8122c);
+            VlblH8122c = (TextView) findViewById(R.id.VlblH8122c);
+            rdogrpH8122c = (RadioGroup) findViewById(R.id.rdogrpH8122c);
 
-            rdoH8112c1 = (RadioButton) findViewById(R.id.rdoH8112c1);
-            rdoH8112c2 = (RadioButton) findViewById(R.id.rdoH8112c2);
-            rdoH8112c3 = (RadioButton) findViewById(R.id.rdoH8112c3);
-            secH8112d=(LinearLayout)findViewById(R.id.secH8112d);
-            lineH8112d=(View)findViewById(R.id.lineH8112d);
-            VlblH8112d=(TextView) findViewById(R.id.VlblH8112d);
-            txtH8112d=(EditText) findViewById(R.id.txtH8112d);
-            secLBH9a=(LinearLayout)findViewById(R.id.secLBH9a);
+            rdoH8122c1 = (RadioButton) findViewById(R.id.rdoH8122c1);
+            rdoH8122c2 = (RadioButton) findViewById(R.id.rdoH8122c2);
+            rdoH8122c3 = (RadioButton) findViewById(R.id.rdoH8122c3);
+            secH8122d = (LinearLayout) findViewById(R.id.secH8122d);
+            lineH8122d = (View) findViewById(R.id.lineH8122d);
+            VlblH8122d = (TextView) findViewById(R.id.VlblH8122d);
+            txtH8122d = (EditText) findViewById(R.id.txtH8122d);
+            seclblH9a = (LinearLayout) findViewById(R.id.seclblH9a);
             secH9a1a=(LinearLayout)findViewById(R.id.secH9a1a);
             lineH9a1a=(View)findViewById(R.id.lineH9a1a);
             VlblH9a1a = (TextView) findViewById(R.id.VlblH9a1a);
@@ -988,7 +1972,7 @@ public class Cost3 extends Activity {
             lineH9a1c=(View)findViewById(R.id.lineH9a1c);
             VlblH9a1c=(TextView) findViewById(R.id.VlblH9a1c);
             txtH9a1c=(EditText) findViewById(R.id.txtH9a1c);
-            secLBH9a2=(LinearLayout)findViewById(R.id.secLBH9a2);
+            seclblH9a2 = (LinearLayout) findViewById(R.id.seclblH9a2);
             secH9a2a=(LinearLayout)findViewById(R.id.secH9a2a);
             lineH9a2a=(View)findViewById(R.id.lineH9a2a);
             VlblH9a2a = (TextView) findViewById(R.id.VlblH9a2a);
@@ -1037,7 +2021,7 @@ public class Cost3 extends Activity {
             lineH9a2c=(View)findViewById(R.id.lineH9a2c);
             VlblH9a2c=(TextView) findViewById(R.id.VlblH9a2c);
             txtH9a2c=(EditText) findViewById(R.id.txtH9a2c);
-            secLBH9a3=(LinearLayout)findViewById(R.id.secLBH9a3);
+            seclblH9a3 = (LinearLayout) findViewById(R.id.seclblH9a3);
             secH9a3a=(LinearLayout)findViewById(R.id.secH9a3a);
             lineH9a3a=(View)findViewById(R.id.lineH9a3a);
             VlblH9a3a = (TextView) findViewById(R.id.VlblH9a3a);
@@ -1728,7 +2712,7 @@ public class Cost3 extends Activity {
             lineH9b11c=(View)findViewById(R.id.lineH9b11c);
             VlblH9b11c=(TextView) findViewById(R.id.VlblH9b11c);
             txtH9b11c=(EditText) findViewById(R.id.txtH9b11c);
-            secLBH9b12=(LinearLayout)findViewById(R.id.secLBH9b12);
+            seclblH9b12 = (LinearLayout) findViewById(R.id.seclblH9b12);
             secH9b12=(LinearLayout)findViewById(R.id.secH9b12);
             lineH9b12=(View)findViewById(R.id.lineH9b12);
             VlblH9b12 = (TextView) findViewById(R.id.VlblH9b12);
@@ -2701,18 +3685,328 @@ public class Cost3 extends Activity {
             txtH9b14c=(EditText) findViewById(R.id.txtH9b14c);
 
 
-            txtRnd.setText(RND);
-            txtSuchanaID.setText(SUCHANAID);
-            txtRnd.setEnabled(false);
-            txtSuchanaID.setEnabled(false);
-
+            //Hide all skip variables
+            secH8111b.setVisibility(View.GONE);
+            secH8111c.setVisibility(View.GONE);
+            secH8111d.setVisibility(View.GONE);
+            secH8121a.setVisibility(View.GONE);
             secH8121x1.setVisibility(View.GONE);
-            lineH8121x1.setVisibility(View.GONE);
+            secH8121b.setVisibility(View.GONE);
+            secH8121c.setVisibility(View.GONE);
+            secH8121d.setVisibility(View.GONE);
+            secH8122a.setVisibility(View.GONE);
+            secH8122x1.setVisibility(View.GONE);
+            secH8122b.setVisibility(View.GONE);
+            secH8122c.setVisibility(View.GONE);
+            secH8122d.setVisibility(View.GONE);
+            secH9a1a.setVisibility(View.GONE);
+            secH9a1b.setVisibility(View.GONE);
+            secH9a1c.setVisibility(View.GONE);
+            secH9a2a.setVisibility(View.GONE);
+            secH9a2b.setVisibility(View.GONE);
+            secH9a2c.setVisibility(View.GONE);
+            secH9a3a.setVisibility(View.GONE);
+            secH9a3b.setVisibility(View.GONE);
+            secH9a3c.setVisibility(View.GONE);
+            secH9a4a.setVisibility(View.GONE);
+            secH9a4b.setVisibility(View.GONE);
+            secH9a4c.setVisibility(View.GONE);
+            secH9a5a.setVisibility(View.GONE);
+            secH9a5b.setVisibility(View.GONE);
+            secH9a5c.setVisibility(View.GONE);
+            secH9b1a.setVisibility(View.GONE);
+            secH9b1b.setVisibility(View.GONE);
+            secH9b1c.setVisibility(View.GONE);
+            secH9b2a.setVisibility(View.GONE);
+            secH9b2b.setVisibility(View.GONE);
+            secH9b2c.setVisibility(View.GONE);
+            secH9b3a.setVisibility(View.GONE);
+            secH9b3b.setVisibility(View.GONE);
+            secH9b3c.setVisibility(View.GONE);
+            secH9b4a.setVisibility(View.GONE);
+            secH9b4b.setVisibility(View.GONE);
+            secH9b4c.setVisibility(View.GONE);
+            secH9b5a.setVisibility(View.GONE);
+            secH9b5b.setVisibility(View.GONE);
+            secH9b5c.setVisibility(View.GONE);
+            secH9b6a.setVisibility(View.GONE);
+            secH9b6b.setVisibility(View.GONE);
+            secH9b6c.setVisibility(View.GONE);
+            secH9b7a.setVisibility(View.GONE);
+            secH9b7b.setVisibility(View.GONE);
+            secH9b7c.setVisibility(View.GONE);
+            secH9b8a.setVisibility(View.GONE);
+            secH9b8b.setVisibility(View.GONE);
+            secH9b8c.setVisibility(View.GONE);
+            secH9b9a.setVisibility(View.GONE);
+            secH9b9b.setVisibility(View.GONE);
+            secH9b9c.setVisibility(View.GONE);
+            secH9b10a.setVisibility(View.GONE);
+            secH9b10b.setVisibility(View.GONE);
+            secH9b10c.setVisibility(View.GONE);
+            secH9b11a.setVisibility(View.GONE);
+            secH9b11b.setVisibility(View.GONE);
+            secH9b11c.setVisibility(View.GONE);
+            secH9b12.setVisibility(View.GONE);
+            secH9b12a1.setVisibility(View.GONE);
+            secH9b12a2.setVisibility(View.GONE);
+            secH9b12a3.setVisibility(View.GONE);
+            secH9b12b1.setVisibility(View.GONE);
+            secH9b12b2.setVisibility(View.GONE);
+            secH9b12b3.setVisibility(View.GONE);
+            secH9b12c1.setVisibility(View.GONE);
+            secH9b12c2.setVisibility(View.GONE);
+            secH9b12c3.setVisibility(View.GONE);
+            secH9b12d1.setVisibility(View.GONE);
+            secH9b12d2.setVisibility(View.GONE);
+            secH9b12d3.setVisibility(View.GONE);
+            secH9b12e1.setVisibility(View.GONE);
+            secH9b12e2.setVisibility(View.GONE);
+            secH9b12e3.setVisibility(View.GONE);
+            secH9b12f1.setVisibility(View.GONE);
+            secH9b12f2.setVisibility(View.GONE);
+            secH9b12f3.setVisibility(View.GONE);
+            secH9b12g1.setVisibility(View.GONE);
+            secH9b12g2.setVisibility(View.GONE);
+            secH9b12g3.setVisibility(View.GONE);
+            secH9b12h1.setVisibility(View.GONE);
+            secH9b12h2.setVisibility(View.GONE);
+            secH9b12h3.setVisibility(View.GONE);
+            secH9b12i1.setVisibility(View.GONE);
+            secH9b12i2.setVisibility(View.GONE);
+            secH9b12i3.setVisibility(View.GONE);
+            secH9b12j1.setVisibility(View.GONE);
+            secH9b12j2.setVisibility(View.GONE);
+            secH9b12j3.setVisibility(View.GONE);
+            secH9b12k1.setVisibility(View.GONE);
+            secH9b12k2.setVisibility(View.GONE);
+            secH9b12k3.setVisibility(View.GONE);
+            secH9b12l1.setVisibility(View.GONE);
+            secH9b12l2.setVisibility(View.GONE);
+            secH9b12l3.setVisibility(View.GONE);
+            secH9b12m1.setVisibility(View.GONE);
+            secH9b12m2.setVisibility(View.GONE);
+            secH9b12m3.setVisibility(View.GONE);
+            secH9b13a.setVisibility(View.GONE);
+            secH9b13b.setVisibility(View.GONE);
+            secH9b13c.setVisibility(View.GONE);
+            secH9b14a.setVisibility(View.GONE);
+            secH9b14x1.setVisibility(View.GONE);
+            secH9b14b.setVisibility(View.GONE);
+            secH8121x1.setVisibility(View.GONE);
+            secH8121b.setVisibility(View.GONE);
+            secH8121c.setVisibility(View.GONE);
+            secH8121d.setVisibility(View.GONE);
+            secH8122a.setVisibility(View.GONE);
+            secH8122x1.setVisibility(View.GONE);
+            secH8122b.setVisibility(View.GONE);
+            secH8122c.setVisibility(View.GONE);
+            secH8122d.setVisibility(View.GONE);
+            secH9a1a.setVisibility(View.GONE);
+            secH9a1b.setVisibility(View.GONE);
+            secH9a1c.setVisibility(View.GONE);
+            secH9a2a.setVisibility(View.GONE);
+            secH9a2b.setVisibility(View.GONE);
+            secH9a2c.setVisibility(View.GONE);
+            secH9a3a.setVisibility(View.GONE);
+            secH9a3b.setVisibility(View.GONE);
+            secH9a3c.setVisibility(View.GONE);
+            secH9a4a.setVisibility(View.GONE);
+            secH9a4b.setVisibility(View.GONE);
+            secH9a4c.setVisibility(View.GONE);
+            secH9a5a.setVisibility(View.GONE);
+            secH9a5b.setVisibility(View.GONE);
+            secH9a5c.setVisibility(View.GONE);
+            secH9b1a.setVisibility(View.GONE);
+            secH9b1b.setVisibility(View.GONE);
+            secH9b1c.setVisibility(View.GONE);
+            secH9b2a.setVisibility(View.GONE);
+            secH9b2b.setVisibility(View.GONE);
+            secH9b2c.setVisibility(View.GONE);
+            secH9b3a.setVisibility(View.GONE);
+            secH9b3b.setVisibility(View.GONE);
+            secH9b3c.setVisibility(View.GONE);
+            secH9b4a.setVisibility(View.GONE);
+            secH9b4b.setVisibility(View.GONE);
+            secH9b4c.setVisibility(View.GONE);
+            secH9b5a.setVisibility(View.GONE);
+            secH9b5b.setVisibility(View.GONE);
+            secH9b5c.setVisibility(View.GONE);
+            secH9b6a.setVisibility(View.GONE);
+            secH9b6b.setVisibility(View.GONE);
+            secH9b6c.setVisibility(View.GONE);
+            secH9b7a.setVisibility(View.GONE);
+            secH9b7b.setVisibility(View.GONE);
+            secH9b7c.setVisibility(View.GONE);
+            secH9b8a.setVisibility(View.GONE);
+            secH9b8b.setVisibility(View.GONE);
+            secH9b8c.setVisibility(View.GONE);
+            secH9b9a.setVisibility(View.GONE);
+            secH9b9b.setVisibility(View.GONE);
+            secH9b9c.setVisibility(View.GONE);
+            secH9b10a.setVisibility(View.GONE);
+            secH9b10b.setVisibility(View.GONE);
+            secH9b10c.setVisibility(View.GONE);
+            secH9b11a.setVisibility(View.GONE);
+            secH9b11b.setVisibility(View.GONE);
+            secH9b11c.setVisibility(View.GONE);
+            secH9b12.setVisibility(View.GONE);
+            secH9b12a1.setVisibility(View.GONE);
+            secH9b12a2.setVisibility(View.GONE);
+            secH9b12a3.setVisibility(View.GONE);
+            secH9b12b1.setVisibility(View.GONE);
+            secH9b12b2.setVisibility(View.GONE);
+            secH9b12b3.setVisibility(View.GONE);
+            secH9b12c1.setVisibility(View.GONE);
+            secH9b12c2.setVisibility(View.GONE);
+            secH9b12c3.setVisibility(View.GONE);
+            secH9b12d1.setVisibility(View.GONE);
+            secH9b12d2.setVisibility(View.GONE);
+            secH9b12d3.setVisibility(View.GONE);
+            secH9b12e1.setVisibility(View.GONE);
+            secH9b12e2.setVisibility(View.GONE);
+            secH9b12e3.setVisibility(View.GONE);
+            secH9b12f1.setVisibility(View.GONE);
+            secH9b12f2.setVisibility(View.GONE);
+            secH9b12f3.setVisibility(View.GONE);
+            secH9b12g1.setVisibility(View.GONE);
+            secH9b12g2.setVisibility(View.GONE);
+            secH9b12g3.setVisibility(View.GONE);
+            secH9b12h1.setVisibility(View.GONE);
+            secH9b12h2.setVisibility(View.GONE);
+            secH9b12h3.setVisibility(View.GONE);
+            secH9b12i1.setVisibility(View.GONE);
+            secH9b12i2.setVisibility(View.GONE);
+            secH9b12i3.setVisibility(View.GONE);
+            secH9b12j1.setVisibility(View.GONE);
+            secH9b12j2.setVisibility(View.GONE);
+            secH9b12j3.setVisibility(View.GONE);
+            secH9b12k1.setVisibility(View.GONE);
+            secH9b12k2.setVisibility(View.GONE);
+            secH9b12k3.setVisibility(View.GONE);
+            secH9b12l1.setVisibility(View.GONE);
+            secH9b12l2.setVisibility(View.GONE);
+            secH9b12l3.setVisibility(View.GONE);
+            secH9b12m1.setVisibility(View.GONE);
+            secH9b12m2.setVisibility(View.GONE);
+            secH9b12m3.setVisibility(View.GONE);
+            secH9b13a.setVisibility(View.GONE);
+            secH9b13b.setVisibility(View.GONE);
+            secH9b13c.setVisibility(View.GONE);
+            secH9b14a.setVisibility(View.GONE);
+            secH9b14x1.setVisibility(View.GONE);
+            secH9b14b.setVisibility(View.GONE);
+            secH8122x1.setVisibility(View.GONE);
+            secH8122b.setVisibility(View.GONE);
+            secH8122c.setVisibility(View.GONE);
+            secH8122d.setVisibility(View.GONE);
+            secH9a1b.setVisibility(View.GONE);
+            secH9a1c.setVisibility(View.GONE);
+            secH9a2b.setVisibility(View.GONE);
+            secH9a2c.setVisibility(View.GONE);
+            secH9a3b.setVisibility(View.GONE);
+            secH9a3c.setVisibility(View.GONE);
+            secH9a4b.setVisibility(View.GONE);
+            secH9a4c.setVisibility(View.GONE);
+            secH9a5b.setVisibility(View.GONE);
+            secH9a5c.setVisibility(View.GONE);
+            secH9b1b.setVisibility(View.GONE);
+            secH9b1c.setVisibility(View.GONE);
+            secH9b2b.setVisibility(View.GONE);
+            secH9b2c.setVisibility(View.GONE);
+            secH9b3b.setVisibility(View.GONE);
+            secH9b3c.setVisibility(View.GONE);
+            secH9b4b.setVisibility(View.GONE);
+            secH9b4c.setVisibility(View.GONE);
+            secH9b5b.setVisibility(View.GONE);
+            secH9b5c.setVisibility(View.GONE);
+            secH9b6b.setVisibility(View.GONE);
+            secH9b6c.setVisibility(View.GONE);
+            secH9b7b.setVisibility(View.GONE);
+            secH9b7c.setVisibility(View.GONE);
+            secH9b8b.setVisibility(View.GONE);
+            secH9b8c.setVisibility(View.GONE);
+            secH9b9b.setVisibility(View.GONE);
+            secH9b9c.setVisibility(View.GONE);
+            secH9b10b.setVisibility(View.GONE);
+            secH9b10c.setVisibility(View.GONE);
+            secH9b11b.setVisibility(View.GONE);
+            secH9b11c.setVisibility(View.GONE);
+            secH9b12.setVisibility(View.GONE);
+            secH9b12a1.setVisibility(View.GONE);
+            secH9b12a2.setVisibility(View.GONE);
+            secH9b12a3.setVisibility(View.GONE);
+            secH9b12b1.setVisibility(View.GONE);
+            secH9b12b2.setVisibility(View.GONE);
+            secH9b12b3.setVisibility(View.GONE);
+            secH9b12c1.setVisibility(View.GONE);
+            secH9b12c2.setVisibility(View.GONE);
+            secH9b12c3.setVisibility(View.GONE);
+            secH9b12d1.setVisibility(View.GONE);
+            secH9b12d2.setVisibility(View.GONE);
+            secH9b12d3.setVisibility(View.GONE);
+            secH9b12e1.setVisibility(View.GONE);
+            secH9b12e2.setVisibility(View.GONE);
+            secH9b12e3.setVisibility(View.GONE);
+            secH9b12f1.setVisibility(View.GONE);
+            secH9b12f2.setVisibility(View.GONE);
+            secH9b12f3.setVisibility(View.GONE);
+            secH9b12g1.setVisibility(View.GONE);
+            secH9b12g2.setVisibility(View.GONE);
+            secH9b12g3.setVisibility(View.GONE);
+            secH9b12h1.setVisibility(View.GONE);
+            secH9b12h2.setVisibility(View.GONE);
+            secH9b12h3.setVisibility(View.GONE);
+            secH9b12i1.setVisibility(View.GONE);
+            secH9b12i2.setVisibility(View.GONE);
+            secH9b12i3.setVisibility(View.GONE);
+            secH9b12j1.setVisibility(View.GONE);
+            secH9b12j2.setVisibility(View.GONE);
+            secH9b12j3.setVisibility(View.GONE);
+            secH9b12k1.setVisibility(View.GONE);
+            secH9b12k2.setVisibility(View.GONE);
+            secH9b12k3.setVisibility(View.GONE);
+            secH9b12l1.setVisibility(View.GONE);
+            secH9b12l2.setVisibility(View.GONE);
+            secH9b12l3.setVisibility(View.GONE);
+            secH9b12m1.setVisibility(View.GONE);
+            secH9b12m2.setVisibility(View.GONE);
+            secH9b12m3.setVisibility(View.GONE);
+            secH9b12a2.setVisibility(View.GONE);
+            secH9b12a3.setVisibility(View.GONE);
+            secH9b12b2.setVisibility(View.GONE);
+            secH9b12b3.setVisibility(View.GONE);
+            secH9b12c2.setVisibility(View.GONE);
+            secH9b12c3.setVisibility(View.GONE);
+            secH9b12d2.setVisibility(View.GONE);
+            secH9b12d3.setVisibility(View.GONE);
+            secH9b12e2.setVisibility(View.GONE);
+            secH9b12e3.setVisibility(View.GONE);
+            secH9b12f2.setVisibility(View.GONE);
+            secH9b12f3.setVisibility(View.GONE);
+            secH9b12g2.setVisibility(View.GONE);
+            secH9b12g3.setVisibility(View.GONE);
+            secH9b12h2.setVisibility(View.GONE);
+            secH9b12h3.setVisibility(View.GONE);
+            secH9b12i2.setVisibility(View.GONE);
+            secH9b12i3.setVisibility(View.GONE);
+            secH9b12j2.setVisibility(View.GONE);
+            secH9b12j3.setVisibility(View.GONE);
+            secH9b12k2.setVisibility(View.GONE);
+            secH9b12k3.setVisibility(View.GONE);
+            secH9b12l2.setVisibility(View.GONE);
+            secH9b12l3.setVisibility(View.GONE);
+            secH9b12m2.setVisibility(View.GONE);
+            secH9b12m3.setVisibility(View.GONE);
+            secH9b13a.setVisibility(View.GONE);
+            secH9b13b.setVisibility(View.GONE);
+            secH9b13c.setVisibility(View.GONE);
+            secH9b14a.setVisibility(View.GONE);
+            secH9b14x1.setVisibility(View.GONE);
+            secH9b14b.setVisibility(View.GONE);
+            secH9b13b.setVisibility(View.GONE);
+            secH9b13c.setVisibility(View.GONE);
 
-            secH8112x1.setVisibility(View.GONE);
-            lineH8112x1.setVisibility(View.GONE);
-
-            DataSearch(RND,SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -2751,10 +4045,9 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: উপকারভোগী/সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            }
-            else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
-                Connection.MessageBox(Cost3.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                // txtMSlNo.requestFocus();
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Cost3.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর.");
+                spnMSlNo.requestFocus();
                 return;
             }
 
@@ -2794,12 +4087,10 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH8111d.requestFocus();
                 return;
-            }
-
-            else if(!rdoH121a1.isChecked() & !rdoH121a2.isChecked() & secH121a.isShown())
+            } else if (!rdoH8121a1.isChecked() & !rdoH8121a2.isChecked() & secH8121a.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Select anyone options from (অন্যান্য কিনেছে).");
-                rdoH121a1.requestFocus();
+                rdoH8121a1.requestFocus();
                 return;
             }
             else if(txtH8121x1.getText().toString().length()==0 & secH8121x1.isShown())
@@ -2838,55 +4129,46 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH8121d.requestFocus();
                 return;
-            }
-
-            else if(!rdoH8112a1.isChecked() & !rdoH8112a2.isChecked() & secH8112a.isShown())
+            } else if (!rdoH8122a1.isChecked() & !rdoH8122a2.isChecked() & secH8122a.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Select anyone options from (অন্যান্য2  কিনেছে).");
-                rdoH8112a1.requestFocus();
+                rdoH8122a1.requestFocus();
                 return;
-            }
-            else if(txtH8112x1.getText().toString().length()==0 & secH8112x1.isShown())
+            } else if (txtH8122x1.getText().toString().length() == 0 & secH8122x1.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Required field: অন্যান্য নির্দিষ্ট করুন.");
-                txtH8112x1.requestFocus();
+                txtH8122x1.requestFocus();
                 return;
-            }
-            else if(txtH8112b.getText().toString().length()==0 & secH8112b.isShown())
+            } else if (txtH8122b.getText().toString().length() == 0 & secH8122b.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Required field: পরিমাণ(সংখ্যা).");
-                txtH8112b.requestFocus();
+                txtH8122b.requestFocus();
                 return;
-            }
-            else if(Integer.valueOf(txtH8112b.getText().toString().length()==0 ? "1" : txtH8112b.getText().toString()) < 1 || Integer.valueOf(txtH8112b.getText().toString().length()==0 ? "999" : txtH8112b.getText().toString()) > 999)
+            } else if (Integer.valueOf(txtH8122b.getText().toString().length() == 0 ? "1" : txtH8122b.getText().toString()) < 1 || Integer.valueOf(txtH8122b.getText().toString().length() == 0 ? "999" : txtH8122b.getText().toString()) > 999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
-                txtH8112b.requestFocus();
+                txtH8122b.requestFocus();
                 return;
-            }
-
-            else if(!rdoH8112c1.isChecked() & !rdoH8112c2.isChecked() & !rdoH8112c3.isChecked() & secH8112c.isShown())
+            } else if (!rdoH8122c1.isChecked() & !rdoH8122c2.isChecked() & !rdoH8122c3.isChecked() & secH8122c.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Select anyone options from (ইউনিট ).");
-                rdoH8112c1.requestFocus();
+                rdoH8122c1.requestFocus();
                 return;
-            }
-            else if(txtH8112d.getText().toString().length()==0 & secH8112d.isShown())
+            } else if (txtH8122d.getText().toString().length() == 0 & secH8122d.isShown())
             {
                 Connection.MessageBox(Cost3.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
-                txtH8112d.requestFocus();
+                txtH8122d.requestFocus();
                 return;
-            }
-            else if(Integer.valueOf(txtH8112d.getText().toString().length()==0 ? "1" : txtH8112d.getText().toString()) < 1 || Integer.valueOf(txtH8112d.getText().toString().length()==0 ? "999999" : txtH8112d.getText().toString()) > 999999)
+            } else if (Integer.valueOf(txtH8122d.getText().toString().length() == 0 ? "1" : txtH8122d.getText().toString()) < 1 || Integer.valueOf(txtH8122d.getText().toString().length() == 0 ? "999999" : txtH8122d.getText().toString()) > 999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
-                txtH8112d.requestFocus();
+                txtH8122d.requestFocus();
                 return;
             }
 
             else if(!rdoH9a1a1.isChecked() & !rdoH9a1a2.isChecked() & secH9a1a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ মাসে  এ  কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন? (যেমন: জ্বালানি কাঠ, গোবর, হারিকেন ইত্যাদি)).");
                 rdoH9a1a1.requestFocus();
                 return;
             }
@@ -2917,7 +4199,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9a2a1.isChecked() & !rdoH9a2a2.isChecked() & secH9a2a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ মাসে  এ  এ কোনো প্রসাধনী ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো, ক্রিম, পাউডার, সুগন্ধি ইত্যাদি) ).");
                 rdoH9a2a1.requestFocus();
                 return;
             }
@@ -2948,7 +4230,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9a3a1.isChecked() & !rdoH9a3a2.isChecked() & secH9a3a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ মাসে  এ  কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, শ্যাম্পু, টুথপেস্ট, ইত্যাদি) ).");
                 rdoH9a3a1.requestFocus();
                 return;
             }
@@ -2979,7 +4261,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9a4a1.isChecked() & !rdoH9a4a2.isChecked() & secH9a4a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ মাসে  এ  পরিবহনের জন্য কোন ভাড়া দিয়েছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন?  (যেমন: বাসরিক্সা ভাড়া ,সাইকেল মেরামত, ইত্যাদি)).");
                 rdoH9a4a1.requestFocus();
                 return;
             }
@@ -3010,7 +4292,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9a5a1.isChecked() & !rdoH9a5a2.isChecked() & secH9a5a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ মাসে  এ  কোনো বিল / বেতন দিয়েছেন  ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত মাসে কোনো বিল /বেতন দিয়েছেন (যেমন: মোবাইল রিচার্জ, কারেন্ট বিল, ইত্যাদি)  ).");
                 rdoH9a5a1.requestFocus();
                 return;
             }
@@ -3041,7 +4323,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b1a1.isChecked() & !rdoH9b1a2.isChecked() & secH9b1a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (গত ১ বছর   এ এর মধ্যে কোনো তৈরি পোশাক ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক ক্রয় করেছেন?  (যেমন:  লুঙ্গি,  ধুতি, শাড়ি, প্যান্ট, প্যান্ট , শার্ট, গামছা, কাপড়ের দাম, দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা  ইত্যাদি)  ).");
                 rdoH9b1a1.requestFocus();
                 return;
             }
@@ -3072,7 +4354,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b2a1.isChecked() & !rdoH9b2a2.isChecked() & secH9b2a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে খানার কোনো ভাড়া / চার্জ দিয়েছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া / চার্জ দিয়েছেন?  (যেমন: খানার ভাড়া,  মেরামত, ইত্যাদি)).");
                 rdoH9b2a1.requestFocus();
                 return;
             }
@@ -3103,7 +4385,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b3a1.isChecked() & !rdoH9b3a2.isChecked() & secH9b3a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি, ঔষধ, স্বাস্থ্য-সংক্রান্ত ভ্রমণ,  ইত্যাদি)).");
                 rdoH9b3a1.requestFocus();
                 return;
             }
@@ -3134,7 +4416,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b4a1.isChecked() & !rdoH9b4a2.isChecked() & secH9b4a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন? (যেমন: ব্যক্তিগত শিক্ষার জন্য, পাঠ্যপুস্তকের দাম,  ইত্যাদি)  ).");
                 rdoH9b4a1.requestFocus();
                 return;
             }
@@ -3165,7 +4447,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b5a1.isChecked() & !rdoH9b5a2.isChecked() & secH9b5a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়া ইত্যাদি) ).");
                 rdoH9b5a1.requestFocus();
                 return;
             }
@@ -3196,7 +4478,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b6a1.isChecked() & !rdoH9b6a2.isChecked() & secH9b6a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ত, দিশের লাইন চার্জ ইত্যাদি) ).");
                 rdoH9b6a1.requestFocus();
                 return;
             }
@@ -3227,7 +4509,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b7a1.isChecked() & !rdoH9b7a2.isChecked() & secH9b7a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো করচার্জ দিয়েছেন?  ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো করচার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,  ইত্যাদি)  ).");
                 rdoH9b7a1.requestFocus();
                 return;
             }
@@ -3258,7 +4540,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b8a1.isChecked() & !rdoH9b8a2.isChecked() & secH9b8a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো রান্নার/রান্নাঘরের সরঞ্জাম ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো রান্নার/রান্নাঘরের সরঞ্জাম ক্রয় করেছেন (যেমন: চুলা, অন্যান্য বাসনকাশন এবং পাত্র ইত্যাদি)).");
                 rdoH9b8a1.requestFocus();
                 return;
             }
@@ -3289,7 +4571,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b9a1.isChecked() & !rdoH9b9a2.isChecked() & secH9b9a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন (যেমন: জুয়েলারী, গোল্ড, হাতঘড়ি / ঘড়ি,  ইত্যাদি)).");
                 rdoH9b9a1.requestFocus();
                 return;
             }
@@ -3320,7 +4602,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b10a1.isChecked() & !rdoH9b10a2.isChecked() & secH9b10a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত 1 year এর মধ্যে ক্রয় করেছেন কি  ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত ১ বছর এর মধ্যে ক্রয় করেছেন কি  (যেমন: টিভি, মোবাইল ফোন,  ইলেকট্রিক ফ্যান, ইত্যাদি)).");
                 rdoH9b10a1.requestFocus();
                 return;
             }
@@ -3351,7 +4633,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b11a1.isChecked() & !rdoH9b11a2.isChecked() & secH9b11a.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত 1 year এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি?  ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি?  (যেমন: বীমা, সমব্যয় সমিতি,  ইত্যাদি) ).");
                 rdoH9b11a1.requestFocus();
                 return;
             }
@@ -3382,7 +4664,7 @@ public class Cost3 extends Activity {
 
             else if(!rdoH9b121.isChecked() & !rdoH9b122.isChecked() & secH9b12.isShown())
             {
-                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি 1 year এর মধ্যে চাষা বাদ অথবা মৎস্য আরোহনের জন্য কোন সরঞ্জাম ক্রয় করেছেন? ).");
+                Connection.MessageBox(Cost3.this, "Select anyone options from (আপনি ১ বছর এর মধ্যে চাষা বাদ অথবা মৎস্য আরোহনের জন্য কোন সরঞ্জাম ক্রয় করেছেন? ).");
                 rdoH9b121.requestFocus();
                 return;
             }
@@ -3864,7 +5146,7 @@ public class Cost3 extends Activity {
             Cost3_DataModel objSave = new Cost3_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
             String[] d_rdogrpH8111a = new String[] {"1","0"};
             objSave.setH8111a("");
             for (int i = 0; i < rdogrpH8111a.getChildCount(); i++)
@@ -3883,12 +5165,12 @@ public class Cost3 extends Activity {
             }
 
             objSave.setH8111d(txtH8111d.getText().toString());
-            String[] d_rdogrpH121a = new String[] {"1","0"};
-            objSave.setH121a("");
-            for (int i = 0; i < rdogrpH121a.getChildCount(); i++)
+            String[] d_rdogrpH8121a = new String[]{"1", "0"};
+            objSave.setH8121a("");
+            for (int i = 0; i < rdogrpH8121a.getChildCount(); i++)
             {
-                rb = (RadioButton)rdogrpH121a.getChildAt(i);
-                if (rb.isChecked()) objSave.setH121a(d_rdogrpH121a[i]);
+                rb = (RadioButton) rdogrpH8121a.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8121a(d_rdogrpH8121a[i]);
             }
 
             objSave.setH8121x1(txtH8121x1.getText().toString());
@@ -3902,25 +5184,25 @@ public class Cost3 extends Activity {
             }
 
             objSave.setH8121d(txtH8121d.getText().toString());
-            String[] d_rdogrpH8112a = new String[] {"1","0"};
-            objSave.setH8112a("");
-            for (int i = 0; i < rdogrpH8112a.getChildCount(); i++)
+            String[] d_rdogrpH8122a = new String[]{"1", "0"};
+            objSave.setH8122a("");
+            for (int i = 0; i < rdogrpH8122a.getChildCount(); i++)
             {
-                rb = (RadioButton)rdogrpH8112a.getChildAt(i);
-                if (rb.isChecked()) objSave.setH8112a(d_rdogrpH8112a[i]);
+                rb = (RadioButton) rdogrpH8122a.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8122a(d_rdogrpH8122a[i]);
             }
 
-            objSave.setH8112x1(txtH8112x1.getText().toString());
-            objSave.setH8112b(txtH8112b.getText().toString());
-            String[] d_rdogrpH8112c = new String[] {"1","2","3"};
-            objSave.setH8112c("");
-            for (int i = 0; i < rdogrpH8112c.getChildCount(); i++)
+            objSave.setH8122x1(txtH8122x1.getText().toString());
+            objSave.setH8122b(txtH8122b.getText().toString());
+            String[] d_rdogrpH8122c = new String[]{"1", "2", "3"};
+            objSave.setH8122c("");
+            for (int i = 0; i < rdogrpH8122c.getChildCount(); i++)
             {
-                rb = (RadioButton)rdogrpH8112c.getChildAt(i);
-                if (rb.isChecked()) objSave.setH8112c(d_rdogrpH8112c[i]);
+                rb = (RadioButton) rdogrpH8122c.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8122c(d_rdogrpH8122c[i]);
             }
 
-            objSave.setH8112d(txtH8112d.getText().toString());
+            objSave.setH8122d(txtH8122d.getText().toString());
             String[] d_rdogrpH9a1a = new String[] {"1","0"};
             objSave.setH9a1a("");
             for (int i = 0; i < rdogrpH9a1a.getChildCount(); i++)
@@ -4282,9 +5564,9 @@ public class Cost3 extends Activity {
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H8111a NOT NULL";
             List<Cost3_DataModel> data = d.SelectAll(this, SQL);
             for(Cost3_DataModel item : data){
-                //   txtRnd.setText(item.getRnd());
-                //    txtSuchanaID.setText(item.getSuchanaID());
-                //txtMSlNo.setText(item.getMSlNo());
+                //txtRnd.setText(item.getRnd());
+                //  txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 String[] d_rdogrpH8111a = new String[] {"1","0"};
                 for (int i = 0; i < d_rdogrpH8111a.length; i++)
                 {
@@ -4305,12 +5587,12 @@ public class Cost3 extends Activity {
                     }
                 }
                 txtH8111d.setText(item.getH8111d());
-                String[] d_rdogrpH121a = new String[] {"1","0"};
-                for (int i = 0; i < d_rdogrpH121a.length; i++)
+                String[] d_rdogrpH8121a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH8121a.length; i++)
                 {
-                    if (item.getH121a().equals(String.valueOf(d_rdogrpH121a[i])))
+                    if (item.getH8121a().equals(String.valueOf(d_rdogrpH8121a[i])))
                     {
-                        rb = (RadioButton)rdogrpH121a.getChildAt(i);
+                        rb = (RadioButton) rdogrpH8121a.getChildAt(i);
                         rb.setChecked(true);
                     }
                 }
@@ -4326,27 +5608,27 @@ public class Cost3 extends Activity {
                     }
                 }
                 txtH8121d.setText(item.getH8121d());
-                String[] d_rdogrpH8112a = new String[] {"1","0"};
-                for (int i = 0; i < d_rdogrpH8112a.length; i++)
+                String[] d_rdogrpH8122a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH8122a.length; i++)
                 {
-                    if (item.getH8112a().equals(String.valueOf(d_rdogrpH8112a[i])))
+                    if (item.getH8122a().equals(String.valueOf(d_rdogrpH8122a[i])))
                     {
-                        rb = (RadioButton)rdogrpH8112a.getChildAt(i);
+                        rb = (RadioButton) rdogrpH8122a.getChildAt(i);
                         rb.setChecked(true);
                     }
                 }
-                txtH8112x1.setText(item.getH8112x1());
-                txtH8112b.setText(item.getH8112b());
-                String[] d_rdogrpH8112c = new String[] {"1","2","3"};
-                for (int i = 0; i < d_rdogrpH8112c.length; i++)
+                txtH8122x1.setText(item.getH8122x1());
+                txtH8122b.setText(item.getH8122b());
+                String[] d_rdogrpH8122c = new String[]{"1", "2", "3"};
+                for (int i = 0; i < d_rdogrpH8122c.length; i++)
                 {
-                    if (item.getH8112c().equals(String.valueOf(d_rdogrpH8112c[i])))
+                    if (item.getH8122c().equals(String.valueOf(d_rdogrpH8122c[i])))
                     {
-                        rb = (RadioButton)rdogrpH8112c.getChildAt(i);
+                        rb = (RadioButton) rdogrpH8122c.getChildAt(i);
                         rb.setChecked(true);
                     }
                 }
-                txtH8112d.setText(item.getH8112d());
+                txtH8122d.setText(item.getH8122d());
                 String[] d_rdogrpH9a1a = new String[] {"1","0"};
                 for (int i = 0; i < d_rdogrpH9a1a.length; i++)
                 {
@@ -4707,18 +5989,6 @@ public class Cost3 extends Activity {
         }
     }
 
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener,g.mYear,g.mMonth-1,g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute,false);
-        }
-        return null;
-    }
 
     // turning off the GPS if its in on state. to avoid the battery drain.
     @Override

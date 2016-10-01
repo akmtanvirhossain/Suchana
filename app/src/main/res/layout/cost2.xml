@@ -96,6 +96,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="Rnd"
                     android:textSize="20sp" />
 
                 <TextView
@@ -133,11 +134,12 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="SuchanaID"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="370sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -145,10 +147,10 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="150sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -182,7 +184,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="100sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -218,6 +220,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH87"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH87"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H87"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH87"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে সবজি/ফল ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH871"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH872"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH87"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH871a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -228,6 +282,7 @@
                     android:id="@+id/lblH871a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H871a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -257,7 +312,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -279,6 +334,7 @@
                     android:id="@+id/lblH871b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H871b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -316,6 +372,7 @@
                     android:id="@+id/lblH871c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H871c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -353,7 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -375,6 +432,7 @@
                     android:id="@+id/lblH871d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H871d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -412,6 +470,7 @@
                     android:id="@+id/lblH872a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H872a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -441,7 +500,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -463,6 +522,7 @@
                     android:id="@+id/lblH872b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H872b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -500,6 +560,7 @@
                     android:id="@+id/lblH872c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H872c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -537,7 +598,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -559,6 +620,7 @@
                     android:id="@+id/lblH872d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H872d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -596,6 +658,7 @@
                     android:id="@+id/lblH873a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H873a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -625,7 +688,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -647,6 +710,7 @@
                     android:id="@+id/lblH873b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H873b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -684,6 +748,7 @@
                     android:id="@+id/lblH873c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H873c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -721,7 +786,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -743,6 +808,7 @@
                     android:id="@+id/lblH873d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H873d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -780,6 +846,7 @@
                     android:id="@+id/lblH874a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H874a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -809,7 +876,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -831,6 +898,7 @@
                     android:id="@+id/lblH874b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H874b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -868,6 +936,7 @@
                     android:id="@+id/lblH874c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H874c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -905,7 +974,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -927,6 +996,7 @@
                     android:id="@+id/lblH874d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H874d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -964,6 +1034,7 @@
                     android:id="@+id/lblH875a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H875a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -993,7 +1064,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1015,6 +1086,7 @@
                     android:id="@+id/lblH875b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H875b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1052,6 +1124,7 @@
                     android:id="@+id/lblH875c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H875c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1089,7 +1162,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1111,6 +1184,7 @@
                     android:id="@+id/lblH875d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H875d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1159,6 +1233,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH88"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH88"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H88"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH88"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে  গুড়া মশলা ক্রয় করেছেন"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH881"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH882"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH88"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH881a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -1169,6 +1295,7 @@
                     android:id="@+id/lblH881a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H881a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1198,7 +1325,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1220,6 +1347,7 @@
                     android:id="@+id/lblH881b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H881b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1257,6 +1385,7 @@
                     android:id="@+id/lblH881c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H881c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1294,7 +1423,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1316,6 +1445,7 @@
                     android:id="@+id/lblH881d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H881d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1353,6 +1483,7 @@
                     android:id="@+id/lblH882a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H882a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1382,7 +1513,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1404,6 +1535,7 @@
                     android:id="@+id/lblH882b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H882b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1441,6 +1573,7 @@
                     android:id="@+id/lblH882c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H882c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1478,7 +1611,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1500,6 +1633,7 @@
                     android:id="@+id/lblH882d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H882d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1537,6 +1671,7 @@
                     android:id="@+id/lblH883a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H883a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1566,7 +1701,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1588,6 +1723,7 @@
                     android:id="@+id/lblH883b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H883b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1625,6 +1761,7 @@
                     android:id="@+id/lblH883c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H883c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1662,7 +1799,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1684,6 +1821,7 @@
                     android:id="@+id/lblH883d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H883d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1721,6 +1859,7 @@
                     android:id="@+id/lblH884a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H884a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1750,7 +1889,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1772,6 +1911,7 @@
                     android:id="@+id/lblH884b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H884b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1809,6 +1949,7 @@
                     android:id="@+id/lblH884c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H884c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1846,7 +1987,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1868,6 +2009,7 @@
                     android:id="@+id/lblH884d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H884d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1905,6 +2047,7 @@
                     android:id="@+id/lblH885a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H885a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1934,7 +2077,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1956,6 +2099,7 @@
                     android:id="@+id/lblH885b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H885b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1993,6 +2137,7 @@
                     android:id="@+id/lblH885c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H885c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2030,7 +2175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2052,6 +2197,7 @@
                     android:id="@+id/lblH885d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H885d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2110,6 +2256,7 @@
                     android:id="@+id/lblH891a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H891a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2139,7 +2286,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2161,6 +2308,7 @@
                     android:id="@+id/lblH891b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H891b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2198,6 +2346,7 @@
                     android:id="@+id/lblH891c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H891c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2235,7 +2384,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2257,6 +2406,7 @@
                     android:id="@+id/lblH891d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H891d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2305,6 +2455,58 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secH810"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH810"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H810"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH810"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গতমাসে কোনো চা/  চিনি ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH810"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH8101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH8102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH810"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH8101a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
@@ -2315,6 +2517,7 @@
                     android:id="@+id/lblH8101a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8101a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2344,7 +2547,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2366,6 +2569,7 @@
                     android:id="@+id/lblH8101b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8101b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2403,6 +2607,7 @@
                     android:id="@+id/lblH8101c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8101c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2440,7 +2645,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2462,6 +2667,7 @@
                     android:id="@+id/lblH8101d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8101d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2499,6 +2705,7 @@
                     android:id="@+id/lblH8102a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8102a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2528,7 +2735,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2550,6 +2757,7 @@
                     android:id="@+id/lblH8102b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8102b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2587,6 +2795,7 @@
                     android:id="@+id/lblH8102c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8102c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2624,7 +2833,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2646,6 +2855,7 @@
                     android:id="@+id/lblH8102d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8102d"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2683,6 +2893,7 @@
                     android:id="@+id/lblH8103a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8103a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2712,7 +2923,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2734,6 +2945,7 @@
                     android:id="@+id/lblH8103b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8103b"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2771,6 +2983,7 @@
                     android:id="@+id/lblH8103c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8103c"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2808,7 +3021,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2830,6 +3043,7 @@
                     android:id="@+id/lblH8103d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H8103d"
                     android:textSize="20sp" />
 
                 <TextView

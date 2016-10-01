@@ -2,28 +2,16 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Cost2" android:label="Cost2" />
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -32,10 +20,8 @@ import android.widget.RadioGroup;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -48,7 +34,6 @@ public class Cost2 extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    static String MSLNO = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -71,6 +56,12 @@ public class Cost2 extends Activity {
     TextView VlblMSlNo;
     Spinner spnMSlNo;
     LinearLayout secLBH87;
+    LinearLayout secH87;
+    View lineH87;
+    TextView VlblH87;
+    RadioGroup rdogrpH87;
+    RadioButton rdoH871;
+    RadioButton rdoH872;
     LinearLayout secH871a;
     View lineH871a;
     TextView VlblH871a;
@@ -177,6 +168,12 @@ public class Cost2 extends Activity {
     TextView VlblH875d;
     EditText txtH875d;
     LinearLayout secLBH88;
+    LinearLayout secH88;
+    View lineH88;
+    TextView VlblH88;
+    RadioGroup rdogrpH88;
+    RadioButton rdoH881;
+    RadioButton rdoH882;
     LinearLayout secH881a;
     View lineH881a;
     TextView VlblH881a;
@@ -305,6 +302,12 @@ public class Cost2 extends Activity {
     TextView VlblH891d;
     EditText txtH891d;
     LinearLayout secLBH810;
+    LinearLayout secH810;
+    View lineH810;
+    TextView VlblH810;
+    RadioGroup rdogrpH810;
+    RadioButton rdoH8101;
+    RadioButton rdoH8102;
     LinearLayout secH8101a;
     View lineH8101a;
     TextView VlblH8101a;
@@ -375,31 +378,6 @@ public class Cost2 extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            //   dtpDate.setText(new StringBuilder()
-            //           .append(Global.Right("00"+mDay,2)).append("/")
-            //           .append(Global.Right("00"+mMonth,2)).append("/")
-            //          .append(mYear));
-        }
-    };
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime;
-
-
-            //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -542,7 +520,6 @@ public class Cost2 extends Activity {
                         lineH871d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -600,7 +577,6 @@ public class Cost2 extends Activity {
                         lineH872d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -658,7 +634,6 @@ public class Cost2 extends Activity {
                         lineH873d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -716,7 +691,6 @@ public class Cost2 extends Activity {
                         lineH874d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -765,6 +739,9 @@ public class Cost2 extends Activity {
                         secH875d.setVisibility(View.GONE);
                         lineH875d.setVisibility(View.GONE);
                         txtH875d.setText("");
+                        secH88.setVisibility(View.GONE);
+                        lineH88.setVisibility(View.GONE);
+                        rdogrpH88.clearCheck();
                     } else {
                         secH875b.setVisibility(View.VISIBLE);
                         lineH875b.setVisibility(View.VISIBLE);
@@ -772,9 +749,10 @@ public class Cost2 extends Activity {
                         lineH875c.setVisibility(View.VISIBLE);
                         secH875d.setVisibility(View.VISIBLE);
                         lineH875d.setVisibility(View.VISIBLE);
+                        secH88.setVisibility(View.VISIBLE);
+                        lineH88.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -796,6 +774,133 @@ public class Cost2 extends Activity {
             VlblH875d = (TextView) findViewById(R.id.VlblH875d);
             txtH875d = (EditText) findViewById(R.id.txtH875d);
             secLBH88 = (LinearLayout) findViewById(R.id.secLBH88);
+            secH88 = (LinearLayout) findViewById(R.id.secH88);
+            lineH88 = (View) findViewById(R.id.lineH88);
+            VlblH88 = (TextView) findViewById(R.id.VlblH88);
+            rdogrpH88 = (RadioGroup) findViewById(R.id.rdogrpH88);
+
+            rdoH881 = (RadioButton) findViewById(R.id.rdoH881);
+            rdoH882 = (RadioButton) findViewById(R.id.rdoH882);
+            rdogrpH88.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH88 = new String[]{"1", "2"};
+                    for (int i = 0; i < rdogrpH88.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH88.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH88[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH881a.setVisibility(View.GONE);
+                        lineH881a.setVisibility(View.GONE);
+                        rdogrpH881a.clearCheck();
+                        secH881b.setVisibility(View.GONE);
+                        lineH881b.setVisibility(View.GONE);
+                        txtH881b.setText("");
+                        secH881c.setVisibility(View.GONE);
+                        lineH881c.setVisibility(View.GONE);
+                        rdogrpH881c.clearCheck();
+                        secH881d.setVisibility(View.GONE);
+                        lineH881d.setVisibility(View.GONE);
+                        txtH881d.setText("");
+                        secH882a.setVisibility(View.GONE);
+                        lineH882a.setVisibility(View.GONE);
+                        rdogrpH882a.clearCheck();
+                        secH882b.setVisibility(View.GONE);
+                        lineH882b.setVisibility(View.GONE);
+                        txtH882b.setText("");
+                        secH882c.setVisibility(View.GONE);
+                        lineH882c.setVisibility(View.GONE);
+                        rdogrpH882c.clearCheck();
+                        secH882d.setVisibility(View.GONE);
+                        lineH882d.setVisibility(View.GONE);
+                        txtH882d.setText("");
+                        secH883a.setVisibility(View.GONE);
+                        lineH883a.setVisibility(View.GONE);
+                        rdogrpH883a.clearCheck();
+                        secH883b.setVisibility(View.GONE);
+                        lineH883b.setVisibility(View.GONE);
+                        txtH883b.setText("");
+                        secH883c.setVisibility(View.GONE);
+                        lineH883c.setVisibility(View.GONE);
+                        rdogrpH883c.clearCheck();
+                        secH883d.setVisibility(View.GONE);
+                        lineH883d.setVisibility(View.GONE);
+                        txtH883d.setText("");
+                        secH884a.setVisibility(View.GONE);
+                        lineH884a.setVisibility(View.GONE);
+                        rdogrpH884a.clearCheck();
+                        secH884b.setVisibility(View.GONE);
+                        lineH884b.setVisibility(View.GONE);
+                        txtH884b.setText("");
+                        secH884c.setVisibility(View.GONE);
+                        lineH884c.setVisibility(View.GONE);
+                        rdogrpH884c.clearCheck();
+                        secH884d.setVisibility(View.GONE);
+                        lineH884d.setVisibility(View.GONE);
+                        txtH884d.setText("");
+                        secH885a.setVisibility(View.GONE);
+                        lineH885a.setVisibility(View.GONE);
+                        rdogrpH885a.clearCheck();
+                        secH885b.setVisibility(View.GONE);
+                        lineH885b.setVisibility(View.GONE);
+                        txtH885b.setText("");
+                        secH885c.setVisibility(View.GONE);
+                        lineH885c.setVisibility(View.GONE);
+                        rdogrpH885c.clearCheck();
+                        secH885d.setVisibility(View.GONE);
+                        lineH885d.setVisibility(View.GONE);
+                        txtH885d.setText("");
+                    } else {
+                        secH881a.setVisibility(View.VISIBLE);
+                        lineH881a.setVisibility(View.VISIBLE);
+                        secH881b.setVisibility(View.VISIBLE);
+                        lineH881b.setVisibility(View.VISIBLE);
+                        secH881c.setVisibility(View.VISIBLE);
+                        lineH881c.setVisibility(View.VISIBLE);
+                        secH881d.setVisibility(View.VISIBLE);
+                        lineH881d.setVisibility(View.VISIBLE);
+                        secH882a.setVisibility(View.VISIBLE);
+                        lineH882a.setVisibility(View.VISIBLE);
+                        secH882b.setVisibility(View.VISIBLE);
+                        lineH882b.setVisibility(View.VISIBLE);
+                        secH882c.setVisibility(View.VISIBLE);
+                        lineH882c.setVisibility(View.VISIBLE);
+                        secH882d.setVisibility(View.VISIBLE);
+                        lineH882d.setVisibility(View.VISIBLE);
+                        secH883a.setVisibility(View.VISIBLE);
+                        lineH883a.setVisibility(View.VISIBLE);
+                        secH883b.setVisibility(View.VISIBLE);
+                        lineH883b.setVisibility(View.VISIBLE);
+                        secH883c.setVisibility(View.VISIBLE);
+                        lineH883c.setVisibility(View.VISIBLE);
+                        secH883d.setVisibility(View.VISIBLE);
+                        lineH883d.setVisibility(View.VISIBLE);
+                        secH884a.setVisibility(View.VISIBLE);
+                        lineH884a.setVisibility(View.VISIBLE);
+                        secH884b.setVisibility(View.VISIBLE);
+                        lineH884b.setVisibility(View.VISIBLE);
+                        secH884c.setVisibility(View.VISIBLE);
+                        lineH884c.setVisibility(View.VISIBLE);
+                        secH884d.setVisibility(View.VISIBLE);
+                        lineH884d.setVisibility(View.VISIBLE);
+                        secH885a.setVisibility(View.VISIBLE);
+                        lineH885a.setVisibility(View.VISIBLE);
+                        secH885b.setVisibility(View.VISIBLE);
+                        lineH885b.setVisibility(View.VISIBLE);
+                        secH885c.setVisibility(View.VISIBLE);
+                        lineH885c.setVisibility(View.VISIBLE);
+                        secH885d.setVisibility(View.VISIBLE);
+                        lineH885d.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH881a = (LinearLayout) findViewById(R.id.secH881a);
             lineH881a = (View) findViewById(R.id.lineH881a);
             VlblH881a = (TextView) findViewById(R.id.VlblH881a);
@@ -833,7 +938,6 @@ public class Cost2 extends Activity {
                         lineH881d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -891,7 +995,6 @@ public class Cost2 extends Activity {
                         lineH882d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -949,7 +1052,6 @@ public class Cost2 extends Activity {
                         lineH883d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1007,7 +1109,6 @@ public class Cost2 extends Activity {
                         lineH884d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1065,7 +1166,6 @@ public class Cost2 extends Activity {
                         lineH885d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1115,6 +1215,9 @@ public class Cost2 extends Activity {
                         secH891d.setVisibility(View.GONE);
                         lineH891d.setVisibility(View.GONE);
                         txtH891d.setText("");
+                        secH810.setVisibility(View.GONE);
+                        lineH810.setVisibility(View.GONE);
+                        rdogrpH810.clearCheck();
                     } else {
                         secH891b.setVisibility(View.VISIBLE);
                         lineH891b.setVisibility(View.VISIBLE);
@@ -1122,9 +1225,10 @@ public class Cost2 extends Activity {
                         lineH891c.setVisibility(View.VISIBLE);
                         secH891d.setVisibility(View.VISIBLE);
                         lineH891d.setVisibility(View.VISIBLE);
+                        secH810.setVisibility(View.VISIBLE);
+                        lineH810.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1146,6 +1250,88 @@ public class Cost2 extends Activity {
             VlblH891d = (TextView) findViewById(R.id.VlblH891d);
             txtH891d = (EditText) findViewById(R.id.txtH891d);
             secLBH810 = (LinearLayout) findViewById(R.id.secLBH810);
+            secH810 = (LinearLayout) findViewById(R.id.secH810);
+            lineH810 = (View) findViewById(R.id.lineH810);
+            VlblH810 = (TextView) findViewById(R.id.VlblH810);
+            rdogrpH810 = (RadioGroup) findViewById(R.id.rdogrpH810);
+
+            rdoH8101 = (RadioButton) findViewById(R.id.rdoH8101);
+            rdoH8102 = (RadioButton) findViewById(R.id.rdoH8102);
+            rdogrpH810.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH810 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH810.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH810.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH810[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH8101a.setVisibility(View.GONE);
+                        lineH8101a.setVisibility(View.GONE);
+                        rdogrpH8101a.clearCheck();
+                        secH8101b.setVisibility(View.GONE);
+                        lineH8101b.setVisibility(View.GONE);
+                        txtH8101b.setText("");
+                        secH8101c.setVisibility(View.GONE);
+                        lineH8101c.setVisibility(View.GONE);
+                        rdogrpH8101c.clearCheck();
+                        secH8101d.setVisibility(View.GONE);
+                        lineH8101d.setVisibility(View.GONE);
+                        txtH8101d.setText("");
+                        secH8102a.setVisibility(View.GONE);
+                        lineH8102a.setVisibility(View.GONE);
+                        rdogrpH8102a.clearCheck();
+                        secH8102b.setVisibility(View.GONE);
+                        lineH8102b.setVisibility(View.GONE);
+                        txtH8102b.setText("");
+                        secH8102c.setVisibility(View.GONE);
+                        lineH8102c.setVisibility(View.GONE);
+                        rdogrpH8102c.clearCheck();
+                        secH8102d.setVisibility(View.GONE);
+                        lineH8102d.setVisibility(View.GONE);
+                        txtH8102d.setText("");
+                        secH8103a.setVisibility(View.GONE);
+                        lineH8103a.setVisibility(View.GONE);
+                        rdogrpH8103a.clearCheck();
+                        secH8103b.setVisibility(View.GONE);
+                        lineH8103b.setVisibility(View.GONE);
+                        txtH8103b.setText("");
+                        secH8103c.setVisibility(View.GONE);
+                        lineH8103c.setVisibility(View.GONE);
+                        rdogrpH8103c.clearCheck();
+                    } else {
+                        secH8101a.setVisibility(View.VISIBLE);
+                        lineH8101a.setVisibility(View.VISIBLE);
+                        secH8101b.setVisibility(View.VISIBLE);
+                        lineH8101b.setVisibility(View.VISIBLE);
+                        secH8101c.setVisibility(View.VISIBLE);
+                        lineH8101c.setVisibility(View.VISIBLE);
+                        secH8101d.setVisibility(View.VISIBLE);
+                        lineH8101d.setVisibility(View.VISIBLE);
+                        secH8102a.setVisibility(View.VISIBLE);
+                        lineH8102a.setVisibility(View.VISIBLE);
+                        secH8102b.setVisibility(View.VISIBLE);
+                        lineH8102b.setVisibility(View.VISIBLE);
+                        secH8102c.setVisibility(View.VISIBLE);
+                        lineH8102c.setVisibility(View.VISIBLE);
+                        secH8102d.setVisibility(View.VISIBLE);
+                        lineH8102d.setVisibility(View.VISIBLE);
+                        secH8103a.setVisibility(View.VISIBLE);
+                        lineH8103a.setVisibility(View.VISIBLE);
+                        secH8103b.setVisibility(View.VISIBLE);
+                        lineH8103b.setVisibility(View.VISIBLE);
+                        secH8103c.setVisibility(View.VISIBLE);
+                        lineH8103c.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH8101a = (LinearLayout) findViewById(R.id.secH8101a);
             lineH8101a = (View) findViewById(R.id.lineH8101a);
             VlblH8101a = (TextView) findViewById(R.id.VlblH8101a);
@@ -1183,7 +1369,6 @@ public class Cost2 extends Activity {
                         lineH8101d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1241,7 +1426,6 @@ public class Cost2 extends Activity {
                         lineH8102d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1287,19 +1471,13 @@ public class Cost2 extends Activity {
                         secH8103c.setVisibility(View.GONE);
                         lineH8103c.setVisibility(View.GONE);
                         rdogrpH8103c.clearCheck();
-                        secH8103d.setVisibility(View.GONE);
-                        lineH8103d.setVisibility(View.GONE);
-                        txtH8102d.setText("");
                     } else {
                         secH8103b.setVisibility(View.VISIBLE);
                         lineH8103b.setVisibility(View.VISIBLE);
                         secH8103c.setVisibility(View.VISIBLE);
                         lineH8103c.setVisibility(View.VISIBLE);
-                        secH8103d.setVisibility(View.VISIBLE);
-                        lineH8103d.setVisibility(View.VISIBLE);
                     }
                 }
-
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -1335,9 +1513,8 @@ public class Cost2 extends Activity {
                 }
             });
         } catch (Exception e) {
-            throw e;
-            //Connection.MessageBox(Cost2.this, e.getMessage());
-            // return;
+            Connection.MessageBox(Cost2.this, e.getMessage());
+            return;
         }
     }
 
@@ -1358,9 +1535,13 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: উপকারভোগী/সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
-                Connection.MessageBox(Cost2.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                // txtMSlNo.requestFocus();
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর.");
+                spnMSlNo.requestFocus();
+                return;
+            } else if (!rdoH871.isChecked() & !rdoH872.isChecked() & secH87.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গত মাসে সবজি/ফল ক্রয় করেছেন?).");
+                rdoH871.requestFocus();
                 return;
             } else if (!rdoH871a1.isChecked() & !rdoH871a2.isChecked() & secH871a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from (পাতাওয়ালা সবজি   কিনেছে).");
@@ -1481,6 +1662,10 @@ public class Cost2 extends Activity {
             } else if (Integer.valueOf(txtH875d.getText().toString().length() == 0 ? "1" : txtH875d.getText().toString()) < 1 || Integer.valueOf(txtH875d.getText().toString().length() == 0 ? "999999" : txtH875d.getText().toString()) > 999999) {
                 Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH875d.requestFocus();
+                return;
+            } else if (!rdoH881.isChecked() & !rdoH882.isChecked() & secH88.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গত মাসে  গুড়া মশলা ক্রয় করেছেন).");
+                rdoH881.requestFocus();
                 return;
             } else if (!rdoH881a1.isChecked() & !rdoH881a2.isChecked() & secH881a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from ( পেঁয়াজ  কিনেছে).");
@@ -1626,6 +1811,10 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH891d.requestFocus();
                 return;
+            } else if (!rdoH8101.isChecked() & !rdoH8102.isChecked() & secH810.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গতমাসে কোনো চা/  চিনি ক্রয় করেছেন?).");
+                rdoH8101.requestFocus();
+                return;
             } else if (!rdoH8101a1.isChecked() & !rdoH8101a2.isChecked() & secH8101a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from (চা  কিনেছে).");
                 rdoH8101a1.requestFocus();
@@ -1706,7 +1895,14 @@ public class Cost2 extends Activity {
             Cost2_DataModel objSave = new Cost2_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
+            String[] d_rdogrpH87 = new String[]{"1", "0"};
+            objSave.setH87("");
+            for (int i = 0; i < rdogrpH87.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH87.getChildAt(i);
+                if (rb.isChecked()) objSave.setH87(d_rdogrpH87[i]);
+            }
+
             String[] d_rdogrpH871a = new String[]{"1", "0"};
             objSave.setH871a("");
             for (int i = 0; i < rdogrpH871a.getChildCount(); i++) {
@@ -1787,6 +1983,13 @@ public class Cost2 extends Activity {
             }
 
             objSave.setH875d(txtH875d.getText().toString());
+            String[] d_rdogrpH88 = new String[]{"1", "2"};
+            objSave.setH88("");
+            for (int i = 0; i < rdogrpH88.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH88.getChildAt(i);
+                if (rb.isChecked()) objSave.setH88(d_rdogrpH88[i]);
+            }
+
             String[] d_rdogrpH881a = new String[]{"1", "0"};
             objSave.setH881a("");
             for (int i = 0; i < rdogrpH881a.getChildCount(); i++) {
@@ -1883,6 +2086,13 @@ public class Cost2 extends Activity {
             }
 
             objSave.setH891d(txtH891d.getText().toString());
+            String[] d_rdogrpH810 = new String[]{"1", "0"};
+            objSave.setH810("");
+            for (int i = 0; i < rdogrpH810.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH810.getChildAt(i);
+                if (rb.isChecked()) objSave.setH810(d_rdogrpH810[i]);
+            }
+
             String[] d_rdogrpH8101a = new String[]{"1", "0"};
             objSave.setH8101a("");
             for (int i = 0; i < rdogrpH8101a.getChildCount(); i++) {
@@ -1937,7 +2147,6 @@ public class Cost2 extends Activity {
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));
-            objSave.setEnDt(Global.DateTimeNowYMDHMS());
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
@@ -1970,9 +2179,16 @@ public class Cost2 extends Activity {
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H871a NOT NULL";
             List<Cost2_DataModel> data = d.SelectAll(this, SQL);
             for (Cost2_DataModel item : data) {
-                //txtRnd.setText(item.getRnd());
-                //  txtSuchanaID.setText(item.getSuchanaID());
-                // txtMSlNo.setText(item.getMSlNo());
+                // txtRnd.setText(item.getRnd());
+                //   txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
+                String[] d_rdogrpH87 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH87.length; i++) {
+                    if (item.getH87().equals(String.valueOf(d_rdogrpH87[i]))) {
+                        rb = (RadioButton) rdogrpH87.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH871a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH871a.length; i++) {
                     if (item.getH871a().equals(String.valueOf(d_rdogrpH871a[i]))) {
@@ -2053,6 +2269,13 @@ public class Cost2 extends Activity {
                     }
                 }
                 txtH875d.setText(item.getH875d());
+                String[] d_rdogrpH88 = new String[]{"1", "2"};
+                for (int i = 0; i < d_rdogrpH88.length; i++) {
+                    if (item.getH88().equals(String.valueOf(d_rdogrpH88[i]))) {
+                        rb = (RadioButton) rdogrpH88.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH881a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH881a.length; i++) {
                     if (item.getH881a().equals(String.valueOf(d_rdogrpH881a[i]))) {
@@ -2149,6 +2372,13 @@ public class Cost2 extends Activity {
                     }
                 }
                 txtH891d.setText(item.getH891d());
+                String[] d_rdogrpH810 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH810.length; i++) {
+                    if (item.getH810().equals(String.valueOf(d_rdogrpH810[i]))) {
+                        rb = (RadioButton) rdogrpH810.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH8101a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH8101a.length; i++) {
                     if (item.getH8101a().equals(String.valueOf(d_rdogrpH8101a[i]))) {
@@ -2199,99 +2429,18 @@ public class Cost2 extends Activity {
                 txtH8103d.setText(item.getH8103d());
             }
         } catch (Exception e) {
-            throw e;
-//            Connection.MessageBox(Cost2.this, e.getMessage());
-            //          return;
-        }
-    }
-
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute, false);
-        }
-        return null;
-    }
-
-    //GPS Reading
-    //.....................................................................................................
-    public void FindLocation() {
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                updateLocation(location);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            public void onProviderEnabled(String provider) {
-            }
-
-            public void onProviderDisabled(String provider) {
-            }
-        };
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+            Connection.MessageBox(Cost2.this, e.getMessage());
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-    }
-
-    void updateLocation(Location location) {
-        currentLocation  = location;
-        currentLatitude  = currentLocation.getLatitude();
-        currentLongitude = currentLocation.getLongitude();
     }
 
 
-    // Method to turn on GPS
-    public void turnGPSOn(){
-        try
-        {
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if(!provider.contains("gps")){ //if gps is disabled
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        }
-        catch (Exception e) {
-        }
-    }
 
-    // Method to turn off the GPS
-    public void turnGPSOff(){
-        String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-
-        if(provider.contains("gps")){ //if gps is enabled
-            final Intent poke = new Intent();
-            poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-            poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-            poke.setData(Uri.parse("3"));
-            sendBroadcast(poke);
-        }
-    }
 
     // turning off the GPS if its in on state. to avoid the battery drain.
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
-        turnGPSOff();
     }
 }

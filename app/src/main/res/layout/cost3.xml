@@ -139,7 +139,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="370sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -147,7 +147,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="150sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -184,7 +184,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="100sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -260,7 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -350,7 +350,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="কেজি "
+                        android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -358,7 +358,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -418,7 +418,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য1"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -429,35 +429,35 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH121a"
+                android:id="@+id/secH8121a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH121a"
+                    android:id="@+id/lblH8121a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H121a"
+                    android:text="H8121a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH121a"
+                    android:id="@+id/VlblH8121a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH121a"
+                    android:id="@+id/rdogrpH8121a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH121a1"
+                        android:id="@+id/rdoH8121a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -465,7 +465,7 @@
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH121a2"
+                        android:id="@+id/rdoH8121a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -475,7 +475,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH121a"
+                android:id="@+id/lineH8121a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -597,7 +597,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="কেজি "
+                        android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -605,7 +605,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -655,13 +655,13 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH8112"
+                android:id="@+id/secLBH8122"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH8112"
+                    android:id="@+id/lblHLBH8122"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -670,41 +670,41 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH8112"
+                android:id="@+id/lineLBH8122"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8112a"
+                android:id="@+id/secH8122a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8112a"
+                    android:id="@+id/lblH8122a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8112a"
+                    android:text="H8122a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8112a"
+                    android:id="@+id/VlblH8122a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য2  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8112a"
+                    android:id="@+id/rdogrpH8122a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8112a1"
+                        android:id="@+id/rdoH8122a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -712,44 +712,44 @@
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8112a2"
+                        android:id="@+id/rdoH8122a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8112a"
+                android:id="@+id/lineH8122a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8112x1"
+                android:id="@+id/secH8122x1"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8112x1"
+                    android:id="@+id/lblH8122x1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8112x1"
+                    android:text="H8122x1"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8112x1"
+                    android:id="@+id/VlblH8122x1"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য নির্দিষ্ট করুন"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8112x1"
+                    android:id="@+id/txtH8122x1"
                     style="@style/customEdit"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
@@ -760,34 +760,34 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8112x1"
+                android:id="@+id/lineH8122x1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8112b"
+                android:id="@+id/secH8122b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8112b"
+                    android:id="@+id/lblH8122b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8112b"
+                    android:text="H8122b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8112b"
+                    android:id="@+id/VlblH8122b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8112b"
+                    android:id="@+id/txtH8122b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -798,41 +798,41 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8112b"
+                android:id="@+id/lineH8122b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8112c"
+                android:id="@+id/secH8122c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8112c"
+                    android:id="@+id/lblH8122c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8112c"
+                    android:text="H8122c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8112c"
+                    android:id="@+id/VlblH8122c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8112c"
+                    android:id="@+id/rdogrpH8122c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8112c1"
+                        android:id="@+id/rdoH8122c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
@@ -840,52 +840,52 @@
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8112c2"
+                        android:id="@+id/rdoH8122c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="কেজি "
+                        android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8112c3"
+                        android:id="@+id/rdoH8122c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="সংখ্যা   "
+                        android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8112c"
+                android:id="@+id/lineH8122c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8112d"
+                android:id="@+id/secH8122d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8112d"
+                    android:id="@+id/lblH8122d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8112d"
+                    android:text="H8122d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8112d"
+                    android:id="@+id/VlblH8122d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8112d"
+                    android:id="@+id/txtH8122d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -896,19 +896,19 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8112d"
+                android:id="@+id/lineH8122d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH9a"
+                android:id="@+id/seclblH9a"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH9a"
+                    android:id="@+id/lblHlblH9a"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -917,7 +917,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH9a"
+                android:id="@+id/linelblH9a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -940,7 +940,7 @@
                     android:id="@+id/VlblH9a1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ মাসে  এ  কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন"
+                    android:text="আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন? (যেমন: জ্বালানি কাঠ, গোবর, হারিকেন ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -963,7 +963,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1051,13 +1051,13 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH9a2"
+                android:id="@+id/seclblH9a2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH9a2"
+                    android:id="@+id/lblHlblH9a2"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1066,7 +1066,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH9a2"
+                android:id="@+id/linelblH9a2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1089,7 +1089,7 @@
                     android:id="@+id/VlblH9a2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ মাসে  এ  এ কোনো প্রসাধনী ক্রয় করেছেন"
+                    android:text="আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো, ক্রিম, পাউডার, সুগন্ধি ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1112,7 +1112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1200,13 +1200,13 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH9a3"
+                android:id="@+id/seclblH9a3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH9a3"
+                    android:id="@+id/lblHlblH9a3"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1215,7 +1215,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH9a3"
+                android:id="@+id/linelblH9a3"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -1238,7 +1238,7 @@
                     android:id="@+id/VlblH9a3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ মাসে  এ  কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন"
+                    android:text="আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, শ্যাম্পু, টুথপেস্ট, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1261,7 +1261,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1387,7 +1387,7 @@
                     android:id="@+id/VlblH9a4a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ মাসে  এ  পরিবহনের জন্য কোন ভাড়া দিয়েছেন"
+                    android:text="আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন?  (যেমন: বাসরিক্সা ভাড়া ,সাইকেল মেরামত, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1410,7 +1410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1536,7 +1536,7 @@
                     android:id="@+id/VlblH9a5a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ মাসে  এ  কোনো বিল / বেতন দিয়েছেন"
+                    android:text="আপনি গত মাসে কোনো বিল /বেতন দিয়েছেন (যেমন: মোবাইল রিচার্জ, কারেন্ট বিল, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1559,7 +1559,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1685,7 +1685,7 @@
                     android:id="@+id/VlblH9b1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ বছর   এ এর মধ্যে কোনো তৈরি পোশাক ক্রয় করেছেন"
+                    android:text="আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক ক্রয় করেছেন?  (যেমন:  লুঙ্গি,  ধুতি, শাড়ি, প্যান্ট, প্যান্ট , শার্ট, গামছা, কাপড়ের দাম, দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1708,7 +1708,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1834,7 +1834,7 @@
                     android:id="@+id/VlblH9b2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে খানার কোনো ভাড়া / চার্জ দিয়েছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া / চার্জ দিয়েছেন?  (যেমন: খানার ভাড়া,  মেরামত, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1857,7 +1857,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1983,7 +1983,7 @@
                     android:id="@+id/VlblH9b3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন"
+                    android:text="আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি, ঔষধ, স্বাস্থ্য-সংক্রান্ত ভ্রমণ,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2006,7 +2006,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2132,7 +2132,7 @@
                     android:id="@+id/VlblH9b4a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন? (যেমন: ব্যক্তিগত শিক্ষার জন্য, পাঠ্যপুস্তকের দাম,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2155,7 +2155,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2281,7 +2281,7 @@
                     android:id="@+id/VlblH9b5a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়া ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2304,7 +2304,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2430,7 +2430,7 @@
                     android:id="@+id/VlblH9b6a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ত, দিশের লাইন চার্জ ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2453,7 +2453,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2579,7 +2579,7 @@
                     android:id="@+id/VlblH9b7a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো করচার্জ দিয়েছেন?"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো করচার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2602,7 +2602,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2728,7 +2728,7 @@
                     android:id="@+id/VlblH9b8a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো রান্নার/রান্নাঘরের সরঞ্জাম ক্রয় করেছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো রান্নার/রান্নাঘরের সরঞ্জাম ক্রয় করেছেন (যেমন: চুলা, অন্যান্য বাসনকাশন এবং পাত্র ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2751,7 +2751,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2877,7 +2877,7 @@
                     android:id="@+id/VlblH9b9a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন (যেমন: জুয়েলারী, গোল্ড, হাতঘড়ি / ঘড়ি,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2900,7 +2900,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3026,7 +3026,7 @@
                     android:id="@+id/VlblH9b10a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত 1 year এর মধ্যে ক্রয় করেছেন কি"
+                    android:text="আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত ১ বছর এর মধ্যে ক্রয় করেছেন কি  (যেমন: টিভি, মোবাইল ফোন,  ইলেকট্রিক ফ্যান, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3049,7 +3049,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3175,7 +3175,7 @@
                     android:id="@+id/VlblH9b11a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত 1 year এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি?"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি?  (যেমন: বীমা, সমব্যয় সমিতি,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3198,7 +3198,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3286,22 +3286,22 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH9b12"
+                android:id="@+id/seclblH9b12"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH9b12"
+                    android:id="@+id/lblHlblH9b12"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কৃষি ও মৎস্য আরোহন সরঞ্জাম  1 year এর মধ্যে ক্রয় করেছেন"
+                    android:text="কৃষি ও মৎস্য আরোহন সরঞ্জাম"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH9b12"
+                android:id="@+id/linelblH9b12"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -3324,7 +3324,7 @@
                     android:id="@+id/VlblH9b12"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি 1 year এর মধ্যে চাষা বাদ অথবা মৎস্য আরোহনের জন্য কোন সরঞ্জাম ক্রয় করেছেন?"
+                    android:text="আপনি ১ বছর এর মধ্যে চাষা বাদ অথবা মৎস্য আরোহনের জন্য কোন সরঞ্জাম ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3347,7 +3347,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3527,7 +3527,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3655,7 +3655,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3783,7 +3783,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3911,7 +3911,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4039,7 +4039,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4167,7 +4167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4295,7 +4295,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4423,7 +4423,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4551,7 +4551,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না  "
+                        android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
