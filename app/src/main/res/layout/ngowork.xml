@@ -134,20 +134,20 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="370sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী/সদস্য আইডি"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -191,9 +191,9 @@
 
                 <TextView
                     android:id="@+id/lblH161"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H161"
+                    android:text="H161. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -243,9 +243,9 @@
 
                 <TextView
                     android:id="@+id/lblH162"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H162"
+                    android:text="H162. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -285,7 +285,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC"
-                android:text="H163" />
+                android:text="H163. " />
 
             <LinearLayout
                 android:id="@+id/seclbH163"
@@ -317,7 +317,8 @@
 
                 <TextView
                     android:id="@+id/lblH163a"
-                    android:layout_width="60sp"
+                    android:text="A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -352,7 +353,8 @@
 
                 <TextView
                     android:id="@+id/lblH163b"
-                    android:layout_width="60sp"
+                    android:text="B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -387,7 +389,8 @@
 
                 <TextView
                     android:id="@+id/lblH163c"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="C. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -422,7 +425,8 @@
 
                 <TextView
                     android:id="@+id/lblH163d"
-                    android:layout_width="60sp"
+                    android:text="D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -457,7 +461,8 @@
 
                 <TextView
                     android:id="@+id/lblH163e"
-                    android:layout_width="60sp"
+                    android:text="E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -492,7 +497,8 @@
 
                 <TextView
                     android:id="@+id/lblH163f"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="F. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -527,7 +533,8 @@
 
                 <TextView
                     android:id="@+id/lblH163g"
-                    android:layout_width="60sp"
+                    android:text="G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -562,7 +569,8 @@
 
                 <TextView
                     android:id="@+id/lblH163h"
-                    android:layout_width="60sp"
+                    android:text="H. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -597,7 +605,8 @@
 
                 <TextView
                     android:id="@+id/lblH163i"
-                    android:layout_width="60sp"
+                    android:text="I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -632,7 +641,8 @@
 
                 <TextView
                     android:id="@+id/lblH163x"
-                    android:layout_width="60sp"
+                    android:text="X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -667,13 +677,15 @@
 
                 <TextView
                     android:id="@+id/lblH163oth"
-                    android:layout_width="60sp"
+                    android:text="X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH163oth"
-                    android:layout_width="200dp"
+
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
@@ -704,9 +716,9 @@
 
                 <TextView
                     android:id="@+id/lblH164"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H164"
+                    android:text="H164. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -743,9 +755,9 @@
 
                 <TextView
                     android:id="@+id/lblH165"
-                android:layout_width="60sp"
+                android:layout_width="70sp"
                 android:layout_height="wrap_content"
-                    android:text="H165"
+                    android:text="H165. "
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -773,7 +785,8 @@
 
                 <TextView
                     android:id="@+id/lblH165a"
-                    android:layout_width="60sp"
+                    android:text="A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -808,7 +821,8 @@
 
                 <TextView
                     android:id="@+id/lblH165b"
-                    android:layout_width="60sp"
+                    android:text="B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -843,7 +857,8 @@
 
                 <TextView
                     android:id="@+id/lblH165c"
-                    android:layout_width="60sp"
+                    android:text="C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -878,7 +893,8 @@
 
                 <TextView
                     android:id="@+id/lblH165d"
-                    android:layout_width="60sp"
+                    android:text="D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -913,7 +929,8 @@
 
                 <TextView
                     android:id="@+id/lblH165e"
-                    android:layout_width="60sp"
+                    android:text="E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -948,7 +965,8 @@
 
                 <TextView
                     android:id="@+id/lblH165f"
-                    android:layout_width="60sp"
+                    android:text="F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -983,7 +1001,8 @@
 
                 <TextView
                     android:id="@+id/lblH165g"
-                    android:layout_width="60sp"
+                    android:text="G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1018,7 +1037,8 @@
 
                 <TextView
                     android:id="@+id/lblH165h"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="H. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1053,7 +1073,8 @@
 
                 <TextView
                     android:id="@+id/lblH165x"
-                    android:layout_width="60sp"
+                    android:text="X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1088,13 +1109,14 @@
 
                 <TextView
                     android:id="@+id/lblH16x1"
-                    android:layout_width="60sp"
+                    android:text="X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH16x1"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
@@ -1126,7 +1148,8 @@
 
                 <TextView
                     android:id="@+id/lblH165i"
-                    android:layout_width="60sp"
+                    android:text="I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1161,9 +1184,9 @@
 
                 <TextView
                     android:id="@+id/lblH166"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H166"
+                    android:text="H166. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -1234,7 +1257,8 @@
 
                 <TextView
                     android:id="@+id/lblH167a"
-                    android:layout_width="60sp"
+                    android:text="H167A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1269,7 +1293,8 @@
 
                 <TextView
                     android:id="@+id/lblH168a"
-                    android:layout_width="60sp"
+                    android:text="H168A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1283,7 +1308,7 @@
                 <EditText
                     android:id="@+id/txtH168a"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1306,7 +1331,8 @@
 
                 <TextView
                     android:id="@+id/lblH167b"
-                    android:layout_width="60sp"
+                    android:text="H167B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1341,7 +1367,8 @@
 
                 <TextView
                     android:id="@+id/lblH168b"
-                    android:layout_width="60sp"
+                    android:text="H168B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1355,7 +1382,7 @@
                 <EditText
                     android:id="@+id/txtH168b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1378,7 +1405,8 @@
 
                 <TextView
                     android:id="@+id/lblH167c"
-                    android:layout_width="60sp"
+                    android:text="H167C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1413,7 +1441,8 @@
 
                 <TextView
                     android:id="@+id/lblH168c"
-                    android:layout_width="60sp"
+                    android:text="H168C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1427,7 +1456,7 @@
                 <EditText
                     android:id="@+id/txtH168c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1450,7 +1479,8 @@
 
                 <TextView
                     android:id="@+id/lblH167d"
-                    android:layout_width="60sp"
+                    android:text="H167D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1485,7 +1515,8 @@
 
                 <TextView
                     android:id="@+id/lblH168d"
-                    android:layout_width="60sp"
+                    android:text="H168D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1499,7 +1530,7 @@
                 <EditText
                     android:id="@+id/txtH168d"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1522,12 +1553,14 @@
 
                 <TextView
                     android:id="@+id/lblH167e"
-                    android:layout_width="60sp"
+                    android:text="H167E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH167e"
+
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
                     android:text="শাক সবজি চাষের উপকরণ"
@@ -1557,12 +1590,14 @@
 
                 <TextView
                     android:id="@+id/lblH168e"
-                    android:layout_width="60sp"
+                    android:text="H168E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH168e"
+
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
@@ -1571,7 +1606,7 @@
                 <EditText
                     android:id="@+id/txtH168e"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1594,7 +1629,8 @@
 
                 <TextView
                     android:id="@+id/lblH167f"
-                    android:layout_width="60sp"
+                    android:text="H167F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1629,7 +1665,8 @@
 
                 <TextView
                     android:id="@+id/lblH168f"
-                    android:layout_width="60sp"
+                    android:text="H168F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1643,7 +1680,7 @@
                 <EditText
                     android:id="@+id/txtH168f"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1666,7 +1703,8 @@
 
                 <TextView
                     android:id="@+id/lblH167g"
-                    android:layout_width="60sp"
+                    android:text="H167G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1701,7 +1739,8 @@
 
                 <TextView
                     android:id="@+id/lblH168g"
-                    android:layout_width="60sp"
+                    android:text="H168G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1715,7 +1754,7 @@
                 <EditText
                     android:id="@+id/txtH168g"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1738,7 +1777,8 @@
 
                 <TextView
                     android:id="@+id/lblH167h"
-                    android:layout_width="60sp"
+                    android:text="H167H. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1773,7 +1813,8 @@
 
                 <TextView
                     android:id="@+id/lblH168h"
-                    android:layout_width="60sp"
+                    android:text="H168H. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1787,7 +1828,7 @@
                 <EditText
                     android:id="@+id/txtH168h"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1810,12 +1851,14 @@
 
                 <TextView
                     android:id="@+id/lblH167i"
-                    android:layout_width="60sp"
+                    android:text="H167I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH167i"
+
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
                     android:text="নগদ টাকা"
@@ -1845,7 +1888,8 @@
 
                 <TextView
                     android:id="@+id/lblH168i"
-                    android:layout_width="60sp"
+                    android:text="H168I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1859,7 +1903,7 @@
                 <EditText
                     android:id="@+id/txtH168i"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1882,7 +1926,8 @@
 
                 <TextView
                     android:id="@+id/lblH167x"
-                    android:layout_width="60sp"
+                    android:text="H167X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1917,13 +1962,14 @@
 
                 <TextView
                     android:id="@+id/lblH167x1"
-                    android:layout_width="60sp"
+                    android:text="H167X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH167x1"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
@@ -1955,9 +2001,9 @@
 
                 <TextView
                     android:id="@+id/lblH168x"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H168x"
+                    android:text="H168x."
                     android:textSize="20sp" />
 
                 <TextView
@@ -1970,7 +2016,7 @@
                 <EditText
                     android:id="@+id/txtH168x"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1999,9 +2045,9 @@
 
                 <TextView
                     android:id="@+id/lblH169"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H169"
+                    android:text="H169."
                     android:textSize="20sp" />
 
                 <TextView
@@ -2051,9 +2097,9 @@
 
                 <TextView
                     android:id="@+id/lblH1610"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H1610"
+                    android:text="H1610. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2066,7 +2112,7 @@
                 <EditText
                     android:id="@+id/txtH1610"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2089,14 +2135,14 @@
 
                 <TextView
                     android:id="@+id/lblH1611"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H1611"
+                    android:text="H1611. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1611"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="(সুচনা বহির্ভূত) গত 1 year এর ভেতর আপনি/আপনার পরিবারের কেউ কি কোন এন,জি,ও কর্মসূচির"
                     android:textSize="20sp" />
@@ -2162,7 +2208,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612a"
-                    android:layout_width="60sp"
+                    android:text="A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2197,7 +2244,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612b"
-                    android:layout_width="60sp"
+                    android:text="B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2232,7 +2280,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612c"
-                    android:layout_width="60sp"
+                    android:text="C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2267,7 +2316,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612d"
-                    android:layout_width="60sp"
+                    android:text="D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2302,7 +2352,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612e"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
+                    android:text="E. "
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2337,7 +2388,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612f"
-                    android:layout_width="60sp"
+                    android:text="F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2372,7 +2424,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612g"
-                    android:layout_width="60sp"
+                    android:text="G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2407,7 +2460,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612h"
-                    android:layout_width="60sp"
+                    android:text="H. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2442,7 +2496,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612i"
-                    android:layout_width="60sp"
+                    android:text="I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2477,7 +2532,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612j"
-                    android:layout_width="60sp"
+                    android:text="J. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2512,7 +2568,8 @@
 
                 <TextView
                     android:id="@+id/lblH1612x"
-                    android:layout_width="60sp"
+                    android:text="X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2547,13 +2604,14 @@
 
                 <TextView
                     android:id="@+id/lblH1612x1"
-                    android:layout_width="60sp"
+                    android:text="X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1612x1"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="(উল্লেখ কর"
                     android:textSize="20sp" />
@@ -2585,9 +2643,9 @@
 
                 <TextView
                     android:id="@+id/lblH1613"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H1613"
+                    android:text="H1613. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -2633,7 +2691,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:text="H1614">
+               >
 
                 <TextView
                     android:id="@+id/lblHH1614"
@@ -2659,7 +2717,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614a"
-                    android:layout_width="60sp"
+                    android:text="A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2694,7 +2753,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614b"
-                    android:layout_width="60sp"
+                    android:text="B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2729,7 +2789,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614c"
-                    android:layout_width="60sp"
+                    android:text="C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2764,7 +2825,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614d"
-                    android:layout_width="60sp"
+                    android:text="D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2799,7 +2861,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614e"
-                    android:layout_width="60sp"
+                    android:text="E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2834,7 +2897,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614f"
-                    android:layout_width="60sp"
+                    android:text="F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2869,7 +2933,8 @@
 
                 <TextView
                     android:id="@+id/lblH1614x"
-                    android:layout_width="60sp"
+                    android:text="X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -2904,13 +2969,14 @@
 
                 <TextView
                     android:id="@+id/lblH1614x1"
-                    android:layout_width="60sp"
+                    android:text="X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1614x1"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
@@ -2942,9 +3008,9 @@
 
                 <TextView
                     android:id="@+id/lblH1615"
-                    android:layout_width="60sp"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H1615"
+                    android:text="H1615. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -3015,7 +3081,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616a"
-                    android:layout_width="60sp"
+                    android:text="A. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3050,7 +3117,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616b"
-                    android:layout_width="60sp"
+                    android:text="B. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3085,7 +3153,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616c"
-                    android:layout_width="60sp"
+                    android:text="C. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3120,7 +3189,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616d"
-                    android:layout_width="60sp"
+                    android:text="D. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3155,7 +3225,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616e"
-                    android:layout_width="60sp"
+                    android:text="E. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3190,7 +3261,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616f"
-                    android:layout_width="60sp"
+                    android:text="F. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3225,7 +3297,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616g"
-                    android:layout_width="60sp"
+                    android:text="G. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3260,7 +3333,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616h"
-                    android:layout_width="60sp"
+                    android:text="H. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3295,7 +3369,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616i"
-                    android:layout_width="60sp"
+                    android:text="I. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3330,7 +3405,8 @@
 
                 <TextView
                     android:id="@+id/lblH1616x"
-                    android:layout_width="60sp"
+                    android:text="X. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -3365,13 +3441,14 @@
 
                 <TextView
                     android:id="@+id/lblH1616x1"
-                    android:layout_width="60sp"
+                    android:text="X1. "
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1616x1"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="উল্লেখ কর"
                     android:textSize="20sp" />
