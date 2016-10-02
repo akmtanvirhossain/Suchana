@@ -1026,9 +1026,9 @@ public class AssetB extends Activity {
                 }
             });
         } catch (Exception e) {
-            throw e;
-            // Connection.MessageBox(AssetB.this, e.getMessage());
-            // return;
+
+            Connection.MessageBox(AssetB.this, e.getMessage());
+            return;
         }
     }
 

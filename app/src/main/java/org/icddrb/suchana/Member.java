@@ -877,9 +877,8 @@ public class Member extends Activity {
                 }
             });
         } catch (Exception e) {
-            throw e;
-            //  Connection.MessageBox(Member.this, e.getMessage());
-            // return;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
         }
     }
 
@@ -1075,7 +1074,7 @@ public class Member extends Activity {
                     return;
                 }
             }
-            if (txtH219.getText().toString().length() != 0 & secH219.isShown()) {
+            if (txtH219.getText().toString().length() != 0 & secH219.isShown() & secH217.isShown()) {
                 if (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH217.getText().toString()) || (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH218.getText().toString()))) {
                     Connection.MessageBox(Member.this, "বছরের আয় মাসিক আয়ের থেকে কম হবেনা ");
                     txtH219.requestFocus();
@@ -1251,7 +1250,8 @@ public class Member extends Activity {
                 return;
             }
         } catch (Exception e) {
-            throw e;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
 
         }
     }

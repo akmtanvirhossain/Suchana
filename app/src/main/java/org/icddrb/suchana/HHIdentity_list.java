@@ -34,6 +34,7 @@ import java.util.List;
 
 import Common.Connection;
 import Common.Global;
+import Common.Utility;
 
 public class HHIdentity_list extends Activity {
     static final int DATE_DIALOG = 1;
@@ -272,6 +273,7 @@ public class HHIdentity_list extends Activity {
 
             i = i - 1;
             lblHeading.setText("Suchana: Inteview List [Total: " + i.toString() + "]");
+            Utility.setListViewHeightBasedOnChildren(list);
         }
         catch(Exception  e)
         {

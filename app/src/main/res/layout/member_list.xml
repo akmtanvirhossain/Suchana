@@ -145,7 +145,8 @@
             android:paddingRight="5sp"
             android:text="Add New Member"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <HorizontalScrollView
