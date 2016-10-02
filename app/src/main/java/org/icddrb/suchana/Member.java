@@ -877,9 +877,8 @@ public class Member extends Activity {
                 }
             });
         } catch (Exception e) {
-            throw e;
-            //  Connection.MessageBox(Member.this, e.getMessage());
-            // return;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
         }
     }
 
@@ -1251,7 +1250,8 @@ public class Member extends Activity {
                 return;
             }
         } catch (Exception e) {
-            throw e;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
 
         }
     }

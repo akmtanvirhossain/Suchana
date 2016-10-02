@@ -1765,6 +1765,32 @@ public class Cost1 extends Activity {
             secH862b.setVisibility(View.GONE);
             secH862c.setVisibility(View.GONE);
 
+            lineH811a.setVisibility(View.GONE);
+            lineH811b.setVisibility(View.GONE);
+            lineH811c.setVisibility(View.GONE);
+            lineH811d.setVisibility(View.GONE);
+            lineH812a.setVisibility(View.GONE);
+            lineH812b.setVisibility(View.GONE);
+            lineH812c.setVisibility(View.GONE);
+            lineH812d.setVisibility(View.GONE);
+            lineH813a.setVisibility(View.GONE);
+            lineH813b.setVisibility(View.GONE);
+            lineH813c.setVisibility(View.GONE);
+            lineH813d.setVisibility(View.GONE);
+            lineH814a.setVisibility(View.GONE);
+            lineH814b.setVisibility(View.GONE);
+            lineH814c.setVisibility(View.GONE);
+            lineH814d.setVisibility(View.GONE);
+            lineH815a.setVisibility(View.GONE);
+            lineH815b.setVisibility(View.GONE);
+            lineH815c.setVisibility(View.GONE);
+            lineH815d.setVisibility(View.GONE);
+            lineH816a.setVisibility(View.GONE);
+            lineH816b.setVisibility(View.GONE);
+            lineH816c.setVisibility(View.GONE);
+            lineH816d.setVisibility(View.GONE);
+
+
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
