@@ -121,6 +121,14 @@ public class Agriculture extends Activity {
     View lineH152g;
     TextView VlblH152g;
     EditText txtH152g;
+
+    LinearLayout secH152g2;
+    View lineH152g2;
+    TextView VlblH152g2;
+    RadioGroup rdogrpH152g2;
+    RadioButton rdoH152g21;
+    RadioButton rdoH152g22;
+
     LinearLayout seclbH152h;
     LinearLayout secH152h1;
     View lineH152h1;
@@ -263,7 +271,7 @@ public class Agriculture extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where cast(H26Y as int)>15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15"));
             seclbH151 = (LinearLayout) findViewById(R.id.seclbH151);
             secH151 = (LinearLayout) findViewById(R.id.secH151);
             lineH151 = (View) findViewById(R.id.lineH151);
@@ -318,6 +326,9 @@ public class Agriculture extends Activity {
                         secH152g.setVisibility(View.GONE);
                         lineH152g.setVisibility(View.GONE);
                         txtH152g.setText("");
+                        secH152g2.setVisibility(View.GONE);
+                       // lineH152g2.setVisibility(View.GONE);
+                        rdogrpH152g2.clearCheck();
                         secH152h1.setVisibility(View.GONE);
                         lineH152h1.setVisibility(View.GONE);
                         txtH152h1.setText("");
@@ -378,6 +389,8 @@ public class Agriculture extends Activity {
                         lineH152f.setVisibility(View.VISIBLE);
                         secH152g.setVisibility(View.VISIBLE);
                         lineH152g.setVisibility(View.VISIBLE);
+                        secH152g2.setVisibility(View.VISIBLE);
+                        //lineH152g2.setVisibility(View.VISIBLE);
                         secH152h1.setVisibility(View.VISIBLE);
                         lineH152h1.setVisibility(View.VISIBLE);
                         secH152h2.setVisibility(View.VISIBLE);
@@ -452,6 +465,10 @@ public class Agriculture extends Activity {
             listH152a.add("614-টমেটো");
             listH152a.add("615-সজনে  ");
             listH152a.add("616-পাতা সবজি  ");
+            listH152a.add("617-কলমি শাক  ");
+            listH152a.add("618-কমলা রঙ্গের মিষ্টি আলু  ");
+            listH152a.add("619-লতিরাজ কচু  ");
+            listH152a.add("620-লাল শাক ");
             listH152a.add("701-হলুদ ফল");
             listH152a.add("702-সবুজ ফল");
             listH152a.add("801-রুই");
@@ -462,7 +479,9 @@ public class Agriculture extends Activity {
             listH152a.add("806-শেরপুটি");
             listH152a.add("807-পুটি");
             listH152a.add("808-মলা ");
-            listH152a.add("809-অনান্য মাছ");
+            listH152a.add("809-সিলভার কার্প ");
+            listH152a.add("810-অনান্য ছোট মাছ ");
+            listH152a.add("811-অনান্য বড় মাছ ");
             listH152a.add("901-শুধু হাস-মুরগি ");
             listH152a.add("902-হাস-মুরগি ও ডিম");
             ArrayAdapter<String> adptrH152a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH152a);
@@ -536,6 +555,13 @@ public class Agriculture extends Activity {
             lineH152g = (View) findViewById(R.id.lineH152g);
             VlblH152g = (TextView) findViewById(R.id.VlblH152g);
             txtH152g = (EditText) findViewById(R.id.txtH152g);
+
+            secH152g2 = (LinearLayout) findViewById(R.id.secH152g2);
+            VlblH152g2 = (TextView) findViewById(R.id.VlblH152g2);
+            rdogrpH152g2 = (RadioGroup) findViewById(R.id.rdogrpH152g2);
+            rdoH152g21 = (RadioButton) findViewById(R.id.rdoH152g21);
+            rdoH152g22 = (RadioButton) findViewById(R.id.rdoH152g22);
+
             seclbH152h = (LinearLayout) findViewById(R.id.seclbH152h);
             secH152h1 = (LinearLayout) findViewById(R.id.secH152h1);
             lineH152h1 = (View) findViewById(R.id.lineH152h1);
@@ -692,7 +718,13 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো.");
                 txtH152g.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 1 || Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
+            }
+
+            else if (txtH152g.getText().toString().length() == 0 & secH152g2.isShown()) {
+                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                txtH152g.requestFocus();
+                return;
+            }else if (Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 1 || Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো).");
                 txtH152g.requestFocus();
                 return;
@@ -745,6 +777,11 @@ public class Agriculture extends Activity {
                 rdoH152k21.requestFocus();
                 return;
             }
+            if(Integer.valueOf(txtH152e1.getText().toString())==0 && Integer.valueOf(txtH152f.getText().toString())>0 )
+            {
+                Connection.MessageBox(Agriculture.this, "Inconsistent value between sales quantity and sales price");
+                return;
+            }
 
             if(Integer.valueOf(txtH152d1.getText().toString())<(Integer.valueOf(txtH152e1.getText().toString())+Integer.valueOf(txtH152g.getText().toString())+Integer.valueOf(txtH152h1.getText().toString())+Integer.valueOf(txtH152i1.getText().toString())+Integer.valueOf(txtH152j1.getText().toString())+Integer.valueOf(txtH152k1.getText().toString())))
             {
@@ -789,6 +826,14 @@ public class Agriculture extends Activity {
 
             objSave.setH152f(txtH152f.getText().toString());
             objSave.setH152g(txtH152g.getText().toString());
+            String[] d_rdogrpH152g2 = new String[]{"1", "2"};
+            objSave.setH152g2("");
+            for (int i = 0; i < rdogrpH152g2.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH152g2.getChildAt(i);
+                if (rb.isChecked()) objSave.setH152d2(d_rdogrpH152g2[i]);
+            }
+
+
             objSave.setH152h1(txtH152h1.getText().toString());
             String[] d_rdogrpH152h2 = new String[]{"1", "2"};
             objSave.setH152h2("");
@@ -830,6 +875,10 @@ public class Agriculture extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
+
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
                 Bundle IDBundle = new Bundle();
                 finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
@@ -887,6 +936,15 @@ public class Agriculture extends Activity {
                 }
                 txtH152f.setText(item.getH152f());
                 txtH152g.setText(item.getH152g());
+
+                String[] d_rdogrpH152g2 = new String[]{"1", "2"};
+                for (int i = 0; i < d_rdogrpH152g2.length; i++) {
+                    if (item.getH152g2().equals(String.valueOf(d_rdogrpH152g2[i]))) {
+                        rb = (RadioButton) rdogrpH152g2.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+
                 txtH152h1.setText(item.getH152h1());
                 String[] d_rdogrpH152h2 = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpH152h2.length; i++) {
