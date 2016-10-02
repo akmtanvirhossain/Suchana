@@ -361,6 +361,16 @@ public class Member_list extends Activity {
         return lineNo;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+
+            DataSearch(RND, SUCHANAID);
+
+        }
+    }
+
     public class DataListAdapter extends BaseAdapter {
         private Context context;
         private SimpleAdapter dataAdap;
@@ -468,7 +478,7 @@ public class Member_list extends Activity {
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), Member.class);
                     f1.putExtras(IDbundle);
-                    startActivity(f1);
+                    startActivityForResult(f1, 1);
                 }
             });
 
