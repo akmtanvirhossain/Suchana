@@ -608,6 +608,7 @@ public class NGOWork extends Activity {
                         secH164.setVisibility(View.GONE);
                         lineH164.setVisibility(View.GONE);
                         txtH164.setText("");
+                        seclbH165.setVisibility(View.GONE);
                         secH165a.setVisibility(View.GONE);
                         lineH165a.setVisibility(View.GONE);
                         chkH165a.setChecked(false);
@@ -715,6 +716,7 @@ public class NGOWork extends Activity {
                         txtH1610.setText("");
                     } else {
                         seclbH163.setVisibility(View.VISIBLE);
+                        lblHlbH163.setVisibility(View.VISIBLE);
                         secH162.setVisibility(View.VISIBLE);
                         lineH162.setVisibility(View.VISIBLE);
                         secH163a.setVisibility(View.VISIBLE);
@@ -737,10 +739,11 @@ public class NGOWork extends Activity {
                         lineH163i.setVisibility(View.VISIBLE);
                         secH163x.setVisibility(View.VISIBLE);
                         lineH163x.setVisibility(View.VISIBLE);
-                        secH163oth.setVisibility(View.VISIBLE);
-                        lineH163oth.setVisibility(View.VISIBLE);
+                      //  secH163oth.setVisibility(View.VISIBLE);
+                     //   lineH163oth.setVisibility(View.VISIBLE);
                         secH164.setVisibility(View.VISIBLE);
                         lineH164.setVisibility(View.VISIBLE);
+                        seclbH165.setVisibility(View.VISIBLE);
                         secH165a.setVisibility(View.VISIBLE);
                         lineH165a.setVisibility(View.VISIBLE);
                         secH165b.setVisibility(View.VISIBLE);
@@ -759,8 +762,8 @@ public class NGOWork extends Activity {
                         lineH165h.setVisibility(View.VISIBLE);
                         secH165x.setVisibility(View.VISIBLE);
                         lineH165x.setVisibility(View.VISIBLE);
-                        secH16x1.setVisibility(View.VISIBLE);
-                        lineH16x1.setVisibility(View.VISIBLE);
+                      //  secH16x1.setVisibility(View.VISIBLE);
+                     //   lineH16x1.setVisibility(View.VISIBLE);
                         secH165i.setVisibility(View.VISIBLE);
                         lineH165i.setVisibility(View.VISIBLE);
                         secH166.setVisibility(View.VISIBLE);
@@ -771,42 +774,42 @@ public class NGOWork extends Activity {
                         lineH168a.setVisibility(View.VISIBLE);
                         secH167b.setVisibility(View.VISIBLE);
                         lineH167b.setVisibility(View.VISIBLE);
-                        secH168b.setVisibility(View.VISIBLE);
-                        lineH168b.setVisibility(View.VISIBLE);
+                    //    secH168b.setVisibility(View.VISIBLE);
+                      //  lineH168b.setVisibility(View.VISIBLE);
                         secH167c.setVisibility(View.VISIBLE);
                         lineH167c.setVisibility(View.VISIBLE);
-                        secH168c.setVisibility(View.VISIBLE);
-                        lineH168c.setVisibility(View.VISIBLE);
+                      //  secH168c.setVisibility(View.VISIBLE);
+                     //   lineH168c.setVisibility(View.VISIBLE);
                         secH167d.setVisibility(View.VISIBLE);
                         lineH167d.setVisibility(View.VISIBLE);
-                        secH168d.setVisibility(View.VISIBLE);
-                        lineH168d.setVisibility(View.VISIBLE);
+                     //   secH168d.setVisibility(View.VISIBLE);
+                    //    lineH168d.setVisibility(View.VISIBLE);
                         secH167e.setVisibility(View.VISIBLE);
                         lineH167e.setVisibility(View.VISIBLE);
-                        secH168e.setVisibility(View.VISIBLE);
-                        lineH168e.setVisibility(View.VISIBLE);
+                     //   secH168e.setVisibility(View.VISIBLE);
+                     //   lineH168e.setVisibility(View.VISIBLE);
                         secH167f.setVisibility(View.VISIBLE);
                         lineH167f.setVisibility(View.VISIBLE);
-                        secH168f.setVisibility(View.VISIBLE);
-                        lineH168f.setVisibility(View.VISIBLE);
+                      //  secH168f.setVisibility(View.VISIBLE);
+                      //  lineH168f.setVisibility(View.VISIBLE);
                         secH167g.setVisibility(View.VISIBLE);
                         lineH167g.setVisibility(View.VISIBLE);
-                        secH168g.setVisibility(View.VISIBLE);
-                        lineH168g.setVisibility(View.VISIBLE);
+                     //   secH168g.setVisibility(View.VISIBLE);
+                     //   lineH168g.setVisibility(View.VISIBLE);
                         secH167h.setVisibility(View.VISIBLE);
                         lineH167h.setVisibility(View.VISIBLE);
-                        secH168h.setVisibility(View.VISIBLE);
-                        lineH168h.setVisibility(View.VISIBLE);
+                     //   secH168h.setVisibility(View.VISIBLE);
+                     //   lineH168h.setVisibility(View.VISIBLE);
                         secH167i.setVisibility(View.VISIBLE);
                         lineH167i.setVisibility(View.VISIBLE);
-                        secH168i.setVisibility(View.VISIBLE);
-                        lineH168i.setVisibility(View.VISIBLE);
+                     //   secH168i.setVisibility(View.VISIBLE);
+                    //    lineH168i.setVisibility(View.VISIBLE);
                         secH167x.setVisibility(View.VISIBLE);
                         lineH167x.setVisibility(View.VISIBLE);
-                        secH167x1.setVisibility(View.VISIBLE);
-                        lineH167x1.setVisibility(View.VISIBLE);
-                        secH168x.setVisibility(View.VISIBLE);
-                        lineH168x.setVisibility(View.VISIBLE);
+                       // secH167x1.setVisibility(View.VISIBLE);
+                       // lineH167x1.setVisibility(View.VISIBLE);
+                      //  secH168x.setVisibility(View.VISIBLE);
+                     //   lineH168x.setVisibility(View.VISIBLE);
                         secH169.setVisibility(View.VISIBLE);
                         lineH169.setVisibility(View.VISIBLE);
                         secH1610.setVisibility(View.VISIBLE);
@@ -875,6 +878,7 @@ public class NGOWork extends Activity {
                         secH164.setVisibility(View.GONE);
                         lineH164.setVisibility(View.GONE);
                         txtH164.setText("");
+                        seclbH165.setVisibility(View.GONE);
                         secH165a.setVisibility(View.GONE);
                         lineH165a.setVisibility(View.GONE);
                         chkH165a.setChecked(false);
@@ -931,10 +935,11 @@ public class NGOWork extends Activity {
                         lineH163i.setVisibility(View.VISIBLE);
                         secH163x.setVisibility(View.VISIBLE);
                         lineH163x.setVisibility(View.VISIBLE);
-                        secH163oth.setVisibility(View.VISIBLE);
-                        lineH163oth.setVisibility(View.VISIBLE);
+                      //  secH163oth.setVisibility(View.VISIBLE);
+                      //  lineH163oth.setVisibility(View.VISIBLE);
                         secH164.setVisibility(View.VISIBLE);
                         lineH164.setVisibility(View.VISIBLE);
+                        seclbH165.setVisibility(View.VISIBLE);
                         secH165a.setVisibility(View.VISIBLE);
                         lineH165a.setVisibility(View.VISIBLE);
                         secH165b.setVisibility(View.VISIBLE);
@@ -953,8 +958,8 @@ public class NGOWork extends Activity {
                         lineH165h.setVisibility(View.VISIBLE);
                         secH165x.setVisibility(View.VISIBLE);
                         lineH165x.setVisibility(View.VISIBLE);
-                        secH16x1.setVisibility(View.VISIBLE);
-                        lineH16x1.setVisibility(View.VISIBLE);
+                     //   secH16x1.setVisibility(View.VISIBLE);
+                      //  lineH16x1.setVisibility(View.VISIBLE);
                         secH165i.setVisibility(View.VISIBLE);
                         lineH165i.setVisibility(View.VISIBLE);
                     }
@@ -1054,6 +1059,22 @@ public class NGOWork extends Activity {
             lineH16x1 = (View) findViewById(R.id.lineH16x1);
             VlblH16x1 = (TextView) findViewById(R.id.VlblH16x1);
             txtH16x1 = (EditText) findViewById(R.id.txtH16x1);
+
+            chkH165x.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH16x1.setVisibility(View.GONE);
+                        lineH16x1.setVisibility(View.GONE);
+                        txtH16x1.setText("");
+
+                    } else {
+                        secH16x1.setVisibility(View.VISIBLE);
+                        lineH16x1.setVisibility(View.VISIBLE);
+
+                    }
+                }
+            });
+
             secH165i = (LinearLayout) findViewById(R.id.secH165i);
             lineH165i = (View) findViewById(R.id.lineH165i);
             VlblH165i = (TextView) findViewById(R.id.VlblH165i);
@@ -1064,6 +1085,7 @@ public class NGOWork extends Activity {
             rdogrpH166 = (RadioGroup) findViewById(R.id.rdogrpH166);
 
             rdoH1661 = (RadioButton) findViewById(R.id.rdoH1661);
+            rdoH1662 = (RadioButton) findViewById(R.id.rdoH1662);
             rdogrpH166.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
@@ -1144,46 +1166,46 @@ public class NGOWork extends Activity {
                         seclbH167.setVisibility(View.VISIBLE);
                         secH167a.setVisibility(View.VISIBLE);
                         lineH167a.setVisibility(View.VISIBLE);
-                        secH168a.setVisibility(View.VISIBLE);
-                        lineH168a.setVisibility(View.VISIBLE);
+                     //   secH168a.setVisibility(View.VISIBLE);
+                      //  lineH168a.setVisibility(View.VISIBLE);
                         secH167b.setVisibility(View.VISIBLE);
                         lineH167b.setVisibility(View.VISIBLE);
-                        secH168b.setVisibility(View.VISIBLE);
-                        lineH168b.setVisibility(View.VISIBLE);
+                      //  secH168b.setVisibility(View.VISIBLE);
+                      //  lineH168b.setVisibility(View.VISIBLE);
                         secH167c.setVisibility(View.VISIBLE);
                         lineH167c.setVisibility(View.VISIBLE);
-                        secH168c.setVisibility(View.VISIBLE);
-                        lineH168c.setVisibility(View.VISIBLE);
+                      //  secH168c.setVisibility(View.VISIBLE);
+                      //  lineH168c.setVisibility(View.VISIBLE);
                         secH167d.setVisibility(View.VISIBLE);
                         lineH167d.setVisibility(View.VISIBLE);
-                        secH168d.setVisibility(View.VISIBLE);
-                        lineH168d.setVisibility(View.VISIBLE);
+                      //  secH168d.setVisibility(View.VISIBLE);
+                      //  lineH168d.setVisibility(View.VISIBLE);
                         secH167e.setVisibility(View.VISIBLE);
                         lineH167e.setVisibility(View.VISIBLE);
-                        secH168e.setVisibility(View.VISIBLE);
-                        lineH168e.setVisibility(View.VISIBLE);
+                     //   secH168e.setVisibility(View.VISIBLE);
+                    //    lineH168e.setVisibility(View.VISIBLE);
                         secH167f.setVisibility(View.VISIBLE);
                         lineH167f.setVisibility(View.VISIBLE);
-                        secH168f.setVisibility(View.VISIBLE);
-                        lineH168f.setVisibility(View.VISIBLE);
+                       // secH168f.setVisibility(View.VISIBLE);
+                      //  lineH168f.setVisibility(View.VISIBLE);
                         secH167g.setVisibility(View.VISIBLE);
                         lineH167g.setVisibility(View.VISIBLE);
-                        secH168g.setVisibility(View.VISIBLE);
-                        lineH168g.setVisibility(View.VISIBLE);
+                     //   secH168g.setVisibility(View.VISIBLE);
+                     //   lineH168g.setVisibility(View.VISIBLE);
                         secH167h.setVisibility(View.VISIBLE);
                         lineH167h.setVisibility(View.VISIBLE);
-                        secH168h.setVisibility(View.VISIBLE);
-                        lineH168h.setVisibility(View.VISIBLE);
+                     //   secH168h.setVisibility(View.VISIBLE);
+                     //   lineH168h.setVisibility(View.VISIBLE);
                         secH167i.setVisibility(View.VISIBLE);
                         lineH167i.setVisibility(View.VISIBLE);
-                        secH168i.setVisibility(View.VISIBLE);
-                        lineH168i.setVisibility(View.VISIBLE);
+                     //   secH168i.setVisibility(View.VISIBLE);
+                     //   lineH168i.setVisibility(View.VISIBLE);
                         secH167x.setVisibility(View.VISIBLE);
                         lineH167x.setVisibility(View.VISIBLE);
-                        secH167x1.setVisibility(View.VISIBLE);
-                        lineH167x1.setVisibility(View.VISIBLE);
-                        secH168x.setVisibility(View.VISIBLE);
-                        lineH168x.setVisibility(View.VISIBLE);
+                      //  secH167x1.setVisibility(View.VISIBLE);
+                      //  lineH167x1.setVisibility(View.VISIBLE);
+                     //   secH168x.setVisibility(View.VISIBLE);
+                      //  lineH168x.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1210,6 +1232,8 @@ public class NGOWork extends Activity {
                     }
                 }
             });
+
+
             secH168a = (LinearLayout) findViewById(R.id.secH168a);
             lineH168a = (View) findViewById(R.id.lineH168a);
             VlblH168a = (TextView) findViewById(R.id.VlblH168a);
@@ -1437,6 +1461,7 @@ public class NGOWork extends Activity {
             rdogrpH169 = (RadioGroup) findViewById(R.id.rdogrpH169);
 
             rdoH1691 = (RadioButton) findViewById(R.id.rdoH1691);
+            rdoH1692 = (RadioButton) findViewById(R.id.rdoH1692);
             rdogrpH169.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
@@ -1584,6 +1609,7 @@ public class NGOWork extends Activity {
                         chkH1616x.setChecked(false);
                     } else {
                         seclb1612.setVisibility(View.VISIBLE);
+                        lblHlbH1612.setVisibility(View.VISIBLE);
                         secH1612a.setVisibility(View.VISIBLE);
                         lineH1612a.setVisibility(View.VISIBLE);
                         secH1612b.setVisibility(View.VISIBLE);
@@ -1606,10 +1632,12 @@ public class NGOWork extends Activity {
                         lineH1612j.setVisibility(View.VISIBLE);
                         secH1612x.setVisibility(View.VISIBLE);
                         lineH1612x.setVisibility(View.VISIBLE);
-                        secH1612x1.setVisibility(View.VISIBLE);
-                        lineH1612x1.setVisibility(View.VISIBLE);
+                       // secH1612x1.setVisibility(View.VISIBLE);
+                        //lineH1612x1.setVisibility(View.VISIBLE);
                         secH1613.setVisibility(View.VISIBLE);
                         lineH1613.setVisibility(View.VISIBLE);
+                        secH1614.setVisibility(View.VISIBLE);
+                        lblHlbH1614.setVisibility(View.VISIBLE);
                         secH1614a.setVisibility(View.VISIBLE);
                         lineH1614a.setVisibility(View.VISIBLE);
                         secH1614b.setVisibility(View.VISIBLE);
@@ -1624,10 +1652,12 @@ public class NGOWork extends Activity {
                         lineH1614f.setVisibility(View.VISIBLE);
                         secH1614x.setVisibility(View.VISIBLE);
                         lineH1614x.setVisibility(View.VISIBLE);
-                        secH1614x1.setVisibility(View.VISIBLE);
-                        lineH1614x1.setVisibility(View.VISIBLE);
+                      //  secH1614x1.setVisibility(View.VISIBLE);
+                      //  lineH1614x1.setVisibility(View.VISIBLE);
                         secH1615.setVisibility(View.VISIBLE);
                         lineH1615.setVisibility(View.VISIBLE);
+                        secH1616.setVisibility(View.VISIBLE);
+                        lblHlbH1616.setVisibility(View.VISIBLE);
                         secH1616a.setVisibility(View.VISIBLE);
                         lineH1616a.setVisibility(View.VISIBLE);
                         secH1616b.setVisibility(View.VISIBLE);
@@ -1918,11 +1948,15 @@ public class NGOWork extends Activity {
                         secH167x1.setVisibility(View.GONE);
                         lineH167x1.setVisibility(View.GONE);
                         txtH167x1.setText("");
+                        secH168x.setVisibility(View.GONE);
+                        txtH168x.setText("");
                     }
                     else
                     {
                         secH167x1.setVisibility(View.VISIBLE);
                         lineH167x1.setVisibility(View.VISIBLE);
+                        secH168x.setVisibility(View.VISIBLE);
+                        VlblH168x.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -2024,6 +2058,7 @@ public class NGOWork extends Activity {
 
                     } else {
                         secH1614.setVisibility(View.VISIBLE);
+                        lblHlbH1614.setVisibility(View.VISIBLE);
                         secH1614a.setVisibility(View.VISIBLE);
                         lineH1614a.setVisibility(View.VISIBLE);
                         secH1614b.setVisibility(View.VISIBLE);
@@ -2100,6 +2135,7 @@ public class NGOWork extends Activity {
                         txtH1616x1.setText(null);
                     } else {
                         secH1616.setVisibility(View.VISIBLE);
+                        lblHlbH1616.setVisibility(View.VISIBLE);
                         secH1616a.setVisibility(View.VISIBLE);
                         lineH1616a.setVisibility(View.VISIBLE);
                         secH1616b.setVisibility(View.VISIBLE);
@@ -2284,6 +2320,7 @@ public class NGOWork extends Activity {
             secH1614f.setVisibility(View.GONE);
             secH1614x.setVisibility(View.GONE);
             secH1614x1.setVisibility(View.GONE);
+
             secH1615.setVisibility(View.GONE);
             secH1616a.setVisibility(View.GONE);
             secH1616b.setVisibility(View.GONE);
@@ -2296,7 +2333,7 @@ public class NGOWork extends Activity {
             secH1616i.setVisibility(View.GONE);
             secH1616x.setVisibility(View.GONE);
             lblHlbH163.setVisibility(View.GONE);
-            lblHlbH165.setVisibility(View.GONE);
+         //   lblHlbH165.setVisibility(View.GONE);
             lblHlbH167.setVisibility(View.GONE);
             lblHlbH1612.setVisibility(View.GONE);
             lblHlbH1614.setVisibility(View.GONE);
@@ -2365,7 +2402,7 @@ public class NGOWork extends Activity {
                 Connection.MessageBox(NGOWork.this, "Required field: উল্লেখ কর.");
                 txtH16x1.requestFocus();
                 return;
-            } else if (!rdoH1661.isChecked() & secH166.isShown()) {
+            } else if (!rdoH1661.isChecked() &!rdoH1662.isChecked() & secH166.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Select anyone options from (সুচনা কর্মসূচি থেকে আপনি কি কোনো গ্রান্ট/অনুদান পেয়েছেন).");
                 rdoH1661.requestFocus();
                 return;
@@ -2453,7 +2490,7 @@ public class NGOWork extends Activity {
                 Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168x.requestFocus();
                 return;
-            } else if (!rdoH1691.isChecked() & secH169.isShown()) {
+            } else if (!rdoH1691.isChecked()& !rdoH1692.isChecked() & secH169.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Select anyone options from (সুচনা কর্মসূচির  গ্রান্ট/অনুদান পাবার পর আপনি কি কোনো ‘কোচিং’ পেয়েছেন).");
                 rdoH1691.requestFocus();
                 return;
