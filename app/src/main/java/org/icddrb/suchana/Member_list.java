@@ -308,7 +308,11 @@ public class Member_list extends Activity {
                     SQL += "'2')";
 
                     C.Save(SQL);*/
-
+                    if (txtH22.getText().toString().length() == 0) {
+                        Connection.MessageBox(Member_list.this, "Required field: Name of member.");
+                        txtH22.requestFocus();
+                        return;
+                    }
 
                     //***
                     Member_DataModel objSave = new Member_DataModel();
