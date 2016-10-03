@@ -429,7 +429,7 @@
                     android:id="@+id/VlblH14ax"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -716,7 +716,7 @@
                     android:id="@+id/VlblH14a3e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সন্তানকে (14 বছরের নিচে) কাজে পাঠিয়ে"
+                    android:text="সন্তানকে (১৪ বছরের নিচে) কাজে পাঠিয়ে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1066,7 +1066,7 @@
                     android:id="@+id/VlblH14a3x1"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1104,7 +1104,7 @@
                     android:id="@+id/VlblH14a3x2"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1142,7 +1142,7 @@
                     android:id="@+id/VlblH14a3x3"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText

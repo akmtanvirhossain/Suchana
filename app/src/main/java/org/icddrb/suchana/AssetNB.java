@@ -447,7 +447,7 @@ public class AssetNB extends Activity {
             List<String> listH42a = new ArrayList<String>();
 
             listH42a.add("");
-            listH42a.add("01-রেডিও / ক্যাসেট প্লেয়া / ডিভিডি / সিডি প্লেয়ার");
+            listH42a.add("01-রেডিও/ক্যাসেট প্লেয়া/ডিভিডি/সিডি প্লেয়ার");
             listH42a.add("02-টিভি");
             listH42a.add("03-বৈদ্যুতিক পাখা");
             listH42a.add("04-মোবাইল ফোন");

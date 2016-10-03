@@ -221,7 +221,7 @@
                     android:id="@+id/VlblH121a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনাদের খানায় যথেষ্ট খাবার থাকবে না, বিগত ৪ সপ্তাহে এরকম কোন দুশ্চিন্তা হয়েছিল কী (উত্তর )"
+                    android:text="আপনাদের খানায় যথেষ্ট খাবার থাকবে না, বিগত ৪ সপ্তাহে এরকম কোন দু;শ্চিন্তা হয়েছিল কী (উত্তর )"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -334,7 +334,7 @@
                     android:id="@+id/VlblH122a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারা সাধারণত যে ধরনের খাবার খেয়ে থাকেন, গত ৪ সপ্তাহে অভাবের কারনে আপনি বা আপনাদের খানার কোন সদস্য কি  সে ধরনের খাবার খেতে পারেন নি"
+                    android:text="আপনারা সাধারণত যে ধরনের খাবার খেয়ে থাকেন, গত ৪ সপ্তাহে অভাবের কারণে আপনি বা আপনাদের খানার কোন সদস্য কি  সে ধরনের খাবার খেতে পারেন নি"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -448,7 +448,7 @@
                     android:id="@+id/VlblH123a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনি বা আপনাদের খানার কোন সদস্য কি অভাবের কারনে সীমিত রকমের (Variety) খাবার খেতে হয়েছে, অর্থাৎ আগে যত পদ খেতেন গত ৪ সপ্তাহে অভাবের কারনে তার চেয়ে কম পদ খেতে হয়েছে"
+                    android:text="গত ৪ সপ্তাহে আপনি বা আপনাদের খানার কোন সদস্য কি অভাবের কারনে সীমিত রকমের (Variety) খাবার খেতে হয়েছে, অর্থাৎ আগে যত পদ খেতেন গত ৪ সপ্তাহে অভাবের কারণে তার চেয়ে কম পদ খেতে হয়েছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -562,7 +562,7 @@
                     android:id="@+id/VlblH124a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, যে খাবার আপনারা খান না, অভাবের কারনে তা খেয়ে থাকতে হয়েছে কি"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, যে খাবার আপনারা খান না, অভাবের কারণে তা খেয়ে থাকতে হয়েছে কি"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -676,7 +676,7 @@
                     android:id="@+id/VlblH125a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে কি সাধারণত যে খাবার খান, অভাবের কারনে তার থেকে কম খেয়ে থাকতে হয়েছে"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে কি সাধারণত প্রতিবেলায় যে খাবার খান, অভাবের কারণে তার থেকে কম খেয়ে থাকতে হয়েছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -790,7 +790,7 @@
                     android:id="@+id/VlblH126a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, অভাবের কারনে কোন বেলা না খেয়ে থাকতে হয়েছে কি"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার কোন সদস্যকে, অভাবের কারণে কোন বেলা না খেয়ে থাকতে হয়েছে কি"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -904,7 +904,7 @@
                     android:id="@+id/VlblH127a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে এমনকি হয়েছে যে আপনার খানায় অভাবের কারনে খাওয়ার জন্য কোন খাবার ছিল না"
+                    android:text="গত ৪ সপ্তাহে এমনকি হয়েছে যে আপনার খানায় অভাবের কারণে খাওয়ার জন্য কোন খাবার ছিল না"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1018,7 +1018,7 @@
                     android:id="@+id/VlblH128a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ট খাবার না থাকার কারণে ক্ষুধার্ত অবস্থায় রাতে ঘুমাতে হয়েছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1132,7 +1132,7 @@
                     android:id="@+id/VlblH129a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ট খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1147,7 +1147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁ  "
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
