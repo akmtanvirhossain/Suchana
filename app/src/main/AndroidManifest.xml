@@ -54,6 +54,10 @@
         <activity android:name=".AssetB_list" />
         <activity android:name=".AssetNB" />
         <activity android:name=".AssetNB_list" />
+        <activity android:name=".HDDS" />
+        <activity android:name=".HDDS_list" />
+        <activity android:name=".Savings" />
+        <activity android:name=".Savings_list" />
         <activity android:name=".Land" />
         <activity android:name=".Land_list" />
         <activity android:name=".HDDS" />
@@ -82,6 +86,7 @@
         <activity android:name=".Cost1" />
         <activity android:name=".Cost2" />
         <activity android:name=".Cost3" />
+        <activity android:name=".HandWash" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

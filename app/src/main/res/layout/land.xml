@@ -231,7 +231,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="গত ১ বছরে এই খানার মালিকানাধীন বা অধীনে ছিল এমন সব ভূমি ও জলাশয়ের বিবরণ নিবন্ধন কর"
+                    android:text="গত ১ বছরে এই খানার মালিকানাধীন বা অধীনে আছে এমন সব ভূমি ও জলাশয়ের বিবরণ নিবন্ধন করুন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -447,7 +447,7 @@
                     android:id="@+id/VlblH5c"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আয়তন/জমির পরিমান (শতাংশ)"
+                    android:text="আয়তন/জমির পরিমান (ডেসিমেল)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -485,7 +485,7 @@
                     android:id="@+id/VlblH5d"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="জমির বর্তমান ব্যবহারিকঅবস্থা"
+                    android:text="জমির বর্তমান ব্যবহারিক অবস্থা"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -522,7 +522,7 @@
                     android:id="@+id/VlblH5e"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ঋতুতে জমির ব্যবহারিক অবস্থা কি ছিল(ফসল ক্যালেন্ডার অনুযায়ী)"
+                    android:text="গত ১ বছরে জমির ব্যবহারিক অবস্থা কি ছিল"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -635,7 +635,7 @@
                     android:id="@+id/VlblH5hY"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি জমিটির মালিকানা  কত বছর থেকে ভোগ করছেন"
+                    android:text="আপনি জমিটির মালিকানা কত বছর থেকে ভোগ করছেন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -673,7 +673,7 @@
                     android:id="@+id/VlblH5hM"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি জমিটির মালিকানা  কত মাস থেকে ভোগ করছেন"
+                    android:text="আপনি জমিটির মালিকানা কত মাস থেকে ভোগ করছেন"
                     android:textSize="20sp" />
 
                 <EditText

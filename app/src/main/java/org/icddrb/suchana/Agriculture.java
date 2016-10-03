@@ -465,10 +465,18 @@ public class Agriculture extends Activity {
             listH152a.add("614-টমেটো");
             listH152a.add("615-সজনে  ");
             listH152a.add("616-পাতা সবজি  ");
-            listH152a.add("617-কলমি শাক  ");
-            listH152a.add("618-কমলা রঙ্গের মিষ্টি আলু  ");
-            listH152a.add("619-লতিরাজ কচু  ");
-            listH152a.add("620-লাল শাক ");
+            listH152a.add("617-ফুলকপি ");
+            listH152a.add("618-ওলকপি ");
+            listH152a.add("619-মুলা");
+            listH152a.add("620-বরবটি ");
+            listH152a.add("621-কচু মুখী ");
+            listH152a.add("622-কাচা কলা ");
+            listH152a.add("623-পান ");
+            listH152a.add("624-অন্যান্য সবজি ");
+            listH152a.add("625-কলমি শাক  ");
+            listH152a.add("626-কমলা রঙ্গের মিষ্টি আলু  ");
+            listH152a.add("627-লতিরাজ কচু  ");
+            listH152a.add("628-লাল শাক ");
             listH152a.add("701-হলুদ ফল");
             listH152a.add("702-সবুজ ফল");
             listH152a.add("801-রুই");
@@ -476,7 +484,7 @@ public class Agriculture extends Activity {
             listH152a.add("803-মৃগেল");
             listH152a.add("804-তেলাপিয়");
             listH152a.add("805-পাঙ্গাস");
-            listH152a.add("806-শেরপুটি");
+            listH152a.add("806-সরপুঁটি");
             listH152a.add("807-পুটি");
             listH152a.add("808-মলা ");
             listH152a.add("809-সিলভার কার্প ");
@@ -508,7 +516,7 @@ public class Agriculture extends Activity {
             listH152b.add("03-গবাদি পশুর চারণের উপযোগী ভূমি");
             listH152b.add("04-ঝোপ/জংলা জমি");
             listH152b.add("05-চাষযোগ্য পুকুর");
-            listH152b.add("06-পরিত্যক্ত পুকুর");
+            listH152b.add("06-অন্যের জমি/ পুকুর");
             listH152b.add("07-বর্জ্য/অনাবাদি জমি");
             listH152b.add("08-নদীগর্ভের/হাওরের জমি");
             listH152b.add("09-অন্যান্য আবাসিক/বাণিজ্যিক প্লট ");
@@ -698,8 +706,8 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152e1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "1" : txtH152e1.getText().toString()) < 1 || Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "99999" : txtH152e1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+            } else if (Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "1" : txtH152e1.getText().toString()) < 0 || Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "99999" : txtH152e1.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152e1.requestFocus();
                 return;
             } else if (!rdoH152e21.isChecked() & !rdoH152e22.isChecked() & secH152e2.isShown()) {
@@ -710,8 +718,8 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: বিক্রি করে কত টাকা পেয়েছিলেন.");
                 txtH152f.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "1" : txtH152f.getText().toString()) < 1 || Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "9999999" : txtH152f.getText().toString()) > 9999999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 9999999(বিক্রি করে কত টাকা পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "1" : txtH152f.getText().toString()) < 0 || Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "9999999" : txtH152f.getText().toString()) > 9999999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 9999999(বিক্রি করে কত টাকা পেয়েছিলেন).");
                 txtH152f.requestFocus();
                 return;
             } else if (txtH152g.getText().toString().length() == 0 & secH152g.isShown()) {
@@ -724,16 +732,16 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152g.requestFocus();
                 return;
-            }else if (Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 1 || Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো).");
+            }else if (Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 0 || Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো).");
                 txtH152g.requestFocus();
                 return;
             } else if (txtH152h1.getText().toString().length() == 0 & secH152h1.isShown()) {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152h1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "1" : txtH152h1.getText().toString()) < 1 || Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "99999" : txtH152h1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+            } else if (Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "1" : txtH152h1.getText().toString()) < 0 || Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "99999" : txtH152h1.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152h1.requestFocus();
                 return;
             } else if (!rdoH152h21.isChecked() & !rdoH152h22.isChecked() & secH152h2.isShown()) {
@@ -744,8 +752,8 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152i1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "1" : txtH152i1.getText().toString()) < 1 || Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "99999" : txtH152i1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+            } else if (Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "1" : txtH152i1.getText().toString()) < 0 || Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "99999" : txtH152i1.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152i1.requestFocus();
                 return;
             } else if (!rdoH152i21.isChecked() & !rdoH152i22.isChecked() & secH152i2.isShown()) {
@@ -756,8 +764,8 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152j1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "1" : txtH152j1.getText().toString()) < 1 || Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "99999" : txtH152j1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+            } else if (Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "1" : txtH152j1.getText().toString()) < 0 || Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "99999" : txtH152j1.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152j1.requestFocus();
                 return;
             } else if (!rdoH152j21.isChecked() & !rdoH152j22.isChecked() & secH152j2.isShown()) {
@@ -768,8 +776,8 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152k1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "1" : txtH152k1.getText().toString()) < 1 || Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "99999" : txtH152k1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+            } else if (Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "1" : txtH152k1.getText().toString()) < 0 || Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "99999" : txtH152k1.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152k1.requestFocus();
                 return;
             } else if (!rdoH152k21.isChecked() & !rdoH152k22.isChecked() & secH152k2.isShown()) {
@@ -785,7 +793,7 @@ public class Agriculture extends Activity {
 
             if(Integer.valueOf(txtH152d1.getText().toString())<(Integer.valueOf(txtH152e1.getText().toString())+Integer.valueOf(txtH152g.getText().toString())+Integer.valueOf(txtH152h1.getText().toString())+Integer.valueOf(txtH152i1.getText().toString())+Integer.valueOf(txtH152j1.getText().toString())+Integer.valueOf(txtH152k1.getText().toString())))
             {
-                Connection.MessageBox(Agriculture.this, "Production quantity and expenditure inconsistent .");
+                Connection.MessageBox(Agriculture.this, "Production quantity and expenditure inconsistent H152D.");
                 return;
             }
 

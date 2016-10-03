@@ -185,7 +185,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আমি আপনাকে এই খানার সদস্যগণ গত ২৪ ঘন্টায় কি কি খেয়েছে সেব্যাপারে কিছু প্রশ্ন করতে চাই"
+                    android:text="আমি আপনাকে এই খানার সদস্যগণ গত ২৪ ঘন্টায় কি কি খেয়েছে সে ব্যাপারে কিছু প্রশ্ন করতে চাই"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -492,7 +492,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -601,7 +601,7 @@
                     android:id="@+id/VlblH7b3"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="3-ক্রয় ক্রীত"
+                    android:text="3-ক্রয় কৃত"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -688,7 +688,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton

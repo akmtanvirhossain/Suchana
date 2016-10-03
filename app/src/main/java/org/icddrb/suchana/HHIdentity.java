@@ -216,6 +216,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     String VILL = "";
     ImageButton cmdForward;
     TextView lblNext;
+    ImageButton cmdHome;
     private int hour;
     private int minute;
     private int mDay;
@@ -296,7 +297,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 }
             });
-            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
@@ -471,7 +472,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
             listResult.add("");
             listResult.add("1-ইন্টারভিউ সম্পন্ন");
-            listResult.add("2-উত্তরদাত্রী/প্রধান মহিলা বাড়ি ছিলেননা");
+            listResult.add("2-উত্তরদাত্রী/প্রধান মহিলা বাড়ি ছিলেন না");
             listResult.add("3-অংশগ্রহনে অসম্মতি");
             listResult.add("4-অন্যান্য");
             listResult.add("5-ইন্টারভিউ আংশিক সম্পন্ন");
@@ -1029,15 +1030,15 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 spnH14.requestFocus();
                 return;
             } else if (!rdoH011.isChecked() & !rdoH012.isChecked() & secH01.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) নারী সদস্য রয়েছে কী? ).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহিত (বর্তমানে) নারী সদস্য রয়েছে কী? ).");
                 rdoH011.requestFocus();
                 return;
             } else if (!rdoH021.isChecked() & !rdoH022.isChecked() & secH02.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 15-40 বছর বয়সী বিবাহিত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
                 rdoH021.requestFocus();
                 return;
             } else if (!rdoH031.isChecked() & !rdoH032.isChecked() & secH03.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 0-23 মাস (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?).");
                 rdoH031.requestFocus();
                 return;
             } else if (!rdoH041.isChecked() & !rdoH042.isChecked() & secH04.isShown()) {
@@ -1045,19 +1046,19 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 rdoH041.requestFocus();
                 return;
             } else if (!rdoH051.isChecked() & !rdoH052.isChecked() & secH05.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছি কী ?).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছে কী ?).");
                 rdoH051.requestFocus();
                 return;
             } else if (!rdoH061.isChecked() & !rdoH062.isChecked() & secH06.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (সারা বছরব্যাপী পরিবারের সকল সদস্যের পর্যাপ্ত খাবারের (৩ বেলা পেট ভরে খাবারের) সুযোগ / নিশ্চয়তা আছে কী ? ).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (সারা বছরব্যাপী পরিবারের সকল সদস্যের পর্যাপ্ত খাবারের (৩ বেলা পেট ভরে খাবারের) সুযোগ /নিশ্চয়তা আছে কী ? ).");
                 rdoH061.requestFocus();
                 return;
             } else if (!rdoH071.isChecked() & !rdoH072.isChecked() & secH07.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (দুর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা? ).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (দূর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা? ).");
                 rdoH071.requestFocus();
                 return;
             } else if (!rdoH081.isChecked() & !rdoH082.isChecked() & secH08.isShown()) {
-                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?).");
+                Connection.MessageBox(HHIdentity.this, "Select anyone options from (আপনার পরিবারে 0-23 মাস (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?).");
                 rdoH081.requestFocus();
                 return;
             }
@@ -1172,8 +1173,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 e.SaveUpdateData(this);
 
                 Bundle IDBundle = new Bundle();
-                IDBundle.putString("Rnd", RND);
-                IDBundle.putString("SuchanaID", SUCHANAID);
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
 
                 if (spnResult.getSelectedItemPosition() == 1) {
 
@@ -1225,6 +1226,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             for (HHIdentity_DataModel item : data) {
                 lblNext.setVisibility(View.GONE);
                 cmdForward.setVisibility(View.GONE);
+                cmdHome.setVisibility(View.VISIBLE);
 
                 Status = "update";
                 txtRnd.setText(item.getRnd());
