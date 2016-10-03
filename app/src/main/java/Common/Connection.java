@@ -1035,10 +1035,10 @@ public class Connection extends SQLiteOpenHelper {
 
         //Download data from server
         //------------------------------------------------------------------------------
-        tableList.add("Symptom");
+        /*tableList.add("VillageList");
 
         for (int i = 0; i < tableList.size(); i++)
-            Sync_Download(tableList.get(i).toString(), UserId, "");
+            Sync_Download(tableList.get(i).toString(), UserId, "");*/
 
     }
 

@@ -89,6 +89,7 @@ public class MainMenu extends Activity {
                                 public void run() {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
+                                        //Village List
                                         tableList.add("EntryStatus");
 
                                         //Household
@@ -113,6 +114,7 @@ public class MainMenu extends Activity {
                                         tableList.add("IGA");
 
                                         //Woman, Child
+
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 
