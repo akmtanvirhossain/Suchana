@@ -196,6 +196,7 @@ public class AssetB extends Activity {
     Button buttonAssetType21;
     Button buttonAssetType22;
     Button cmdSave;
+    ImageButton cmdForward;
     private int hour;
     private int minute;
     private int mDay;
@@ -273,7 +274,7 @@ public class AssetB extends Activity {
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
@@ -1070,6 +1071,7 @@ public class AssetB extends Activity {
             cmdSave.setText("SAVE");
         }
 
+
         for (AssetB_DataModel item : data) {
 
             int code = Integer.valueOf(item.getH41a());
@@ -1342,6 +1344,8 @@ public class AssetB extends Activity {
                     startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
                     // Connection.MessageBox(AssetB.this, "Saved Successfully");
                 }
+
+
             } else {
                 Connection.MessageBox(AssetB.this, status);
                 return;
@@ -1505,6 +1509,15 @@ public class AssetB extends Activity {
 
                 txtH41o4X.setText("");
             }
+            AssetB_DataModel dx = new AssetB_DataModel();
+            String SQLx = "Select H41a from " + TableName + "  Where H41a < 21 Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+            List<AssetB_DataModel> datax = d.SelectH41a(this, SQLx);
+            if (datax.size() > 19) {
+
+                cmdForward.setVisibility(View.VISIBLE);
+
+            }
+
         } catch (Exception e) {
             Connection.MessageBox(AssetB.this, e.getMessage());
             return;

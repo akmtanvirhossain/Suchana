@@ -412,14 +412,13 @@
                     android:text="মালিকানা"
                     android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/txtH5b"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
+                <Spinner
+                    android:id="@+id/spnH5b"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -456,7 +455,7 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -644,7 +643,6 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
                     android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>

@@ -411,7 +411,19 @@ public class Member extends Activity {
                 @Override
                 public void afterTextChanged(Editable s) {
                     if (txtH26Y.getText().toString().length() != 0) {
+
+                        if (Integer.valueOf(txtH26Y.getText().toString()) < 02) {
+                            secH220.setVisibility(View.VISIBLE);
+                            lineH220.setVisibility(View.VISIBLE);
+                        } else {
+                            rdogrpH220.clearCheck();
+                            secH220.setVisibility(View.GONE);
+                            lineH220.setVisibility(View.GONE);
+                        }
+
                         if (Integer.valueOf(txtH26Y.getText().toString()) < 05) {
+
+
                             txtH26M.setText("");
                             spnH27.setSelection(0);
                             txtH28.setText("");
@@ -430,7 +442,7 @@ public class Member extends Activity {
                             txtH217.setText("");
                             txtH218.setText("");
                             txtH219.setText("");
-                            rdogrpH220.clearCheck();
+
                             /*txtH220.setText("");
                             txtH221.setText("");
                             txtH222.setText("");*/
@@ -469,8 +481,6 @@ public class Member extends Activity {
                             lineH218.setVisibility(View.GONE);
                             secH219.setVisibility(View.GONE);
                             lineH219.setVisibility(View.GONE);
-                            secH220.setVisibility(View.GONE);
-                            lineH220.setVisibility(View.GONE);
                             secH221.setVisibility(View.GONE);
                             lineH221.setVisibility(View.GONE);
                             secH222.setVisibility(View.GONE);
@@ -512,8 +522,6 @@ public class Member extends Activity {
                             lineH218.setVisibility(View.VISIBLE);
                             secH219.setVisibility(View.VISIBLE);
                             lineH219.setVisibility(View.VISIBLE);
-                            secH220.setVisibility(View.VISIBLE);
-                            lineH220.setVisibility(View.VISIBLE);
                             secH221.setVisibility(View.VISIBLE);
                             lineH221.setVisibility(View.VISIBLE);
                             secH222.setVisibility(View.VISIBLE);
@@ -546,8 +554,21 @@ public class Member extends Activity {
                     if (position == 1) {
                         txtH28.setText("");
                         secH28.setVisibility(View.GONE);
+                        lineH28.setVisibility(View.GONE);
+                        secH222.setVisibility(View.GONE);
+                        lineH222.setVisibility(View.GONE);
+
                     } else {
+                        if (position == 2) {
+                            secH222.setVisibility(View.VISIBLE);
+                            lineH222.setVisibility(View.VISIBLE);
+                        } else {
+                            secH222.setVisibility(View.GONE);
+                            lineH222.setVisibility(View.GONE);
+                        }
+
                         secH28.setVisibility(View.VISIBLE);
+                        lineH28.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -595,15 +616,46 @@ public class Member extends Activity {
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
+
             secH29X = (LinearLayout) findViewById(R.id.secH29X);
             lineH29X = (View) findViewById(R.id.lineH29X);
             VlblH29X = (TextView) findViewById(R.id.VlblH29X);
             txtH29X = (EditText) findViewById(R.id.txtH29X);
             secH29X.setVisibility(View.GONE);
+
+            String SQL = "Select H29,H29X from member where MSlNo=1 and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
+            Member_DataModel d = new Member_DataModel();
+            List<Member_DataModel> data = d.SelectAll(this, SQL);
+            for (Member_DataModel item : data) {
+
+                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
+
+                if (item.getH29().equals("5")) {
+                    txtH29X.setText(item.getH29X());
+                }
+
+            }
+
             secH210 = (LinearLayout) findViewById(R.id.secH210);
             lineH210 = (View) findViewById(R.id.lineH210);
             VlblH210 = (TextView) findViewById(R.id.VlblH210);
             rdogrpH210 = (RadioGroup) findViewById(R.id.rdogrpH210);
+
+
+            RadioButton rb;
+            String SQLr = "Select H210 from member where MSlNo=1 and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
+            Member_DataModel dr = new Member_DataModel();
+            List<Member_DataModel> datar = d.SelectAll(this, SQLr);
+            for (Member_DataModel item : datar) {
+
+                String[] d_rdogrpH210 = new String[]{"1", "2"};
+                for (int i = 0; i < d_rdogrpH210.length; i++) {
+                    if (item.getH210().equals(String.valueOf(d_rdogrpH210[i]))) {
+                        rb = (RadioButton) rdogrpH210.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+            }
 
             rdoH2101 = (RadioButton) findViewById(R.id.rdoH2101);
             rdoH2102 = (RadioButton) findViewById(R.id.rdoH2102);
@@ -662,6 +714,8 @@ public class Member extends Activity {
                             secH213.setVisibility(View.GONE);
                             lineH213.setVisibility(View.GONE);
                             spnH213.setSelection(0);
+                        } else {
+                            secH213.setVisibility(View.VISIBLE);
                         }
                     } else {
                         secH212X.setVisibility(View.VISIBLE);
