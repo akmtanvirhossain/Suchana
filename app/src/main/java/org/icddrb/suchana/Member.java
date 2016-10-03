@@ -877,9 +877,8 @@ public class Member extends Activity {
                 }
             });
         } catch (Exception e) {
-            throw e;
-            //  Connection.MessageBox(Member.this, e.getMessage());
-            // return;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
         }
     }
 
@@ -952,8 +951,8 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "খানা প্রধান এর বয়স ১৫ বছরের কম হতে পারবেনা ");
                 txtH26Y.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "1" : txtH26Y.getText().toString()) < 1 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
-                Connection.MessageBox(Member.this, "Value should be between 12 and 125(বছর).");
+            } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString()) < 0 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 125(বছর).");
                 txtH26Y.requestFocus();
                 return;
             } else if (txtH26M.getText().toString().length() == 0 & secH26M.isShown()) {
@@ -1075,7 +1074,7 @@ public class Member extends Activity {
                     return;
                 }
             }
-            if (txtH219.getText().toString().length() != 0 & secH219.isShown()) {
+            if (txtH219.getText().toString().length() != 0 & secH219.isShown() & secH217.isShown()) {
                 if (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH217.getText().toString()) || (Integer.valueOf(txtH219.getText().toString()) < Integer.valueOf(txtH218.getText().toString()))) {
                     Connection.MessageBox(Member.this, "বছরের আয় মাসিক আয়ের থেকে কম হবেনা ");
                     txtH219.requestFocus();
@@ -1251,7 +1250,8 @@ public class Member extends Activity {
                 return;
             }
         } catch (Exception e) {
-            throw e;
+            Connection.MessageBox(Member.this, e.getMessage());
+            return;
 
         }
     }

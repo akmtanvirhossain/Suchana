@@ -264,7 +264,7 @@ public class UpdateMenu extends Activity {
                 }
             });
 
-            cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+            //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
             //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
 
 

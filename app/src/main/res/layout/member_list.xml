@@ -11,18 +11,11 @@
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/cmdHome"
-            android:layout_width="50sp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="5sp"
-            android:layout_marginEnd="5sp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginRight="15sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginTop="5sp"
-            android:background="#ffffff"
-            android:src="@drawable/home" />
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
         <ImageButton
             android:id="@+id/cmdBack"
@@ -97,14 +90,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:gravity="end"
-        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnMemberName"
@@ -115,7 +100,7 @@
             android:layout_marginRight="20sp"
             android:layout_marginTop="5dip"
             android:background="@drawable/button_style_blue"
-            android:text=" Member Name List "
+            android:text=" Add Member Name "
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -130,7 +115,8 @@
             android:paddingRight="5sp"
             android:text=" Refresh "
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -145,7 +131,8 @@
             android:paddingRight="5sp"
             android:text="Add New Member"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <HorizontalScrollView

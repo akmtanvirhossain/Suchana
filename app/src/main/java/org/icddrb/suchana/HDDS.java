@@ -595,9 +595,8 @@ public class HDDS extends Activity {
             });
         } catch (Exception e) {
 
-            throw e;
-            // Connection.MessageBox(HDDS.this, e.getMessage());
-            //return;
+            Connection.MessageBox(HDDS.this, e.getMessage());
+            return;
         }
     }
 
@@ -914,9 +913,9 @@ public class HDDS extends Activity {
                 }
 
         } catch (Exception e) {
-            throw e;
-//            Connection.MessageBox(HDDS.this, e.getMessage());
-            //          return;
+
+            Connection.MessageBox(HDDS.this, e.getMessage());
+            return;
         }
     }
 

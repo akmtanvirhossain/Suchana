@@ -17,7 +17,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10sp"
             android:background="#ffffff"
-            android:src="@drawable/home" />
+            android:src="@drawable/home"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/cmdBack"
