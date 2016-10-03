@@ -855,6 +855,7 @@ public class SES extends Activity {
             spnH324 = (Spinner) findViewById(R.id.spnH324);
             List<String> listH324 = new ArrayList<String>();
 
+
             listH324.add("");
             listH324.add("1-কেরোসিন ল্যাম্প/লন্ঠন/হারিকেন/কুপিবাতি");
             listH324.add("2-বিদ্যুৎ");
