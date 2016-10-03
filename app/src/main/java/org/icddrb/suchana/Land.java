@@ -244,13 +244,13 @@ public class Land extends Activity {
 
             listH5.add("");
             listH5.add("1-ভিটেমাটি");
-            listH5.add("2-চাষযোগ্য বা আবাদী জমি");
+            listH5.add("2-চাষযোগ্য আবাদী জমি");
             listH5.add("3-গবাদি পশুর চারণের উপযোগী");
             listH5.add("4-ভূমিঝোপ/জংলা জমি");
             listH5.add("5-চাষযোগ্য পুকুর");
             listH5.add("6-পরিত্যক্ত পুকুর");
             listH5.add("7-বর্জ্য বা অনাবাদি জমি");
-            listH5.add("8-নদীগর্ভের বা হাওরের জমি");
+            listH5.add("8-নদীগর্ভে/হাওরের জমি");
             listH5.add("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
             ArrayAdapter<String> adptrH5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5);
             spnH5.setAdapter(adptrH5);
@@ -266,7 +266,7 @@ public class Land extends Activity {
             listH5a.add("2-শাকসবজি");
             listH5a.add("3-ফল ");
             listH5a.add("4-মাছ");
-            listH5a.add("5-হাস/মুরগি");
+            listH5a.add("5-হাঁস/মুরগি");
             listH5a.add("6-গবাদিপশু");
             listH5a.add("7-অনান্য");
             listH5a.add("8-কিছুনা");
@@ -312,11 +312,11 @@ public class Land extends Activity {
             listH5d.add("");
             listH5d.add("1-পতিত জমি");
             listH5d.add("2-নিজপরিচালিত");
-            listH5d.add("3-ভাড়া বা ইজারা নেয়া বা নগদ");
-            listH5d.add("4-ভাড়া বা ইজারা নেয়া বা ফসল ভাগাভাগি");
+            listH5d.add("3-ভাড়া বা ইজারা নেয়া (নগদ)");
+            listH5d.add("4-ভাড়া বা ইজারা নেয়া (ফসল ভাগাভাগি)");
             listH5d.add("5-বন্ধকনেয়া");
-            listH5d.add("6-ভাড়া বা ইজারা দেয়া বা নগদ");
-            listH5d.add("7-ভাড়া বা ইজারা দেয়া বা ফসল ভাগাভাগি");
+            listH5d.add("6-ভাড়া বা ইজারা দেয়া (নগদ)");
+            listH5d.add("7-ভাড়া বা ইজারা দেয়া (ফসল ভাগাভাগি)");
             listH5d.add("8-বন্ধক দেয়া");
             ArrayAdapter<String> adptrH5d = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH5d);
             spnH5d.setAdapter(adptrH5d);

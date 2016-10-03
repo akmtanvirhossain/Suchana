@@ -685,7 +685,7 @@
                     android:id="@+id/VlblH211"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="সাক্ষর জ্ঞান"
+                    android:text="স্বাক্ষর জ্ঞান"
                     android:textSize="20sp" />
 
                 <Spinner

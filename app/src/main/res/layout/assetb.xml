@@ -231,7 +231,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="নিম্নে বর্ণিত বিষয় সমূহ কি আপনার খানার মালিকাধিনে আছে ( প্রতিপালনের জন্য দেয়া সম্পদ সহ )"
+                    android:text="নিম্নে বর্ণিত বিষয় সমূহ কি আপনার খানার মালিকানাধীনে আছে ( প্রতিপালনের জন্য দেয়া সম্পদ সহ )"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1114,7 +1114,7 @@
                     android:id="@+id/VlblH41m"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="এই সম্পদ বিক্রী বা হস্তান্তরের সময় মূল্য কত ছিল"
+                    android:text="এই সম্পদ বিক্রি বা হস্তান্তরের সময় মূল্য কত ছিল"
                     android:textSize="20sp" />
 
                 <EditText

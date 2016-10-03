@@ -566,17 +566,17 @@ public class AssetB extends Activity {
             listH41a.add("04-ছাগল / ভেড়া");
             listH41a.add("05-শূকর");
             listH41a.add("06-মাছ");
-            listH41a.add("07-অন্যান্য পশুপাখি (উল্লেখ কর)");
+            listH41a.add("07-অন্যান্য পশুপাখি (উল্লেখ করুন)");
             listH41a.add("08-লাঙ্গল");
             listH41a.add("09-মাড়াইয়ের যন্ত্র");
             listH41a.add("10-গোয়াল ঘর");
-            listH41a.add("11-দোকানের জন্য প্রাঙ্গন");
-            listH41a.add("12-শষ্য সংরক্ষনের চলা/গুদাম");
+            listH41a.add("11-দোকানের জন্য প্রাঙ্গন/জমি");
+            listH41a.add("12-শষ্য সংরক্ষনের চলা/গুদাম ঘর");
             listH41a.add("13-নৌকা");
             listH41a.add("14-মোটর চালিত নৌকা");
             listH41a.add("15-মাছ ধরার জাল");
             listH41a.add("16-রিক্সা/ভ্যান");
-            listH41a.add("17-গাছ");
+            listH41a.add("17-গাছ (১০০ টাকার অধিক)");
             listH41a.add("18-ঠেলা গাড়ী");
             listH41a.add("19-সেলাই মেশিন");
             listH41a.add("20-CNG/নসিমন");
@@ -693,9 +693,9 @@ public class AssetB extends Activity {
             listH41e.add("3-উপহার");
             listH41e.add("4-যৌতুক");
             listH41e.add("5-নিজে তৈরী করা");
-            listH41e.add("6-সুচনা প্রজেক্ট");
+            listH41e.add("6-সূচনা প্রজেক্ট");
             listH41e.add("7-অন্যান্য এনজিও");
-            listH41e.add("8-সরকার");
+            listH41e.add("8-সরকারী");
             listH41e.add("9-যৌথ উৎপাদন থেকে প্রাপ্ত অংশ");
             listH41e.add("10-অন্যান্য");
             ArrayAdapter<String> adptrH41e = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH41e);
@@ -750,7 +750,7 @@ public class AssetB extends Activity {
             listH41f.add("6-অন্যান্য এনজিও থেকে ধার");
             listH41f.add("7-ব্যাংক থেকে ধার");
             listH41f.add("8-মহাজনদের কাছ থেকে ধার");
-            listH41f.add("9-সুচনা প্রজেক্ট");
+            listH41f.add("9-সূচনা প্রজেক্ট");
             listH41f.add("10-অন্যান্য");
             ArrayAdapter<String> adptrH41f = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH41f);
             spnH41f.setAdapter(adptrH41f);
@@ -863,11 +863,11 @@ public class AssetB extends Activity {
             List<String> listH41k = new ArrayList<String>();
 
             listH41k.add("");
-            listH41k.add("1-অনান্য এনজিও");
+            listH41k.add("1-অন্যান্য এনজিও");
             listH41k.add("2-ভাই বোন");
-            listH41k.add("3-আত্মীয়স্বজন");
+            listH41k.add("3-আত্মীয় স্বজন");
             listH41k.add("4-বন্ধু প্রতিবেশীর");
-            listH41k.add("5-সুচনা প্রজেক্ট");
+            listH41k.add("5-সূচনা প্রজেক্ট");
             listH41k.add("6-অন্যান্য");
             ArrayAdapter<String> adptrH41k = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH41k);
             spnH41k.setAdapter(adptrH41k);

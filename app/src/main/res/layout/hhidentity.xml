@@ -17,7 +17,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10sp"
             android:background="#ffffff"
-            android:src="@drawable/home" />
+            android:src="@drawable/home"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/cmdBack"
@@ -423,7 +424,7 @@
                         android:id="@+id/VlblH17"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="প্রথম পরিদর্শনের তরিখ"
+                        android:text="প্রথম পরিদর্শনের তারিখ"
                         android:textSize="20sp" />
 
 
@@ -533,7 +534,7 @@
                         android:id="@+id/VlblH16"
                         android:layout_width="230sp"
                         android:layout_height="wrap_content"
-                        android:text="খানা’র নৃতাত্ত্বিক  গোষ্ঠী"
+                        android:text="খানার নৃতাত্ত্বিক গোষ্ঠ পরিচয়"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -676,7 +677,7 @@
                         android:id="@+id/VlblH14"
                         android:layout_width="250sp"
                         android:layout_height="wrap_content"
-                        android:text="সুচনা অনুসরে খানা’র গ্রুপ"
+                        android:text="সূচনা অনুসরে খানা’র গ্রুপ"
                         android:textSize="20sp" />
 
                     <Spinner
@@ -735,7 +736,7 @@
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) নারী সদস্য রয়েছে কী?"
+                        android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহিত (বর্তমানে) নারী সদস্য রয়েছে কী?"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -788,7 +789,7 @@
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহীত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
+                        android:text="আপনার পরিবারে 15-40 বছর বয়সী বিবাহিত (বর্তমানে) গর্ভবতী কিন্তু স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -947,7 +948,7 @@
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছি কী ?"
+                        android:text="আপনার পরিবারের মূল উপার্জনকারীর সারা বছরব্যাপী কাজের সুযোগ আছে কী ?"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -1053,7 +1054,7 @@
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="দুর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা?"
+                        android:text="দূর্দশার সময়/খারাপ সময় বেচে থাকার জন্য বিরূপ (নিজের জন্য ক্ষতিকর) কোনো ব্যবস্থা গ্রহন করেন কিনা?"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -1139,7 +1140,7 @@
                         android:id="@+id/VlblH07b"
                         android:layout_width="300sp"
                         android:layout_height="wrap_content"
-                        android:text="2-মূল্যবান উত্পাদনশীল সম্পদ বিক্রী"
+                        android:text="2-মূল্যবান উত্পাদনশীল সম্পদ বিক্রি "
                         android:textSize="20sp" />
 
                     <CheckBox
@@ -1174,7 +1175,7 @@
                         android:id="@+id/VlblH07c"
                         android:layout_width="300sp"
                         android:layout_height="wrap_content"
-                        android:text="3-উপশ করা"
+                        android:text="3-উপোষ করা"
                         android:textSize="20sp" />
 
                     <CheckBox
@@ -1349,7 +1350,7 @@
                         android:id="@+id/VlblH07h"
                         android:layout_width="300sp"
                         android:layout_height="wrap_content"
-                        android:text="8-আত্তীয় স্বজন থেকে ধার করা"
+                        android:text="8-আত্মীয়  স্বজন থেকে ধার করা"
                         android:textSize="20sp" />
 
                     <CheckBox
@@ -1385,7 +1386,7 @@
                         android:id="@+id/VlblH08"
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
-                        android:text="আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?"
+                        android:text="আপনার পরিবারে 0-23 মাস (under 2 years) শিশু সহ 15-40 বছর বয়সী নারী সদস্য রয়েছে কী যে বর্তমানে গর্ভবতী না ?"
                         android:textSize="20sp" />
 
                     <RadioGroup

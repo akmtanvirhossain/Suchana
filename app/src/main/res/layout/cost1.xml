@@ -16,14 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageButton
-            android:id="@+id/cmdHome"
-            android:layout_width="50sp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10sp"
-            android:background="#ffffff"
-            android:src="@drawable/home" />
-
-        <ImageButton
             android:id="@+id/cmdBack"
             android:layout_width="50sp"
             android:layout_height="match_parent"
@@ -37,7 +29,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Cost 1"
+            android:text="HDDS"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -48,7 +40,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Cost 2"
+            android:text="Cost 1"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -59,7 +51,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Cost 3"
+            android:text="Cost 2"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -156,7 +148,7 @@
                     android:layout_width="145sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -178,6 +170,7 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="MSlNo"
                     android:textSize="20sp" />
 
                 <TextView
@@ -204,153 +197,153 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH87"
+                android:id="@+id/secLBH8"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH87"
+                    android:id="@+id/lblHLBH8"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে সবজি/ফল ক্রয় করেছেন"
+                    android:text="খাদ্যের জন্য ব্যয় : গত  1month এর অনুস্মরণ"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH87"
+                android:id="@+id/lineLBH8"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH87"
+                android:id="@+id/secH81"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH87"
+                    android:id="@+id/lblH81"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H87"
+                    android:text="H81"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH87"
+                    android:id="@+id/VlblH81"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে সবজি/ফল ক্রয় করেছেন?"
+                    android:text="আপনি গত মাসে চাল / গম / রুটি কিনেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH87"
+                    android:id="@+id/rdogrpH81"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH871"
+                        android:id="@+id/rdoH811"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH872"
+                        android:id="@+id/rdoH812"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH87"
+                android:id="@+id/lineH81"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH871a"
+                android:id="@+id/secH811a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH871a"
+                    android:id="@+id/lblH811a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H871a"
+                    android:text="H811a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH871a"
+                    android:id="@+id/VlblH811a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="পাতাওয়ালা সবজি   কিনেছে"
+                    android:text="চাল  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH871a"
+                    android:id="@+id/rdogrpH811a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH871a1"
+                        android:id="@+id/rdoH811a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH871a2"
+                        android:id="@+id/rdoH811a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH871a"
+                android:id="@+id/lineH811a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH871b"
+                android:id="@+id/secH811b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH871b"
+                    android:id="@+id/lblH811b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H871b"
+                    android:text="H811b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH871b"
+                    android:id="@+id/VlblH811b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH871b"
+                    android:id="@+id/txtH811b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -361,94 +354,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH871b"
+                android:id="@+id/lineH811b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH871c"
+                android:id="@+id/secH811c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH871c"
+                    android:id="@+id/lblH811c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H871c"
+                    android:text="H811c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH871c"
+                    android:id="@+id/VlblH811c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH871c"
+                    android:id="@+id/rdogrpH811c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH871c1"
+                        android:id="@+id/rdoH811c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH871c2"
+                        android:id="@+id/rdoH811c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH871c3"
+                        android:id="@+id/rdoH811c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH871c"
+                android:id="@+id/lineH811c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH871d"
+                android:id="@+id/secH811d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH871d"
+                    android:id="@+id/lblH811d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H871d"
+                    android:text="H811d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH871d"
+                    android:id="@+id/VlblH811d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH871d"
+                    android:id="@+id/txtH811d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -459,86 +452,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH871d"
+                android:id="@+id/lineH811d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH872a"
+                android:id="@+id/secH812a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH872a"
+                    android:id="@+id/lblH812a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H872a"
+                    android:text="H812a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH872a"
+                    android:id="@+id/VlblH812a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="পাতাছাড়া সবজি   কিনেছে"
+                    android:text="গম  ময়দা সুজি  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH872a"
+                    android:id="@+id/rdogrpH812a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH872a1"
+                        android:id="@+id/rdoH812a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH872a2"
+                        android:id="@+id/rdoH812a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH872a"
+                android:id="@+id/lineH812a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH872b"
+                android:id="@+id/secH812b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH872b"
+                    android:id="@+id/lblH812b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H872b"
+                    android:text="H812b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH872b"
+                    android:id="@+id/VlblH812b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH872b"
+                    android:id="@+id/txtH812b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -549,94 +542,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH872b"
+                android:id="@+id/lineH812b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH872c"
+                android:id="@+id/secH812c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH872c"
+                    android:id="@+id/lblH812c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H872c"
+                    android:text="H812c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH872c"
+                    android:id="@+id/VlblH812c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH872c"
+                    android:id="@+id/rdogrpH812c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH872c1"
+                        android:id="@+id/rdoH812c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH872c2"
+                        android:id="@+id/rdoH812c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH872c3"
+                        android:id="@+id/rdoH812c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH872c"
+                android:id="@+id/lineH812c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH872d"
+                android:id="@+id/secH812d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH872d"
+                    android:id="@+id/lblH812d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H872d"
+                    android:text="H812d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH872d"
+                    android:id="@+id/VlblH812d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH872d"
+                    android:id="@+id/txtH812d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -647,86 +640,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH872d"
+                android:id="@+id/lineH812d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH873a"
+                android:id="@+id/secH813a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH873a"
+                    android:id="@+id/lblH813a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H873a"
+                    android:text="H813a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH873a"
+                    android:id="@+id/VlblH813a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="শেকড়ওয়ালা সবজি  কিনেছে"
+                    android:text="শেঁকা রুটি  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH873a"
+                    android:id="@+id/rdogrpH813a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH873a1"
+                        android:id="@+id/rdoH813a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH873a2"
+                        android:id="@+id/rdoH813a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH873a"
+                android:id="@+id/lineH813a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH873b"
+                android:id="@+id/secH813b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH873b"
+                    android:id="@+id/lblH813b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H873b"
+                    android:text="H813b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH873b"
+                    android:id="@+id/VlblH813b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH873b"
+                    android:id="@+id/txtH813b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -737,94 +730,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH873b"
+                android:id="@+id/lineH813b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH873c"
+                android:id="@+id/secH813c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH873c"
+                    android:id="@+id/lblH813c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H873c"
+                    android:text="H813c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH873c"
+                    android:id="@+id/VlblH813c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH873c"
+                    android:id="@+id/rdogrpH813c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH873c1"
+                        android:id="@+id/rdoH813c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH873c2"
+                        android:id="@+id/rdoH813c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH873c3"
+                        android:id="@+id/rdoH813c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH873c"
+                android:id="@+id/lineH813c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH873d"
+                android:id="@+id/secH813d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH873d"
+                    android:id="@+id/lblH813d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H873d"
+                    android:text="H813d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH873d"
+                    android:id="@+id/VlblH813d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH873d"
+                    android:id="@+id/txtH813d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -835,86 +828,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH873d"
+                android:id="@+id/lineH813d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH874a"
+                android:id="@+id/secH814a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH874a"
+                    android:id="@+id/lblH814a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H874a"
+                    android:text="H814a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH874a"
+                    android:id="@+id/VlblH814a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ফল  কিনেছে"
+                    android:text="চিড়া মুড়ি  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH874a"
+                    android:id="@+id/rdogrpH814a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH874a1"
+                        android:id="@+id/rdoH814a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH874a2"
+                        android:id="@+id/rdoH814a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH874a"
+                android:id="@+id/lineH814a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH874b"
+                android:id="@+id/secH814b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH874b"
+                    android:id="@+id/lblH814b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H874b"
+                    android:text="H814b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH874b"
+                    android:id="@+id/VlblH814b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH874b"
+                    android:id="@+id/txtH814b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -925,94 +918,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH874b"
+                android:id="@+id/lineH814b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH874c"
+                android:id="@+id/secH814c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH874c"
+                    android:id="@+id/lblH814c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H874c"
+                    android:text="H814c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH874c"
+                    android:id="@+id/VlblH814c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH874c"
+                    android:id="@+id/rdogrpH814c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH874c1"
+                        android:id="@+id/rdoH814c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH874c2"
+                        android:id="@+id/rdoH814c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH874c3"
+                        android:id="@+id/rdoH814c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH874c"
+                android:id="@+id/lineH814c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH874d"
+                android:id="@+id/secH814d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH874d"
+                    android:id="@+id/lblH814d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H874d"
+                    android:text="H814d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH874d"
+                    android:id="@+id/VlblH814d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH874d"
+                    android:id="@+id/txtH814d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1023,86 +1016,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH874d"
+                android:id="@+id/lineH814d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH875a"
+                android:id="@+id/secH815a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH875a"
+                    android:id="@+id/lblH815a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H875a"
+                    android:text="H815a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH875a"
+                    android:id="@+id/VlblH815a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ফল শুধু কলা কিনেছে"
+                    android:text="সেমাই  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH875a"
+                    android:id="@+id/rdogrpH815a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH875a1"
+                        android:id="@+id/rdoH815a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH875a2"
+                        android:id="@+id/rdoH815a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH875a"
+                android:id="@+id/lineH815a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH875b"
+                android:id="@+id/secH815b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH875b"
+                    android:id="@+id/lblH815b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H875b"
+                    android:text="H815b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH875b"
+                    android:id="@+id/VlblH815b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH875b"
+                    android:id="@+id/txtH815b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1113,94 +1106,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH875b"
+                android:id="@+id/lineH815b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH875c"
+                android:id="@+id/secH815c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH875c"
+                    android:id="@+id/lblH815c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H875c"
+                    android:text="H815c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH875c"
+                    android:id="@+id/VlblH815c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH875c"
+                    android:id="@+id/rdogrpH815c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH875c1"
+                        android:id="@+id/rdoH815c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH875c2"
+                        android:id="@+id/rdoH815c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH875c3"
+                        android:id="@+id/rdoH815c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH875c"
+                android:id="@+id/lineH815c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH875d"
+                android:id="@+id/secH815d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH875d"
+                    android:id="@+id/lblH815d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H875d"
+                    android:text="H815d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH875d"
+                    android:id="@+id/VlblH815d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH875d"
+                    android:id="@+id/txtH815d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1211,159 +1204,556 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH875d"
+                android:id="@+id/lineH815d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH88"
+                android:id="@+id/secH816a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH88"
+                    android:id="@+id/lblH816a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H816a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH816a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="বিস্কিট  কিনেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH816a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH816a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH816a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH816a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH816b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH816b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H816b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH816b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="পরিমাণ(সংখ্যা)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH816b"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH816b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH816c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH816c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H816c"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH816c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ইউনিট"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH816c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH816c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="গ্রাম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH816c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="কেজি"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH816c3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="সংখ্যা"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH816c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH816d"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH816d"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H816d"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH816d"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH816d"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH816d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secLBH82"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHLBH82"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে  গুড়া মশলা ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে ডাল ক্রয় করেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH88"
+                android:id="@+id/lineLBH82"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH88"
+                android:id="@+id/secH821a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH88"
+                    android:id="@+id/lblH821a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H88"
+                    android:text="H821a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH88"
+                    android:id="@+id/VlblH821a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে গুড়া মশলা ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে ডাল ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH88"
+                    android:id="@+id/rdogrpH821a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH881"
+                        android:id="@+id/rdoH821a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH882"
+                        android:id="@+id/rdoH821a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH821a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH821b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH821b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H821b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH821b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="পরিমাণ(সংখ্যা)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH821b"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH821b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH821c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH821c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H821c"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH821c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ইউনিট"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH821c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH821c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="গ্রাম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH821c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="কেজি"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH821c3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="সংখ্যা"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH821c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH821d"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH821d"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H821d"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH821d"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH821d"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH821d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secLBH83"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHLBH83"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে ভোজ্য তেল ক্রয় করেছেন"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineLBH83"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH83"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH83"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H83"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH83"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে ভোজ্য তেল ক্রয় করেছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH831"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH832"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
                         android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH88"
+                android:id="@+id/lineH83"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH881a"
+                android:id="@+id/secH831a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH881a"
+                    android:id="@+id/lblH831a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H881a"
+                    android:text="H831a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH881a"
+                    android:id="@+id/VlblH831a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text=" পেঁয়াজ  কিনেছে"
+                    android:text="সয়াবিন তেল  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH881a"
+                    android:id="@+id/rdogrpH831a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH881a1"
+                        android:id="@+id/rdoH831a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH881a2"
+                        android:id="@+id/rdoH831a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH881a"
+                android:id="@+id/lineH831a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH881b"
+                android:id="@+id/secH831b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH881b"
+                    android:id="@+id/lblH831b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H881b"
+                    android:text="H831b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH881b"
+                    android:id="@+id/VlblH831b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH881b"
+                    android:id="@+id/txtH831b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1374,94 +1764,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH881b"
+                android:id="@+id/lineH831b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH881c"
+                android:id="@+id/secH831c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH881c"
+                    android:id="@+id/lblH831c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H881c"
+                    android:text="H831c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH881c"
+                    android:id="@+id/VlblH831c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH881c"
+                    android:id="@+id/rdogrpH831c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH881c1"
+                        android:id="@+id/rdoH831c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH881c2"
+                        android:id="@+id/rdoH831c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH881c3"
+                        android:id="@+id/rdoH831c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH881c"
+                android:id="@+id/lineH831c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH881d"
+                android:id="@+id/secH831d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH881d"
+                    android:id="@+id/lblH831d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H881d"
+                    android:text="H831d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH881d"
+                    android:id="@+id/VlblH831d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH881d"
+                    android:id="@+id/txtH831d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1472,86 +1862,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH881d"
+                android:id="@+id/lineH831d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH882a"
+                android:id="@+id/secH832a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH882a"
+                    android:id="@+id/lblH832a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H882a"
+                    android:text="H832a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH882a"
+                    android:id="@+id/VlblH832a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="রসুন  কিনেছে"
+                    android:text="সরিষা তেল  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH882a"
+                    android:id="@+id/rdogrpH832a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH882a1"
+                        android:id="@+id/rdoH832a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH882a2"
+                        android:id="@+id/rdoH832a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH882a"
+                android:id="@+id/lineH832a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH882b"
+                android:id="@+id/secH832b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH882b"
+                    android:id="@+id/lblH832b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H882b"
+                    android:text="H832b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH882b"
+                    android:id="@+id/VlblH832b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH882b"
+                    android:id="@+id/txtH832b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1562,94 +1952,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH882b"
+                android:id="@+id/lineH832b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH882c"
+                android:id="@+id/secH832c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH882c"
+                    android:id="@+id/lblH832c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H882c"
+                    android:text="H832c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH882c"
+                    android:id="@+id/VlblH832c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH882c"
+                    android:id="@+id/rdogrpH832c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH882c1"
+                        android:id="@+id/rdoH832c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH882c2"
+                        android:id="@+id/rdoH832c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH882c3"
+                        android:id="@+id/rdoH832c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH882c"
+                android:id="@+id/lineH832c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH882d"
+                android:id="@+id/secH832d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH882d"
+                    android:id="@+id/lblH832d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H882d"
+                    android:text="H832d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH882d"
+                    android:id="@+id/VlblH832d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH882d"
+                    android:id="@+id/txtH832d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -1660,671 +2050,159 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH882d"
+                android:id="@+id/lineH832d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH883a"
-                style="@style/rowStyle0"
+                android:id="@+id/secLBH84"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH883a"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H883a"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH883a"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="আদা  কিনেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH883a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH883a1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH883a2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text=" না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH883a"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH883b"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH883b"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H883b"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH883b"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="পরিমাণ(সংখ্যা)"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH883b"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH883b"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH883c"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH883c"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H883c"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH883c"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="ইউনিট"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH883c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH883c1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="গ্রাম"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH883c2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="কেজি"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH883c3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="সংখ্যা"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH883c"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH883d"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH883d"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H883d"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH883d"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH883d"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH883d"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH884a"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH884a"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H884a"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH884a"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="মরিচ শুকনো মরিচ কিনেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH884a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH884a1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH884a2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text=" না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH884a"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH884b"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH884b"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H884b"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH884b"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="পরিমাণ(সংখ্যা)"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH884b"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH884b"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH884c"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH884c"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H884c"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH884c"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="ইউনিট"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH884c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH884c1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="গ্রাম"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH884c2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="কেজি"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH884c3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="সংখ্যা"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH884c"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH884d"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH884d"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H884d"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH884d"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH884d"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH884d"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH885a"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH885a"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H885a"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH885a"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="জিরা ধনে কিনেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH885a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH885a1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH885a2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text=" না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH885a"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH885b"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH885b"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H885b"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH885b"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="পরিমাণ(সংখ্যা)"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH885b"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH885b"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH885c"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH885c"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H885c"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH885c"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="ইউনিট"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH885c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH885c1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="গ্রাম"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH885c2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="কেজি"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH885c3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="সংখ্যা"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH885c"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH885d"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH885d"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H885d"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH885d"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH885d"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH885d"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secLBH89"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblHLBH89"
+                    android:id="@+id/lblHLBH84"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে কোন ফাস্ট ফুড ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে মাংস / মাছ ক্রয় করেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH89"
+                android:id="@+id/lineLBH84"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH891a"
+                android:id="@+id/secH84"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH891a"
+                    android:id="@+id/lblH84"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H891a"
+                    android:text="H84"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH891a"
+                    android:id="@+id/VlblH84"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ফাস্টফুড যেমন আলুর চিপস কেক চানাচুর   কিনেছে"
+                    android:text="আপনি গত মাসে মাংস/  মাছ ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH891a"
+                    android:id="@+id/rdogrpH84"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH891a1"
+                        android:id="@+id/rdoH841"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH891a2"
+                        android:id="@+id/rdoH842"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH891a"
+                android:id="@+id/lineH84"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH891b"
+                android:id="@+id/secH841a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH891b"
+                    android:id="@+id/lblH841a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H891b"
+                    android:text="H841a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH891b"
+                    android:id="@+id/VlblH841a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="মাছ  কিনেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH841a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH841a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH841a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH841a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH841b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH841b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H841b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH841b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH891b"
+                    android:id="@+id/txtH841b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2335,94 +2213,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH891b"
+                android:id="@+id/lineH841b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH891c"
+                android:id="@+id/secH841c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH891c"
+                    android:id="@+id/lblH841c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H891c"
+                    android:text="H841c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH891c"
+                    android:id="@+id/VlblH841c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH891c"
+                    android:id="@+id/rdogrpH841c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH891c1"
+                        android:id="@+id/rdoH841c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH891c2"
+                        android:id="@+id/rdoH841c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH891c3"
+                        android:id="@+id/rdoH841c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH891c"
+                android:id="@+id/lineH841c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH891d"
+                android:id="@+id/secH841d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH891d"
+                    android:id="@+id/lblH841d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H891d"
+                    android:text="H841d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH891d"
+                    android:id="@+id/VlblH841d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH891d"
+                    android:id="@+id/txtH841d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2433,159 +2311,295 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH891d"
+                android:id="@+id/lineH841d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secLBH810"
+                android:id="@+id/secH842a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHLBH810"
+                    android:id="@+id/lblH842a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H842a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH842a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="মাংস  কিনেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH842a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH842a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH842a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH842a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH842b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH842b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H842b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH842b"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="পরিমাণ(সংখ্যা)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH842b"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH842b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH842c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH842c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H842c"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH842c"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="ইউনিট"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH842c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH842c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="গ্রাম"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH842c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="কেজি"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH842c3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="সংখ্যা"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH842c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH842d"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH842d"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H842d"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH842d"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH842d"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH842d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secLBH85"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHLBH85"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গতমাসে কোন চা চিনি ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে ডিম ক্রয় করেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineLBH810"
+                android:id="@+id/lineLBH85"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH810"
+                android:id="@+id/secH851a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH810"
+                    android:id="@+id/lblH851a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H810"
+                    android:text="H851a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH810"
+                    android:id="@+id/VlblH851a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গতমাসে কোন চা/ চিনি ক্রয় করেছেন?"
+                    android:text="আপনি গত মাসে ডিম ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH810"
+                    android:id="@+id/rdogrpH851a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8101"
+                        android:id="@+id/rdoH851a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8102"
+                        android:id="@+id/rdoH851a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH810"
+                android:id="@+id/lineH851a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8101a"
+                android:id="@+id/secH851b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8101a"
+                    android:id="@+id/lblH851b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8101a"
+                    android:text="H851b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8101a"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:text="চা কিনেছে"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH8101a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH8101a1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH8101a2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text=" না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH8101a"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH8101b"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH8101b"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H8101b"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH8101b"
+                    android:id="@+id/VlblH851b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8101b"
+                    android:id="@+id/txtH851b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2596,94 +2610,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8101b"
+                android:id="@+id/lineH851b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8101c"
+                android:id="@+id/secH851c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8101c"
+                    android:id="@+id/lblH851c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8101c"
+                    android:text="H851c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8101c"
+                    android:id="@+id/VlblH851c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8101c"
+                    android:id="@+id/rdogrpH851c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8101c1"
+                        android:id="@+id/rdoH851c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8101c2"
+                        android:id="@+id/rdoH851c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8101c3"
+                        android:id="@+id/rdoH851c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8101c"
+                android:id="@+id/lineH851c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8101d"
+                android:id="@+id/secH851d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8101d"
+                    android:id="@+id/lblH851d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8101d"
+                    android:text="H851d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8101d"
+                    android:id="@+id/VlblH851d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8101d"
+                    android:id="@+id/txtH851d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2694,86 +2708,159 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8101d"
+                android:id="@+id/lineH851d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8102a"
+                android:id="@+id/secLBH86"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHLBH86"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি গত মাসে দুধ বা দুগ্ধজাত খাদ্য ক্রয় করেছেন"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineLBH86"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH86"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8102a"
+                    android:id="@+id/lblH86"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8102a"
+                    android:text="H86"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8102a"
+                    android:id="@+id/VlblH86"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চিনি গুড় কিনেছে"
+                    android:text="আপনি গত মাসে দুধ বা দুগ্ধজাত খাদ্য ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8102a"
+                    android:id="@+id/rdogrpH86"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8102a1"
+                        android:id="@+id/rdoH861"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8102a2"
+                        android:id="@+id/rdoH862"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8102a"
+                android:id="@+id/lineH86"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8102b"
+                android:id="@+id/secH861a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8102b"
+                    android:id="@+id/lblH861a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8102b"
+                    android:text="H861a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8102b"
+                    android:id="@+id/VlblH861a"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="দুধ  কিনেছে"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpH861a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoH861a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH861a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH861a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secH861b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH861b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="H861b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH861b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8102b"
+                    android:id="@+id/txtH861b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2784,94 +2871,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8102b"
+                android:id="@+id/lineH861b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8102c"
+                android:id="@+id/secH861c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8102c"
+                    android:id="@+id/lblH861c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8102c"
+                    android:text="H861c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8102c"
+                    android:id="@+id/VlblH861c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8102c"
+                    android:id="@+id/rdogrpH861c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8102c1"
+                        android:id="@+id/rdoH861c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8102c2"
+                        android:id="@+id/rdoH861c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8102c3"
+                        android:id="@+id/rdoH861c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8102c"
+                android:id="@+id/lineH861c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8102d"
+                android:id="@+id/secH861d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8102d"
+                    android:id="@+id/lblH861d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8102d"
+                    android:text="H861d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8102d"
+                    android:id="@+id/VlblH861d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8102d"
+                    android:id="@+id/txtH861d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2882,86 +2969,86 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8102d"
+                android:id="@+id/lineH861d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8103a"
+                android:id="@+id/secH862a"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8103a"
+                    android:id="@+id/lblH862a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8103a"
+                    android:text="H862a"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8103a"
+                    android:id="@+id/VlblH862a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কনডেন্সড মিল্ক কিনেছে"
+                    android:text="দুদ্গজাত পন্য  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8103a"
+                    android:id="@+id/rdogrpH862a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8103a1"
+                        android:id="@+id/rdoH862a1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="হ্যা"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8103a2"
+                        android:id="@+id/rdoH862a2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text=" না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8103a"
+                android:id="@+id/lineH862a"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8103b"
+                android:id="@+id/secH862b"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8103b"
+                    android:id="@+id/lblH862b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8103b"
+                    android:text="H862b"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8103b"
+                    android:id="@+id/VlblH862b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পরিমাণ(সংখ্যা)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8103b"
+                    android:id="@+id/txtH862b"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -2972,94 +3059,94 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8103b"
+                android:id="@+id/lineH862b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8103c"
+                android:id="@+id/secH862c"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8103c"
+                    android:id="@+id/lblH862c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8103c"
+                    android:text="H862c"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8103c"
+                    android:id="@+id/VlblH862c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
-                    android:id="@+id/rdogrpH8103c"
+                    android:id="@+id/rdogrpH862c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:id="@+id/rdoH8103c1"
+                        android:id="@+id/rdoH862c1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="গ্রাম"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8103c2"
+                        android:id="@+id/rdoH862c2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="কেজি"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/rdoH8103c3"
+                        android:id="@+id/rdoH862c3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
+                        android:paddingRight="10dp"
                         android:text="সংখ্যা"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8103c"
+                android:id="@+id/lineH862c"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH8103d"
+                android:id="@+id/secH862d"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH8103d"
+                    android:id="@+id/lblH862d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H8103d"
+                    android:text="H862d"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH8103d"
+                    android:id="@+id/VlblH862d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মোট মূল্য"
+                    android:text="প্রতি ইউনিটের মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH8103d"
+                    android:id="@+id/txtH862d"
                     style="@style/customEdit"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
@@ -3070,7 +3157,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH8103d"
+                android:id="@+id/lineH862d"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
