@@ -216,6 +216,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
     String VILL = "";
     ImageButton cmdForward;
     TextView lblNext;
+    ImageButton cmdHome;
     private int hour;
     private int minute;
     private int mDay;
@@ -296,7 +297,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 }
             });
-            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
@@ -1172,8 +1173,8 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 e.SaveUpdateData(this);
 
                 Bundle IDBundle = new Bundle();
-                IDBundle.putString("Rnd", RND);
-                IDBundle.putString("SuchanaID", SUCHANAID);
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
 
                 if (spnResult.getSelectedItemPosition() == 1) {
 
@@ -1225,6 +1226,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
             for (HHIdentity_DataModel item : data) {
                 lblNext.setVisibility(View.GONE);
                 cmdForward.setVisibility(View.GONE);
+                cmdHome.setVisibility(View.VISIBLE);
 
                 Status = "update";
                 txtRnd.setText(item.getRnd());

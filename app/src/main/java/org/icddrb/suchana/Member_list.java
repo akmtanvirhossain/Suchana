@@ -139,6 +139,17 @@ public class Member_list extends Activity {
             ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+                    if (!C.Existence("Select Rnd from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'")) {
+                        Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন সদস্য এন্ট্রি করতে হবে.");
+                        return;
+                    }
+                    String infoMiss = C.ReturnSingleValue("Select count(*)totalmis from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and length(H23)=0");
+
+                    if (Integer.valueOf(infoMiss) > 0) {
+                        Connection.MessageBox(Member_list.this, infoMiss + " জন সদস্যের তথ্য আপডেট করা হয় নাই");
+                        return;
+                    }
+
                     AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to go to next [Yes/No]?");
@@ -482,6 +493,24 @@ public class Member_list extends Activity {
                 }
             });
 
+            secListRow.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
+                    adb.setTitle("Delete");
+                    adb.setMessage("আপনি কি সদস্যঃ  " + o.get("H22") + "  এর তথ্য মুছতে চান? [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            C.Save("Delete from Member where Rnd='" + o.get("Rnd") + "' and SuchanaId='" + o.get("SuchanaID") + "' and H22='" + o.get("H22") + "'");
+                            DataSearch(o.get("Rnd"), o.get("SuchanaID"));
+                        }
+                    });
+                    adb.show();
+
+                    return false;
+                }
+            });
 
             return convertView;
         }

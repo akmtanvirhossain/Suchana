@@ -951,8 +951,8 @@ public class Member extends Activity {
                 Connection.MessageBox(Member.this, "খানা প্রধান এর বয়স ১৫ বছরের কম হতে পারবেনা ");
                 txtH26Y.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "1" : txtH26Y.getText().toString()) < 1 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
-                Connection.MessageBox(Member.this, "Value should be between 12 and 125(বছর).");
+            } else if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString()) < 0 || Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "125" : txtH26Y.getText().toString()) > 125) {
+                Connection.MessageBox(Member.this, "Value should be between 0 and 125(বছর).");
                 txtH26Y.requestFocus();
                 return;
             } else if (txtH26M.getText().toString().length() == 0 & secH26M.isShown()) {
