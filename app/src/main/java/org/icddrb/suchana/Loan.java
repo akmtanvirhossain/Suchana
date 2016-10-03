@@ -336,7 +336,12 @@ public class Loan extends Activity {
             listH113.add("12-স্বনির্ভর");
             listH113.add("13-সিএনআরএস");
             listH113.add("14-এফআইভিডিবি");
-            listH113.add("15-অনান্য");
+            listH113.add("15-ব্র্যাক");
+            listH113.add("16-ভারড");
+            listH113.add("17-আশা");
+            listH113.add("18-ব্যুরো");
+            listH113.add("19-হিড");
+            listH113.add("20-অনান্য এন,জি,ও");
             ArrayAdapter<String> adptrH113 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH113);
             spnH113.setAdapter(adptrH113);
 
@@ -388,7 +393,7 @@ public class Loan extends Activity {
             listH114a.add("15-গরু ছাগল ক্রয়ের জন্য");
             listH114a.add("16-চিকিৎসার জন্য");
             listH114a.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
-            listH114a.add("18-খানা ভাড়া /ক্রয়/ উন্নয়নের জন্য");
+            listH114a.add("18-খানা ভাড়া /ক্রয/ উন্নয়নের জন্য");
             listH114a.add("19-শিক্ষার খরচের জন্য");
             listH114a.add("20-বিয়ের জন্য ব্যয়");
             listH114a.add("21-যৌতুক");

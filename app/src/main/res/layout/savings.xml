@@ -214,7 +214,7 @@
                     android:id="@+id/VlblH101"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি  বা আপনার স্ত্রী বা পরিবারের অন্যান্য সদস্য কি কোন সমব্যয় সমিতি  বা এলাকার সঞ্চয়ী কমিটির সদস্য (সুচনা বহির্ভূত)"
+                    android:text="আপনি / আপনার স্ত্রী কি কোন সামবায় সমিতি /এলাকার সঞ্চয়ী কমিটি/ব্যাংক/ক্ষুদ্রঋণ দানকারী  প্রতিষ্ঠানের সদস্য (সূচনা বহির্ভূত)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -229,7 +229,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ "
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -266,7 +266,7 @@
                     android:id="@+id/VlblH102"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি সুচনা সঞ্চয়ী গ্রুপের সদস্য"
+                    android:text="আপনি কি সূচনা সঞ্চয়ী গ্রুপের সদস্য"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -318,7 +318,7 @@
                     android:id="@+id/VlblH103"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনার এবং / অথবা আপনার স্ত্রী কোন সঞ্চয় আছে"
+                    android:text="আপনার এবং / অথবা আপনার স্ত্রীর কোন সঞ্চয় আছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -370,7 +370,7 @@
                     android:id="@+id/VlblH1031"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ঘরে সঞ্চয়/ মাটির ব্যাঙ্ক/সিন্দুকে সঞ্চয় (টাকা)"
+                    android:text="ঘরে সঞ্চয়/ মাটির ব্যাংক/সিন্দুকে সঞ্চয় (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -528,7 +528,7 @@
                     android:id="@+id/VlblH1035"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা সঞ্চয়ী গ্রুপ (টাকা)"
+                    android:text="সূচনা সঞ্চয়ী গ্রুপ (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText

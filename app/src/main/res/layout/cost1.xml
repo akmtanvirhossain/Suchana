@@ -207,7 +207,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খাদ্যের জন্য ব্যয় : গত  1month এর অনুস্মরণ"
+                    android:text="খাদ্যের জন্য ব্যয় : গত ১ মাসের এর অনুস্মরণ"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -250,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁা"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -302,7 +302,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -437,7 +437,7 @@
                     android:id="@+id/VlblH811d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -490,7 +490,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -625,7 +625,7 @@
                     android:id="@+id/VlblH812d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -663,7 +663,7 @@
                     android:id="@+id/VlblH813a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="শেঁকা রুটি  কিনেছে"
+                    android:text="বন রুটি /পাউ রুটি/শেঁকা রুটি  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -678,7 +678,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -813,7 +813,7 @@
                     android:id="@+id/VlblH813d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1001,7 +1001,7 @@
                     android:id="@+id/VlblH814d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1189,7 +1189,7 @@
                     android:id="@+id/VlblH815d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1227,7 +1227,7 @@
                     android:id="@+id/VlblH816a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="বিস্কিট  কিনেছে"
+                    android:text="বিস্কুট  কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1242,7 +1242,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1377,7 +1377,7 @@
                     android:id="@+id/VlblH816d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1586,7 +1586,7 @@
                     android:id="@+id/VlblH821d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1697,7 +1697,7 @@
                     android:id="@+id/VlblH831a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সয়াবিন তেল  কিনেছে"
+                    android:text="পামওয়েলে/সয়াবিন তেল কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1847,7 +1847,7 @@
                     android:id="@+id/VlblH831d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2035,7 +2035,7 @@
                     android:id="@+id/VlblH832d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2296,7 +2296,7 @@
                     android:id="@+id/VlblH841d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2484,7 +2484,7 @@
                     android:id="@+id/VlblH842d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2693,7 +2693,7 @@
                     android:id="@+id/VlblH851d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2954,7 +2954,7 @@
                     android:id="@+id/VlblH861d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3142,7 +3142,7 @@
                     android:id="@+id/VlblH862d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText

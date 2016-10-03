@@ -207,7 +207,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="নিম্নে বর্ণিত সম্পদগুলির সংখ্যা বর্তমান মূল্য ও কিভাবে পেয়েছেন দয়া করে বলুন"
+                    android:text="নিম্নে বর্ণিত সম্পদগুলির সংখ্যা, বর্তমান মূল্য ও কিভাবে পেয়েছেন দয়া করে বলুন:"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -512,7 +512,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="এই সম্পদটি কি ভাবে বদলি করেছেন"
+                    android:text="সম্পদটি কিভাবে পেয়েছেন?"
                     android:textSize="20sp" />
             </LinearLayout>
 

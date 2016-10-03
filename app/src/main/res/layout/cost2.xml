@@ -436,7 +436,7 @@
                     android:id="@+id/VlblH871d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -624,7 +624,7 @@
                     android:id="@+id/VlblH872d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -812,7 +812,7 @@
                     android:id="@+id/VlblH873d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1000,7 +1000,7 @@
                     android:id="@+id/VlblH874d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1038,7 +1038,7 @@
                     android:id="@+id/VlblH875a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="ফল শুধু কলা   কিনেছে"
+                    android:text="ফল শুধু কলা কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1188,7 +1188,7 @@
                     android:id="@+id/VlblH875d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1247,7 +1247,7 @@
                     android:id="@+id/VlblH88"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে  গুড়া মশলা ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে গুড়া মশলা ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1449,7 +1449,7 @@
                     android:id="@+id/VlblH881d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1637,7 +1637,7 @@
                     android:id="@+id/VlblH882d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1825,7 +1825,7 @@
                     android:id="@+id/VlblH883d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1863,7 +1863,7 @@
                     android:id="@+id/VlblH884a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মরিচ  শুকনো মরিচ  কিনেছে"
+                    android:text="মরিচ শুকনো মরিচ কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2013,7 +2013,7 @@
                     android:id="@+id/VlblH884d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2051,7 +2051,7 @@
                     android:id="@+id/VlblH885a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="জিরা  ধনে  কিনেছে"
+                    android:text="জিরা ধনে কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2201,7 +2201,7 @@
                     android:id="@+id/VlblH885d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2410,7 +2410,7 @@
                     android:id="@+id/VlblH891d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2441,7 +2441,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গতমাসে কোন চা   চিনি ক্রয় করেছেন"
+                    android:text="আপনি গতমাসে কোন চা চিনি ক্রয় করেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2469,7 +2469,7 @@
                     android:id="@+id/VlblH810"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গতমাসে কোনো চা/  চিনি ক্রয় করেছেন?"
+                    android:text="আপনি গতমাসে কোন চা/ চিনি ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2521,7 +2521,7 @@
                     android:id="@+id/VlblH8101a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চা  কিনেছে"
+                    android:text="চা কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2671,7 +2671,7 @@
                     android:id="@+id/VlblH8101d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2709,7 +2709,7 @@
                     android:id="@+id/VlblH8102a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চিনি গুড়  কিনেছে"
+                    android:text="চিনি গুড় কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2859,7 +2859,7 @@
                     android:id="@+id/VlblH8102d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2897,7 +2897,7 @@
                     android:id="@+id/VlblH8103a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কনডেন্সড মিল্ক  কিনেছে"
+                    android:text="কনডেন্সড মিল্ক কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3047,7 +3047,7 @@
                     android:id="@+id/VlblH8103d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য"
                     android:textSize="20sp" />
 
                 <EditText

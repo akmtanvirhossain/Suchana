@@ -368,7 +368,7 @@ public class Member extends Activity {
             listH25.add("8-ভাতিজি অথবা ভাতিজা অথবা ভাগ্নী অথবা ভাগিনা");
             listH25.add("9-খানা প্রধানের cousin");
             listH25.add("10-খানা প্রধান (নিজে)");
-            listH25.add("11-শ্বশুর অথবা শাশুড়ী");
+            listH25.add("11-শ্বশুর অথবা শ্বাশুড়ী");
             listH25.add("12-দুলাভাই অথবা শালা অথবা শালী অথবা ননদ অথবা জা");
             listH25.add("13-স্বামীর ভাতিজি অথবা ভাতিজা অথবা ভাগ্নী অথবা ভাগিনা");
             listH25.add("14-স্বামীর cousin");
@@ -571,9 +571,9 @@ public class Member extends Activity {
             listH29.add("");
             listH29.add("1-মুসলিম");
             listH29.add("2-হিন্দু");
-            listH29.add("3-খ্রীষ্ট");
-            listH29.add("4-বুদ্ধ");
-            listH29.add("5-অন্যান্য (উল্লেখ কর)");
+            listH29.add("3-খ্রিস্টান");
+            listH29.add("4-বৌদ্ব");
+            listH29.add("5-অন্যান্(উল্লেখ করুন)");
             ArrayAdapter<String> adptrH29 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH29);
             spnH29.setAdapter(adptrH29);
 
@@ -644,7 +644,7 @@ public class Member extends Activity {
             listH212.add("12-উচ্চ মাধ্যমিক শিক্ষা সমাপ্ত করেছে");
             listH212.add("44-স্নাতক অথবা আরো ঊর্ধ শিক্ষা সমাপ্ত  করেছে");
             listH212.add("55-প্রাক-প্রাথমিক বিদ্যালয় (সাধারণ)");
-            listH212.add("66-প্রাক-প্রাথমিক বিদ্যালয় (মসজিদ ভিত্তিক)");
+            listH212.add("66-প্রাক-প্রাথমিক বিদ্যালয় (ধর্ম ভিত্তিক)");
             listH212.add("77-অন্যান্য");
             ArrayAdapter<String> adptrH212 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH212);
             spnH212.setAdapter(adptrH212);
@@ -687,7 +687,7 @@ public class Member extends Activity {
             listH213.add("");
             listH213.add("1-পাবলিক স্কুল/সরকারী স্কুল/কলেজ");
             listH213.add("2-আধা সরকারী স্কুল/কলেজ");
-            listH213.add("3-বেসরকারীস্কুল/কলেজ");
+            listH213.add("3-বেসরকারী স্কুল/কলেজ");
             listH213.add("4-মাদ্রাসা বোর্ড পাঠ্যক্রম");
             listH213.add("5-মাদ্রাসা –কওমী/ শুধুমাত্র ধর্মীয় পাঠ্যক্রম");
             listH213.add("8-জানি না");
@@ -710,19 +710,19 @@ public class Member extends Activity {
             listH215.add("");
             listH215.add("1-কৃষিকাজ (ধান)");
             listH215.add("2-কৃষিকাজ (ধান ছাড়া অনান্য)");
-            listH215.add("3-অদক্ষ দিনমজুর");
-            listH215.add("4-দক্ষ দিনমজুর");
+            listH215.add("3-অদক্ষ শ্রমিক");
+            listH215.add("4-দক্ষ শ্রমিক");
             listH215.add("5-গৃহকর্মী");
             listH215.add("6-রেস্টুরেন্ট / চা স্টলে কাজ করে");
             listH215.add("7-অন্যান্য (মেরামত্/নির্মাণ)");
-            listH215.add("8-অন্যান্য (উল্লেখ কর)");
+            listH215.add("8-অন্যান্য (উল্লেখ করুন)");
             listH215.add("9-রিক্সা/ভ্যান/ঠেলাগাড়ি চালক");
             listH215.add("10-সিএনজি/টেম্পু/মিনিবাস চালক");
             listH215.add("11-বাস/ট্রাক  চালক");
             listH215.add("12-ভিক্ষুক (পেশাদারী)");
             listH215.add("13-পরিবহন শ্রমিক");
             listH215.add("14- শিক্ষক");
-            listH215.add("15-খাদ্য প্রক্রিয়াকরণ");
+            listH215.add("15-খাদ্য প্রক্রিয়াযাত করণ");
             listH215.add("16-ক্ষুদ্র শিল্প");
             listH215.add("17-হস্তশিল্প");
             listH215.add("18-ক্ষুদ্র ব্যবসায়ী (পথিপার্শ্বস্থ স্ট্যান্ড বা স্টল)");
@@ -730,14 +730,14 @@ public class Member extends Activity {
             listH215.add("20-ব্যবসায়ী (অন্যান্য)");
             listH215.add("21-ক্ষেত ফসল কৃষক");
             listH215.add("22-বসত ভিটায়ে কৃষিকাজ করে");
-            listH215.add("23-মৎস চাষ");
+            listH215.add("23-মৎস্য চাষ");
             listH215.add("24-জেলে");
             listH215.add("25-হাঁস মুরগি লালন পালন");
             listH215.add("26-গবাদিপশু লালন পালন");
             listH215.add("27-গৃহিনী");
             listH215.add("28-কিছু করে না");
             listH215.add("29-ছাত্র/ছাত্রী");
-            listH215.add("30-শিশুর বয়স পাচ বছরের নিচে");
+            listH215.add("30-শিশুর বয়স পাঁচ বছরের নিচে");
             ArrayAdapter<String> adptrH215 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH215);
             spnH215.setAdapter(adptrH215);
 

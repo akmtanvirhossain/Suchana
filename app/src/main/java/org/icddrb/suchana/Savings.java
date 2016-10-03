@@ -377,11 +377,11 @@ public class Savings extends Activity {
             listH1037a.add("09-ঋণ পেতে");
             listH1037a.add("10-অন্য কাউকে ধার দিতে");
             listH1037a.add("11-কঠিন সময়ের বিপদের জন্য");
-            listH1037a.add("12-কাজের জন্য কেউকে বিদেশে পাঠাত");
-            listH1037a.add("13-ছেলেমেয়েদের ভবিষ্যত জন্য");
+            listH1037a.add("12-কাজের জন্য কাউকে বিদেশে পাঠাত");
+            listH1037a.add("13-ছেলেমেয়েদের ভবিষতের জন্য");
             listH1037a.add("14-মেডিকেল বা অন্য জরুরী সময়ের জন্য");
             listH1037a.add("15-জানিনা কোনো বিশেষ কারণে নয়");
-            listH1037a.add("16-অনান্য");
+            listH1037a.add("16-অন্যান্য");
             ArrayAdapter<String> adptrH1037a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1037a);
             spnH1037a.setAdapter(adptrH1037a);
 
@@ -419,11 +419,11 @@ public class Savings extends Activity {
             listH1037b.add("09-ঋণ পেতে");
             listH1037b.add("10-অন্য কাউকে ধার দিতে");
             listH1037b.add("11-কঠিন সময়ের বিপদের জন্য");
-            listH1037b.add("12-কাজের জন্য কেউকে বিদেশে পাঠাত");
-            listH1037b.add("13-ছেলেমেয়েদের ভবিষ্যত জন্য");
+            listH1037b.add("12-কাজের জন্য কাউকে বিদেশে পাঠাত");
+            listH1037b.add("13-ছেলেমেয়েদের ভবিষতের জন্য");
             listH1037b.add("14-মেডিকেল বা অন্য জরুরী সময়ের জন্য");
             listH1037b.add("15-জানিনা কোনো বিশেষ কারণে নয়");
-            listH1037b.add("16-অনান্য");
+            listH1037b.add("16-অন্যান্য");
             ArrayAdapter<String> adptrH1037b = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1037b);
             spnH1037b.setAdapter(adptrH1037b);
 
@@ -461,11 +461,11 @@ public class Savings extends Activity {
             listH1037c.add("09-ঋণ পেতে");
             listH1037c.add("10-অন্য কাউকে ধার দিতে");
             listH1037c.add("11-কঠিন সময়ের বিপদের জন্য");
-            listH1037c.add("12-কাজের জন্য কেউকে বিদেশে পাঠাত");
-            listH1037c.add("13-ছেলেমেয়েদের ভবিষ্যত জন্য");
+            listH1037c.add("12-কাজের জন্য কাউকে বিদেশে পাঠাত");
+            listH1037c.add("13-ছেলেমেয়েদের ভবিষতের জন্য");
             listH1037c.add("14-মেডিকেল বা অন্য জরুরী সময়ের জন্য");
             listH1037c.add("15-জানিনা কোনো বিশেষ কারণে নয়");
-            listH1037c.add("16-অনান্য");
+            listH1037c.add("16-অন্যান্য");
             ArrayAdapter<String> adptrH1037c = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1037c);
             spnH1037c.setAdapter(adptrH1037c);
 
@@ -503,11 +503,11 @@ public class Savings extends Activity {
             listH1037d.add("09-ঋণ পেতে");
             listH1037d.add("10-অন্য কাউকে ধার দিতে");
             listH1037d.add("11-কঠিন সময়ের বিপদের জন্য");
-            listH1037d.add("12-কাজের জন্য কেউকে বিদেশে পাঠাত");
-            listH1037d.add("13-ছেলেমেয়েদের ভবিষ্যত জন্য");
+            listH1037d.add("12-কাজের জন্য কাউকে বিদেশে পাঠাত");
+            listH1037d.add("13-ছেলেমেয়েদের ভবিষতের জন্য");
             listH1037d.add("14-মেডিকেল বা অন্য জরুরী সময়ের জন্য");
             listH1037d.add("15-জানিনা কোনো বিশেষ কারণে নয়");
-            listH1037d.add("16-অনান্য");
+            listH1037d.add("16-অন্যান্য");
             ArrayAdapter<String> adptrH1037d = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH1037d);
             spnH1037d.setAdapter(adptrH1037d);
 
@@ -561,7 +561,7 @@ public class Savings extends Activity {
                 txtRnd.requestFocus();
                 return;
             } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
-                Connection.MessageBox(Savings.this, "Required field: উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে.");
+                Connection.MessageBox(Savings.this, "Required field: উপকারভোগী সদস্য আইডি সূচনা নম্বর অনুসারে.");
                 txtSuchanaID.requestFocus();
                 return;
             } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
@@ -573,7 +573,7 @@ public class Savings extends Activity {
                 rdoH1011.requestFocus();
                 return;
             } else if (!rdoH1021.isChecked() & !rdoH1022.isChecked() & secH102.isShown()) {
-                Connection.MessageBox(Savings.this, "Select anyone options from (আপনি কি সুচনা সঞ্চয়ী গ্রুপের সদস্য  ).");
+                Connection.MessageBox(Savings.this, "Select anyone options from (আপনি কি সূচনা সঞ্চয়ী গ্রুপের সদস্য  ).");
                 rdoH1021.requestFocus();
                 return;
             } else if (!rdoH1031.isChecked() & !rdoH1032.isChecked() & secH103.isShown()) {

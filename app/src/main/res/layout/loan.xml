@@ -617,7 +617,7 @@
                     android:id="@+id/VlblH117"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="কার লোন"
+                    android:text="কার/কাহার লোন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -632,7 +632,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="নিজের"
+                        android:text="স্বামী"
                         android:textSize="20sp" />
 
                     <RadioButton

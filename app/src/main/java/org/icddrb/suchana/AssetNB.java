@@ -447,15 +447,15 @@ public class AssetNB extends Activity {
             List<String> listH42a = new ArrayList<String>();
 
             listH42a.add("");
-            listH42a.add("01- রেডিও / ক্যাসেট প্লেয়ার / ডিভিডি / সিডি প্লেয়ার");
+            listH42a.add("01-রেডিও / ক্যাসেট প্লেয়া / ডিভিডি / সিডি প্লেয়ার");
             listH42a.add("02-টিভি");
             listH42a.add("03-বৈদ্যুতিক পাখা");
             listH42a.add("04-মোবাইল ফোন");
-            listH42a.add("05-সাইকেল");
+            listH42a.add("05-বাই  সাইকেল");
             listH42a.add("06-মোটর সাইকেল");
             listH42a.add("07-চেয়ার");
             listH42a.add("08-টেবিল");
-            listH42a.add("09-চৌকি");
+            listH42a.add("09-চৌকি/খাট/পালঙ্ক");
             listH42a.add("10-সোফা (যেকোন ধরনের)");
             listH42a.add("11-মশারি");
             listH42a.add("12-অলঙ্কার");

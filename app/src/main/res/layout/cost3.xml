@@ -249,7 +249,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -384,7 +384,7 @@
                     android:id="@+id/VlblH8111d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -458,7 +458,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -631,7 +631,7 @@
                     android:id="@+id/VlblH8121d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -690,7 +690,7 @@
                     android:id="@+id/VlblH8122a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য2  কিনেছে"
+                    android:text="অন্যান্য2 কিনেছে"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -878,7 +878,7 @@
                     android:id="@+id/VlblH8122d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রতি ইউনিটের মূল্য কত"
+                    android:text="মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1086,7 +1086,7 @@
                     android:id="@+id/VlblH9a2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো, ক্রিম, পাউডার, সুগন্ধি ইত্যাদি)"
+                    android:text="আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1235,7 +1235,7 @@
                     android:id="@+id/VlblH9a3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, শ্যাম্পু, টুথপেস্ট, ইত্যাদি)"
+                    android:text="আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, গুড়া সাবান,বল সাবান ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1384,7 +1384,7 @@
                     android:id="@+id/VlblH9a4a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন?  (যেমন: বাসরিক্সা ভাড়া ,সাইকেল মেরামত, ইত্যাদি)"
+                    android:text="আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন? (যেমন: বাস রিক্সা,CNG ভাড়া ,সাইকেল মেরামত  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1654,7 +1654,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="তৈরি পোশাক, কাপড়, জুতা  ও খানার ব্যবহারযোগ্য কাপড়ের সামগ্রী"
+                    android:text="তৈরি পোশাক, কাপড়, জুতা  ও খানার ব্যবহার যোগ্য কাপড়ের সামগ্রী"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1682,7 +1682,7 @@
                     android:id="@+id/VlblH9b1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক ক্রয় করেছেন?  (যেমন:  লুঙ্গি,  ধুতি, শাড়ি, প্যান্ট, প্যান্ট , শার্ট, গামছা, কাপড়ের দাম, দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা  ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক বা খানার জন্য কাপড় ক্রয় করেছেন?  (যেমন:  লুঙ্গি,  ধুতি, শাড়ি, প্যান্ট, প্যান্ট , শার্ট, গামছা, কাপড়ের দাম, দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1831,7 +1831,7 @@
                     android:id="@+id/VlblH9b2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া / চার্জ দিয়েছেন?  (যেমন: খানার ভাড়া,  মেরামত, ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া চার্জ দিয়েছেন? (যেমন: খানার ভাড়া,মেরামত ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1980,7 +1980,7 @@
                     android:id="@+id/VlblH9b3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি, ঔষধ, স্বাস্থ্য-সংক্রান্ত ভ্রমণ,  ইত্যাদি)"
+                    android:text="আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি,ঔষধ,স্বাস্থ্য সংক্রান্ত ভ্রমণ ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2278,7 +2278,7 @@
                     android:id="@+id/VlblH9b5a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়া ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোন পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়া ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2427,7 +2427,7 @@
                     android:id="@+id/VlblH9b6a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ত, দিশের লাইন চার্জ ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ত, ডিশের লাইন চার্জ ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2576,7 +2576,7 @@
                     android:id="@+id/VlblH9b7a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো করচার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,  ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো কর/চার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2725,7 +2725,7 @@
                     android:id="@+id/VlblH9b8a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো রান্নার/রান্নাঘরের সরঞ্জাম ক্রয় করেছেন (যেমন: চুলা, অন্যান্য বাসনকাশন এবং পাত্র ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোন রান্না ঘরের সরঞ্জাম ক্রয় করেছেন ?(যেমন: চুলা, থালাবাসন ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2995,7 +2995,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="গৃহস্তলীর অনান্য দীর্ঘকালীন ব্যবহার্য্য পণ্য"
+                    android:text="গৃহস্থলির অনান্য দীর্ঘকালীন ব্যবহার্য্য পণ্য"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -3172,7 +3172,7 @@
                     android:id="@+id/VlblH9b11a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি?  (যেমন: বীমা, সমব্যয় সমিতি,  ইত্যাদি)"
+                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি? (যেকোন বীমা)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3293,7 +3293,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কৃষি ও মৎস্য আরোহন সরঞ্জাম"
+                    android:text="কৃষি ও মৎস্য আহরণ সরঞ্জাম"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -3321,7 +3321,7 @@
                     android:id="@+id/VlblH9b12"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি ১ বছর এর মধ্যে চাষা বাদ অথবা মৎস্য আরোহনের জন্য কোন সরঞ্জাম ক্রয় করেছেন?"
+                    android:text="আপনি ১ বছর এর মধ্যে চাষা বাদ অথবা মৎস্য আহরনের জন্য কোন সরঞ্জাম ক্রয় করেছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3388,7 +3388,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3516,7 +3516,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3629,7 +3629,7 @@
                     android:id="@+id/VlblH9b12c1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কচি চারা গাছ ক্রয়  করেছেন"
+                    android:text="কচি চারা গাছ ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3644,7 +3644,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3772,7 +3772,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3900,7 +3900,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4028,7 +4028,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4156,7 +4156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4284,7 +4284,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4397,7 +4397,7 @@
                     android:id="@+id/VlblH9b12i1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="হাস/মুরগির বাচ্চা ক্রয় করেছেন"
+                    android:text="হাঁস/মুরগির বাচ্চা ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4412,7 +4412,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4668,7 +4668,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4781,7 +4781,7 @@
                     android:id="@+id/VlblH9b12l1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাছ ধরার জাল/ ছিপ ক্রয় করেছেন"
+                    android:text="মাছ ধরার জাল/ ছিপ/বড়শী ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4796,7 +4796,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4924,7 +4924,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4932,7 +4932,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -5058,7 +5058,7 @@
                     android:id="@+id/VlblH9b13a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি 1 year এর মধ্যে কোনো বিড়ি/জর্ডা/সিগারেট ক্রয় করেছেন"
+                    android:text="আপনি ১ বছরের  মধ্যে কোনো বিড়ি/জর্দ্দা /সিগারেট ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -5073,7 +5073,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -5081,7 +5081,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -5209,7 +5209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -5238,7 +5238,7 @@
                     android:id="@+id/VlblH9b14x1"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য উল্লেখ কর"
+                    android:text="অনান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
