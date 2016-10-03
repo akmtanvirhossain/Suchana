@@ -299,6 +299,12 @@ public class Member extends Activity {
                     adb.show();
                 }
             });*/
+            lineH222 = (View) findViewById(R.id.lineH222);
+            secH222 = (LinearLayout) findViewById(R.id.secH222);
+
+            VlblH222 = (TextView) findViewById(R.id.VlblH222);
+            txtH222 = (EditText) findViewById(R.id.txtH222);
+
 
             spnH24 = (Spinner) findViewById(R.id.spnH24);
             spnH24.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '96-মৃত' union Select '97-অন্যত্র থাকে'"));
@@ -623,7 +629,7 @@ public class Member extends Activity {
             txtH29X = (EditText) findViewById(R.id.txtH29X);
             secH29X.setVisibility(View.GONE);
 
-            String SQL = "Select H29,H29X from member where MSlNo=1 and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
+            String SQL = "Select * from member where H21='1' and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
             Member_DataModel d = new Member_DataModel();
             List<Member_DataModel> data = d.SelectAll(this, SQL);
             for (Member_DataModel item : data) {
@@ -643,7 +649,7 @@ public class Member extends Activity {
 
 
             RadioButton rb;
-            String SQLr = "Select H210 from member where MSlNo=1 and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
+            String SQLr = "Select * from member where H21='1' and Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'";
             Member_DataModel dr = new Member_DataModel();
             List<Member_DataModel> datar = d.SelectAll(this, SQLr);
             for (Member_DataModel item : datar) {
@@ -911,10 +917,7 @@ public class Member extends Activity {
             lineH221 = (View) findViewById(R.id.lineH221);
             VlblH221 = (TextView) findViewById(R.id.VlblH221);
             txtH221 = (EditText) findViewById(R.id.txtH221);
-            secH222 = (LinearLayout) findViewById(R.id.secH222);
-            lineH222 = (View) findViewById(R.id.lineH222);
-            VlblH222 = (TextView) findViewById(R.id.VlblH222);
-            txtH222 = (EditText) findViewById(R.id.txtH222);
+
 
             secH29X.setVisibility(View.GONE);
             secH212X.setVisibility(View.GONE);
