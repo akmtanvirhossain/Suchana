@@ -497,7 +497,7 @@
                     style="@style/customEdit"
                     android:layout_width="195sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
+                    android:layout_marginRight="0sp"
                     android:inputType="textMultiLine"
                     android:maxLength="50"
                     android:minHeight="40sp"
