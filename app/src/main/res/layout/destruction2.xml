@@ -170,7 +170,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি প্রাকৃতিক দুর্যোগ সহনীয় নিম্নে বর্ণিত প্রযুক্তিগুলি ব্যবহার করেন কি"
+                    android:text="আপনি প্রাকৃতিক দুর্যোগ সহনীয় নিম্নে বর্ণিত প্রযুক্তিগুলি ব্যবহার করেন কি"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -212,7 +212,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -248,7 +248,7 @@
                     android:id="@+id/VlblH14b2"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ঘেরা জাইগাই মাছ উৎপাদন করা"
+                    android:text="খাছায় মাছ চাষ"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -263,7 +263,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -314,7 +314,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -365,7 +365,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -401,7 +401,7 @@
                     android:id="@+id/VlblH14b5"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="বহুস্তরী বাগান করা"
+                    android:text="উলম্ব বাগান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -416,7 +416,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -467,7 +467,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -518,7 +518,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -569,7 +569,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -605,7 +605,7 @@
                     android:id="@+id/VlblH14b8X"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -679,7 +679,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যাঁ "
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -715,7 +715,7 @@
                     android:id="@+id/VlblH14c1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাতৃকালীন ভাতা"
+                    android:text="মাতৃত্বকালীন ভাতা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1170,7 +1170,7 @@
                     android:id="@+id/VlblH14c1n"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="CMS"
+                    android:text="OMS"
                     android:textSize="20sp" />
 
                 <CheckBox
