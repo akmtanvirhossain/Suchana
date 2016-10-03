@@ -690,7 +690,7 @@ public class AssetB extends Activity {
 
             listH41e.add("");
             listH41e.add("1-ক্রয়কৃত");
-            listH41e.add("2-উত্তরাধিকারসূত্রে");
+            listH41e.add("2-উত্তরাধিকার সূত্রে");
             listH41e.add("3-উপহার");
             listH41e.add("4-যৌতুক");
             listH41e.add("5-নিজে তৈরী করা");
@@ -743,9 +743,9 @@ public class AssetB extends Activity {
             List<String> listH41f = new ArrayList<String>();
 
             listH41f.add("");
-            listH41f.add("1-নিজ স্বসঞ্চয়");
+            listH41f.add("1-নিজ স্ব  সঞ্চয়");
             listH41f.add("2-যৌতুকের অর্থ");
-            listH41f.add("3-আত্মীয়স্বজনের কাছ থেকে ধার");
+            listH41f.add("3-আত্মীয় স্বজনের কাছ থেকে ধার");
             listH41f.add("4-বন্ধু বা প্রতিবেশীর কাছ থেকে ধার স্থানীয়");
             listH41f.add("5-এনজিও থেকে ধার");
             listH41f.add("6-অন্যান্য এনজিও থেকে ধার");
@@ -801,7 +801,7 @@ public class AssetB extends Activity {
                         secH41h.setVisibility(View.GONE);
                         lineH41h.setVisibility(View.GONE);
                         txtH41h.setText("");
-                    } else {
+                    } else if (rbData.equalsIgnoreCase("1")) {
                         secH41h.setVisibility(View.VISIBLE);
                         lineH41h.setVisibility(View.VISIBLE);
                     }
@@ -1018,6 +1018,11 @@ public class AssetB extends Activity {
 
             secH41aX.setVisibility(View.GONE);
 
+            secH41eX.setVisibility(View.GONE);
+            secH41eX.setVisibility(View.GONE);
+            secH41fX.setVisibility(View.GONE);
+            secH41h.setVisibility(View.GONE);
+
             DataSearch(RND, SUCHANAID, H41A);
 
 
@@ -1227,7 +1232,7 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Required field: সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?.");
                 txtH41h.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH41h.getText().toString().length() == 0 ? "1" : txtH41h.getText().toString()) < 1 || Integer.valueOf(txtH41h.getText().toString().length() == 0 ? "100" : txtH41h.getText().toString()) > 100) {
+            } else if (Double.valueOf(txtH41h.getText().toString().length() == 0 ? "1" : txtH41h.getText().toString()) < 1 || Double.valueOf(txtH41h.getText().toString().length() == 0 ? "100" : txtH41h.getText().toString()) > 100) {
                 Connection.MessageBox(AssetB.this, "Value should be between 1 and 100(সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?).");
                 txtH41h.requestFocus();
                 return;
@@ -1332,9 +1337,13 @@ public class AssetB extends Activity {
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 buttonColor();
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
+                //Connection.MessageBox(AssetB.this, "Saved Successfully");
                 if (allItemsCompleted) {
-                    EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
-                    e.SaveUpdateData(this);
+                    //EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                    //e.SaveUpdateData(this);
 
                     finish();
                     Bundle IDBundle = new Bundle();
@@ -1342,7 +1351,7 @@ public class AssetB extends Activity {
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                     IDBundle.putString("H41a", "");
                     startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
-                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                    //Connection.MessageBox(AssetB.this, "Saved Successfully");
                 }
 
 
@@ -1383,6 +1392,7 @@ public class AssetB extends Activity {
                         rb.setChecked(true);
                     }
                 }
+                if (rdoH41g1.isChecked()) secH41h.setVisibility(View.VISIBLE);
                 txtH41h.setText(item.getH41h());
                 txtH41i.setText(item.getH41i());
                 txtH41j.setText(item.getH41j());
@@ -1510,12 +1520,10 @@ public class AssetB extends Activity {
                 txtH41o4X.setText("");
             }
             AssetB_DataModel dx = new AssetB_DataModel();
-            String SQLx = "Select H41a from " + TableName + "  Where H41a < 21 Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+            String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
             List<AssetB_DataModel> datax = d.SelectH41a(this, SQLx);
             if (datax.size() > 19) {
-
                 cmdForward.setVisibility(View.VISIBLE);
-
             }
 
         } catch (Exception e) {

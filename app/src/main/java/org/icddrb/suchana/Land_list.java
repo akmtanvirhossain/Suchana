@@ -185,6 +185,8 @@ public class Land_list extends Activity {
                 }
             });
 
+            TextView lblSucanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSucanaId.setText(SUCHANAID);
 
             DataSearch(RND, SUCHANAID, SLNO);
 

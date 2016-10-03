@@ -22,7 +22,8 @@
             android:gravity="center"
             android:text="Rnd"
             android:textColor="#ffffff"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="150sp"
@@ -30,13 +31,14 @@
             android:gravity="center"
             android:text="SuchanaID"
             android:textColor="#ffffff"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <TextView
-            android:layout_width="50sp"
+            android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SlNo"
+            android:text="Serial"
             android:textColor="#ffffff"
             android:textStyle="bold" />
 

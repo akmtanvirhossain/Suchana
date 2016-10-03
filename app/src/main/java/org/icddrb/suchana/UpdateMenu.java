@@ -114,6 +114,24 @@ public class UpdateMenu extends Activity {
                 }
             });
 
+            Button cmdMenuExit = (Button) findViewById(R.id.cmdMenuExit);
+            cmdMenuExit.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(UpdateMenu.this);
+                    adb.setTitle("Exit");
+                    adb.setMessage("Do you want to exit from the system[Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            System.exit(0);
+                        }
+                    });
+                    adb.show();
+                }
+            });
+
+
             cmdMenuInterviewList = (Button) findViewById(R.id.cmdMenuInterviewList);
             cmdMenuInterviewList.setOnClickListener(new View.OnClickListener() {
                 @Override

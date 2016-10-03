@@ -13,7 +13,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -333,6 +332,7 @@ public class Member extends Activity {
             txtH21 = (EditText) findViewById(R.id.txtH21);
 
             txtH21.setEnabled(false);
+            /*
             int lineNo = 0;
             Cursor cursor = C.GetData("Member", "suchanaid", SUCHANAID);
             if (cursor.getCount() != 0) {
@@ -341,6 +341,8 @@ public class Member extends Activity {
                 lineNo = 1;
             }
             txtH21.setText(String.valueOf(lineNo));
+            */
+            txtH21.setText(MemberSerial(RND, SUCHANAID));
 
             secH22 = (LinearLayout) findViewById(R.id.secH22);
             lineH22 = (View) findViewById(R.id.lineH22);
@@ -418,7 +420,7 @@ public class Member extends Activity {
                 public void afterTextChanged(Editable s) {
                     if (txtH26Y.getText().toString().length() != 0) {
 
-                        if (Integer.valueOf(txtH26Y.getText().toString()) < 02) {
+                        if (Integer.valueOf(txtH26Y.getText().toString()) < 2) {
                             secH220.setVisibility(View.VISIBLE);
                             lineH220.setVisibility(View.VISIBLE);
                         } else {
@@ -427,7 +429,7 @@ public class Member extends Activity {
                             lineH220.setVisibility(View.GONE);
                         }
 
-                        if (Integer.valueOf(txtH26Y.getText().toString()) < 05) {
+                        if (Integer.valueOf(txtH26Y.getText().toString()) < 5) {
 
 
                             txtH26M.setText("");
@@ -500,7 +502,7 @@ public class Member extends Activity {
                             lineH28.setVisibility(View.VISIBLE);
                             secH29.setVisibility(View.VISIBLE);
                             lineH29.setVisibility(View.VISIBLE);
-                            secH29X.setVisibility(View.VISIBLE);
+                            //secH29X.setVisibility(View.VISIBLE);
                             lineH29X.setVisibility(View.VISIBLE);
                             secH210.setVisibility(View.VISIBLE);
                             lineH210.setVisibility(View.VISIBLE);
@@ -508,7 +510,7 @@ public class Member extends Activity {
                             lineH211.setVisibility(View.VISIBLE);
                             secH212.setVisibility(View.VISIBLE);
                             lineH212.setVisibility(View.VISIBLE);
-                            secH212X.setVisibility(View.VISIBLE);
+                            //secH212X.setVisibility(View.VISIBLE);
                             lineH212X.setVisibility(View.VISIBLE);
                             secH213.setVisibility(View.VISIBLE);
                             lineH213.setVisibility(View.VISIBLE);
@@ -516,11 +518,11 @@ public class Member extends Activity {
                             lineH214.setVisibility(View.VISIBLE);
                             secH215.setVisibility(View.VISIBLE);
                             lineH215.setVisibility(View.VISIBLE);
-                            secH215X.setVisibility(View.VISIBLE);
+                            //secH215X.setVisibility(View.VISIBLE);
                             lineH215X.setVisibility(View.VISIBLE);
                             secH216.setVisibility(View.VISIBLE);
                             lineH216.setVisibility(View.VISIBLE);
-                            secH216X.setVisibility(View.VISIBLE);
+                            //secH216X.setVisibility(View.VISIBLE);
                             lineH216X.setVisibility(View.VISIBLE);
                             secH217.setVisibility(View.VISIBLE);
                             lineH217.setVisibility(View.VISIBLE);
@@ -536,6 +538,7 @@ public class Member extends Activity {
                     }
                 }
             });
+
             secH26M = (LinearLayout) findViewById(R.id.secH26M);
             lineH26M = (View) findViewById(R.id.lineH26M);
             VlblH26M = (TextView) findViewById(R.id.VlblH26M);
@@ -1475,5 +1478,8 @@ public class Member extends Activity {
         turnGPSOff();
     }
 
+    private String MemberSerial(String Rnd, String SuchanaID) {
+        return C.ReturnSingleValue("Select (ifnull(max(H21),0)+1)serial from Member where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
+    }
 
 }

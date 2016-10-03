@@ -76,6 +76,19 @@
         android:gravity="end"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="0"
+            android:text="Suchana ID: " />
+
+        <TextView
+            android:id="@+id/lblSuchanaIdHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
         <Button
             android:id="@+id/btnRefresh"
             android:layout_width="wrap_content"
