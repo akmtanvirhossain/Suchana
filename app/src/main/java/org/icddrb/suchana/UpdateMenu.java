@@ -38,6 +38,9 @@ public class UpdateMenu extends Activity {
     Button cmdMenuIllness2;
     Button cmdMenuCareseek;
     Button cmdMenuIGA;
+
+    Button cmdMenuHandWash;
+
     Button cmdMenuStart;
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -180,7 +183,7 @@ public class UpdateMenu extends Activity {
             cmdMenuCost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, Cost1.class).putExtras(IDBundle));
+                   // startActivity(new Intent(UpdateMenu.this, Cost1.class).putExtras(IDBundle));
                 }
             });
 
@@ -261,6 +264,14 @@ public class UpdateMenu extends Activity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(UpdateMenu.this, IGA.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuHandWash = (Button) findViewById(R.id.cmdMenuHandWash);
+            cmdMenuHandWash.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, HandWash.class).putExtras(IDBundle));
                 }
             });
 

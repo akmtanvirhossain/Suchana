@@ -196,7 +196,7 @@ public class HDDS extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Bundle IDbundle = new Bundle();
+                          /*  Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
 
@@ -204,7 +204,7 @@ public class HDDS extends Activity {
                             intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
-                            finish();
+                            finish();*/
                         }
                     });
                     adb.show();
@@ -690,13 +690,13 @@ public class HDDS extends Activity {
                 if (allItemsCompleted) {
                     EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                     e.SaveUpdateData(this);
-                    finish();
+                /*    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                     // IDBundle.putString("H41a", "");
                     startActivity(new Intent(HDDS.this, Cost1.class).putExtras(IDBundle));
-                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
+                    // Connection.MessageBox(AssetB.this, "Saved Successfully");*/
                 }
             } else {
                 Connection.MessageBox(HDDS.this, status);
