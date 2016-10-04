@@ -1,24 +1,16 @@
 package org.icddrb.suchana;
+
 //Android Manifest Code
 //<activity android:name=".Cost2" android:label="Cost2" />
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,7 +27,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -71,6 +62,12 @@ public class Cost2 extends Activity {
     TextView VlblMSlNo;
     Spinner spnMSlNo;
     LinearLayout secLBH87;
+    LinearLayout secH87;
+    View lineH87;
+    TextView VlblH87;
+    RadioGroup rdogrpH87;
+    RadioButton rdoH871;
+    RadioButton rdoH872;
     LinearLayout secH871a;
     View lineH871a;
     TextView VlblH871a;
@@ -177,6 +174,12 @@ public class Cost2 extends Activity {
     TextView VlblH875d;
     EditText txtH875d;
     LinearLayout secLBH88;
+    LinearLayout secH88;
+    View lineH88;
+    TextView VlblH88;
+    RadioGroup rdogrpH88;
+    RadioButton rdoH881;
+    RadioButton rdoH882;
     LinearLayout secH881a;
     View lineH881a;
     TextView VlblH881a;
@@ -305,6 +308,12 @@ public class Cost2 extends Activity {
     TextView VlblH891d;
     EditText txtH891d;
     LinearLayout secLBH810;
+    LinearLayout secH810;
+    View lineH810;
+    TextView VlblH810;
+    RadioGroup rdogrpH810;
+    RadioButton rdoH8101;
+    RadioButton rdoH8102;
     LinearLayout secH8101a;
     View lineH8101a;
     TextView VlblH8101a;
@@ -368,6 +377,80 @@ public class Cost2 extends Activity {
     View lineH8103d;
     TextView VlblH8103d;
     EditText txtH8103d;
+    LinearLayout secLBH811;
+    LinearLayout secH8111a;
+    View lineH8111a;
+    TextView VlblH8111a;
+    RadioGroup rdogrpH8111a;
+    RadioButton rdoH8111a1;
+    RadioButton rdoH8111a2;
+    LinearLayout secH8111b;
+    View lineH8111b;
+    TextView VlblH8111b;
+    EditText txtH8111b;
+    LinearLayout secH8111c;
+    View lineH8111c;
+    TextView VlblH8111c;
+    RadioGroup rdogrpH8111c;
+    RadioButton rdoH8111c1;
+    RadioButton rdoH8111c2;
+    RadioButton rdoH8111c3;
+    LinearLayout secH8111d;
+    View lineH8111d;
+    TextView VlblH8111d;
+    EditText txtH8111d;
+    LinearLayout seclbH121;
+    LinearLayout secH8121a;
+    View lineH8121a;
+    TextView VlblH8121a;
+    RadioGroup rdogrpH8121a;
+    RadioButton rdoH8121a1;
+    RadioButton rdoH8121a2;
+    LinearLayout secH8121x1;
+    View lineH8121x1;
+    TextView VlblH8121x1;
+    EditText txtH8121x1;
+    LinearLayout secH8121b;
+    View lineH8121b;
+    TextView VlblH8121b;
+    EditText txtH8121b;
+    LinearLayout secH8121c;
+    View lineH8121c;
+    TextView VlblH8121c;
+    RadioGroup rdogrpH8121c;
+    RadioButton rdoH8121c1;
+    RadioButton rdoH8121c2;
+    RadioButton rdoH8121c3;
+    LinearLayout secH8121d;
+    View lineH8121d;
+    TextView VlblH8121d;
+    EditText txtH8121d;
+    LinearLayout secLBH8122;
+    LinearLayout secH8122a;
+    View lineH8122a;
+    TextView VlblH8122a;
+    RadioGroup rdogrpH8122a;
+    RadioButton rdoH8122a1;
+    RadioButton rdoH8122a2;
+    LinearLayout secH8122x1;
+    View lineH8122x1;
+    TextView VlblH8122x1;
+    EditText txtH8122x1;
+    LinearLayout secH8122b;
+    View lineH8122b;
+    TextView VlblH8122b;
+    EditText txtH8122b;
+    LinearLayout secH8122c;
+    View lineH8122c;
+    TextView VlblH8122c;
+    RadioGroup rdogrpH8122c;
+    RadioButton rdoH8122c1;
+    RadioButton rdoH8122c2;
+    RadioButton rdoH8122c3;
+    LinearLayout secH8122d;
+    View lineH8122d;
+    TextView VlblH8122d;
+    EditText txtH8122d;
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -455,14 +538,14 @@ public class Cost2 extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                           /* finish();
+                            finish();
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), Cost2.class);
+                            Intent intent = new Intent(getApplicationContext(), Cost1.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
-                            getApplicationContext().startActivity(intent);*/
+                            getApplicationContext().startActivity(intent);
 
                         }
                     });
@@ -520,6 +603,59 @@ public class Cost2 extends Activity {
             //spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
             spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             secLBH87 = (LinearLayout) findViewById(R.id.secLBH87);
+            secH87 = (LinearLayout) findViewById(R.id.secH87);
+            lineH87 = (View) findViewById(R.id.lineH87);
+            VlblH87 = (TextView) findViewById(R.id.VlblH87);
+            rdogrpH87 = (RadioGroup) findViewById(R.id.rdogrpH87);
+
+            rdoH871 = (RadioButton) findViewById(R.id.rdoH871);
+            rdoH872 = (RadioButton) findViewById(R.id.rdoH872);
+            rdogrpH87.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH87 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH87.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH87.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH87[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH871a.setVisibility(View.VISIBLE);
+                        lineH871a.setVisibility(View.VISIBLE);
+                        secH872a.setVisibility(View.VISIBLE);
+                        lineH872a.setVisibility(View.VISIBLE);
+                        secH873a.setVisibility(View.VISIBLE);
+                        lineH873a.setVisibility(View.VISIBLE);
+                        secH874a.setVisibility(View.VISIBLE);
+                        lineH874a.setVisibility(View.VISIBLE);
+                        secH875a.setVisibility(View.VISIBLE);
+                        lineH875a.setVisibility(View.VISIBLE);
+                    } else {
+
+                        secH871a.setVisibility(View.GONE);
+                        lineH871a.setVisibility(View.GONE);
+                        rdogrpH871a.clearCheck();
+                        secH872a.setVisibility(View.GONE);
+                        lineH872a.setVisibility(View.GONE);
+                        rdogrpH872a.clearCheck();
+                        secH873a.setVisibility(View.GONE);
+                        lineH873a.setVisibility(View.GONE);
+                        rdogrpH873a.clearCheck();
+                        secH874a.setVisibility(View.GONE);
+                        lineH874a.setVisibility(View.GONE);
+                        rdogrpH874a.clearCheck();
+                        secH875a.setVisibility(View.GONE);
+                        lineH875a.setVisibility(View.GONE);
+                        rdogrpH875a.clearCheck();
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH871a = (LinearLayout) findViewById(R.id.secH871a);
             lineH871a = (View) findViewById(R.id.lineH871a);
             VlblH871a = (TextView) findViewById(R.id.VlblH871a);
@@ -538,7 +674,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH871a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH871b.setVisibility(View.VISIBLE);
+                        lineH871b.setVisibility(View.VISIBLE);
+                        secH871c.setVisibility(View.VISIBLE);
+                        lineH871c.setVisibility(View.VISIBLE);
+                        secH871d.setVisibility(View.VISIBLE);
+                        lineH871d.setVisibility(View.VISIBLE);
+                    } else {
                         secH871b.setVisibility(View.GONE);
                         lineH871b.setVisibility(View.GONE);
                         txtH871b.setText("");
@@ -548,13 +691,6 @@ public class Cost2 extends Activity {
                         secH871d.setVisibility(View.GONE);
                         lineH871d.setVisibility(View.GONE);
                         txtH871d.setText("");
-                    } else {
-                        secH871b.setVisibility(View.VISIBLE);
-                        lineH871b.setVisibility(View.VISIBLE);
-                        secH871c.setVisibility(View.VISIBLE);
-                        lineH871c.setVisibility(View.VISIBLE);
-                        secH871d.setVisibility(View.VISIBLE);
-                        lineH871d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -596,7 +732,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH872a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH872b.setVisibility(View.VISIBLE);
+                        lineH872b.setVisibility(View.VISIBLE);
+                        secH872c.setVisibility(View.VISIBLE);
+                        lineH872c.setVisibility(View.VISIBLE);
+                        secH872d.setVisibility(View.VISIBLE);
+                        lineH872d.setVisibility(View.VISIBLE);
+                    } else {
                         secH872b.setVisibility(View.GONE);
                         lineH872b.setVisibility(View.GONE);
                         txtH872b.setText("");
@@ -606,13 +749,6 @@ public class Cost2 extends Activity {
                         secH872d.setVisibility(View.GONE);
                         lineH872d.setVisibility(View.GONE);
                         txtH872d.setText("");
-                    } else {
-                        secH872b.setVisibility(View.VISIBLE);
-                        lineH872b.setVisibility(View.VISIBLE);
-                        secH872c.setVisibility(View.VISIBLE);
-                        lineH872c.setVisibility(View.VISIBLE);
-                        secH872d.setVisibility(View.VISIBLE);
-                        lineH872d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -654,7 +790,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH873a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH873b.setVisibility(View.VISIBLE);
+                        lineH873b.setVisibility(View.VISIBLE);
+                        secH873c.setVisibility(View.VISIBLE);
+                        lineH873c.setVisibility(View.VISIBLE);
+                        secH873d.setVisibility(View.VISIBLE);
+                        lineH873d.setVisibility(View.VISIBLE);
+                    } else {
                         secH873b.setVisibility(View.GONE);
                         lineH873b.setVisibility(View.GONE);
                         txtH873b.setText("");
@@ -664,13 +807,6 @@ public class Cost2 extends Activity {
                         secH873d.setVisibility(View.GONE);
                         lineH873d.setVisibility(View.GONE);
                         txtH873d.setText("");
-                    } else {
-                        secH873b.setVisibility(View.VISIBLE);
-                        lineH873b.setVisibility(View.VISIBLE);
-                        secH873c.setVisibility(View.VISIBLE);
-                        lineH873c.setVisibility(View.VISIBLE);
-                        secH873d.setVisibility(View.VISIBLE);
-                        lineH873d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -713,6 +849,13 @@ public class Cost2 extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        secH874b.setVisibility(View.VISIBLE);
+                        lineH874b.setVisibility(View.VISIBLE);
+                        secH874c.setVisibility(View.VISIBLE);
+                        lineH874c.setVisibility(View.VISIBLE);
+                        secH874d.setVisibility(View.VISIBLE);
+                        lineH874d.setVisibility(View.VISIBLE);
+                    } else {
                         secH874b.setVisibility(View.GONE);
                         lineH874b.setVisibility(View.GONE);
                         txtH874b.setText("");
@@ -722,13 +865,6 @@ public class Cost2 extends Activity {
                         secH874d.setVisibility(View.GONE);
                         lineH874d.setVisibility(View.GONE);
                         txtH874d.setText("");
-                    } else {
-                        secH874b.setVisibility(View.VISIBLE);
-                        lineH874b.setVisibility(View.VISIBLE);
-                        secH874c.setVisibility(View.VISIBLE);
-                        lineH874c.setVisibility(View.VISIBLE);
-                        secH874d.setVisibility(View.VISIBLE);
-                        lineH874d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -770,7 +906,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH875a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH875b.setVisibility(View.VISIBLE);
+                        lineH875b.setVisibility(View.VISIBLE);
+                        secH875c.setVisibility(View.VISIBLE);
+                        lineH875c.setVisibility(View.VISIBLE);
+                        secH875d.setVisibility(View.VISIBLE);
+                        lineH875d.setVisibility(View.VISIBLE);
+                    } else {
                         secH875b.setVisibility(View.GONE);
                         lineH875b.setVisibility(View.GONE);
                         txtH875b.setText("");
@@ -780,13 +923,6 @@ public class Cost2 extends Activity {
                         secH875d.setVisibility(View.GONE);
                         lineH875d.setVisibility(View.GONE);
                         txtH875d.setText("");
-                    } else {
-                        secH875b.setVisibility(View.VISIBLE);
-                        lineH875b.setVisibility(View.VISIBLE);
-                        secH875c.setVisibility(View.VISIBLE);
-                        lineH875c.setVisibility(View.VISIBLE);
-                        secH875d.setVisibility(View.VISIBLE);
-                        lineH875d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -811,6 +947,58 @@ public class Cost2 extends Activity {
             VlblH875d = (TextView) findViewById(R.id.VlblH875d);
             txtH875d = (EditText) findViewById(R.id.txtH875d);
             secLBH88 = (LinearLayout) findViewById(R.id.secLBH88);
+            secH88 = (LinearLayout) findViewById(R.id.secH88);
+            lineH88 = (View) findViewById(R.id.lineH88);
+            VlblH88 = (TextView) findViewById(R.id.VlblH88);
+            rdogrpH88 = (RadioGroup) findViewById(R.id.rdogrpH88);
+
+            rdoH881 = (RadioButton) findViewById(R.id.rdoH881);
+            rdoH882 = (RadioButton) findViewById(R.id.rdoH882);
+            rdogrpH88.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH88 = new String[]{"1", "2"};
+                    for (int i = 0; i < rdogrpH88.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH88.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH88[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH881a.setVisibility(View.VISIBLE);
+                        lineH881a.setVisibility(View.VISIBLE);
+                        secH882a.setVisibility(View.VISIBLE);
+                        lineH882a.setVisibility(View.VISIBLE);
+                        secH883a.setVisibility(View.VISIBLE);
+                        lineH883a.setVisibility(View.VISIBLE);
+                        secH884a.setVisibility(View.VISIBLE);
+                        lineH884a.setVisibility(View.VISIBLE);
+                        secH885a.setVisibility(View.VISIBLE);
+                        lineH885a.setVisibility(View.VISIBLE);
+                    } else {
+                        secH881a.setVisibility(View.GONE);
+                        lineH881a.setVisibility(View.GONE);
+                        rdogrpH881a.clearCheck();
+                        secH882a.setVisibility(View.GONE);
+                        lineH882a.setVisibility(View.GONE);
+                        rdogrpH882a.clearCheck();
+                        secH883a.setVisibility(View.GONE);
+                        lineH883a.setVisibility(View.GONE);
+                        rdogrpH883a.clearCheck();
+                        secH884a.setVisibility(View.GONE);
+                        lineH884a.setVisibility(View.GONE);
+                        rdogrpH884a.clearCheck();
+                        secH885a.setVisibility(View.GONE);
+                        lineH885a.setVisibility(View.GONE);
+                        rdogrpH885a.clearCheck();
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH881a = (LinearLayout) findViewById(R.id.secH881a);
             lineH881a = (View) findViewById(R.id.lineH881a);
             VlblH881a = (TextView) findViewById(R.id.VlblH881a);
@@ -829,7 +1017,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH881a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH881b.setVisibility(View.VISIBLE);
+                        lineH881b.setVisibility(View.VISIBLE);
+                        secH881c.setVisibility(View.VISIBLE);
+                        lineH881c.setVisibility(View.VISIBLE);
+                        secH881d.setVisibility(View.VISIBLE);
+                        lineH881d.setVisibility(View.VISIBLE);
+                    } else {
                         secH881b.setVisibility(View.GONE);
                         lineH881b.setVisibility(View.GONE);
                         txtH881b.setText("");
@@ -839,13 +1034,6 @@ public class Cost2 extends Activity {
                         secH881d.setVisibility(View.GONE);
                         lineH881d.setVisibility(View.GONE);
                         txtH881d.setText("");
-                    } else {
-                        secH881b.setVisibility(View.VISIBLE);
-                        lineH881b.setVisibility(View.VISIBLE);
-                        secH881c.setVisibility(View.VISIBLE);
-                        lineH881c.setVisibility(View.VISIBLE);
-                        secH881d.setVisibility(View.VISIBLE);
-                        lineH881d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -887,7 +1075,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH882a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH882b.setVisibility(View.VISIBLE);
+                        lineH882b.setVisibility(View.VISIBLE);
+                        secH882c.setVisibility(View.VISIBLE);
+                        lineH882c.setVisibility(View.VISIBLE);
+                        secH882d.setVisibility(View.VISIBLE);
+                        lineH882d.setVisibility(View.VISIBLE);
+                    } else {
                         secH882b.setVisibility(View.GONE);
                         lineH882b.setVisibility(View.GONE);
                         txtH882b.setText("");
@@ -897,13 +1092,6 @@ public class Cost2 extends Activity {
                         secH882d.setVisibility(View.GONE);
                         lineH882d.setVisibility(View.GONE);
                         txtH882d.setText("");
-                    } else {
-                        secH882b.setVisibility(View.VISIBLE);
-                        lineH882b.setVisibility(View.VISIBLE);
-                        secH882c.setVisibility(View.VISIBLE);
-                        lineH882c.setVisibility(View.VISIBLE);
-                        secH882d.setVisibility(View.VISIBLE);
-                        lineH882d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -945,7 +1133,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH883a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH883b.setVisibility(View.VISIBLE);
+                        lineH883b.setVisibility(View.VISIBLE);
+                        secH883c.setVisibility(View.VISIBLE);
+                        lineH883c.setVisibility(View.VISIBLE);
+                        secH883d.setVisibility(View.VISIBLE);
+                        lineH883d.setVisibility(View.VISIBLE);
+                    } else {
                         secH883b.setVisibility(View.GONE);
                         lineH883b.setVisibility(View.GONE);
                         txtH883b.setText("");
@@ -955,13 +1150,6 @@ public class Cost2 extends Activity {
                         secH883d.setVisibility(View.GONE);
                         lineH883d.setVisibility(View.GONE);
                         txtH883d.setText("");
-                    } else {
-                        secH883b.setVisibility(View.VISIBLE);
-                        lineH883b.setVisibility(View.VISIBLE);
-                        secH883c.setVisibility(View.VISIBLE);
-                        lineH883c.setVisibility(View.VISIBLE);
-                        secH883d.setVisibility(View.VISIBLE);
-                        lineH883d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1003,7 +1191,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH884a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH884b.setVisibility(View.VISIBLE);
+                        lineH884b.setVisibility(View.VISIBLE);
+                        secH884c.setVisibility(View.VISIBLE);
+                        lineH884c.setVisibility(View.VISIBLE);
+                        secH884d.setVisibility(View.VISIBLE);
+                        lineH884d.setVisibility(View.VISIBLE);
+                    } else {
                         secH884b.setVisibility(View.GONE);
                         lineH884b.setVisibility(View.GONE);
                         txtH884b.setText("");
@@ -1013,13 +1208,6 @@ public class Cost2 extends Activity {
                         secH884d.setVisibility(View.GONE);
                         lineH884d.setVisibility(View.GONE);
                         txtH884d.setText("");
-                    } else {
-                        secH884b.setVisibility(View.VISIBLE);
-                        lineH884b.setVisibility(View.VISIBLE);
-                        secH884c.setVisibility(View.VISIBLE);
-                        lineH884c.setVisibility(View.VISIBLE);
-                        secH884d.setVisibility(View.VISIBLE);
-                        lineH884d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1061,7 +1249,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH885a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH885b.setVisibility(View.VISIBLE);
+                        lineH885b.setVisibility(View.VISIBLE);
+                        secH885c.setVisibility(View.VISIBLE);
+                        lineH885c.setVisibility(View.VISIBLE);
+                        secH885d.setVisibility(View.VISIBLE);
+                        lineH885d.setVisibility(View.VISIBLE);
+                    } else {
                         secH885b.setVisibility(View.GONE);
                         lineH885b.setVisibility(View.GONE);
                         txtH885b.setText("");
@@ -1071,13 +1266,6 @@ public class Cost2 extends Activity {
                         secH885d.setVisibility(View.GONE);
                         lineH885d.setVisibility(View.GONE);
                         txtH885d.setText("");
-                    } else {
-                        secH885b.setVisibility(View.VISIBLE);
-                        lineH885b.setVisibility(View.VISIBLE);
-                        secH885c.setVisibility(View.VISIBLE);
-                        lineH885c.setVisibility(View.VISIBLE);
-                        secH885d.setVisibility(View.VISIBLE);
-                        lineH885d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1120,7 +1308,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH891a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH891b.setVisibility(View.VISIBLE);
+                        lineH891b.setVisibility(View.VISIBLE);
+                        secH891c.setVisibility(View.VISIBLE);
+                        lineH891c.setVisibility(View.VISIBLE);
+                        secH891d.setVisibility(View.VISIBLE);
+                        lineH891d.setVisibility(View.VISIBLE);
+                    } else {
                         secH891b.setVisibility(View.GONE);
                         lineH891b.setVisibility(View.GONE);
                         txtH891b.setText("");
@@ -1130,13 +1325,6 @@ public class Cost2 extends Activity {
                         secH891d.setVisibility(View.GONE);
                         lineH891d.setVisibility(View.GONE);
                         txtH891d.setText("");
-                    } else {
-                        secH891b.setVisibility(View.VISIBLE);
-                        lineH891b.setVisibility(View.VISIBLE);
-                        secH891c.setVisibility(View.VISIBLE);
-                        lineH891c.setVisibility(View.VISIBLE);
-                        secH891d.setVisibility(View.VISIBLE);
-                        lineH891d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1161,6 +1349,48 @@ public class Cost2 extends Activity {
             VlblH891d = (TextView) findViewById(R.id.VlblH891d);
             txtH891d = (EditText) findViewById(R.id.txtH891d);
             secLBH810 = (LinearLayout) findViewById(R.id.secLBH810);
+            secH810 = (LinearLayout) findViewById(R.id.secH810);
+            lineH810 = (View) findViewById(R.id.lineH810);
+            VlblH810 = (TextView) findViewById(R.id.VlblH810);
+            rdogrpH810 = (RadioGroup) findViewById(R.id.rdogrpH810);
+
+            rdoH8101 = (RadioButton) findViewById(R.id.rdoH8101);
+            rdoH8102 = (RadioButton) findViewById(R.id.rdoH8102);
+            rdogrpH810.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH810 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH810.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH810.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH810[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH8101a.setVisibility(View.VISIBLE);
+                        lineH8101a.setVisibility(View.VISIBLE);
+                        secH8102a.setVisibility(View.VISIBLE);
+                        lineH8102a.setVisibility(View.VISIBLE);
+                        secH8103a.setVisibility(View.VISIBLE);
+                        lineH8103a.setVisibility(View.VISIBLE);
+                    } else {
+                        secH8101a.setVisibility(View.GONE);
+                        lineH8101a.setVisibility(View.GONE);
+                        rdogrpH8101a.clearCheck();
+                        secH8102a.setVisibility(View.GONE);
+                        lineH8102a.setVisibility(View.GONE);
+                        rdogrpH8102a.clearCheck();
+                        secH8103a.setVisibility(View.GONE);
+                        lineH8103a.setVisibility(View.GONE);
+                        rdogrpH8103a.clearCheck();
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
             secH8101a = (LinearLayout) findViewById(R.id.secH8101a);
             lineH8101a = (View) findViewById(R.id.lineH8101a);
             VlblH8101a = (TextView) findViewById(R.id.VlblH8101a);
@@ -1179,7 +1409,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH8101a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH8101b.setVisibility(View.VISIBLE);
+                        lineH8101b.setVisibility(View.VISIBLE);
+                        secH8101c.setVisibility(View.VISIBLE);
+                        lineH8101c.setVisibility(View.VISIBLE);
+                        secH8101d.setVisibility(View.VISIBLE);
+                        lineH8101d.setVisibility(View.VISIBLE);
+                    } else {
                         secH8101b.setVisibility(View.GONE);
                         lineH8101b.setVisibility(View.GONE);
                         txtH8101b.setText("");
@@ -1189,13 +1426,6 @@ public class Cost2 extends Activity {
                         secH8101d.setVisibility(View.GONE);
                         lineH8101d.setVisibility(View.GONE);
                         txtH8101d.setText("");
-                    } else {
-                        secH8101b.setVisibility(View.VISIBLE);
-                        lineH8101b.setVisibility(View.VISIBLE);
-                        secH8101c.setVisibility(View.VISIBLE);
-                        lineH8101c.setVisibility(View.VISIBLE);
-                        secH8101d.setVisibility(View.VISIBLE);
-                        lineH8101d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1237,7 +1467,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH8102a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH8102b.setVisibility(View.VISIBLE);
+                        lineH8102b.setVisibility(View.VISIBLE);
+                        secH8102c.setVisibility(View.VISIBLE);
+                        lineH8102c.setVisibility(View.VISIBLE);
+                        secH8102d.setVisibility(View.VISIBLE);
+                        lineH8102d.setVisibility(View.VISIBLE);
+                    } else {
                         secH8102b.setVisibility(View.GONE);
                         lineH8102b.setVisibility(View.GONE);
                         txtH8102b.setText("");
@@ -1247,13 +1484,6 @@ public class Cost2 extends Activity {
                         secH8102d.setVisibility(View.GONE);
                         lineH8102d.setVisibility(View.GONE);
                         txtH8102d.setText("");
-                    } else {
-                        secH8102b.setVisibility(View.VISIBLE);
-                        lineH8102b.setVisibility(View.VISIBLE);
-                        secH8102c.setVisibility(View.VISIBLE);
-                        lineH8102c.setVisibility(View.VISIBLE);
-                        secH8102d.setVisibility(View.VISIBLE);
-                        lineH8102d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1295,7 +1525,14 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH8103a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH8103b.setVisibility(View.VISIBLE);
+                        lineH8103b.setVisibility(View.VISIBLE);
+                        secH8103c.setVisibility(View.VISIBLE);
+                        lineH8103c.setVisibility(View.VISIBLE);
+                        secH8103d.setVisibility(View.VISIBLE);
+                        lineH8103d.setVisibility(View.VISIBLE);
+                    } else {
                         secH8103b.setVisibility(View.GONE);
                         lineH8103b.setVisibility(View.GONE);
                         txtH8103b.setText("");
@@ -1305,13 +1542,6 @@ public class Cost2 extends Activity {
                         secH8103d.setVisibility(View.GONE);
                         lineH8103d.setVisibility(View.GONE);
                         txtH8102d.setText("");
-                    } else {
-                        secH8103b.setVisibility(View.VISIBLE);
-                        lineH8103b.setVisibility(View.VISIBLE);
-                        secH8103c.setVisibility(View.VISIBLE);
-                        lineH8103c.setVisibility(View.VISIBLE);
-                        secH8103d.setVisibility(View.VISIBLE);
-                        lineH8103d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1335,6 +1565,308 @@ public class Cost2 extends Activity {
             lineH8103d = (View) findViewById(R.id.lineH8103d);
             VlblH8103d = (TextView) findViewById(R.id.VlblH8103d);
             txtH8103d = (EditText) findViewById(R.id.txtH8103d);
+            secLBH811 = (LinearLayout) findViewById(R.id.secLBH811);
+            secH8111a = (LinearLayout) findViewById(R.id.secH8111a);
+            lineH8111a = (View) findViewById(R.id.lineH8111a);
+            VlblH8111a = (TextView) findViewById(R.id.VlblH8111a);
+            rdogrpH8111a = (RadioGroup) findViewById(R.id.rdogrpH8111a);
+
+            rdoH8111a1 = (RadioButton) findViewById(R.id.rdoH8111a1);
+            rdoH8111a2 = (RadioButton) findViewById(R.id.rdoH8111a2);
+            rdogrpH8111a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH8111a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH8111a.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH8111a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH8111a[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH8111b.setVisibility(View.GONE);
+                        lineH8111b.setVisibility(View.GONE);
+                        txtH8111b.setText("");
+                        secH8111c.setVisibility(View.GONE);
+                        lineH8111c.setVisibility(View.GONE);
+                        rdogrpH8111c.clearCheck();
+                    } else {
+                        secH8111b.setVisibility(View.VISIBLE);
+                        lineH8111b.setVisibility(View.VISIBLE);
+                        secH8111c.setVisibility(View.VISIBLE);
+                        lineH8111c.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+            secH8111b = (LinearLayout) findViewById(R.id.secH8111b);
+            lineH8111b = (View) findViewById(R.id.lineH8111b);
+            VlblH8111b = (TextView) findViewById(R.id.VlblH8111b);
+            txtH8111b = (EditText) findViewById(R.id.txtH8111b);
+            secH8111c = (LinearLayout) findViewById(R.id.secH8111c);
+            lineH8111c = (View) findViewById(R.id.lineH8111c);
+            VlblH8111c = (TextView) findViewById(R.id.VlblH8111c);
+            rdogrpH8111c = (RadioGroup) findViewById(R.id.rdogrpH8111c);
+
+            rdoH8111c1 = (RadioButton) findViewById(R.id.rdoH8111c1);
+            rdoH8111c2 = (RadioButton) findViewById(R.id.rdoH8111c2);
+            rdoH8111c3 = (RadioButton) findViewById(R.id.rdoH8111c3);
+            secH8111d = (LinearLayout) findViewById(R.id.secH8111d);
+            lineH8111d = (View) findViewById(R.id.lineH8111d);
+            VlblH8111d = (TextView) findViewById(R.id.VlblH8111d);
+            txtH8111d = (EditText) findViewById(R.id.txtH8111d);
+            seclbH121 = (LinearLayout) findViewById(R.id.seclbH121);
+            secH8121a = (LinearLayout) findViewById(R.id.secH8121a);
+            lineH8121a = (View) findViewById(R.id.lineH8121a);
+            VlblH8121a = (TextView) findViewById(R.id.VlblH8121a);
+            rdogrpH8121a = (RadioGroup) findViewById(R.id.rdogrpH8121a);
+
+            rdoH8121a1 = (RadioButton) findViewById(R.id.rdoH8121a1);
+            rdoH8121a2 = (RadioButton) findViewById(R.id.rdoH8121a2);
+            rdogrpH8121a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH8121a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH8121a.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH8121a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH8121a[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH8121x1.setVisibility(View.GONE);
+                        lineH8121x1.setVisibility(View.GONE);
+                        txtH8121x1.setText("");
+                        secH8121b.setVisibility(View.GONE);
+                        lineH8121b.setVisibility(View.GONE);
+                        txtH8121b.setText("");
+                        secH8121c.setVisibility(View.GONE);
+                        lineH8121c.setVisibility(View.GONE);
+                        rdogrpH8121c.clearCheck();
+                    } else {
+                        secH8121x1.setVisibility(View.VISIBLE);
+                        lineH8121x1.setVisibility(View.VISIBLE);
+                        secH8121b.setVisibility(View.VISIBLE);
+                        lineH8121b.setVisibility(View.VISIBLE);
+                        secH8121c.setVisibility(View.VISIBLE);
+                        lineH8121c.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+            secH8121x1 = (LinearLayout) findViewById(R.id.secH8121x1);
+            lineH8121x1 = (View) findViewById(R.id.lineH8121x1);
+            VlblH8121x1 = (TextView) findViewById(R.id.VlblH8121x1);
+            txtH8121x1 = (EditText) findViewById(R.id.txtH8121x1);
+            secH8121b = (LinearLayout) findViewById(R.id.secH8121b);
+            lineH8121b = (View) findViewById(R.id.lineH8121b);
+            VlblH8121b = (TextView) findViewById(R.id.VlblH8121b);
+            txtH8121b = (EditText) findViewById(R.id.txtH8121b);
+            secH8121c = (LinearLayout) findViewById(R.id.secH8121c);
+            lineH8121c = (View) findViewById(R.id.lineH8121c);
+            VlblH8121c = (TextView) findViewById(R.id.VlblH8121c);
+            rdogrpH8121c = (RadioGroup) findViewById(R.id.rdogrpH8121c);
+
+            rdoH8121c1 = (RadioButton) findViewById(R.id.rdoH8121c1);
+            rdoH8121c2 = (RadioButton) findViewById(R.id.rdoH8121c2);
+            rdoH8121c3 = (RadioButton) findViewById(R.id.rdoH8121c3);
+            secH8121d = (LinearLayout) findViewById(R.id.secH8121d);
+            lineH8121d = (View) findViewById(R.id.lineH8121d);
+            VlblH8121d = (TextView) findViewById(R.id.VlblH8121d);
+            txtH8121d = (EditText) findViewById(R.id.txtH8121d);
+            secLBH8122 = (LinearLayout) findViewById(R.id.secLBH8122);
+            secH8122a = (LinearLayout) findViewById(R.id.secH8122a);
+            lineH8122a = (View) findViewById(R.id.lineH8122a);
+            VlblH8122a = (TextView) findViewById(R.id.VlblH8122a);
+            rdogrpH8122a = (RadioGroup) findViewById(R.id.rdogrpH8122a);
+
+            rdoH8122a1 = (RadioButton) findViewById(R.id.rdoH8122a1);
+            rdoH8122a2 = (RadioButton) findViewById(R.id.rdoH8122a2);
+            rdogrpH8122a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH8122a = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH8122a.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH8122a.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH8122a[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0")) {
+                        secH8122x1.setVisibility(View.GONE);
+                        lineH8122x1.setVisibility(View.GONE);
+                        txtH8122x1.setText("");
+                        secH8122b.setVisibility(View.GONE);
+                        lineH8122b.setVisibility(View.GONE);
+                        txtH8122b.setText("");
+                        secH8122c.setVisibility(View.GONE);
+                        lineH8122c.setVisibility(View.GONE);
+                        rdogrpH8122c.clearCheck();
+                    } else {
+                        secH8122x1.setVisibility(View.VISIBLE);
+                        lineH8122x1.setVisibility(View.VISIBLE);
+                        secH8122b.setVisibility(View.VISIBLE);
+                        lineH8122b.setVisibility(View.VISIBLE);
+                        secH8122c.setVisibility(View.VISIBLE);
+                        lineH8122c.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+            secH8122x1 = (LinearLayout) findViewById(R.id.secH8122x1);
+            lineH8122x1 = (View) findViewById(R.id.lineH8122x1);
+            VlblH8122x1 = (TextView) findViewById(R.id.VlblH8122x1);
+            txtH8122x1 = (EditText) findViewById(R.id.txtH8122x1);
+            secH8122b = (LinearLayout) findViewById(R.id.secH8122b);
+            lineH8122b = (View) findViewById(R.id.lineH8122b);
+            VlblH8122b = (TextView) findViewById(R.id.VlblH8122b);
+            txtH8122b = (EditText) findViewById(R.id.txtH8122b);
+            secH8122c = (LinearLayout) findViewById(R.id.secH8122c);
+            lineH8122c = (View) findViewById(R.id.lineH8122c);
+            VlblH8122c = (TextView) findViewById(R.id.VlblH8122c);
+            rdogrpH8122c = (RadioGroup) findViewById(R.id.rdogrpH8122c);
+
+            rdoH8122c1 = (RadioButton) findViewById(R.id.rdoH8122c1);
+            rdoH8122c2 = (RadioButton) findViewById(R.id.rdoH8122c2);
+            rdoH8122c3 = (RadioButton) findViewById(R.id.rdoH8122c3);
+            secH8122d = (LinearLayout) findViewById(R.id.secH8122d);
+            lineH8122d = (View) findViewById(R.id.lineH8122d);
+            VlblH8122d = (TextView) findViewById(R.id.VlblH8122d);
+            txtH8122d = (EditText) findViewById(R.id.txtH8122d);
+
+
+            //Hide all skip variables
+            secH871a.setVisibility(View.GONE);
+            lineH871a.setVisibility(View.GONE);
+            secH872a.setVisibility(View.GONE);
+            lineH872a.setVisibility(View.GONE);
+            secH873a.setVisibility(View.GONE);
+            lineH873a.setVisibility(View.GONE);
+            secH874a.setVisibility(View.GONE);
+            lineH874a.setVisibility(View.GONE);
+            secH875a.setVisibility(View.GONE);
+            lineH875a.setVisibility(View.GONE);
+            secH871b.setVisibility(View.GONE);
+            lineH871b.setVisibility(View.GONE);
+            secH871c.setVisibility(View.GONE);
+            lineH871c.setVisibility(View.GONE);
+            secH871d.setVisibility(View.GONE);
+            lineH871d.setVisibility(View.GONE);
+            secH872b.setVisibility(View.GONE);
+            lineH872b.setVisibility(View.GONE);
+            secH872c.setVisibility(View.GONE);
+            lineH872c.setVisibility(View.GONE);
+            secH872d.setVisibility(View.GONE);
+            lineH872d.setVisibility(View.GONE);
+            secH873b.setVisibility(View.GONE);
+            lineH873b.setVisibility(View.GONE);
+            secH873c.setVisibility(View.GONE);
+            lineH873c.setVisibility(View.GONE);
+            secH873d.setVisibility(View.GONE);
+            lineH873d.setVisibility(View.GONE);
+            secH874b.setVisibility(View.GONE);
+            lineH874b.setVisibility(View.GONE);
+            secH874c.setVisibility(View.GONE);
+            lineH874c.setVisibility(View.GONE);
+            secH874d.setVisibility(View.GONE);
+            lineH874d.setVisibility(View.GONE);
+            secH875b.setVisibility(View.GONE);
+            lineH875b.setVisibility(View.GONE);
+            secH875c.setVisibility(View.GONE);
+            lineH875c.setVisibility(View.GONE);
+            secH875d.setVisibility(View.GONE);
+            lineH875d.setVisibility(View.GONE);
+            secH881a.setVisibility(View.GONE);
+            lineH881a.setVisibility(View.GONE);
+            secH882a.setVisibility(View.GONE);
+            lineH882a.setVisibility(View.GONE);
+            secH883a.setVisibility(View.GONE);
+            lineH883a.setVisibility(View.GONE);
+            secH884a.setVisibility(View.GONE);
+            lineH884a.setVisibility(View.GONE);
+            secH885a.setVisibility(View.GONE);
+            lineH885a.setVisibility(View.GONE);
+            secH881b.setVisibility(View.GONE);
+            lineH881b.setVisibility(View.GONE);
+            secH881c.setVisibility(View.GONE);
+            lineH881c.setVisibility(View.GONE);
+            secH881d.setVisibility(View.GONE);
+            lineH881d.setVisibility(View.GONE);
+            secH882b.setVisibility(View.GONE);
+            lineH882b.setVisibility(View.GONE);
+            secH882c.setVisibility(View.GONE);
+            lineH882c.setVisibility(View.GONE);
+            secH882d.setVisibility(View.GONE);
+            lineH882d.setVisibility(View.GONE);
+            secH883b.setVisibility(View.GONE);
+            lineH883b.setVisibility(View.GONE);
+            secH883c.setVisibility(View.GONE);
+            lineH883c.setVisibility(View.GONE);
+            secH883d.setVisibility(View.GONE);
+            lineH883d.setVisibility(View.GONE);
+            secH884b.setVisibility(View.GONE);
+            lineH884b.setVisibility(View.GONE);
+            secH884c.setVisibility(View.GONE);
+            lineH884c.setVisibility(View.GONE);
+            secH884d.setVisibility(View.GONE);
+            lineH884d.setVisibility(View.GONE);
+            secH885b.setVisibility(View.GONE);
+            lineH885b.setVisibility(View.GONE);
+            secH885c.setVisibility(View.GONE);
+            lineH885c.setVisibility(View.GONE);
+            secH885d.setVisibility(View.GONE);
+            lineH885d.setVisibility(View.GONE);
+            secH891b.setVisibility(View.GONE);
+            lineH891b.setVisibility(View.GONE);
+            secH891c.setVisibility(View.GONE);
+            lineH891c.setVisibility(View.GONE);
+            secH891d.setVisibility(View.GONE);
+            lineH891d.setVisibility(View.GONE);
+            secH8101a.setVisibility(View.GONE);
+            lineH8101a.setVisibility(View.GONE);
+            secH8102a.setVisibility(View.GONE);
+            lineH8102a.setVisibility(View.GONE);
+            secH8103a.setVisibility(View.GONE);
+            lineH8103a.setVisibility(View.GONE);
+            secH8101b.setVisibility(View.GONE);
+            lineH8101b.setVisibility(View.GONE);
+            secH8101c.setVisibility(View.GONE);
+            lineH8101c.setVisibility(View.GONE);
+            secH8101d.setVisibility(View.GONE);
+            lineH8101d.setVisibility(View.GONE);
+            secH8102b.setVisibility(View.GONE);
+            lineH8102b.setVisibility(View.GONE);
+            secH8102c.setVisibility(View.GONE);
+            lineH8102c.setVisibility(View.GONE);
+            secH8102d.setVisibility(View.GONE);
+            lineH8102d.setVisibility(View.GONE);
+            secH8103b.setVisibility(View.GONE);
+            lineH8103b.setVisibility(View.GONE);
+            secH8103c.setVisibility(View.GONE);
+            lineH8103c.setVisibility(View.GONE);
+            secH8103d.setVisibility(View.GONE);
+            secH8111b.setVisibility(View.GONE);
+            secH8111c.setVisibility(View.GONE);
+            secH8121x1.setVisibility(View.GONE);
+            secH8121b.setVisibility(View.GONE);
+            secH8121c.setVisibility(View.GONE);
+            secH8122x1.setVisibility(View.GONE);
+            secH8122b.setVisibility(View.GONE);
+            secH8122c.setVisibility(View.GONE);
+
+
 
 
             DataSearch(RND, SUCHANAID);
@@ -1350,9 +1882,9 @@ public class Cost2 extends Activity {
                 }
             });
         } catch (Exception e) {
+//            Connection.MessageBox(Cost2.this, e.getMessage());
+            //          return;
             throw e;
-            //Connection.MessageBox(Cost2.this, e.getMessage());
-            // return;
         }
     }
 
@@ -1373,9 +1905,13 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: উপকারভোগী/সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
-                Connection.MessageBox(Cost2.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                // txtMSlNo.requestFocus();
+            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর.");
+                spnMSlNo.requestFocus();
+                return;
+            } else if (!rdoH871.isChecked() & !rdoH872.isChecked() & secH87.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গত মাসে সবজি/ফল ক্রয় করেছেন?).");
+                rdoH871.requestFocus();
                 return;
             } else if (!rdoH871a1.isChecked() & !rdoH871a2.isChecked() & secH871a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from (পাতাওয়ালা সবজি   কিনেছে).");
@@ -1496,6 +2032,10 @@ public class Cost2 extends Activity {
             } else if (Integer.valueOf(txtH875d.getText().toString().length() == 0 ? "1" : txtH875d.getText().toString()) < 1 || Integer.valueOf(txtH875d.getText().toString().length() == 0 ? "999999" : txtH875d.getText().toString()) > 999999) {
                 Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH875d.requestFocus();
+                return;
+            } else if (!rdoH881.isChecked() & !rdoH882.isChecked() & secH88.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গত মাসে  গুড়া মশলা ক্রয় করেছেন).");
+                rdoH881.requestFocus();
                 return;
             } else if (!rdoH881a1.isChecked() & !rdoH881a2.isChecked() & secH881a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from ( পেঁয়াজ  কিনেছে).");
@@ -1641,6 +2181,10 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH891d.requestFocus();
                 return;
+            } else if (!rdoH8101.isChecked() & !rdoH8102.isChecked() & secH810.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (আপনি গতমাসে কোনো চা/  চিনি ক্রয় করেছেন?).");
+                rdoH8101.requestFocus();
+                return;
             } else if (!rdoH8101a1.isChecked() & !rdoH8101a2.isChecked() & secH8101a.isShown()) {
                 Connection.MessageBox(Cost2.this, "Select anyone options from (চা  কিনেছে).");
                 rdoH8101a1.requestFocus();
@@ -1713,6 +2257,86 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH8103d.requestFocus();
                 return;
+            } else if (!rdoH8111a1.isChecked() & !rdoH8111a2.isChecked() & secH8111a.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (পান সুপারি কিনেছে).");
+                rdoH8111a1.requestFocus();
+                return;
+            } else if (txtH8111b.getText().toString().length() == 0 & secH8111b.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
+                txtH8111b.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8111b.getText().toString().length() == 0 ? "1" : txtH8111b.getText().toString()) < 1 || Integer.valueOf(txtH8111b.getText().toString().length() == 0 ? "999" : txtH8111b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+                txtH8111b.requestFocus();
+                return;
+            } else if (!rdoH8111c1.isChecked() & !rdoH8111c2.isChecked() & !rdoH8111c3.isChecked() & secH8111c.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (ইউনিট ).");
+                rdoH8111c1.requestFocus();
+                return;
+            } else if (txtH8111d.getText().toString().length() == 0 & secH8111d.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
+                txtH8111d.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8111d.getText().toString().length() == 0 ? "1" : txtH8111d.getText().toString()) < 1 || Integer.valueOf(txtH8111d.getText().toString().length() == 0 ? "999999" : txtH8111d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+                txtH8111d.requestFocus();
+                return;
+            } else if (!rdoH8121a1.isChecked() & !rdoH8121a2.isChecked() & secH8121a.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (অন্যান্য কিনেছে).");
+                rdoH8121a1.requestFocus();
+                return;
+            } else if (txtH8121x1.getText().toString().length() == 0 & secH8121x1.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: অন্যান্য নির্দিষ্ট করুন.");
+                txtH8121x1.requestFocus();
+                return;
+            } else if (txtH8121b.getText().toString().length() == 0 & secH8121b.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
+                txtH8121b.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8121b.getText().toString().length() == 0 ? "1" : txtH8121b.getText().toString()) < 1 || Integer.valueOf(txtH8121b.getText().toString().length() == 0 ? "999" : txtH8121b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+                txtH8121b.requestFocus();
+                return;
+            } else if (!rdoH8121c1.isChecked() & !rdoH8121c2.isChecked() & !rdoH8121c3.isChecked() & secH8121c.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (ইউনিট ).");
+                rdoH8121c1.requestFocus();
+                return;
+            } else if (txtH8121d.getText().toString().length() == 0 & secH8121d.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
+                txtH8121d.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8121d.getText().toString().length() == 0 ? "1" : txtH8121d.getText().toString()) < 1 || Integer.valueOf(txtH8121d.getText().toString().length() == 0 ? "999999" : txtH8121d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+                txtH8121d.requestFocus();
+                return;
+            } else if (!rdoH8122a1.isChecked() & !rdoH8122a2.isChecked() & secH8122a.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (অন্যান্য2  কিনেছে).");
+                rdoH8122a1.requestFocus();
+                return;
+            } else if (txtH8122x1.getText().toString().length() == 0 & secH8122x1.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: অন্যান্য নির্দিষ্ট করুন.");
+                txtH8122x1.requestFocus();
+                return;
+            } else if (txtH8122b.getText().toString().length() == 0 & secH8122b.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
+                txtH8122b.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8122b.getText().toString().length() == 0 ? "1" : txtH8122b.getText().toString()) < 1 || Integer.valueOf(txtH8122b.getText().toString().length() == 0 ? "999" : txtH8122b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+                txtH8122b.requestFocus();
+                return;
+            } else if (!rdoH8122c1.isChecked() & !rdoH8122c2.isChecked() & !rdoH8122c3.isChecked() & secH8122c.isShown()) {
+                Connection.MessageBox(Cost2.this, "Select anyone options from (ইউনিট ).");
+                rdoH8122c1.requestFocus();
+                return;
+            } else if (txtH8122d.getText().toString().length() == 0 & secH8122d.isShown()) {
+                Connection.MessageBox(Cost2.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
+                txtH8122d.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtH8122d.getText().toString().length() == 0 ? "1" : txtH8122d.getText().toString()) < 1 || Integer.valueOf(txtH8122d.getText().toString().length() == 0 ? "999999" : txtH8122d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+                txtH8122d.requestFocus();
+                return;
             }
 
             String SQL = "";
@@ -1721,7 +2345,14 @@ public class Cost2 extends Activity {
             Cost2_DataModel objSave = new Cost2_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setMSlNo(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
+            objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
+            String[] d_rdogrpH87 = new String[]{"1", "0"};
+            objSave.setH87("");
+            for (int i = 0; i < rdogrpH87.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH87.getChildAt(i);
+                if (rb.isChecked()) objSave.setH87(d_rdogrpH87[i]);
+            }
+
             String[] d_rdogrpH871a = new String[]{"1", "0"};
             objSave.setH871a("");
             for (int i = 0; i < rdogrpH871a.getChildCount(); i++) {
@@ -1802,6 +2433,13 @@ public class Cost2 extends Activity {
             }
 
             objSave.setH875d(txtH875d.getText().toString());
+            String[] d_rdogrpH88 = new String[]{"1", "2"};
+            objSave.setH88("");
+            for (int i = 0; i < rdogrpH88.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH88.getChildAt(i);
+                if (rb.isChecked()) objSave.setH88(d_rdogrpH88[i]);
+            }
+
             String[] d_rdogrpH881a = new String[]{"1", "0"};
             objSave.setH881a("");
             for (int i = 0; i < rdogrpH881a.getChildCount(); i++) {
@@ -1898,6 +2536,13 @@ public class Cost2 extends Activity {
             }
 
             objSave.setH891d(txtH891d.getText().toString());
+            String[] d_rdogrpH810 = new String[]{"1", "0"};
+            objSave.setH810("");
+            for (int i = 0; i < rdogrpH810.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH810.getChildAt(i);
+                if (rb.isChecked()) objSave.setH810(d_rdogrpH810[i]);
+            }
+
             String[] d_rdogrpH8101a = new String[]{"1", "0"};
             objSave.setH8101a("");
             for (int i = 0; i < rdogrpH8101a.getChildCount(); i++) {
@@ -1946,6 +2591,56 @@ public class Cost2 extends Activity {
             }
 
             objSave.setH8103d(txtH8103d.getText().toString());
+            String[] d_rdogrpH8111a = new String[]{"1", "0"};
+            objSave.setH8111a("");
+            for (int i = 0; i < rdogrpH8111a.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8111a.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8111a(d_rdogrpH8111a[i]);
+            }
+
+            objSave.setH8111b(txtH8111b.getText().toString());
+            String[] d_rdogrpH8111c = new String[]{"1", "2", "3"};
+            objSave.setH8111c("");
+            for (int i = 0; i < rdogrpH8111c.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8111c.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8111c(d_rdogrpH8111c[i]);
+            }
+
+            objSave.setH8111d(txtH8111d.getText().toString());
+            String[] d_rdogrpH8121a = new String[]{"1", "0"};
+            objSave.setH8121a("");
+            for (int i = 0; i < rdogrpH8121a.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8121a.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8121a(d_rdogrpH8121a[i]);
+            }
+
+            objSave.setH8121x1(txtH8121x1.getText().toString());
+            objSave.setH8121b(txtH8121b.getText().toString());
+            String[] d_rdogrpH8121c = new String[]{"1", "2", "3"};
+            objSave.setH8121c("");
+            for (int i = 0; i < rdogrpH8121c.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8121c.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8121c(d_rdogrpH8121c[i]);
+            }
+
+            objSave.setH8121d(txtH8121d.getText().toString());
+            String[] d_rdogrpH8122a = new String[]{"1", "0"};
+            objSave.setH8122a("");
+            for (int i = 0; i < rdogrpH8122a.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8122a.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8122a(d_rdogrpH8122a[i]);
+            }
+
+            objSave.setH8122x1(txtH8122x1.getText().toString());
+            objSave.setH8122b(txtH8122b.getText().toString());
+            String[] d_rdogrpH8122c = new String[]{"1", "2", "3"};
+            objSave.setH8122c("");
+            for (int i = 0; i < rdogrpH8122c.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH8122c.getChildAt(i);
+                if (rb.isChecked()) objSave.setH8122c(d_rdogrpH8122c[i]);
+            }
+
+            objSave.setH8122d(txtH8122d.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1986,8 +2681,15 @@ public class Cost2 extends Activity {
             List<Cost2_DataModel> data = d.SelectAll(this, SQL);
             for (Cost2_DataModel item : data) {
                 //txtRnd.setText(item.getRnd());
-                //  txtSuchanaID.setText(item.getSuchanaID());
-                // txtMSlNo.setText(item.getMSlNo());
+                // txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
+                String[] d_rdogrpH87 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH87.length; i++) {
+                    if (item.getH87().equals(String.valueOf(d_rdogrpH87[i]))) {
+                        rb = (RadioButton) rdogrpH87.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH871a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH871a.length; i++) {
                     if (item.getH871a().equals(String.valueOf(d_rdogrpH871a[i]))) {
@@ -2068,6 +2770,13 @@ public class Cost2 extends Activity {
                     }
                 }
                 txtH875d.setText(item.getH875d());
+                String[] d_rdogrpH88 = new String[]{"1", "2"};
+                for (int i = 0; i < d_rdogrpH88.length; i++) {
+                    if (item.getH88().equals(String.valueOf(d_rdogrpH88[i]))) {
+                        rb = (RadioButton) rdogrpH88.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH881a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH881a.length; i++) {
                     if (item.getH881a().equals(String.valueOf(d_rdogrpH881a[i]))) {
@@ -2164,6 +2873,13 @@ public class Cost2 extends Activity {
                     }
                 }
                 txtH891d.setText(item.getH891d());
+                String[] d_rdogrpH810 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH810.length; i++) {
+                    if (item.getH810().equals(String.valueOf(d_rdogrpH810[i]))) {
+                        rb = (RadioButton) rdogrpH810.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
                 String[] d_rdogrpH8101a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH8101a.length; i++) {
                     if (item.getH8101a().equals(String.valueOf(d_rdogrpH8101a[i]))) {
@@ -2212,101 +2928,68 @@ public class Cost2 extends Activity {
                     }
                 }
                 txtH8103d.setText(item.getH8103d());
+                String[] d_rdogrpH8111a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH8111a.length; i++) {
+                    if (item.getH8111a().equals(String.valueOf(d_rdogrpH8111a[i]))) {
+                        rb = (RadioButton) rdogrpH8111a.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8111b.setText(item.getH8111b());
+                String[] d_rdogrpH8111c = new String[]{"1", "2", "3"};
+                for (int i = 0; i < d_rdogrpH8111c.length; i++) {
+                    if (item.getH8111c().equals(String.valueOf(d_rdogrpH8111c[i]))) {
+                        rb = (RadioButton) rdogrpH8111c.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8111d.setText(item.getH8111d());
+                String[] d_rdogrpH8121a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH8121a.length; i++) {
+                    if (item.getH8121a().equals(String.valueOf(d_rdogrpH8121a[i]))) {
+                        rb = (RadioButton) rdogrpH8121a.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8121x1.setText(item.getH8121x1());
+                txtH8121b.setText(item.getH8121b());
+                String[] d_rdogrpH8121c = new String[]{"1", "2", "3"};
+                for (int i = 0; i < d_rdogrpH8121c.length; i++) {
+                    if (item.getH8121c().equals(String.valueOf(d_rdogrpH8121c[i]))) {
+                        rb = (RadioButton) rdogrpH8121c.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8121d.setText(item.getH8121d());
+                String[] d_rdogrpH8122a = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH8122a.length; i++) {
+                    if (item.getH8122a().equals(String.valueOf(d_rdogrpH8122a[i]))) {
+                        rb = (RadioButton) rdogrpH8122a.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8122x1.setText(item.getH8122x1());
+                txtH8122b.setText(item.getH8122b());
+                String[] d_rdogrpH8122c = new String[]{"1", "2", "3"};
+                for (int i = 0; i < d_rdogrpH8122c.length; i++) {
+                    if (item.getH8122c().equals(String.valueOf(d_rdogrpH8122c[i]))) {
+                        rb = (RadioButton) rdogrpH8122c.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH8122d.setText(item.getH8122d());
             }
         } catch (Exception e) {
-            throw e;
-//            Connection.MessageBox(Cost2.this, e.getMessage());
-            //          return;
-        }
-    }
-
-    protected Dialog onCreateDialog(int id) {
-        final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
-        switch (id) {
-            case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
-            case TIME_DIALOG:
-                return new TimePickerDialog(this, timePickerListener, hour, minute, false);
-        }
-        return null;
-    }
-
-    //GPS Reading
-    //.....................................................................................................
-    public void FindLocation() {
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                updateLocation(location);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            public void onProviderEnabled(String provider) {
-            }
-
-            public void onProviderDisabled(String provider) {
-            }
-        };
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+            Connection.MessageBox(Cost2.this, e.getMessage());
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 
-    void updateLocation(Location location) {
-        currentLocation  = location;
-        currentLatitude  = currentLocation.getLatitude();
-        currentLongitude = currentLocation.getLongitude();
-    }
-
-
-    // Method to turn on GPS
-    public void turnGPSOn(){
-        try
-        {
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if(!provider.contains("gps")){ //if gps is disabled
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        }
-        catch (Exception e) {
-        }
-    }
-
-    // Method to turn off the GPS
-    public void turnGPSOff(){
-        String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-
-        if(provider.contains("gps")){ //if gps is enabled
-            final Intent poke = new Intent();
-            poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-            poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-            poke.setData(Uri.parse("3"));
-            sendBroadcast(poke);
-        }
-    }
 
     // turning off the GPS if its in on state. to avoid the battery drain.
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
-        turnGPSOff();
     }
 }

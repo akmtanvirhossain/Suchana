@@ -14,20 +14,6 @@ public class Cost3_DataModel{
     private String _Rnd = "";
     private String _SuchanaID = "";
     private String _MSlNo = "";
-    private String _H8111a = "";
-    private String _H8111b = "";
-    private String _H8111c = "";
-    private String _H8111d = "";
-    private String _H8121a = "";
-    private String _H8121x1 = "";
-    private String _H8121b = "";
-    private String _H8121c = "";
-    private String _H8121d = "";
-    private String _H8122a = "";
-    private String _H8122x1 = "";
-    private String _H8122b = "";
-    private String _H8122c = "";
-    private String _H8122d = "";
     private String _H9a1a = "";
     private String _H9a1b = "";
     private String _H9a1c = "";
@@ -154,118 +140,6 @@ public class Cost3_DataModel{
 
     public void setMSlNo(String newValue){
         _MSlNo = newValue;
-    }
-
-    public String getH8111a(){
-        return _H8111a;
-    }
-
-    public void setH8111a(String newValue){
-        _H8111a = newValue;
-    }
-
-    public String getH8111b(){
-        return _H8111b;
-    }
-
-    public void setH8111b(String newValue){
-        _H8111b = newValue;
-    }
-
-    public String getH8111c(){
-        return _H8111c;
-    }
-
-    public void setH8111c(String newValue){
-        _H8111c = newValue;
-    }
-
-    public String getH8111d(){
-        return _H8111d;
-    }
-
-    public void setH8111d(String newValue){
-        _H8111d = newValue;
-    }
-
-    public String getH8121a() {
-        return _H8121a;
-    }
-
-    public void setH8121a(String newValue) {
-        _H8121a = newValue;
-    }
-
-    public String getH8121x1(){
-        return _H8121x1;
-    }
-
-    public void setH8121x1(String newValue){
-        _H8121x1 = newValue;
-    }
-
-    public String getH8121b(){
-        return _H8121b;
-    }
-
-    public void setH8121b(String newValue){
-        _H8121b = newValue;
-    }
-
-    public String getH8121c(){
-        return _H8121c;
-    }
-
-    public void setH8121c(String newValue){
-        _H8121c = newValue;
-    }
-
-    public String getH8121d(){
-        return _H8121d;
-    }
-
-    public void setH8121d(String newValue){
-        _H8121d = newValue;
-    }
-
-    public String getH8122a() {
-        return _H8122a;
-    }
-
-    public void setH8122a(String newValue) {
-        _H8122a = newValue;
-    }
-
-    public String getH8122x1() {
-        return _H8122x1;
-    }
-
-    public void setH8122x1(String newValue) {
-        _H8122x1 = newValue;
-    }
-
-    public String getH8122b() {
-        return _H8122b;
-    }
-
-    public void setH8122b(String newValue) {
-        _H8122b = newValue;
-    }
-
-    public String getH8122c() {
-        return _H8122c;
-    }
-
-    public void setH8122c(String newValue) {
-        _H8122c = newValue;
-    }
-
-    public String getH8122d() {
-        return _H8122d;
-    }
-
-    public void setH8122d(String newValue) {
-        _H8122d = newValue;
     }
 
     public String getH9a1a(){
@@ -1082,7 +956,7 @@ public class Cost3_DataModel{
         String SQL = "";
         try
         {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H8111a,H8111b,H8111c,H8111d,H8121a,H8121x1,H8121b,H8121c,H8121d,H8122a,H8122x1,H8122b,H8122c,H8122d,H9a1a,H9a1b,H9a1c,H9a2a,H9a2b,H9a2c,H9a3a,H9a3b,H9a3c,H9a4a,H9a4b,H9a4c,H9a5a,H9a5b,H9a5c,H9b1a,H9b1b,H9b1c,H9b2a,H9b2b,H9b2c,H9b3a,H9b3b,H9b3c,H9b4a,H9b4b,H9b4c,H9b5a,H9b5b,H9b5c,H9b6a,H9b6b,H9b6c,H9b7a,H9b7b,H9b7c,H9b8a,H9b8b,H9b8c,H9b9a,H9b9b,H9b9c,H9b10a,H9b10b,H9b10c,H9b11a,H9b11b,H9b11c,H9b12,H9b12a1,H9b12a2,H9b12a3,H9b12b1,H9b12b2,H9b12b3,H9b12c1,H9b12c2,H9b12c3,H9b12d1,H9b12d2,H9b12d3,H9b12e1,H9b12e2,H9b12e3,H9b12f1,H9b12f2,H9b12f3,H9b12g1,H9b12g2,H9b12g3,H9b12h1,H9b12h2,H9b12h3,H9b12i1,H9b12i2,H9b12i3,H9b12j1,H9b12j2,H9b12j3,H9b12k1,H9b12k2,H9b12k3,H9b12l1,H9b12l2,H9b12l3,H9b12m1,H9b12m2,H9b12m3,H9b13a,H9b13b,H9b13c,H9b14a,H9b14x1,H9b14b,H9b14c,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H8111a + "', '" + _H8111b + "', '" + _H8111c + "', '" + _H8111d + "', '" + _H8121a + "', '" + _H8121x1 + "', '" + _H8121b + "', '" + _H8121c + "', '" + _H8121d + "', '" + _H8122a + "', '" + _H8122x1 + "', '" + _H8122b + "', '" + _H8122c + "', '" + _H8122d + "', '" + _H9a1a + "', '" + _H9a1b + "', '" + _H9a1c + "', '" + _H9a2a + "', '" + _H9a2b + "', '" + _H9a2c + "', '" + _H9a3a + "', '" + _H9a3b + "', '" + _H9a3c + "', '" + _H9a4a + "', '" + _H9a4b + "', '" + _H9a4c + "', '" + _H9a5a + "', '" + _H9a5b + "', '" + _H9a5c + "', '" + _H9b1a + "', '" + _H9b1b + "', '" + _H9b1c + "', '" + _H9b2a + "', '" + _H9b2b + "', '" + _H9b2c + "', '" + _H9b3a + "', '" + _H9b3b + "', '" + _H9b3c + "', '" + _H9b4a + "', '" + _H9b4b + "', '" + _H9b4c + "', '" + _H9b5a + "', '" + _H9b5b + "', '" + _H9b5c + "', '" + _H9b6a + "', '" + _H9b6b + "', '" + _H9b6c + "', '" + _H9b7a + "', '" + _H9b7b + "', '" + _H9b7c + "', '" + _H9b8a + "', '" + _H9b8b + "', '" + _H9b8c + "', '" + _H9b9a + "', '" + _H9b9b + "', '" + _H9b9c + "', '" + _H9b10a + "', '" + _H9b10b + "', '" + _H9b10c + "', '" + _H9b11a + "', '" + _H9b11b + "', '" + _H9b11c + "', '" + _H9b12 + "', '" + _H9b12a1 + "', '" + _H9b12a2 + "', '" + _H9b12a3 + "', '" + _H9b12b1 + "', '" + _H9b12b2 + "', '" + _H9b12b3 + "', '" + _H9b12c1 + "', '" + _H9b12c2 + "', '" + _H9b12c3 + "', '" + _H9b12d1 + "', '" + _H9b12d2 + "', '" + _H9b12d3 + "', '" + _H9b12e1 + "', '" + _H9b12e2 + "', '" + _H9b12e3 + "', '" + _H9b12f1 + "', '" + _H9b12f2 + "', '" + _H9b12f3 + "', '" + _H9b12g1 + "', '" + _H9b12g2 + "', '" + _H9b12g3 + "', '" + _H9b12h1 + "', '" + _H9b12h2 + "', '" + _H9b12h3 + "', '" + _H9b12i1 + "', '" + _H9b12i2 + "', '" + _H9b12i3 + "', '" + _H9b12j1 + "', '" + _H9b12j2 + "', '" + _H9b12j3 + "', '" + _H9b12k1 + "', '" + _H9b12k2 + "', '" + _H9b12k3 + "', '" + _H9b12l1 + "', '" + _H9b12l2 + "', '" + _H9b12l3 + "', '" + _H9b12m1 + "', '" + _H9b12m2 + "', '" + _H9b12m3 + "', '" + _H9b13a + "', '" + _H9b13b + "', '" + _H9b13c + "', '" + _H9b14a + "', '" + _H9b14x1 + "', '" + _H9b14b + "', '" + _H9b14c + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H9a1a,H9a1b,H9a1c,H9a2a,H9a2b,H9a2c,H9a3a,H9a3b,H9a3c,H9a4a,H9a4b,H9a4c,H9a5a,H9a5b,H9a5c,H9b1a,H9b1b,H9b1c,H9b2a,H9b2b,H9b2c,H9b3a,H9b3b,H9b3c,H9b4a,H9b4b,H9b4c,H9b5a,H9b5b,H9b5c,H9b6a,H9b6b,H9b6c,H9b7a,H9b7b,H9b7c,H9b8a,H9b8b,H9b8c,H9b9a,H9b9b,H9b9c,H9b10a,H9b10b,H9b10c,H9b11a,H9b11b,H9b11c,H9b12,H9b12a1,H9b12a2,H9b12a3,H9b12b1,H9b12b2,H9b12b3,H9b12c1,H9b12c2,H9b12c3,H9b12d1,H9b12d2,H9b12d3,H9b12e1,H9b12e2,H9b12e3,H9b12f1,H9b12f2,H9b12f3,H9b12g1,H9b12g2,H9b12g3,H9b12h1,H9b12h2,H9b12h3,H9b12i1,H9b12i2,H9b12i3,H9b12j1,H9b12j2,H9b12j3,H9b12k1,H9b12k2,H9b12k3,H9b12l1,H9b12l2,H9b12l3,H9b12m1,H9b12m2,H9b12m3,H9b13a,H9b13b,H9b13c,H9b14a,H9b14x1,H9b14b,H9b14c,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H9a1a + "', '" + _H9a1b + "', '" + _H9a1c + "', '" + _H9a2a + "', '" + _H9a2b + "', '" + _H9a2c + "', '" + _H9a3a + "', '" + _H9a3b + "', '" + _H9a3c + "', '" + _H9a4a + "', '" + _H9a4b + "', '" + _H9a4c + "', '" + _H9a5a + "', '" + _H9a5b + "', '" + _H9a5c + "', '" + _H9b1a + "', '" + _H9b1b + "', '" + _H9b1c + "', '" + _H9b2a + "', '" + _H9b2b + "', '" + _H9b2c + "', '" + _H9b3a + "', '" + _H9b3b + "', '" + _H9b3c + "', '" + _H9b4a + "', '" + _H9b4b + "', '" + _H9b4c + "', '" + _H9b5a + "', '" + _H9b5b + "', '" + _H9b5c + "', '" + _H9b6a + "', '" + _H9b6b + "', '" + _H9b6c + "', '" + _H9b7a + "', '" + _H9b7b + "', '" + _H9b7c + "', '" + _H9b8a + "', '" + _H9b8b + "', '" + _H9b8c + "', '" + _H9b9a + "', '" + _H9b9b + "', '" + _H9b9c + "', '" + _H9b10a + "', '" + _H9b10b + "', '" + _H9b10c + "', '" + _H9b11a + "', '" + _H9b11b + "', '" + _H9b11c + "', '" + _H9b12 + "', '" + _H9b12a1 + "', '" + _H9b12a2 + "', '" + _H9b12a3 + "', '" + _H9b12b1 + "', '" + _H9b12b2 + "', '" + _H9b12b3 + "', '" + _H9b12c1 + "', '" + _H9b12c2 + "', '" + _H9b12c3 + "', '" + _H9b12d1 + "', '" + _H9b12d2 + "', '" + _H9b12d3 + "', '" + _H9b12e1 + "', '" + _H9b12e2 + "', '" + _H9b12e3 + "', '" + _H9b12f1 + "', '" + _H9b12f2 + "', '" + _H9b12f3 + "', '" + _H9b12g1 + "', '" + _H9b12g2 + "', '" + _H9b12g3 + "', '" + _H9b12h1 + "', '" + _H9b12h2 + "', '" + _H9b12h3 + "', '" + _H9b12i1 + "', '" + _H9b12i2 + "', '" + _H9b12i3 + "', '" + _H9b12j1 + "', '" + _H9b12j2 + "', '" + _H9b12j3 + "', '" + _H9b12k1 + "', '" + _H9b12k2 + "', '" + _H9b12k3 + "', '" + _H9b12l1 + "', '" + _H9b12l2 + "', '" + _H9b12l3 + "', '" + _H9b12m1 + "', '" + _H9b12m2 + "', '" + _H9b12m3 + "', '" + _H9b13a + "', '" + _H9b13b + "', '" + _H9b13c + "', '" + _H9b14a + "', '" + _H9b14x1 + "', '" + _H9b14b + "', '" + _H9b14c + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         }
         catch(Exception  e)
@@ -1099,7 +973,7 @@ public class Cost3_DataModel{
         String SQL = "";
         try
         {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H8111a = '" + _H8111a + "',H8111b = '" + _H8111b + "',H8111c = '" + _H8111c + "',H8111d = '" + _H8111d + "',H8121a = '" + _H8121a + "',H8121x1 = '" + _H8121x1 + "',H8121b = '" + _H8121b + "',H8121c = '" + _H8121c + "',H8121d = '" + _H8121d + "',H8122a = '" + _H8122a + "',H8122x1 = '" + _H8122x1 + "',H8122b = '" + _H8122b + "',H8122c = '" + _H8122c + "',H8122d = '" + _H8122d + "',H9a1a = '" + _H9a1a + "',H9a1b = '" + _H9a1b + "',H9a1c = '" + _H9a1c + "',H9a2a = '" + _H9a2a + "',H9a2b = '" + _H9a2b + "',H9a2c = '" + _H9a2c + "',H9a3a = '" + _H9a3a + "',H9a3b = '" + _H9a3b + "',H9a3c = '" + _H9a3c + "',H9a4a = '" + _H9a4a + "',H9a4b = '" + _H9a4b + "',H9a4c = '" + _H9a4c + "',H9a5a = '" + _H9a5a + "',H9a5b = '" + _H9a5b + "',H9a5c = '" + _H9a5c + "',H9b1a = '" + _H9b1a + "',H9b1b = '" + _H9b1b + "',H9b1c = '" + _H9b1c + "',H9b2a = '" + _H9b2a + "',H9b2b = '" + _H9b2b + "',H9b2c = '" + _H9b2c + "',H9b3a = '" + _H9b3a + "',H9b3b = '" + _H9b3b + "',H9b3c = '" + _H9b3c + "',H9b4a = '" + _H9b4a + "',H9b4b = '" + _H9b4b + "',H9b4c = '" + _H9b4c + "',H9b5a = '" + _H9b5a + "',H9b5b = '" + _H9b5b + "',H9b5c = '" + _H9b5c + "',H9b6a = '" + _H9b6a + "',H9b6b = '" + _H9b6b + "',H9b6c = '" + _H9b6c + "',H9b7a = '" + _H9b7a + "',H9b7b = '" + _H9b7b + "',H9b7c = '" + _H9b7c + "',H9b8a = '" + _H9b8a + "',H9b8b = '" + _H9b8b + "',H9b8c = '" + _H9b8c + "',H9b9a = '" + _H9b9a + "',H9b9b = '" + _H9b9b + "',H9b9c = '" + _H9b9c + "',H9b10a = '" + _H9b10a + "',H9b10b = '" + _H9b10b + "',H9b10c = '" + _H9b10c + "',H9b11a = '" + _H9b11a + "',H9b11b = '" + _H9b11b + "',H9b11c = '" + _H9b11c + "',H9b12 = '" + _H9b12 + "',H9b12a1 = '" + _H9b12a1 + "',H9b12a2 = '" + _H9b12a2 + "',H9b12a3 = '" + _H9b12a3 + "',H9b12b1 = '" + _H9b12b1 + "',H9b12b2 = '" + _H9b12b2 + "',H9b12b3 = '" + _H9b12b3 + "',H9b12c1 = '" + _H9b12c1 + "',H9b12c2 = '" + _H9b12c2 + "',H9b12c3 = '" + _H9b12c3 + "',H9b12d1 = '" + _H9b12d1 + "',H9b12d2 = '" + _H9b12d2 + "',H9b12d3 = '" + _H9b12d3 + "',H9b12e1 = '" + _H9b12e1 + "',H9b12e2 = '" + _H9b12e2 + "',H9b12e3 = '" + _H9b12e3 + "',H9b12f1 = '" + _H9b12f1 + "',H9b12f2 = '" + _H9b12f2 + "',H9b12f3 = '" + _H9b12f3 + "',H9b12g1 = '" + _H9b12g1 + "',H9b12g2 = '" + _H9b12g2 + "',H9b12g3 = '" + _H9b12g3 + "',H9b12h1 = '" + _H9b12h1 + "',H9b12h2 = '" + _H9b12h2 + "',H9b12h3 = '" + _H9b12h3 + "',H9b12i1 = '" + _H9b12i1 + "',H9b12i2 = '" + _H9b12i2 + "',H9b12i3 = '" + _H9b12i3 + "',H9b12j1 = '" + _H9b12j1 + "',H9b12j2 = '" + _H9b12j2 + "',H9b12j3 = '" + _H9b12j3 + "',H9b12k1 = '" + _H9b12k1 + "',H9b12k2 = '" + _H9b12k2 + "',H9b12k3 = '" + _H9b12k3 + "',H9b12l1 = '" + _H9b12l1 + "',H9b12l2 = '" + _H9b12l2 + "',H9b12l3 = '" + _H9b12l3 + "',H9b12m1 = '" + _H9b12m1 + "',H9b12m2 = '" + _H9b12m2 + "',H9b12m3 = '" + _H9b12m3 + "',H9b13a = '" + _H9b13a + "',H9b13b = '" + _H9b13b + "',H9b13c = '" + _H9b13c + "',H9b14a = '" + _H9b14a + "',H9b14x1 = '" + _H9b14x1 + "',H9b14b = '" + _H9b14b + "',H9b14c = '" + _H9b14c + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H9a1a = '" + _H9a1a + "',H9a1b = '" + _H9a1b + "',H9a1c = '" + _H9a1c + "',H9a2a = '" + _H9a2a + "',H9a2b = '" + _H9a2b + "',H9a2c = '" + _H9a2c + "',H9a3a = '" + _H9a3a + "',H9a3b = '" + _H9a3b + "',H9a3c = '" + _H9a3c + "',H9a4a = '" + _H9a4a + "',H9a4b = '" + _H9a4b + "',H9a4c = '" + _H9a4c + "',H9a5a = '" + _H9a5a + "',H9a5b = '" + _H9a5b + "',H9a5c = '" + _H9a5c + "',H9b1a = '" + _H9b1a + "',H9b1b = '" + _H9b1b + "',H9b1c = '" + _H9b1c + "',H9b2a = '" + _H9b2a + "',H9b2b = '" + _H9b2b + "',H9b2c = '" + _H9b2c + "',H9b3a = '" + _H9b3a + "',H9b3b = '" + _H9b3b + "',H9b3c = '" + _H9b3c + "',H9b4a = '" + _H9b4a + "',H9b4b = '" + _H9b4b + "',H9b4c = '" + _H9b4c + "',H9b5a = '" + _H9b5a + "',H9b5b = '" + _H9b5b + "',H9b5c = '" + _H9b5c + "',H9b6a = '" + _H9b6a + "',H9b6b = '" + _H9b6b + "',H9b6c = '" + _H9b6c + "',H9b7a = '" + _H9b7a + "',H9b7b = '" + _H9b7b + "',H9b7c = '" + _H9b7c + "',H9b8a = '" + _H9b8a + "',H9b8b = '" + _H9b8b + "',H9b8c = '" + _H9b8c + "',H9b9a = '" + _H9b9a + "',H9b9b = '" + _H9b9b + "',H9b9c = '" + _H9b9c + "',H9b10a = '" + _H9b10a + "',H9b10b = '" + _H9b10b + "',H9b10c = '" + _H9b10c + "',H9b11a = '" + _H9b11a + "',H9b11b = '" + _H9b11b + "',H9b11c = '" + _H9b11c + "',H9b12 = '" + _H9b12 + "',H9b12a1 = '" + _H9b12a1 + "',H9b12a2 = '" + _H9b12a2 + "',H9b12a3 = '" + _H9b12a3 + "',H9b12b1 = '" + _H9b12b1 + "',H9b12b2 = '" + _H9b12b2 + "',H9b12b3 = '" + _H9b12b3 + "',H9b12c1 = '" + _H9b12c1 + "',H9b12c2 = '" + _H9b12c2 + "',H9b12c3 = '" + _H9b12c3 + "',H9b12d1 = '" + _H9b12d1 + "',H9b12d2 = '" + _H9b12d2 + "',H9b12d3 = '" + _H9b12d3 + "',H9b12e1 = '" + _H9b12e1 + "',H9b12e2 = '" + _H9b12e2 + "',H9b12e3 = '" + _H9b12e3 + "',H9b12f1 = '" + _H9b12f1 + "',H9b12f2 = '" + _H9b12f2 + "',H9b12f3 = '" + _H9b12f3 + "',H9b12g1 = '" + _H9b12g1 + "',H9b12g2 = '" + _H9b12g2 + "',H9b12g3 = '" + _H9b12g3 + "',H9b12h1 = '" + _H9b12h1 + "',H9b12h2 = '" + _H9b12h2 + "',H9b12h3 = '" + _H9b12h3 + "',H9b12i1 = '" + _H9b12i1 + "',H9b12i2 = '" + _H9b12i2 + "',H9b12i3 = '" + _H9b12i3 + "',H9b12j1 = '" + _H9b12j1 + "',H9b12j2 = '" + _H9b12j2 + "',H9b12j3 = '" + _H9b12j3 + "',H9b12k1 = '" + _H9b12k1 + "',H9b12k2 = '" + _H9b12k2 + "',H9b12k3 = '" + _H9b12k3 + "',H9b12l1 = '" + _H9b12l1 + "',H9b12l2 = '" + _H9b12l2 + "',H9b12l3 = '" + _H9b12l3 + "',H9b12m1 = '" + _H9b12m1 + "',H9b12m2 = '" + _H9b12m2 + "',H9b12m3 = '" + _H9b12m3 + "',H9b13a = '" + _H9b13a + "',H9b13b = '" + _H9b13b + "',H9b13c = '" + _H9b13c + "',H9b14a = '" + _H9b14a + "',H9b14x1 = '" + _H9b14x1 + "',H9b14b = '" + _H9b14b + "',H9b14c = '" + _H9b14c + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         }
         catch(Exception  e)
@@ -1124,20 +998,6 @@ public class Cost3_DataModel{
             d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._MSlNo = cur.getString(cur.getColumnIndex("MSlNo"));
-            d._H8111a = cur.getString(cur.getColumnIndex("H8111a"));
-            d._H8111b = cur.getString(cur.getColumnIndex("H8111b"));
-            d._H8111c = cur.getString(cur.getColumnIndex("H8111c"));
-            d._H8111d = cur.getString(cur.getColumnIndex("H8111d"));
-            d._H8121a = cur.getString(cur.getColumnIndex("H8121a"));
-            d._H8121x1 = cur.getString(cur.getColumnIndex("H8121x1"));
-            d._H8121b = cur.getString(cur.getColumnIndex("H8121b"));
-            d._H8121c = cur.getString(cur.getColumnIndex("H8121c"));
-            d._H8121d = cur.getString(cur.getColumnIndex("H8121d"));
-            d._H8122a = cur.getString(cur.getColumnIndex("H8122a"));
-            d._H8122x1 = cur.getString(cur.getColumnIndex("H8122x1"));
-            d._H8122b = cur.getString(cur.getColumnIndex("H8122b"));
-            d._H8122c = cur.getString(cur.getColumnIndex("H8122c"));
-            d._H8122d = cur.getString(cur.getColumnIndex("H8122d"));
             d._H9a1a = cur.getString(cur.getColumnIndex("H9a1a"));
             d._H9a1b = cur.getString(cur.getColumnIndex("H9a1b"));
             d._H9a1c = cur.getString(cur.getColumnIndex("H9a1c"));
