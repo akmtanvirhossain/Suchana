@@ -1157,7 +1157,7 @@ public class SES extends Activity {
             listH63C.add("3-একটি নির্দিষ্ট ময়লা ফেলার যায়গায়");
             listH63C.add("4-শৌচাগারে");
             listH63C.add("5-অন্যান্য");
-            listH63C.add("6-NA");
+            listH63C.add("9-প্রযোজ্য নয়");
             ArrayAdapter<String> adptrH63C = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63C);
             spnH63C.setAdapter(adptrH63C);
             spnH63C.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1197,7 +1197,7 @@ public class SES extends Activity {
             listH63D.add("3-একটি নির্দিষ্ট ময়লা ফেলার যায়গায়");
             listH63D.add("4-শৌচাগারে");
             listH63D.add("5-অন্যান্য");
-            listH63D.add("6-NA");
+            listH63D.add("9-প্রযোজ্য নয়");
             ArrayAdapter<String> adptrH63D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63D);
             spnH63D.setAdapter(adptrH63D);
             spnH63D.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

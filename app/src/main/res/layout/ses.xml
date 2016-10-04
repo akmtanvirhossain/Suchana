@@ -1381,7 +1381,7 @@
                     android:id="@+id/VlblH63C"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="c) হাঁ  মুরগির বর্জ্য"
+                    android:text="c) হাঁস মুরগির বর্জ্য"
                     android:textSize="20sp" />
 
                 <Spinner

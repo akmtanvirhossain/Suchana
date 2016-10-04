@@ -252,7 +252,7 @@
                     android:id="@+id/VlblH162"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কোন ট্রেনিং পেয়েছেন"
+                    android:text="সূচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কোন ট্রেনিং পেয়েছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -398,7 +398,7 @@
                     android:id="@+id/VlblH163c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মুরগি/হাস পালন"
+                    android:text="মুরগি/হাঁস পালন"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -578,7 +578,7 @@
                     android:id="@+id/VlblH163h"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="পানি, পয় ও পরিষ্কার পরিছন্নতা বিষয়ক"
+                    android:text="পানি, পয়ঃনিষকাশন ও পরিষ্কার পরিছন্নতা বিষয়ক"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -687,7 +687,7 @@
 
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -726,7 +726,7 @@
                     android:layout_width="350sp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10sp"
-                    android:text="আপনি সুচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন"
+                    android:text="আপনি সূচনা ‘কোর’ গ্রুপের সদস্য হবার পর গত 6 months এ কতগুলো ট্রেনিং সেশনে উপস্থিত ছিলেন ?"
                     android:textSize="20sp" />
 
                 <EditText
@@ -766,7 +766,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H165. ট্রেনিং সেশনগুলো কে/করা পরিচালিত করেছিল"
+                    android:text="H165. ট্রেনিং সেশনগুলো কে/কারা পরিচালিত করেছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1118,7 +1118,7 @@
                     android:id="@+id/VlblH16x1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1193,7 +1193,7 @@
                     android:id="@+id/VlblH166"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচি থেকে আপনি কি কোনো গ্রান্ট/অনুদান পেয়েছেন"
+                    android:text="সূচনা কর্মসূচি থেকে আপনি কি কোন গ্রান্ট/অনুদান পেয়েছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1238,7 +1238,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H167. সুচনা কর্মসূচি থেকে আপনি কি কি গ্রান্ট/অনুদান পেয়েছেন"
+                    android:text="H167.সূচনা কর্মসূচি থেকে আপনি কি কি গ্রান্ট/অনুদান পেয়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1414,7 +1414,7 @@
                     android:id="@+id/VlblH167c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মুরগি/হাস"
+                    android:text="মুরগি/হাঁস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1935,7 +1935,7 @@
                     android:id="@+id/VlblH167x"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1971,7 +1971,7 @@
                     android:id="@+id/VlblH167x1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2054,7 +2054,7 @@
                     android:id="@+id/VlblH169"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচির  গ্রান্ট/অনুদান পাবার পর আপনি কি কোনো ‘কোচিং’ পেয়েছেন"
+                    android:text="সূচনা কর্মসূচির  গ্রান্ট/অনুদান পাবার পর আপনি কি কোনো ‘কোচিং’ পেয়েছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2106,7 +2106,7 @@
                     android:id="@+id/VlblH1610"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সুচনা কর্মসূচির  গ্রান্ট/অনুদান পাবার পর আপনি গত 6 months এ কয়েটি কোচিং সেশন পেয়েছেন"
+                    android:text="সূচনা কর্মসূচির  গ্রান্ট/অনুদান পাবার পর আপনি গত ৬ মাসে কয়টি কোচিং সেশন পেয়েছেন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2144,7 +2144,7 @@
                     android:id="@+id/VlblH1611"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="(সুচনা বহির্ভূত) গত 1 year এর ভেতর আপনি/আপনার পরিবারের কেউ কি কোন এন,জি,ও কর্মসূচির"
+                    android:text="(সূচনা বহির্ভূত) গত ১ বছর এর ভেতর আপনি/আপনার পরিবারের কেউ কি কোন এন,জি,ও কর্মসূচির"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2361,7 +2361,7 @@
                     android:id="@+id/VlblH1612e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রশিখা"
+                    android:text="প্রশিকা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2541,7 +2541,7 @@
                     android:id="@+id/VlblH1612j"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ব্রাক"
+                    android:text="ব্র্যাক"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2613,7 +2613,7 @@
                     android:id="@+id/VlblH1612x1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="(উল্লেখ কর"
+                    android:text="(উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2798,7 +2798,7 @@
                     android:id="@+id/VlblH1614c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মুরগি/হাস পালন"
+                    android:text="মুরগি/হাঁস পালন"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2942,7 +2942,7 @@
                     android:id="@+id/VlblH1614x"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2978,7 +2978,7 @@
                     android:id="@+id/VlblH1614x1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3162,7 +3162,7 @@
                     android:id="@+id/VlblH1616c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মুরগি/হাস"
+                    android:text="মুরগি/হাঁস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3342,7 +3342,7 @@
                     android:id="@+id/VlblH1616h"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য এন,জি,ও’র  সাথে  যোগাযোগ স্থাপন"
+                    android:text="অন্যান্য এন,জি,ও’র  সাথে  যোগাযোগ স্থাপন"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3414,7 +3414,7 @@
                     android:id="@+id/VlblH1616x"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3450,7 +3450,7 @@
                     android:id="@+id/VlblH1616x1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText

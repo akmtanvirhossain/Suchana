@@ -182,7 +182,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
+                    android:text="আপনার খানা কি বিগত ১ বাছ্র এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -210,7 +210,7 @@
                     android:id="@+id/VlblH151"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
+                    android:text="আপনার খানা কি বিগত ১ বাছ্র এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -225,7 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -425,7 +425,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H152C.জমি/পানির মাপ (জল আয়তন)"
+                    android:text="H152C.জমি/পানির মাপ (জল আয়তন)(Note:পুকুরের পাড় অন্তর্ভুক্ত হবে না জল আয়তন উল্লেখ করার সময়)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1099,7 +1099,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H152J. গবাদিপশু/হাস-মুরগি/মাছের খাদ্যর জন্য কতটুক রেখেছেন"
+                    android:text="H152J. গবাদিপশু/হাঁস-মুরগি/মাছের খাদ্যর জন্য কতটুক রেখেছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1210,7 +1210,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H152K. অপচয় কতটুক হয়েছিল"
+                    android:text="H152K. অপচয় কতটুক হয়েছিল/মারা গিয়েছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
