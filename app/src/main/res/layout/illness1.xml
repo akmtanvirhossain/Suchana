@@ -178,7 +178,7 @@
                     android:id="@+id/VlblH171"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ১৫ দিনে  খানার কোন  সদস্য অসুস্থ হয়েছে"
+                    android:text="গত ১৫ দিনে  খানার কোন খানা সদস্য অসুস্থ হয়েছে ?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ  "
+                        android:text="হাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -301,7 +301,7 @@
                     android:id="@+id/VlblH171a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="বিগত 15 দিনের মধ্যে অসুস্থতার ধরন"
+                    android:text="বিগত ১৫ দিনের মধ্যে অসুস্থতার ধরণ"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -522,7 +522,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="চিকিৎসার জন্য মোট খরচ"
+                    android:text="চিকিৎসার জন্য মোট খরচ (ভর্তি এবং অপারেশন সহ)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -588,7 +588,7 @@
                     android:id="@+id/VlblH171TCost"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="চিকিৎসার জন্য খরচ: পরীক্ষা"
+                    android:text="চিকিৎসার জন্য খরচ: পরীক্ষা/ঔষধ/হাস্পাতাল/ক্লিনিকের খরচ "
                     android:textSize="20sp" />
 
                 <EditText
@@ -664,7 +664,7 @@
                     android:id="@+id/VlblH171f"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আয়মূলক কর্মকান্ডে কি এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)"
+                    android:text="আয়মূলক কর্মকান্ডে এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)"
                     android:textSize="20sp" />
 
                 <RadioGroup
