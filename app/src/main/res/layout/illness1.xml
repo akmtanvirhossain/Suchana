@@ -151,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" অসুস্থতা"
-                    android:textSize="20sp" />
+                    android:textSize="25sp" />
             </LinearLayout>
 
             <View
@@ -224,7 +224,7 @@
                     android:id="@+id/VlblMSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="লাইন নম্বর #"
+                    android:text="লাইন নম্বর#"
                     android:textSize="20sp" />
 
                 <Spinner
