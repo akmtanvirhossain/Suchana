@@ -96,13 +96,14 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
@@ -133,7 +134,8 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
@@ -171,12 +173,14 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="MSlNo"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
 
@@ -363,7 +367,9 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="TYPE"
-                    android:textSize="20sp" />
+                    android:textColor="@color/navigationBar"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/VlblH42a"
@@ -378,7 +384,8 @@
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <View
@@ -539,7 +546,7 @@
                     android:id="@+id/VlblH42d1"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ক্রয়"
+                    android:text="1) ক্রয়"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -574,7 +581,7 @@
                     android:id="@+id/VlblH42d2"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="যৌতুক"
+                    android:text="2) যৌতুক"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -609,7 +616,7 @@
                     android:id="@+id/VlblH42d3"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উপহার"
+                    android:text="3) উপহার"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -644,7 +651,7 @@
                     android:id="@+id/VlblH42d4"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="4) অনান্য"
                     android:textSize="20sp" />
 
                 <CheckBox

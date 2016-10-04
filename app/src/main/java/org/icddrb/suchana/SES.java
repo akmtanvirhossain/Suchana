@@ -733,7 +733,7 @@ public class SES extends Activity {
 
             listH321.add("");
             listH321.add("1-প্রাকৃতিক উপাদানের তৈরী মেঝে (কাদামাটি বালি)");
-            listH321.add("2-কাঁচা মেঝে (কাঠের তক্তা তাল গাছ বাঁশ)");
+            listH321.add("2-কাচা মেঝে (কাঠের তক্তা তাল গাছ বাশ)");
             listH321.add("3-পাকা মেঝে (সিরামিক টাইলস ইট সিমেন্ট)");
             listH321.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH321 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH321);
@@ -775,8 +775,8 @@ public class SES extends Activity {
 
             listH322.add("");
             listH322.add("1- প্রাকৃতিক উপাদানের তৈরী ছাদ (খড় অথবা তালপাতা অথবা নারিকেল পাতা প্রভৃতি)");
-            listH322.add("2-কাঁচা ছাদ (কাঠের তক্তা/তালগাছ/বাঁশ/কার্ডবোর্ড/পলিথিন/চাটাই)");
-            listH322.add("3-পাকা ছাদ (টিন,কাঠ,টালি,ইট সিমেন্ট,সুড়কি)");
+            listH322.add("2-কাচা ছাদ (কাঠের তক্তা/তালগাছ/বাশ/কার্ডবোর্ড/পলিথিন/চাটাই)");
+            listH322.add("3-পাকা ছাদ (টিন,কাঠ,টালি,ইট সিমেন্ট,সুরকি)");
             listH322.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH322 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH322);
             spnH322.setAdapter(adptrH322);
@@ -816,7 +816,7 @@ public class SES extends Activity {
 
             listH323.add("");
             listH323.add("1-প্রাকৃতিক উপাদানের তৈরী দেয়াল (দেয়াল নেই/বেত/ইক্ষু জাতীয় পাতা/তাল পাতা/গাছের গুড়ি/কাদা মাটি)");
-            listH323.add("2-কাঁচা দেয়াল (বাঁশ ও মাটি,পাথর টি,প্লাইউড,কার্ডবোর্ড/পলিথিন/চাটাই)");
+            listH323.add("2-কাচা দেয়াল (বাশ ও মাটি,পাথর টি,প্লাইউড,কার্ডবোর্ড/পলিথিন/চাটাই)");
             listH323.add("3-পাকা দেয়াল (টিন,সিমেন্ট,পাথর ও চুন,সিমেন্ট/ ইট,কাঠের তক্তা/ফলক");
             listH323.add("4-অন্যান্য");
             ArrayAdapter<String> adptrH323 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH323);
@@ -858,11 +858,11 @@ public class SES extends Activity {
 
 
             listH324.add("");
-            listH324.add("1-কেরোসিন ল্যাম্প/লন্ঠন/হারিকেন/কুপিবাতি");
-            listH324.add("2-বিদ্যুৎ");
+            listH324.add("1-কেরোসিন ল্যাম্প/লন্ঠন");
+            listH324.add("2-বিদ্যুত");
             listH324.add("3-মোমবাতি");
             listH324.add("4-গ্যাস ল্যাম্প/বায়ো গ্যাস");
-            listH324.add("5-সোলার প্ল্যান্ট/বাতি");
+            listH324.add("5-সোলার প্লেট");
             listH324.add("6-অন্যান্য");
             ArrayAdapter<String> adptrH324 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH324);
             spnH324.setAdapter(adptrH324);
@@ -902,7 +902,7 @@ public class SES extends Activity {
             listH325.add("4-বায়োগ্যাস");
             listH325.add("5-কেরোসিন");
             listH325.add("6-কয়লা");
-            listH325.add("7-কাঠ/বাঁশ");
+            listH325.add("7-কাঠ/বাশ");
             listH325.add("8-পাঠখড়ি/খড়/নাড়া/পাতা");
             listH325.add("9-কৃষি ফসলের অবশিষ্টাংশ");
             listH325.add("10-গোবর");
@@ -1157,6 +1157,7 @@ public class SES extends Activity {
             listH63C.add("3-একটি নির্দিষ্ট ময়লা ফেলার যায়গায়");
             listH63C.add("4-শৌচাগারে");
             listH63C.add("5-অন্যান্য");
+            listH63C.add("6-NA");
             ArrayAdapter<String> adptrH63C = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63C);
             spnH63C.setAdapter(adptrH63C);
             spnH63C.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1196,6 +1197,7 @@ public class SES extends Activity {
             listH63D.add("3-একটি নির্দিষ্ট ময়লা ফেলার যায়গায়");
             listH63D.add("4-শৌচাগারে");
             listH63D.add("5-অন্যান্য");
+            listH63D.add("6-NA");
             ArrayAdapter<String> adptrH63D = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63D);
             spnH63D.setAdapter(adptrH63D);
             spnH63D.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1232,7 +1234,7 @@ public class SES extends Activity {
             listH63E.add("");
             listH63E.add("1-নির্দিষ্ট জায়গায় (বাড়ির উঠোনে অথবা বাইরে)");
             listH63E.add("2-এখানে সেখানে");
-            listH63E.add("3-একটি নির্দিষ্ট ময়লা ফেলার জায়গায়");
+            listH63E.add("3-একটি নির্দিষ্ট ময়লা ফেলার যায়গায়");
             listH63E.add("4-শৌচাগারে");
             listH63E.add("5-অন্যান্য");
             ArrayAdapter<String> adptrH63E = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH63E);
@@ -2467,9 +2469,9 @@ public class SES extends Activity {
             listH618.add("");
             listH618.add("1-পানি ফোটান");
             listH618.add("2-ব্লিচিং পাউডার বা ক্লোরিন বা বিশুদ্ধকরণ ট্যাবলেট");
-            listH618.add("3-ছাঁকনি/কাপড়ের ভেতর দিয়ে পানি ছাঁকেন");
+            listH618.add("3-ছাকনি বা কাপড়ের ভেতর দিয়ে পানি ছাকেন");
             listH618.add("4-পানি ফিল্টার ব্যবহার করেন সিরামিক বা বালি ম্পজিটইত্যাদি");
-            listH618.add("5-পানিকে পাত্রের ভেতর অনেকক্ষণ রেখে স্থির হতে দেন");
+            listH618.add("5-পানিকে পাত্রের ভেতর অনেক্ষণ রেখে স্থির হতে দেন");
             listH618.add("6-অন্যান্য উল্লেখ করুন");
             listH618.add("7-জানিনা/কিছুই করিনা");
             ArrayAdapter<String> adptrH618 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH618);

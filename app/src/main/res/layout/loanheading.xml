@@ -20,19 +20,21 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Rnd" />
+            android:text="Rnd"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SuchanaID" />
+            android:text="SuchanaID"
+            android:visibility="gone" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="MSlNo" />
+            android:text="Member Sl" />
 
         <TextView
             android:layout_width="100dp"

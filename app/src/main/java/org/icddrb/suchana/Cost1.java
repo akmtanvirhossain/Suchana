@@ -409,7 +409,7 @@ public class Cost1 extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
 
-            TableName = "Cost1";
+            TableName = "Cost";
 
             //turnGPSOn();
 

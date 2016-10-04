@@ -79,7 +79,7 @@ public class Land extends Activity {
     LinearLayout secH5b;
     View lineH5b;
     TextView VlblH5b;
-    EditText txtH5b;
+    Spinner spnH5b;
     LinearLayout secH5c;
     View lineH5c;
     TextView VlblH5c;
@@ -110,11 +110,6 @@ public class Land extends Activity {
     EditText txtH5hM;
     String StartTime;
     Bundle IDbundle;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -245,8 +240,8 @@ public class Land extends Activity {
             listH5.add("");
             listH5.add("1-ভিটেমাটি");
             listH5.add("2-চাষযোগ্য আবাদী জমি");
-            listH5.add("3-গবাদি পশুর চারণের উপযোগী");
-            listH5.add("4-ভূমিঝোপ/জংলা জমি");
+            listH5.add("3-গবাদি পশুর চারণের উপযোগী ভূমি");
+            listH5.add("4-ঝোপজংলা জমি");
             listH5.add("5-চাষযোগ্য পুকুর");
             listH5.add("6-পরিত্যক্ত পুকুর");
             listH5.add("7-বর্জ্য বা অনাবাদি জমি");
@@ -298,7 +293,30 @@ public class Land extends Activity {
             secH5b = (LinearLayout) findViewById(R.id.secH5b);
             lineH5b = (View) findViewById(R.id.lineH5b);
             VlblH5b = (TextView) findViewById(R.id.VlblH5b);
-            txtH5b = (EditText) findViewById(R.id.txtH5b);
+            //txtH5b = (EditText) findViewById(R.id.txtH5b);
+            spnH5b = (Spinner) findViewById(R.id.spnH5b);
+            spnH5b.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '66-যৌথ মালিকানা' union Select '77-খানার ব্যাক্তিগত জমির বাইরে' union Select '88-খাস/সরকারী/অন্যান্য  প্রতিষ্ঠান'"));
+            spnH5b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if (spnH5b.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnH5b.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("88")) {
+                        txtH5g.setText("");
+                        secH5g.setVisibility(View.GONE);
+                        lineH5g.setVisibility(View.GONE);
+
+                    } else {
+                        secH5g.setVisibility(View.VISIBLE);
+                        lineH5g.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
             secH5c = (LinearLayout) findViewById(R.id.secH5c);
             lineH5c = (View) findViewById(R.id.lineH5c);
             VlblH5c = (TextView) findViewById(R.id.VlblH5c);
@@ -344,16 +362,15 @@ public class Land extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH5e.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH5e.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("3")) {
-                        secH5f.setVisibility(View.GONE);
-                        lineH5f.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("6")) {
-                        secH5f.setVisibility(View.GONE);
-                        lineH5f.setVisibility(View.GONE);
-                    } else {
+                    if (spnData.equalsIgnoreCase("3") | spnData.equalsIgnoreCase("6")) {
                         secH5f.setVisibility(View.VISIBLE);
                         lineH5f.setVisibility(View.VISIBLE);
+                    } else {
+                        txtH5f.setText("");
+                        secH5f.setVisibility(View.GONE);
+                        lineH5f.setVisibility(View.GONE);
                     }
+
                 }
 
                 @Override
@@ -434,19 +451,15 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: অনান্য উল্লেখ করুন.");
                 txtH5aX.requestFocus();
                 return;
-            } else if (txtH5b.getText().toString().length() == 0 & secH5b.isShown()) {
-                Connection.MessageBox(Land.this, "Required field: মালিকানা.");
-                txtH5b.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH5b.getText().toString().length() == 0 ? "01" : txtH5b.getText().toString()) < 01 || Integer.valueOf(txtH5b.getText().toString().length() == 0 ? "30" : txtH5b.getText().toString()) > 30) {
-                Connection.MessageBox(Land.this, "Value should be between 01 and 30(মালিকানা).");
-                txtH5b.requestFocus();
+            } else if (spnH5b.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Land.this, "Required field: জমির মালিকানা ");
+                spnH5b.requestFocus();
                 return;
             } else if (txtH5c.getText().toString().length() == 0 & secH5c.isShown()) {
                 Connection.MessageBox(Land.this, "Required field: আয়তন/জমির পরিমান (শতাংশ).");
                 txtH5c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Integer.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
+            } else if (Double.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Double.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
                 Connection.MessageBox(Land.this, "Value should be between 1 and 100(আয়তন/জমির পরিমান (শতাংশ)).");
                 txtH5c.requestFocus();
                 return;
@@ -503,7 +516,7 @@ public class Land extends Activity {
             objSave.setH5((spnH5.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5.getSelectedItem().toString(), "-")));
             objSave.setH5a((spnH5a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5a.getSelectedItem().toString(), "-")));
             objSave.setH5aX(txtH5aX.getText().toString());
-            objSave.setH5b(txtH5b.getText().toString());
+            objSave.setH5b((spnH5b.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5b.getSelectedItem().toString(), "-")));
             objSave.setH5c(txtH5c.getText().toString());
             objSave.setH5d((spnH5d.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5d.getSelectedItem().toString(), "-")));
             objSave.setH5e((spnH5e.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH5e.getSelectedItem().toString(), "-")));
@@ -556,7 +569,7 @@ public class Land extends Activity {
                 spnH5.setSelection(Global.SpinnerItemPositionAnyLength(spnH5, item.getH5()));
                 spnH5a.setSelection(Global.SpinnerItemPositionAnyLength(spnH5a, item.getH5a()));
                 txtH5aX.setText(item.getH5aX());
-                txtH5b.setText(item.getH5b());
+                spnH5b.setSelection(Global.SpinnerItemPositionAnyLength(spnH5b, item.getH5b()));
                 txtH5c.setText(item.getH5c());
                 spnH5d.setSelection(Global.SpinnerItemPositionAnyLength(spnH5d, item.getH5d()));
                 spnH5e.setSelection(Global.SpinnerItemPositionAnyLength(spnH5e, item.getH5e()));

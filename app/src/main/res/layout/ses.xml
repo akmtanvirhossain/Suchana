@@ -5141,7 +5141,7 @@
                     android:id="@+id/VlblH620"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রান্না করা খাবার কিছুক্ষণ পর খওয়ার জন্য ডেকে রেখে দেয়"
+                    android:text="রান্না করা খাবার কিছুক্ষণ পর খওয়ার জন্য ঢেকে রেখে দেয়"
                     android:textSize="20sp" />
 
                 <RadioGroup

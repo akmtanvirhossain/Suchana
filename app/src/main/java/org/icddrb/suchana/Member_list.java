@@ -9,7 +9,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
@@ -298,7 +297,9 @@ public class Member_list extends Activity {
 
             txtH21.setEnabled(false);
 
-            txtH21.setText(String.valueOf(MemSlNo()));
+            //txtH21.setText(String.valueOf(MemSlNo()));
+            txtH21.setText(MemberSerial(Rnd, SuchanaID));
+
             Button cmdContactNoSave = (Button) dialog.findViewById(R.id.cmdSave);
             cmdContactNoSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View arg0) {
@@ -338,7 +339,7 @@ public class Member_list extends Activity {
                     String status = objSave.SaveUpdateData(Member_list.this);
 
                     DataSearch(Rnd, SuchanaID);
-                    txtH21.setText(String.valueOf(MemSlNo()));
+                    txtH21.setText(MemberSerial(Rnd, SuchanaID));
                     txtH22.setText("");
                     txtH21.requestFocus();
 
@@ -360,7 +361,7 @@ public class Member_list extends Activity {
         }
     }
 
-    private int MemSlNo() {
+    /*private int MemSlNo() {
         int lineNo = 0;
         Cursor cursor = C.GetData("Member", "suchanaid", SUCHANAID);
         if (cursor.getCount() != 0) {
@@ -370,7 +371,12 @@ public class Member_list extends Activity {
         }
 
         return lineNo;
+    }*/
+
+    private String MemberSerial(String Rnd, String SuchanaID) {
+        return C.ReturnSingleValue("Select (ifnull(max(H21),0)+1)serial from Member where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

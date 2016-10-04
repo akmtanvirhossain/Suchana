@@ -61,6 +61,7 @@ public class MainMenu extends Activity {
             cmdMenuStart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
                 }
             });
@@ -141,6 +142,7 @@ public class MainMenu extends Activity {
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
+                            System.exit(0);
                         }
                     });
                     adb.show();

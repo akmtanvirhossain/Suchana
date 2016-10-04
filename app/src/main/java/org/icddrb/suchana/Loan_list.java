@@ -50,13 +50,13 @@ public class Loan_list extends Activity {
     Button btnRefresh;
     String StartTime;
     Bundle IDbundle;
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
-    ImageButton cmdForward;
-    TextView lblNext;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -202,6 +202,9 @@ public class Loan_list extends Activity {
 
                 }
             });
+            TextView lblSucanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSucanaId.setText(SUCHANAID);
+
 
             lblNext= (TextView) findViewById(R.id.lblNext);
             lblNext.setEnabled(false);

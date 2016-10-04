@@ -97,13 +97,14 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
@@ -134,12 +135,14 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="উপকারভোগী সদস্য আইডি সুচনা নম্বর অনুসারে"
                     android:textSize="20sp" />
 
@@ -171,12 +174,14 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
                     android:textSize="20sp" />
 
@@ -363,14 +368,15 @@
                     android:id="@+id/lblH1031"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1031"
+                    android:text="H103"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1031"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ঘরে সঞ্চয়/ মাটির ব্যাংক/সিন্দুকে সঞ্চয় (টাকা)"
+                    android:layout_marginBottom="10sp"
+                    android:text="1) ঘরে সঞ্চয়/ মাটির ব্যাংক/সিন্দুকে সঞ্চয় (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -401,14 +407,14 @@
                     android:id="@+id/lblH1032"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1032"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1032"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ব্যাংক / পোস্ট অফিস (টাকা)"
+                    android:text="2) ব্যাংক / পোস্ট অফিস (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -439,14 +445,14 @@
                     android:id="@+id/lblH1033"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1033"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1033"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="এনজিও (টাকা)"
+                    android:text="3) এনজিও (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -477,14 +483,14 @@
                     android:id="@+id/lblH1034"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1034"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1034"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="ক্ষুদ্রঋণ দানকারী প্রতিষ্ঠান (টাকা)"
+                    android:text="4) ক্ষুদ্রঋণ দানকারী প্রতিষ্ঠান (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -521,14 +527,14 @@
                     android:id="@+id/lblH1035"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1035"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1035"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="সূচনা সঞ্চয়ী গ্রুপ (টাকা)"
+                    android:text="5) সূচনা সঞ্চয়ী গ্রুপ (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -553,14 +559,14 @@
                     android:id="@+id/lblH1036"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H1036"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH1036"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য (টাকা)"
+                    android:text="6) অন্যান্য (টাকা)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -598,7 +604,7 @@
                     android:id="@+id/VlblH1037a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="১. কিসের জন্য সঞ্চয় করছেন"
+                    android:text="1) কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -634,7 +640,7 @@
                     android:id="@+id/VlblH1037b"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="২.কিসের জন্য সঞ্চয় করছেন"
+                    android:text="2) কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -670,7 +676,7 @@
                     android:id="@+id/VlblH1037c"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="৩. কিসের জন্য সঞ্চয় করছেন"
+                    android:text="3) কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -706,7 +712,7 @@
                     android:id="@+id/VlblH1037d"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="৪. কিসের জন্য সঞ্চয় করছেন"
+                    android:text="4) কিসের জন্য সঞ্চয় করছেন"
                     android:textSize="20sp" />
 
                 <Spinner

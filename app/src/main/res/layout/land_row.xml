@@ -9,25 +9,27 @@
         android:id="@+id/secListRow"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:layout_marginTop="5sp"
+        android:layout_marginBottom="8sp"
+        android:layout_marginTop="8sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/Rnd"
             android:layout_width="50sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="center"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/SuchanaID"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="center"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/SlNo"
-            android:layout_width="50sp"
+            android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center" />
 
@@ -35,6 +37,6 @@
             android:id="@+id/H5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="left" />
     </LinearLayout>
 </LinearLayout>

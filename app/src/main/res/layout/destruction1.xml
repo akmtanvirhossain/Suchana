@@ -96,13 +96,14 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
@@ -133,7 +134,8 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
@@ -576,7 +578,7 @@
                     android:id="@+id/VlblH14a3a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="খাবার খরচ কমিয়ে"
+                    android:text="a) খাবার খরচ কমিয়ে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -611,7 +613,7 @@
                     android:id="@+id/VlblH14a3b"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সঞ্চয় ব্যবহার করে"
+                    android:text="b) সঞ্চয় ব্যবহার করে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -646,7 +648,7 @@
                     android:id="@+id/VlblH14a3c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সম্পদ বিক্রি করে"
+                    android:text="c) সম্পদ বিক্রি করে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -681,7 +683,7 @@
                     android:id="@+id/VlblH14a3d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সন্তানকে অন্যের বাড়িতে পাঠিয়ে দিয়ে"
+                    android:text="d) সন্তানকে অন্যের বাড়িতে পাঠিয়ে দিয়ে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -716,7 +718,7 @@
                     android:id="@+id/VlblH14a3e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সন্তানকে (১৪ বছরের নিচে) কাজে পাঠিয়ে"
+                    android:text="e) সন্তানকে (১৪ বছরের নিচে) কাজে পাঠিয়ে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -751,7 +753,7 @@
                     android:id="@+id/VlblH14a3f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="পূর্বে  অ-উপার্জনকারী সদস্যকে কাজে পাঠিয়ে"
+                    android:text="f) পূর্বে  অ-উপার্জনকারী সদস্যকে কাজে পাঠিয়ে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -786,7 +788,7 @@
                     android:id="@+id/VlblH14a3g"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ভিক্ষাবৃত্তি"
+                    android:text="g) ভিক্ষাবৃত্তি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -821,7 +823,7 @@
                     android:id="@+id/VlblH14a3h"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ধার করে"
+                    android:text="h) ধার করে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -856,7 +858,7 @@
                     android:id="@+id/VlblH14a3i"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="আগাম শ্রম বিক্রি"
+                    android:text="i) আগাম শ্রম বিক্রি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -891,7 +893,7 @@
                     android:id="@+id/VlblH14a3j"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ত্রান সহায়তা"
+                    android:text="j) ত্রান সহায়তা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -926,7 +928,7 @@
                     android:id="@+id/VlblH14a3k"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বন্ধু /আত্মীয় থেকে সহযোগিতা"
+                    android:text="k) বন্ধু /আত্মীয় থেকে সহযোগিতা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -961,7 +963,7 @@
                     android:id="@+id/VlblH14a3l"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কৃষি/মৎস বিক্রি করে"
+                    android:text="l) কৃষি/মৎস বিক্রি করে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -996,7 +998,7 @@
                     android:id="@+id/VlblH14a3m"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কিছু করিনি"
+                    android:text="m) কিছু করিনি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1031,7 +1033,7 @@
                     android:id="@+id/VlblH14a3x"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="x) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1201,7 +1203,7 @@
                     android:id="@+id/VlblH14a4a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text=" ব্যাংক"
+                    android:text="a) ব্যাংক"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1236,7 +1238,7 @@
                     android:id="@+id/VlblH14a4b"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মহাজন"
+                    android:text="b) মহাজন"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1271,7 +1273,7 @@
                     android:id="@+id/VlblH14a4c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="দোকানদার"
+                    android:text="c) দোকানদার"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1306,7 +1308,7 @@
                     android:id="@+id/VlblH14a4d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="আত্মীয়"
+                    android:text="d) আত্মীয়"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1341,7 +1343,7 @@
                     android:id="@+id/VlblH14a4e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বন্ধু /প্রতিবেশী"
+                    android:text="e) বন্ধু /প্রতিবেশী"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1376,7 +1378,7 @@
                     android:id="@+id/VlblH14a4f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text=" গ্রামীণ"
+                    android:text="f) গ্রামীণ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1411,7 +1413,7 @@
                     android:id="@+id/VlblH14a4g"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="আশা"
+                    android:text="g) আশা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1446,7 +1448,7 @@
                     android:id="@+id/VlblH14a4h"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="টিএমএসএস"
+                    android:text="h) টিএমএসএস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1481,7 +1483,7 @@
                     android:id="@+id/VlblH14a4i"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="আরডিআরএস"
+                    android:text="i) আরডিআরএস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1516,7 +1518,7 @@
                     android:id="@+id/VlblH14a4j"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্রশিখা"
+                    android:text="j) প্রশিখা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1551,7 +1553,7 @@
                     android:id="@+id/VlblH14a4k"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="পদক্ষেপ"
+                    android:text="k) পদক্ষেপ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1586,7 +1588,7 @@
                     android:id="@+id/VlblH14a4l"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="স্বনির্ভর"
+                    android:text="l) স্বনির্ভর"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1621,7 +1623,7 @@
                     android:id="@+id/VlblH14a4m"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সিএনআরএস"
+                    android:text="m) সিএনআরএস"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1656,7 +1658,7 @@
                     android:id="@+id/VlblH14a14n"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="এফআইভিডিবি"
+                    android:text="n) এফআইভিডিবি"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1691,7 +1693,7 @@
                     android:id="@+id/VlblH14a4x"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="o) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1726,7 +1728,7 @@
                     android:id="@+id/VlblH14a4x1"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="x) উল্লেখ কর"
                     android:textSize="20sp" />
 
                 <EditText
