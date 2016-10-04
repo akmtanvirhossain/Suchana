@@ -156,7 +156,7 @@
                     android:id="@+id/VlblH172"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="১ বছর এর বেশী সময় ধরে কোনো খানা সদস্য অসুস্থ রয়েছে?"
+                    android:text="১ বছর বা  বেশী সময় ধরে কোন খানা সদস্য অসুস্থ রয়েছে?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -300,7 +300,7 @@
                     android:id="@+id/VlblH172a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="বিগত ১ বছর এর বেশী সময় এর মধ্যে অসুস্থতার ধরন"
+                    android:text="বিগত ১ বছর বা বেশী সময় এর মধ্যে অসুস্থতার ধরন"
                     android:textSize="20sp" />
 
                 <Spinner
