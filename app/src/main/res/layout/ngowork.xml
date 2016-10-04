@@ -1302,7 +1302,7 @@
                     android:id="@+id/VlblH168a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1376,7 +1376,7 @@
                     android:id="@+id/VlblH168b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1450,7 +1450,7 @@
                     android:id="@+id/VlblH168c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1524,7 +1524,7 @@
                     android:id="@+id/VlblH168d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1600,7 +1600,7 @@
 
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1674,7 +1674,7 @@
                     android:id="@+id/VlblH168f"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1748,7 +1748,7 @@
                     android:id="@+id/VlblH168g"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1822,7 +1822,7 @@
                     android:id="@+id/VlblH168h"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1897,7 +1897,7 @@
                     android:id="@+id/VlblH168i"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2010,7 +2010,7 @@
                     android:id="@+id/VlblH168x"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন"
+                    android:text="গ্রান্ট/অনুদান গুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3017,7 +3017,7 @@
                     android:id="@+id/VlblH1615"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="এন,জি,ও কর্মসূচির আওতায় কোনো গ্রান্ট/অনুদান পেয়েছেন"
+                    android:text="এন,জি,ও কর্মসূচির আওতায় কোনো গ্রান্ট/অনুদান পেয়েছেন ?"
                     android:textSize="20sp" />
 
                 <RadioGroup
