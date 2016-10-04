@@ -517,7 +517,8 @@ public class Cost2 extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            //spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             secLBH87 = (LinearLayout) findViewById(R.id.secLBH87);
             secH871a = (LinearLayout) findViewById(R.id.secH871a);
             lineH871a = (View) findViewById(R.id.lineH871a);

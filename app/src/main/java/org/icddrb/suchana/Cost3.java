@@ -683,6 +683,7 @@ public class Cost3 extends Activity {
             lineRnd=(View)findViewById(R.id.lineRnd);
             VlblRnd=(TextView) findViewById(R.id.VlblRnd);
             txtRnd=(EditText) findViewById(R.id.txtRnd);
+
             secSuchanaID=(LinearLayout)findViewById(R.id.secSuchanaID);
             lineSuchanaID=(View)findViewById(R.id.lineSuchanaID);
             VlblSuchanaID=(TextView) findViewById(R.id.VlblSuchanaID);
@@ -691,7 +692,7 @@ public class Cost3 extends Activity {
             lineMSlNo=(View)findViewById(R.id.lineMSlNo);
             VlblMSlNo=(TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             secLBH811=(LinearLayout)findViewById(R.id.secLBH811);
             secH8111a=(LinearLayout)findViewById(R.id.secH8111a);
             lineH8111a=(View)findViewById(R.id.lineH8111a);
@@ -3995,7 +3996,12 @@ public class Cost3 extends Activity {
             secH9b13b.setVisibility(View.GONE);
             secH9b13c.setVisibility(View.GONE);
 
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
 
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
