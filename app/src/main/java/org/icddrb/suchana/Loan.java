@@ -220,7 +220,7 @@ public class Loan extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
             secH111 = (LinearLayout) findViewById(R.id.secH111);
             lineH111 = (View) findViewById(R.id.lineH111);
             VlblH111 = (TextView) findViewById(R.id.VlblH111);
@@ -643,7 +643,9 @@ public class Loan extends Activity {
                 Connection.MessageBox(Loan.this, "Required field: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
                 spnH114a.requestFocus();
                 return;
-            } else if (spnH114b.getSelectedItemPosition() == 0 & secH114b.isShown()) {
+            }
+
+            /*else if (spnH114b.getSelectedItemPosition() == 0 & secH114b.isShown()) {
                 Connection.MessageBox(Loan.this, "Required field: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
                 spnH114b.requestFocus();
                 return;
@@ -651,7 +653,9 @@ public class Loan extends Activity {
                 Connection.MessageBox(Loan.this, "Required field: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
                 spnH114c.requestFocus();
                 return;
-            } else if (txtH114X.getText().toString().length() == 0 & secH114X.isShown()) {
+            }*/
+
+            else if (txtH114X.getText().toString().length() == 0 & secH114X.isShown()) {
                 Connection.MessageBox(Loan.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtH114X.requestFocus();
                 return;
@@ -676,10 +680,29 @@ public class Loan extends Activity {
                 rdoH1181.requestFocus();
                 return;
             }
-            if((Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-"))))
-            {
-                Connection.MessageBox(Loan.this, "Duplicate in loan amount use");
-                return;
+
+            if (rdoH1111.isChecked()) {
+                /*if ((Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-"))) || (Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-")))) {
+                    Connection.MessageBox(Loan.this, "Duplicate: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
+                    return;
+                }*/
+
+                //a,b
+                if (spnH114a.getSelectedItemPosition() > 0 & spnH114b.getSelectedItemPosition() > 0 & (Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-")))) {
+                    Connection.MessageBox(Loan.this, "Duplicate: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
+                    return;
+                }
+                //a,c
+                else if (spnH114a.getSelectedItemPosition() > 0 & spnH114c.getSelectedItemPosition() > 0 & (Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-")))) {
+                    Connection.MessageBox(Loan.this, "Duplicate: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
+                    return;
+                }
+                //b,c
+                else if (spnH114b.getSelectedItemPosition() > 0 & spnH114c.getSelectedItemPosition() > 0 & (Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-").equals(Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-")))) {
+                    Connection.MessageBox(Loan.this, "Duplicate: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
+                    return;
+                }
+
             }
 
             String SQL = "";

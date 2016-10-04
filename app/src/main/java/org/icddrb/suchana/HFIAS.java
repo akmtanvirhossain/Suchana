@@ -189,14 +189,13 @@ public class HFIAS extends Activity {
     LinearLayout secLb13;
     String StartTime;
     Bundle IDbundle;
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
-
-    ImageButton cmdForward;
-    TextView lblNext;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -259,7 +258,7 @@ public class HFIAS extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(HFIAS.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to go to next form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {

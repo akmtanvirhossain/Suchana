@@ -632,7 +632,9 @@ public class Savings extends Activity {
                 Connection.MessageBox(Savings.this, "Required field: ১. কিসের জন্য সঞ্চয় করছেন.");
                 spnH1037a.requestFocus();
                 return;
-            } else if (spnH1037b.getSelectedItemPosition() == 0 & secH1037b.isShown()) {
+            }
+
+            /*else if (spnH1037b.getSelectedItemPosition() == 0 & secH1037b.isShown()) {
                 Connection.MessageBox(Savings.this, "Required field: ২.কিসের জন্য সঞ্চয় করছেন.");
                 spnH1037b.requestFocus();
                 return;
@@ -644,7 +646,8 @@ public class Savings extends Activity {
                 Connection.MessageBox(Savings.this, "Required field: ৪. কিসের জন্য সঞ্চয় করছেন.");
                 spnH1037d.requestFocus();
                 return;
-            } else if (txtH1037X.getText().toString().length() == 0 & secH1037X.isShown()) {
+            }*/
+            else if (txtH1037X.getText().toString().length() == 0 & secH1037X.isShown()) {
                 Connection.MessageBox(Savings.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtH1037X.requestFocus();
                 return;

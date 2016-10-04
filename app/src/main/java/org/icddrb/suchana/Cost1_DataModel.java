@@ -9,7 +9,7 @@ import java.util.List;
 import Common.Connection;
 public class Cost1_DataModel{
 
-    String TableName = "Cost1";
+    String TableName = "Cost";
     Connection C;
     private String _Rnd = "";
     private String _SuchanaID = "";

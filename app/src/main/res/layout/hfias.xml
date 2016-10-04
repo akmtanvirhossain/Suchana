@@ -89,7 +89,6 @@
 
             <LinearLayout
                 android:id="@+id/secRND1"
-                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -97,7 +96,7 @@
                 <TextView
                     android:id="@+id/lblRND1"
                     style="@style/rowHeading"
-                    android:layout_width="500sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="খুবই কম-১ থেকে ২ বার গত ৪ সপ্তহে, মাঝে মধ্যে-৩ থেকে ১০ বার গত ৪ সপ্তহে, প্রায়ই-১০ এর বেশী  গত ৪ সপ্তহে"
                     android:textSize="20sp" />
@@ -105,6 +104,11 @@
 
             </LinearLayout>
 
+            <View
+                android:id="@+id/lineRnd1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secRnd"
@@ -124,7 +128,7 @@
                     android:id="@+id/VlblRnd"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1240,7 +1244,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <View
