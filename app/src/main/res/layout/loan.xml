@@ -160,6 +160,21 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/seclb11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHl1"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H11. লোন/ঋণ "
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/secMSlNo"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"

@@ -182,7 +182,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনার খানা কি বিগত ১ বাছ্র এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
+                    android:text="H15. কৃষি/মৎস খাত (বিগত 1 year এর আবাদ)"
                     android:textSize="20sp" />
             </LinearLayout>
 

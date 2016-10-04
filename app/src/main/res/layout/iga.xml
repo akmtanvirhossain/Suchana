@@ -85,7 +85,6 @@
             android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:id="@+id/secH18b"
                 android:layout_width="fill_parent"
@@ -100,6 +99,7 @@
                     android:text="H18.B. জীবিকার জন্য (IGA) ভাল মানের সরঞ্জাম/সামগ্রী/দ্রব্য"
                     android:textSize="20sp" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/secRND"

@@ -197,7 +197,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী"
+                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী (HFIAS)"
                     android:textSize="20sp" />
             </LinearLayout>
 

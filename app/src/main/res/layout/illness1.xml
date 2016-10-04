@@ -150,7 +150,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" অসুস্থতা"
+                    android:text="H17.অসুস্থতা"
                     android:textSize="25sp" />
             </LinearLayout>
 

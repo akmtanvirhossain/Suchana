@@ -163,6 +163,22 @@
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
+
+            <LinearLayout
+                android:id="@+id/seclb10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHl0"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H10. সঞ্চয় "
+                    android:textSize="22sp" />
+            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/secMSlNo"
                 style="@style/rowStyle0"

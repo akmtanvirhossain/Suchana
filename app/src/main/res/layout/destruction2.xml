@@ -170,7 +170,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি প্রাকৃতিক দুর্যোগ সহনীয় নিম্নে বর্ণিত প্রযুক্তিগুলি ব্যবহার করেন কি"
+                    android:text="H14.B. আপনি প্রাকৃতিক দুর্যোগ সহনীয় নিম্নে বর্ণিত প্রযুক্তিগুলি ব্যবহার করেন কি"
                     android:textSize="20sp" />
             </LinearLayout>
 
