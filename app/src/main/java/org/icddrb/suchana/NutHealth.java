@@ -253,7 +253,7 @@ public class NutHealth extends Activity {
             cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                   /* AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(NutHealth.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to start AssetB [Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -262,14 +262,14 @@ public class NutHealth extends Activity {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
                             IDBundle.putString("SuchanaID", SUCHONAID);
-                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                            Intent intent = new Intent(getApplicationContext(), WomenEmp.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
-                    adb.show();*/
+                    adb.show();
                 }
             });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
@@ -357,8 +357,8 @@ public class NutHealth extends Activity {
 
             listM33.add("");
             listM33.add("1-সপ্তাহে একবার ");
-            listM33.add("2-মাসে দুইবার	");
-            listM33.add("3-মাসে একবার ");
+            listM33.add("2-মাসে দুইবার");
+            listM33.add("3-মাসে একবার");
             listM33.add("4-কয়েকমাসে একবার ");
             listM33.add("5-আসে না");
             ArrayAdapter<String> adptrM33 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listM33);
@@ -631,8 +631,12 @@ public class NutHealth extends Activity {
             if (status.length() == 0) {
                 EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHONAID);
                 e.SaveUpdateData(this);
+                Bundle IDBundle = new Bundle();
+                finish();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchonaID.getText().toString());
+                startActivity(new Intent(NutHealth.this, WomenEmp.class).putExtras(IDBundle));
 
-                Connection.MessageBox(NutHealth.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(NutHealth.this, status);
                 return;

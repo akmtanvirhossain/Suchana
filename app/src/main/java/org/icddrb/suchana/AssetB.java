@@ -296,6 +296,7 @@ public class AssetB extends Activity {
                     adb.show();
                 }
             });
+            cmdForward.setVisibility(View.INVISIBLE);
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -1337,6 +1338,15 @@ public class AssetB extends Activity {
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 buttonColor();
+
+                AssetB_DataModel dx = new AssetB_DataModel();
+                String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+                List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
+                if (datax.size() > 19) {
+                    cmdForward.setVisibility(View.VISIBLE);
+                }
+
+
                 EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                 e.SaveUpdateData(this);
 
@@ -1423,6 +1433,13 @@ public class AssetB extends Activity {
                     chkH41o4.setChecked(false);
                 }
                 txtH41o4X.setText(item.getH41o4X());
+
+                AssetB_DataModel dx = new AssetB_DataModel();
+                String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+                List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
+                if (datax.size() > 19) {
+                    cmdForward.setVisibility(View.VISIBLE);
+                }
             }
         } catch (Exception e) {
             Connection.MessageBox(AssetB.this, e.getMessage());
@@ -1521,7 +1538,7 @@ public class AssetB extends Activity {
             }
             AssetB_DataModel dx = new AssetB_DataModel();
             String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
-            List<AssetB_DataModel> datax = d.SelectH41a(this, SQLx);
+            List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
             if (datax.size() > 19) {
                 cmdForward.setVisibility(View.VISIBLE);
             }

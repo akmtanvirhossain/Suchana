@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -31,7 +30,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="SES"
+            android:text="Back"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -40,9 +39,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight=".4"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:paddingLeft="10sp"
-            android:text="Asset B"
+            android:text="Anthro"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -53,7 +52,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Asset NB"
+            android:text="DomViolence"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -63,7 +62,6 @@
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
             android:src="@drawable/forward" />
-
     </LinearLayout>
 
     <View
@@ -98,6 +96,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="Rnd"
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -105,7 +104,7 @@
                     android:id="@+id/VlblRnd"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নম্বার"
+                    android:text="রাউন্ড নম্বর"
                     android:textSize="20sp" />
 
                 <EditText
@@ -136,6 +135,7 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="SuchanaID"
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -143,7 +143,7 @@
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="Suchana ID"
+                    android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
 
                 <EditText
@@ -164,724 +164,72 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secMSlNo"
-                style="@style/rowStyle0"
+                android:id="@+id/seclblC2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblMSlNo"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="MSlNo"
-                    android:textSize="20sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/VlblMSlNo"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
-                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnMSlNo"
-                    android:layout_width="200sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineMSlNo"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/seclblH4"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblHlblH4"
+                    android:id="@+id/lblHlblC2"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ব্যবসায়িক সম্পদ"
+                    android:text="C2. দৈহিক ও প্রাণ রাসায়নিক পরিমাপ"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/linelblH4"
+                android:id="@+id/linelblC2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/seclblH41"
+                android:id="@+id/seclblWeight1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHlblH41"
+                    android:id="@+id/lblHlblWeight1"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="নিম্নে বর্ণিত বিষয় সমূহ কি আপনার খানার মালিকানাধীনে আছে ( প্রতিপালনের জন্য দেয়া সম্পদ সহ )"
+                    android:text="ওজন (কেজি)-১ম"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/linelblH41"
+                android:id="@+id/linelblWeight1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                    <Button
-                        android:id="@+id/buttonAssetType01"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="01" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType02"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="02" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType03"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="03" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType04"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="04" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType05"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="05" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType06"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="06" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType07"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="07" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType08"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="08" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                    <Button
-                        android:id="@+id/buttonAssetType09"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="09" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType10"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="10" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType11"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="11" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType12"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="12" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType13"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="13" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType14"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="14" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType15"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="15" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType16"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="1"
-                        android:text="16" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-
-                    <Button
-                        android:id="@+id/buttonAssetType17"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="17" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType18"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="18" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType19"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="19" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType20"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="20" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType21"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="21" />
-
-                    <Button
-                        android:id="@+id/buttonAssetType22"
-                        android:layout_width="55sp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2sp"
-                        android:layout_weight="0.17"
-                        android:text="22" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:id="@+id/linelblBtn"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41a"
+                android:id="@+id/secC2MCWeight1"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41a"
+                    android:id="@+id/lblC2MCWeight1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="TYPE"
-                    android:textColor="@color/navigationBar"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/VlblH41a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnH41a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:clickable="false"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textColor="@color/navigationBar"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41a"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41aX"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41aX"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41aX"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2MCWeight1"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য সম্পদ"
+                    android:text="শিশু + মা"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41aX"
+                    android:id="@+id/txtC2MCWeight1"
                     style="@style/customEdit"
-                    android:layout_width="195sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="0sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
-                    android:minHeight="40sp"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41aX"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41b"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41b"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41b"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41b"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="সংখ্যা"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41b"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41b"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41c"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41c"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41c"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41c"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন)"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41c"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41c"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41d"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <TextView
-                    android:id="@+id/lblH41d"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41d"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41d"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="এই সম্পদের বর্তমান মূল্য"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41d"
-                    style="@style/customEdit"
-                    android:layout_width="100sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41d"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41e"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41e"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41e"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41e"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
-                    android:text="এই সম্পদ কিভাবে অর্জিত হয়েছে"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnH41e"
-                    android:layout_width="200sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41e"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41eX"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41eX"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41eX"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41eX"
-                    style="@style/customEdit"
-                    android:layout_width="195sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
-                    android:minHeight="40sp"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41eX"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41f"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41f"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41f"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41f"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
-                    android:text="যদি ক্রয় করে থাকেন তাহলে অর্থায়ন কি ভাবে হয়েছিল"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnH41f"
-                    android:layout_width="200sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41f"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41fX"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41fX"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41fX"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41fX"
-                    style="@style/customEdit"
-                    android:layout_width="195sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
-                    android:minHeight="40sp"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41fX"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41g"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41g"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41g"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41g"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="এই সম্পদ কি কারোর সাথে ভাগাভাগি করেন"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/rdogrpH41g"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:textSize="20sp">
-
-                    <RadioButton
-                        android:id="@+id/rdoH41g1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="হ্যা"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rdoH41g2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="10sp"
-                        android:text="না"
-                        android:textSize="20sp" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41g"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41h"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41h"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41h"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41h"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41h"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="numberDecimal"
@@ -890,514 +238,977 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41h"
+                android:id="@+id/lineC2MCWeight1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/seclblH41a"
+                android:id="@+id/secC2MWeight1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHlblH41a"
+                    android:id="@+id/lblC2MWeight1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MWeight1"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="মা একা"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MWeight1"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MWeight1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CWeight1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CWeight1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CWeight1"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="শিশুর ওজন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CWeight1"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CWeight1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblWeight2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblWeight2"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি কোনো পশুপাখি মাছ পালন করেন যেটা আপনার না"
+                    android:text="ওজন (কেজি)-২য়"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/linelblH41a"
+                android:id="@+id/linelblWeight2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41i"
+                android:id="@+id/secC2MCWeight2"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41i"
+                    android:id="@+id/lblC2MCWeight2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41i"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41i"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2MCWeight2"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="সংখ্যা"
+                    android:text="শিশু + মা"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41i"
+                    android:id="@+id/txtC2MCWeight2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41i"
+                android:id="@+id/lineC2MCWeight2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41j"
+                android:id="@+id/secC2MWeight2"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41j"
+                    android:id="@+id/lblC2MWeight2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41j"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41j"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2MWeight2"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="কবে থেকে আছে (সর্বোচ্চ সময়কাল উল্লেখ করুন) (মাস)"
+                    android:text="মা একা"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41j"
+                    android:id="@+id/txtC2MWeight2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41j"
+                android:id="@+id/lineC2MWeight2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41k"
+                android:id="@+id/secC2CWeight2"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41k"
+                    android:id="@+id/lblC2CWeight2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41k"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41k"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2CWeight2"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
-                    android:text="কার কাছ থেকে কোথা থেকে পেয়েছেন"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/spnH41k"
-                    android:layout_width="200sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/planet_prompt"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41k"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41kX"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41kX"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41kX"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
+                    android:text="শিশুর ওজন"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41kX"
+                    android:id="@+id/txtC2CWeight2"
                     style="@style/customEdit"
-                    android:layout_width="195sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
-                    android:minHeight="40sp"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41kX"
+                android:id="@+id/lineC2CWeight2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/seclblH41b"
+                android:id="@+id/seclblWeight3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHlblH41b"
+                    android:id="@+id/lblHlblWeight3"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="গত এক বছরে নিম্নলিখিত বিষয়গুলো থেকে কোনটি আপনি বিক্রয় বা হস্তান্তর করেছেন"
+                    android:text="ওজন (কেজি)-৩য়"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/linelblH41b"
+                android:id="@+id/linelblWeight3"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41l"
+                android:id="@+id/secC2MCWeight3"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41l"
+                    android:id="@+id/lblC2MCWeight3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41l"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41l"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2MCWeight3"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="সংখ্যা"
+                    android:text="শিশু + মা"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41l"
+                    android:id="@+id/txtC2MCWeight3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41l"
+                android:id="@+id/lineC2MCWeight3"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41m"
+                android:id="@+id/secC2MWeight3"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41m"
+                    android:id="@+id/lblC2MWeight3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H41m"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41m"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2MWeight3"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
-                    android:text="এই সম্পদ বিক্রি বা হস্তান্তরের সময় মূল্য কত ছিল"
+                    android:text="মা একা"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41m"
+                    android:id="@+id/txtC2MWeight3"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="100sp"
-                    android:inputType="number"
-                    android:maxLength="6"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41m"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41n"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41n"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="H41n"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41n"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="এই সম্পদের বর্তমান মূল্য কত"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/txtH41n"
-                    style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41n"
+                android:id="@+id/lineC2MWeight3"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/seclblH41o"
+                android:id="@+id/secC2CWeight3"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblHlblH41o"
+                    android:id="@+id/lblC2CWeight3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CWeight3"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="শিশুর ওজন"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CWeight3"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CWeight3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblHeight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblHeight"
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="এই সম্পদটি কিভাবে বদলি করেছেন"
+                    android:text="উচ্চতা"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/linelblH41o"
+                android:id="@+id/linelblHeight"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH41o1"
+                android:id="@+id/seclblC2a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC2a"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="শিশু"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC2a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CHeight1"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH41o1"
+                    android:id="@+id/lblC2CHeight1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH41o1"
-                    android:layout_width="250sp"
+                    android:id="@+id/VlblC2CHeight1"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="1) বিক্রি"
-                    android:textSize="20sp" />
-
-                <CheckBox
-                    android:id="@+id/chkH41o1"
-                    android:layout_width="50sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="text"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41o1"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41o2"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41o2"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41o2"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="2) যৌতুক"
-                    android:textSize="20sp" />
-
-                <CheckBox
-                    android:id="@+id/chkH41o2"
-                    android:layout_width="50sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="text"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41o2"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41o3"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41o3"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41o3"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="3) উপহার"
-                    android:textSize="20sp" />
-
-                <CheckBox
-                    android:id="@+id/chkH41o3"
-                    android:layout_width="50sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="text"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41o3"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41o4"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41o4"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41o4"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="4) অন্যান্য"
-                    android:textSize="20sp" />
-
-                <CheckBox
-                    android:id="@+id/chkH41o4"
-                    android:layout_width="50sp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10sp"
-                    android:inputType="text"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <View
-                android:id="@+id/lineH41o4"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#CCCCCC" />
-
-            <LinearLayout
-                android:id="@+id/secH41o4X"
-                style="@style/rowStyle0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblH41o4X"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/VlblH41o4X"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
-                    android:text="অন্যান্য উল্লেখ করুন"
+                    android:text="১ম উচ্চতা (সেমি)"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH41o4X"
+                    android:id="@+id/txtC2CHeight1"
                     style="@style/customEdit"
-                    android:layout_width="195sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH41o4X"
+                android:id="@+id/lineC2CHeight1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CHeight2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CHeight2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CHeight2"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="২য় উচ্চতা (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CHeight2"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CHeight2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CHeight3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CHeight3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CHeight3"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="৩য় উচ্চতা (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CHeight3"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CHeight3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblC2b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC2b"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="মা"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC2b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MHeight1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MHeight1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MHeight1"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="১ম উচ্চতা (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MHeight1"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MHeight1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MHeight2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MHeight2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MHeight2"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="২য় উচ্চতা (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MHeight2"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MHeight2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MHeight3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MHeight3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MHeight3"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="৩য়  উচ্চতা (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MHeight3"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MHeight3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblMuac"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblMuac"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MUAC"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblMuac"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblC2c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC2c"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="শিশু"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC2c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CMUAC1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CMUAC1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CMUAC1"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="১ম  MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CMUAC1"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CMUAC1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CMUAC2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CMUAC2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CMUAC2"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="২য় MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CMUAC2"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CMUAC2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2CMUAC3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2CMUAC3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2CMUAC3"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="৩য়  MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2CMUAC3"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2CMUAC3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblC2d"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC2d"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="মা"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC2d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MMUAC1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MMUAC1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MMUAC1"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="১ম  MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MMUAC1"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MMUAC1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MMUAC2"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MMUAC2"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MMUAC2"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="২য় MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MMUAC2"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MMUAC2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2MMUAC3"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2MMUAC3"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC2MMUAC3"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:text="৩য়  MUAC (সেমি)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2MMUAC3"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2MMUAC3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secC2Haemoglobin"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC2Haemoglobin"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="-> "
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/VlblC2Haemoglobin"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="-> ১২-২৩ মাসের শিশুর হিমোগ্লোবিন এর ঘনত্ব"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtC2Haemoglobin"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC2Haemoglobin"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

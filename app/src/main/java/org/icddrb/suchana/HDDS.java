@@ -122,6 +122,7 @@ public class HDDS extends Activity {
     Button buttonAssetType19;
     Button buttonAssetType20;
     Button cmdSave;
+    List<String> listH7L;
     private int hour;
     private int minute;
     private int mDay;
@@ -129,6 +130,7 @@ public class HDDS extends Activity {
     private int mYear;
     private boolean allItemsCompleted = false;
     private View pressedButton;
+    private TextView VlblH7L;
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
     @Override
@@ -474,8 +476,9 @@ public class HDDS extends Activity {
             listH7.add("19-মশলা,আচার/সস জাতীয় খাবার");
             listH7.add("20-বিবিধ (পানীয়)");
 
-            List<String> listH7L = new ArrayList<String>();
+            listH7L = new ArrayList<String>();
 
+            listH7L.add("");
             listH7L.add("01-ভুট্টা,চাল,গম বা এই সব শস্য দ্বারা অন্য কোন খাবার তৈরী হয়েছে (যেমন:রুটি,নুডলস,সুজি বা অন্যান্য শস্য পণ্য)");
             listH7L.add("02-সাদা আলু, সাদা মিষ্টি আলু, বা অন্য শিকড় থেকে তৈরি খাবার");
             listH7L.add("03-কুমড়া,গাজর বা মিষ্টি আলু যার রং ভিতরে কমলা ও স্থানীয় ভিটামিন এ সমৃদ্ধ শাক সবজি");
@@ -496,7 +499,7 @@ public class HDDS extends Activity {
             listH7L.add("18-চিনি,মধু,মিষ্টি যুক্ত সোডা বা মিষ্টি যুক্ত রসের পানীয় বা চিনি যুক্ত খাবার যেমন চকলেট,ক্যান্ডি,কুকিজ এবং কেক");
             listH7L.add("19-মশলা,কালো মরিচ,আচার/সস জাতীয় খাবার যেমন সয়া সস");
             listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফ ইত্যাদিি");
-            
+            VlblH7L = (TextView) findViewById(R.id.VlblH7L);
             ArrayAdapter<String> adptrH7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH7);
             spnH7.setAdapter(adptrH7);
             spnH7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -506,6 +509,7 @@ public class HDDS extends Activity {
 
                     String spnData = Connection.SelectedSpinnerValue(spnH7.getSelectedItem().toString(), "-");
                     DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+                    VlblH7L.setText(listH7L.get(Integer.valueOf(spnData)));
                 }
 
                 @Override

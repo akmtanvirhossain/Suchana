@@ -237,6 +237,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="01" />
 
                     <Button
@@ -244,6 +245,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="02" />
 
                     <Button
@@ -251,6 +253,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="03" />
 
                     <Button
@@ -258,6 +261,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="04" />
 
                     <Button
@@ -265,6 +269,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="05" />
 
                     <Button
@@ -272,6 +277,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="06" />
 
                     <Button
@@ -279,6 +285,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="07" />
 
                     <Button
@@ -286,6 +293,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="08" />
 
 
@@ -302,6 +310,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="09" />
 
                     <Button
@@ -309,6 +318,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="10" />
 
                     <Button
@@ -316,6 +326,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="11" />
 
                     <Button
@@ -323,6 +334,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="12" />
 
                     <Button
@@ -330,6 +342,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="13" />
 
                     <Button
@@ -337,6 +350,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="14" />
 
                     <Button
@@ -344,6 +358,7 @@
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
+                        android:layout_weight="1"
                         android:text="15" />
 
 

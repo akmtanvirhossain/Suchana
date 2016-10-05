@@ -89,6 +89,10 @@
         <activity android:name=".Cost3" />
         <activity android:name=".HandWash" />
         <activity android:name=".NutHealth" />
+        <activity android:name=".WomenEmp" />
+        <activity android:name=".DomViolance" />
+        <activity android:name=".FoodDiversity" />
+        <activity android:name=".Anthro" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 
