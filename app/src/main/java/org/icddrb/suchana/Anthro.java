@@ -8,6 +8,7 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Anthro" android:label="Anthro" />
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -16,12 +17,14 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -240,6 +243,13 @@ public class Anthro extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), FdHabit.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
@@ -264,7 +274,7 @@ public class Anthro extends Activity {
             cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                   /* AlertDialog.Builder adb = new AlertDialog.Builder(AssetB.this);
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Anthro.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to start AssetB [Yes/No]?");
                     adb.setNegativeButton("No", null);
@@ -273,14 +283,14 @@ public class Anthro extends Activity {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
                             IDBundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
-                    adb.show();*/
+                    adb.show();
                 }
             });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
@@ -871,6 +881,16 @@ public class Anthro extends Activity {
             public void onProviderDisabled(String provider) {
             }
         };
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 

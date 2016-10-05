@@ -8,6 +8,7 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".NutHealth" android:label="NutHealth" />
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -16,12 +17,14 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -52,7 +55,7 @@ public class NutHealth extends Activity {
     static final int TIME_DIALOG = 2;
     static String TableName;
     static String RND = "";
-    static String SUCHONAID = "";
+    static String SUCHANAID = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -66,10 +69,10 @@ public class NutHealth extends Activity {
     View lineRnd;
     TextView VlblRnd;
     EditText txtRnd;
-    LinearLayout secSuchonaID;
-    View lineSuchonaID;
-    TextView VlblSuchonaID;
-    EditText txtSuchonaID;
+    LinearLayout secSuchanaID;
+    View lineSuchanaID;
+    TextView VlblSuchanaID;
+    EditText txtSuchanaID;
     LinearLayout seclblM31;
     LinearLayout secM31a;
     View lineM31a;
@@ -210,7 +213,7 @@ public class NutHealth extends Activity {
             StartTime = g.CurrentTime24();
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
-            SUCHONAID = IDbundle.getString("SuchanaID");
+            SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "NutHealth";
 
@@ -227,7 +230,7 @@ public class NutHealth extends Activity {
                 public void onClick(View view) {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", RND);
-                    IDbundle.putString("SuchanaID", SUCHONAID);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), UpdateMenu.class);
                     f1.putExtras(IDbundle);
@@ -243,7 +246,14 @@ public class NutHealth extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            /*Intent intent = new Intent(getApplicationContext(), HandWash.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();*/
                         }
                     });
                     adb.show();
@@ -261,7 +271,7 @@ public class NutHealth extends Activity {
                         public void onClick(DialogInterface dialog, int which) {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
-                            IDBundle.putString("SuchanaID", SUCHONAID);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
                             Intent intent = new Intent(getApplicationContext(), WomenEmp.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDBundle);
@@ -278,12 +288,12 @@ public class NutHealth extends Activity {
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             txtRnd.setText(RND);
             txtRnd.setEnabled(false);
-            secSuchonaID = (LinearLayout) findViewById(R.id.secSuchonaID);
-            lineSuchonaID = (View) findViewById(R.id.lineSuchonaID);
-            VlblSuchonaID = (TextView) findViewById(R.id.VlblSuchonaID);
-            txtSuchonaID = (EditText) findViewById(R.id.txtSuchonaID);
-            txtSuchonaID.setText(SUCHONAID);
-            txtSuchonaID.setEnabled(false);
+            secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
+            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
+            txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
+            txtSuchanaID.setText(SUCHANAID);
+            txtSuchanaID.setEnabled(false);
             seclblM31 = (LinearLayout) findViewById(R.id.seclblM31);
             secM31a = (LinearLayout) findViewById(R.id.secM31a);
             lineM31a = (View) findViewById(R.id.lineM31a);
@@ -502,7 +512,7 @@ public class NutHealth extends Activity {
             secM38.setVisibility(View.GONE);
             secM38X1.setVisibility(View.GONE);
 
-            DataSearch(RND, SUCHONAID);
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -528,9 +538,9 @@ public class NutHealth extends Activity {
                 Connection.MessageBox(NutHealth.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
                 txtRnd.requestFocus();
                 return;
-            } else if (txtSuchonaID.getText().toString().length() == 0 & secSuchonaID.isShown()) {
+            } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
                 Connection.MessageBox(NutHealth.this, "Required field: উপকারভোগী/সদস্য আইডি.");
-                txtSuchonaID.requestFocus();
+                txtSuchanaID.requestFocus();
                 return;
             } else if (txtM31x1.getText().toString().length() == 0 & secM31x1.isShown()) {
                 Connection.MessageBox(NutHealth.this, "Required field: অন্যান্য (নির্দিষ্ট করুন).");
@@ -575,7 +585,7 @@ public class NutHealth extends Activity {
 
             NutHealth_DataModel objSave = new NutHealth_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
-            objSave.setSuchanaID(txtSuchonaID.getText().toString());
+            objSave.setSuchanaID(txtSuchanaID.getText().toString());
             objSave.setM31a((chkM31a.isChecked() ? "1" : "2"));
             objSave.setM31b((chkM31b.isChecked() ? "1" : "2"));
             objSave.setM31c((chkM31c.isChecked() ? "1" : "2"));
@@ -629,12 +639,12 @@ public class NutHealth extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHONAID);
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                 e.SaveUpdateData(this);
                 Bundle IDBundle = new Bundle();
                 finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
-                IDBundle.putString("SuchanaID", txtSuchonaID.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                 startActivity(new Intent(NutHealth.this, WomenEmp.class).putExtras(IDBundle));
 
             } else {
@@ -647,16 +657,16 @@ public class NutHealth extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchonaID) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             RadioButton rb;
             NutHealth_DataModel d = new NutHealth_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchonaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<NutHealth_DataModel> data = d.SelectAll(this, SQL);
             for (NutHealth_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
-                txtSuchonaID.setText(item.getSuchanaID());
+                txtSuchanaID.setText(item.getSuchanaID());
                 if (item.getM31a().equals("1")) {
                     chkM31a.setChecked(true);
                 } else if (item.getM31a().equals("2")) {
@@ -779,6 +789,16 @@ public class NutHealth extends Activity {
             public void onProviderDisabled(String provider) {
             }
         };
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 

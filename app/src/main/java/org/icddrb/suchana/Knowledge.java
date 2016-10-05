@@ -1,14 +1,8 @@
 package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Knowledge" android:label="Knowledge" />
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import android.app.*;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,23 +10,16 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.view.KeyEvent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -41,43 +28,34 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
-import Common.*;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
 
 public class Knowledge extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
+    static String MSLNUMBER = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event)
-    {
-        if(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME)
-        { return false; }
-        else { return true;  }
-    }
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout secRnd;
     View lineRnd;
@@ -96,7 +74,6 @@ public class Knowledge extends Activity {
     View lineM212;
     TextView VlblM212;
     RadioGroup rdogrpM212;
-
     RadioButton rdoM2121;
     RadioButton rdoM2122;
     LinearLayout secLbM213;
@@ -124,14 +101,12 @@ public class Knowledge extends Activity {
     View lineM214;
     TextView VlblM214;
     RadioGroup rdogrpM214;
-
     RadioButton rdoM2141;
     RadioButton rdoM2142;
     LinearLayout secM215;
     View lineM215;
     TextView VlblM215;
     RadioGroup rdogrpM215;
-
     RadioButton rdoM2151;
     RadioButton rdoM2152;
     LinearLayout secM216;
@@ -356,20 +331,16 @@ public class Knowledge extends Activity {
     View lineM2115;
     TextView VlblM2115;
     RadioGroup rdogrpM2115;
-
     RadioButton rdoM21151;
     RadioButton rdoM21152;
     RadioButton rdoM21153;
-
     LinearLayout secM2116;
     View lineM2116;
     TextView VlblM2116;
     RadioGroup rdogrpM2116;
-
     RadioButton rdoM21161;
     RadioButton rdoM21162;
     RadioButton rdoM21163;
-
     LinearLayout secM2117;
     View lineM2117;
     TextView VlblM2117;
@@ -436,12 +407,49 @@ public class Knowledge extends Activity {
     View lineM222x1;
     TextView VlblM222x1;
     EditText txtM222x1;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
-    static String MSLNUMBER = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            //dtpDate.setText(new StringBuilder()
+            //        .append(Global.Right("00"+mDay,2)).append("/")
+            //        .append(Global.Right("00"+mMonth,2)).append("/")
+            //        .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime;
+
+
+            //     tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -475,12 +483,54 @@ public class Knowledge extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), PregHis.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }});
                     adb.show();
                 }});
 
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Knowledge.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), FdHabitKnow.class);
+                            intent.putExtras(IDbundle);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
 
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             secRnd=(LinearLayout)findViewById(R.id.secRnd);
             lineRnd=(View)findViewById(R.id.lineRnd);
             VlblRnd=(TextView) findViewById(R.id.VlblRnd);
@@ -2142,8 +2192,6 @@ public class Knowledge extends Activity {
         }
     }
 
-
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -2156,31 +2204,6 @@ public class Knowledge extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year; mMonth = monthOfYear+1; mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            //dtpDate.setText(new StringBuilder()
-            //        .append(Global.Right("00"+mDay,2)).append("/")
-            //        .append(Global.Right("00"+mMonth,2)).append("/")
-            //        .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour; minute = selectedMinute;
-            EditText tpTime;
-
-
-       //     tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................
