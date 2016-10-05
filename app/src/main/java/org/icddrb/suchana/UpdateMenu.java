@@ -42,7 +42,8 @@ public class UpdateMenu extends Activity {
     Button cmdDataUpload;
     Button cmdDataSync;
     Button cmdMenuInterviewList;
-    Button cmdMenuNutHealth;
+    Button cmdMenuHandWash;
+    Button fdhabit;
 
     Connection C;
     Global g;
@@ -283,14 +284,22 @@ public class UpdateMenu extends Activity {
                 }
             });
 
-
-            cmdMenuNutHealth = (Button) findViewById(R.id.cmdMenuNutHealth);
-            cmdMenuNutHealth.setOnClickListener(new View.OnClickListener() {
+            cmdMenuHandWash = (Button) findViewById(R.id.cmdMenuHandWash);
+            cmdMenuHandWash.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, NutHealth.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, HandWash.class).putExtras(IDBundle));
                 }
             });
+
+            fdhabit = (Button) findViewById(R.id.fdhabit);
+            fdhabit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, FdHabit.class).putExtras(IDBundle));
+                }
+            });
+
 
             cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
             //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);

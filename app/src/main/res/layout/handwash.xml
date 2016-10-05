@@ -598,7 +598,7 @@
                 <TextView
                     android:id="@+id/VlblM242a"
                     android:text="রান্নার পূর্বে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -650,7 +650,7 @@
                 <TextView
                     android:id="@+id/VlblM242a1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -687,7 +687,7 @@
                 <TextView
                     android:id="@+id/VlblM242a1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -725,7 +725,7 @@
                 <TextView
                     android:id="@+id/VlblM242b"
                     android:text="শিশুকে খাওয়ানোর পূর্বে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -777,7 +777,7 @@
                 <TextView
                     android:id="@+id/VlblM242b1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -814,7 +814,7 @@
                 <TextView
                     android:id="@+id/VlblM242b1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -852,7 +852,7 @@
                 <TextView
                     android:id="@+id/VlblM242c"
                     android:text="খাদ্য গ্রহনের পূর্বে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -904,7 +904,7 @@
                 <TextView
                     android:id="@+id/VlblM242c1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -941,7 +941,7 @@
                 <TextView
                     android:id="@+id/VlblM242c1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -979,7 +979,7 @@
                 <TextView
                     android:id="@+id/VlblM242d"
                     android:text="শিশুর নিম্নাঙ্গ পরিষ্কার করার পর হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1031,7 +1031,7 @@
                 <TextView
                     android:id="@+id/VlblM242d1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1068,7 +1068,7 @@
                 <TextView
                     android:id="@+id/VlblM242d1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1106,7 +1106,7 @@
                 <TextView
                     android:id="@+id/VlblM242e"
                     android:text="পায়খানা করার পর হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1158,7 +1158,7 @@
                 <TextView
                     android:id="@+id/VlblM242e1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1195,7 +1195,7 @@
                 <TextView
                     android:id="@+id/VlblM242e1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1233,7 +1233,7 @@
                 <TextView
                     android:id="@+id/VlblM242f"
                     android:text="পশুপাখি ধরার পর অথবা তাদের মলমুত্র পরিষ্কারের পর হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1285,7 +1285,7 @@
                 <TextView
                     android:id="@+id/VlblM242f1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1322,7 +1322,7 @@
                 <TextView
                     android:id="@+id/VlblM242f1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1360,7 +1360,7 @@
                 <TextView
                     android:id="@+id/VlblM242g"
                     android:text="খাবার পরিবেসনের পূর্বে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1412,7 +1412,7 @@
                 <TextView
                     android:id="@+id/VlblM242g1"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
@@ -1449,7 +1449,7 @@
                 <TextView
                     android:id="@+id/VlblM242g1X"
                     android:text="অন্যান্য উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 

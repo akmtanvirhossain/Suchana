@@ -686,7 +686,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: জমি/পানির মাপ (জল আয়তন).");
                 txtH152c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152c.getText().toString().length() == 0 ? "1" : txtH152c.getText().toString()) < 1 || Integer.valueOf(txtH152c.getText().toString().length() == 0 ? "99999" : txtH152c.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152c.getText().toString().length() == 0 ? "1" : txtH152c.getText().toString()) < 1 || Float.valueOf(txtH152c.getText().toString().length() == 0 ? "99999" : txtH152c.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(জমি/পানির মাপ (জল আয়তন)).");
                 txtH152c.requestFocus();
                 return;
@@ -694,7 +694,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152d1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152d1.getText().toString().length() == 0 ? "1" : txtH152d1.getText().toString()) < 1 || Integer.valueOf(txtH152d1.getText().toString().length() == 0 ? "99999" : txtH152d1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "1" : txtH152d1.getText().toString()) < 1 || Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "99999" : txtH152d1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
                 txtH152d1.requestFocus();
                 return;
@@ -706,7 +706,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152e1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "1" : txtH152e1.getText().toString()) < 0 || Integer.valueOf(txtH152e1.getText().toString().length() == 0 ? "99999" : txtH152e1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152e1.getText().toString().length() == 0 ? "1" : txtH152e1.getText().toString()) < 0 || Float.valueOf(txtH152e1.getText().toString().length() == 0 ? "99999" : txtH152e1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152e1.requestFocus();
                 return;
@@ -718,7 +718,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: বিক্রি করে কত টাকা পেয়েছিলেন.");
                 txtH152f.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "1" : txtH152f.getText().toString()) < 0 || Integer.valueOf(txtH152f.getText().toString().length() == 0 ? "9999999" : txtH152f.getText().toString()) > 9999999) {
+            } else if (Float.valueOf(txtH152f.getText().toString().length() == 0 ? "1" : txtH152f.getText().toString()) < 0 || Float.valueOf(txtH152f.getText().toString().length() == 0 ? "9999999" : txtH152f.getText().toString()) > 9999999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 9999999(বিক্রি করে কত টাকা পেয়েছিলেন).");
                 txtH152f.requestFocus();
                 return;
@@ -732,7 +732,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152g.requestFocus();
                 return;
-            }else if (Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 0 || Integer.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
+            }else if (Float.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 0 || Float.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো).");
                 txtH152g.requestFocus();
                 return;
@@ -740,7 +740,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152h1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "1" : txtH152h1.getText().toString()) < 0 || Integer.valueOf(txtH152h1.getText().toString().length() == 0 ? "99999" : txtH152h1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152h1.getText().toString().length() == 0 ? "1" : txtH152h1.getText().toString()) < 0 || Float.valueOf(txtH152h1.getText().toString().length() == 0 ? "99999" : txtH152h1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152h1.requestFocus();
                 return;
@@ -752,7 +752,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152i1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "1" : txtH152i1.getText().toString()) < 0 || Integer.valueOf(txtH152i1.getText().toString().length() == 0 ? "99999" : txtH152i1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152i1.getText().toString().length() == 0 ? "1" : txtH152i1.getText().toString()) < 0 || Float.valueOf(txtH152i1.getText().toString().length() == 0 ? "99999" : txtH152i1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152i1.requestFocus();
                 return;
@@ -764,7 +764,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152j1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "1" : txtH152j1.getText().toString()) < 0 || Integer.valueOf(txtH152j1.getText().toString().length() == 0 ? "99999" : txtH152j1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152j1.getText().toString().length() == 0 ? "1" : txtH152j1.getText().toString()) < 0 || Float.valueOf(txtH152j1.getText().toString().length() == 0 ? "99999" : txtH152j1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152j1.requestFocus();
                 return;
@@ -776,7 +776,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152k1.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "1" : txtH152k1.getText().toString()) < 0 || Integer.valueOf(txtH152k1.getText().toString().length() == 0 ? "99999" : txtH152k1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152k1.getText().toString().length() == 0 ? "1" : txtH152k1.getText().toString()) < 0 || Float.valueOf(txtH152k1.getText().toString().length() == 0 ? "99999" : txtH152k1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
                 txtH152k1.requestFocus();
                 return;
