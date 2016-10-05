@@ -350,7 +350,7 @@ public class Loan extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnH113.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH113.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("15")) {
+                    if (spnData.equalsIgnoreCase("20")) {
                         //secH113X.setVisibility(View);
                         secH113X.setVisibility(View.VISIBLE);
                         lineH113X.setVisibility(View.VISIBLE);

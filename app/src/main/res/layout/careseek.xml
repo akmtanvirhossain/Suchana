@@ -1773,6 +1773,45 @@
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
+
+            <LinearLayout
+                android:id="@+id/secH185a5"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblH185a5"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:text="A5. "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblH185a5"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="GPS:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtH185a5"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="15"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineH185a5"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
             <LinearLayout
                 android:id="@+id/secH186a"
                 style="@style/rowStyle0"
@@ -2054,39 +2093,78 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secH186a4"
+            android:id="@+id/secH186a4"
+            style="@style/rowStyle0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblH186a4"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:text="A4. "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/VlblH186a4"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:text="দূরত্ব KM"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/txtH186a4"
+                style="@style/customEdit"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10sp"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+            <View
+                android:id="@+id/lineH186a4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:id="@+id/secH186a5"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblH186a4"
+                    android:id="@+id/lblH186a5"
                     android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="A4. "
+                    android:text="A5. "
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/VlblH186a4"
+                    android:id="@+id/VlblH186a5"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="দূরত্ব KM"
+                    android:text="GPS:"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtH186a4"
+                    android:id="@+id/txtH186a5"
                     style="@style/customEdit"
-                    android:layout_width="70sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:inputType="numberDecimal"
+                    android:maxLength="15"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
-                android:id="@+id/lineH186a4"
+                android:id="@+id/lineH186a5"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

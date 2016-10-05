@@ -226,6 +226,12 @@ public class Careseek extends Activity {
     View lineH185a4;
     TextView VlblH185a4;
     EditText txtH185a4;
+
+    LinearLayout secH185a5;
+    View lineH185a5;
+    TextView VlblH185a5;
+    EditText txtH185a5;
+
     LinearLayout secH186a;
     View lineH186a;
     TextView VlblH186a;
@@ -260,6 +266,12 @@ public class Careseek extends Activity {
     View lineH186a4;
     TextView VlblH186a4;
     EditText txtH186a4;
+
+    LinearLayout secH186a5;
+    View lineH186a5;
+    TextView VlblH186a5;
+    EditText txtH186a5;
+
     LinearLayout secH187a;
     View lineH187a;
     TextView VlblH187a;
@@ -1148,7 +1160,7 @@ public class Careseek extends Activity {
             List<String> listH183a2 = new ArrayList<String>();
 
             listH183a2.add("");
-            listH183a2.add("11-পায়েহেঁটে");
+            listH183a2.add("1-পায়েহেঁটে");
             listH183a2.add("2-বাইসাইকেল");
             listH183a2.add("3-রিক্সা/ভ্যান");
             listH183a2.add("4-গরুরগাড়ি");
@@ -1510,6 +1522,11 @@ public class Careseek extends Activity {
                         secH185a4.setVisibility(View.GONE);
                         lineH185a4.setVisibility(View.GONE);
                         txtH185a4.setText("");
+
+                        secH185a5.setVisibility(View.GONE);
+                        lineH185a5.setVisibility(View.GONE);
+                        txtH185a5.setText("");
+
                     } else {
                         secH185a1.setVisibility(View.VISIBLE);
                         lineH185a1.setVisibility(View.VISIBLE);
@@ -1525,6 +1542,8 @@ public class Careseek extends Activity {
                     //    lineH185a3X.setVisibility(View.VISIBLE);
                         secH185a4.setVisibility(View.VISIBLE);
                         lineH185a4.setVisibility(View.VISIBLE);
+                        secH185a5.setVisibility(View.VISIBLE);
+                        lineH185a5.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1691,6 +1710,12 @@ public class Careseek extends Activity {
             lineH185a4 = (View) findViewById(R.id.lineH185a4);
             VlblH185a4 = (TextView) findViewById(R.id.VlblH185a4);
             txtH185a4 = (EditText) findViewById(R.id.txtH185a4);
+
+            secH185a5 = (LinearLayout) findViewById(R.id.secH185a5);
+            lineH185a5 = (View) findViewById(R.id.lineH185a5);
+            VlblH185a5 = (TextView) findViewById(R.id.VlblH185a5);
+            txtH185a5 = (EditText) findViewById(R.id.txtH185a5);
+
             secH186a = (LinearLayout) findViewById(R.id.secH186a);
             lineH186a = (View) findViewById(R.id.lineH186a);
             VlblH186a = (TextView) findViewById(R.id.VlblH186a);
@@ -1731,6 +1756,9 @@ public class Careseek extends Activity {
                         secH186a4.setVisibility(View.GONE);
                         lineH186a4.setVisibility(View.GONE);
                         txtH186a4.setText("");
+                        secH186a5.setVisibility(View.GONE);
+                        lineH186a5.setVisibility(View.GONE);
+                        txtH186a5.setText("");
                     } else {
                         secH186a1.setVisibility(View.VISIBLE);
                         lineH186a1.setVisibility(View.VISIBLE);
@@ -1746,6 +1774,8 @@ public class Careseek extends Activity {
                      //   lineH186a3X.setVisibility(View.VISIBLE);
                         secH186a4.setVisibility(View.VISIBLE);
                         lineH186a4.setVisibility(View.VISIBLE);
+                        secH186a5.setVisibility(View.VISIBLE);
+                        lineH186a5.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1913,6 +1943,12 @@ public class Careseek extends Activity {
             lineH186a4 = (View) findViewById(R.id.lineH186a4);
             VlblH186a4 = (TextView) findViewById(R.id.VlblH186a4);
             txtH186a4 = (EditText) findViewById(R.id.txtH186a4);
+
+            secH186a5 = (LinearLayout) findViewById(R.id.secH186a5);
+            lineH186a5 = (View) findViewById(R.id.lineH186a5);
+            VlblH186a5 = (TextView) findViewById(R.id.VlblH186a5);
+            txtH186a5 = (EditText) findViewById(R.id.txtH186a5);
+
             secH187a = (LinearLayout) findViewById(R.id.secH187a);
             lineH187a = (View) findViewById(R.id.lineH187a);
             VlblH187a = (TextView) findViewById(R.id.VlblH187a);
@@ -3474,7 +3510,13 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH185a4.requestFocus();
                 return;
-            } else if (!rdoH186a1.isChecked() & !rdoH186a2.isChecked() & secH186a.isShown()) {
+            }
+            else if (txtH185a5.getText().toString().length() == 0 & secH185a5.isShown()) {
+                Connection.MessageBox(Careseek.this, "Required field: GPS");
+                txtH185a5.requestFocus();
+                return;
+            }
+            else if (!rdoH186a1.isChecked() & !rdoH186a2.isChecked() & secH186a.isShown()) {
                 Connection.MessageBox(Careseek.this, "Select anyone options from (আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যবিক্রিরজন্যে)যান).");
                 rdoH186a1.requestFocus();
                 return;
@@ -3510,7 +3552,14 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH186a4.requestFocus();
                 return;
-            } else if (!rdoH187a1.isChecked() & !rdoH187a2.isChecked() & secH187a.isShown()) {
+            }
+
+            else if (txtH186a5.getText().toString().length() == 0 & secH186a5.isShown()) {
+                Connection.MessageBox(Careseek.this, "Required field: GPS");
+                txtH186a5.requestFocus();
+                return;
+            }
+            else if (!rdoH187a1.isChecked() & !rdoH187a2.isChecked() & secH187a.isShown()) {
                 Connection.MessageBox(Careseek.this, "Select anyone options from (আপনারবাড়ির কোনো সদস্য কি সরকারী কৃষিসেবায় যান).");
                 rdoH187a1.requestFocus();
                 return;
@@ -3730,7 +3779,8 @@ public class Careseek extends Activity {
 
             if (rdoH181a1.isChecked())
             {
-                if(spnH181a1.getSelectedItem().equals(spnH181a2.getSelectedItem()) || spnH181a1.getSelectedItem().equals(spnH181a3.getSelectedItem()) || spnH181a2.getSelectedItem().equals(spnH181a3.getSelectedItem()))
+               // if(spnH181a1.getSelectedItem().equals(spnH181a2.getSelectedItem()) || spnH181a1.getSelectedItem().equals(spnH181a3.getSelectedItem()) || spnH181a2.getSelectedItem().equals(spnH181a3.getSelectedItem()))
+                if(spnH181a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H181");
                     spnH181a1.requestFocus();
@@ -3739,7 +3789,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH182a1.isChecked())
             {
-                if(spnH182a1.getSelectedItem().equals(spnH182a2.getSelectedItem()) || spnH182a1.getSelectedItem().equals(spnH182a3.getSelectedItem()) || spnH182a2.getSelectedItem().equals(spnH182a3.getSelectedItem()))
+               // if(spnH182a1.getSelectedItem().equals(spnH182a2.getSelectedItem()) || spnH182a1.getSelectedItem().equals(spnH182a3.getSelectedItem()) || spnH182a2.getSelectedItem().equals(spnH182a3.getSelectedItem()))
+                if(spnH182a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H182");
                     spnH182a1.requestFocus();
@@ -3748,7 +3799,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH183a1.isChecked())
             {
-                if(spnH183a1.getSelectedItem().equals(spnH183a2.getSelectedItem()) || spnH183a1.getSelectedItem().equals(spnH183a3.getSelectedItem()) || spnH183a2.getSelectedItem().equals(spnH183a3.getSelectedItem()))
+                //if(spnH183a1.getSelectedItem().equals(spnH183a2.getSelectedItem()) || spnH183a1.getSelectedItem().equals(spnH183a3.getSelectedItem()) || spnH183a2.getSelectedItem().equals(spnH183a3.getSelectedItem()))
+                if(spnH183a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H183");
                     spnH183a1.requestFocus();
@@ -3757,7 +3809,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH184a1.isChecked())
             {
-                if(spnH184a1.getSelectedItem().equals(spnH184a2.getSelectedItem()) || spnH184a1.getSelectedItem().equals(spnH184a3.getSelectedItem()) || spnH184a2.getSelectedItem().equals(spnH184a3.getSelectedItem()))
+               // if(spnH184a1.getSelectedItem().equals(spnH184a2.getSelectedItem()) || spnH184a1.getSelectedItem().equals(spnH184a3.getSelectedItem()) || spnH184a2.getSelectedItem().equals(spnH184a3.getSelectedItem()))
+                if(spnH184a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H184");
                     spnH184a1.requestFocus();
@@ -3766,7 +3819,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH185a1.isChecked())
             {
-                if(spnH185a1.getSelectedItem().equals(spnH185a2.getSelectedItem()) || spnH185a1.getSelectedItem().equals(spnH185a3.getSelectedItem()) || spnH185a2.getSelectedItem().equals(spnH185a3.getSelectedItem()))
+                //if(spnH185a1.getSelectedItem().equals(spnH185a2.getSelectedItem()) || spnH185a1.getSelectedItem().equals(spnH185a3.getSelectedItem()) || spnH185a2.getSelectedItem().equals(spnH185a3.getSelectedItem()))
+                if(spnH185a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H185");
                     spnH185a1.requestFocus();
@@ -3775,7 +3829,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH186a1.isChecked())
             {
-                if(spnH186a1.getSelectedItem().equals(spnH186a2.getSelectedItem()) || spnH186a1.getSelectedItem().equals(spnH186a3.getSelectedItem()) || spnH186a2.getSelectedItem().equals(spnH186a3.getSelectedItem()))
+                //if(spnH186a1.getSelectedItem().equals(spnH186a2.getSelectedItem()) || spnH186a1.getSelectedItem().equals(spnH186a3.getSelectedItem()) || spnH186a2.getSelectedItem().equals(spnH186a3.getSelectedItem()))
+                if(spnH186a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H186");
                     spnH186a1.requestFocus();
@@ -3784,7 +3839,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH187a1.isChecked())
             {
-                if(spnH187a1.getSelectedItem().equals(spnH187a2.getSelectedItem()) || spnH187a1.getSelectedItem().equals(spnH187a3.getSelectedItem()) || spnH187a2.getSelectedItem().equals(spnH187a3.getSelectedItem()))
+                //if(spnH187a1.getSelectedItem().equals(spnH187a2.getSelectedItem()) || spnH187a1.getSelectedItem().equals(spnH187a3.getSelectedItem()) || spnH187a2.getSelectedItem().equals(spnH187a3.getSelectedItem()))
+                if(spnH187a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H187");
                     spnH187a1.requestFocus();
@@ -3793,7 +3849,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH188a1.isChecked())
             {
-                if(spnH188a1.getSelectedItem().equals(spnH188a2.getSelectedItem()) || spnH188a1.getSelectedItem().equals(spnH188a3.getSelectedItem()) || spnH188a2.getSelectedItem().equals(spnH188a3.getSelectedItem()))
+               // if(spnH188a1.getSelectedItem().equals(spnH188a2.getSelectedItem()) || spnH188a1.getSelectedItem().equals(spnH188a3.getSelectedItem()) || spnH188a2.getSelectedItem().equals(spnH188a3.getSelectedItem()))
+                if(spnH188a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H188");
                     spnH188a1.requestFocus();
@@ -3802,7 +3859,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH189a1.isChecked())
             {
-                if(spnH189a1.getSelectedItem().equals(spnH189a2.getSelectedItem()) || spnH189a1.getSelectedItem().equals(spnH189a3.getSelectedItem()) || spnH189a2.getSelectedItem().equals(spnH189a3.getSelectedItem()))
+               // if(spnH189a1.getSelectedItem().equals(spnH189a2.getSelectedItem()) || spnH189a1.getSelectedItem().equals(spnH189a3.getSelectedItem()) || spnH189a2.getSelectedItem().equals(spnH189a3.getSelectedItem()))
+                if(spnH189a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H189");
                     spnH189a1.requestFocus();
@@ -3811,7 +3869,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH1810a1.isChecked())
             {
-                if(spnH1810a1.getSelectedItem().equals(spnH1810a2.getSelectedItem()) || spnH1810a1.getSelectedItem().equals(spnH1810a3.getSelectedItem()) || spnH1810a2.getSelectedItem().equals(spnH1810a3.getSelectedItem()))
+               // if(spnH1810a1.getSelectedItem().equals(spnH1810a2.getSelectedItem()) || spnH1810a1.getSelectedItem().equals(spnH1810a3.getSelectedItem()) || spnH1810a2.getSelectedItem().equals(spnH1810a3.getSelectedItem()))
+                if(spnH1810a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H1810");
                     spnH1810a1.requestFocus();
@@ -3820,7 +3879,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH1811a1.isChecked())
             {
-                if(spnH1811a1.getSelectedItem().equals(spnH1811a2.getSelectedItem()) || spnH1811a1.getSelectedItem().equals(spnH1811a3.getSelectedItem()) || spnH1811a2.getSelectedItem().equals(spnH1811a3.getSelectedItem()))
+                //if(spnH1811a1.getSelectedItem().equals(spnH1811a2.getSelectedItem()) || spnH1811a1.getSelectedItem().equals(spnH1811a3.getSelectedItem()) || spnH1811a2.getSelectedItem().equals(spnH1811a3.getSelectedItem()))
+                if(spnH1811a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H1811");
                     spnH1811a1.requestFocus();
@@ -3829,7 +3889,8 @@ public class Careseek extends Activity {
             }
             else  if (rdoH1812a1.isChecked())
             {
-                if(spnH1812a1.getSelectedItem().equals(spnH1812a2.getSelectedItem()) || spnH1812a1.getSelectedItem().equals(spnH1812a3.getSelectedItem()) || spnH1812a2.getSelectedItem().equals(spnH1812a3.getSelectedItem()))
+                //if(spnH1812a1.getSelectedItem().equals(spnH1812a2.getSelectedItem()) || spnH1812a1.getSelectedItem().equals(spnH1812a3.getSelectedItem()) || spnH1812a2.getSelectedItem().equals(spnH1812a3.getSelectedItem()))
+                if(spnH1812a1.getSelectedItemPosition()==0)
                 {
                     Connection.MessageBox(Careseek.this, "Some data inconsistent in H1812");
                     spnH1812a1.requestFocus();
@@ -3918,6 +3979,7 @@ public class Careseek extends Activity {
             objSave.setH185a3((spnH185a3.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH185a3.getSelectedItem().toString(), "-")));
             objSave.setH185a3X(txtH185a3X.getText().toString());
             objSave.setH185a4(txtH185a4.getText().toString());
+            objSave.setH185a5(txtH185a5.getText().toString());
             String[] d_rdogrpH186a = new String[]{"1", "0"};
             objSave.setH186a("");
             for (int i = 0; i < rdogrpH186a.getChildCount(); i++) {
@@ -3932,6 +3994,7 @@ public class Careseek extends Activity {
             objSave.setH186a3((spnH186a3.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH186a3.getSelectedItem().toString(), "-")));
             objSave.setH186a3X(txtH186a3X.getText().toString());
             objSave.setH186a4(txtH186a4.getText().toString());
+            objSave.setH186a5(txtH186a5.getText().toString());
             String[] d_rdogrpH187a = new String[]{"1", "0"};
             objSave.setH187a("");
             for (int i = 0; i < rdogrpH187a.getChildCount(); i++) {
@@ -4130,6 +4193,7 @@ public class Careseek extends Activity {
                 spnH185a3.setSelection(Global.SpinnerItemPositionAnyLength(spnH185a3, item.getH185a3()));
                 txtH185a3X.setText(item.getH185a3X());
                 txtH185a4.setText(item.getH185a4());
+                txtH185a5.setText(item.getH185a5());
                 String[] d_rdogrpH186a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH186a.length; i++) {
                     if (item.getH186a().equals(String.valueOf(d_rdogrpH186a[i]))) {
@@ -4144,6 +4208,7 @@ public class Careseek extends Activity {
                 spnH186a3.setSelection(Global.SpinnerItemPositionAnyLength(spnH186a3, item.getH186a3()));
                 txtH186a3X.setText(item.getH186a3X());
                 txtH186a4.setText(item.getH186a4());
+                txtH186a5.setText(item.getH186a5());
                 String[] d_rdogrpH187a = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH187a.length; i++) {
                     if (item.getH187a().equals(String.valueOf(d_rdogrpH187a[i]))) {
