@@ -183,7 +183,7 @@
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10sp"
-                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
+                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর"
                     android:textSize="20sp" />
 
                 <Spinner

@@ -200,6 +200,27 @@
 
 
             <LinearLayout
+                android:id="@+id/seclblH9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblH9"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H9.A খাদ্য বহির্ভূত ব্যয়: গত ১ মাসের অনুস্মরণ"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblH9"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/seclblH9a"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -231,14 +252,14 @@
                     android:id="@+id/lblH9a1a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1a"
+                    android:text="H9a1"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন? (যেমন: জ্বালানি কাঠ, গোবর, হারিকেন ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন?(যেমন:জ্বালানি কাঠ,গোবর,হারিকেন ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -253,7 +274,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -261,7 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -283,14 +304,14 @@
                     android:id="@+id/lblH9a1b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -321,14 +342,14 @@
                     android:id="@+id/lblH9a1c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -380,14 +401,14 @@
                     android:id="@+id/lblH9a2a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a2a"
+                    android:text="H9a2"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -402,7 +423,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -410,7 +431,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -432,14 +453,14 @@
                     android:id="@+id/lblH9a2b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a2b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a2b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
