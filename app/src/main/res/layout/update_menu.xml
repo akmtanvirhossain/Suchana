@@ -451,6 +451,67 @@
                 android:text="পুষ্টি ও স্বাস্থ্যসেবা গ্রহণ"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuWomenEmp"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="নারীর ক্ষমতায়ন"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuDomViolance"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="সম্মান ও পারিবারিক নির্যাতন"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuFoodDiversity"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="মহিলাদের খাদ্য বৈচিত্র"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuAnthro"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="দৈহিক ও প্রাণ রাসায়নিক পরিমাপ"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
         </LinearLayout>
     </ScrollView>
 

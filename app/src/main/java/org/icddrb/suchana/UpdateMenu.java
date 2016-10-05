@@ -43,6 +43,10 @@ public class UpdateMenu extends Activity {
     Button cmdDataSync;
     Button cmdMenuInterviewList;
     Button cmdMenuNutHealth;
+    Button cmdMenuWomenEmp;
+    Button cmdMenuDomViolance;
+    Button cmdMenuFoodDiversity;
+    Button cmdMenuAnthro;
 
     Connection C;
     Global g;
@@ -291,6 +295,39 @@ public class UpdateMenu extends Activity {
                     startActivity(new Intent(UpdateMenu.this, NutHealth.class).putExtras(IDBundle));
                 }
             });
+
+            cmdMenuWomenEmp = (Button) findViewById(R.id.cmdMenuWomenEmp);
+            cmdMenuWomenEmp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, WomenEmp.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuDomViolance = (Button) findViewById(R.id.cmdMenuDomViolance);
+            cmdMenuDomViolance.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, DomViolance.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuFoodDiversity = (Button) findViewById(R.id.cmdMenuFoodDiversity);
+            cmdMenuFoodDiversity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, FoodDiversity.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuAnthro = (Button) findViewById(R.id.cmdMenuAnthro);
+            cmdMenuAnthro.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, Anthro.class).putExtras(IDBundle));
+                }
+            });
+
 
             cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
             //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
