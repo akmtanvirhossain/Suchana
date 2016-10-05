@@ -168,7 +168,7 @@ public class UpdateMenu extends Activity {
             cmdMenuAssetB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, AssetB.class).putExtras(IDBundle));
+                    startActivity(new Intent(UpdateMenu.this, AssetB_list.class).putExtras(IDBundle));
                 }
             });
 

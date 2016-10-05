@@ -704,13 +704,13 @@ public class HDDS extends Activity {
                 e.SaveUpdateData(this);
 
                 if (allItemsCompleted) {
-                /*    finish();
+                    finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                     // IDBundle.putString("H41a", "");
                     startActivity(new Intent(HDDS.this, Cost1.class).putExtras(IDBundle));
-                    // Connection.MessageBox(AssetB.this, "Saved Successfully");*/
+                    // Connection.MessageBox(AssetB.this, "Saved Successfully");
                 }
             } else {
                 Connection.MessageBox(HDDS.this, status);
