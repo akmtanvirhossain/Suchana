@@ -87,12 +87,12 @@
         <activity android:name=".Cost1" />
         <activity android:name=".Cost2" />
         <activity android:name=".Cost3" />
-        <activity android:name=".HandWash" />
+        <activity android:name=".FdHabitKnow" />
         <activity android:name=".NutHealth" />
         <activity android:name=".WomenEmp" />
         <activity android:name=".DomViolance" />
         <activity android:name=".PregHis" />
-        <activity android:name=".Anthro" />
+        <activity android:name=".Knowledge" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 
