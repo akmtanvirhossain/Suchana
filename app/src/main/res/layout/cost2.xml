@@ -165,7 +165,8 @@
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/lblMSlNo"
@@ -194,7 +195,8 @@
                 android:id="@+id/lineMSlNo"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
-                android:background="#CCCCCC" />
+                android:background="#CCCCCC"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/secLBH87"

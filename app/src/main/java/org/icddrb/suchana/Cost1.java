@@ -1897,8 +1897,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH811b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "1" : txtH811b.getText().toString()) < 1 || Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "999" : txtH811b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "0" : txtH811b.getText().toString()) < 0 || Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "999" : txtH811b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH811b.requestFocus();
                 return;
             } else if (!rdoH811c1.isChecked() & !rdoH811c2.isChecked() & !rdoH811c3.isChecked() & secH811c.isShown()) {
@@ -1909,8 +1909,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH811d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "1" : txtH811d.getText().toString()) < 1 || Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "999999" : txtH811d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "0" : txtH811d.getText().toString()) < 0 || Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "999999" : txtH811d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH811d.requestFocus();
                 return;
             } else if (!rdoH812a1.isChecked() & !rdoH812a2.isChecked() & secH812a.isShown()) {
@@ -1921,8 +1921,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH812b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "1" : txtH812b.getText().toString()) < 1 || Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "999" : txtH812b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "0" : txtH812b.getText().toString()) < 0 || Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "999" : txtH812b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH812b.requestFocus();
                 return;
             } else if (!rdoH812c1.isChecked() & !rdoH812c2.isChecked() & !rdoH812c3.isChecked() & secH812c.isShown()) {
@@ -1933,8 +1933,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH812d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "1" : txtH812d.getText().toString()) < 1 || Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "999999" : txtH812d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "0" : txtH812d.getText().toString()) < 0 || Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "999999" : txtH812d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH812d.requestFocus();
                 return;
             } else if (!rdoH813a1.isChecked() & !rdoH813a2.isChecked() & secH813a.isShown()) {
@@ -1945,8 +1945,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH813b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "1" : txtH813b.getText().toString()) < 1 || Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "999" : txtH813b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "0" : txtH813b.getText().toString()) < 0 || Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "999" : txtH813b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH813b.requestFocus();
                 return;
             } else if (!rdoH813c1.isChecked() & !rdoH813c2.isChecked() & !rdoH813c3.isChecked() & secH813c.isShown()) {
@@ -1957,8 +1957,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH813d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "1" : txtH813d.getText().toString()) < 1 || Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "999999" : txtH813d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "0" : txtH813d.getText().toString()) < 0 || Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "999999" : txtH813d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH813d.requestFocus();
                 return;
             } else if (!rdoH814a1.isChecked() & !rdoH814a2.isChecked() & secH814a.isShown()) {
@@ -1969,8 +1969,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH814b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "1" : txtH814b.getText().toString()) < 1 || Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "999" : txtH814b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "0" : txtH814b.getText().toString()) < 0 || Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "999" : txtH814b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH814b.requestFocus();
                 return;
             } else if (!rdoH814c1.isChecked() & !rdoH814c2.isChecked() & !rdoH814c3.isChecked() & secH814c.isShown()) {
@@ -1981,8 +1981,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH814d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "1" : txtH814d.getText().toString()) < 1 || Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "999999" : txtH814d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "0" : txtH814d.getText().toString()) < 0 || Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "999999" : txtH814d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH814d.requestFocus();
                 return;
             } else if (!rdoH815a1.isChecked() & !rdoH815a2.isChecked() & secH815a.isShown()) {
@@ -1993,8 +1993,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH815b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "1" : txtH815b.getText().toString()) < 1 || Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "999" : txtH815b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "0" : txtH815b.getText().toString()) < 0 || Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "999" : txtH815b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH815b.requestFocus();
                 return;
             } else if (!rdoH815c1.isChecked() & !rdoH815c2.isChecked() & !rdoH815c3.isChecked() & secH815c.isShown()) {
@@ -2005,8 +2005,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH815d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "1" : txtH815d.getText().toString()) < 1 || Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "999999" : txtH815d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "0" : txtH815d.getText().toString()) < 0 || Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "999999" : txtH815d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH815d.requestFocus();
                 return;
             } else if (!rdoH816a1.isChecked() & !rdoH816a2.isChecked() & secH816a.isShown()) {
@@ -2017,8 +2017,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH816b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "1" : txtH816b.getText().toString()) < 1 || Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "999" : txtH816b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "0" : txtH816b.getText().toString()) < 0 || Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "999" : txtH816b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH816b.requestFocus();
                 return;
             } else if (!rdoH816c1.isChecked() & !rdoH816c2.isChecked() & !rdoH816c3.isChecked() & secH816c.isShown()) {
@@ -2029,8 +2029,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH816d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "1" : txtH816d.getText().toString()) < 1 || Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "999999" : txtH816d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "0" : txtH816d.getText().toString()) < 0 || Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "999999" : txtH816d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH816d.requestFocus();
                 return;
             } else if (!rdoH821a1.isChecked() & !rdoH821a2.isChecked() & secH821a.isShown()) {
@@ -2041,8 +2041,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH821b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "1" : txtH821b.getText().toString()) < 1 || Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "999" : txtH821b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "0" : txtH821b.getText().toString()) < 0 || Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "999" : txtH821b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH821b.requestFocus();
                 return;
             } else if (!rdoH821c1.isChecked() & !rdoH821c2.isChecked() & !rdoH821c3.isChecked() & secH821c.isShown()) {
@@ -2053,8 +2053,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH821d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "1" : txtH821d.getText().toString()) < 1 || Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "999999" : txtH821d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "0" : txtH821d.getText().toString()) < 0 || Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "999999" : txtH821d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH821d.requestFocus();
                 return;
             } else if (!rdoH831.isChecked() & !rdoH832.isChecked() & secH83.isShown()) {
@@ -2069,8 +2069,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH831b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "1" : txtH831b.getText().toString()) < 1 || Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "999" : txtH831b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "0" : txtH831b.getText().toString()) < 0 || Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "999" : txtH831b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH831b.requestFocus();
                 return;
             } else if (!rdoH831c1.isChecked() & !rdoH831c2.isChecked() & !rdoH831c3.isChecked() & secH831c.isShown()) {
@@ -2081,8 +2081,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH831d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "1" : txtH831d.getText().toString()) < 1 || Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "999999" : txtH831d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "0" : txtH831d.getText().toString()) < 0 || Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "999999" : txtH831d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH831d.requestFocus();
                 return;
             } else if (!rdoH832a1.isChecked() & !rdoH832a2.isChecked() & secH832a.isShown()) {
@@ -2093,8 +2093,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH832b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "1" : txtH832b.getText().toString()) < 1 || Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "999" : txtH832b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "0" : txtH832b.getText().toString()) < 0 || Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "999" : txtH832b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH832b.requestFocus();
                 return;
             } else if (!rdoH832c1.isChecked() & !rdoH832c2.isChecked() & !rdoH832c3.isChecked() & secH832c.isShown()) {
@@ -2105,8 +2105,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH832d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "1" : txtH832d.getText().toString()) < 1 || Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "999999" : txtH832d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "0" : txtH832d.getText().toString()) < 0 || Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "999999" : txtH832d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH832d.requestFocus();
                 return;
             } else if (!rdoH841.isChecked() & !rdoH842.isChecked() & secH84.isShown()) {
@@ -2121,8 +2121,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH841b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "1" : txtH841b.getText().toString()) < 1 || Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "999" : txtH841b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "0" : txtH841b.getText().toString()) < 0 || Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "999" : txtH841b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH841b.requestFocus();
                 return;
             } else if (!rdoH841c1.isChecked() & !rdoH841c2.isChecked() & !rdoH841c3.isChecked() & secH841c.isShown()) {
@@ -2133,8 +2133,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH841d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "1" : txtH841d.getText().toString()) < 1 || Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "999999" : txtH841d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "0" : txtH841d.getText().toString()) < 0 || Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "999999" : txtH841d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH841d.requestFocus();
                 return;
             } else if (!rdoH842a1.isChecked() & !rdoH842a2.isChecked() & secH842a.isShown()) {
@@ -2145,8 +2145,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH842b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "1" : txtH842b.getText().toString()) < 1 || Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "999" : txtH842b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "0" : txtH842b.getText().toString()) < 0 || Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "999" : txtH842b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH842b.requestFocus();
                 return;
             } else if (!rdoH842c1.isChecked() & !rdoH842c2.isChecked() & !rdoH842c3.isChecked() & secH842c.isShown()) {
@@ -2157,8 +2157,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH842d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "1" : txtH842d.getText().toString()) < 1 || Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "999999" : txtH842d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "0" : txtH842d.getText().toString()) < 0 || Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "999999" : txtH842d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH842d.requestFocus();
                 return;
             } else if (!rdoH851a1.isChecked() & !rdoH851a2.isChecked() & secH851a.isShown()) {
@@ -2169,8 +2169,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH851b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "1" : txtH851b.getText().toString()) < 1 || Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "999" : txtH851b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "0" : txtH851b.getText().toString()) < 0 || Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "999" : txtH851b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH851b.requestFocus();
                 return;
             } else if (!rdoH851c1.isChecked() & !rdoH851c2.isChecked() & !rdoH851c3.isChecked() & secH851c.isShown()) {
@@ -2181,8 +2181,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH851d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "1" : txtH851d.getText().toString()) < 1 || Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "999999" : txtH851d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "0" : txtH851d.getText().toString()) < 0 || Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "999999" : txtH851d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH851d.requestFocus();
                 return;
             } else if (!rdoH861.isChecked() & !rdoH862.isChecked() & secH86.isShown()) {
@@ -2197,8 +2197,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH861b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "1" : txtH861b.getText().toString()) < 1 || Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "999" : txtH861b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "0" : txtH861b.getText().toString()) < 0 || Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "999" : txtH861b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH861b.requestFocus();
                 return;
             } else if (!rdoH861c1.isChecked() & !rdoH861c2.isChecked() & !rdoH861c3.isChecked() & secH861c.isShown()) {
@@ -2209,8 +2209,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH861d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "1" : txtH861d.getText().toString()) < 1 || Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "999999" : txtH861d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "0" : txtH861d.getText().toString()) < 0 || Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "999999" : txtH861d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH861d.requestFocus();
                 return;
             } else if (!rdoH862a1.isChecked() & !rdoH862a2.isChecked() & secH862a.isShown()) {
@@ -2221,8 +2221,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH862b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "1" : txtH862b.getText().toString()) < 1 || Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "999" : txtH862b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "0" : txtH862b.getText().toString()) < 0 || Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "999" : txtH862b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH862b.requestFocus();
                 return;
             } else if (!rdoH862c1.isChecked() & !rdoH862c2.isChecked() & !rdoH862c3.isChecked() & secH862c.isShown()) {
@@ -2233,8 +2233,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH862d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "1" : txtH862d.getText().toString()) < 1 || Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "999999" : txtH862d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "0" : txtH862d.getText().toString()) < 0 || Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "999999" : txtH862d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH862d.requestFocus();
                 return;
             }
