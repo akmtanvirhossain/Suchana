@@ -162,6 +162,21 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/seclb14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlb14"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H14. দুর্যোগ"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/seclb14a1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -172,7 +187,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="প্রাকৃতিক দূর্যোগে ঘর সাংঘাতিক ভাবে ক্ষতিগ্রস্ত হয়েছে"
+                    android:text="H14.A. বিগত বছরের দুর্যোগ মোকাবেলা (বিগত 12 months) "
                     android:textSize="20sp" />
             </LinearLayout>
 

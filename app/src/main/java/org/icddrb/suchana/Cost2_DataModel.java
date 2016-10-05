@@ -73,6 +73,20 @@ public class Cost2_DataModel{
     private String _H8103b = "";
     private String _H8103c = "";
     private String _H8103d = "";
+    private String _H8111a = "";
+    private String _H8111b = "";
+    private String _H8111c = "";
+    private String _H8111d = "";
+    private String _H8121a = "";
+    private String _H8121x1 = "";
+    private String _H8121b = "";
+    private String _H8121c = "";
+    private String _H8121d = "";
+    private String _H8122a = "";
+    private String _H8122x1 = "";
+    private String _H8122b = "";
+    private String _H8122c = "";
+    private String _H8122d = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -578,6 +592,118 @@ public class Cost2_DataModel{
         _H8103d = newValue;
     }
 
+    public String getH8111a() {
+        return _H8111a;
+    }
+
+    public void setH8111a(String newValue) {
+        _H8111a = newValue;
+    }
+
+    public String getH8111b() {
+        return _H8111b;
+    }
+
+    public void setH8111b(String newValue) {
+        _H8111b = newValue;
+    }
+
+    public String getH8111c() {
+        return _H8111c;
+    }
+
+    public void setH8111c(String newValue) {
+        _H8111c = newValue;
+    }
+
+    public String getH8111d() {
+        return _H8111d;
+    }
+
+    public void setH8111d(String newValue) {
+        _H8111d = newValue;
+    }
+
+    public String getH8121a() {
+        return _H8121a;
+    }
+
+    public void setH8121a(String newValue) {
+        _H8121a = newValue;
+    }
+
+    public String getH8121x1() {
+        return _H8121x1;
+    }
+
+    public void setH8121x1(String newValue) {
+        _H8121x1 = newValue;
+    }
+
+    public String getH8121b() {
+        return _H8121b;
+    }
+
+    public void setH8121b(String newValue) {
+        _H8121b = newValue;
+    }
+
+    public String getH8121c() {
+        return _H8121c;
+    }
+
+    public void setH8121c(String newValue) {
+        _H8121c = newValue;
+    }
+
+    public String getH8121d() {
+        return _H8121d;
+    }
+
+    public void setH8121d(String newValue) {
+        _H8121d = newValue;
+    }
+
+    public String getH8122a() {
+        return _H8122a;
+    }
+
+    public void setH8122a(String newValue) {
+        _H8122a = newValue;
+    }
+
+    public String getH8122x1() {
+        return _H8122x1;
+    }
+
+    public void setH8122x1(String newValue) {
+        _H8122x1 = newValue;
+    }
+
+    public String getH8122b() {
+        return _H8122b;
+    }
+
+    public void setH8122b(String newValue) {
+        _H8122b = newValue;
+    }
+
+    public String getH8122c() {
+        return _H8122c;
+    }
+
+    public void setH8122c(String newValue) {
+        _H8122c = newValue;
+    }
+
+    public String getH8122d() {
+        return _H8122d;
+    }
+
+    public void setH8122d(String newValue) {
+        _H8122d = newValue;
+    }
+
     public void setStartTime(String newValue){
         _StartTime = newValue;
     }
@@ -632,7 +758,7 @@ public class Cost2_DataModel{
         String SQL = "";
         try
         {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H87,H871a,H871b,H871c,H871d,H872a,H872b,H872c,H872d,H873a,H873b,H873c,H873d,H874a,H874b,H874c,H874d,H875a,H875b,H875c,H875d,H88,H881a,H881b,H881c,H881d,H882a,H882b,H882c,H882d,H883a,H883b,H883c,H883d,H884a,H884b,H884c,H884d,H885a,H885b,H885c,H885d,H891a,H891b,H891c,H891d,H810,H8101a,H8101b,H8101c,H8101d,H8102a,H8102b,H8102c,H8102d,H8103a,H8103b,H8103c,H8103d,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H87 + "', '" + _H871a + "', '" + _H871b + "', '" + _H871c + "', '" + _H871d + "', '" + _H872a + "', '" + _H872b + "', '" + _H872c + "', '" + _H872d + "', '" + _H873a + "', '" + _H873b + "', '" + _H873c + "', '" + _H873d + "', '" + _H874a + "', '" + _H874b + "', '" + _H874c + "', '" + _H874d + "', '" + _H875a + "', '" + _H875b + "', '" + _H875c + "', '" + _H875d + "', '" + _H88 + "', '" + _H881a + "', '" + _H881b + "', '" + _H881c + "', '" + _H881d + "', '" + _H882a + "', '" + _H882b + "', '" + _H882c + "', '" + _H882d + "', '" + _H883a + "', '" + _H883b + "', '" + _H883c + "', '" + _H883d + "', '" + _H884a + "', '" + _H884b + "', '" + _H884c + "', '" + _H884d + "', '" + _H885a + "', '" + _H885b + "', '" + _H885c + "', '" + _H885d + "', '" + _H891a + "', '" + _H891b + "', '" + _H891c + "', '" + _H891d + "', '" + _H810 + "', '" + _H8101a + "', '" + _H8101b + "', '" + _H8101c + "', '" + _H8101d + "', '" + _H8102a + "', '" + _H8102b + "', '" + _H8102c + "', '" + _H8102d + "', '" + _H8103a + "', '" + _H8103b + "', '" + _H8103c + "', '" + _H8103d + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H87,H871a,H871b,H871c,H871d,H872a,H872b,H872c,H872d,H873a,H873b,H873c,H873d,H874a,H874b,H874c,H874d,H875a,H875b,H875c,H875d,H88,H881a,H881b,H881c,H881d,H882a,H882b,H882c,H882d,H883a,H883b,H883c,H883d,H884a,H884b,H884c,H884d,H885a,H885b,H885c,H885d,H891a,H891b,H891c,H891d,H810,H8101a,H8101b,H8101c,H8101d,H8102a,H8102b,H8102c,H8102d,H8103a,H8103b,H8103c,H8103d,H8111a,H8111b,H8111c,H8111d,H8121a,H8121x1,H8121b,H8121c,H8121d,H8122a,H8122x1,H8122b,H8122c,H8122d,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H87 + "', '" + _H871a + "', '" + _H871b + "', '" + _H871c + "', '" + _H871d + "', '" + _H872a + "', '" + _H872b + "', '" + _H872c + "', '" + _H872d + "', '" + _H873a + "', '" + _H873b + "', '" + _H873c + "', '" + _H873d + "', '" + _H874a + "', '" + _H874b + "', '" + _H874c + "', '" + _H874d + "', '" + _H875a + "', '" + _H875b + "', '" + _H875c + "', '" + _H875d + "', '" + _H88 + "', '" + _H881a + "', '" + _H881b + "', '" + _H881c + "', '" + _H881d + "', '" + _H882a + "', '" + _H882b + "', '" + _H882c + "', '" + _H882d + "', '" + _H883a + "', '" + _H883b + "', '" + _H883c + "', '" + _H883d + "', '" + _H884a + "', '" + _H884b + "', '" + _H884c + "', '" + _H884d + "', '" + _H885a + "', '" + _H885b + "', '" + _H885c + "', '" + _H885d + "', '" + _H891a + "', '" + _H891b + "', '" + _H891c + "', '" + _H891d + "', '" + _H810 + "', '" + _H8101a + "', '" + _H8101b + "', '" + _H8101c + "', '" + _H8101d + "', '" + _H8102a + "', '" + _H8102b + "', '" + _H8102c + "', '" + _H8102d + "', '" + _H8103a + "', '" + _H8103b + "', '" + _H8103c + "', '" + _H8103d + "', '" + _H8111a + "', '" + _H8111b + "', '" + _H8111c + "', '" + _H8111d + "', '" + _H8121a + "', '" + _H8121x1 + "', '" + _H8121b + "', '" + _H8121c + "', '" + _H8121d + "', '" + _H8122a + "', '" + _H8122x1 + "', '" + _H8122b + "', '" + _H8122c + "', '" + _H8122d + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         }
         catch(Exception  e)
@@ -649,7 +775,7 @@ public class Cost2_DataModel{
         String SQL = "";
         try
         {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H87 = '" + _H87 + "',H871a = '" + _H871a + "',H871b = '" + _H871b + "',H871c = '" + _H871c + "',H871d = '" + _H871d + "',H872a = '" + _H872a + "',H872b = '" + _H872b + "',H872c = '" + _H872c + "',H872d = '" + _H872d + "',H873a = '" + _H873a + "',H873b = '" + _H873b + "',H873c = '" + _H873c + "',H873d = '" + _H873d + "',H874a = '" + _H874a + "',H874b = '" + _H874b + "',H874c = '" + _H874c + "',H874d = '" + _H874d + "',H875a = '" + _H875a + "',H875b = '" + _H875b + "',H875c = '" + _H875c + "',H875d = '" + _H875d + "',H88 = '" + _H88 + "',H881a = '" + _H881a + "',H881b = '" + _H881b + "',H881c = '" + _H881c + "',H881d = '" + _H881d + "',H882a = '" + _H882a + "',H882b = '" + _H882b + "',H882c = '" + _H882c + "',H882d = '" + _H882d + "',H883a = '" + _H883a + "',H883b = '" + _H883b + "',H883c = '" + _H883c + "',H883d = '" + _H883d + "',H884a = '" + _H884a + "',H884b = '" + _H884b + "',H884c = '" + _H884c + "',H884d = '" + _H884d + "',H885a = '" + _H885a + "',H885b = '" + _H885b + "',H885c = '" + _H885c + "',H885d = '" + _H885d + "',H891a = '" + _H891a + "',H891b = '" + _H891b + "',H891c = '" + _H891c + "',H891d = '" + _H891d + "',H810 = '" + _H810 + "',H8101a = '" + _H8101a + "',H8101b = '" + _H8101b + "',H8101c = '" + _H8101c + "',H8101d = '" + _H8101d + "',H8102a = '" + _H8102a + "',H8102b = '" + _H8102b + "',H8102c = '" + _H8102c + "',H8102d = '" + _H8102d + "',H8103a = '" + _H8103a + "',H8103b = '" + _H8103b + "',H8103c = '" + _H8103c + "',H8103d = '" + _H8103d + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H87 = '" + _H87 + "',H871a = '" + _H871a + "',H871b = '" + _H871b + "',H871c = '" + _H871c + "',H871d = '" + _H871d + "',H872a = '" + _H872a + "',H872b = '" + _H872b + "',H872c = '" + _H872c + "',H872d = '" + _H872d + "',H873a = '" + _H873a + "',H873b = '" + _H873b + "',H873c = '" + _H873c + "',H873d = '" + _H873d + "',H874a = '" + _H874a + "',H874b = '" + _H874b + "',H874c = '" + _H874c + "',H874d = '" + _H874d + "',H875a = '" + _H875a + "',H875b = '" + _H875b + "',H875c = '" + _H875c + "',H875d = '" + _H875d + "',H88 = '" + _H88 + "',H881a = '" + _H881a + "',H881b = '" + _H881b + "',H881c = '" + _H881c + "',H881d = '" + _H881d + "',H882a = '" + _H882a + "',H882b = '" + _H882b + "',H882c = '" + _H882c + "',H882d = '" + _H882d + "',H883a = '" + _H883a + "',H883b = '" + _H883b + "',H883c = '" + _H883c + "',H883d = '" + _H883d + "',H884a = '" + _H884a + "',H884b = '" + _H884b + "',H884c = '" + _H884c + "',H884d = '" + _H884d + "',H885a = '" + _H885a + "',H885b = '" + _H885b + "',H885c = '" + _H885c + "',H885d = '" + _H885d + "',H891a = '" + _H891a + "',H891b = '" + _H891b + "',H891c = '" + _H891c + "',H891d = '" + _H891d + "',H810 = '" + _H810 + "',H8101a = '" + _H8101a + "',H8101b = '" + _H8101b + "',H8101c = '" + _H8101c + "',H8101d = '" + _H8101d + "',H8102a = '" + _H8102a + "',H8102b = '" + _H8102b + "',H8102c = '" + _H8102c + "',H8102d = '" + _H8102d + "',H8103a = '" + _H8103a + "',H8103b = '" + _H8103b + "',H8103c = '" + _H8103c + "',H8103d = '" + _H8103d + "',H8111a = '" + _H8111a + "',H8111b = '" + _H8111b + "',H8111c = '" + _H8111c + "',H8111d = '" + _H8111d + "',H8121a = '" + _H8121a + "',H8121x1 = '" + _H8121x1 + "',H8121b = '" + _H8121b + "',H8121c = '" + _H8121c + "',H8121d = '" + _H8121d + "',H8122a = '" + _H8122a + "',H8122x1 = '" + _H8122x1 + "',H8122b = '" + _H8122b + "',H8122c = '" + _H8122c + "',H8122d = '" + _H8122d + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         }
         catch(Exception  e)
@@ -733,6 +859,20 @@ public class Cost2_DataModel{
             d._H8103b = cur.getString(cur.getColumnIndex("H8103b"));
             d._H8103c = cur.getString(cur.getColumnIndex("H8103c"));
             d._H8103d = cur.getString(cur.getColumnIndex("H8103d"));
+            d._H8111a = cur.getString(cur.getColumnIndex("H8111a"));
+            d._H8111b = cur.getString(cur.getColumnIndex("H8111b"));
+            d._H8111c = cur.getString(cur.getColumnIndex("H8111c"));
+            d._H8111d = cur.getString(cur.getColumnIndex("H8111d"));
+            d._H8121a = cur.getString(cur.getColumnIndex("H8121a"));
+            d._H8121x1 = cur.getString(cur.getColumnIndex("H8121x1"));
+            d._H8121b = cur.getString(cur.getColumnIndex("H8121b"));
+            d._H8121c = cur.getString(cur.getColumnIndex("H8121c"));
+            d._H8121d = cur.getString(cur.getColumnIndex("H8121d"));
+            d._H8122a = cur.getString(cur.getColumnIndex("H8122a"));
+            d._H8122x1 = cur.getString(cur.getColumnIndex("H8122x1"));
+            d._H8122b = cur.getString(cur.getColumnIndex("H8122b"));
+            d._H8122c = cur.getString(cur.getColumnIndex("H8122c"));
+            d._H8122d = cur.getString(cur.getColumnIndex("H8122d"));
             data.add(d);
 
             cur.moveToNext();

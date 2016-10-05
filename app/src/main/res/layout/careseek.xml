@@ -173,7 +173,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="সেবা কেন্দ্র সমুহে সেবা গ্রহন কেন্দ্রেরতালিকা"
+                    android:text="সেবা কেন্দ্র সমুহে সেবা গ্রহণ (কেন্দ্রের তালিকা)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -201,7 +201,7 @@
                     android:id="@+id/VlblH181a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি সাস্থ্য কেন্দ্র/হাসপাতাল যান"
+                    android:text="আপনারবাড়ির কোনো সদস্য কি স্বাস্থ্য কেন্দ্র/হাসপাতাল যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -519,7 +519,7 @@
                     android:id="@+id/VlblH182a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি স্থানীয় দোকান যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি স্থানীয় দোকান যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -837,7 +837,7 @@
                     android:id="@+id/VlblH183a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি সাপ্তাহিক হাট/বাজার যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি সাপ্তাহিক হাট/বাজার যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1155,7 +1155,7 @@
                     android:id="@+id/VlblH184a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি ব্যাঙ্ক যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি ব্যাংক এ যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1473,7 +1473,7 @@
                     android:id="@+id/VlblH185a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যকেনারজন্যে) যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি বাজার (খাবার/পণ্যদ্রব্যকেনারজন্যে) যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1830,7 +1830,7 @@
                     android:id="@+id/VlblH186a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি বাজার (খাবার/পণ্যদ্রব্যবিক্রিরজন্যে)যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি বাজার (খাবার/পণ্যদ্রব্যবিক্রিরজন্যে)যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2187,7 +2187,7 @@
                     android:id="@+id/VlblH187a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনারবাড়ির কোনো সদস্য কি সরকারী কৃষিসেবায় যান"
+                    android:text="আপনারবাড়ির কোন সদস্য কি সরকারী কৃষিসেবায় যান"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2505,7 +2505,7 @@
                     android:id="@+id/VlblH188a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনার বাড়ির কোনো সদস্য কি মৎস্য বিভাগ যান"
+                    android:text="আপনার বাড়ির কোন সদস্য কি মৎস্য বিভাগ যান"
                     android:textSize="20sp" />
 
                 <RadioGroup

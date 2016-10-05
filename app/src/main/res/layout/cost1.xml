@@ -170,7 +170,7 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -182,7 +182,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="100sp"
+                    android:layout_width="170sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -207,7 +207,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খাদ্যের জন্য ব্যয় : গত  1month এর অনুস্মরণ"
+                    android:text="H8. খাদ্যের জন্য ব্যয় : গত  ১ মাসের অনুস্মরণ"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -250,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -287,7 +287,7 @@
                     android:id="@+id/VlblH811a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চাল  কিনেছে"
+                    android:text="চাল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -302,7 +302,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton

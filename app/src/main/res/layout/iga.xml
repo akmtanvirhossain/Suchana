@@ -85,6 +85,20 @@
             android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/secH18b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHH18b"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H18.B. জীবিকার জন্য (IGA) ভাল মানের সরঞ্জাম/সামগ্রী/দ্রব্য"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
 
             <LinearLayout
@@ -219,7 +233,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -361,7 +375,7 @@
                     android:id="@+id/VlblH18b2a2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -541,7 +555,7 @@
                     android:id="@+id/VlblH18b2a7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -577,7 +591,7 @@
                     android:id="@+id/VlblH18b2a7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -630,7 +644,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -661,7 +675,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2B. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2B. সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -777,7 +791,7 @@
                     android:id="@+id/VlblH18b2b2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -957,7 +971,7 @@
                     android:id="@+id/VlblH18b2b7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -993,7 +1007,7 @@
                     android:id="@+id/VlblH18b2b7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1031,7 +1045,7 @@
                     android:id="@+id/VlblH18b1c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাছেরপোনা"
+                    android:text="মাছের পোনা"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1046,7 +1060,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1076,7 +1090,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2C. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2C. সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1156,7 +1170,7 @@
                     android:id="@+id/VlblH18b2c1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                    android:text="আকার"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1192,7 +1206,7 @@
                     android:id="@+id/VlblH18b2c2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="স্বাস্থ্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1228,7 +1242,7 @@
                     android:id="@+id/VlblH18b2c3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ব্যাচ নাম্বার"
+                    android:text="উৎস (যেমন হ্যাচারির নাম, নদী/হাওরের পোনা)"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1264,7 +1278,7 @@
                     android:id="@+id/VlblH18b2c4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="নির্মাতার নাম ও সুনাম"
+                    android:text="বিক্রেতার নাম ও সুনাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1300,7 +1314,7 @@
                     android:id="@+id/VlblH18b2c5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বিক্রেতার নাম ও সুনাম"
+                    android:text="বিক্রয়ের পূর্বে প্রক্রিয়াজাত অবস্থা (যেমন পোনার হাড়িতে অক্সিজেন/খাবার দেয়া আছে কি না)"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1336,7 +1350,7 @@
                     android:id="@+id/VlblH18b2c6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1372,7 +1386,7 @@
                     android:id="@+id/VlblH18b2c7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1408,7 +1422,7 @@
                     android:id="@+id/VlblH18b2c7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1461,7 +1475,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1491,7 +1505,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2D. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2D. সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
                 <TextView
                     android:id="@+id/VlblH18b1a"
@@ -1606,7 +1620,7 @@
                     android:id="@+id/VlblH18b2d2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1750,7 +1764,7 @@
                     android:id="@+id/VlblH18b2d6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1786,7 +1800,7 @@
                     android:id="@+id/VlblH18b2d7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1822,7 +1836,7 @@
                     android:id="@+id/VlblH18b2d7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1860,7 +1874,7 @@
                     android:id="@+id/VlblH18b1e"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="হাস/মুরগির বাচ্চা"
+                    android:text="হাঁস/মুরগির বাচ্চা"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1875,7 +1889,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1905,7 +1919,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2E. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2E.সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1985,7 +1999,7 @@
                     android:id="@+id/VlblH18b2e1"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মেয়াদ উত্তীর্ণের তরিখ"
+                    android:text="আকার"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2021,7 +2035,7 @@
                     android:id="@+id/VlblH18b2e2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="স্বাস্থ্য "
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2057,7 +2071,7 @@
                     android:id="@+id/VlblH18b2e3"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="ব্যাচ নাম্বার"
+                    android:text="উৎস (যেমন হ্যাচারির নাম,উৎপাদনকারী প্রতিঠানের নাম)"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2093,7 +2107,7 @@
                     android:id="@+id/VlblH18b2e4"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="নির্মাতার নাম ও সুনাম"
+                    android:text="বিক্রেতার নাম ও সুনাম"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2129,7 +2143,7 @@
                     android:id="@+id/VlblH18b2e5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বিক্রেতার নাম ও সুনাম"
+                    android:text="বিক্রয়ের পূর্বে প্রক্রিয়াজাত অবস্থা (যেমন কোনো টিকা দেয়া হয়েছে কিনা) "
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2165,7 +2179,7 @@
                     android:id="@+id/VlblH18b2e6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2201,7 +2215,7 @@
                     android:id="@+id/VlblH18b2e7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2237,7 +2251,7 @@
                     android:id="@+id/VlblH18b2e7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2290,7 +2304,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2321,7 +2335,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2F. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2F.সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2437,7 +2451,7 @@
                     android:id="@+id/VlblH18b2f2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2581,7 +2595,7 @@
                     android:id="@+id/VlblH18b2f6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2617,7 +2631,7 @@
                     android:id="@+id/VlblH18b2f7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2653,7 +2667,7 @@
                     android:id="@+id/VlblH18b2f7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2691,7 +2705,7 @@
                     android:id="@+id/VlblH18b1g"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="হাস-মুরগির খাবার/পোল্ট্রিফিড"
+                    android:text="হাঁস-মুরগির খাবার/পোল্ট্রিফিড"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2706,7 +2720,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2737,7 +2751,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2G. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2G. সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2854,7 +2868,7 @@
                     android:id="@+id/VlblH18b2g2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -2998,7 +3012,7 @@
                     android:id="@+id/VlblH18b2g6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3034,7 +3048,7 @@
                     android:id="@+id/VlblH18b2g7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3070,7 +3084,7 @@
                     android:id="@+id/VlblH18b2g7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3123,7 +3137,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3155,7 +3169,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2H. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2H.সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
                 <TextView
                     android:id="@+id/VlblH18b1a"
@@ -3272,7 +3286,7 @@
                     android:id="@+id/VlblH18b2h2"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেজিংতারিখ"
+                    android:text="প্যাকেজিং তারিখ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3416,7 +3430,7 @@
                     android:id="@+id/VlblH18b2h6"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="প্যাকেট/বস্তা সঠিকভাবে সীল করা আছে কি না"
+                    android:text="প্যাকেট/বস্তা সঠিক ভাবে সীল করা আছে কি না"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3452,7 +3466,7 @@
                     android:id="@+id/VlblH18b2h7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3488,7 +3502,7 @@
                     android:id="@+id/VlblH18b2h7X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3571,7 +3585,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2I. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2I.সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -3795,7 +3809,7 @@
                     android:id="@+id/VlblH18b2i5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3831,7 +3845,7 @@
                     android:id="@+id/VlblH18b2i5X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3884,7 +3898,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3915,7 +3929,7 @@
                     style="@style/rowHeading"
                     android:layout_width="380sp"
                     android:layout_height="wrap_content"
-                    android:text="H18B2J. সরঞ্জাম/সামগ্রী/দ্রব্যভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
+                    android:text="H18B2J.সরঞ্জাম/সামগ্রী/দ্রব্য ভাল মানের কি না বোঝার জন্য আপনি কি কি তথ্য যাচাই করেন"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4141,7 +4155,7 @@
                     android:id="@+id/VlblH18b2j5"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -4177,7 +4191,7 @@
                     android:id="@+id/VlblH18b2j5X"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4215,7 +4229,7 @@
                     android:id="@+id/VlblH18b1k"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4230,7 +4244,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4268,7 +4282,7 @@
                     android:id="@+id/VlblH18b2kX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখ কর"
+                    android:text="উল্লেখ করুণ"
                     android:textSize="20sp" />
 
                 <EditText

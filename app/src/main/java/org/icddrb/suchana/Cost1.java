@@ -985,6 +985,8 @@ public class Cost1 extends Activity {
             lineH816d = (View) findViewById(R.id.lineH816d);
             VlblH816d = (TextView) findViewById(R.id.VlblH816d);
             txtH816d = (EditText) findViewById(R.id.txtH816d);
+
+
             secLBH82 = (LinearLayout) findViewById(R.id.secLBH82);
             secH821a = (LinearLayout) findViewById(R.id.secH821a);
             lineH821a = (View) findViewById(R.id.lineH821a);
@@ -1014,9 +1016,6 @@ public class Cost1 extends Activity {
                         secH821d.setVisibility(View.GONE);
                         lineH821d.setVisibility(View.GONE);
                         txtH821d.setText("");
-                        secH83.setVisibility(View.GONE);
-                        lineH83.setVisibility(View.GONE);
-                        rdogrpH83.clearCheck();
                     } else {
                         secH821b.setVisibility(View.VISIBLE);
                         lineH821b.setVisibility(View.VISIBLE);
@@ -1024,8 +1023,6 @@ public class Cost1 extends Activity {
                         lineH821c.setVisibility(View.VISIBLE);
                         secH821d.setVisibility(View.VISIBLE);
                         lineH821d.setVisibility(View.VISIBLE);
-                        secH83.setVisibility(View.VISIBLE);
-                        lineH83.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1093,9 +1090,7 @@ public class Cost1 extends Activity {
                         secH832d.setVisibility(View.GONE);
                         lineH832d.setVisibility(View.GONE);
                         txtH832d.setText("");
-                        secH84.setVisibility(View.GONE);
-                        lineH84.setVisibility(View.GONE);
-                        rdogrpH84.clearCheck();
+
                     } else {
                         secH831a.setVisibility(View.VISIBLE);
                         lineH831a.setVisibility(View.VISIBLE);
@@ -1113,8 +1108,6 @@ public class Cost1 extends Activity {
                         lineH832c.setVisibility(View.VISIBLE);
                         secH832d.setVisibility(View.VISIBLE);
                         lineH832d.setVisibility(View.VISIBLE);
-                        secH84.setVisibility(View.VISIBLE);
-                        lineH84.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1208,9 +1201,6 @@ public class Cost1 extends Activity {
                         secH832d.setVisibility(View.GONE);
                         lineH832d.setVisibility(View.GONE);
                         txtH832d.setText("");
-                        secH84.setVisibility(View.GONE);
-                        lineH84.setVisibility(View.GONE);
-                        rdogrpH84.clearCheck();
                     } else {
                         secH832b.setVisibility(View.VISIBLE);
                         lineH832b.setVisibility(View.VISIBLE);
@@ -1218,8 +1208,6 @@ public class Cost1 extends Activity {
                         lineH832c.setVisibility(View.VISIBLE);
                         secH832d.setVisibility(View.VISIBLE);
                         lineH832d.setVisibility(View.VISIBLE);
-                        secH84.setVisibility(View.VISIBLE);
-                        lineH84.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1456,9 +1444,6 @@ public class Cost1 extends Activity {
                         secH851d.setVisibility(View.GONE);
                         lineH851d.setVisibility(View.GONE);
                         txtH851d.setText("");
-                        secH86.setVisibility(View.GONE);
-                        lineH86.setVisibility(View.GONE);
-                        rdogrpH86.clearCheck();
                     } else {
                         secH851b.setVisibility(View.VISIBLE);
                         lineH851b.setVisibility(View.VISIBLE);
@@ -1466,8 +1451,6 @@ public class Cost1 extends Activity {
                         lineH851c.setVisibility(View.VISIBLE);
                         secH851d.setVisibility(View.VISIBLE);
                         lineH851d.setVisibility(View.VISIBLE);
-                        secH86.setVisibility(View.VISIBLE);
-                        lineH86.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1637,11 +1620,18 @@ public class Cost1 extends Activity {
                         secH862c.setVisibility(View.GONE);
                         lineH862c.setVisibility(View.GONE);
                         rdogrpH862c.clearCheck();
+                        secH862d.setVisibility(View.GONE);
+                        lineH862d.setVisibility(View.GONE);
+                        txtH862d.setText("");
+
                     } else {
                         secH862b.setVisibility(View.VISIBLE);
                         lineH862b.setVisibility(View.VISIBLE);
                         secH862c.setVisibility(View.VISIBLE);
                         lineH862c.setVisibility(View.VISIBLE);
+                        secH862d.setVisibility(View.VISIBLE);
+                        lineH862d.setVisibility(View.VISIBLE);
+
                     }
                 }
 
@@ -1666,11 +1656,6 @@ public class Cost1 extends Activity {
             VlblH862d = (TextView) findViewById(R.id.VlblH862d);
             txtH862d = (EditText) findViewById(R.id.txtH862d);
 
-            txtRnd.setText(RND);
-            txtSuchanaID.setText(SUCHANAID);
-            txtRnd.setEnabled(false);
-            txtSuchanaID.setEnabled(false);
-            DataSearch(RND, SUCHANAID);
             //Hide all skip variables
             secH811a.setVisibility(View.GONE);
             secH811b.setVisibility(View.GONE);
@@ -1717,7 +1702,7 @@ public class Cost1 extends Activity {
             secH821b.setVisibility(View.GONE);
             secH821c.setVisibility(View.GONE);
             secH821d.setVisibility(View.GONE);
-            secH83.setVisibility(View.GONE);
+            //secH83.setVisibility(View.GONE);
             secH831a.setVisibility(View.GONE);
             secH831b.setVisibility(View.GONE);
             secH831c.setVisibility(View.GONE);
@@ -1726,14 +1711,14 @@ public class Cost1 extends Activity {
             secH832b.setVisibility(View.GONE);
             secH832c.setVisibility(View.GONE);
             secH832d.setVisibility(View.GONE);
-            secH84.setVisibility(View.GONE);
+            //secH84.setVisibility(View.GONE);
             secH831b.setVisibility(View.GONE);
             secH831c.setVisibility(View.GONE);
             secH831d.setVisibility(View.GONE);
             secH832b.setVisibility(View.GONE);
             secH832c.setVisibility(View.GONE);
             secH832d.setVisibility(View.GONE);
-            secH84.setVisibility(View.GONE);
+            // secH84.setVisibility(View.GONE);
             secH841a.setVisibility(View.GONE);
             secH841b.setVisibility(View.GONE);
             secH841c.setVisibility(View.GONE);
@@ -1751,7 +1736,7 @@ public class Cost1 extends Activity {
             secH851b.setVisibility(View.GONE);
             secH851c.setVisibility(View.GONE);
             secH851d.setVisibility(View.GONE);
-            secH86.setVisibility(View.GONE);
+            // secH86.setVisibility(View.GONE);
             secH861a.setVisibility(View.GONE);
             secH861b.setVisibility(View.GONE);
             secH861c.setVisibility(View.GONE);
@@ -1764,7 +1749,108 @@ public class Cost1 extends Activity {
             secH861d.setVisibility(View.GONE);
             secH862b.setVisibility(View.GONE);
             secH862c.setVisibility(View.GONE);
+            secH862d.setVisibility(View.GONE);
 
+
+            lineH811a.setVisibility(View.GONE);
+            lineH811b.setVisibility(View.GONE);
+            lineH811c.setVisibility(View.GONE);
+            lineH811d.setVisibility(View.GONE);
+            lineH812a.setVisibility(View.GONE);
+            lineH812b.setVisibility(View.GONE);
+            lineH812c.setVisibility(View.GONE);
+            lineH812d.setVisibility(View.GONE);
+            lineH813a.setVisibility(View.GONE);
+            lineH813b.setVisibility(View.GONE);
+            lineH813c.setVisibility(View.GONE);
+            lineH813d.setVisibility(View.GONE);
+            lineH814a.setVisibility(View.GONE);
+            lineH814b.setVisibility(View.GONE);
+            lineH814c.setVisibility(View.GONE);
+            lineH814d.setVisibility(View.GONE);
+            lineH815a.setVisibility(View.GONE);
+            lineH815b.setVisibility(View.GONE);
+            lineH815c.setVisibility(View.GONE);
+            lineH815d.setVisibility(View.GONE);
+            lineH816a.setVisibility(View.GONE);
+            lineH816b.setVisibility(View.GONE);
+            lineH816c.setVisibility(View.GONE);
+            lineH816d.setVisibility(View.GONE);
+            lineH811b.setVisibility(View.GONE);
+            lineH811c.setVisibility(View.GONE);
+            lineH811d.setVisibility(View.GONE);
+            lineH812b.setVisibility(View.GONE);
+            lineH812c.setVisibility(View.GONE);
+            lineH812d.setVisibility(View.GONE);
+            lineH813b.setVisibility(View.GONE);
+            lineH813c.setVisibility(View.GONE);
+            lineH813d.setVisibility(View.GONE);
+            lineH814b.setVisibility(View.GONE);
+            lineH814c.setVisibility(View.GONE);
+            lineH814d.setVisibility(View.GONE);
+            lineH815b.setVisibility(View.GONE);
+            lineH815c.setVisibility(View.GONE);
+            lineH815d.setVisibility(View.GONE);
+            lineH816b.setVisibility(View.GONE);
+            lineH816c.setVisibility(View.GONE);
+            lineH816d.setVisibility(View.GONE);
+            lineH821b.setVisibility(View.GONE);
+            lineH821c.setVisibility(View.GONE);
+            lineH821d.setVisibility(View.GONE);
+            //lineH83.setVisibility(View.GONE);
+            lineH831a.setVisibility(View.GONE);
+            lineH831b.setVisibility(View.GONE);
+            lineH831c.setVisibility(View.GONE);
+            lineH831d.setVisibility(View.GONE);
+            lineH832a.setVisibility(View.GONE);
+            lineH832b.setVisibility(View.GONE);
+            lineH832c.setVisibility(View.GONE);
+            lineH832d.setVisibility(View.GONE);
+            // lineH84.setVisibility(View.GONE);
+            lineH831b.setVisibility(View.GONE);
+            lineH831c.setVisibility(View.GONE);
+            lineH831d.setVisibility(View.GONE);
+            lineH832b.setVisibility(View.GONE);
+            lineH832c.setVisibility(View.GONE);
+            lineH832d.setVisibility(View.GONE);
+            //  lineH84.setVisibility(View.GONE);
+            lineH841a.setVisibility(View.GONE);
+            lineH841b.setVisibility(View.GONE);
+            lineH841c.setVisibility(View.GONE);
+            lineH841d.setVisibility(View.GONE);
+            lineH842a.setVisibility(View.GONE);
+            lineH842b.setVisibility(View.GONE);
+            lineH842c.setVisibility(View.GONE);
+            lineH842d.setVisibility(View.GONE);
+            lineH841b.setVisibility(View.GONE);
+            lineH841c.setVisibility(View.GONE);
+            lineH841d.setVisibility(View.GONE);
+            lineH842b.setVisibility(View.GONE);
+            lineH842c.setVisibility(View.GONE);
+            lineH842d.setVisibility(View.GONE);
+            lineH851b.setVisibility(View.GONE);
+            lineH851c.setVisibility(View.GONE);
+            lineH851d.setVisibility(View.GONE);
+            //  lineH86.setVisibility(View.GONE);
+            lineH861a.setVisibility(View.GONE);
+            lineH861b.setVisibility(View.GONE);
+            lineH861c.setVisibility(View.GONE);
+            lineH861d.setVisibility(View.GONE);
+            lineH862a.setVisibility(View.GONE);
+            lineH862b.setVisibility(View.GONE);
+            lineH862c.setVisibility(View.GONE);
+            lineH861b.setVisibility(View.GONE);
+            lineH861c.setVisibility(View.GONE);
+            lineH861d.setVisibility(View.GONE);
+            lineH862b.setVisibility(View.GONE);
+            lineH862c.setVisibility(View.GONE);
+            lineH862d.setVisibility(View.GONE);
+
+            txtRnd.setText(RND);
+            txtSuchanaID.setText(SUCHANAID);
+            txtRnd.setEnabled(false);
+            txtSuchanaID.setEnabled(false);
+            DataSearch(RND, SUCHANAID);
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

@@ -197,7 +197,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী"
+                    android:text="খানার খাদ্য অনিরাপত্তা সংক্রান্ত তথ্যাবলী (HFIAS)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1136,7 +1136,7 @@
                     android:id="@+id/VlblH129a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ট খাবার না থাকার কারণে ক্ষুধার্থ অবস্থায় রাতে ঘুমাতে হয়েছে"
+                    android:text="গত ৪ সপ্তাহে আপনাকে বা আপনার খানার অন্য কোন সদস্যকে কি ঘরে যথেষ্ঠ খাবার না থাকার কারণে  সারাদিন বা সারারাত না খেয়ে থাকতে হয়েছে ?"
                     android:textSize="20sp" />
 
                 <RadioGroup
