@@ -235,7 +235,7 @@
                     android:id="@+id/VlblH81"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে চাল / গম / রুটি কিনেছেন?"
+                    android:text="আপনি গত মাসে চাল / গম / রুটি কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -475,7 +475,7 @@
                     android:id="@+id/VlblH812a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) গম সুজি /ময়দা কিনেছে"
+                    android:text="a) গম সুজি /ময়দা কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -663,7 +663,7 @@
                     android:id="@+id/VlblH813a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) বন রুটি/পউরুটি/শেঁকা রুটি  কিনেছে"
+                    android:text="a) বন রুটি/পউরুটি/শেঁকা রুটি  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -851,7 +851,7 @@
                     android:id="@+id/VlblH814a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) চিড়া মুড়ি  কিনেছে"
+                    android:text="a) চিড়া মুড়ি  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1039,7 +1039,7 @@
                     android:id="@+id/VlblH815a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) সেমাই  কিনেছে"
+                    android:text="a) সেমাই  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1227,7 +1227,7 @@
                     android:id="@+id/VlblH816a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) বিস্কুট কিনেছে"
+                    android:text="a) বিস্কুট কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1436,7 +1436,7 @@
                     android:id="@+id/VlblH821a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) আপনি গত মাসে ডাল ক্রয় করেছেন?"
+                    android:text="a) আপনি গত মাসে ডাল ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1645,7 +1645,7 @@
                     android:id="@+id/VlblH83"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে ভোজ্য তেল ক্রয় করেছেন?"
+                    android:text="আপনি গত মাসে ভোজ্য তেল ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1697,7 +1697,7 @@
                     android:id="@+id/VlblH831a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) পামওয়েল/সয়াবিন তেল  কিনেছে"
+                    android:text="a) পামওয়েল/সয়াবিন তেল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1885,7 +1885,7 @@
                     android:id="@+id/VlblH832a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) সরিষা তেল  কিনেছে"
+                    android:text="a) সরিষা তেল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2094,7 +2094,7 @@
                     android:id="@+id/VlblH84"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে মাংস/  মাছ ক্রয় করেছেন?"
+                    android:text="আপনি গত মাসে মাংস/  মাছ ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2146,7 +2146,7 @@
                     android:id="@+id/VlblH841a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) মাছ  কিনেছে"
+                    android:text="a) মাছ  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2169,7 +2169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2334,7 +2334,7 @@
                     android:id="@+id/VlblH842a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) মাংস  কিনেছে"
+                    android:text="a) মাংস  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2357,7 +2357,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2543,7 +2543,7 @@
                     android:id="@+id/VlblH851a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) আপনি গত মাসে ডিম ক্রয় করেছেন?"
+                    android:text="a) আপনি গত মাসে ডিম ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2752,7 +2752,7 @@
                     android:id="@+id/VlblH86"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে দুধ বা দুগ্ধজাত খাদ্য ক্রয় করেছেন?"
+                    android:text="আপনি গত মাসে দুধ বা দুগ্ধজাত খাদ্য ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2827,7 +2827,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2992,7 +2992,7 @@
                     android:id="@+id/VlblH862a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) দুদ্গজাত পন্য  কিনেছে"
+                    android:text="a) দুদ্গজাত পন্য  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup

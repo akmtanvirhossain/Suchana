@@ -349,7 +349,7 @@
                     android:id="@+id/VlblH9a1c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত  "
                     android:textSize="20sp" />
 
                 <EditText
@@ -408,7 +408,7 @@
                     android:id="@+id/VlblH9a2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি,সাবান,শ্যাম্পু,টুথপেস্ট ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -491,14 +491,14 @@
                     android:id="@+id/lblH9a2c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a2c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a2c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -550,14 +550,14 @@
                     android:id="@+id/lblH9a3a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a3a"
+                    android:text="H9a3"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, গুড়া সাবান,বল সাবান ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোন ধোয়া মোছা এবং ঘর পরিষ্কারের উপকরণ ক্রয় করেছেন? (যেমন: সাবান, গুড়া সাবান,বল সাবান ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -572,7 +572,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -602,14 +602,14 @@
                     android:id="@+id/lblH9a3b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a3b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a3b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -640,14 +640,14 @@
                     android:id="@+id/lblH9a3c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a3c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a3c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -678,7 +678,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="পরিবহন / বেড়ানো ও রক্ষণাবেক্ষণ"
+                    android:text="পরিবহন/বেড়ানো ও রক্ষণাবেক্ষণ"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -699,14 +699,14 @@
                     android:id="@+id/lblH9a4a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a4a"
+                    android:text="H9a4"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a4a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন? (যেমন: বাস রিক্সা,CNG ভাড়া ,সাইকেল মেরামত  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে পরিবহনের জন্য কোন ভাড়া দিয়েছেন? (যেমন: বাস রিক্সা,CNG ভাড়া ,সাইকেল মেরামত  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -721,7 +721,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -729,7 +729,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -751,14 +751,14 @@
                     android:id="@+id/lblH9a4b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a4b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a4b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -789,14 +789,14 @@
                     android:id="@+id/lblH9a4c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a4c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a4c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -827,7 +827,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য বিবিধ খরচ, চার্জ"
+                    android:text="অন্যান্য বিবিধ খরচ,চার্জ"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -848,14 +848,14 @@
                     android:id="@+id/lblH9a5a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a5a"
+                    android:text="H9a5"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a5a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত মাসে কোনো বিল /বেতন দিয়েছেন (যেমন: মোবাইল রিচার্জ, কারেন্ট বিল, ইত্যাদি)"
+                    android:text="a) আপনি গত মাসে কোনো বিল /বেতন দিয়েছেন (যেমন: মোবাইল রিচার্জ, কারেন্ট বিল, ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -870,7 +870,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -878,7 +878,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -900,14 +900,14 @@
                     android:id="@+id/lblH9a5b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a5b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a5b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -938,14 +938,14 @@
                     android:id="@+id/lblH9a5c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a5c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a5c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -997,14 +997,14 @@
                     android:id="@+id/lblH9b1a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b1a"
+                    android:text="H9b1"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক বা খানার জন্য কাপড় ক্রয় করেছেন?  (যেমন:  লুঙ্গি,  ধুতি, শাড়ি, প্যান্ট, প্যান্ট , শার্ট, গামছা, কাপড়ের দাম, দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এ এর মধ্যে কোনো তৈরি পোশাক বা খানার জন্য কাপড় ক্রয় করেছেন?  (যেমন: লুঙ্গ,ধুতি,শাড়ি,প্যান্,প্যান্ট,শার্ট,গামছা,কাপড়ের দাম,দর্জির মজুরি, বিছানা চাদর, বালিশ, পর্দা ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1019,7 +1019,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1027,7 +1027,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1049,14 +1049,14 @@
                     android:id="@+id/lblH9b1b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b1b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b1b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1087,14 +1087,14 @@
                     android:id="@+id/lblH9b1c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b1c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b1c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1146,14 +1146,14 @@
                     android:id="@+id/lblH9b2a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b2a"
+                    android:text="H9b2"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া চার্জ দিয়েছেন? (যেমন: খানার ভাড়া,মেরামত ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে খানার কোনো ভাড়া চার্জ দিয়েছেন? (যেমন: খানার ভাড়া,মেরামত ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1168,7 +1168,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1176,7 +1176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1198,14 +1198,14 @@
                     android:id="@+id/lblH9b2b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b2b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b2b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1236,14 +1236,14 @@
                     android:id="@+id/lblH9b2c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b2c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b2c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত "
                     android:textSize="20sp" />
 
                 <EditText
@@ -1295,14 +1295,14 @@
                     android:id="@+id/lblH9b3a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b3a"
+                    android:text="H9b3"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b3a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি,ঔষধ,স্বাস্থ্য সংক্রান্ত ভ্রমণ ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বাছর ধরে চিকিৎসা সংক্রান্ত কোন খরচ করেছেন?  (যেমন: ডাক্তারের ফি,ঔষধ,স্বাস্থ্য সংক্রান্ত ভ্রমণ ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1317,7 +1317,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1325,7 +1325,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1347,20 +1347,20 @@
                     android:id="@+id/lblH9b3b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b3b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b3b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH9b3b"
                     style="@style/customEdit"
-                    android:layout_width="10sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1385,14 +1385,14 @@
                     android:id="@+id/lblH9b3c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b3c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b3c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1444,14 +1444,14 @@
                     android:id="@+id/lblH9b4a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b4a"
+                    android:text="H9b4"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b4a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন? (যেমন: ব্যক্তিগত শিক্ষার জন্য, পাঠ্যপুস্তকের দাম,  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে লেখাপড়ার জন্য কোন খরচ করেছেন? (যেমন: ব্যক্তিগত শিক্ষার জন্য, পাঠ্যপুস্তকের দাম ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1466,7 +1466,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1474,7 +1474,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1496,14 +1496,14 @@
                     android:id="@+id/lblH9b4b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b4b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b4b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1534,14 +1534,14 @@
                     android:id="@+id/lblH9b4c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b4c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b4c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1572,7 +1572,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে অর্থ প্রেরণ, অনুষ্ঠান, উপহার, ইত্যাদি"
+                    android:text="পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে অর্থ প্রেরণ,অনুষ্ঠান,উপহার ইত্যাদি"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1593,14 +1593,14 @@
                     android:id="@+id/lblH9b5a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b5a"
+                    android:text="H9b5"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b5a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোন পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়া ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোন পরিবাবের অন্য কোন সদস্য অথবা অন্য কাউকে টাকা পাঠিয়েছেন অথবা কোন অনুষ্ঠানের জন্য খরচ করেছেন  (যেমন: অনুদান, মিলাদ,  অন্তষ্টিক্রিয়াইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1615,7 +1615,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1623,7 +1623,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1645,14 +1645,14 @@
                     android:id="@+id/lblH9b5b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b5b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b5b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1683,14 +1683,14 @@
                     android:id="@+id/lblH9b5c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b5c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b5c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1721,7 +1721,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="চিত্তবিনোদন ও অবকাশ, ইত্যাদি"
+                    android:text="চিত্তবিনোদন ও অবকাশ ইত্যাদি"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1742,14 +1742,14 @@
                     android:id="@+id/lblH9b6a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b6a"
+                    android:text="H9b6"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b6a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ত, ডিশের লাইন চার্জ ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোনো বিনোদনমূলক কার্যক্রমের জন্য খরচ করেছেন (যেমন: সিনেমা, ছবি তোলা সংক্রান্ ,ডিশের লাইন চার্জ ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1764,7 +1764,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1772,7 +1772,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1794,14 +1794,14 @@
                     android:id="@+id/lblH9b6b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b6b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b6b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1832,14 +1832,14 @@
                     android:id="@+id/lblH9b6c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b6c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b6c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1891,14 +1891,14 @@
                     android:id="@+id/lblH9b7a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b7a"
+                    android:text="H9b7"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b7a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো কর/চার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোনো কর/চার্জ দিয়েছেন?  (যেমন: উকিলের খরচ,জমির খাজনা ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1913,7 +1913,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1921,7 +1921,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -1943,14 +1943,14 @@
                     android:id="@+id/lblH9b7b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b7b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b7b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1981,14 +1981,14 @@
                     android:id="@+id/lblH9b7c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b7c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b7c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2019,7 +2019,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="রান্নার/ রান্নাঘরের সরঞ্জাম"
+                    android:text="রান্না /রান্নাঘরের সরঞ্জাম"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2040,14 +2040,14 @@
                     android:id="@+id/lblH9b8a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b8a"
+                    android:text="H9b8"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b8a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোন রান্না ঘরের সরঞ্জাম ক্রয় করেছেন ?(যেমন: চুলা, থালাবাসন ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোন রান্না ঘরের সরঞ্জাম ক্রয় করেছেন ?(যেমন: চুলা, থালাবাসন ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2062,7 +2062,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2092,14 +2092,14 @@
                     android:id="@+id/lblH9b8b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b8b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b8b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2130,14 +2130,14 @@
                     android:id="@+id/lblH9b8c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b8c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b8c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2189,14 +2189,14 @@
                     android:id="@+id/lblH9b9a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b9a"
+                    android:text="H9b9"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b9a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন (যেমন: জুয়েলারী, গোল্ড, হাতঘড়ি / ঘড়ি,  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোনো ব্যক্তিগত সৌখিন জিনিসপত্র ক্রয় করেছেন (যেমন: জুয়েলারী, গোল্ড, হাতঘড়ি / ঘড়ি ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2211,7 +2211,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2241,14 +2241,14 @@
                     android:id="@+id/lblH9b9b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b9b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b9b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2279,14 +2279,14 @@
                     android:id="@+id/lblH9b9c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b9c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b9c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2338,14 +2338,14 @@
                     android:id="@+id/lblH9b10a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b10a"
+                    android:text="H9b10"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b10a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত ১ বছর এর মধ্যে ক্রয় করেছেন কি  (যেমন: টিভি, মোবাইল ফোন,  ইলেকট্রিক ফ্যান, ইত্যাদি)"
+                    android:text="a) আপনি কোন বৈদ্যুতিক সামগ্রী / যন্ত্র গত ১ বছর এর মধ্যে ক্রয় করেছেন কি (যেমন: টিভি, মোবাইল ফোন, ইলেকট্রিক ফ্যান ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2360,7 +2360,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2368,7 +2368,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2390,14 +2390,14 @@
                     android:id="@+id/lblH9b10b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b10b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b10b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2428,14 +2428,14 @@
                     android:id="@+id/lblH9b10c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b10c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b10c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2487,14 +2487,14 @@
                     android:id="@+id/lblH9b11a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b11a"
+                    android:text="H9b11"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b11a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি? (যেকোন বীমা)"
+                    android:text="a) আপনি গত ১ বছর এর মধ্যে কোনো বীমা জন্য খরচ করেছেন কি? (যেকোন বীমা)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2509,7 +2509,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2517,7 +2517,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2539,14 +2539,14 @@
                     android:id="@+id/lblH9b11b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b11b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b11b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2577,14 +2577,14 @@
                     android:id="@+id/lblH9b11c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b11c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b11c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2658,7 +2658,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা "
+                        android:text="হ্যাঁ "
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -2666,7 +2666,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2688,14 +2688,14 @@
                     android:id="@+id/lblH9b12a1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12a1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12a1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text=" কোন বীজ  ক্রয় করেছেন"
+                    android:text="a1) কোন বীজ  ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2718,7 +2718,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2740,14 +2740,14 @@
                     android:id="@+id/lblH9b12a2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12a2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12a2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="a2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2778,14 +2778,14 @@
                     android:id="@+id/lblH9b12a3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12a3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12a3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="a3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2816,14 +2816,14 @@
                     android:id="@+id/lblH9b12b1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12b1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12b1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চারা  ক্রয় করেছেন"
+                    android:text="b1) চারা  ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2868,14 +2868,14 @@
                     android:id="@+id/lblH9b12b2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12b2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12b2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2906,14 +2906,14 @@
                     android:id="@+id/lblH9b12b3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12b3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12b3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="b3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2944,14 +2944,14 @@
                     android:id="@+id/lblH9b12c1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12c1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12c1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কচি চারা গাছ ক্রয় করেছেন"
+                    android:text="c1) কচি চারা গাছ ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2974,7 +2974,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -2996,14 +2996,14 @@
                     android:id="@+id/lblH9b12c2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12c2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12c2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="c2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3034,14 +3034,14 @@
                     android:id="@+id/lblH9b12c3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12c3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12c3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3072,14 +3072,14 @@
                     android:id="@+id/lblH9b12d1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12d1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12d1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাছের পোনা  ক্রয় করেছেন"
+                    android:text="d1) মাছের পোনা  ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3102,7 +3102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3124,14 +3124,14 @@
                     android:id="@+id/lblH9b12d2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12d2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12d2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="d2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3162,20 +3162,20 @@
                     android:id="@+id/lblH9b12d3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12d3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12d3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="d3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH9b12d3"
                     style="@style/customEdit"
-                    android:layout_width="00sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3200,14 +3200,14 @@
                     android:id="@+id/lblH9b12e1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12e1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12e1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সার ক্রয় করেছেন"
+                    android:text="e1) সার ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3230,7 +3230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3252,14 +3252,14 @@
                     android:id="@+id/lblH9b12e2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12e2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12e2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="e2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3290,14 +3290,14 @@
                     android:id="@+id/lblH9b12e3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12e3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12e3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="e3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3328,14 +3328,14 @@
                     android:id="@+id/lblH9b12f1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12f1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12f1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="চুন ক্রয় করেছেন"
+                    android:text="f1) চুন ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3358,7 +3358,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3380,14 +3380,14 @@
                     android:id="@+id/lblH9b12f2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12f2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12f2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="f2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3418,14 +3418,14 @@
                     android:id="@+id/lblH9b12f3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12f3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12f3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="f3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3456,14 +3456,14 @@
                     android:id="@+id/lblH9b12g1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12g1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12g1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাছের খাবার ক্রয় করেছেন"
+                    android:text="g1) মাছের খাবার ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3486,7 +3486,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3508,14 +3508,14 @@
                     android:id="@+id/lblH9b12g2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12g2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12g2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="g2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3546,14 +3546,14 @@
                     android:id="@+id/lblH9b12g3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12g3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12g3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="g3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3584,14 +3584,14 @@
                     android:id="@+id/lblH9b12h1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12h1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12h1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="হাস-মুরগির খাবার ক্রয় করেছেন"
+                    android:text="h1) হাঁস-মুরগির খাবার ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3614,7 +3614,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3636,14 +3636,14 @@
                     android:id="@+id/lblH9b12h2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12h2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12h2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="h2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3674,14 +3674,14 @@
                     android:id="@+id/lblH9b12h3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12h3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12h3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="h3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3712,14 +3712,14 @@
                     android:id="@+id/lblH9b12i1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12i1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12i1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="হাঁস/মুরগির বাচ্চা ক্রয় করেছেন"
+                    android:text="i1) হাঁস/মুরগির বাচ্চা ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3742,7 +3742,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3764,14 +3764,14 @@
                     android:id="@+id/lblH9b12i2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12i2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12i2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="i2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3802,14 +3802,14 @@
                     android:id="@+id/lblH9b12i3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12i3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12i3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="i3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3840,14 +3840,14 @@
                     android:id="@+id/lblH9b12j1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12j1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12j1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="টিকা ক্রয় করেছেন"
+                    android:text="j1) টিকা ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3870,7 +3870,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -3892,14 +3892,14 @@
                     android:id="@+id/lblH9b12j2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12j2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12j2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="j2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3930,14 +3930,14 @@
                     android:id="@+id/lblH9b12j3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12j3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12j3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="j3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3968,14 +3968,14 @@
                     android:id="@+id/lblH9b12k1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12k1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12k1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কোদাল / লাঙ্গল / নিড়ানি ক্রয় করেছেন"
+                    android:text="k1) কোদাল/ লাঙ্ /নিড়ানি ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3998,7 +3998,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4020,14 +4020,14 @@
                     android:id="@+id/lblH9b12k2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12k2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12k2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="k2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4058,14 +4058,14 @@
                     android:id="@+id/lblH9b12k3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12k3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12k3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="k3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4096,14 +4096,14 @@
                     android:id="@+id/lblH9b12l1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12l1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12l1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="মাছ ধরার জাল/ ছিপ/বড়শী ক্রয় করেছেন"
+                    android:text="l1) মাছ ধরার জাল/ ছিপ/বড়শী ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4126,7 +4126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না  "
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -4148,14 +4148,14 @@
                     android:id="@+id/lblH9b12l2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12l2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12l2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="l2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4186,14 +4186,14 @@
                     android:id="@+id/lblH9b12l3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12l3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12l3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="l3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4224,14 +4224,14 @@
                     android:id="@+id/lblH9b12m1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12m1"
+                    android:text="H9b12"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12m1"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="বেড়া দেয়ার সামগ্রী ক্রয় করেছেন"
+                    android:text="m1) বেড়া দেয়ার সামগ্রী ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4276,14 +4276,14 @@
                     android:id="@+id/lblH9b12m2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12m2"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12m2"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="m2) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4314,14 +4314,14 @@
                     android:id="@+id/lblH9b12m3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b12m3"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b12m3"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="m3) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4352,7 +4352,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -4373,14 +4373,14 @@
                     android:id="@+id/lblH9b13a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b13a"
+                    android:text="H9b13"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b13a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি ১ বছরের  মধ্যে কোনো বিড়ি/জর্দ্দা /সিগারেট ক্রয় করেছেন"
+                    android:text="a) আপনি ১ বছরের  মধ্যে কোনো বিড়ি/জর্দ্দা/সিগারেট ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4425,14 +4425,14 @@
                     android:id="@+id/lblH9b13b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b13b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b13b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4463,14 +4463,14 @@
                     android:id="@+id/lblH9b13c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b13c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b13c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4501,14 +4501,14 @@
                     android:id="@+id/lblH9b14a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b14a"
+                    android:text="H9b14"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b14a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="অনান্য"
+                    android:text="a) অন্যান্য"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -4523,7 +4523,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4553,7 +4553,7 @@
                     android:id="@+id/lblH9b14x1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b14x1"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -4591,14 +4591,14 @@
                     android:id="@+id/lblH9b14b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b14b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b14b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -4629,14 +4629,14 @@
                     android:id="@+id/lblH9b14c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9b14c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9b14c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেনতাহলে দ্রব্যটির বর্তমান বাজার মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
