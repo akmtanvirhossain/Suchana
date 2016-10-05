@@ -200,6 +200,27 @@
 
 
             <LinearLayout
+                android:id="@+id/seclblH9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblH9"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H9.A খাদ্য বহির্ভূত ব্যয়: গত ১ মাসের অনুস্মরণ"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblH9"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/seclblH9a"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -231,14 +252,14 @@
                     android:id="@+id/lblH9a1a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1a"
+                    android:text="H9a1"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন? (যেমন: জ্বালানি কাঠ, গোবর, হারিকেন ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোনো জ্বালানি অথবা ঘর আলোকিত করার উপকরণ ক্রয় করেছেন অথবা অন্য কোনো ভাবে পেয়েছেন?(যেমন:জ্বালানি কাঠ,গোবর,হারিকেন ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -253,7 +274,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -261,7 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -283,20 +304,20 @@
                     android:id="@+id/lblH9a1b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH9a1b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -321,20 +342,20 @@
                     android:id="@+id/lblH9a1c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a1c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a1c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
+                    android:text="c) যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH9a1c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -380,14 +401,14 @@
                     android:id="@+id/lblH9a2a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a2a"
+                    android:text="H9a2"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a2a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
+                    android:text="a) আপনি গত ১ মাসে কোনো প্রসাধনী ক্রয় করেছেন? (যেমন: স্নো,ক্রিম,পউডার,সুগন্ধি, সাবান, শ্যাম্পু, টুথপেস্ট  ইত্যাদি)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -402,7 +423,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -410,7 +431,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10sp"
-                        android:text=" না"
+                        android:text="না"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -432,20 +453,20 @@
                     android:id="@+id/lblH9a2b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H9a2b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH9a2b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="নগদ খরচ"
+                    android:text="b) নগদ খরচ"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtH9a2b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -483,7 +504,7 @@
                 <EditText
                     android:id="@+id/txtH9a2c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -594,7 +615,7 @@
                 <EditText
                     android:id="@+id/txtH9a3b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -632,7 +653,7 @@
                 <EditText
                     android:id="@+id/txtH9a3c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -743,7 +764,7 @@
                 <EditText
                     android:id="@+id/txtH9a4b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -781,7 +802,7 @@
                 <EditText
                     android:id="@+id/txtH9a4c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -892,7 +913,7 @@
                 <EditText
                     android:id="@+id/txtH9a5b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -930,7 +951,7 @@
                 <EditText
                     android:id="@+id/txtH9a5c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1041,7 +1062,7 @@
                 <EditText
                     android:id="@+id/txtH9b1b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1079,7 +1100,7 @@
                 <EditText
                     android:id="@+id/txtH9b1c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1190,7 +1211,7 @@
                 <EditText
                     android:id="@+id/txtH9b2b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1228,7 +1249,7 @@
                 <EditText
                     android:id="@+id/txtH9b2c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1339,7 +1360,7 @@
                 <EditText
                     android:id="@+id/txtH9b3b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="10sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1377,7 +1398,7 @@
                 <EditText
                     android:id="@+id/txtH9b3c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1488,7 +1509,7 @@
                 <EditText
                     android:id="@+id/txtH9b4b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1526,7 +1547,7 @@
                 <EditText
                     android:id="@+id/txtH9b4c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1637,7 +1658,7 @@
                 <EditText
                     android:id="@+id/txtH9b5b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1675,7 +1696,7 @@
                 <EditText
                     android:id="@+id/txtH9b5c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1786,7 +1807,7 @@
                 <EditText
                     android:id="@+id/txtH9b6b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1824,7 +1845,7 @@
                 <EditText
                     android:id="@+id/txtH9b6c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1935,7 +1956,7 @@
                 <EditText
                     android:id="@+id/txtH9b7b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -1973,7 +1994,7 @@
                 <EditText
                     android:id="@+id/txtH9b7c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2084,7 +2105,7 @@
                 <EditText
                     android:id="@+id/txtH9b8b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2122,7 +2143,7 @@
                 <EditText
                     android:id="@+id/txtH9b8c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2233,7 +2254,7 @@
                 <EditText
                     android:id="@+id/txtH9b9b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2271,7 +2292,7 @@
                 <EditText
                     android:id="@+id/txtH9b9c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2382,7 +2403,7 @@
                 <EditText
                     android:id="@+id/txtH9b10b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2420,7 +2441,7 @@
                 <EditText
                     android:id="@+id/txtH9b10c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2531,7 +2552,7 @@
                 <EditText
                     android:id="@+id/txtH9b11b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2569,7 +2590,7 @@
                 <EditText
                     android:id="@+id/txtH9b11c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2732,7 +2753,7 @@
                 <EditText
                     android:id="@+id/txtH9b12a2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2770,7 +2791,7 @@
                 <EditText
                     android:id="@+id/txtH9b12a3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2860,7 +2881,7 @@
                 <EditText
                     android:id="@+id/txtH9b12b2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2898,7 +2919,7 @@
                 <EditText
                     android:id="@+id/txtH9b12b3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -2988,7 +3009,7 @@
                 <EditText
                     android:id="@+id/txtH9b12c2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3026,7 +3047,7 @@
                 <EditText
                     android:id="@+id/txtH9b12c3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3116,7 +3137,7 @@
                 <EditText
                     android:id="@+id/txtH9b12d2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3154,7 +3175,7 @@
                 <EditText
                     android:id="@+id/txtH9b12d3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="00sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3244,7 +3265,7 @@
                 <EditText
                     android:id="@+id/txtH9b12e2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3282,7 +3303,7 @@
                 <EditText
                     android:id="@+id/txtH9b12e3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3372,7 +3393,7 @@
                 <EditText
                     android:id="@+id/txtH9b12f2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3410,7 +3431,7 @@
                 <EditText
                     android:id="@+id/txtH9b12f3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3500,7 +3521,7 @@
                 <EditText
                     android:id="@+id/txtH9b12g2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3538,7 +3559,7 @@
                 <EditText
                     android:id="@+id/txtH9b12g3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3628,7 +3649,7 @@
                 <EditText
                     android:id="@+id/txtH9b12h2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3666,7 +3687,7 @@
                 <EditText
                     android:id="@+id/txtH9b12h3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3756,7 +3777,7 @@
                 <EditText
                     android:id="@+id/txtH9b12i2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3794,7 +3815,7 @@
                 <EditText
                     android:id="@+id/txtH9b12i3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3884,7 +3905,7 @@
                 <EditText
                     android:id="@+id/txtH9b12j2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -3922,7 +3943,7 @@
                 <EditText
                     android:id="@+id/txtH9b12j3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4012,7 +4033,7 @@
                 <EditText
                     android:id="@+id/txtH9b12k2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4050,7 +4071,7 @@
                 <EditText
                     android:id="@+id/txtH9b12k3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4140,7 +4161,7 @@
                 <EditText
                     android:id="@+id/txtH9b12l2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4178,7 +4199,7 @@
                 <EditText
                     android:id="@+id/txtH9b12l3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4268,7 +4289,7 @@
                 <EditText
                     android:id="@+id/txtH9b12m2"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4306,7 +4327,7 @@
                 <EditText
                     android:id="@+id/txtH9b12m3"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4417,7 +4438,7 @@
                 <EditText
                     android:id="@+id/txtH9b13b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4455,7 +4476,7 @@
                 <EditText
                     android:id="@+id/txtH9b13c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4583,7 +4604,7 @@
                 <EditText
                     android:id="@+id/txtH9b14b"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -4621,7 +4642,7 @@
                 <EditText
                     android:id="@+id/txtH9b14c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"

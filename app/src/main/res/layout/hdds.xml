@@ -410,6 +410,7 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="TYPE"
+                    android:textColor="#FFC4005F"
                     android:textSize="20sp" />
 
                 <TextView
@@ -524,7 +525,6 @@
                     android:id="@+id/lblH7b1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H7b1"
                     android:textSize="20sp" />
 
                 <TextView
@@ -560,7 +560,6 @@
                     android:id="@+id/lblH7b2"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H7b2"
                     android:textSize="20sp" />
 
                 <TextView
@@ -596,7 +595,6 @@
                     android:id="@+id/lblH7b3"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H7b3"
                     android:textSize="20sp" />
 
                 <TextView
@@ -632,7 +630,6 @@
                     android:id="@+id/lblH7b4"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H7b4"
                     android:textSize="20sp" />
 
                 <TextView
@@ -668,7 +665,6 @@
                     android:id="@+id/lblH7c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H7c"
                     android:textSize="20sp" />
 
                 <TextView
