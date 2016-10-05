@@ -142,6 +142,7 @@ public class AssetNB extends Activity {
     Button buttonAssetType15;
     boolean allItemsCompleted = false;
     Button cmdSave;
+    ImageButton cmdForward;
     private int hour;
     private int minute;
     private int mDay;
@@ -241,7 +242,7 @@ public class AssetNB extends Activity {
                 }
             });
 
-            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
             cmdForward.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(AssetNB.this);
@@ -263,6 +264,7 @@ public class AssetNB extends Activity {
                     adb.show();
                 }
             });
+            cmdForward.setVisibility(View.INVISIBLE);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
@@ -529,6 +531,16 @@ public class AssetNB extends Activity {
                         secH42d4X1.setVisibility(View.GONE);
                         secH42d4X2.setVisibility(View.GONE);
 
+                        lineH42c.setVisibility(View.GONE);
+                        lineH42d1.setVisibility(View.GONE);
+                        lineH42d2.setVisibility(View.GONE);
+                        lineH42d3.setVisibility(View.GONE);
+                        lineH42d4.setVisibility(View.GONE);
+                        lineH42d4X.setVisibility(View.GONE);
+                        lineH42d4X1.setVisibility(View.GONE);
+                        lineH42d4X2.setVisibility(View.GONE);
+                        
+
                     } else {
                         secH42c.setVisibility(View.VISIBLE);
                         seclblH42a.setVisibility(View.VISIBLE);
@@ -536,6 +548,12 @@ public class AssetNB extends Activity {
                         secH42d2.setVisibility(View.VISIBLE);
                         secH42d3.setVisibility(View.VISIBLE);
                         secH42d4.setVisibility(View.VISIBLE);
+                        lineH42c.setVisibility(View.VISIBLE);
+                        lineH42d1.setVisibility(View.VISIBLE);
+                        lineH42d2.setVisibility(View.VISIBLE);
+                        lineH42d3.setVisibility(View.VISIBLE);
+                        lineH42d4.setVisibility(View.VISIBLE);
+
 
                     }
                 }
@@ -570,7 +588,9 @@ public class AssetNB extends Activity {
                         secH42d4X.setVisibility(View.VISIBLE);
                         secH42d4X1.setVisibility(View.VISIBLE);
                         secH42d4X2.setVisibility(View.VISIBLE);
-
+                        lineH42d4X.setVisibility(View.VISIBLE);
+                        lineH42d4X1.setVisibility(View.VISIBLE);
+                        lineH42d4X2.setVisibility(View.VISIBLE);
                     } else {
                         txtH42d4X.setText("");
                         txtH42d4X1.setText("");
@@ -579,6 +599,10 @@ public class AssetNB extends Activity {
                         secH42d4X.setVisibility(View.GONE);
                         secH42d4X1.setVisibility(View.GONE);
                         secH42d4X2.setVisibility(View.GONE);
+                        lineH42d4X.setVisibility(View.GONE);
+                        lineH42d4X1.setVisibility(View.GONE);
+                        lineH42d4X2.setVisibility(View.GONE);
+
 
 
                     }
@@ -796,6 +820,15 @@ public class AssetNB extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
+
+                AssetNB_DataModel dx = new AssetNB_DataModel();
+                String SQLx = "Select H42a from " + TableName + "  Where cast(H42a as int) < 14 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+                List<AssetNB_DataModel> datax = dx.SelectH42a(this, SQLx);
+                if (datax.size() > 12) {
+                    cmdForward.setVisibility(View.VISIBLE);
+                }
+
+
                 buttonColor();
                 EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                 e.SaveUpdateData(this);
@@ -859,6 +892,13 @@ public class AssetNB extends Activity {
                 txtH42d4X1.setText(item.getH42d4X1());
                 txtH42d4X2.setText(item.getH42d4X2());
             }
+            AssetNB_DataModel dx = new AssetNB_DataModel();
+            String SQLx = "Select H42a from " + TableName + "  Where cast(H42a as int) < 14 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+            List<AssetNB_DataModel> datax = dx.SelectH42a(this, SQLx);
+            if (datax.size() > 12) {
+                cmdForward.setVisibility(View.VISIBLE);
+            }
+
         } catch (Exception e) {
             Connection.MessageBox(AssetNB.this, e.getMessage());
             return;
@@ -920,6 +960,8 @@ public class AssetNB extends Activity {
                 txtH42d4X1.setText("");
                 txtH42d4X2.setText("");
             }
+
+
         } catch (Exception e) {
             Connection.MessageBox(AssetNB.this, e.getMessage());
             return;

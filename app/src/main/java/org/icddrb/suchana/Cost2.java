@@ -1585,7 +1585,7 @@ public class Cost2 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH8111a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
                         secH8111b.setVisibility(View.VISIBLE);
                         lineH8111b.setVisibility(View.VISIBLE);
                         secH8111c.setVisibility(View.VISIBLE);
