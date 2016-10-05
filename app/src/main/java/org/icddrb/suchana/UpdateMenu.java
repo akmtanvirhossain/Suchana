@@ -42,6 +42,7 @@ public class UpdateMenu extends Activity {
     Button cmdDataUpload;
     Button cmdDataSync;
     Button cmdMenuInterviewList;
+    Button cmdMenuNutHealth;
 
     Connection C;
     Global g;
@@ -279,6 +280,15 @@ public class UpdateMenu extends Activity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(UpdateMenu.this, IGA.class).putExtras(IDBundle));
+                }
+            });
+
+
+            cmdMenuNutHealth = (Button) findViewById(R.id.cmdMenuNutHealth);
+            cmdMenuNutHealth.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(UpdateMenu.this, NutHealth.class).putExtras(IDBundle));
                 }
             });
 

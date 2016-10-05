@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10sp"
+            android:text="Back"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="NutHealth"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Women Emp"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cmdForward"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/secRnd"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRnd"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Rnd"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/VlblRnd"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="রাউন্ড নম্বার"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtRnd"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineRnd"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secSuchonaID"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSuchonaID"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="SuchonaID"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/VlblSuchonaID"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="উপকারভোগী/সদস্য আইডি"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtSuchonaID"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSuchonaID"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblM31"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblM31"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="M31 আপনি অসুস্থ হলে সাধারণত কোথায় যান"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblM31"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31a"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31a"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31a"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="a) কমিউনিটি  ক্লিনিক"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31a"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31b"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31b"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31b"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="b) NGO চালিত ক্লিনিক"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31b"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31b"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31c"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31c"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31c"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="c) ইউনিয়ন স্বাস্থ্য  কেন্দ্র"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31c"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31c"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31d"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31d"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31d"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="d) উপজেলা/সরকারী মেডিকেল স্বাস্থ্য কমপ্লেক্স"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31d"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31d"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31e"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31e"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31e"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="e) জেলা স্বাস্থ্য কেন্দ্র"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31e"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31e"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31f"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31f"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31f"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="f) প্রাইভেট ক্লিনিক"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31f"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31f"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31g"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31g"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31g"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="g) ফার্মেসী/ঔষুধ বিক্রেতা"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31g"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31g"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31h"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31h"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31h"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="h) কবিরাজ/পল্লী ডাক্তার"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31h"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31h"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31i"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31i"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31i"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="i) হোমিত্তপ্যাথ"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31i"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31i"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31x"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31x"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31x"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="x) অন্যান্য"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM31x"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31x"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM31x1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM31x1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM31x1"
+                    android:layout_width="220sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য (নির্দিষ্ট করুন)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtM31x1"
+                    style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM31x1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM32"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM32"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M32"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM32"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কি আপনার এলাকার EPI সেশন এর উঠান বৈঠক গুলোতে অংশগ্রহন করেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpM32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoM321"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoM322"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoM323"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="EPI সেশন হয়না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM32"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM33"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM33"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M33"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM33"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:text="সরকারী স্বাস্থ্যকর্মী কত ঘনঘন আপনাকে দেখতে আসে"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnM33"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM33"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM34"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM34"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M34"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM34"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="NGO র স্বাস্থ্যকর্মী কি আপনাকে দেখতে আসে? যেমন, BRAC স্বাস্থ্যসেবিকা?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpM34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoM341"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoM342"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=" না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM34"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM35"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM35"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M35"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM35"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কি কখনো কমিউনিটি ক্লিনিক হতে স্বাস্থ্য অথবা পরিবার পরিকল্পনা সেবা পেয়েছেন"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpM35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoM351"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoM352"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM35"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM36"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM36"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M36"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM36"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="কমিউনিটি ক্লিনিকে আপনি কত ঘনঘন যান?"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnM36"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM36"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM37"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM37"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M37"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM37"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি/আপনার স্বামী কি বর্তমানে কোন জন্মবিরতিকরণ পদ্ধতি ব্যবহার করছেন?"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdogrpM37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp">
+
+                    <RadioButton
+                        android:id="@+id/rdoM371"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoM372"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM37"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM38"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM38"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="M38"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM38"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:text="আপনি/আপনারা কোন পদ্ধতি ব্যবহার করছেন ?"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnM38"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM38"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM38X1"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM38X1"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM38X1"
+                    android:layout_width="220sp"
+                    android:layout_height="wrap_content"
+                    android:text="অন্যান্য (নির্দিষ্ট করুন)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtM38X1"
+                    style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM38X1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
+
+                <Button
+                    android:id="@+id/cmdSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/button_style"
+                    android:text=" Save -> Continue "
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
