@@ -56,7 +56,8 @@
             android:paddingLeft="10sp"
             android:text="Asset NB"
             android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/cmdForward"
@@ -312,7 +313,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:clickable="false"
+                    android:clickable="true"
                     android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textColor="@color/navigationBar"

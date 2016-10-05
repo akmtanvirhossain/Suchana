@@ -48,6 +48,7 @@ public class Knowledge extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String MSLNUMBER = "";
+    static String MSL = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
@@ -543,7 +544,7 @@ public class Knowledge extends Activity {
             lineMSLNumber=(View)findViewById(R.id.lineMSLNumber);
             VlblMSLNumber=(TextView) findViewById(R.id.VlblMSLNumber);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "'"));
             secLbM2=(LinearLayout)findViewById(R.id.secLbM2);
             secM212=(LinearLayout)findViewById(R.id.secM212);
             lineM212=(View)findViewById(R.id.lineM212);
@@ -1249,13 +1250,13 @@ public class Knowledge extends Activity {
             secM217x.setVisibility(View.GONE);
             secM217x1.setVisibility(View.GONE);
             secM217x1.setVisibility(View.GONE);
-            secM218a.setVisibility(View.GONE);
+
             secM218x1.setVisibility(View.GONE);
-            secM219a.setVisibility(View.GONE);
+
             secM2111x1.setVisibility(View.GONE);
-            secM2112a.setVisibility(View.GONE);
+
             secM2112x1.setVisibility(View.GONE);
-            secM2113a.setVisibility(View.GONE);
+
             secM2113x1.setVisibility(View.GONE);
 
             secM222x1.setVisibility(View.GONE);
@@ -1273,15 +1274,15 @@ public class Knowledge extends Activity {
                   else
                     {
                         DataSearch(RND,SUCHANAID,Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
+                        spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, MSL));
                     }
-
                 }
                 @Override
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
 
-
+            DataSearch(RND, SUCHANAID, MSLNUMBER);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -1624,7 +1625,14 @@ public class Knowledge extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if(status.length()==0) {
-                Connection.MessageBox(Knowledge.this, "Saved Successfully");
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+                Bundle IDBundle = new Bundle();
+                finish();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaId.getText().toString());
+                startActivity(new Intent(Knowledge.this, FdHabitKnow.class).putExtras(IDBundle));
+
             }
             else{
                 Connection.MessageBox(Knowledge.this, status);
@@ -1650,7 +1658,10 @@ public class Knowledge extends Activity {
             for(Knowledge_DataModel item : data){
                 txtRnd.setText(item.getRnd());
                 txtSuchanaId.setText(item.getSuchanaId());
-              //  txtMSLNumber.setText(item.getMSLNumber());
+                //txtMSLNumber.setText(item.getMSLNumber());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSLNumber()));
+                MSL = item.getMSLNumber();
+
                 String[] d_rdogrpM212 = new String[] {"1","0"};
                 for (int i = 0; i < d_rdogrpM212.length; i++)
                 {

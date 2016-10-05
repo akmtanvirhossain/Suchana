@@ -360,7 +360,30 @@ public class FdHabitKnow extends Activity {
             lineM232a = (View) findViewById(R.id.lineM232a);
             VlblM232a = (TextView) findViewById(R.id.VlblM232a);
             chkM232a = (CheckBox) findViewById(R.id.chkM232a);
+
             chkM232a.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        secM232b.setVisibility(View.GONE);
+                        // lineM232b.setVisibility(View.GONE);
+                        txtM232b.setText("");
+                        // secM232c.setVisibility(View.GONE);
+                        //  lineM232c.setVisibility(View.GONE);
+                        rdogrpM232b.clearCheck();
+
+                    } else {
+                        secM232b.setVisibility(View.VISIBLE);
+                        //   lineM232b.setVisibility(View.VISIBLE);
+                        txtM232b.setText("");
+                        //  secM232c.setVisibility(View.GONE);
+                        //  lineM232c.setVisibility(View.GONE);
+
+                    }
+                }
+            });
+
+            /*chkM232a.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if (((CheckBox) v).isChecked()) {
                         secM232b.setVisibility(View.GONE);
@@ -380,7 +403,9 @@ public class FdHabitKnow extends Activity {
 
                     }
                 }
-            });
+            });*/
+
+
             secM232b = (LinearLayout) findViewById(R.id.secM232b);
             //  lineM232b=(View)findViewById(R.id.lineM232b);
             // VlblM232b=(TextView) findViewById(R.id.VlblM232b);
@@ -530,11 +555,11 @@ public class FdHabitKnow extends Activity {
             txtSuchanaID.setEnabled(false);
             secM231x1.setVisibility(View.GONE);
             //Hide all skip variables
-            secM232b.setVisibility(View.GONE);
+            //secM232b.setVisibility(View.GONE);
             // secM232c.setVisibility(View.GONE);
             // secM233.setVisibility(View.GONE);
             secM237x1.setVisibility(View.GONE);
-            secM238.setVisibility(View.GONE);
+            //secM238.setVisibility(View.GONE);
 
 
             spnM231.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -555,7 +580,7 @@ public class FdHabitKnow extends Activity {
                 }
             });
 
-
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -693,7 +718,14 @@ public class FdHabitKnow extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(FdHabitKnow.this, "Saved Successfully");
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+                /*Bundle IDBundle = new Bundle();
+                finish();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(FdHabitKnow.this, FdHabitKnow.class).putExtras(IDBundle));*/
+
             } else {
                 Connection.MessageBox(FdHabitKnow.this, status);
                 return;
@@ -718,10 +750,15 @@ public class FdHabitKnow extends Activity {
                 txtM231x1.setText(item.getM231x1());
                 if (item.getM232a().equals("1")) {
                     chkM232a.setChecked(true);
+                    secM232b.setVisibility(View.GONE);
+                    txtM232b.setText("");
+                    rdogrpM232b.clearCheck();
                 } else if (item.getM232a().equals("2")) {
                     chkM232a.setChecked(false);
+                    secM232b.setVisibility(View.VISIBLE);
+                    txtM232b.setText(item.getM232b());
                 }
-                txtM232b.setText(item.getM232b());
+
                 //txtM232c.setText(item.getM232c());
                 String[] d_rdogrpM232b = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpM232b.length; i++) {

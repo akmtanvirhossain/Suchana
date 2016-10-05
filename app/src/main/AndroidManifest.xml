@@ -64,7 +64,6 @@
         <activity android:name=".FdHabit" />
         <activity android:name=".FoodDiversity" />
         <activity android:name=".Anthro" />
-        <activity android:name=".Savings_list" />
         <activity android:name=".Destruction1" />
         <activity android:name=".Destruction1_list" />
         <activity android:name=".Destruction2" />

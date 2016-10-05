@@ -81,6 +81,19 @@ public class AssetB_list extends Activity {
             TableName = "AssetB";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -90,7 +103,14 @@ public class AssetB_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
                             finish();
+                            Intent f1;
+                            f1 = new Intent(getApplicationContext(), SES.class);
+                            f1.putExtras(IDbundle);
+                            startActivity(f1);
                         }
                     });
                     adb.show();
@@ -258,7 +278,7 @@ public class AssetB_list extends Activity {
 
 
             switch (Integer.valueOf(o.get("H41a"))) {
-                case 1:
+                /*case 1:
                     H41a.setText("1-ভিটেমাটি");
                     break;
                 case 2:
@@ -325,7 +345,77 @@ public class AssetB_list extends Activity {
                 default:
                     H41a.setText("");
                     break;
+                */
 
+                case 1:
+                    H41a.setText("01-গরু");
+                    break;
+                case 2:
+                    H41a.setText("02-হাঁস ও মুরগী");
+                    break;
+                case 3:
+                    H41a.setText("03-পাখি  যেমন কবুতর");
+                    break;
+                case 4:
+                    H41a.setText("04-ছাগল / ভেড়া");
+                    break;
+                case 5:
+                    H41a.setText("05-শূকর");
+                    break;
+                case 6:
+                    H41a.setText("06-মাছ");
+                    break;
+                case 7:
+                    H41a.setText("07-অন্যান্য পশুপাখি (উল্লেখ করুন)");
+                    break;
+                case 8:
+                    H41a.setText("08-লাঙ্গল");
+                    break;
+                case 9:
+                    H41a.setText("09-মাড়াইয়ের যন্ত্র");
+                    break;
+                case 10:
+                    H41a.setText("10-গোয়াল ঘর");
+                    break;
+                case 11:
+                    H41a.setText("11-দোকানের জন্য প্রাঙ্গন/জমি");
+                    break;
+                case 12:
+                    H41a.setText("12-শষ্য সংরক্ষনের চলা/গুদাম ঘর");
+                    break;
+                case 13:
+                    H41a.setText("13-নৌকা");
+                    break;
+                case 14:
+                    H41a.setText("14-মোটর চালিত নৌকা");
+                    break;
+                case 15:
+                    H41a.setText("15-মাছ ধরার জাল");
+                    break;
+                case 16:
+                    H41a.setText("16-রিক্সা/ভ্যান");
+                    break;
+                case 17:
+                    H41a.setText("17-গাছ (১০০ টাকার অধিক)");
+                    break;
+                case 18:
+                    H41a.setText("18-ঠেলা গাড়ী");
+                    break;
+                case 19:
+                    H41a.setText("19-সেলাই মেশিন");
+                    break;
+                case 20:
+                    H41a.setText("20-CNG/নসিমন");
+                    break;
+                case 21:
+                    H41a.setText("21-অন্যান্য");
+                    break;
+                case 22:
+                    H41a.setText("22-অন্যান্য");
+                    break;
+                default:
+                    H41a.setText("");
+                    break;
             }
 
             secListRow.setOnClickListener(new View.OnClickListener() {

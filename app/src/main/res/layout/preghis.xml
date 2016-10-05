@@ -70,12 +70,6 @@
         android:layout_marginBottom="5sp"
         android:background="#CCCCCC" />
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginBottom="5sp"
-        android:background="#CCCCCC" />
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -103,13 +97,14 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="Rnd"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
@@ -141,7 +136,8 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="SuchanaID"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
@@ -153,7 +149,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="100sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -199,7 +195,7 @@
                     android:id="@+id/lblM11"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M11"
+                    android:text="1)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -237,7 +233,7 @@
                     android:id="@+id/lblM12"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M12"
+                    android:text="2)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -275,7 +271,7 @@
                     android:id="@+id/lblM13"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M13"
+                    android:text="3)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -334,7 +330,7 @@
                     android:id="@+id/lblM14a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M14a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -372,7 +368,7 @@
                     android:id="@+id/lblM14b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M14b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -410,7 +406,7 @@
                     android:id="@+id/lblM14c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M14c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -448,7 +444,7 @@
                     android:id="@+id/lblM14d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M14d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -486,7 +482,7 @@
                     android:id="@+id/lblM14e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M14e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -545,7 +541,7 @@
                     android:id="@+id/lblM15a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -583,7 +579,7 @@
                     android:id="@+id/lblM15b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -621,7 +617,7 @@
                     android:id="@+id/lblM15c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -659,7 +655,7 @@
                     android:id="@+id/lblM15d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -697,7 +693,7 @@
                     android:id="@+id/lblM15e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -737,7 +733,7 @@
                     android:id="@+id/lblM15f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M15f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -775,7 +771,7 @@
                     android:id="@+id/lblM16"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M16"
+                    android:text="M1.6"
                     android:textSize="20sp" />
 
                 <TextView
@@ -835,7 +831,7 @@
                     android:id="@+id/lblM17"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M17"
+                    android:text="M1.7"
                     android:textSize="20sp" />
 
                 <TextView
@@ -894,7 +890,7 @@
                     android:id="@+id/lblM18a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M18a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -932,7 +928,7 @@
                     android:id="@+id/lblM18b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M18b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -970,7 +966,7 @@
                     android:id="@+id/lblM18c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M18c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1067,7 +1063,7 @@
                     android:id="@+id/lblM110a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1103,7 +1099,7 @@
                     android:id="@+id/lblM110b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1139,7 +1135,7 @@
                     android:id="@+id/lblM110c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1175,7 +1171,7 @@
                     android:id="@+id/lblM110d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1211,7 +1207,7 @@
                     android:id="@+id/lblM110e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1247,7 +1243,7 @@
                     android:id="@+id/lblM110f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1283,7 +1279,7 @@
                     android:id="@+id/lblM110g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110g"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1319,7 +1315,7 @@
                     android:id="@+id/lblM110h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110h"
+                    android:text="h)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1355,7 +1351,7 @@
                     android:id="@+id/lblM110i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110i"
+                    android:text="i)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1391,7 +1387,7 @@
                     android:id="@+id/lblM110j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110j"
+                    android:text="j)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1427,7 +1423,7 @@
                     android:id="@+id/lblM110k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110k"
+                    android:text="k)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1463,7 +1459,7 @@
                     android:id="@+id/lblM110l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110l"
+                    android:text="l)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1499,7 +1495,7 @@
                     android:id="@+id/lblM110m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110m"
+                    android:text="m)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1535,7 +1531,7 @@
                     android:id="@+id/lblM110mX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M110mX"
+                    android:text="x)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1594,7 +1590,7 @@
                     android:id="@+id/lblM111a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1630,7 +1626,7 @@
                     android:id="@+id/lblM111b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1666,7 +1662,7 @@
                     android:id="@+id/lblM111c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1702,7 +1698,7 @@
                     android:id="@+id/lblM111d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1738,7 +1734,7 @@
                     android:id="@+id/lblM111e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1774,7 +1770,7 @@
                     android:id="@+id/lblM111f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1810,7 +1806,7 @@
                     android:id="@+id/lblM111g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111g"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1846,7 +1842,7 @@
                     android:id="@+id/lblM111h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111h"
+                    android:text="h)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1882,7 +1878,7 @@
                     android:id="@+id/lblM111i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111i"
+                    android:text="i)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1918,7 +1914,7 @@
                     android:id="@+id/lblM111j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111j"
+                    android:text="j)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1954,7 +1950,7 @@
                     android:id="@+id/lblM111k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111k"
+                    android:text="k)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1990,7 +1986,7 @@
                     android:id="@+id/lblM111l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111l"
+                    android:text="l)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2026,7 +2022,7 @@
                     android:id="@+id/lblM111m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111m"
+                    android:text="m)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2062,7 +2058,7 @@
                     android:id="@+id/lblM111n"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111n"
+                    android:text="n)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2098,7 +2094,7 @@
                     android:id="@+id/lblM111nX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M111nX"
+                    android:text="x)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -2705,4 +2701,11 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
 </LinearLayout>

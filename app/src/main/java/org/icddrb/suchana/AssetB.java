@@ -10,7 +10,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
@@ -232,7 +231,6 @@ public class AssetB extends Activity {
             SUCHANAID = IDbundle.getString("SuchanaID");
             SLNO = IDbundle.getString("SlNo");
 
-
             TableName = "AssetB";
 
             //turnGPSOn();
@@ -328,6 +326,7 @@ public class AssetB extends Activity {
             VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
             txtSlNo = (EditText) findViewById(R.id.txtSlNo);
 
+            /*
             //txtSlNo.setEnabled(false);
             int SlNo = 0;
             Cursor cursor = C.GetData("AssetB", "suchanaid", SUCHANAID);
@@ -342,6 +341,14 @@ public class AssetB extends Activity {
                 txtSlNo.setText(SLNO);
             }
             txtSlNo.setText(String.valueOf(SlNo));
+            */
+
+            if (SLNO.length() == 0)
+                txtSlNo.setText(AssetSerial(RND, SUCHANAID));
+            else
+                txtSlNo.setText(SLNO);
+
+
             txtSlNo.setEnabled(false);
 
             seclblH41 = (LinearLayout) findViewById(R.id.seclblH41);
@@ -1167,7 +1174,9 @@ public class AssetB extends Activity {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
                 spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
-                txtSlNo.setText(item.getSlNo());
+                if (item.getSlNo().length() != 0)
+                    txtSlNo.setText(item.getSlNo());
+
                 spnH41a.setSelection(Global.SpinnerItemPositionAnyLength(spnH41a, item.getH41a()));
                 txtH41aX.setText(item.getH41aX());
                 txtH41b.setText(item.getH41b());
@@ -1405,4 +1414,10 @@ public class AssetB extends Activity {
         super.onDestroy();
         turnGPSOff();
     }
+
+
+    private String AssetSerial(String Rnd, String SuchanaID) {
+        return C.ReturnSingleValue("Select (ifnull(max(slno),0)+1)serial from AssetB where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
+    }
+
 }

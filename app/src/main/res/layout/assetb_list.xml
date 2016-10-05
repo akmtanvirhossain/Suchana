@@ -62,8 +62,7 @@
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward"
-            android:visibility="gone" />
+            android:src="@drawable/forward" />
 
     </LinearLayout>
 
@@ -143,7 +142,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="500sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
