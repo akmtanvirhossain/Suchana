@@ -183,7 +183,9 @@ public class IGA_list extends Activity {
                 map.put("H18b2b5", item.getH18b2b5());
                 map.put("H18b2b6", item.getH18b2b6());
                 map.put("H18b2b7", item.getH18b2b7());
-                map.put("H18b2b7X", item.getH18b2b7X());
+                map.put("H18b2b8", item.getH18b2b8());
+                map.put("H18b2b9", item.getH18b2b9());
+                map.put("H18b2b9X", item.getH18b2b9X());
                 map.put("H18b1c", item.getH18b1c());
                 map.put("H18b2c1", item.getH18b2c1());
                 map.put("H18b2c2", item.getH18b2c2());
@@ -191,8 +193,8 @@ public class IGA_list extends Activity {
                 map.put("H18b2c4", item.getH18b2c4());
                 map.put("H18b2c5", item.getH18b2c5());
                 map.put("H18b2c6", item.getH18b2c6());
-                map.put("H18b2c7", item.getH18b2c7());
-                map.put("H18b2c7X", item.getH18b2c7X());
+
+                map.put("H18b2c6X", item.getH18b2c6X());
                 map.put("H18b1d", item.getH18b1d());
                 map.put("H18b2d1", item.getH18b2d1());
                 map.put("H18b2d2", item.getH18b2d2());
@@ -209,8 +211,7 @@ public class IGA_list extends Activity {
                 map.put("H18b2e4", item.getH18b2e4());
                 map.put("H18b2e5", item.getH18b2e5());
                 map.put("H18b2e6", item.getH18b2e6());
-                map.put("H18b2e7", item.getH18b2e7());
-                map.put("H18b2e7X", item.getH18b2e7X());
+                map.put("H18b2e6X", item.getH18b2e6X());
                 map.put("H18b1f", item.getH18b1f());
                 map.put("H18b2f1", item.getH18b2f1());
                 map.put("H18b2f2", item.getH18b2f2());
@@ -228,7 +229,9 @@ public class IGA_list extends Activity {
                 map.put("H18b2g5", item.getH18b2g5());
                 map.put("H18b2g6", item.getH18b2g6());
                 map.put("H18b2g7", item.getH18b2g7());
-                map.put("H18b2g7X", item.getH18b2g7X());
+                map.put("H18b2g8", item.getH18b2g8());
+                map.put("H18b2g9", item.getH18b2g9());
+                map.put("H18b2g9X", item.getH18b2g9X());
                 map.put("H18b1h", item.getH18b1h());
                 map.put("H18b2h1", item.getH18b2h1());
                 map.put("H18b2h2", item.getH18b2h2());
@@ -237,7 +240,9 @@ public class IGA_list extends Activity {
                 map.put("H18b2h5", item.getH18b2h5());
                 map.put("H18b2h6", item.getH18b2h6());
                 map.put("H18b2h7", item.getH18b2h7());
-                map.put("H18b2h7X", item.getH18b2h7X());
+                map.put("H18b2h8", item.getH18b2h8());
+                map.put("H18b2h9", item.getH18b2h9());
+                map.put("H18b2h9X", item.getH18b2h9X());
                 map.put("H18b1i", item.getH18b1i());
                 map.put("H18b2i1", item.getH18b2i1());
                 map.put("H18b2i2", item.getH18b2i2());
@@ -252,8 +257,8 @@ public class IGA_list extends Activity {
                 map.put("H18b2j4", item.getH18b2j4());
                 map.put("H18b2j5", item.getH18b2j5());
                 map.put("H18b2j5X", item.getH18b2j5X());
-                map.put("H18b1k", item.getH18b1k());
-                map.put("H18b2kX", item.getH18b2kX());
+               // map.put("H18b1k", item.getH18b1k());
+               // map.put("H18b2kX", item.getH18b2kX());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(IGA_list.this, dataList, R.layout.iga_list, new String[]{"rowsec"},
@@ -320,8 +325,8 @@ public class IGA_list extends Activity {
             final TextView H18b2c4 = (TextView) convertView.findViewById(R.id.H18b2c4);
             final TextView H18b2c5 = (TextView) convertView.findViewById(R.id.H18b2c5);
             final TextView H18b2c6 = (TextView) convertView.findViewById(R.id.H18b2c6);
-            final TextView H18b2c7 = (TextView) convertView.findViewById(R.id.H18b2c7);
-            final TextView H18b2c7X = (TextView) convertView.findViewById(R.id.H18b2c7X);
+
+            final TextView H18b2c6X = (TextView) convertView.findViewById(R.id.H18b2c6X);
             final TextView H18b1d = (TextView) convertView.findViewById(R.id.H18b1d);
             final TextView H18b2d1 = (TextView) convertView.findViewById(R.id.H18b2d1);
             final TextView H18b2d2 = (TextView) convertView.findViewById(R.id.H18b2d2);
@@ -338,8 +343,8 @@ public class IGA_list extends Activity {
             final TextView H18b2e4 = (TextView) convertView.findViewById(R.id.H18b2e4);
             final TextView H18b2e5 = (TextView) convertView.findViewById(R.id.H18b2e5);
             final TextView H18b2e6 = (TextView) convertView.findViewById(R.id.H18b2e6);
-            final TextView H18b2e7 = (TextView) convertView.findViewById(R.id.H18b2e7);
-            final TextView H18b2e7X = (TextView) convertView.findViewById(R.id.H18b2e7X);
+
+            final TextView H18b2e6X = (TextView) convertView.findViewById(R.id.H18b2e6X);
             final TextView H18b1f = (TextView) convertView.findViewById(R.id.H18b1f);
             final TextView H18b2f1 = (TextView) convertView.findViewById(R.id.H18b2f1);
             final TextView H18b2f2 = (TextView) convertView.findViewById(R.id.H18b2f2);
@@ -381,8 +386,7 @@ public class IGA_list extends Activity {
             final TextView H18b2j4 = (TextView) convertView.findViewById(R.id.H18b2j4);
             final TextView H18b2j5 = (TextView) convertView.findViewById(R.id.H18b2j5);
             final TextView H18b2j5X = (TextView) convertView.findViewById(R.id.H18b2j5X);
-            final TextView H18b1k = (TextView) convertView.findViewById(R.id.H18b1k);
-            final TextView H18b2kX = (TextView) convertView.findViewById(R.id.H18b2kX);
+
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             RND.setText(o.get("RND"));
@@ -412,8 +416,7 @@ public class IGA_list extends Activity {
             H18b2c4.setText(o.get("H18b2c4"));
             H18b2c5.setText(o.get("H18b2c5"));
             H18b2c6.setText(o.get("H18b2c6"));
-            H18b2c7.setText(o.get("H18b2c7"));
-            H18b2c7X.setText(o.get("H18b2c7X"));
+            H18b2c6X.setText(o.get("H18b2c6X"));
             H18b1d.setText(o.get("H18b1d"));
             H18b2d1.setText(o.get("H18b2d1"));
             H18b2d2.setText(o.get("H18b2d2"));
@@ -430,8 +433,8 @@ public class IGA_list extends Activity {
             H18b2e4.setText(o.get("H18b2e4"));
             H18b2e5.setText(o.get("H18b2e5"));
             H18b2e6.setText(o.get("H18b2e6"));
-            H18b2e7.setText(o.get("H18b2e7"));
-            H18b2e7X.setText(o.get("H18b2e7X"));
+
+            H18b2e6X.setText(o.get("H18b2e6X"));
             H18b1f.setText(o.get("H18b1f"));
             H18b2f1.setText(o.get("H18b2f1"));
             H18b2f2.setText(o.get("H18b2f2"));
@@ -473,8 +476,7 @@ public class IGA_list extends Activity {
             H18b2j4.setText(o.get("H18b2j4"));
             H18b2j5.setText(o.get("H18b2j5"));
             H18b2j5X.setText(o.get("H18b2j5X"));
-            H18b1k.setText(o.get("H18b1k"));
-            H18b2kX.setText(o.get("H18b2kX"));
+
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
