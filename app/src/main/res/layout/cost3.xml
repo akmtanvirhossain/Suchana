@@ -182,7 +182,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="100sp"
+                    android:layout_width="170sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
