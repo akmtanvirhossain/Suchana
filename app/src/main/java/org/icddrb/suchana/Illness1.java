@@ -396,7 +396,8 @@ public class Illness1 extends Activity {
             listH171b.add("1-কোনো চিকিৎসা নেয়া হয়নি");
             listH171b.add("2-বাড়তেই সাধারণ চিকিৎসা");
             listH171b.add("3-গ্রাম ডাক্তার");
-            listH171b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA   5-এলোপ্যাথিক ঔষুধ বিক্রেতা (রোগ  বুঝে চিকিৎসা দেয়)");
+            listH171b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA");
+            listH171b.add("5-এলোপ্যাথিক ঔষুধ বিক্রেতা (রোগ বুঝে চিকিৎসা দেয়)");
             listH171b.add("6-যোগ্যতাসম্পন্ন সরকারী/বেসরকারী MBBS ডাক্তার");
             listH171b.add("7-প্যানেল ডাক্তার (BRAC)");
             listH171b.add("8-কবিরাজ হেকিম  বিশ্বাস বৈদ্য");

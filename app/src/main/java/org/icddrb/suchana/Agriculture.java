@@ -791,11 +791,11 @@ public class Agriculture extends Activity {
                 return;
             }
 
-            if(Integer.valueOf(txtH152d1.getText().toString())<(Integer.valueOf(txtH152e1.getText().toString())+Integer.valueOf(txtH152g.getText().toString())+Integer.valueOf(txtH152h1.getText().toString())+Integer.valueOf(txtH152i1.getText().toString())+Integer.valueOf(txtH152j1.getText().toString())+Integer.valueOf(txtH152k1.getText().toString())))
+           /* if(Integer.valueOf(txtH152d1.getText().toString())<(Integer.valueOf(txtH152e1.getText().toString())+Integer.valueOf(txtH152g.getText().toString())+Integer.valueOf(txtH152h1.getText().toString())+Integer.valueOf(txtH152i1.getText().toString())+Integer.valueOf(txtH152j1.getText().toString())+Integer.valueOf(txtH152k1.getText().toString())))
             {
                 Connection.MessageBox(Agriculture.this, "Production quantity and expenditure inconsistent H152D.");
                 return;
-            }
+            }*/
 
             String SQL = "";
             RadioButton rb;

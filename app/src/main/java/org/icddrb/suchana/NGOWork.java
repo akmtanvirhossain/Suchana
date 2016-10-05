@@ -284,6 +284,27 @@ public class NGOWork extends Activity {
     View lineH1612j;
     TextView VlblH1612j;
     CheckBox chkH1612j;
+
+    LinearLayout secH1612k;
+    View lineH1612k;
+    TextView VlblH1612k;
+    CheckBox chkH1612k;
+
+    LinearLayout secH1612l;
+    View lineH1612l;
+    TextView VlblH1612l;
+    CheckBox chkH1612l;
+
+    LinearLayout secH1612m;
+    View lineH1612m;
+    TextView VlblH1612m;
+    CheckBox chkH1612m;
+
+    LinearLayout secH1612n;
+    View lineH1612n;
+    TextView VlblH1612n;
+    CheckBox chkH1612n;
+
     LinearLayout secH1612x;
     View lineH1612x;
     TextView VlblH1612x;
@@ -1541,6 +1562,20 @@ public class NGOWork extends Activity {
                         secH1612j.setVisibility(View.GONE);
                         lineH1612j.setVisibility(View.GONE);
                         chkH1612j.setChecked(false);
+
+                        secH1612k.setVisibility(View.GONE);
+                        lineH1612k.setVisibility(View.GONE);
+                        chkH1612k.setChecked(false);
+                        secH1612l.setVisibility(View.GONE);
+                        lineH1612l.setVisibility(View.GONE);
+                        chkH1612l.setChecked(false);
+                        secH1612m.setVisibility(View.GONE);
+                        lineH1612m.setVisibility(View.GONE);
+                        chkH1612m.setChecked(false);
+                        secH1612n.setVisibility(View.GONE);
+                        lineH1612n.setVisibility(View.GONE);
+                        chkH1612n.setChecked(false);
+
                         secH1612x.setVisibility(View.GONE);
                         lineH1612x.setVisibility(View.GONE);
                         chkH1612x.setChecked(false);
@@ -1630,6 +1665,16 @@ public class NGOWork extends Activity {
                         lineH1612i.setVisibility(View.VISIBLE);
                         secH1612j.setVisibility(View.VISIBLE);
                         lineH1612j.setVisibility(View.VISIBLE);
+
+                        secH1612k.setVisibility(View.VISIBLE);
+                        lineH1612k.setVisibility(View.VISIBLE);
+                        secH1612l.setVisibility(View.VISIBLE);
+                        lineH1612l.setVisibility(View.VISIBLE);
+                        secH1612m.setVisibility(View.VISIBLE);
+                        lineH1612m.setVisibility(View.VISIBLE);
+                        secH1612n.setVisibility(View.VISIBLE);
+                        lineH1612n.setVisibility(View.VISIBLE);
+
                         secH1612x.setVisibility(View.VISIBLE);
                         lineH1612x.setVisibility(View.VISIBLE);
                        // secH1612x1.setVisibility(View.VISIBLE);
@@ -1726,6 +1771,24 @@ public class NGOWork extends Activity {
             lineH1612j = (View) findViewById(R.id.lineH1612j);
             VlblH1612j = (TextView) findViewById(R.id.VlblH1612j);
             chkH1612j = (CheckBox) findViewById(R.id.chkH1612j);
+
+            secH1612k = (LinearLayout) findViewById(R.id.secH1612k);
+            lineH1612k = (View) findViewById(R.id.lineH1612k);
+            VlblH1612k = (TextView) findViewById(R.id.VlblH1612k);
+            chkH1612k = (CheckBox) findViewById(R.id.chkH1612k);
+            secH1612l = (LinearLayout) findViewById(R.id.secH1612l);
+            lineH1612l = (View) findViewById(R.id.lineH1612l);
+            VlblH1612l = (TextView) findViewById(R.id.VlblH1612l);
+            chkH1612l = (CheckBox) findViewById(R.id.chkH1612l);
+            secH1612m = (LinearLayout) findViewById(R.id.secH1612m);
+            lineH1612m = (View) findViewById(R.id.lineH1612m);
+            VlblH1612m = (TextView) findViewById(R.id.VlblH1612m);
+            chkH1612m = (CheckBox) findViewById(R.id.chkH1612m);
+            secH1612n = (LinearLayout) findViewById(R.id.secH1612n);
+            lineH1612n = (View) findViewById(R.id.lineH1612n);
+            VlblH1612n = (TextView) findViewById(R.id.VlblH1612n);
+            chkH1612n = (CheckBox) findViewById(R.id.chkH1612n);
+
             secH1612x = (LinearLayout) findViewById(R.id.secH1612x);
             lineH1612x = (View) findViewById(R.id.lineH1612x);
             VlblH1612x = (TextView) findViewById(R.id.VlblH1612x);
@@ -2309,6 +2372,10 @@ public class NGOWork extends Activity {
             secH1612h.setVisibility(View.GONE);
             secH1612i.setVisibility(View.GONE);
             secH1612j.setVisibility(View.GONE);
+            secH1612k.setVisibility(View.GONE);
+            secH1612l.setVisibility(View.GONE);
+            secH1612m.setVisibility(View.GONE);
+            secH1612n.setVisibility(View.GONE);
             secH1612x.setVisibility(View.GONE);
             secH1612x1.setVisibility(View.GONE);
             secH1613.setVisibility(View.GONE);
@@ -2624,6 +2691,12 @@ public class NGOWork extends Activity {
             objSave.setH1612h((chkH1612h.isChecked() ? "1" : "2"));
             objSave.setH1612i((chkH1612i.isChecked() ? "1" : "2"));
             objSave.setH1612j((chkH1612j.isChecked() ? "1" : "2"));
+
+            objSave.setH1612k((chkH1612k.isChecked() ? "1" : "2"));
+            objSave.setH1612l((chkH1612l.isChecked() ? "1" : "2"));
+            objSave.setH1612m((chkH1612m.isChecked() ? "1" : "2"));
+            objSave.setH1612n((chkH1612n.isChecked() ? "1" : "2"));
+
             objSave.setH1612x((chkH1612x.isChecked() ? "1" : "2"));
             objSave.setH1612x1(txtH1612x1.getText().toString());
             String[] d_rdogrpH1613 = new String[]{"1", "0"};
@@ -2953,6 +3026,31 @@ public class NGOWork extends Activity {
                 } else if (item.getH1612j().equals("2")) {
                     chkH1612j.setChecked(false);
                 }
+
+                if (item.getH1612k().equals("1")) {
+                    chkH1612k.setChecked(true);
+                } else if (item.getH1612k().equals("2")) {
+                    chkH1612k.setChecked(false);
+                }
+
+                if (item.getH1612l().equals("1")) {
+                    chkH1612l.setChecked(true);
+                } else if (item.getH1612l().equals("2")) {
+                    chkH1612l.setChecked(false);
+                }
+
+                if (item.getH1612m().equals("1")) {
+                    chkH1612m.setChecked(true);
+                } else if (item.getH1612m().equals("2")) {
+                    chkH1612m.setChecked(false);
+                }
+
+                if (item.getH1612n().equals("1")) {
+                    chkH1612n.setChecked(true);
+                } else if (item.getH1612n().equals("2")) {
+                    chkH1612n.setChecked(false);
+                }
+
                 if (item.getH1612x().equals("1")) {
                     chkH1612x.setChecked(true);
                 } else if (item.getH1612x().equals("2")) {

@@ -467,7 +467,7 @@
                 <TextView
                     android:id="@+id/VlblM241gX"
                     android:text="উল্লেখ করুন"
-                    android:layout_width="220sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
