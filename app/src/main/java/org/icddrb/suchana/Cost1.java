@@ -508,7 +508,27 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH81[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+
+                        secH811a.setVisibility(View.VISIBLE);
+                        lineH811a.setVisibility(View.VISIBLE);
+
+                        secH812a.setVisibility(View.VISIBLE);
+                        lineH812a.setVisibility(View.VISIBLE);
+
+                        secH813a.setVisibility(View.VISIBLE);
+                        lineH813a.setVisibility(View.VISIBLE);
+
+                        secH814a.setVisibility(View.VISIBLE);
+                        lineH814a.setVisibility(View.VISIBLE);
+
+                        secH815a.setVisibility(View.VISIBLE);
+                        lineH815a.setVisibility(View.VISIBLE);
+
+                        secH816a.setVisibility(View.VISIBLE);
+                        lineH816a.setVisibility(View.VISIBLE);
+
+                    } else {
                         secH811a.setVisibility(View.GONE);
                         lineH811a.setVisibility(View.GONE);
                         rdogrpH811a.clearCheck();
@@ -581,55 +601,6 @@ public class Cost1 extends Activity {
                         secH816d.setVisibility(View.GONE);
                         lineH816d.setVisibility(View.GONE);
                         txtH816d.setText("");
-                    } else {
-                        secH811a.setVisibility(View.VISIBLE);
-                        lineH811a.setVisibility(View.VISIBLE);
-                        secH811b.setVisibility(View.VISIBLE);
-                        lineH811b.setVisibility(View.VISIBLE);
-                        secH811c.setVisibility(View.VISIBLE);
-                        lineH811c.setVisibility(View.VISIBLE);
-                        secH811d.setVisibility(View.VISIBLE);
-                        lineH811d.setVisibility(View.VISIBLE);
-                        secH812a.setVisibility(View.VISIBLE);
-                        lineH812a.setVisibility(View.VISIBLE);
-                        secH812b.setVisibility(View.VISIBLE);
-                        lineH812b.setVisibility(View.VISIBLE);
-                        secH812c.setVisibility(View.VISIBLE);
-                        lineH812c.setVisibility(View.VISIBLE);
-                        secH812d.setVisibility(View.VISIBLE);
-                        lineH812d.setVisibility(View.VISIBLE);
-                        secH813a.setVisibility(View.VISIBLE);
-                        lineH813a.setVisibility(View.VISIBLE);
-                        secH813b.setVisibility(View.VISIBLE);
-                        lineH813b.setVisibility(View.VISIBLE);
-                        secH813c.setVisibility(View.VISIBLE);
-                        lineH813c.setVisibility(View.VISIBLE);
-                        secH813d.setVisibility(View.VISIBLE);
-                        lineH813d.setVisibility(View.VISIBLE);
-                        secH814a.setVisibility(View.VISIBLE);
-                        lineH814a.setVisibility(View.VISIBLE);
-                        secH814b.setVisibility(View.VISIBLE);
-                        lineH814b.setVisibility(View.VISIBLE);
-                        secH814c.setVisibility(View.VISIBLE);
-                        lineH814c.setVisibility(View.VISIBLE);
-                        secH814d.setVisibility(View.VISIBLE);
-                        lineH814d.setVisibility(View.VISIBLE);
-                        secH815a.setVisibility(View.VISIBLE);
-                        lineH815a.setVisibility(View.VISIBLE);
-                        secH815b.setVisibility(View.VISIBLE);
-                        lineH815b.setVisibility(View.VISIBLE);
-                        secH815c.setVisibility(View.VISIBLE);
-                        lineH815c.setVisibility(View.VISIBLE);
-                        secH815d.setVisibility(View.VISIBLE);
-                        lineH815d.setVisibility(View.VISIBLE);
-                        secH816a.setVisibility(View.VISIBLE);
-                        lineH816a.setVisibility(View.VISIBLE);
-                        secH816b.setVisibility(View.VISIBLE);
-                        lineH816b.setVisibility(View.VISIBLE);
-                        secH816c.setVisibility(View.VISIBLE);
-                        lineH816c.setVisibility(View.VISIBLE);
-                        secH816d.setVisibility(View.VISIBLE);
-                        lineH816d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -655,7 +626,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH811a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH811b.setVisibility(View.VISIBLE);
+                        lineH811b.setVisibility(View.VISIBLE);
+                        secH811c.setVisibility(View.VISIBLE);
+                        lineH811c.setVisibility(View.VISIBLE);
+                        secH811d.setVisibility(View.VISIBLE);
+                        lineH811d.setVisibility(View.VISIBLE);
+                    } else {
                         secH811b.setVisibility(View.GONE);
                         lineH811b.setVisibility(View.GONE);
                         txtH811b.setText("");
@@ -665,13 +643,6 @@ public class Cost1 extends Activity {
                         secH811d.setVisibility(View.GONE);
                         lineH811d.setVisibility(View.GONE);
                         txtH811d.setText("");
-                    } else {
-                        secH811b.setVisibility(View.VISIBLE);
-                        lineH811b.setVisibility(View.VISIBLE);
-                        secH811c.setVisibility(View.VISIBLE);
-                        lineH811c.setVisibility(View.VISIBLE);
-                        secH811d.setVisibility(View.VISIBLE);
-                        lineH811d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -713,7 +684,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH812a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH812b.setVisibility(View.VISIBLE);
+                        lineH812b.setVisibility(View.VISIBLE);
+                        secH812c.setVisibility(View.VISIBLE);
+                        lineH812c.setVisibility(View.VISIBLE);
+                        secH812d.setVisibility(View.VISIBLE);
+                        lineH812d.setVisibility(View.VISIBLE);
+                    } else {
                         secH812b.setVisibility(View.GONE);
                         lineH812b.setVisibility(View.GONE);
                         txtH812b.setText("");
@@ -723,13 +701,6 @@ public class Cost1 extends Activity {
                         secH812d.setVisibility(View.GONE);
                         lineH812d.setVisibility(View.GONE);
                         txtH812d.setText("");
-                    } else {
-                        secH812b.setVisibility(View.VISIBLE);
-                        lineH812b.setVisibility(View.VISIBLE);
-                        secH812c.setVisibility(View.VISIBLE);
-                        lineH812c.setVisibility(View.VISIBLE);
-                        secH812d.setVisibility(View.VISIBLE);
-                        lineH812d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -771,7 +742,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH813a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH813b.setVisibility(View.VISIBLE);
+                        lineH813b.setVisibility(View.VISIBLE);
+                        secH813c.setVisibility(View.VISIBLE);
+                        lineH813c.setVisibility(View.VISIBLE);
+                        secH813d.setVisibility(View.VISIBLE);
+                        lineH813d.setVisibility(View.VISIBLE);
+                    } else {
                         secH813b.setVisibility(View.GONE);
                         lineH813b.setVisibility(View.GONE);
                         txtH813b.setText("");
@@ -781,13 +759,6 @@ public class Cost1 extends Activity {
                         secH813d.setVisibility(View.GONE);
                         lineH813d.setVisibility(View.GONE);
                         txtH813d.setText("");
-                    } else {
-                        secH813b.setVisibility(View.VISIBLE);
-                        lineH813b.setVisibility(View.VISIBLE);
-                        secH813c.setVisibility(View.VISIBLE);
-                        lineH813c.setVisibility(View.VISIBLE);
-                        secH813d.setVisibility(View.VISIBLE);
-                        lineH813d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -829,7 +800,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH814a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH814b.setVisibility(View.VISIBLE);
+                        lineH814b.setVisibility(View.VISIBLE);
+                        secH814c.setVisibility(View.VISIBLE);
+                        lineH814c.setVisibility(View.VISIBLE);
+                        secH814d.setVisibility(View.VISIBLE);
+                        lineH814d.setVisibility(View.VISIBLE);
+                    } else {
                         secH814b.setVisibility(View.GONE);
                         lineH814b.setVisibility(View.GONE);
                         txtH814b.setText("");
@@ -839,13 +817,6 @@ public class Cost1 extends Activity {
                         secH814d.setVisibility(View.GONE);
                         lineH814d.setVisibility(View.GONE);
                         txtH814d.setText("");
-                    } else {
-                        secH814b.setVisibility(View.VISIBLE);
-                        lineH814b.setVisibility(View.VISIBLE);
-                        secH814c.setVisibility(View.VISIBLE);
-                        lineH814c.setVisibility(View.VISIBLE);
-                        secH814d.setVisibility(View.VISIBLE);
-                        lineH814d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -887,7 +858,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH815a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH815b.setVisibility(View.VISIBLE);
+                        lineH815b.setVisibility(View.VISIBLE);
+                        secH815c.setVisibility(View.VISIBLE);
+                        lineH815c.setVisibility(View.VISIBLE);
+                        secH815d.setVisibility(View.VISIBLE);
+                        lineH815d.setVisibility(View.VISIBLE);
+                    } else {
                         secH815b.setVisibility(View.GONE);
                         lineH815b.setVisibility(View.GONE);
                         txtH815b.setText("");
@@ -897,13 +875,6 @@ public class Cost1 extends Activity {
                         secH815d.setVisibility(View.GONE);
                         lineH815d.setVisibility(View.GONE);
                         txtH815d.setText("");
-                    } else {
-                        secH815b.setVisibility(View.VISIBLE);
-                        lineH815b.setVisibility(View.VISIBLE);
-                        secH815c.setVisibility(View.VISIBLE);
-                        lineH815c.setVisibility(View.VISIBLE);
-                        secH815d.setVisibility(View.VISIBLE);
-                        lineH815d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -945,7 +916,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH816a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH816b.setVisibility(View.VISIBLE);
+                        lineH816b.setVisibility(View.VISIBLE);
+                        secH816c.setVisibility(View.VISIBLE);
+                        lineH816c.setVisibility(View.VISIBLE);
+                        secH816d.setVisibility(View.VISIBLE);
+                        lineH816d.setVisibility(View.VISIBLE);
+                    } else {
                         secH816b.setVisibility(View.GONE);
                         lineH816b.setVisibility(View.GONE);
                         txtH816b.setText("");
@@ -955,13 +933,6 @@ public class Cost1 extends Activity {
                         secH816d.setVisibility(View.GONE);
                         lineH816d.setVisibility(View.GONE);
                         txtH816d.setText("");
-                    } else {
-                        secH816b.setVisibility(View.VISIBLE);
-                        lineH816b.setVisibility(View.VISIBLE);
-                        secH816c.setVisibility(View.VISIBLE);
-                        lineH816c.setVisibility(View.VISIBLE);
-                        secH816d.setVisibility(View.VISIBLE);
-                        lineH816d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1006,7 +977,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH821a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH821b.setVisibility(View.VISIBLE);
+                        lineH821b.setVisibility(View.VISIBLE);
+                        secH821c.setVisibility(View.VISIBLE);
+                        lineH821c.setVisibility(View.VISIBLE);
+                        secH821d.setVisibility(View.VISIBLE);
+                        lineH821d.setVisibility(View.VISIBLE);
+                    } else {
                         secH821b.setVisibility(View.GONE);
                         lineH821b.setVisibility(View.GONE);
                         txtH821b.setText("");
@@ -1016,13 +994,6 @@ public class Cost1 extends Activity {
                         secH821d.setVisibility(View.GONE);
                         lineH821d.setVisibility(View.GONE);
                         txtH821d.setText("");
-                    } else {
-                        secH821b.setVisibility(View.VISIBLE);
-                        lineH821b.setVisibility(View.VISIBLE);
-                        secH821c.setVisibility(View.VISIBLE);
-                        lineH821c.setVisibility(View.VISIBLE);
-                        secH821d.setVisibility(View.VISIBLE);
-                        lineH821d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1065,7 +1036,15 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH83[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+
+                        secH831a.setVisibility(View.VISIBLE);
+                        lineH831a.setVisibility(View.VISIBLE);
+
+                        secH832a.setVisibility(View.VISIBLE);
+                        lineH832a.setVisibility(View.VISIBLE);
+
+                    } else {
                         secH831a.setVisibility(View.GONE);
                         lineH831a.setVisibility(View.GONE);
                         rdogrpH831a.clearCheck();
@@ -1090,24 +1069,6 @@ public class Cost1 extends Activity {
                         secH832d.setVisibility(View.GONE);
                         lineH832d.setVisibility(View.GONE);
                         txtH832d.setText("");
-
-                    } else {
-                        secH831a.setVisibility(View.VISIBLE);
-                        lineH831a.setVisibility(View.VISIBLE);
-                        secH831b.setVisibility(View.VISIBLE);
-                        lineH831b.setVisibility(View.VISIBLE);
-                        secH831c.setVisibility(View.VISIBLE);
-                        lineH831c.setVisibility(View.VISIBLE);
-                        secH831d.setVisibility(View.VISIBLE);
-                        lineH831d.setVisibility(View.VISIBLE);
-                        secH832a.setVisibility(View.VISIBLE);
-                        lineH832a.setVisibility(View.VISIBLE);
-                        secH832b.setVisibility(View.VISIBLE);
-                        lineH832b.setVisibility(View.VISIBLE);
-                        secH832c.setVisibility(View.VISIBLE);
-                        lineH832c.setVisibility(View.VISIBLE);
-                        secH832d.setVisibility(View.VISIBLE);
-                        lineH832d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1133,7 +1094,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH831a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH831b.setVisibility(View.VISIBLE);
+                        lineH831b.setVisibility(View.VISIBLE);
+                        secH831c.setVisibility(View.VISIBLE);
+                        lineH831c.setVisibility(View.VISIBLE);
+                        secH831d.setVisibility(View.VISIBLE);
+                        lineH831d.setVisibility(View.VISIBLE);
+                    } else {
                         secH831b.setVisibility(View.GONE);
                         lineH831b.setVisibility(View.GONE);
                         txtH831b.setText("");
@@ -1143,13 +1111,6 @@ public class Cost1 extends Activity {
                         secH831d.setVisibility(View.GONE);
                         lineH831d.setVisibility(View.GONE);
                         txtH831d.setText("");
-                    } else {
-                        secH831b.setVisibility(View.VISIBLE);
-                        lineH831b.setVisibility(View.VISIBLE);
-                        secH831c.setVisibility(View.VISIBLE);
-                        lineH831c.setVisibility(View.VISIBLE);
-                        secH831d.setVisibility(View.VISIBLE);
-                        lineH831d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1191,7 +1152,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH832a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH832b.setVisibility(View.VISIBLE);
+                        lineH832b.setVisibility(View.VISIBLE);
+                        secH832c.setVisibility(View.VISIBLE);
+                        lineH832c.setVisibility(View.VISIBLE);
+                        secH832d.setVisibility(View.VISIBLE);
+                        lineH832d.setVisibility(View.VISIBLE);
+                    } else {
                         secH832b.setVisibility(View.GONE);
                         lineH832b.setVisibility(View.GONE);
                         txtH832b.setText("");
@@ -1201,13 +1169,6 @@ public class Cost1 extends Activity {
                         secH832d.setVisibility(View.GONE);
                         lineH832d.setVisibility(View.GONE);
                         txtH832d.setText("");
-                    } else {
-                        secH832b.setVisibility(View.VISIBLE);
-                        lineH832b.setVisibility(View.VISIBLE);
-                        secH832c.setVisibility(View.VISIBLE);
-                        lineH832c.setVisibility(View.VISIBLE);
-                        secH832d.setVisibility(View.VISIBLE);
-                        lineH832d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1250,7 +1211,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH84[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH841a.setVisibility(View.VISIBLE);
+                        lineH841a.setVisibility(View.VISIBLE);
+
+                        secH842a.setVisibility(View.VISIBLE);
+                        lineH842a.setVisibility(View.VISIBLE);
+
+                    } else {
                         secH841a.setVisibility(View.GONE);
                         lineH841a.setVisibility(View.GONE);
                         rdogrpH841a.clearCheck();
@@ -1275,23 +1243,6 @@ public class Cost1 extends Activity {
                         secH842d.setVisibility(View.GONE);
                         lineH842d.setVisibility(View.GONE);
                         txtH842d.setText("");
-                    } else {
-                        secH841a.setVisibility(View.VISIBLE);
-                        lineH841a.setVisibility(View.VISIBLE);
-                        secH841b.setVisibility(View.VISIBLE);
-                        lineH841b.setVisibility(View.VISIBLE);
-                        secH841c.setVisibility(View.VISIBLE);
-                        lineH841c.setVisibility(View.VISIBLE);
-                        secH841d.setVisibility(View.VISIBLE);
-                        lineH841d.setVisibility(View.VISIBLE);
-                        secH842a.setVisibility(View.VISIBLE);
-                        lineH842a.setVisibility(View.VISIBLE);
-                        secH842b.setVisibility(View.VISIBLE);
-                        lineH842b.setVisibility(View.VISIBLE);
-                        secH842c.setVisibility(View.VISIBLE);
-                        lineH842c.setVisibility(View.VISIBLE);
-                        secH842d.setVisibility(View.VISIBLE);
-                        lineH842d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1317,7 +1268,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH841a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH841b.setVisibility(View.VISIBLE);
+                        lineH841b.setVisibility(View.VISIBLE);
+                        secH841c.setVisibility(View.VISIBLE);
+                        lineH841c.setVisibility(View.VISIBLE);
+                        secH841d.setVisibility(View.VISIBLE);
+                        lineH841d.setVisibility(View.VISIBLE);
+                    } else {
                         secH841b.setVisibility(View.GONE);
                         lineH841b.setVisibility(View.GONE);
                         txtH841b.setText("");
@@ -1327,13 +1285,6 @@ public class Cost1 extends Activity {
                         secH841d.setVisibility(View.GONE);
                         lineH841d.setVisibility(View.GONE);
                         txtH841d.setText("");
-                    } else {
-                        secH841b.setVisibility(View.VISIBLE);
-                        lineH841b.setVisibility(View.VISIBLE);
-                        secH841c.setVisibility(View.VISIBLE);
-                        lineH841c.setVisibility(View.VISIBLE);
-                        secH841d.setVisibility(View.VISIBLE);
-                        lineH841d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1375,7 +1326,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH842a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH842b.setVisibility(View.VISIBLE);
+                        lineH842b.setVisibility(View.VISIBLE);
+                        secH842c.setVisibility(View.VISIBLE);
+                        lineH842c.setVisibility(View.VISIBLE);
+                        secH842d.setVisibility(View.VISIBLE);
+                        lineH842d.setVisibility(View.VISIBLE);
+                    } else {
                         secH842b.setVisibility(View.GONE);
                         lineH842b.setVisibility(View.GONE);
                         txtH842b.setText("");
@@ -1385,13 +1343,6 @@ public class Cost1 extends Activity {
                         secH842d.setVisibility(View.GONE);
                         lineH842d.setVisibility(View.GONE);
                         txtH842d.setText("");
-                    } else {
-                        secH842b.setVisibility(View.VISIBLE);
-                        lineH842b.setVisibility(View.VISIBLE);
-                        secH842c.setVisibility(View.VISIBLE);
-                        lineH842c.setVisibility(View.VISIBLE);
-                        secH842d.setVisibility(View.VISIBLE);
-                        lineH842d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1434,7 +1385,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH851a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH851b.setVisibility(View.VISIBLE);
+                        lineH851b.setVisibility(View.VISIBLE);
+                        secH851c.setVisibility(View.VISIBLE);
+                        lineH851c.setVisibility(View.VISIBLE);
+                        secH851d.setVisibility(View.VISIBLE);
+                        lineH851d.setVisibility(View.VISIBLE);
+                    } else {
                         secH851b.setVisibility(View.GONE);
                         lineH851b.setVisibility(View.GONE);
                         txtH851b.setText("");
@@ -1444,13 +1402,6 @@ public class Cost1 extends Activity {
                         secH851d.setVisibility(View.GONE);
                         lineH851d.setVisibility(View.GONE);
                         txtH851d.setText("");
-                    } else {
-                        secH851b.setVisibility(View.VISIBLE);
-                        lineH851b.setVisibility(View.VISIBLE);
-                        secH851c.setVisibility(View.VISIBLE);
-                        lineH851c.setVisibility(View.VISIBLE);
-                        secH851d.setVisibility(View.VISIBLE);
-                        lineH851d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1493,7 +1444,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH86[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH861a.setVisibility(View.VISIBLE);
+                        lineH861a.setVisibility(View.VISIBLE);
+
+                        secH862a.setVisibility(View.VISIBLE);
+                        lineH862a.setVisibility(View.VISIBLE);
+
+                    } else {
                         secH861a.setVisibility(View.GONE);
                         lineH861a.setVisibility(View.GONE);
                         rdogrpH861a.clearCheck();
@@ -1515,21 +1473,6 @@ public class Cost1 extends Activity {
                         secH862c.setVisibility(View.GONE);
                         lineH862c.setVisibility(View.GONE);
                         rdogrpH862c.clearCheck();
-                    } else {
-                        secH861a.setVisibility(View.VISIBLE);
-                        lineH861a.setVisibility(View.VISIBLE);
-                        secH861b.setVisibility(View.VISIBLE);
-                        lineH861b.setVisibility(View.VISIBLE);
-                        secH861c.setVisibility(View.VISIBLE);
-                        lineH861c.setVisibility(View.VISIBLE);
-                        secH861d.setVisibility(View.VISIBLE);
-                        lineH861d.setVisibility(View.VISIBLE);
-                        secH862a.setVisibility(View.VISIBLE);
-                        lineH862a.setVisibility(View.VISIBLE);
-                        secH862b.setVisibility(View.VISIBLE);
-                        lineH862b.setVisibility(View.VISIBLE);
-                        secH862c.setVisibility(View.VISIBLE);
-                        lineH862c.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1555,7 +1498,14 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH861a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH861b.setVisibility(View.VISIBLE);
+                        lineH861b.setVisibility(View.VISIBLE);
+                        secH861c.setVisibility(View.VISIBLE);
+                        lineH861c.setVisibility(View.VISIBLE);
+                        secH861d.setVisibility(View.VISIBLE);
+                        lineH861d.setVisibility(View.VISIBLE);
+                    } else {
                         secH861b.setVisibility(View.GONE);
                         lineH861b.setVisibility(View.GONE);
                         txtH861b.setText("");
@@ -1565,13 +1515,6 @@ public class Cost1 extends Activity {
                         secH861d.setVisibility(View.GONE);
                         lineH861d.setVisibility(View.GONE);
                         txtH861d.setText("");
-                    } else {
-                        secH861b.setVisibility(View.VISIBLE);
-                        lineH861b.setVisibility(View.VISIBLE);
-                        secH861c.setVisibility(View.VISIBLE);
-                        lineH861c.setVisibility(View.VISIBLE);
-                        secH861d.setVisibility(View.VISIBLE);
-                        lineH861d.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1613,7 +1556,15 @@ public class Cost1 extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH862a[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH862b.setVisibility(View.VISIBLE);
+                        lineH862b.setVisibility(View.VISIBLE);
+                        secH862c.setVisibility(View.VISIBLE);
+                        lineH862c.setVisibility(View.VISIBLE);
+                        secH862d.setVisibility(View.VISIBLE);
+                        lineH862d.setVisibility(View.VISIBLE);
+
+                    } else {
                         secH862b.setVisibility(View.GONE);
                         lineH862b.setVisibility(View.GONE);
                         txtH862b.setText("");
@@ -1623,14 +1574,6 @@ public class Cost1 extends Activity {
                         secH862d.setVisibility(View.GONE);
                         lineH862d.setVisibility(View.GONE);
                         txtH862d.setText("");
-
-                    } else {
-                        secH862b.setVisibility(View.VISIBLE);
-                        lineH862b.setVisibility(View.VISIBLE);
-                        secH862c.setVisibility(View.VISIBLE);
-                        lineH862c.setVisibility(View.VISIBLE);
-                        secH862d.setVisibility(View.VISIBLE);
-                        lineH862d.setVisibility(View.VISIBLE);
 
                     }
                 }
@@ -1897,8 +1840,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH811b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "1" : txtH811b.getText().toString()) < 1 || Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "999" : txtH811b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "0" : txtH811b.getText().toString()) < 0 || Integer.valueOf(txtH811b.getText().toString().length() == 0 ? "999" : txtH811b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH811b.requestFocus();
                 return;
             } else if (!rdoH811c1.isChecked() & !rdoH811c2.isChecked() & !rdoH811c3.isChecked() & secH811c.isShown()) {
@@ -1909,8 +1852,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH811d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "1" : txtH811d.getText().toString()) < 1 || Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "999999" : txtH811d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "0" : txtH811d.getText().toString()) < 0 || Integer.valueOf(txtH811d.getText().toString().length() == 0 ? "999999" : txtH811d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH811d.requestFocus();
                 return;
             } else if (!rdoH812a1.isChecked() & !rdoH812a2.isChecked() & secH812a.isShown()) {
@@ -1921,8 +1864,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH812b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "1" : txtH812b.getText().toString()) < 1 || Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "999" : txtH812b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "0" : txtH812b.getText().toString()) < 0 || Integer.valueOf(txtH812b.getText().toString().length() == 0 ? "999" : txtH812b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH812b.requestFocus();
                 return;
             } else if (!rdoH812c1.isChecked() & !rdoH812c2.isChecked() & !rdoH812c3.isChecked() & secH812c.isShown()) {
@@ -1933,8 +1876,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH812d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "1" : txtH812d.getText().toString()) < 1 || Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "999999" : txtH812d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "0" : txtH812d.getText().toString()) < 0 || Integer.valueOf(txtH812d.getText().toString().length() == 0 ? "999999" : txtH812d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH812d.requestFocus();
                 return;
             } else if (!rdoH813a1.isChecked() & !rdoH813a2.isChecked() & secH813a.isShown()) {
@@ -1945,8 +1888,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH813b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "1" : txtH813b.getText().toString()) < 1 || Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "999" : txtH813b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "0" : txtH813b.getText().toString()) < 0 || Integer.valueOf(txtH813b.getText().toString().length() == 0 ? "999" : txtH813b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH813b.requestFocus();
                 return;
             } else if (!rdoH813c1.isChecked() & !rdoH813c2.isChecked() & !rdoH813c3.isChecked() & secH813c.isShown()) {
@@ -1957,8 +1900,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH813d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "1" : txtH813d.getText().toString()) < 1 || Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "999999" : txtH813d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "0" : txtH813d.getText().toString()) < 0 || Integer.valueOf(txtH813d.getText().toString().length() == 0 ? "999999" : txtH813d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH813d.requestFocus();
                 return;
             } else if (!rdoH814a1.isChecked() & !rdoH814a2.isChecked() & secH814a.isShown()) {
@@ -1969,8 +1912,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH814b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "1" : txtH814b.getText().toString()) < 1 || Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "999" : txtH814b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "0" : txtH814b.getText().toString()) < 0 || Integer.valueOf(txtH814b.getText().toString().length() == 0 ? "999" : txtH814b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH814b.requestFocus();
                 return;
             } else if (!rdoH814c1.isChecked() & !rdoH814c2.isChecked() & !rdoH814c3.isChecked() & secH814c.isShown()) {
@@ -1981,8 +1924,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH814d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "1" : txtH814d.getText().toString()) < 1 || Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "999999" : txtH814d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "0" : txtH814d.getText().toString()) < 0 || Integer.valueOf(txtH814d.getText().toString().length() == 0 ? "999999" : txtH814d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH814d.requestFocus();
                 return;
             } else if (!rdoH815a1.isChecked() & !rdoH815a2.isChecked() & secH815a.isShown()) {
@@ -1993,8 +1936,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH815b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "1" : txtH815b.getText().toString()) < 1 || Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "999" : txtH815b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "0" : txtH815b.getText().toString()) < 0 || Integer.valueOf(txtH815b.getText().toString().length() == 0 ? "999" : txtH815b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH815b.requestFocus();
                 return;
             } else if (!rdoH815c1.isChecked() & !rdoH815c2.isChecked() & !rdoH815c3.isChecked() & secH815c.isShown()) {
@@ -2005,8 +1948,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH815d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "1" : txtH815d.getText().toString()) < 1 || Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "999999" : txtH815d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "0" : txtH815d.getText().toString()) < 0 || Integer.valueOf(txtH815d.getText().toString().length() == 0 ? "999999" : txtH815d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH815d.requestFocus();
                 return;
             } else if (!rdoH816a1.isChecked() & !rdoH816a2.isChecked() & secH816a.isShown()) {
@@ -2017,8 +1960,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH816b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "1" : txtH816b.getText().toString()) < 1 || Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "999" : txtH816b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "0" : txtH816b.getText().toString()) < 0 || Integer.valueOf(txtH816b.getText().toString().length() == 0 ? "999" : txtH816b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH816b.requestFocus();
                 return;
             } else if (!rdoH816c1.isChecked() & !rdoH816c2.isChecked() & !rdoH816c3.isChecked() & secH816c.isShown()) {
@@ -2029,8 +1972,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH816d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "1" : txtH816d.getText().toString()) < 1 || Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "999999" : txtH816d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "0" : txtH816d.getText().toString()) < 0 || Integer.valueOf(txtH816d.getText().toString().length() == 0 ? "999999" : txtH816d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH816d.requestFocus();
                 return;
             } else if (!rdoH821a1.isChecked() & !rdoH821a2.isChecked() & secH821a.isShown()) {
@@ -2041,8 +1984,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH821b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "1" : txtH821b.getText().toString()) < 1 || Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "999" : txtH821b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "0" : txtH821b.getText().toString()) < 0 || Integer.valueOf(txtH821b.getText().toString().length() == 0 ? "999" : txtH821b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH821b.requestFocus();
                 return;
             } else if (!rdoH821c1.isChecked() & !rdoH821c2.isChecked() & !rdoH821c3.isChecked() & secH821c.isShown()) {
@@ -2053,8 +1996,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH821d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "1" : txtH821d.getText().toString()) < 1 || Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "999999" : txtH821d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "0" : txtH821d.getText().toString()) < 0 || Integer.valueOf(txtH821d.getText().toString().length() == 0 ? "999999" : txtH821d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH821d.requestFocus();
                 return;
             } else if (!rdoH831.isChecked() & !rdoH832.isChecked() & secH83.isShown()) {
@@ -2069,8 +2012,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH831b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "1" : txtH831b.getText().toString()) < 1 || Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "999" : txtH831b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "0" : txtH831b.getText().toString()) < 0 || Integer.valueOf(txtH831b.getText().toString().length() == 0 ? "999" : txtH831b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH831b.requestFocus();
                 return;
             } else if (!rdoH831c1.isChecked() & !rdoH831c2.isChecked() & !rdoH831c3.isChecked() & secH831c.isShown()) {
@@ -2081,8 +2024,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH831d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "1" : txtH831d.getText().toString()) < 1 || Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "999999" : txtH831d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "0" : txtH831d.getText().toString()) < 0 || Integer.valueOf(txtH831d.getText().toString().length() == 0 ? "999999" : txtH831d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH831d.requestFocus();
                 return;
             } else if (!rdoH832a1.isChecked() & !rdoH832a2.isChecked() & secH832a.isShown()) {
@@ -2093,8 +2036,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH832b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "1" : txtH832b.getText().toString()) < 1 || Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "999" : txtH832b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "0" : txtH832b.getText().toString()) < 0 || Integer.valueOf(txtH832b.getText().toString().length() == 0 ? "999" : txtH832b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH832b.requestFocus();
                 return;
             } else if (!rdoH832c1.isChecked() & !rdoH832c2.isChecked() & !rdoH832c3.isChecked() & secH832c.isShown()) {
@@ -2105,8 +2048,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH832d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "1" : txtH832d.getText().toString()) < 1 || Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "999999" : txtH832d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "0" : txtH832d.getText().toString()) < 0 || Integer.valueOf(txtH832d.getText().toString().length() == 0 ? "999999" : txtH832d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH832d.requestFocus();
                 return;
             } else if (!rdoH841.isChecked() & !rdoH842.isChecked() & secH84.isShown()) {
@@ -2121,8 +2064,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH841b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "1" : txtH841b.getText().toString()) < 1 || Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "999" : txtH841b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "0" : txtH841b.getText().toString()) < 0 || Integer.valueOf(txtH841b.getText().toString().length() == 0 ? "999" : txtH841b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH841b.requestFocus();
                 return;
             } else if (!rdoH841c1.isChecked() & !rdoH841c2.isChecked() & !rdoH841c3.isChecked() & secH841c.isShown()) {
@@ -2133,8 +2076,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH841d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "1" : txtH841d.getText().toString()) < 1 || Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "999999" : txtH841d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "0" : txtH841d.getText().toString()) < 0 || Integer.valueOf(txtH841d.getText().toString().length() == 0 ? "999999" : txtH841d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH841d.requestFocus();
                 return;
             } else if (!rdoH842a1.isChecked() & !rdoH842a2.isChecked() & secH842a.isShown()) {
@@ -2145,8 +2088,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH842b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "1" : txtH842b.getText().toString()) < 1 || Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "999" : txtH842b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "0" : txtH842b.getText().toString()) < 0 || Integer.valueOf(txtH842b.getText().toString().length() == 0 ? "999" : txtH842b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH842b.requestFocus();
                 return;
             } else if (!rdoH842c1.isChecked() & !rdoH842c2.isChecked() & !rdoH842c3.isChecked() & secH842c.isShown()) {
@@ -2157,8 +2100,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH842d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "1" : txtH842d.getText().toString()) < 1 || Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "999999" : txtH842d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "0" : txtH842d.getText().toString()) < 0 || Integer.valueOf(txtH842d.getText().toString().length() == 0 ? "999999" : txtH842d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH842d.requestFocus();
                 return;
             } else if (!rdoH851a1.isChecked() & !rdoH851a2.isChecked() & secH851a.isShown()) {
@@ -2169,8 +2112,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH851b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "1" : txtH851b.getText().toString()) < 1 || Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "999" : txtH851b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "0" : txtH851b.getText().toString()) < 0 || Integer.valueOf(txtH851b.getText().toString().length() == 0 ? "999" : txtH851b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH851b.requestFocus();
                 return;
             } else if (!rdoH851c1.isChecked() & !rdoH851c2.isChecked() & !rdoH851c3.isChecked() & secH851c.isShown()) {
@@ -2181,8 +2124,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH851d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "1" : txtH851d.getText().toString()) < 1 || Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "999999" : txtH851d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "0" : txtH851d.getText().toString()) < 0 || Integer.valueOf(txtH851d.getText().toString().length() == 0 ? "999999" : txtH851d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH851d.requestFocus();
                 return;
             } else if (!rdoH861.isChecked() & !rdoH862.isChecked() & secH86.isShown()) {
@@ -2197,8 +2140,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH861b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "1" : txtH861b.getText().toString()) < 1 || Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "999" : txtH861b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "0" : txtH861b.getText().toString()) < 0 || Integer.valueOf(txtH861b.getText().toString().length() == 0 ? "999" : txtH861b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH861b.requestFocus();
                 return;
             } else if (!rdoH861c1.isChecked() & !rdoH861c2.isChecked() & !rdoH861c3.isChecked() & secH861c.isShown()) {
@@ -2209,8 +2152,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH861d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "1" : txtH861d.getText().toString()) < 1 || Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "999999" : txtH861d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "0" : txtH861d.getText().toString()) < 0 || Integer.valueOf(txtH861d.getText().toString().length() == 0 ? "999999" : txtH861d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH861d.requestFocus();
                 return;
             } else if (!rdoH862a1.isChecked() & !rdoH862a2.isChecked() & secH862a.isShown()) {
@@ -2221,8 +2164,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH862b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "1" : txtH862b.getText().toString()) < 1 || Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "999" : txtH862b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "0" : txtH862b.getText().toString()) < 0 || Integer.valueOf(txtH862b.getText().toString().length() == 0 ? "999" : txtH862b.getText().toString()) > 999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
                 txtH862b.requestFocus();
                 return;
             } else if (!rdoH862c1.isChecked() & !rdoH862c2.isChecked() & !rdoH862c3.isChecked() & secH862c.isShown()) {
@@ -2233,8 +2176,8 @@ public class Cost1 extends Activity {
                 Connection.MessageBox(Cost1.this, "Required field: প্রতি ইউনিটের মূল্য কত.");
                 txtH862d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "1" : txtH862d.getText().toString()) < 1 || Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "999999" : txtH862d.getText().toString()) > 999999) {
-                Connection.MessageBox(Cost1.this, "Value should be between 1 and 999999(প্রতি ইউনিটের মূল্য কত).");
+            } else if (Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "0" : txtH862d.getText().toString()) < 0 || Integer.valueOf(txtH862d.getText().toString().length() == 0 ? "999999" : txtH862d.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost1.this, "Value should be between 0 and 999999(প্রতি ইউনিটের মূল্য কত).");
                 txtH862d.requestFocus();
                 return;
             }

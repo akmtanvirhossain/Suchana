@@ -88,6 +88,7 @@
         <activity android:name=".Cost2" />
         <activity android:name=".Cost3" />
         <activity android:name=".HandWash" />
+        <activity android:name=".NutHealth" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

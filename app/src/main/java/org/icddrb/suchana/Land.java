@@ -459,8 +459,8 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: আয়তন/জমির পরিমান (শতাংশ).");
                 txtH5c.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 1 || Double.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
-                Connection.MessageBox(Land.this, "Value should be between 1 and 100(আয়তন/জমির পরিমান (শতাংশ)).");
+            } else if (Double.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 0 || Double.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
+                Connection.MessageBox(Land.this, "Value should be between 0 and 100(আয়তন/জমির পরিমান (শতাংশ)).");
                 txtH5c.requestFocus();
                 return;
             } else if (spnH5d.getSelectedItemPosition() == 0 & secH5d.isShown()) {

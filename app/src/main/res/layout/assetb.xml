@@ -12,7 +12,6 @@
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
-
         <include
             layout="@layout/home_button"
             android:layout_width="wrap_content"
