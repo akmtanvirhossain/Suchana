@@ -661,7 +661,7 @@
                     android:id="@+id/VlblM217a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মায়ের রক্তস্বল্পতা প্রতিরোধ করে"
+                    android:text="মায়ের রক্ত স্বল্পতা প্রতিরোধ করে"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1283,7 +1283,7 @@
                     android:id="@+id/VlblM219f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য ঔষধ"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox

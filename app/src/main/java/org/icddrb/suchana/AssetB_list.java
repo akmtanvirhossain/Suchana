@@ -81,6 +81,8 @@ public class AssetB_list extends Activity {
             TableName = "AssetB";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
+            C.Save("Delete from AssetB where SlNo is null or SlNo=''");
+
             ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {
 

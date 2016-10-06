@@ -1108,7 +1108,7 @@ public class Knowledge extends Activity {
             listM221b.add("07-বেসরকারী ক্লিনিক");
             listM221b.add("08-ঔষধের দোকান");
             listM221b.add("09-MBBS ডাক্তার");
-            listM221b.add("10-প্যানেল ডাক্তার");
+            listM221b.add("10-পীর ফকির");
             listM221b.add("11-কবিরাজ/পল্লী ডাক্তার  ");
             listM221b.add("12-হোমিত্তপ্যাথি ");
             listM221b.add("13-কমিউনিটি ক্লিনিক");
@@ -1133,7 +1133,7 @@ public class Knowledge extends Activity {
             listM221c.add("07-বেসরকারী ক্লিনিক");
             listM221c.add("08-ঔষধের দোকান");
             listM221c.add("09-MBBS ডাক্তার");
-            listM221c.add("10-প্যানেল ডাক্তার");
+            listM221c.add("10-পীর ফকির");
             listM221c.add("11-কবিরাজ/পল্লী ডাক্তার  ");
             listM221c.add("12-হোমিত্তপ্যাথি ");
             listM221c.add("13-কমিউনিটি ক্লিনিক");

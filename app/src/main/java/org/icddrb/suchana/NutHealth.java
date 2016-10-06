@@ -507,7 +507,7 @@ public class NutHealth extends Activity {
 
             //Hide all skip variables
             secM31x1.setVisibility(View.GONE);
-            secM32.setVisibility(View.GONE);
+            //secM32.setVisibility(View.GONE);
             secM36.setVisibility(View.GONE);
             secM38.setVisibility(View.GONE);
             secM38X1.setVisibility(View.GONE);

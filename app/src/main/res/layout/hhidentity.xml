@@ -751,7 +751,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -804,7 +804,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -842,7 +842,7 @@
                         android:layout_width="280sp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:text="আপনার পরিবারে 0-23 months (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
+                        android:text="আপনার পরিবারে ০-২৩ মাস (under 2 years) শিশু সহ 15-40 বছর বয়সী স্বামী পরিত্যাক্ত অথবা বিধবা নারী সদস্য রয়েছে কী?"
                         android:textSize="20sp" />
 
                     <RadioGroup
@@ -857,7 +857,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -910,7 +910,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -963,7 +963,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -1016,7 +1016,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -1069,7 +1069,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
@@ -1280,7 +1280,7 @@
                         android:id="@+id/VlblH07f"
                         android:layout_width="300sp"
                         android:layout_height="wrap_content"
-                        android:text="6-মাইগ্রেশন/স্থানান্তর"
+                        android:text="6-মাইগ্রেশন/স্থানান্ত "
                         android:textSize="20sp" />
 
                     <CheckBox
@@ -1401,7 +1401,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingRight="10dp"
-                            android:text="হ্যা"
+                            android:text="হ্যাঁ"
                             android:textSize="20sp" />
 
                         <RadioButton
