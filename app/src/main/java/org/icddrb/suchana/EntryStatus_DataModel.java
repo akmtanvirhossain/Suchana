@@ -75,7 +75,7 @@ public class EntryStatus_DataModel {
             setT("T24");
         else if (TableName.toLowerCase().equals("womenemp"))
             setT("T25");
-        else if (TableName.toLowerCase().equals("domviolence"))
+        else if (TableName.toLowerCase().equals("domviolance"))
             setT("T26");
         else if (TableName.toLowerCase().equals("fooddiversity"))
             setT("T27");

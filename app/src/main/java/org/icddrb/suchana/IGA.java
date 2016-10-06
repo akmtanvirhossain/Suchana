@@ -607,7 +607,11 @@ public class IGA extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), PregHis.class);
+                            intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
                             finish();
@@ -2579,8 +2583,8 @@ public class IGA extends Activity {
 
 
             lblNext= (TextView) findViewById(R.id.lblNext);
-            lblNext.setEnabled(false);
-            cmdForward.setEnabled(false);
+            // lblNext.setEnabled(false);
+            // cmdForward.setEnabled(false);
 
             DataSearch(RND,SUCHANAID);
 

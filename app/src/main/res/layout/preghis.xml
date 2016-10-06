@@ -1,129 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:scrollbars="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="45sp"
-        android:orientation="horizontal"
-        android:background="@color/pageHeadingBack">
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
 
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/cmdBack"
-            android:background="@color/pageHeadingBack"
-            android:src="@drawable/back"
             android:layout_width="50sp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10sp"
+            android:text="IGA"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/lblHeading"
-            android:text="PregHis"
-            android:paddingLeft="10sp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:textSize="20sp"
-            android:textColor="@color/pageHeading" />
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="PregHis"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Knowledge"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cmdForward"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+
     </LinearLayout>
 
     <View
-        android:layout_height="1dip"
         android:layout_width="fill_parent"
+        android:layout_height="1dip"
         android:layout_marginBottom="5sp"
         android:background="#CCCCCC" />
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:overScrollMode="always"
         android:isScrollContainer="true"
+        android:overScrollMode="always"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="vertical">
 
         <LinearLayout
-            android:layout_marginLeft="10sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/secRnd"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblRnd"
-                    android:text="Rnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:text="Rnd"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:text="রাউন্ড নাম্বার"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="রাউন্ড নম্বার"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtRnd"
-                    android:maxLength="1"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineRnd"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblSuchanaID"
-                    android:text="SuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:text="SuchanaID"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:text="উপকারভোগী সদস্য আইডি"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="উপকারভোগী সদস্য আইডি"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
-                    android:maxLength="12"
-                    android:layout_width="100sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineSuchanaID"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -134,131 +171,131 @@
 
                 <TextView
                     android:id="@+id/lblHlblM14"
-                    android:text="M1. মায়ের প্রজনন সম্পর্কীয় ইতিহাস"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1. মায়ের প্রজনন সম্পর্কীয় ইতিহাস"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM14"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM11"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM11"
-                    android:text="M11"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="1)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM11"
-                    android:text="প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM11"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM11"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM12"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM12"
-                    android:text="M12"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="2)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM12"
-                    android:text="প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM12"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM12"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM13"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM13"
-                    android:text="M13"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="3)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM13"
-                    android:text="আপনি সর্বমোট কতবার গর্ভধারণ করেছেন?  (সর্বমোট গর্ভধারণের সংখ্যা, গর্ভপাত/MR এবং গর্ভধারণ সহ)"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনি সর্বমোট কতবার গর্ভধারণ করেছেন?  (সর্বমোট গর্ভধারণের সংখ্যা, গর্ভপাত/MR এবং গর্ভধারণ সহ)"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM13"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM13"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -269,207 +306,207 @@
 
                 <TextView
                     android:id="@+id/lblHlblM14a"
-                    android:text="M1.4 গর্ভধারণের ফলাফল"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1.4 গর্ভধারণের ফলাফল"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM14a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM14a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM14a"
-                    android:text="M14a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM14a"
-                    android:text="জীবিত প্রসব"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="জীবিত প্রসব"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM14a"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM14a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM14b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM14b"
-                    android:text="M14b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM14b"
-                    android:text="গর্ভপাত"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="গর্ভপাত"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM14b"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM14b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM14c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM14c"
-                    android:text="M14c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM14c"
-                    android:text="এম,আর (MR)"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="এম,আর (MR)"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM14c"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM14c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM14d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM14d"
-                    android:text="M14d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM14d"
-                    android:text="মৃত প্রসব (still birth)"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="মৃত প্রসব (still birth)"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM14d"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM14d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM14e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM14e"
-                    android:text="M14e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM14e"
-                    android:text="গর্ভে মৃত্যু (IUD)"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="গর্ভে মৃত্যু (IUD)"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM14e"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM14e"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -480,200 +517,200 @@
 
                 <TextView
                     android:id="@+id/lblHlblM15"
-                    android:text="M1.5 আপনার সর্বমোট কতজন জীবিত প্রসবকৃত সন্তান কত বয়সে মারা গেছে?"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1.5 আপনার সর্বমোট কতজন জীবিত প্রসবকৃত সন্তান কত বয়সে মারা গেছে?"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM15"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15a"
-                    android:text="M15a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15a"
-                    android:text="কেউ মারা যায়নি"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="কেউ মারা যায়নি"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15a"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM15a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15b"
-                    android:text="M15b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15b"
-                    android:text="1 year এর মধ্যে"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="1 year এর মধ্যে"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15b"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM15b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15c"
-                    android:text="M15c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15c"
-                    android:text="2 year এর মধ্যে"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="2 year এর মধ্যে"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15c"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM15c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15d"
-                    android:text="M15d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15d"
-                    android:text="5 year এর মধ্যে"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="5 year এর মধ্যে"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15d"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM15d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15e"
-                    android:text="M15e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15e"
-                    android:text="অনান্য"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="অনান্য"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15e"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -681,144 +718,144 @@
 
             <View
                 android:id="@+id/lineM15eX"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM15f"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM15f"
-                    android:text="M15f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM15f"
-                    android:text="মোট সংখ্যা"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="মোট সংখ্যা"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM15f"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM15f"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM16"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM16"
-                    android:text="M16"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M1.6"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM16"
-                    android:text="আপনি কি সর্বশেষ গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়েছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনি কি সর্বশেষ গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM16"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM161"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM162"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM163"
-                        android:text="জানা নেই" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="জানা নেই"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM16"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM17"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM17"
-                    android:text="M17"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M1.7"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM17"
-                    android:text="গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়ে থাকলে কবে শুরু করেছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়ে থাকলে কবে শুরু করেছিলেন?"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM17"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM17"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -829,169 +866,169 @@
 
                 <TextView
                     android:id="@+id/lblHlblM18"
-                    android:text="M1.8 গর্ভাবস্তায় প্রতি মাসে গড়ে কয়টি আয়রন-ফলিক এসিড খেয়েছেন ?"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1.8 গর্ভাবস্তায় প্রতি মাসে গড়ে কয়টি আয়রন-ফলিক এসিড খেয়েছেন ?"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM18"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM18a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM18a"
-                    android:text="M18a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM18a"
-                    android:text="1st ট্রাইমেস্টার"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="1st ট্রাইমেস্টার"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM18a"
-                    android:maxLength="3"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM18a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM18b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM18b"
-                    android:text="M18b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM18b"
-                    android:text="2nd ট্রাইমেস্টার"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="2nd ট্রাইমেস্টার"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM18b"
-                    android:maxLength="3"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM18b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM18c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM18c"
-                    android:text="M18c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM18c"
-                    android:text="3rd ট্রাইমেস্টার"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="3rd ট্রাইমেস্টার"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM18c"
-                    android:maxLength="3"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM18c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM19"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM19"
-                    android:text="M19"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M19"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM19"
-                    android:text="আপনার ছোট শিশুটির ক্ষেত্রে গর্ভাবস্তার সময় আপনি কতবার স্বাস্থ্য পরীক্ষার জন্য গিয়েছিলেন ? (ANC)"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনার ছোট শিশুটির ক্ষেত্রে গর্ভাবস্তার সময় আপনি কতবার স্বাস্থ্য পরীক্ষার জন্য গিয়েছিলেন ? (ANC)"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM19"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM19"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -1002,523 +1039,523 @@
 
                 <TextView
                     android:id="@+id/lblHlblM110"
-                    android:text="M1.10 সর্বশেষ শিশুর ডেলিভারির আগে সেবার জন্যে আপনি কোথায় গিয়েছিলেন?"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1.10 সর্বশেষ শিশুর ডেলিভারির আগে সেবার জন্যে আপনি কোথায় গিয়েছিলেন?"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM110"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110a"
-                    android:text="M110a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110a"
-                    android:text="উপজেলা/সরকারী মেডিকেল স্বাস্থ্য কমপ্লেক্স"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="উপজেলা/সরকারী মেডিকেল স্বাস্থ্য কমপ্লেক্স"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110a"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110b"
-                    android:text="M110b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110b"
-                    android:text="জেলা হাসপাতাল"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="জেলা হাসপাতাল"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110b"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110c"
-                    android:text="M110c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110c"
-                    android:text="মাতৃসদন"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="মাতৃসদন"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110c"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110d"
-                    android:text="M110d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110d"
-                    android:text="পরিবার পরিকল্পনা কেন্দ্র (FWC/CC)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পরিবার পরিকল্পনা কেন্দ্র (FWC/CC)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110d"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110e"
-                    android:text="M110e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110e"
-                    android:text="ব্র্যাক সুস্বাস্থ্য"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="ব্র্যাক সুস্বাস্থ্য"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110e"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110e"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110f"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110f"
-                    android:text="M110f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110f"
-                    android:text="প্রাইভেট হাসপাতাল/ক্লিনিক"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="প্রাইভেট হাসপাতাল/ক্লিনিক"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110f"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110f"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110g"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110g"
-                    android:text="M110g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110g"
-                    android:text="প্রাইভেট চেম্বার"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="প্রাইভেট চেম্বার"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110g"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110g"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110h"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110h"
-                    android:text="M110h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="h)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110h"
-                    android:text="স্থানীয় NGO স্বাস্থ্য কেন্দ্র"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="স্থানীয় NGO স্বাস্থ্য কেন্দ্র"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110h"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110h"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110i"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110i"
-                    android:text="M110i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="i)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110i"
-                    android:text="কবিরায/পল্লি চিকিৎসক"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="কবিরায/পল্লি চিকিৎসক"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110i"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110i"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110j"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110j"
-                    android:text="M110j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="j)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110j"
-                    android:text="ফার্মেসি/ঔষুধ বিক্রেতা"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="ফার্মেসি/ঔষুধ বিক্রেতা"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110j"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110j"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110k"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110k"
-                    android:text="M110k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="k)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110k"
-                    android:text="বাড়িতে"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="বাড়িতে"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110k"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110k"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110l"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110l"
-                    android:text="M110l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="l)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110l"
-                    android:text="মনে নেই"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="মনে নেই"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110l"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110l"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110m"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110m"
-                    android:text="M110m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="m)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110m"
-                    android:text="অন্যান্য"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM110m"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110m"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM110mX"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM110mX"
-                    android:text="M110mX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="x)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM110mX"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM110mX"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM110mX"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -1529,1139 +1566,1146 @@
 
                 <TextView
                     android:id="@+id/lblHlblM111"
-                    android:text="M1.11 সর্বশেষ শিশুর ডেলিভারির আগে সেবার জন্যে আপনি কার কাছে গিয়েছিলেন?"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M1.11 সর্বশেষ শিশুর ডেলিভারির আগে সেবার জন্যে আপনি কার কাছে গিয়েছিলেন?"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/linelblM111"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111a"
-                    android:text="M111a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111a"
-                    android:text="গ্রাম্য ডাক্তার/পল্লী চিকিৎসক"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="গ্রাম্য ডাক্তার/পল্লী চিকিৎসক"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111a"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111b"
-                    android:text="M111b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111b"
-                    android:text="ব্র্যাক সাস্থসেবিকা"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="ব্র্যাক সাস্থসেবিকা"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111b"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111c"
-                    android:text="M111c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111c"
-                    android:text="পরিবার কল্যাণ পরিদর্শক (FWV/HT)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পরিবার কল্যাণ পরিদর্শক (FWV/HT)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111c"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111d"
-                    android:text="M111d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111d"
-                    android:text="দাই (TBA)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="দাই (TBA)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111d"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111e"
-                    android:text="M111e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111e"
-                    android:text="দাই (TBA)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="দাই (TBA)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111e"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111e"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111f"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111f"
-                    android:text="M111f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111f"
-                    android:text="প্রশিক্ষণপ্রাপ্ত দাই (CSBA)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="প্রশিক্ষণপ্রাপ্ত দাই (CSBA)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111f"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111f"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111g"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111g"
-                    android:text="M111g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111g"
-                    android:text="হোমিওপ্যাথিক চিকিৎসক"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="হোমিওপ্যাথিক চিকিৎসক"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111g"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111g"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111h"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111h"
-                    android:text="M111h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="h)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111h"
-                    android:text="কবিরাজ"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="কবিরাজ"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111h"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111h"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111i"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111i"
-                    android:text="M111i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="i)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111i"
-                    android:text="পীর/ফকির"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পীর/ফকির"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111i"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111i"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111j"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111j"
-                    android:text="M111j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="j)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111j"
-                    android:text="MBBS  ডাক্তার"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="MBBS  ডাক্তার"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111j"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111j"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111k"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111k"
-                    android:text="M111k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="k)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111k"
-                    android:text="পুষ্টি আপা (CNO/CNP)"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পুষ্টি আপা (CNO/CNP)"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111k"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111k"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111l"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111l"
-                    android:text="M111l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="l)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111l"
-                    android:text="ঔষধ বিক্রেতা"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="ঔষধ বিক্রেতা"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111l"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111l"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111m"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111m"
-                    android:text="M111m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="m)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111m"
-                    android:text="নার্স/প্যারামেডিক"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="নার্স/প্যারামেডিক"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111m"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111m"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111n"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111n"
-                    android:text="M111n"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="n)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111n"
-                    android:text="অন্যান্য"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM111n"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111n"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM111nX"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM111nX"
-                    android:text="M111nX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="x)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM111nX"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM111nX"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM111nX"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM112"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM112"
-                    android:text="M112"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M112"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM112"
-                    android:text="সর্বশেষ শিশুর ডেলিভারি/প্রসব কে করিয়েছেন?"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="সর্বশেষ শিশুর ডেলিভারি/প্রসব কে করিয়েছেন?"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM112"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM112"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM112X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM112X"
-                    android:text="M112X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M112X"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM112X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM112X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM112X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM113"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM113"
-                    android:text="M113"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M113"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM113"
-                    android:text="কিভাবে প্রসবটি সম্পন্ন হয়েছিল?"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="কিভাবে প্রসবটি সম্পন্ন হয়েছিল?"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM113"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM113"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM114"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM114"
-                    android:text="M114"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M114"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM114"
-                    android:text="আপনার শেষ বাচ্চাটির প্রসব কোথায় হয়েছিল?"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনার শেষ বাচ্চাটির প্রসব কোথায় হয়েছিল?"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM114"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM114"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM114X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM114X"
-                    android:text="M114X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M114X"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM114X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM114X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM114X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM115"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM115"
-                    android:text="M115"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M115"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM115"
-                    android:text="সর্বশেষ শিশুর ক্ষেত্রে আপনি কি কোনো গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="সর্বশেষ শিশুর ক্ষেত্রে আপনি কি কোনো গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM115"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1151"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1152"
-                        android:text="এখনো সময় আছে" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="এখনো সময় আছে"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1153"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM115"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM116"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM116"
-                    android:text="M116"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M116"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM116"
-                    android:text="কতবার পেয়েছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="কতবার পেয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM116"
-                    android:maxLength="2"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="2"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM116"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM117"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM117"
-                    android:text="M117"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M117"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM117"
-                    android:text="ডেলিভারির কতদিন পর আপনি গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="ডেলিভারির কতদিন পর আপনি গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM117"
-                    android:maxLength="3"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM117"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM118"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM118"
-                    android:text="M118"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M118"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM118"
-                    android:text="আপনাকে কি সর্বশেষ ডেলিভারির পর ভিটামিন এ ক্যাপসুল দেয়া  হয়েছিল? (ডেলিভারির 45 Days এর মধ্যে)?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনাকে কি সর্বশেষ ডেলিভারির পর ভিটামিন এ ক্যাপসুল দেয়া  হয়েছিল? (ডেলিভারির 45 Days এর মধ্যে)?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM118"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1181"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1182"
-                        android:text="এখনো সময় আছে" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="এখনো সময় আছে"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1183"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM118"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM119"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM119"
-                    android:text="M119"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M119"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM119"
-                    android:text="আপনি কি আপনার  শেষ গর্ভধারণের সময় কোনো ধনুষ্টঙ্কারের টিকা (TT vaccine) পেয়েছিলেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনি কি আপনার  শেষ গর্ভধারণের সময় কোনো ধনুষ্টঙ্কারের টিকা (TT vaccine) পেয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM119"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1191"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1192"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1193"
-                        android:text="NA" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="NA"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM119"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM120"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM120"
-                    android:text="M120"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M120"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM120"
-                    android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম খেয়েছেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম খেয়েছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM120"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1201"
-                        android:text="কম" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="কম"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1202"
-                        android:text="একইরকম" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="একইরকম"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1203"
-                        android:text="বেশি" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="বেশি"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM120"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM121"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM121"
-                    android:text="M121"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M121"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM121"
-                    android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় দিনের বেলায় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম বিশ্রাম নিয়েছেন?"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় দিনের বেলায় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম বিশ্রাম নিয়েছেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM121"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1211"
-                        android:text="কম" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="কম"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1212"
-                        android:text="একইরকম" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="একইরকম"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM1213"
-                        android:text="বেশি" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="বেশি"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM121"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:paddingTop="20sp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
 
                 <Button
                     android:id="@+id/cmdSave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:background="@drawable/button_style"
-                    android:textSize="20sp"
                     android:text=" Save -> Continue "
-                    android:layout_marginBottom="10sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5sp"
+        android:background="#CCCCCC" />
+
 </LinearLayout>

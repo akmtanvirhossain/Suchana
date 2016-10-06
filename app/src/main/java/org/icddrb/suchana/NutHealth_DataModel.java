@@ -248,7 +248,7 @@ public class NutHealth_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchonaID='" + _SuchanaID + "' "))
+            if (C.Existence("Select * from " + TableName + "  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' "))
                 response = UpdateData(context);
             else
                 response = SaveData(context);
@@ -276,7 +276,7 @@ public class NutHealth_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchonaID = '" + _SuchanaID + "',M31a = '" + _M31a + "',M31b = '" + _M31b + "',M31c = '" + _M31c + "',M31d = '" + _M31d + "',M31e = '" + _M31e + "',M31f = '" + _M31f + "',M31g = '" + _M31g + "',M31h = '" + _M31h + "',M31i = '" + _M31i + "',M31x = '" + _M31x + "',M31x1 = '" + _M31x1 + "',M32 = '" + _M32 + "',M33 = '" + _M33 + "',M34 = '" + _M34 + "',M35 = '" + _M35 + "',M36 = '" + _M36 + "',M37 = '" + _M37 + "',M38 = '" + _M38 + "',M38X1 = '" + _M38X1 + "'  Where Rnd='" + _Rnd + "' and SuchonaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',M31a = '" + _M31a + "',M31b = '" + _M31b + "',M31c = '" + _M31c + "',M31d = '" + _M31d + "',M31e = '" + _M31e + "',M31f = '" + _M31f + "',M31g = '" + _M31g + "',M31h = '" + _M31h + "',M31i = '" + _M31i + "',M31x = '" + _M31x + "',M31x1 = '" + _M31x1 + "',M32 = '" + _M32 + "',M33 = '" + _M33 + "',M34 = '" + _M34 + "',M35 = '" + _M35 + "',M36 = '" + _M36 + "',M37 = '" + _M37 + "',M38 = '" + _M38 + "',M38X1 = '" + _M38X1 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();

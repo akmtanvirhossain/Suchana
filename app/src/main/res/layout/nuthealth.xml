@@ -30,7 +30,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Back"
+            android:text="Hadwash"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -125,29 +125,29 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
-                android:id="@+id/secSuchonaID"
+                android:id="@+id/secSuchanaID"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/lblSuchonaID"
+                    android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchonaID"
+                    android:text="SuchanaID"
                     android:textSize="20sp"
                     android:visibility="gone" />
 
                 <TextView
-                    android:id="@+id/VlblSuchonaID"
+                    android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/txtSuchonaID"
+                    android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/lineSuchonaID"
+                android:id="@+id/lineSuchanaID"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

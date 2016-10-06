@@ -35,7 +35,7 @@
             android:visibility="gone" />
 
         <TextView
-            android:layout_width="60sp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Serial"
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:paddingLeft="20sp"
             android:text="জমির  বিবরণ"
             android:textColor="#ffffff"
             android:textStyle="bold" />

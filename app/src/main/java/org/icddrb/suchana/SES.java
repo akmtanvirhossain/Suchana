@@ -612,6 +612,7 @@ public class SES extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
             H21 = IDbundle.getString("H21");
+
             TableName = "SES";
 
             //turnGPSOn();
@@ -663,11 +664,11 @@ public class SES extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(SES.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to go to next form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), AssetB.class);
+                            Intent intent = new Intent(getApplicationContext(), AssetB_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
@@ -3236,8 +3237,8 @@ public class SES extends Activity {
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                 IDBundle.putString("H41a", "");
-                startActivity(new Intent(SES.this, AssetB.class).putExtras(IDBundle));
-                // /  Connection.MessageBox(SES.this, "Saved Successfully");
+                startActivity(new Intent(SES.this, AssetB_list.class).putExtras(IDBundle));
+                //Connection.MessageBox(SES.this, "Saved Successfully");
             } else {
                 Connection.MessageBox(SES.this, status);
                 return;

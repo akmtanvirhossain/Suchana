@@ -230,7 +230,13 @@ public class Land extends Activity {
             } else {
                 SlNo = 1;
             }
-            txtSlNo.setText(String.valueOf(SlNo));
+            if (SLNO.equals("")) {
+                txtSlNo.setText(String.valueOf(SlNo));
+            } else {
+                txtSlNo.setText(SLNO);
+            }
+
+            txtSlNo.setEnabled(false);
             secH5 = (LinearLayout) findViewById(R.id.secH5);
             lineH5 = (View) findViewById(R.id.lineH5);
             VlblH5 = (TextView) findViewById(R.id.VlblH5);

@@ -61,10 +61,9 @@
         <activity android:name=".Savings_list" />
         <activity android:name=".Land" />
         <activity android:name=".Land_list" />
-        <activity android:name=".HDDS" />
-        <activity android:name=".HDDS_list" />
-        <activity android:name=".Savings" />
-        <activity android:name=".Savings_list" />
+        <activity android:name=".FdHabit" />
+        <activity android:name=".FoodDiversity" />
+        <activity android:name=".Anthro" />
         <activity android:name=".Destruction1" />
         <activity android:name=".Destruction1_list" />
         <activity android:name=".Destruction2" />
@@ -87,12 +86,12 @@
         <activity android:name=".Cost1" />
         <activity android:name=".Cost2" />
         <activity android:name=".Cost3" />
-        <activity android:name=".HandWash" />
+        <activity android:name=".FdHabitKnow" />
         <activity android:name=".NutHealth" />
         <activity android:name=".WomenEmp" />
         <activity android:name=".DomViolance" />
-        <activity android:name=".FoodDiversity" />
-        <activity android:name=".Anthro" />
+        <activity android:name=".PregHis" />
+        <activity android:name=".Knowledge" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

@@ -21,7 +21,6 @@ import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -50,7 +49,7 @@ public class AssetB extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    static String H41A = "";
+    static String SLNO = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -72,6 +71,10 @@ public class AssetB extends Activity {
     View lineMSlNo;
     TextView VlblMSlNo;
     Spinner spnMSlNo;
+    LinearLayout secSlNo;
+    View lineSlNo;
+    TextView VlblSlNo;
+    EditText txtSlNo;
     LinearLayout seclblH4;
     LinearLayout seclblH41;
     LinearLayout secH41a;
@@ -226,7 +229,7 @@ public class AssetB extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-
+            SLNO = IDbundle.getString("SlNo");
 
             TableName = "AssetB";
 
@@ -296,7 +299,7 @@ public class AssetB extends Activity {
                     adb.show();
                 }
             });
-            cmdForward.setVisibility(View.INVISIBLE);
+            // cmdForward.setVisibility(View.INVISIBLE);
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -310,6 +313,7 @@ public class AssetB extends Activity {
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             txtSuchanaID.setText(SUCHANAID);
             txtSuchanaID.setEnabled(false);
+
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
@@ -317,248 +321,42 @@ public class AssetB extends Activity {
             spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             seclblH4 = (LinearLayout) findViewById(R.id.seclblH4);
 
-            buttonAssetType01 = (Button) findViewById(R.id.buttonAssetType01);
-            buttonAssetType02 = (Button) findViewById(R.id.buttonAssetType02);
-            buttonAssetType03 = (Button) findViewById(R.id.buttonAssetType03);
-            buttonAssetType04 = (Button) findViewById(R.id.buttonAssetType04);
-            buttonAssetType05 = (Button) findViewById(R.id.buttonAssetType05);
-            buttonAssetType06 = (Button) findViewById(R.id.buttonAssetType06);
-            buttonAssetType07 = (Button) findViewById(R.id.buttonAssetType07);
-            buttonAssetType08 = (Button) findViewById(R.id.buttonAssetType08);
-            buttonAssetType09 = (Button) findViewById(R.id.buttonAssetType09);
-            buttonAssetType10 = (Button) findViewById(R.id.buttonAssetType10);
-            buttonAssetType11 = (Button) findViewById(R.id.buttonAssetType11);
-            buttonAssetType12 = (Button) findViewById(R.id.buttonAssetType12);
-            buttonAssetType13 = (Button) findViewById(R.id.buttonAssetType13);
-            buttonAssetType14 = (Button) findViewById(R.id.buttonAssetType14);
-            buttonAssetType15 = (Button) findViewById(R.id.buttonAssetType15);
-            buttonAssetType16 = (Button) findViewById(R.id.buttonAssetType16);
-            buttonAssetType17 = (Button) findViewById(R.id.buttonAssetType17);
-            buttonAssetType18 = (Button) findViewById(R.id.buttonAssetType18);
-            buttonAssetType19 = (Button) findViewById(R.id.buttonAssetType19);
-            buttonAssetType20 = (Button) findViewById(R.id.buttonAssetType20);
-            buttonAssetType21 = (Button) findViewById(R.id.buttonAssetType21);
-            buttonAssetType22 = (Button) findViewById(R.id.buttonAssetType22);
+            secSlNo = (LinearLayout) findViewById(R.id.secSlNo);
+            lineSlNo = (View) findViewById(R.id.lineSlNo);
+            VlblSlNo = (TextView) findViewById(R.id.VlblSlNo);
+            txtSlNo = (EditText) findViewById(R.id.txtSlNo);
 
-            buttonColor();
+            /*
+            //txtSlNo.setEnabled(false);
+            int SlNo = 0;
+            Cursor cursor = C.GetData("AssetB", "suchanaid", SUCHANAID);
+            if (cursor.getCount() != 0) {
+                SlNo = cursor.getCount() + 1;
+            } else {
+                SlNo = 1;
+            }
+            if (SLNO.equals("")) {
+                txtSlNo.setText(String.valueOf(SlNo));
+            } else {
+                txtSlNo.setText(SLNO);
+            }
+            txtSlNo.setText(String.valueOf(SlNo));
+            */
 
-            buttonAssetType01.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+            if (SLNO.length() == 0)
+                txtSlNo.setText(AssetSerial(RND, SUCHANAID));
+            else
+                txtSlNo.setText(SLNO);
 
 
-                }
-            });
-            buttonAssetType02.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType03.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType04.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType05.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType06.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType07.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType08.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType09.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType10.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType12.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType13.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType14.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType15.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType16.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType17.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType18.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType19.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType20.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType21.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-            buttonAssetType22.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    buttonColor();
-                    (v).setBackgroundColor(Color.CYAN);
-                    ;
-                    spnH41a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
-                }
-            });
-
+            txtSlNo.setEnabled(false);
 
             seclblH41 = (LinearLayout) findViewById(R.id.seclblH41);
             secH41a = (LinearLayout) findViewById(R.id.secH41a);
             lineH41a = (View) findViewById(R.id.lineH41a);
             VlblH41a = (TextView) findViewById(R.id.VlblH41a);
             spnH41a = (Spinner) findViewById(R.id.spnH41a);
-            spnH41a.setClickable(false);
-            spnH41a.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_UP) {
-                        // Toast.makeText(SpinnerActivity.this, "Catch it!", Toast.LENGTH_SHORT).show();
-                    }
-                    return true;
-                }
-            });
+
             List<String> listH41a = new ArrayList<String>();
 
             listH41a.add("");
@@ -593,7 +391,7 @@ public class AssetB extends Activity {
                     if (spnH41a.getSelectedItem().toString().length() == 0) return;
 
                     String spnData = Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-");
-                    DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
+                    //  DataSearchPartial(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), spnData);
                     if (Integer.parseInt(spnData) < 8 | Integer.parseInt(spnData) > 20) {
                         seclblH41a.setVisibility(View.VISIBLE);
                         secH41i.setVisibility(View.VISIBLE);
@@ -1024,7 +822,7 @@ public class AssetB extends Activity {
             secH41fX.setVisibility(View.GONE);
             secH41h.setVisibility(View.GONE);
 
-            DataSearch(RND, SUCHANAID, H41A);
+            DataSearch(RND, SUCHANAID, SLNO);
 
 
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -1177,6 +975,14 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
                 spnMSlNo.requestFocus();
                 return;
+            } else if (txtSlNo.getText().toString().length() == 0 & secSlNo.isShown()) {
+                Connection.MessageBox(AssetB.this, "Required field: Serial No.");
+                txtSlNo.requestFocus();
+                return;
+            } else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "01" : txtSlNo.getText().toString()) < 01 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "10" : txtSlNo.getText().toString()) > 10) {
+                Connection.MessageBox(AssetB.this, "Value should be between 01 and 10(Serial No).");
+                txtSlNo.requestFocus();
+                return;
             } else if (spnH41a.getSelectedItemPosition() == 0 & secH41a.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: সম্পদ.");
                 spnH41a.requestFocus();
@@ -1298,6 +1104,7 @@ public class AssetB extends Activity {
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
             objSave.setMSlNo((spnMSlNo.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-")));
+            objSave.setSlNo(txtSlNo.getText().toString());
             objSave.setH41a((spnH41a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-")));
             objSave.setH41aX(txtH41aX.getText().toString());
             objSave.setH41b(txtH41b.getText().toString());
@@ -1337,35 +1144,16 @@ public class AssetB extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                buttonColor();
+                //buttonColor();
 
-                AssetB_DataModel dx = new AssetB_DataModel();
-                String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
-                List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
-                if (datax.size() > 19) {
-                    cmdForward.setVisibility(View.VISIBLE);
-                }
-
-
-                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
-                e.SaveUpdateData(this);
-
-                //Connection.MessageBox(AssetB.this, "Saved Successfully");
-                if (allItemsCompleted) {
-                    //EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
-                    //e.SaveUpdateData(this);
-
-                    finish();
+                finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                    IDBundle.putString("H41a", "");
-                    startActivity(new Intent(AssetB.this, AssetNB.class).putExtras(IDBundle));
+                //IDBundle.putString("SlNo", txtSlNo.getText().toString());
+                startActivity(new Intent(AssetB.this, AssetB_list.class).putExtras(IDBundle));
                     //Connection.MessageBox(AssetB.this, "Saved Successfully");
-                }
-
-
-            } else {
+                } else {
                 Connection.MessageBox(AssetB.this, status);
                 return;
             }
@@ -1375,17 +1163,20 @@ public class AssetB extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String H41a) {
+    private void DataSearch(String Rnd, String SuchanaID, String SLNO) {
         try {
 
             RadioButton rb;
             AssetB_DataModel d = new AssetB_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and SLNO='" + SLNO + "'";
             List<AssetB_DataModel> data = d.SelectAll(this, SQL);
             for (AssetB_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
                 spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
+                if (item.getSlNo().length() != 0)
+                    txtSlNo.setText(item.getSlNo());
+
                 spnH41a.setSelection(Global.SpinnerItemPositionAnyLength(spnH41a, item.getH41a()));
                 txtH41aX.setText(item.getH41aX());
                 txtH41b.setText(item.getH41b());
@@ -1623,4 +1414,10 @@ public class AssetB extends Activity {
         super.onDestroy();
         turnGPSOff();
     }
+
+
+    private String AssetSerial(String Rnd, String SuchanaID) {
+        return C.ReturnSingleValue("Select (ifnull(max(slno),0)+1)serial from AssetB where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
+    }
+
 }

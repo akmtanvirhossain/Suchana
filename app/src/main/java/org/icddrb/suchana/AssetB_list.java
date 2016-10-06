@@ -12,7 +12,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,7 +35,7 @@ public class AssetB_list extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
-    static String H41A = "";
+    static String SLNO = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -48,7 +47,9 @@ public class AssetB_list extends Activity {
     TextView lblHeading;
     Button btnAdd;
     Button btnRefresh;
+    ImageButton cmdForward;
     String StartTime;
+    Bundle IDbundle;
     private int hour;
     private int minute;
     private int mDay;
@@ -73,32 +74,26 @@ public class AssetB_list extends Activity {
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
-
+            IDbundle = getIntent().getExtras();
+            RND = IDbundle.getString("Rnd");
+            SUCHANAID = IDbundle.getString("SuchanaID");
+            SLNO = IDbundle.getString("SlNo");
             TableName = "AssetB";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
-            lblHeading.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    final int DRAWABLE_RIGHT = 2;
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        if (event.getRawX() >= (lblHeading.getRight() - lblHeading.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                            AlertDialog.Builder adb = new AlertDialog.Builder(AssetB_list.this);
-                            adb.setTitle("Close");
-                            adb.setMessage("Do you want to close this form[Yes/No]?");
-                            adb.setNegativeButton("No", null);
-                            adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    finish();
-                                }
-                            });
-                            adb.show();
-                            return true;
-                        }
-                    }
-                    return false;
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
                 }
             });
-
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -108,7 +103,14 @@ public class AssetB_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
                             finish();
+                            Intent f1;
+                            f1 = new Intent(getApplicationContext(), SES.class);
+                            f1.putExtras(IDbundle);
+                            startActivity(f1);
                         }
                     });
                     adb.show();
@@ -120,7 +122,7 @@ public class AssetB_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, H41A);
+                    DataSearch(RND, SUCHANAID);
 
                 }
             });
@@ -130,9 +132,9 @@ public class AssetB_list extends Activity {
 
                 public void onClick(View view) {
                     Bundle IDbundle = new Bundle();
-                    IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
-                    IDbundle.putString("H41a", "");
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    IDbundle.putString("SlNo", "");
                     Intent intent = new Intent(getApplicationContext(), AssetB.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
@@ -141,8 +143,30 @@ public class AssetB_list extends Activity {
                 }
             });
 
-
-            DataSearch(RND, SUCHANAID, H41A);
+            cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetB_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to start AssetB [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
+            cmdForward.setVisibility(View.INVISIBLE);
+            DataSearch(RND, SUCHANAID);
 
 
         } catch (Exception e) {
@@ -151,11 +175,11 @@ public class AssetB_list extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String H41a) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             AssetB_DataModel d = new AssetB_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' and H41a='" + H41a + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<AssetB_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
@@ -169,6 +193,7 @@ public class AssetB_list extends Activity {
                 map.put("Rnd", item.getRnd());
                 map.put("SuchanaID", item.getSuchanaID());
                 map.put("MSlNo", item.getMSlNo());
+                map.put("SlNo", item.getSlNo());
                 map.put("H41a", item.getH41a());
                 map.put("H41aX", item.getH41aX());
                 map.put("H41b", item.getH41b());
@@ -197,6 +222,15 @@ public class AssetB_list extends Activity {
             dataAdapter = new SimpleAdapter(AssetB_list.this, dataList, R.layout.assetb_list, new String[]{"rowsec"},
                     new int[]{R.id.secListRow});
             list.setAdapter(new DataListAdapter(this, dataAdapter));
+
+
+            AssetB_DataModel dx = new AssetB_DataModel();
+            String SQLx = "Select Distinct(H41a) from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'";
+            List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
+            if (datax.size() > 19) {
+                cmdForward.setVisibility(View.VISIBLE);
+            }
+
         } catch (Exception e) {
             Connection.MessageBox(AssetB_list.this, e.getMessage());
             return;
@@ -233,58 +267,156 @@ public class AssetB_list extends Activity {
 
             final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
             final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView MSlNo = (TextView) convertView.findViewById(R.id.MSlNo);
+            final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
             final TextView H41a = (TextView) convertView.findViewById(R.id.H41a);
-            final TextView H41aX = (TextView) convertView.findViewById(R.id.H41aX);
-            final TextView H41b = (TextView) convertView.findViewById(R.id.H41b);
-            final TextView H41c = (TextView) convertView.findViewById(R.id.H41c);
-            final TextView H41d = (TextView) convertView.findViewById(R.id.H41d);
-            final TextView H41e = (TextView) convertView.findViewById(R.id.H41e);
-            final TextView H41eX = (TextView) convertView.findViewById(R.id.H41eX);
-            final TextView H41f = (TextView) convertView.findViewById(R.id.H41f);
-            final TextView H41fX = (TextView) convertView.findViewById(R.id.H41fX);
-            final TextView H41g = (TextView) convertView.findViewById(R.id.H41g);
-            final TextView H41h = (TextView) convertView.findViewById(R.id.H41h);
-            final TextView H41i = (TextView) convertView.findViewById(R.id.H41i);
-            final TextView H41j = (TextView) convertView.findViewById(R.id.H41j);
-            final TextView H41k = (TextView) convertView.findViewById(R.id.H41k);
-            final TextView H41kX = (TextView) convertView.findViewById(R.id.H41kX);
-            final TextView H41l = (TextView) convertView.findViewById(R.id.H41l);
-            final TextView H41m = (TextView) convertView.findViewById(R.id.H41m);
-            final TextView H41n = (TextView) convertView.findViewById(R.id.H41n);
-            final TextView H41o1 = (TextView) convertView.findViewById(R.id.H41o1);
-            final TextView H41o2 = (TextView) convertView.findViewById(R.id.H41o2);
-            final TextView H41o3 = (TextView) convertView.findViewById(R.id.H41o3);
-            final TextView H41o4 = (TextView) convertView.findViewById(R.id.H41o4);
-            final TextView H41o4X = (TextView) convertView.findViewById(R.id.H41o4X);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
-            MSlNo.setText(o.get("MSlNo"));
+            SlNo.setText(o.get("SlNo"));
             H41a.setText(o.get("H41a"));
-            H41aX.setText(o.get("H41aX"));
-            H41b.setText(o.get("H41b"));
-            H41c.setText(o.get("H41c"));
-            H41d.setText(o.get("H41d"));
-            H41e.setText(o.get("H41e"));
-            H41eX.setText(o.get("H41eX"));
-            H41f.setText(o.get("H41f"));
-            H41fX.setText(o.get("H41fX"));
-            H41g.setText(o.get("H41g"));
-            H41h.setText(o.get("H41h"));
-            H41i.setText(o.get("H41i"));
-            H41j.setText(o.get("H41j"));
-            H41k.setText(o.get("H41k"));
-            H41kX.setText(o.get("H41kX"));
-            H41l.setText(o.get("H41l"));
-            H41m.setText(o.get("H41m"));
-            H41n.setText(o.get("H41n"));
-            H41o1.setText(o.get("H41o1"));
-            H41o2.setText(o.get("H41o2"));
-            H41o3.setText(o.get("H41o3"));
-            H41o4.setText(o.get("H41o4"));
-            H41o4X.setText(o.get("H41o4X"));
+
+
+            switch (Integer.valueOf(o.get("H41a"))) {
+                /*case 1:
+                    H41a.setText("1-ভিটেমাটি");
+                    break;
+                case 2:
+                    H41a.setText("2-চাষযোগ্য বা আবাদী জমি");
+                    break;
+                case 3:
+                    H41a.setText("3-গবাদি পশুর চারণের উপযোগী");
+                    break;
+                case 4:
+                    H41a.setText("4-ভূমিঝোপ/জংলা জমি");
+                    break;
+                case 5:
+                    H41a.setText("5-চাষযোগ্য পুকুর");
+                    break;
+                case 6:
+                    H41a.setText("6-পরিত্যক্ত পুকুর");
+                    break;
+                case 7:
+                    H41a.setText("7-বর্জ্য বা অনাবাদি জমি");
+                    break;
+                case 8:
+                    H41a.setText("8-নদীগর্ভের বা হাওরের জমি");
+                    break;
+                case 9:
+                    H41a.setText("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
+                    break;
+                case 10:
+                    H41a.setText("1-ভিটেমাটি");
+                    break;
+                case 12:
+                    H41a.setText("2-চাষযোগ্য বা আবাদী জমি");
+                    break;
+                case 13:
+                    H41a.setText("3-গবাদি পশুর চারণের উপযোগী");
+                    break;
+                case 14:
+                    H41a.setText("4-ভূমিঝোপ/জংলা জমি");
+                    break;
+                case 15:
+                    H41a.setText("5-চাষযোগ্য পুকুর");
+                    break;
+                case 16:
+                    H41a.setText("6-পরিত্যক্ত পুকুর");
+                    break;
+                case 17:
+                    H41a.setText("7-বর্জ্য বা অনাবাদি জমি");
+                    break;
+                case 18:
+                    H41a.setText("8-নদীগর্ভের বা হাওরের জমি");
+                    break;
+                case 19:
+                    H41a.setText("9-অন্যান্য আবাসিক বা বাণিজ্যিক প্লট");
+                    break;
+                case 20:
+                    H41a.setText("6-পরিত্যক্ত পুকুর");
+                    break;
+                case 21:
+                    H41a.setText("7-বর্জ্য বা অনাবাদি জমি");
+                    break;
+                case 22:
+                    H41a.setText("8-নদীগর্ভের বা হাওরের জমি");
+                    break;
+
+                default:
+                    H41a.setText("");
+                    break;
+                */
+
+                case 1:
+                    H41a.setText("01-গরু");
+                    break;
+                case 2:
+                    H41a.setText("02-হাঁস ও মুরগী");
+                    break;
+                case 3:
+                    H41a.setText("03-পাখি  যেমন কবুতর");
+                    break;
+                case 4:
+                    H41a.setText("04-ছাগল / ভেড়া");
+                    break;
+                case 5:
+                    H41a.setText("05-শূকর");
+                    break;
+                case 6:
+                    H41a.setText("06-মাছ");
+                    break;
+                case 7:
+                    H41a.setText("07-অন্যান্য পশুপাখি (উল্লেখ করুন)");
+                    break;
+                case 8:
+                    H41a.setText("08-লাঙ্গল");
+                    break;
+                case 9:
+                    H41a.setText("09-মাড়াইয়ের যন্ত্র");
+                    break;
+                case 10:
+                    H41a.setText("10-গোয়াল ঘর");
+                    break;
+                case 11:
+                    H41a.setText("11-দোকানের জন্য প্রাঙ্গন/জমি");
+                    break;
+                case 12:
+                    H41a.setText("12-শষ্য সংরক্ষনের চলা/গুদাম ঘর");
+                    break;
+                case 13:
+                    H41a.setText("13-নৌকা");
+                    break;
+                case 14:
+                    H41a.setText("14-মোটর চালিত নৌকা");
+                    break;
+                case 15:
+                    H41a.setText("15-মাছ ধরার জাল");
+                    break;
+                case 16:
+                    H41a.setText("16-রিক্সা/ভ্যান");
+                    break;
+                case 17:
+                    H41a.setText("17-গাছ (১০০ টাকার অধিক)");
+                    break;
+                case 18:
+                    H41a.setText("18-ঠেলা গাড়ী");
+                    break;
+                case 19:
+                    H41a.setText("19-সেলাই মেশিন");
+                    break;
+                case 20:
+                    H41a.setText("20-CNG/নসিমন");
+                    break;
+                case 21:
+                    H41a.setText("21-অন্যান্য");
+                    break;
+                case 22:
+                    H41a.setText("22-অন্যান্য");
+                    break;
+                default:
+                    H41a.setText("");
+                    break;
+            }
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -292,7 +424,7 @@ public class AssetB_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
-                    IDbundle.putString("H41a", o.get("H41a"));
+                    IDbundle.putString("SlNo", o.get("SlNo"));
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), AssetB.class);
                     f1.putExtras(IDbundle);
