@@ -276,10 +276,55 @@ public class HandWash extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), FdHabitKnow.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }});
                     adb.show();
                 }});
+
+            ImageButton cmdForward = (ImageButton) findViewById(R.id.cmdForward);
+            cmdForward.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(HandWash.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), NutHealth.class);
+                            intent.putExtras(IDbundle);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+                }
+            });
+
+            ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
+            cmdHome.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View view) {
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", RND);
+                    IDbundle.putString("SuchanaID", SUCHANAID);
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
 
 
             secM24=(LinearLayout)findViewById(R.id.secM24);
