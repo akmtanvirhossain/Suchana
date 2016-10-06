@@ -47,6 +47,11 @@ public class UpdateMenu extends Activity {
     Button cmdMenuDomViolance;
     Button cmdMenuFoodDiversity;
     Button cmdMenuAnthro;
+    Button cmdMenuPreHis;
+    Button cmdMenuKnowledge;
+    Button cmdMenuFdhabitKnow;
+    Button cmdMenuFdHabit;
+    Button cmdMenuHandWash;
 
     Connection C;
     Global g;
@@ -141,6 +146,7 @@ public class UpdateMenu extends Activity {
             cmdMenuInterviewList.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, HHIdentity_list.class).putExtras(IDBundle));
                 }
             });
@@ -149,6 +155,7 @@ public class UpdateMenu extends Activity {
             cmdMenuIdentity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, HHIdentity.class).putExtras(IDBundle));
                 }
             });
@@ -157,6 +164,7 @@ public class UpdateMenu extends Activity {
             cmdMenuMember.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Member_list.class).putExtras(IDBundle));
                 }
             });
@@ -164,6 +172,7 @@ public class UpdateMenu extends Activity {
             cmdMenuSES.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, SES.class).putExtras(IDBundle));
                 }
             });
@@ -172,7 +181,8 @@ public class UpdateMenu extends Activity {
             cmdMenuAssetB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(UpdateMenu.this, AssetB.class).putExtras(IDBundle));
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, AssetB_list.class).putExtras(IDBundle));
                 }
             });
 
@@ -180,6 +190,7 @@ public class UpdateMenu extends Activity {
             cmdMenuAssetNB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, AssetNB.class).putExtras(IDBundle));
                 }
             });
@@ -188,6 +199,7 @@ public class UpdateMenu extends Activity {
             cmdMenuLand.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Land_list.class).putExtras(IDBundle));
                 }
             });
@@ -196,6 +208,7 @@ public class UpdateMenu extends Activity {
             cmdMenuHDDS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, HDDS.class).putExtras(IDBundle));
                 }
             });
@@ -203,6 +216,7 @@ public class UpdateMenu extends Activity {
             cmdMenuCost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Cost1.class).putExtras(IDBundle));
                 }
             });
@@ -211,6 +225,7 @@ public class UpdateMenu extends Activity {
             cmdMenuSavings.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Savings.class).putExtras(IDBundle));
                 }
             });
@@ -219,6 +234,7 @@ public class UpdateMenu extends Activity {
             cmdMenuLoan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Loan_list.class).putExtras(IDBundle));
                 }
             });
@@ -226,6 +242,7 @@ public class UpdateMenu extends Activity {
             cmdMenuHFIAS.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, HFIAS.class).putExtras(IDBundle));
                 }
             });
@@ -233,6 +250,7 @@ public class UpdateMenu extends Activity {
             cmdMenuDestruction1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Destruction1.class).putExtras(IDBundle));
                 }
             });
@@ -240,6 +258,7 @@ public class UpdateMenu extends Activity {
             cmdMenuDestruction2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Destruction2.class).putExtras(IDBundle));
                 }
             });
@@ -248,6 +267,7 @@ public class UpdateMenu extends Activity {
             cmdMenuAgriculture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Agriculture_list.class).putExtras(IDBundle));
                 }
             });
@@ -255,6 +275,7 @@ public class UpdateMenu extends Activity {
             cmdMenuNGO.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, NGOWork.class).putExtras(IDBundle));
                 }
             });
@@ -262,6 +283,7 @@ public class UpdateMenu extends Activity {
             cmdMenuIllness1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Illness1_list.class).putExtras(IDBundle));
                 }
             });
@@ -269,6 +291,7 @@ public class UpdateMenu extends Activity {
             cmdMenuIllness2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Illness2_list.class).putExtras(IDBundle));
                 }
             });
@@ -276,6 +299,7 @@ public class UpdateMenu extends Activity {
             cmdMenuCareseek.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Careseek.class).putExtras(IDBundle));
                 }
             });
@@ -283,15 +307,53 @@ public class UpdateMenu extends Activity {
             cmdMenuIGA.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, IGA.class).putExtras(IDBundle));
                 }
             });
 
 
+            cmdMenuPreHis = (Button) findViewById(R.id.cmdMenuPreHis);
+            cmdMenuPreHis.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, PregHis.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuKnowledge = (Button) findViewById(R.id.cmdMenuKnowledge);
+            cmdMenuKnowledge.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, Knowledge.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuFdhabitKnow = (Button) findViewById(R.id.cmdMenuFdhabitKnow);
+            cmdMenuFdhabitKnow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, FdHabitKnow.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuHandWash = (Button) findViewById(R.id.cmdMenuHandWash);
+            cmdMenuHandWash.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, HandWash.class).putExtras(IDBundle));
+                }
+            });
+
             cmdMenuNutHealth = (Button) findViewById(R.id.cmdMenuNutHealth);
             cmdMenuNutHealth.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, NutHealth.class).putExtras(IDBundle));
                 }
             });
@@ -300,6 +362,7 @@ public class UpdateMenu extends Activity {
             cmdMenuWomenEmp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, WomenEmp.class).putExtras(IDBundle));
                 }
             });
@@ -308,6 +371,7 @@ public class UpdateMenu extends Activity {
             cmdMenuDomViolance.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, DomViolance.class).putExtras(IDBundle));
                 }
             });
@@ -316,7 +380,18 @@ public class UpdateMenu extends Activity {
             cmdMenuFoodDiversity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, FoodDiversity.class).putExtras(IDBundle));
+                }
+            });
+
+
+            cmdMenuFdHabit = (Button) findViewById(R.id.cmdMenuFdHabit);
+            cmdMenuFdHabit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, FdHabit.class).putExtras(IDBundle));
                 }
             });
 
@@ -324,6 +399,7 @@ public class UpdateMenu extends Activity {
             cmdMenuAnthro.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finish();
                     startActivity(new Intent(UpdateMenu.this, Anthro.class).putExtras(IDBundle));
                 }
             });
@@ -416,10 +492,45 @@ public class UpdateMenu extends Activity {
                 } else cmdMenuIGA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
                 //Mother, Child
-                /*if((cur.getString(cur.getColumnIndex("T20"))==null?"":cur.getString(cur.getColumnIndex("T20"))).equals("1")) {
-                    cmdMenu.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept , 0, 0, 0);
-                }else cmdMenuHDDS.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
-                */
+                if ((cur.getString(cur.getColumnIndex("T20")) == null ? "" : cur.getString(cur.getColumnIndex("T20"))).equals("1")) {
+                    cmdMenuPreHis.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuPreHis.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T21")) == null ? "" : cur.getString(cur.getColumnIndex("T21"))).equals("1")) {
+                    cmdMenuKnowledge.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuKnowledge.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T22")) == null ? "" : cur.getString(cur.getColumnIndex("T22"))).equals("1")) {
+                    cmdMenuFdhabitKnow.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuFdhabitKnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T23")) == null ? "" : cur.getString(cur.getColumnIndex("T23"))).equals("1")) {
+                    cmdMenuHandWash.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuHandWash.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T24")) == null ? "" : cur.getString(cur.getColumnIndex("T24"))).equals("1")) {
+                    cmdMenuNutHealth.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuNutHealth.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T25")) == null ? "" : cur.getString(cur.getColumnIndex("T25"))).equals("1")) {
+                    cmdMenuWomenEmp.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuWomenEmp.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T26")) == null ? "" : cur.getString(cur.getColumnIndex("T26"))).equals("1")) {
+                    cmdMenuDomViolance.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuDomViolance.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T27")) == null ? "" : cur.getString(cur.getColumnIndex("T27"))).equals("1")) {
+                    cmdMenuFoodDiversity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuFoodDiversity.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T28")) == null ? "" : cur.getString(cur.getColumnIndex("T28"))).equals("1")) {
+                    cmdMenuFdHabit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuFdHabit.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T29")) == null ? "" : cur.getString(cur.getColumnIndex("T29"))).equals("1")) {
+                    cmdMenuAnthro.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuAnthro.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
 
                 cur.moveToNext();
