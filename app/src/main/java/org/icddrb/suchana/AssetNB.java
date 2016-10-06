@@ -231,7 +231,7 @@ public class AssetNB extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), AssetB.class);
+                            Intent intent = new Intent(getApplicationContext(), AssetB_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -492,6 +492,16 @@ public class AssetNB extends Activity {
                         txtH42aX.setText("");
                         secH42aX.setVisibility(View.GONE);
                     }
+
+
+                    if (spnData.equalsIgnoreCase("12")) {
+                        secH42b.setVisibility(View.GONE);
+                        txtH42b.setText("");
+                    } else {
+                        secH42b.setVisibility(View.VISIBLE);
+                    }
+
+
                 }
 
                 @Override
@@ -562,6 +572,63 @@ public class AssetNB extends Activity {
             lineH42c = (View) findViewById(R.id.lineH42c);
             VlblH42c = (TextView) findViewById(R.id.VlblH42c);
             txtH42c = (EditText) findViewById(R.id.txtH42c);
+            txtH42c.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String spnData = Connection.SelectedSpinnerValue(spnH42a.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("12")) {
+                        if (txtH42c.getText().toString().equals("")) {
+                            return;
+                        }
+                        if (Integer.valueOf(txtH42c.getText().toString()) == 0) {
+                            seclblH42a.setVisibility(View.GONE);
+                            secH42d1.setVisibility(View.GONE);
+                            secH42d2.setVisibility(View.GONE);
+                            secH42d3.setVisibility(View.GONE);
+                            secH42d4.setVisibility(View.GONE);
+                            secH42d4X.setVisibility(View.GONE);
+                            secH42d4X1.setVisibility(View.GONE);
+                            secH42d4X2.setVisibility(View.GONE);
+
+                            lineH42c.setVisibility(View.GONE);
+                            lineH42d1.setVisibility(View.GONE);
+                            lineH42d2.setVisibility(View.GONE);
+                            lineH42d3.setVisibility(View.GONE);
+                            lineH42d4.setVisibility(View.GONE);
+                            lineH42d4X.setVisibility(View.GONE);
+                            lineH42d4X1.setVisibility(View.GONE);
+                            lineH42d4X2.setVisibility(View.GONE);
+                        } else {
+                            seclblH42a.setVisibility(View.VISIBLE);
+                            secH42d1.setVisibility(View.VISIBLE);
+                            secH42d2.setVisibility(View.VISIBLE);
+                            secH42d3.setVisibility(View.VISIBLE);
+                            secH42d4.setVisibility(View.VISIBLE);
+                            lineH42c.setVisibility(View.VISIBLE);
+                            lineH42d1.setVisibility(View.VISIBLE);
+                            lineH42d2.setVisibility(View.VISIBLE);
+                            lineH42d3.setVisibility(View.VISIBLE);
+                            lineH42d4.setVisibility(View.VISIBLE);
+
+
+                        }
+
+                    } else {
+
+                    }
+
+                }
+            });
             seclblH42a = (LinearLayout) findViewById(R.id.seclblH42a);
             secH42d1 = (LinearLayout) findViewById(R.id.secH42d1);
             lineH42d1 = (View) findViewById(R.id.lineH42d1);
