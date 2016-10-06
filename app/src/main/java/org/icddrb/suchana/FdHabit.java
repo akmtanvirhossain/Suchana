@@ -72,11 +72,11 @@ public class FdHabit extends Activity {
     LinearLayout secC11;
     View lineC11;
     TextView VlblC11;
-    EditText txtC11;
+    Spinner spnCHSLNo;
     LinearLayout secC12;
     View lineC12;
     TextView VlblC12;
-    EditText txtC12;
+    Spinner spnMSlNo;
     LinearLayout secC13;
     View lineC13;
     TextView VlblC13;
@@ -108,15 +108,8 @@ public class FdHabit extends Activity {
     LinearLayout secC19a;
     View lineC19a;
     TextView VlblC19a;
-    CheckBox chkC19a;
-    LinearLayout secC19b;
-    View lineC19b;
-    TextView VlblC19b;
+    Spinner spnC19a;
     EditText txtC19b;
-    LinearLayout secC19c;
-    View lineC19c;
-    TextView VlblC19c;
-    EditText txtC19c;
     LinearLayout secC110;
     View lineC110;
     TextView VlblC110;
@@ -852,11 +845,13 @@ public class FdHabit extends Activity {
             secC11 = (LinearLayout) findViewById(R.id.secC11);
             lineC11 = (View) findViewById(R.id.lineC11);
             VlblC11 = (TextView) findViewById(R.id.VlblC11);
-            txtC11 = (EditText) findViewById(R.id.txtC11);
+            spnCHSLNo = (Spinner) findViewById(R.id.spnCHSLNo);
+           // txtC11 = (EditText) findViewById(R.id.txtC11);
             secC12 = (LinearLayout) findViewById(R.id.secC12);
             lineC12 = (View) findViewById(R.id.lineC12);
             VlblC12 = (TextView) findViewById(R.id.VlblC12);
-            txtC12 = (EditText) findViewById(R.id.txtC12);
+            spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
             secC13 = (LinearLayout) findViewById(R.id.secC13);
             lineC13 = (View) findViewById(R.id.lineC13);
             VlblC13 = (TextView) findViewById(R.id.VlblC13);
@@ -890,30 +885,39 @@ public class FdHabit extends Activity {
             secC19a = (LinearLayout) findViewById(R.id.secC19a);
             lineC19a = (View) findViewById(R.id.lineC19a);
             VlblC19a = (TextView) findViewById(R.id.VlblC19a);
-            chkC19a = (CheckBox) findViewById(R.id.chkC19a);
-            chkC19a.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (((CheckBox) v).isChecked()) {
-                        secC19b.setVisibility(View.GONE);
-                        lineC19b.setVisibility(View.GONE);
+
+            spnC19a = (Spinner) findViewById(R.id.spnC19a);
+            List<String> listH114a = new ArrayList<String>();
+
+            listH114a.add("");
+            listH114a.add("01-সাথে সাথেই");
+            listH114a.add("02-ঘণ্টা");
+            listH114a.add("03-দিন");
+            ArrayAdapter<String> adptrH114a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH114a);
+            spnC19a.setAdapter(adptrH114a);
+
+            spnC19a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnC19a.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnC19a.getSelectedItem().toString(), "-");
+                    if (spnData.equalsIgnoreCase("01")) {
                         txtC19b.setText("");
-                        secC19c.setVisibility(View.GONE);
-                        lineC19c.setVisibility(View.GONE);
-                        txtC19c.setText("");
-                        secC110.setVisibility(View.GONE);
-                        lineC110.setVisibility(View.GONE);
-                        rdogrpC110.clearCheck();
+                        txtC19b.setVisibility(View.GONE);
+
+                    } else {
+                        txtC19b.setVisibility(View.VISIBLE);
                     }
                 }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
             });
-            secC19b = (LinearLayout) findViewById(R.id.secC19b);
-            lineC19b = (View) findViewById(R.id.lineC19b);
-            VlblC19b = (TextView) findViewById(R.id.VlblC19b);
+
+
             txtC19b = (EditText) findViewById(R.id.txtC19b);
-            secC19c = (LinearLayout) findViewById(R.id.secC19c);
-            lineC19c = (View) findViewById(R.id.lineC19c);
-            VlblC19c = (TextView) findViewById(R.id.VlblC19c);
-            txtC19c = (EditText) findViewById(R.id.txtC19c);
+            txtC19b.setVisibility(View.GONE);
             secC110 = (LinearLayout) findViewById(R.id.secC110);
             lineC110 = (View) findViewById(R.id.lineC110);
             VlblC110 = (TextView) findViewById(R.id.VlblC110);
@@ -929,6 +933,45 @@ public class FdHabit extends Activity {
             rdoC1111 = (RadioButton) findViewById(R.id.rdoC1111);
             rdoC1112 = (RadioButton) findViewById(R.id.rdoC1112);
             rdoC1113 = (RadioButton) findViewById(R.id.rdoC1113);
+
+
+            rdogrpC18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpC18 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpC18.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpC18.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpC18[i];
+                    }
+
+
+                    if (rbData.equalsIgnoreCase("0")) {
+
+                        secC19a.setVisibility(View.GONE);
+                        lineC19a.setVisibility(View.GONE);
+                        spnC19a.setSelection(0);
+                        txtC19b.setText(null);
+                        secC110.setVisibility(View.GONE);
+                        rdogrpC110.clearCheck();
+                        secC111.setVisibility(View.GONE);
+                        rdogrpC111.clearCheck();
+
+                    } else {
+                        secC19a.setVisibility(View.VISIBLE);
+                        lineC19a.setVisibility(View.VISIBLE);
+                        secC110.setVisibility(View.VISIBLE);
+                        secC111.setVisibility(View.VISIBLE);
+
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secC112 = (LinearLayout) findViewById(R.id.secC112);
             lineC112 = (View) findViewById(R.id.lineC112);
             VlblC112 = (TextView) findViewById(R.id.VlblC112);
@@ -972,9 +1015,11 @@ public class FdHabit extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("1")) {
+
                         secC116.setVisibility(View.GONE);
                         lineC116.setVisibility(View.GONE);
                         txtC116.setText("");
+                        seclblC117.setVisibility(View.GONE);
                         secC117a.setVisibility(View.GONE);
                         lineC117a.setVisibility(View.GONE);
                         chkC117a.setChecked(false);
@@ -1005,6 +1050,7 @@ public class FdHabit extends Activity {
                     } else {
                         secC116.setVisibility(View.VISIBLE);
                         lineC116.setVisibility(View.VISIBLE);
+                        seclblC117.setVisibility(View.VISIBLE);
                         secC117a.setVisibility(View.VISIBLE);
                         lineC117a.setVisibility(View.VISIBLE);
                         secC117b.setVisibility(View.VISIBLE);
@@ -1015,8 +1061,8 @@ public class FdHabit extends Activity {
                         lineC117d.setVisibility(View.VISIBLE);
                         secC117e.setVisibility(View.VISIBLE);
                         lineC117e.setVisibility(View.VISIBLE);
-                        secC117eX.setVisibility(View.VISIBLE);
-                        lineC117eX.setVisibility(View.VISIBLE);
+                      //  secC117eX.setVisibility(View.VISIBLE);
+                      //  lineC117eX.setVisibility(View.VISIBLE);
                         secC117f.setVisibility(View.VISIBLE);
                         lineC117f.setVisibility(View.VISIBLE);
                         secC118d.setVisibility(View.VISIBLE);
@@ -1034,7 +1080,9 @@ public class FdHabit extends Activity {
             lineC116 = (View) findViewById(R.id.lineC116);
             VlblC116 = (TextView) findViewById(R.id.VlblC116);
             txtC116 = (EditText) findViewById(R.id.txtC116);
+
             seclblC117 = (LinearLayout) findViewById(R.id.seclblC117);
+            seclblC117.setVisibility(View.GONE);
             secC117a = (LinearLayout) findViewById(R.id.secC117a);
             lineC117a = (View) findViewById(R.id.lineC117a);
             VlblC117a = (TextView) findViewById(R.id.VlblC117a);
@@ -1061,9 +1109,12 @@ public class FdHabit extends Activity {
                         secC117eX.setVisibility(View.GONE);
                         lineC117eX.setVisibility(View.GONE);
                         txtC117eX.setText("");
-                        secC117f.setVisibility(View.GONE);
-                        lineC117f.setVisibility(View.GONE);
-                        chkC117f.setChecked(false);
+
+                    }
+                    else
+                    {
+                        secC117eX.setVisibility(View.VISIBLE);
+                        lineC117eX.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1344,6 +1395,8 @@ public class FdHabit extends Activity {
                         secC125.setVisibility(View.GONE);
                         lineC125.setVisibility(View.GONE);
                         txtC125.setText("");
+                        seclblC126.setVisibility(View.GONE);
+                        seclblC126a.setVisibility(View.GONE);
                         secC126a.setVisibility(View.GONE);
                         lineC126a.setVisibility(View.GONE);
                         rdogrpC126a.clearCheck();
@@ -1395,7 +1448,7 @@ public class FdHabit extends Activity {
                         secC126r.setVisibility(View.GONE);
                         lineC126r.setVisibility(View.GONE);
                         rdogrpC126r.clearCheck();
-                        secC129.setVisibility(View.GONE);
+                    /*    secC129.setVisibility(View.GONE);
                         lineC129.setVisibility(View.GONE);
                         rdogrpC129.clearCheck();
                         secC130.setVisibility(View.GONE);
@@ -1541,7 +1594,7 @@ public class FdHabit extends Activity {
                         chkC142d.setChecked(false);
                         secC142e.setVisibility(View.GONE);
                         lineC142e.setVisibility(View.GONE);
-                        chkC142e.setChecked(false);
+                        chkC142e.setChecked(false);*/
                     } else {
                         secC125.setVisibility(View.VISIBLE);
                         lineC125.setVisibility(View.VISIBLE);
@@ -1579,7 +1632,7 @@ public class FdHabit extends Activity {
                         lineC126q.setVisibility(View.VISIBLE);
                         secC126r.setVisibility(View.VISIBLE);
                         lineC126r.setVisibility(View.VISIBLE);
-                        secC129.setVisibility(View.VISIBLE);
+                      /*  secC129.setVisibility(View.VISIBLE);
                         lineC129.setVisibility(View.VISIBLE);
                         secC130.setVisibility(View.VISIBLE);
                         lineC130.setVisibility(View.VISIBLE);
@@ -1676,7 +1729,7 @@ public class FdHabit extends Activity {
                         secC142d.setVisibility(View.VISIBLE);
                         lineC142d.setVisibility(View.VISIBLE);
                         secC142e.setVisibility(View.VISIBLE);
-                        lineC142e.setVisibility(View.VISIBLE);
+                        lineC142e.setVisibility(View.VISIBLE);*/
                     }
                 }
 
@@ -1689,7 +1742,10 @@ public class FdHabit extends Activity {
             VlblC125 = (TextView) findViewById(R.id.VlblC125);
             txtC125 = (EditText) findViewById(R.id.txtC125);
             seclblC126 = (LinearLayout) findViewById(R.id.seclblC126);
+            seclblC126.setVisibility(View.GONE);
+
             seclblC126a = (LinearLayout) findViewById(R.id.seclblC126a);
+            seclblC126a.setVisibility(View.GONE);
             secC126a = (LinearLayout) findViewById(R.id.secC126a);
             lineC126a = (View) findViewById(R.id.lineC126a);
             VlblC126a = (TextView) findViewById(R.id.VlblC126a);
@@ -1896,8 +1952,8 @@ public class FdHabit extends Activity {
                         lineC135d.setVisibility(View.VISIBLE);
                         secC135e.setVisibility(View.VISIBLE);
                         lineC135e.setVisibility(View.VISIBLE);
-                        secC135eX.setVisibility(View.VISIBLE);
-                        lineC135eX.setVisibility(View.VISIBLE);
+                      //  secC135eX.setVisibility(View.VISIBLE);
+                      //  lineC135eX.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -1931,9 +1987,12 @@ public class FdHabit extends Activity {
                         secC135eX.setVisibility(View.GONE);
                         lineC135eX.setVisibility(View.GONE);
                         txtC135eX.setText("");
-                        secC136.setVisibility(View.GONE);
-                        lineC136.setVisibility(View.GONE);
-                        rdogrpC136.clearCheck();
+
+                    }
+                    else
+                    {
+                        secC135eX.setVisibility(View.VISIBLE);
+                        lineC135eX.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -1961,6 +2020,7 @@ public class FdHabit extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+                        seclblC137.setVisibility(View.GONE);
                         secC137a.setVisibility(View.GONE);
                         lineC137a.setVisibility(View.GONE);
                         chkC137a.setChecked(false);
@@ -2004,6 +2064,7 @@ public class FdHabit extends Activity {
                         lineC137mX.setVisibility(View.GONE);
                         txtC137mX.setText("");
                     } else if (rbData.equalsIgnoreCase("8")) {
+                        seclblC137.setVisibility(View.GONE);
                         secC137a.setVisibility(View.GONE);
                         lineC137a.setVisibility(View.GONE);
                         chkC137a.setChecked(false);
@@ -2047,6 +2108,7 @@ public class FdHabit extends Activity {
                         lineC137mX.setVisibility(View.GONE);
                         txtC137mX.setText("");
                     } else {
+                        seclblC137.setVisibility(View.VISIBLE);
                         secC137a.setVisibility(View.VISIBLE);
                         lineC137a.setVisibility(View.VISIBLE);
                         secC137b.setVisibility(View.VISIBLE);
@@ -2073,8 +2135,8 @@ public class FdHabit extends Activity {
                         lineC137l.setVisibility(View.VISIBLE);
                         secC137m.setVisibility(View.VISIBLE);
                         lineC137m.setVisibility(View.VISIBLE);
-                        secC137mX.setVisibility(View.VISIBLE);
-                        lineC137mX.setVisibility(View.VISIBLE);
+                       // secC137mX.setVisibility(View.VISIBLE);
+                       // lineC137mX.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -2083,6 +2145,7 @@ public class FdHabit extends Activity {
                 }
             });
             seclblC137 = (LinearLayout) findViewById(R.id.seclblC137);
+            seclblC137.setVisibility(View.GONE);
             secC137a = (LinearLayout) findViewById(R.id.secC137a);
             lineC137a = (View) findViewById(R.id.lineC137a);
             VlblC137a = (TextView) findViewById(R.id.VlblC137a);
@@ -2141,9 +2204,12 @@ public class FdHabit extends Activity {
                         secC137mX.setVisibility(View.GONE);
                         lineC137mX.setVisibility(View.GONE);
                         txtC137mX.setText("");
-                        secC138.setVisibility(View.GONE);
-                        lineC138.setVisibility(View.GONE);
-                        rdogrpC138.clearCheck();
+
+                    }
+                    else
+                    {
+                        secC137mX.setVisibility(View.VISIBLE);
+                        lineC137mX.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -2178,7 +2244,7 @@ public class FdHabit extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("2")) {
-                        secBCG1.setVisibility(View.GONE);
+                     /*   secBCG1.setVisibility(View.GONE);
                         lineBCG1.setVisibility(View.GONE);
                         rdogrpBCG1.clearCheck();
                         secBCG2.setVisibility(View.GONE);
@@ -2219,7 +2285,7 @@ public class FdHabit extends Activity {
                         rdogrpMR1.clearCheck();
                         secMR2.setVisibility(View.GONE);
                         lineMR2.setVisibility(View.GONE);
-                        rdogrpMR2.clearCheck();
+                        rdogrpMR2.clearCheck();*/
                     } else if (rbData.equalsIgnoreCase("3")) {
                         secBCG1.setVisibility(View.GONE);
                         lineBCG1.setVisibility(View.GONE);
@@ -2437,21 +2503,7 @@ public class FdHabit extends Activity {
                         secC141X.setVisibility(View.GONE);
                         lineC141X.setVisibility(View.GONE);
                         txtC141X.setText("");
-                        secC142a.setVisibility(View.GONE);
-                        lineC142a.setVisibility(View.GONE);
-                        chkC142a.setChecked(false);
-                        secC142b.setVisibility(View.GONE);
-                        lineC142b.setVisibility(View.GONE);
-                        chkC142b.setChecked(false);
-                        secC142c.setVisibility(View.GONE);
-                        lineC142c.setVisibility(View.GONE);
-                        chkC142c.setChecked(false);
-                        secC142d.setVisibility(View.GONE);
-                        lineC142d.setVisibility(View.GONE);
-                        chkC142d.setChecked(false);
-                        secC142e.setVisibility(View.GONE);
-                        lineC142e.setVisibility(View.GONE);
-                        chkC142e.setChecked(false);
+
                     } else if (rbData.equalsIgnoreCase("8")) {
                         secC141.setVisibility(View.GONE);
                         lineC141.setVisibility(View.GONE);
@@ -2459,36 +2511,13 @@ public class FdHabit extends Activity {
                         secC141X.setVisibility(View.GONE);
                         lineC141X.setVisibility(View.GONE);
                         txtC141X.setText("");
-                        secC142a.setVisibility(View.GONE);
-                        lineC142a.setVisibility(View.GONE);
-                        chkC142a.setChecked(false);
-                        secC142b.setVisibility(View.GONE);
-                        lineC142b.setVisibility(View.GONE);
-                        chkC142b.setChecked(false);
-                        secC142c.setVisibility(View.GONE);
-                        lineC142c.setVisibility(View.GONE);
-                        chkC142c.setChecked(false);
-                        secC142d.setVisibility(View.GONE);
-                        lineC142d.setVisibility(View.GONE);
-                        chkC142d.setChecked(false);
-                        secC142e.setVisibility(View.GONE);
-                        lineC142e.setVisibility(View.GONE);
-                        chkC142e.setChecked(false);
+
                     } else {
                         secC141.setVisibility(View.VISIBLE);
                         lineC141.setVisibility(View.VISIBLE);
-                        secC141X.setVisibility(View.VISIBLE);
-                        lineC141X.setVisibility(View.VISIBLE);
-                        secC142a.setVisibility(View.VISIBLE);
-                        lineC142a.setVisibility(View.VISIBLE);
-                        secC142b.setVisibility(View.VISIBLE);
-                        lineC142b.setVisibility(View.VISIBLE);
-                        secC142c.setVisibility(View.VISIBLE);
-                        lineC142c.setVisibility(View.VISIBLE);
-                        secC142d.setVisibility(View.VISIBLE);
-                        lineC142d.setVisibility(View.VISIBLE);
-                        secC142e.setVisibility(View.VISIBLE);
-                        lineC142e.setVisibility(View.VISIBLE);
+                       // secC141X.setVisibility(View.VISIBLE);
+                      //  lineC141X.setVisibility(View.VISIBLE);
+
                     }
                 }
 
@@ -2525,8 +2554,8 @@ public class FdHabit extends Activity {
                         secC141X.setVisibility(View.GONE);
                         lineC141X.setVisibility(View.GONE);
                     } else {
-                        secC141X.setVisibility(View.VISIBLE);
-                        lineC141X.setVisibility(View.VISIBLE);
+                     //   secC141X.setVisibility(View.VISIBLE);
+                      //  lineC141X.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -2538,6 +2567,8 @@ public class FdHabit extends Activity {
             lineC141X = (View) findViewById(R.id.lineC141X);
             VlblC141X = (TextView) findViewById(R.id.VlblC141X);
             txtC141X = (EditText) findViewById(R.id.txtC141X);
+            secC141X.setVisibility(View.GONE);
+            lineC141X.setVisibility(View.GONE);
             secC142 = (LinearLayout) findViewById(R.id.secC142);
             secC142a = (LinearLayout) findViewById(R.id.secC142a);
             lineC142a = (View) findViewById(R.id.lineC142a);
@@ -2582,9 +2613,9 @@ public class FdHabit extends Activity {
 
 
             //Hide all skip variables
-            secC19b.setVisibility(View.GONE);
-            secC19c.setVisibility(View.GONE);
-            secC110.setVisibility(View.GONE);
+           // secC19b.setVisibility(View.GONE);
+          //  secC19c.setVisibility(View.GONE);
+          //  secC110.setVisibility(View.GONE);
             secC116.setVisibility(View.GONE);
             secC117a.setVisibility(View.GONE);
             secC117b.setVisibility(View.GONE);
@@ -2623,17 +2654,17 @@ public class FdHabit extends Activity {
             secC126o.setVisibility(View.GONE);
             secC126q.setVisibility(View.GONE);
             secC126r.setVisibility(View.GONE);
-            secC129.setVisibility(View.GONE);
+          /*  secC129.setVisibility(View.GONE);
             secC130.setVisibility(View.GONE);
             secC131.setVisibility(View.GONE);
-            secC134.setVisibility(View.GONE);
+            secC134.setVisibility(View.GONE);*/
             secC135a.setVisibility(View.GONE);
             secC135b.setVisibility(View.GONE);
             secC135c.setVisibility(View.GONE);
             secC135d.setVisibility(View.GONE);
             secC135e.setVisibility(View.GONE);
             secC135eX.setVisibility(View.GONE);
-            secC136.setVisibility(View.GONE);
+           // secC136.setVisibility(View.GONE);
             secC137a.setVisibility(View.GONE);
             secC137b.setVisibility(View.GONE);
             secC137c.setVisibility(View.GONE);
@@ -2648,7 +2679,7 @@ public class FdHabit extends Activity {
             secC137l.setVisibility(View.GONE);
             secC137m.setVisibility(View.GONE);
             secC137mX.setVisibility(View.GONE);
-            secC138.setVisibility(View.GONE);
+           /* secC138.setVisibility(View.GONE);
             secC139.setVisibility(View.GONE);
             secBCG1.setVisibility(View.GONE);
             secBCG2.setVisibility(View.GONE);
@@ -2664,14 +2695,14 @@ public class FdHabit extends Activity {
             secIPV.setVisibility(View.GONE);
             secMR1.setVisibility(View.GONE);
             secMR2.setVisibility(View.GONE);
-            secC140.setVisibility(View.GONE);
+            secC140.setVisibility(View.GONE);*/
             secC141.setVisibility(View.GONE);
             secC141X.setVisibility(View.GONE);
-            secC142a.setVisibility(View.GONE);
+          /*  secC142a.setVisibility(View.GONE);
             secC142b.setVisibility(View.GONE);
             secC142c.setVisibility(View.GONE);
             secC142d.setVisibility(View.GONE);
-            secC142e.setVisibility(View.GONE);
+            secC142e.setVisibility(View.GONE);*/
             secC135a.setVisibility(View.GONE);
             secC135b.setVisibility(View.GONE);
             secC135c.setVisibility(View.GONE);
@@ -2679,7 +2710,7 @@ public class FdHabit extends Activity {
             secC135e.setVisibility(View.GONE);
             secC135eX.setVisibility(View.GONE);
             secC135eX.setVisibility(View.GONE);
-            secC136.setVisibility(View.GONE);
+           // secC136.setVisibility(View.GONE);
             secC137a.setVisibility(View.GONE);
             secC137b.setVisibility(View.GONE);
             secC137c.setVisibility(View.GONE);
@@ -2709,7 +2740,7 @@ public class FdHabit extends Activity {
             secC137m.setVisibility(View.GONE);
             secC137mX.setVisibility(View.GONE);
             secC137mX.setVisibility(View.GONE);
-            secC138.setVisibility(View.GONE);
+           /* secC138.setVisibility(View.GONE);
             secBCG1.setVisibility(View.GONE);
             secBCG2.setVisibility(View.GONE);
             secPenta1.setVisibility(View.GONE);
@@ -2737,10 +2768,10 @@ public class FdHabit extends Activity {
             secPCV3.setVisibility(View.GONE);
             secIPV.setVisibility(View.GONE);
             secMR1.setVisibility(View.GONE);
-            secMR2.setVisibility(View.GONE);
+            secMR2.setVisibility(View.GONE);*/
             secC141.setVisibility(View.GONE);
             secC141X.setVisibility(View.GONE);
-            secC142a.setVisibility(View.GONE);
+           /* secC142a.setVisibility(View.GONE);
             secC142b.setVisibility(View.GONE);
             secC142c.setVisibility(View.GONE);
             secC142d.setVisibility(View.GONE);
@@ -2755,8 +2786,45 @@ public class FdHabit extends Activity {
             secC141X.setVisibility(View.GONE);
             secC141X.setVisibility(View.GONE);
             secC141X.setVisibility(View.GONE);
+*/
 
 
+
+            spnCHSLNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)<12"));
+            spnCHSLNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnC141.getSelectedItem().toString().length() == 0) return;
+                    // String spnData = Connection.SelectedSpinnerValue(spnC141.getSelectedItem().toString(), "-");
+
+                    String spnData = C.ReturnSingleValue("select H23 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'");
+                    if (spnData.equalsIgnoreCase("1")) {
+                        rdoC141.setChecked(true);
+                    } else if (spnData.equalsIgnoreCase("2")) {
+                        rdoC142.setChecked(true);
+                    }
+
+                    txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+
+            if(spnCHSLNo.getCount()==1)
+            {
+                String spnData = C.ReturnSingleValue("select H23 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'");
+                if (spnData.equalsIgnoreCase("1")) {
+                    rdoC141.setChecked(true);
+                } else if (spnData.equalsIgnoreCase("2")) {
+                    rdoC142.setChecked(true);
+                }
+
+                txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+
+            }
+            DataSearch(RND,SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -2786,11 +2854,12 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: উপকারভোগী সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtSuchanaID.getText().toString().length() == 0 ? "1" : txtSuchanaID.getText().toString()) < 1 || Integer.valueOf(txtSuchanaID.getText().toString().length() == 0 ? "9999" : txtSuchanaID.getText().toString()) > 9999) {
+            } else if (txtSuchanaID.getText().toString().length() == 0) {
                 Connection.MessageBox(FdHabit.this, "Value should be between 1 and 999999999999(উপকারভোগী সদস্য আইডি).");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (txtC11.getText().toString().length() == 0 & secC11.isShown()) {
+            }
+           /* else if (txtC11.getText().toString().length() == 0 & secC11.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: শিশুর লাইন নম্বর.");
                 txtC11.requestFocus();
                 return;
@@ -2798,7 +2867,9 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Value should be between 1 and 30(শিশুর লাইন নম্বর).");
                 txtC11.requestFocus();
                 return;
-            } else if (txtC12.getText().toString().length() == 0 & secC12.isShown()) {
+            }
+
+            else if (txtC12.getText().toString().length() == 0 & secC12.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: মায়ের লাইন নম্বর.");
                 txtC12.requestFocus();
                 return;
@@ -2806,7 +2877,9 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Value should be between 0 and 30(মায়ের লাইন নম্বর).");
                 txtC12.requestFocus();
                 return;
-            } else if (txtC13.getText().toString().length() == 0 & secC13.isShown()) {
+            }
+            */
+            else if (txtC13.getText().toString().length() == 0 & secC13.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: আপনার শিশুর নাম কি?.");
                 txtC13.requestFocus();
                 return;
@@ -2840,23 +2913,13 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কখনো (নাম) কে বুকের দুধ পান করিয়েছেন? ).");
                 rdoC181.requestFocus();
                 return;
-            } else if (txtC19b.getText().toString().length() == 0 & secC19b.isShown()) {
+            }
+
+            else if ((spnC19a.getSelectedItemPosition()==3 || spnC19a.getSelectedItemPosition()==4) && txtC19b.getText().toString().length() == 0 ) {
                 Connection.MessageBox(FdHabit.this, "Required field: ঘণ্টা.");
                 txtC19b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtC19b.getText().toString().length() == 0 ? "0" : txtC19b.getText().toString()) < 0 || Integer.valueOf(txtC19b.getText().toString().length() == 0 ? "23" : txtC19b.getText().toString()) > 23) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 23(ঘণ্টা).");
-                txtC19b.requestFocus();
-                return;
-            } else if (txtC19c.getText().toString().length() == 0 & secC19c.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: দিন.");
-                txtC19c.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtC19c.getText().toString().length() == 0 ? "0" : txtC19c.getText().toString()) < 0 || Integer.valueOf(txtC19c.getText().toString().length() == 0 ? "30" : txtC19c.getText().toString()) > 30) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 30(দিন).");
-                txtC19c.requestFocus();
-                return;
-            } else if (!rdoC1101.isChecked() & !rdoC1102.isChecked() & secC110.isShown()) {
+            }  else if (!rdoC1101.isChecked() & !rdoC1102.isChecked() & secC110.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কি এই শিশুকে শালদুধ দিয়েছিলেন? ).");
                 rdoC1101.requestFocus();
                 return;
@@ -3192,8 +3255,8 @@ public class FdHabit extends Activity {
             FdHabit_DataModel objSave = new FdHabit_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-            objSave.setC11(txtC11.getText().toString());
-            objSave.setC12(txtC12.getText().toString());
+           // objSave.setC11(txtC11.getText().toString());
+           // objSave.setC12(txtC12.getText().toString());
             objSave.setC13(txtC13.getText().toString());
             String[] d_rdogrpC14 = new String[]{"1", "0"};
             objSave.setC14("");
@@ -3211,10 +3274,9 @@ public class FdHabit extends Activity {
                 rb = (RadioButton) rdogrpC18.getChildAt(i);
                 if (rb.isChecked()) objSave.setC18(d_rdogrpC18[i]);
             }
-
-            objSave.setC19a((chkC19a.isChecked() ? "1" : "2"));
+            objSave.setC19a((spnC19a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnC19a.getSelectedItem().toString(), "-")));
             objSave.setC19b(txtC19b.getText().toString());
-            objSave.setC19c(txtC19c.getText().toString());
+
             String[] d_rdogrpC110 = new String[]{"1", "0"};
             objSave.setC110("");
             for (int i = 0; i < rdogrpC110.getChildCount(); i++) {
@@ -3703,8 +3765,8 @@ public class FdHabit extends Activity {
             for (FdHabit_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
-                txtC11.setText(item.getC11());
-                txtC12.setText(item.getC12());
+               // txtC11.setText(item.getC11());
+              //  txtC12.setText(item.getC12());
                 txtC13.setText(item.getC13());
                 String[] d_rdogrpC14 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpC14.length; i++) {
@@ -3723,13 +3785,9 @@ public class FdHabit extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                if (item.getC19a().equals("1")) {
-                    chkC19a.setChecked(true);
-                } else if (item.getC19a().equals("2")) {
-                    chkC19a.setChecked(false);
-                }
+                spnC19a.setSelection(Global.SpinnerItemPositionAnyLength(spnC19a, item.getC19a()));
                 txtC19b.setText(item.getC19b());
-                txtC19c.setText(item.getC19c());
+
                 String[] d_rdogrpC110 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpC110.length; i++) {
                     if (item.getC110().equals(String.valueOf(d_rdogrpC110[i]))) {
