@@ -412,9 +412,6 @@ public class UpdateMenu extends Activity {
             Cursor cur = C.ReadData("Select * from EntryStatus where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'");
             cur.moveToFirst();
             while (!cur.isAfterLast()) {
-                //T1-Identity
-                //T2-Member
-                //T3-SES
                 if (cur.getString(cur.getColumnIndex("T1")).equals("1")) {
                     cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
                 } else cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);

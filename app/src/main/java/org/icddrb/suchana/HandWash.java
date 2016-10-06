@@ -1,14 +1,8 @@
 package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".HandWash" android:label="HandWash" />
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import android.app.*;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,23 +10,16 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.view.KeyEvent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -41,43 +28,33 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
-import Common.*;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
 
 public class HandWash extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event)
-    {
-        if(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME)
-        { return false; }
-        else { return true;  }
-    }
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout secM24;
     LinearLayout secRnd;
@@ -138,7 +115,6 @@ public class HandWash extends Activity {
     View lineM242a;
     TextView VlblM242a;
     RadioGroup rdogrpM242a;
-
     RadioButton rdoM242a1;
     RadioButton rdoM242a2;
     LinearLayout secM242a1;
@@ -153,7 +129,6 @@ public class HandWash extends Activity {
     View lineM242b;
     TextView VlblM242b;
     RadioGroup rdogrpM242b;
-
     RadioButton rdoM242b1;
     RadioButton rdoM242b2;
     LinearLayout secM242b1;
@@ -168,7 +143,6 @@ public class HandWash extends Activity {
     View lineM242c;
     TextView VlblM242c;
     RadioGroup rdogrpM242c;
-
     RadioButton rdoM242c1;
     RadioButton rdoM242c2;
     LinearLayout secM242c1;
@@ -183,7 +157,6 @@ public class HandWash extends Activity {
     View lineM242d;
     TextView VlblM242d;
     RadioGroup rdogrpM242d;
-
     RadioButton rdoM242d1;
     RadioButton rdoM242d2;
     LinearLayout secM242d1;
@@ -198,7 +171,6 @@ public class HandWash extends Activity {
     View lineM242e;
     TextView VlblM242e;
     RadioGroup rdogrpM242e;
-
     RadioButton rdoM242e1;
     RadioButton rdoM242e2;
     LinearLayout secM242e1;
@@ -213,7 +185,6 @@ public class HandWash extends Activity {
     View lineM242f;
     TextView VlblM242f;
     RadioGroup rdogrpM242f;
-
     RadioButton rdoM242f1;
     RadioButton rdoM242f2;
     LinearLayout secM242f1;
@@ -228,7 +199,6 @@ public class HandWash extends Activity {
     View lineM242g;
     TextView VlblM242g;
     RadioGroup rdogrpM242g;
-
     RadioButton rdoM242g1;
     RadioButton rdoM242g2;
     LinearLayout secM242g1;
@@ -239,11 +209,49 @@ public class HandWash extends Activity {
     View lineM242g1X;
     TextView VlblM242g1X;
     EditText txtM242g1X;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            //dtpDate.setText(new StringBuilder()
+            //        .append(Global.Right("00"+mDay,2)).append("/")
+            //        .append(Global.Right("00"+mMonth,2)).append("/")
+            //        .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime;
+
+
+            //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -1278,7 +1286,14 @@ public class HandWash extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if(status.length()==0) {
-                Connection.MessageBox(HandWash.this, "Saved Successfully");
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+                Bundle IDBundle = new Bundle();
+                finish();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                startActivity(new Intent(HandWash.this, NutHealth.class).putExtras(IDBundle));
+
             }
             else{
                 Connection.MessageBox(HandWash.this, status);
@@ -1464,8 +1479,6 @@ public class HandWash extends Activity {
         }
     }
 
-
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -1478,31 +1491,6 @@ public class HandWash extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year; mMonth = monthOfYear+1; mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            //dtpDate.setText(new StringBuilder()
-            //        .append(Global.Right("00"+mDay,2)).append("/")
-            //        .append(Global.Right("00"+mMonth,2)).append("/")
-            //        .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour; minute = selectedMinute;
-            EditText tpTime;
-
-
-          //  tpTime.setText(new StringBuilder().append(Global.Right("00"+hour,2)).append(":").append(Global.Right("00"+minute,2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................
