@@ -603,7 +603,7 @@ public class PregHis extends Activity {
                 }
 
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    if (txtM19.getText().toString().equals("0") | txtM19.getText().toString().equals("")) {
+                    if (txtM19.getText().toString().equals("0") | txtM19.getText().toString().equals("") | txtM19.getText().toString().equals("00")) {
                         secM110a.setVisibility(View.GONE);
                         lineM110a.setVisibility(View.GONE);
                         chkM110a.setChecked(false);

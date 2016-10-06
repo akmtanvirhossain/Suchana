@@ -347,6 +347,7 @@ public class NutHealth extends Activity {
                     }
                 }
             });
+
             secM31x1 = (LinearLayout) findViewById(R.id.secM31x1);
             lineM31x1 = (View) findViewById(R.id.lineM31x1);
             VlblM31x1 = (TextView) findViewById(R.id.VlblM31x1);
