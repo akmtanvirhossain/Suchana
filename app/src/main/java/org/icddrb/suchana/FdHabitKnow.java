@@ -300,11 +300,11 @@ public class FdHabitKnow extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                           /* Intent intent = new Intent(getApplicationContext(), Handwash.class);
+                            Intent intent = new Intent(getApplicationContext(), HandWash.class);
                             intent.putExtras(IDbundle);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getApplicationContext().startActivity(intent);
-                            finish();*/
+                            finish();
                         }
                     });
                     adb.show();
@@ -720,11 +720,11 @@ public class FdHabitKnow extends Activity {
             if (status.length() == 0) {
                 EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
                 e.SaveUpdateData(this);
-                /*Bundle IDBundle = new Bundle();
+                Bundle IDBundle = new Bundle();
                 finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                startActivity(new Intent(FdHabitKnow.this, FdHabitKnow.class).putExtras(IDBundle));*/
+                startActivity(new Intent(FdHabitKnow.this, HandWash.class).putExtras(IDBundle));
 
             } else {
                 Connection.MessageBox(FdHabitKnow.this, status);

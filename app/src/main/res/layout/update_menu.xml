@@ -67,14 +67,36 @@
         android:layout_marginBottom="5sp"
         android:background="#CCCCCC" />
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5sp"
+        android:layout_marginTop="5sp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45sp"
+            android:gravity="center"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:text="Suchana Menu"
+            android:textColor="#006699"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
     <include
         layout="@layout/form_heading"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginBottom="20sp"
         android:isScrollContainer="true"
         android:overScrollMode="always"
         android:scrollbarAlwaysDrawVerticalTrack="true"
@@ -421,6 +443,57 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dip"
+                android:layout_marginBottom="5sp"
+                android:background="#006699" />
+
+            <Button
+                android:id="@+id/cmdMenuPreHis"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="মায়ের প্রজনন সম্পর্কীয় ইতিহাস"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuKnowledge"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="মায়ের সাধারণ জ্ঞান"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuFdhabitKnow"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="শিশুর খাদ্যাভাস সম্পর্কে জ্ঞান"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/cmdMenuHandWash"
                 style="@style/menuButtonStyle"
@@ -432,7 +505,7 @@
                 android:background="@drawable/button_style_gray"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20sp"
-                android:text="Hand Wash"
+                android:text="হাত ধোয়া সম্পর্কে জ্ঞান এবং অভ্যাস"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -494,6 +567,21 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20sp"
                 android:text="মহিলাদের খাদ্য বৈচিত্র"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cmdMenuFdHabit"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_gray"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="শিশুর খাদ্যাভাস"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
