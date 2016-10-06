@@ -219,7 +219,7 @@
 
                 <TextView
                     android:id="@+id/VlbllblM24"
-                    android:text="আপনার কখন হাত ধোয়া উচিত? (উত্তর পড়বেন না, আরো কিছু? বলে মা কে সাহায্য করুন)"
+                    android:text="আপনার কখন হাত ধোয়া উচিৎ? (উত্তর পড়বেন না, আরো কিছু? বলে মা কে সাহায্য করুন)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />

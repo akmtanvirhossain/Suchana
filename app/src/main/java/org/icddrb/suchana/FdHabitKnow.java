@@ -341,7 +341,7 @@ public class FdHabitKnow extends Activity {
 
             listM231.add("");
             listM231.add("01-শাল দুধ ");
-            listM231.add("02-বুকের দুধ (শাল দুধ বাদে)");
+            listM231.add("02-বুকের দুধ (শাল দুধ ছাড়া)");
             listM231.add("03-অন্যান্য দুধ");
             listM231.add("04-পানি");
             listM231.add("05-মধু /চিনির পানি ");

@@ -168,7 +168,7 @@
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -496,7 +496,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -511,6 +511,49 @@
 
             <View
                 android:id="@+id/lineC18"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:id="@+id/seclblC119a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC119a"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C19 আপনি জন্মের কতক্ষণ পর (নাম) কে বুকের দুধ পান করিয়েছেন?"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC119a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/seclblC119b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblHlblC119b"
+                    style="@style/rowHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="যদি তৎক্ষনাত হয় ১ লিখুন, যদি ২৪ ঘণ্টা এর মধ্যে হয় পূর্ণ ঘন্টা লিখুন, ১ দিন এর বেশি হলে পূর্ণ দিনের সংখ্যা লিখুন"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linelblC119b"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
@@ -660,7 +703,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -712,7 +755,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -757,7 +800,7 @@
                     android:id="@+id/VlblC112"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="শিশুকে (নাম) জন্মের 3 Days এর ভেতর কি অন্য কিছু মুখে দিয়েছিলেন?"
+                    android:text="শিশুকে (নাম) জন্মের ৩ দিন এর ভেতর কি অন্য কিছু মুখে দিয়েছিলেন?"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -772,7 +815,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -817,7 +860,7 @@
                     android:id="@+id/VlblC113"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="শিশুকে (নাম) জন্মের 6 months এর ভেতর কি কোনো খাবার অথবা পানীয় মুখে দিয়েছিলেন? (পানির কথা জানতে চান)"
+                    android:text="শিশুকে (নাম) জন্মের ৬ মাস এর ভেতর কি কোনো খাবার অথবা পানীয় মুখে দিয়েছিলেন? (পানির কথা জানতে চান)"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -832,7 +875,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -968,7 +1011,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton

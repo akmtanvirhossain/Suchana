@@ -174,7 +174,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="M1. মায়ের প্রজনন সম্পর্কীয় ইতিহাস"
+                    android:text="M1. মায়ের প্রজনণ সম্পর্কীয় ইতিহাস"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -793,7 +793,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যা"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton

@@ -435,7 +435,7 @@
                     android:id="@+id/VlblM234"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয়"
+                    android:text="কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয় (মাস)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -504,7 +504,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="M236.  6-23 months শিশুদের কি কি খাওয়ানো উচিৎ"
+                    android:text="M236. ৬-২৩ মাস শিশুদের কি কি খাওয়ানো উচিৎ"
                     android:textSize="20sp" />
             </LinearLayout>
 
