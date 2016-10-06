@@ -205,22 +205,34 @@ public class Destruction1 extends Activity {
     View lineH14a14n;
     TextView VlblH14a14n;
     CheckBox chkH14a14n;
-    LinearLayout secH14a4x;
-    View lineH14a4x;
-    TextView VlblH14a4x;
-    CheckBox chkH14a4x;
-    LinearLayout secH14a4x1;
-    View lineH14a4x1;
-    TextView VlblH14a4x1;
-    EditText txtH14a4x1;
-    LinearLayout secH14a4x2;
-    View lineH14a4x2;
-    TextView VlblH14a4x2;
-    EditText txtH14a4x2;
-    LinearLayout secH14a4x3;
-    View lineH14a4x3;
-    TextView VlblH14a4x3;
-    EditText txtH14a4x3;
+    LinearLayout secH14a14o;
+    View lineH14a14o;
+    TextView VlblH14a14o;
+    CheckBox chkH14a14o;
+    LinearLayout secH14a14p;
+    View lineH14a14p;
+    TextView VlblH14a14p;
+    CheckBox chkH14a14p;
+    LinearLayout secH14a14q;
+    View lineH14a14q;
+    TextView VlblH14a14q;
+    CheckBox chkH14a14q;
+    LinearLayout secH14a14r;
+    View lineH14a14r;
+    TextView VlblH14a14r;
+    CheckBox chkH14a14r;
+    LinearLayout secH14a14s;
+    View lineH14a14s;
+    TextView VlblH14a14s;
+    CheckBox chkH14a14s;
+    LinearLayout secH14a14t;
+    View lineH14a14t;
+    TextView VlblH14a14t;
+    CheckBox chkH14a14t;
+    LinearLayout secH14a14u;
+    View lineH14a14u;
+    TextView VlblH14a14u;
+    CheckBox chkH14a14u;
     String StartTime;
     Bundle IDbundle;
     Button buttonAssetType01;
@@ -575,7 +587,7 @@ public class Destruction1 extends Activity {
             listH14a.add("06-পরিবারের অ-উপার্জনকারী সদস্যের মৃত্যু  ");
             listH14a.add("07-খানার সদস্যের বিবাহ ");
             listH14a.add("08-বিবাহ বিচ্ছে ");
-            listH14a.add("09- বিবাহ পরিত্যক্ত /পৃথক ");
+            listH14a.add("09-বিবাহ পরিত্যক্ত /পৃথক ");
             listH14a.add("10-পরিবারের উপার্জনকারী সদস্যের বিচ্ছেদ/পৃথক");
             listH14a.add("11-ভূমির ক্ষয়ক্ষতি ");
             listH14a.add("12-প্রাকৃতিক দূর্যোগে গবাদিপশু/হাস-মুরগির ক্ষয়ক্ষতি ");
@@ -743,20 +755,24 @@ public class Destruction1 extends Activity {
                         secH14a14n.setVisibility(View.GONE);
                         lineH14a14n.setVisibility(View.GONE);
                         chkH14a14n.setChecked(false);
-                        secH14a4x.setVisibility(View.GONE);
-                        lineH14a4x.setVisibility(View.GONE);
-                        chkH14a4x.setChecked(false);
-                        secH14a4x1.setVisibility(View.GONE);
-                        lineH14a4x1.setVisibility(View.GONE);
-                        txtH14a4x1.setText("");
-                        secH14a4x2.setVisibility(View.GONE);
-                        lineH14a4x2.setVisibility(View.GONE);
-                        txtH14a4x2.setText("");
-                        secH14a4x3.setVisibility(View.GONE);
-                        lineH14a4x3.setVisibility(View.GONE);
-                        txtH14a4x3.setText("");
-                        seclbH14a3.setVisibility(View.GONE);
-                        seclbH14a4.setVisibility(View.GONE);
+                        secH14a14o.setVisibility(View.GONE);
+                        lineH14a14o.setVisibility(View.GONE);
+                        chkH14a14o.setChecked(false);
+                        secH14a14p.setVisibility(View.GONE);
+                        lineH14a14p.setVisibility(View.GONE);
+                        chkH14a14p.setChecked(false);
+                        secH14a14q.setVisibility(View.GONE);
+                        lineH14a14q.setVisibility(View.GONE);
+                        chkH14a14q.setChecked(false);
+                        secH14a14r.setVisibility(View.GONE);
+                        lineH14a14r.setVisibility(View.GONE);
+                        chkH14a14r.setChecked(false);
+                        secH14a14s.setVisibility(View.GONE);
+                        lineH14a14s.setVisibility(View.GONE);
+                        chkH14a14s.setChecked(false);
+                        secH14a14t.setVisibility(View.GONE);
+                        lineH14a14t.setVisibility(View.GONE);
+                        chkH14a14t.setChecked(false);
                     } else {
                         secH14a2.setVisibility(View.VISIBLE);
                         lineH14a2.setVisibility(View.VISIBLE);
@@ -822,17 +838,18 @@ public class Destruction1 extends Activity {
                         lineH14a4m.setVisibility(View.VISIBLE);
                         secH14a14n.setVisibility(View.VISIBLE);
                         lineH14a14n.setVisibility(View.VISIBLE);
-                        secH14a4x.setVisibility(View.VISIBLE);
-                        lineH14a4x.setVisibility(View.VISIBLE);/*
-                        secH14a4x1.setVisibility(View.VISIBLE);
-                        lineH14a4x1.setVisibility(View.VISIBLE);
-                        secH14a4x2.setVisibility(View.VISIBLE);
-                        lineH14a4x2.setVisibility(View.VISIBLE);
-                        secH14a4x3.setVisibility(View.VISIBLE);
-                        lineH14a4x3.setVisibility(View.VISIBLE);*/
-
-                        seclbH14a3.setVisibility(View.VISIBLE);
-                        seclbH14a4.setVisibility(View.VISIBLE);
+                        secH14a14o.setVisibility(View.VISIBLE);
+                        lineH14a14o.setVisibility(View.VISIBLE);
+                        secH14a14p.setVisibility(View.VISIBLE);
+                        lineH14a14p.setVisibility(View.VISIBLE);
+                        secH14a14q.setVisibility(View.VISIBLE);
+                        lineH14a14q.setVisibility(View.VISIBLE);
+                        secH14a14r.setVisibility(View.VISIBLE);
+                        lineH14a14r.setVisibility(View.VISIBLE);
+                        secH14a14s.setVisibility(View.VISIBLE);
+                        lineH14a14s.setVisibility(View.VISIBLE);
+                        secH14a14t.setVisibility(View.VISIBLE);
+                        lineH14a14t.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -897,6 +914,27 @@ public class Destruction1 extends Activity {
             lineH14a3m = (View) findViewById(R.id.lineH14a3m);
             VlblH14a3m = (TextView) findViewById(R.id.VlblH14a3m);
             chkH14a3m = (CheckBox) findViewById(R.id.chkH14a3m);
+            chkH14a3m.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkH14a3a.setChecked(false);
+                        chkH14a3b.setChecked(false);
+                        chkH14a3c.setChecked(false);
+                        chkH14a3d.setChecked(false);
+                        chkH14a3e.setChecked(false);
+                        chkH14a3f.setChecked(false);
+                        chkH14a3g.setChecked(false);
+                        chkH14a3h.setChecked(false);
+                        chkH14a3i.setChecked(false);
+                        chkH14a3j.setChecked(false);
+                        chkH14a3k.setChecked(false);
+                        chkH14a3l.setChecked(false);
+                        chkH14a3x.setChecked(true);
+                        chkH14a3x.setChecked(false);
+                    }
+                }
+            });
             secH14a3x = (LinearLayout) findViewById(R.id.secH14a3x);
             lineH14a3x = (View) findViewById(R.id.lineH14a3x);
             VlblH14a3x = (TextView) findViewById(R.id.VlblH14a3x);
@@ -996,79 +1034,113 @@ public class Destruction1 extends Activity {
             lineH14a14n = (View) findViewById(R.id.lineH14a14n);
             VlblH14a14n = (TextView) findViewById(R.id.VlblH14a14n);
             chkH14a14n = (CheckBox) findViewById(R.id.chkH14a14n);
-            secH14a4x = (LinearLayout) findViewById(R.id.secH14a4x);
-            lineH14a4x = (View) findViewById(R.id.lineH14a4x);
-            VlblH14a4x = (TextView) findViewById(R.id.VlblH14a4x);
-            chkH14a4x = (CheckBox) findViewById(R.id.chkH14a4x);
-            chkH14a4x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            secH14a14o = (LinearLayout) findViewById(R.id.secH14a14o);
+            lineH14a14o = (View) findViewById(R.id.lineH14a14o);
+            VlblH14a14o = (TextView) findViewById(R.id.VlblH14a14o);
+            chkH14a14o = (CheckBox) findViewById(R.id.chkH14a14o);
+            secH14a14p = (LinearLayout) findViewById(R.id.secH14a14p);
+            lineH14a14p = (View) findViewById(R.id.lineH14a14p);
+            VlblH14a14p = (TextView) findViewById(R.id.VlblH14a14p);
+            chkH14a14p = (CheckBox) findViewById(R.id.chkH14a14p);
+            secH14a14q = (LinearLayout) findViewById(R.id.secH14a14q);
+            lineH14a14q = (View) findViewById(R.id.lineH14a14q);
+            VlblH14a14q = (TextView) findViewById(R.id.VlblH14a14q);
+            chkH14a14q = (CheckBox) findViewById(R.id.chkH14a14q);
+            secH14a14r = (LinearLayout) findViewById(R.id.secH14a14r);
+            lineH14a14r = (View) findViewById(R.id.lineH14a14r);
+            VlblH14a14r = (TextView) findViewById(R.id.VlblH14a14r);
+            chkH14a14r = (CheckBox) findViewById(R.id.chkH14a14r);
+            secH14a14s = (LinearLayout) findViewById(R.id.secH14a14s);
+            lineH14a14s = (View) findViewById(R.id.lineH14a14s);
+            VlblH14a14s = (TextView) findViewById(R.id.VlblH14a14s);
+            chkH14a14s = (CheckBox) findViewById(R.id.chkH14a14s);
+            secH14a14t = (LinearLayout) findViewById(R.id.secH14a14t);
+            lineH14a14t = (View) findViewById(R.id.lineH14a14t);
+            VlblH14a14t = (TextView) findViewById(R.id.VlblH14a14t);
+            chkH14a14t = (CheckBox) findViewById(R.id.chkH14a14t);
+            secH14a14u = (LinearLayout) findViewById(R.id.secH14a14u);
+            lineH14a14u = (View) findViewById(R.id.lineH14a14u);
+            VlblH14a14u = (TextView) findViewById(R.id.VlblH14a14u);
+            chkH14a14u = (CheckBox) findViewById(R.id.chkH14a14u);
+
+            chkH14a14u.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        secH14a4x1.setVisibility(View.VISIBLE);
-                        secH14a4x2.setVisibility(View.VISIBLE);
-                        secH14a4x3.setVisibility(View.VISIBLE);
-                        lineH14a4x1.setVisibility(View.VISIBLE);
-                        lineH14a4x2.setVisibility(View.VISIBLE);
-                        lineH14a4x3.setVisibility(View.VISIBLE);
-                    } else {
-                        txtH14a4x1.setText("");
-                        txtH14a4x2.setText("");
-                        txtH14a4x3.setText("");
-                        secH14a4x1.setVisibility(View.GONE);
-                        secH14a4x2.setVisibility(View.GONE);
-                        secH14a4x3.setVisibility(View.GONE);
-                        lineH14a4x1.setVisibility(View.GONE);
-                        lineH14a4x2.setVisibility(View.GONE);
-                        lineH14a4x3.setVisibility(View.GONE);
+                        chkH14a4a.setChecked(false);
+                        chkH14a4b.setChecked(false);
+                        chkH14a4c.setChecked(false);
+                        chkH14a4d.setChecked(false);
+                        chkH14a4e.setChecked(false);
+                        chkH14a4f.setChecked(false);
+                        chkH14a4g.setChecked(false);
+                        chkH14a4h.setChecked(false);
+                        chkH14a4i.setChecked(false);
+                        chkH14a4j.setChecked(false);
+                        chkH14a4k.setChecked(false);
+                        chkH14a4l.setChecked(false);
+                        chkH14a4m.setChecked(false);
+                        chkH14a14n.setChecked(false);
+                        chkH14a14o.setChecked(false);
+                        chkH14a14p.setChecked(false);
+                        chkH14a14q.setChecked(false);
+                        chkH14a14r.setChecked(false);
+                        chkH14a14s.setChecked(false);
+                        chkH14a14t.setChecked(false);
 
+                    } else {
+                        
                     }
                 }
             });
-            secH14a4x1 = (LinearLayout) findViewById(R.id.secH14a4x1);
-            lineH14a4x1 = (View) findViewById(R.id.lineH14a4x1);
-            VlblH14a4x1 = (TextView) findViewById(R.id.VlblH14a4x1);
-            txtH14a4x1 = (EditText) findViewById(R.id.txtH14a4x1);
-            secH14a4x2 = (LinearLayout) findViewById(R.id.secH14a4x2);
-            lineH14a4x2 = (View) findViewById(R.id.lineH14a4x2);
-            VlblH14a4x2 = (TextView) findViewById(R.id.VlblH14a4x2);
-            txtH14a4x2 = (EditText) findViewById(R.id.txtH14a4x2);
-            secH14a4x3 = (LinearLayout) findViewById(R.id.secH14a4x3);
-            lineH14a4x3 = (View) findViewById(R.id.lineH14a4x3);
-            VlblH14a4x3 = (TextView) findViewById(R.id.VlblH14a4x3);
-            txtH14a4x3 = (EditText) findViewById(R.id.txtH14a4x3);
 
+
+            //Hide all skip variables
+            secH14a2.setVisibility(View.GONE);
+            secH14a3a.setVisibility(View.GONE);
+            secH14a3b.setVisibility(View.GONE);
+            secH14a3c.setVisibility(View.GONE);
+            secH14a3d.setVisibility(View.GONE);
+            secH14a3e.setVisibility(View.GONE);
+            secH14a3f.setVisibility(View.GONE);
+            secH14a3g.setVisibility(View.GONE);
+            secH14a3h.setVisibility(View.GONE);
+            secH14a3i.setVisibility(View.GONE);
+            secH14a3j.setVisibility(View.GONE);
+            secH14a3k.setVisibility(View.GONE);
+            secH14a3l.setVisibility(View.GONE);
+            secH14a3m.setVisibility(View.GONE);
+            secH14a3x.setVisibility(View.GONE);
             secH14a3x1.setVisibility(View.GONE);
             secH14a3x2.setVisibility(View.GONE);
             secH14a3x3.setVisibility(View.GONE);
-            lineH14a3x1.setVisibility(View.GONE);
-            lineH14a3x2.setVisibility(View.GONE);
-            lineH14a3x3.setVisibility(View.GONE);
-
-            secH14a4x1.setVisibility(View.GONE);
-            secH14a4x2.setVisibility(View.GONE);
-            secH14a4x3.setVisibility(View.GONE);
-            lineH14a4x1.setVisibility(View.GONE);
-            lineH14a4x2.setVisibility(View.GONE);
-            lineH14a4x3.setVisibility(View.GONE);
-
+            secH14a4a.setVisibility(View.GONE);
+            secH14a4b.setVisibility(View.GONE);
+            secH14a4c.setVisibility(View.GONE);
+            secH14a4d.setVisibility(View.GONE);
+            secH14a4e.setVisibility(View.GONE);
+            secH14a4f.setVisibility(View.GONE);
+            secH14a4g.setVisibility(View.GONE);
+            secH14a4h.setVisibility(View.GONE);
+            secH14a4i.setVisibility(View.GONE);
+            secH14a4j.setVisibility(View.GONE);
+            secH14a4k.setVisibility(View.GONE);
+            secH14a4l.setVisibility(View.GONE);
+            secH14a4m.setVisibility(View.GONE);
+            secH14a14n.setVisibility(View.GONE);
+            secH14a14o.setVisibility(View.GONE);
+            secH14a14p.setVisibility(View.GONE);
+            secH14a14q.setVisibility(View.GONE);
+            secH14a14r.setVisibility(View.GONE);
+            secH14a14s.setVisibility(View.GONE);
+            secH14a14t.setVisibility(View.GONE);
             txtRnd.setText(RND);
             txtSuchanaID.setText(SUCHANAID);
             txtRnd.setEnabled(false);
             txtSuchanaID.setEnabled(false);
-            secH14a3x1.setVisibility(View.GONE);
-            lineH14a3x1.setVisibility(View.GONE);
-            secH14a3x2.setVisibility(View.GONE);
-            lineH14a3x2.setVisibility(View.GONE);
-            secH14a3x3.setVisibility(View.GONE);
-            lineH14a3x3.setVisibility(View.GONE);
-            secH14a4x1.setVisibility(View.GONE);
-            lineH14a4x1.setVisibility(View.GONE);
-            secH14a4x2.setVisibility(View.GONE);
-            lineH14a4x2.setVisibility(View.GONE);
-            secH14a4x3.setVisibility(View.GONE);
-            lineH14a4x3.setVisibility(View.GONE);
 
 
+            buttonAssetType01.performClick();
             DataSearch(RND, SUCHANAID, H14A);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -1244,16 +1316,25 @@ public class Destruction1 extends Activity {
                 Connection.MessageBox(Destruction1.this, "Required field: নির্দিষ্ট করুন.");
                 txtH14a3x1.requestFocus();
                 return;
-            } /*else if (txtH14a3x2.getText().toString().length() == 0 & secH14a3x2.isShown()) {
-                Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
-                txtH14a3x2.requestFocus();
+            } else if (secH14a3a.isShown() & ((chkH14a3a.isChecked() |
+                    chkH14a3b.isChecked() |
+                    chkH14a3c.isChecked() |
+                    chkH14a3d.isChecked() |
+                    chkH14a3e.isChecked() |
+                    chkH14a3f.isChecked() |
+                    chkH14a3g.isChecked() |
+                    chkH14a3h.isChecked() |
+                    chkH14a3i.isChecked() |
+                    chkH14a3j.isChecked() |
+                    chkH14a3k.isChecked() |
+                    chkH14a3l.isChecked() |
+                    chkH14a3x.isChecked()) &
+                    chkH14a3m.isChecked())) {
+                Connection.MessageBox(Destruction1.this, "কিছুই করিনি সিলেক্ট করা হলে অন্য  মানিয়ে নেয়ার পদক্ষেপ সিলেক্ট হবেনা !");
+                secH14a3a.requestFocus();
                 return;
-            } else if (txtH14a3x3.getText().toString().length() == 0 & secH14a3x3.isShown()) {
-                Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
-                txtH14a3x3.requestFocus();
-                return;
-
-            }*/ else if (secH14a4a.isShown() & (!chkH14a4a.isChecked() &
+            } else if (secH14a4a.isShown() &
+                    (!chkH14a4a.isChecked() &
                     !chkH14a4b.isChecked() &
                     !chkH14a4c.isChecked() &
                     !chkH14a4d.isChecked() &
@@ -1267,24 +1348,46 @@ public class Destruction1 extends Activity {
                     !chkH14a4l.isChecked() &
                     !chkH14a4m.isChecked() &
                     !chkH14a14n.isChecked() &
-                    !chkH14a4x.isChecked())) {
+                            !chkH14a14o.isChecked() &
+                            !chkH14a14p.isChecked() &
+                            !chkH14a14q.isChecked() &
+                            !chkH14a14r.isChecked() &
+                            !chkH14a14s.isChecked() &
+                            !chkH14a14t.isChecked() &
+                            !chkH14a14u.isChecked()
+
+                    )) {
                 Connection.MessageBox(Destruction1.this, "Required field: CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
                 secH14a4a.requestFocus();
                 return;
-            } else if (txtH14a4x1.getText().toString().length() == 0 & secH14a4x1.isShown()) {
-                Connection.MessageBox(Destruction1.this, "Required field: নির্দিষ্ট করুন.");
-                txtH14a4x1.requestFocus();
-                return;
-            } /*else if (txtH14a4x2.getText().toString().length() == 0 & secH14a4x2.isShown()) {
-                Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
-                txtH14a4x2.requestFocus();
-                return;
-            } else if (txtH14a4x3.getText().toString().length() == 0 & secH14a4x3.isShown()) {
-                Connection.MessageBox(Destruction1.this, "Required field: উল্লেখ কর.");
-                txtH14a4x3.requestFocus();
-                return;
-            }*/
+            } else if (secH14a4a.isShown() &
+                    ((chkH14a4a.isChecked() |
+                            chkH14a4b.isChecked() |
+                            chkH14a4c.isChecked() |
+                            chkH14a4d.isChecked() |
+                            chkH14a4e.isChecked() |
+                            chkH14a4f.isChecked() |
+                            chkH14a4g.isChecked() |
+                            chkH14a4h.isChecked() |
+                            chkH14a4i.isChecked() |
+                            chkH14a4j.isChecked() |
+                            chkH14a4k.isChecked() |
+                            chkH14a4l.isChecked() |
+                            chkH14a4m.isChecked() |
+                            chkH14a14n.isChecked() |
+                            chkH14a14o.isChecked() |
+                            chkH14a14p.isChecked() |
+                            chkH14a14q.isChecked() |
+                            chkH14a14r.isChecked() |
+                            chkH14a14s.isChecked() |
+                            chkH14a14t.isChecked()) &
+                            chkH14a14u.isChecked()
 
+                    )) {
+                Connection.MessageBox(Destruction1.this, "কিছুই নেইনি সিলেক্ট করা হলে অন্য  প্রতিষ্ঠান সিলেক্ট হবেনা !");
+                secH14a4a.requestFocus();
+                return;
+            }
 
             String SQL = "";
             RadioButton rb;
@@ -1333,10 +1436,13 @@ public class Destruction1 extends Activity {
             objSave.setH14a4l((chkH14a4l.isChecked() ? "1" : "2"));
             objSave.setH14a4m((chkH14a4m.isChecked() ? "1" : "2"));
             objSave.setH14a14n((chkH14a14n.isChecked() ? "1" : "2"));
-            objSave.setH14a4x((chkH14a4x.isChecked() ? "1" : "2"));
-            objSave.setH14a4x1(txtH14a4x1.getText().toString());
-            objSave.setH14a4x2(txtH14a4x2.getText().toString());
-            objSave.setH14a4x3(txtH14a4x3.getText().toString());
+            objSave.setH14a14o((chkH14a14o.isChecked() ? "1" : "2"));
+            objSave.setH14a14p((chkH14a14p.isChecked() ? "1" : "2"));
+            objSave.setH14a14q((chkH14a14q.isChecked() ? "1" : "2"));
+            objSave.setH14a14r((chkH14a14r.isChecked() ? "1" : "2"));
+            objSave.setH14a14s((chkH14a14s.isChecked() ? "1" : "2"));
+            objSave.setH14a14t((chkH14a14t.isChecked() ? "1" : "2"));
+            objSave.setH14a14u((chkH14a14u.isChecked() ? "1" : "2"));
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1533,18 +1639,41 @@ public class Destruction1 extends Activity {
                 } else if (item.getH14a14n().equals("2")) {
                     chkH14a14n.setChecked(false);
                 }
-                if (item.getH14a4x().equals("1")) {
-                    chkH14a4x.setChecked(true);
-                } else if (item.getH14a4x().equals("2")) {
-                    chkH14a4x.setChecked(true);
-                    chkH14a4x.setChecked(false);
+                if (item.getH14a14o().equals("1")) {
+                    chkH14a14o.setChecked(true);
+                } else if (item.getH14a14o().equals("2")) {
+                    chkH14a14o.setChecked(false);
                 }
-                txtH14a4x1.setText(item.getH14a4x1());
-                txtH14a4x2.setText(item.getH14a4x2());
-                txtH14a4x3.setText(item.getH14a4x3());
-
-
-                buttonColor();
+                if (item.getH14a14p().equals("1")) {
+                    chkH14a14p.setChecked(true);
+                } else if (item.getH14a14p().equals("2")) {
+                    chkH14a14p.setChecked(false);
+                }
+                if (item.getH14a14q().equals("1")) {
+                    chkH14a14q.setChecked(true);
+                } else if (item.getH14a14q().equals("2")) {
+                    chkH14a14q.setChecked(false);
+                }
+                if (item.getH14a14r().equals("1")) {
+                    chkH14a14r.setChecked(true);
+                } else if (item.getH14a14r().equals("2")) {
+                    chkH14a14r.setChecked(false);
+                }
+                if (item.getH14a14s().equals("1")) {
+                    chkH14a14s.setChecked(true);
+                } else if (item.getH14a14s().equals("2")) {
+                    chkH14a14s.setChecked(false);
+                }
+                if (item.getH14a14t().equals("1")) {
+                    chkH14a14t.setChecked(true);
+                } else if (item.getH14a14t().equals("2")) {
+                    chkH14a14t.setChecked(false);
+                }
+                if (item.getH14a14u().equals("1")) {
+                    chkH14a14u.setChecked(true);
+                } else if (item.getH14a14u().equals("2")) {
+                    chkH14a14u.setChecked(false);
+                }
             }
         } catch (Exception e) {
             Connection.MessageBox(Destruction1.this, e.getMessage());
@@ -1716,15 +1845,41 @@ public class Destruction1 extends Activity {
                 } else if (item.getH14a14n().equals("2")) {
                     chkH14a14n.setChecked(false);
                 }
-                if (item.getH14a4x().equals("1")) {
-                    chkH14a4x.setChecked(true);
-                } else if (item.getH14a4x().equals("2")) {
-                    chkH14a4x.setChecked(true);
-                    chkH14a4x.setChecked(false);
+                if (item.getH14a14o().equals("1")) {
+                    chkH14a14o.setChecked(true);
+                } else if (item.getH14a14o().equals("2")) {
+                    chkH14a14o.setChecked(false);
                 }
-                txtH14a4x1.setText(item.getH14a4x1());
-                txtH14a4x2.setText(item.getH14a4x2());
-                txtH14a4x3.setText(item.getH14a4x3());
+                if (item.getH14a14p().equals("1")) {
+                    chkH14a14p.setChecked(true);
+                } else if (item.getH14a14p().equals("2")) {
+                    chkH14a14p.setChecked(false);
+                }
+                if (item.getH14a14q().equals("1")) {
+                    chkH14a14q.setChecked(true);
+                } else if (item.getH14a14q().equals("2")) {
+                    chkH14a14q.setChecked(false);
+                }
+                if (item.getH14a14r().equals("1")) {
+                    chkH14a14r.setChecked(true);
+                } else if (item.getH14a14r().equals("2")) {
+                    chkH14a14r.setChecked(false);
+                }
+                if (item.getH14a14s().equals("1")) {
+                    chkH14a14s.setChecked(true);
+                } else if (item.getH14a14s().equals("2")) {
+                    chkH14a14s.setChecked(false);
+                }
+                if (item.getH14a14t().equals("1")) {
+                    chkH14a14t.setChecked(true);
+                } else if (item.getH14a14t().equals("2")) {
+                    chkH14a14t.setChecked(false);
+                }
+                if (item.getH14a14u().equals("1")) {
+                    chkH14a14u.setChecked(true);
+                } else if (item.getH14a14u().equals("2")) {
+                    chkH14a14u.setChecked(false);
+                }
 
             }
 
@@ -1742,7 +1897,6 @@ public class Destruction1 extends Activity {
                 chkH14a3f.setChecked(false);
                 chkH14a3g.setChecked(false);
                 chkH14a3h.setChecked(false);
-
                 chkH14a3i.setChecked(false);
                 chkH14a3j.setChecked(false);
                 chkH14a3k.setChecked(false);
@@ -1754,9 +1908,9 @@ public class Destruction1 extends Activity {
                 txtH14a3x1.setText("");
                 txtH14a3x2.setText("");
                 txtH14a3x3.setText("");
+
                 chkH14a4a.setChecked(false);
                 chkH14a4b.setChecked(false);
-
                 chkH14a4c.setChecked(false);
                 chkH14a4d.setChecked(false);
                 chkH14a4e.setChecked(false);
@@ -1769,12 +1923,14 @@ public class Destruction1 extends Activity {
                 chkH14a4l.setChecked(false);
                 chkH14a4m.setChecked(false);
                 chkH14a14n.setChecked(false);
-                chkH14a4x.setChecked(true);
-                chkH14a4x.setChecked(false);
+                chkH14a14o.setChecked(false);
+                chkH14a14p.setChecked(false);
+                chkH14a14q.setChecked(false);
+                chkH14a14r.setChecked(false);
+                chkH14a14s.setChecked(false);
+                chkH14a14t.setChecked(false);
+                chkH14a14u.setChecked(false);
 
-                txtH14a4x1.setText("");
-                txtH14a4x2.setText("");
-                txtH14a4x3.setText("");
             }
 
         } catch (Exception e) {
