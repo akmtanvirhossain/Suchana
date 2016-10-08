@@ -901,13 +901,12 @@ public class AssetNB extends Activity {
                 e.SaveUpdateData(this);
                 if (allItemsCompleted) {
 
-
                     finish();
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", txtRnd.getText().toString());
                     IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
                     IDBundle.putString("H41a", "");
-                    startActivity(new Intent(AssetNB.this, Land.class).putExtras(IDBundle));
+                    startActivity(new Intent(AssetNB.this, Land_list.class).putExtras(IDBundle));
                     // Connection.MessageBox(AssetB.this, "Saved Successfully");
                 }
             } else {
