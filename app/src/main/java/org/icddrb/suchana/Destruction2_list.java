@@ -174,7 +174,8 @@ public class Destruction2_list extends Activity {
                 map.put("H14b6", item.getH14b6());
                 map.put("H14b7", item.getH14b7());
                 map.put("H14b8", item.getH14b8());
-                map.put("H14b8X", item.getH14b8X());
+                map.put("H14b9", item.getH14b9());
+                map.put("H14b9X", item.getH14b9X());
                 map.put("H14c1", item.getH14c1());
                 map.put("H14c1a", item.getH14c1a());
                 map.put("H14c1b", item.getH14c1b());
@@ -230,7 +231,6 @@ public class Destruction2_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
-
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
@@ -247,8 +247,9 @@ public class Destruction2_list extends Activity {
             final TextView H14b5 = (TextView) convertView.findViewById(R.id.H14b5);
             final TextView H14b6 = (TextView) convertView.findViewById(R.id.H14b6);
             final TextView H14b7 = (TextView) convertView.findViewById(R.id.H14b7);
-            final TextView H14b8 = (TextView) convertView.findViewById(R.id.H14b8);
-            final TextView H14b8X = (TextView) convertView.findViewById(R.id.H14b8X);
+            final TextView H14b8 = (TextView) convertView.findViewById(R.id.H14b8);/*
+            final TextView H14b9 = (TextView)convertView.findViewById(R.id.H14b9);
+            final TextView H14b9X = (TextView)convertView.findViewById(R.id.H14b9X);*/
             final TextView H14c1 = (TextView) convertView.findViewById(R.id.H14c1);
             final TextView H14c1a = (TextView) convertView.findViewById(R.id.H14c1a);
             final TextView H14c1b = (TextView) convertView.findViewById(R.id.H14c1b);
@@ -283,8 +284,9 @@ public class Destruction2_list extends Activity {
             H14b5.setText(o.get("H14b5"));
             H14b6.setText(o.get("H14b6"));
             H14b7.setText(o.get("H14b7"));
-            H14b8.setText(o.get("H14b8"));
-            H14b8X.setText(o.get("H14b8X"));
+            H14b8.setText(o.get("H14b8"));/*
+            H14b9.setText(o.get("H14b9"));
+            H14b9X.setText(o.get("H14b9X"));*/
             H14c1.setText(o.get("H14c1"));
             H14c1a.setText(o.get("H14c1a"));
             H14c1b.setText(o.get("H14c1b"));

@@ -76,7 +76,7 @@ public class Land_list extends Activity {
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
-            SLNO = IDbundle.getString("SlNo");
+            //SLNO = IDbundle.getString("SlNo");
             TableName = "Land";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
           /*  lblHeading.setOnTouchListener(new View.OnTouchListener() {
@@ -188,7 +188,7 @@ public class Land_list extends Activity {
 
                 public void onClick(View view) {
                     //write your code here
-                    DataSearch(RND, SUCHANAID, SLNO);
+                    DataSearch(RND, SUCHANAID);
 
                 }
             });
@@ -212,7 +212,7 @@ public class Land_list extends Activity {
             TextView lblSucanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
             lblSucanaId.setText(SUCHANAID);
 
-            DataSearch(RND, SUCHANAID, SLNO);
+            DataSearch(RND, SUCHANAID);
 
 
         } catch (Exception e) {
@@ -221,7 +221,7 @@ public class Land_list extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaID, String SlNo) {
+    private void DataSearch(String Rnd, String SuchanaID) {
         try {
 
             Land_DataModel d = new Land_DataModel();

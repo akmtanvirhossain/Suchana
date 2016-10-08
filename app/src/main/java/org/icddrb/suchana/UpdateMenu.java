@@ -52,6 +52,8 @@ public class UpdateMenu extends Activity {
     Button cmdMenuFdhabitKnow;
     Button cmdMenuFdHabit;
     Button cmdMenuHandWash;
+    Button cmdMenuFather;
+
 
     Connection C;
     Global g;
@@ -404,6 +406,15 @@ public class UpdateMenu extends Activity {
                 }
             });
 
+            cmdMenuFather = (Button) findViewById(R.id.cmdMenuFather);
+            cmdMenuFather.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //finish();
+                    //startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
+                }
+            });
+
 
             cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
             //cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0 , 0, 0, 0);
@@ -529,6 +540,10 @@ public class UpdateMenu extends Activity {
                     cmdMenuAnthro.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
                 } else cmdMenuAnthro.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
+
+                if ((cur.getString(cur.getColumnIndex("T30")) == null ? "" : cur.getString(cur.getColumnIndex("T30"))).equals("1")) {
+                    cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
                 cur.moveToNext();
             }

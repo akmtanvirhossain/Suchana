@@ -83,6 +83,9 @@ public class EntryStatus_DataModel {
             setT("T28");
         else if (TableName.toLowerCase().equals("anthro"))
             setT("T29");
+        else if (TableName.toLowerCase().equals("father"))
+            setT("T30");
+
     }
 
     private void setRnd(String newValue) {

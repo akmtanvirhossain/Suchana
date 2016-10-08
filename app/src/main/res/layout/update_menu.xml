@@ -600,6 +600,20 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
+            <Button
+                android:id="@+id/cmdMenuFather"
+                style="@style/menuButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/button_style_blue"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20sp"
+                android:text="পিতার প্রশ্নপত্র"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 

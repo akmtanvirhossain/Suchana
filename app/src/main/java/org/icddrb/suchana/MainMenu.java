@@ -90,7 +90,8 @@ public class MainMenu extends Activity {
                                 public void run() {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
-                                        //Village List
+
+                                        //Entry Status
                                         tableList.add("EntryStatus");
 
                                         //Household
@@ -115,9 +116,21 @@ public class MainMenu extends Activity {
                                         tableList.add("IGA");
 
                                         //Woman, Child
-
+                                        tableList.add("PreHis");
+                                        tableList.add("Knowledge");
+                                        tableList.add("FdhabitKnow");
+                                        tableList.add("Handwash");
+                                        tableList.add("NutHealth");
+                                        tableList.add("WomenEmp");
+                                        tableList.add("DomViolence");
+                                        tableList.add("FoodDiversity");
+                                        tableList.add("FdHabit");
+                                        tableList.add("Anthro");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
+
+                                        //Village List
+                                        C.Sync_Download("VillageList", USERID, "");
 
                                     } catch (Exception e) {
 
