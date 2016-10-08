@@ -218,6 +218,14 @@ public class Knowledge extends Activity {
     View lineM2111g;
     TextView VlblM2111g;
     CheckBox chkM2111g;
+    LinearLayout secM2111h;
+    View lineM2111h;
+    TextView VlblM2111h;
+    CheckBox chkM2111h;
+    LinearLayout secM2111i;
+    View lineM2111i;
+    TextView VlblM2111i;
+    CheckBox chkM2111i;
     LinearLayout secM2111x;
     View lineM2111x;
     TextView VlblM2111x;
@@ -544,7 +552,7 @@ public class Knowledge extends Activity {
             lineMSLNumber=(View)findViewById(R.id.lineMSLNumber);
             VlblMSLNumber=(TextView) findViewById(R.id.VlblMSLNumber);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "'"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H221 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H220='1'"));
             secLbM2=(LinearLayout)findViewById(R.id.secLbM2);
             secM212=(LinearLayout)findViewById(R.id.secM212);
             lineM212=(View)findViewById(R.id.lineM212);
@@ -799,6 +807,19 @@ public class Knowledge extends Activity {
 
                 }
             });
+
+            chkM218c.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkM218a.setChecked(false);
+                        chkM218b.setChecked(false);
+                        chkM218x.setChecked(false);
+                        txtM218x1.setText("");
+                    }
+
+                }
+            });
             secM218x1=(LinearLayout)findViewById(R.id.secM218x1);
             lineM218x1=(View)findViewById(R.id.lineM218x1);
             VlblM218x1=(TextView) findViewById(R.id.VlblM218x1);
@@ -863,6 +884,15 @@ public class Knowledge extends Activity {
             lineM2111g=(View)findViewById(R.id.lineM2111g);
             VlblM2111g=(TextView) findViewById(R.id.VlblM2111g);
             chkM2111g=(CheckBox) findViewById(R.id.chkM2111g);
+
+            secM2111h=(LinearLayout)findViewById(R.id.secM2111h);
+            lineM2111h=(View)findViewById(R.id.lineM2111h);
+            VlblM2111h=(TextView) findViewById(R.id.VlblM2111h);
+            chkM2111h=(CheckBox) findViewById(R.id.chkM2111h);
+            secM2111i=(LinearLayout)findViewById(R.id.secM2111i);
+            lineM2111i=(View)findViewById(R.id.lineM2111i);
+            VlblM2111i=(TextView) findViewById(R.id.VlblM2111i);
+            chkM2111i=(CheckBox) findViewById(R.id.chkM2111i);
             secM2111x=(LinearLayout)findViewById(R.id.secM2111x);
             lineM2111x=(View)findViewById(R.id.lineM2111x);
             VlblM2111x=(TextView) findViewById(R.id.VlblM2111x);
@@ -883,6 +913,26 @@ public class Knowledge extends Activity {
                         secM2111x1.setVisibility(View.VISIBLE);
                         lineM2111x1.setVisibility(View.VISIBLE);
                     }
+                }
+            });
+
+            chkM2111i.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {
+                    if(((CheckBox) v).isChecked())
+                    {
+                        chkM2111a.setChecked(false);
+                        chkM2111b.setChecked(false);
+                        chkM2111c.setChecked(false);
+                        chkM2111d.setChecked(false);
+                        chkM2111e.setChecked(false);
+                        chkM2111f.setChecked(false);
+                        chkM2111g.setChecked(false);
+                        chkM2111h.setChecked(false);
+                        chkM2111x.setChecked(false);
+                    }
+
                 }
             });
             secM2111x1=(LinearLayout)findViewById(R.id.secM2111x1);
@@ -940,6 +990,24 @@ public class Knowledge extends Activity {
                         secM2112x1.setVisibility(View.VISIBLE);
                         lineM2112x1.setVisibility(View.VISIBLE);
                     }
+                }
+            });
+
+            chkM2112g.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {
+                    if(((CheckBox) v).isChecked())
+                    {
+                        chkM2112a.setChecked(false);
+                        chkM2112b.setChecked(false);
+                        chkM2112c.setChecked(false);
+                        chkM2112d.setChecked(false);
+                        chkM2112e.setChecked(false);
+                        chkM2112f.setChecked(false);
+                        chkM2112x.setChecked(false);
+                    }
+
                 }
             });
             secM2112x1=(LinearLayout)findViewById(R.id.secM2112x1);
@@ -1092,6 +1160,65 @@ public class Knowledge extends Activity {
             ArrayAdapter<String> adptrM221a= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listM221a);
             spnM221a.setAdapter(adptrM221a);
 
+
+            spnM221a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    if (spnM221a.getSelectedItem().toString().length() == 0) return;
+                    String spnData = Connection.SelectedSpinnerValue(spnM221a.getSelectedItem().toString(),"-");
+                    if(spnData.equalsIgnoreCase("88"))
+                    {
+                        secM221b.setVisibility(View.GONE);
+                        secM221c.setVisibility(View.GONE);
+                        spnM221b.setSelection(0);
+                        spnM221c.setSelection(0);
+                        seclblM222.setVisibility(View.GONE);
+                        secM222a.setVisibility(View.GONE);
+                        secM222b.setVisibility(View.GONE);
+                        secM222c.setVisibility(View.GONE);
+                        secM222d.setVisibility(View.GONE);
+                        secM222e.setVisibility(View.GONE);
+                        secM222f.setVisibility(View.GONE);
+                        secM222g.setVisibility(View.GONE);
+                        secM222h.setVisibility(View.GONE);
+                        secM222i.setVisibility(View.GONE);
+                        secM222x.setVisibility(View.GONE);
+                        secM222x1.setVisibility(View.GONE);
+                        chkM222a.setChecked(false);
+                        chkM222b.setChecked(false);
+                        chkM222c.setChecked(false);
+                        chkM222d.setChecked(false);
+                        chkM222e.setChecked(false);
+                        chkM222f.setChecked(false);
+                        chkM222g.setChecked(false);
+                        chkM222h.setChecked(false);
+                        chkM222i.setChecked(false);
+                        chkM222x.setChecked(false);
+                        txtM222x1.setText(null);
+
+                    }
+                    else
+                    {
+                        secM221b.setVisibility(View.VISIBLE);
+                        secM221c.setVisibility(View.VISIBLE);
+                        seclblM222.setVisibility(View.VISIBLE);
+                        secM222a.setVisibility(View.VISIBLE);
+                        secM222b.setVisibility(View.VISIBLE);
+                        secM222c.setVisibility(View.VISIBLE);
+                        secM222d.setVisibility(View.VISIBLE);
+                        secM222e.setVisibility(View.VISIBLE);
+                        secM222f.setVisibility(View.VISIBLE);
+                        secM222g.setVisibility(View.VISIBLE);
+                        secM222h.setVisibility(View.VISIBLE);
+                        secM222i.setVisibility(View.VISIBLE);
+                        secM222x.setVisibility(View.VISIBLE);
+                        secM222x1.setVisibility(View.VISIBLE);
+                    }
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
             secM221b=(LinearLayout)findViewById(R.id.secM221b);
             lineM221b=(View)findViewById(R.id.lineM221b);
             VlblM221b=(TextView) findViewById(R.id.VlblM221b);
@@ -1161,6 +1288,8 @@ public class Knowledge extends Activity {
                 public void onNothingSelected(AdapterView<?> parentView) {
                 }
             });
+
+
             secM221x1=(LinearLayout)findViewById(R.id.secM221x1);
             lineM221x1=(View)findViewById(R.id.lineM221x1);
             VlblM221x1=(TextView) findViewById(R.id.VlblM221x1);
@@ -1273,8 +1402,8 @@ public class Knowledge extends Activity {
                     if (spnMSlNo.getSelectedItem().toString().length() == 0) return;
                   else
                     {
-                        DataSearch(RND,SUCHANAID,Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
-                        spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, MSL));
+                        DataSearch(RND,SUCHANAID);
+                      //  spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, MSL));
                     }
                 }
                 @Override
@@ -1282,7 +1411,7 @@ public class Knowledge extends Activity {
                 }
             });
 
-            DataSearch(RND, SUCHANAID, MSLNUMBER);
+            DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -1360,9 +1489,9 @@ public class Knowledge extends Activity {
                 txtM216.requestFocus();
                 return;
             }
-            else if(Integer.valueOf(txtM216.getText().toString().length() == 0 ? "1" : txtM216.getText().toString()) < 1 || Integer.valueOf(txtM216.getText().toString().length()==0 ? "999" : txtM216.getText().toString()) > 999)
+            else if(Integer.valueOf(txtM216.getText().toString().length() == 0 ? "1" : txtM216.getText().toString()) < 1 || Integer.valueOf(txtM216.getText().toString().length()==0 ? "888" : txtM216.getText().toString()) > 888)
             {
-                Connection.MessageBox(Knowledge.this, "Value should be between 1 and 999(গর্ভাবস্থায় কয়টি  আয়রন ট্যাবলেট খাওয়া উচিত).");
+                Connection.MessageBox(Knowledge.this, "Value should be between 1 and 888(গর্ভাবস্থায় কয়টি  আয়রন ট্যাবলেট খাওয়া উচিত).");
                 txtM216.requestFocus();
                 return;
             }
@@ -1384,9 +1513,9 @@ public class Knowledge extends Activity {
                 txtM2110.requestFocus();
                 return;
             }
-            else if(Integer.valueOf(txtM2110.getText().toString().length() == 0 ? "1" : txtM2110.getText().toString()) < 1 || Integer.valueOf(txtM2110.getText().toString().length()==0 ? "99" : txtM2110.getText().toString()) > 99)
+            else if(Integer.valueOf(txtM2110.getText().toString().length() == 0 ? "1" : txtM2110.getText().toString()) < 1 || Integer.valueOf(txtM2110.getText().toString().length()==0 ? "88" : txtM2110.getText().toString()) > 88)
             {
-                Connection.MessageBox(Knowledge.this, "Value should be between 1 and 99(একটি মেয়ে / মহিলার জন্য বিয়ের ন্যূনতম বয়স কত হওয়া উচিত).");
+                Connection.MessageBox(Knowledge.this, "Value should be between 1 and 88(একটি মেয়ে / মহিলার জন্য বিয়ের ন্যূনতম বয়স কত হওয়া উচিত).");
                 txtM2110.requestFocus();
                 return;
             }
@@ -1485,7 +1614,7 @@ public class Knowledge extends Activity {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M218");
                 return;
             }
-            else if((chkM2111a.isChecked()==true || chkM2111b.isChecked()==true || chkM2111c.isChecked()==true || chkM2111d.isChecked()==true || chkM2111e.isChecked()==true || chkM2111f.isChecked()==true || chkM2111x.isChecked()==true) && chkM2111g.isChecked()==true)
+            else if((chkM2111a.isChecked()==true || chkM2111b.isChecked()==true || chkM2111c.isChecked()==true || chkM2111d.isChecked()==true || chkM2111e.isChecked()==true || chkM2111f.isChecked()==true || chkM2111g.isChecked()==true || chkM2111h.isChecked()==true || chkM2111x.isChecked()==true) && chkM2111i.isChecked()==true)
             {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M2111");
                 return;
@@ -1557,6 +1686,8 @@ public class Knowledge extends Activity {
             objSave.setM2111e((chkM2111e.isChecked()?"1":"2"));
             objSave.setM2111f((chkM2111f.isChecked()?"1":"2"));
             objSave.setM2111g((chkM2111g.isChecked()?"1":"2"));
+            objSave.setM2111h((chkM2111h.isChecked()?"1":"2"));
+            objSave.setM2111i((chkM2111i.isChecked()?"1":"2"));
             objSave.setM2111x((chkM2111x.isChecked()?"1":"2"));
             objSave.setM2111x1(txtM2111x1.getText().toString());
             objSave.setM2112a((chkM2112a.isChecked()?"1":"2"));
@@ -1646,14 +1777,14 @@ public class Knowledge extends Activity {
         }
     }
 
-    private void DataSearch(String Rnd, String SuchanaId, String MSLNumber)
+    private void DataSearch(String Rnd, String SuchanaId)
     {
         try
         {
 
             RadioButton rb;
             Knowledge_DataModel d = new Knowledge_DataModel();
-            String SQL = "Select * from "+ TableName +"  Where Rnd='"+ Rnd +"' and SuchanaId='"+ SuchanaId +"' and MSlNo='"+ MSLNumber +"'";
+            String SQL = "Select * from "+ TableName +"  Where Rnd='"+ Rnd +"' and SuchanaId='"+ SuchanaId +"'";
             List<Knowledge_DataModel> data = d.SelectAll(this, SQL);
             for(Knowledge_DataModel item : data){
                 txtRnd.setText(item.getRnd());
@@ -1902,6 +2033,25 @@ public class Knowledge extends Activity {
                 {
                     chkM2111g.setChecked(false);
                 }
+
+                if(item.getM2111h().equals("1"))
+                {
+                    chkM2111h.setChecked(true);
+                }
+                else if(item.getM2111h().equals("2"))
+                {
+                    chkM2111h.setChecked(false);
+                }
+
+                if(item.getM2111i().equals("1"))
+                {
+                    chkM2111i.setChecked(true);
+                }
+                else if(item.getM2111i().equals("2"))
+                {
+                    chkM2111i.setChecked(false);
+                }
+
                 if(item.getM2111x().equals("1"))
                 {
                     chkM2111x.setChecked(true);

@@ -971,7 +971,7 @@ public class HandWash extends Activity {
 
             //Hide all skip variables
             secM241gX.setVisibility(View.GONE);
-            secM241h.setVisibility(View.GONE);
+           // secM241h.setVisibility(View.GONE);
             secM242a1.setVisibility(View.GONE);
             secM242a1X.setVisibility(View.GONE);
             secM242a1X.setVisibility(View.GONE);

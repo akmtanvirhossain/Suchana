@@ -97,7 +97,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
+                    android:text=""
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -136,7 +136,7 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaID"
+                    android:text=""
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -144,13 +144,13 @@
                     android:id="@+id/VlblSuchanaID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি সুচনা  নম্বর অনুসারে"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -397,7 +397,7 @@
                     android:id="@+id/VlblM233"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়"
+                    android:text="আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়(জানা নেই [888])"
                     android:textSize="20sp" />
 
                 <EditText
@@ -435,7 +435,7 @@
                     android:id="@+id/VlblM234"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয় (মাস)"
+                    android:text="কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয় (মাস)(জানা নেই [88])"
                     android:textSize="20sp" />
 
                 <EditText
@@ -473,7 +473,7 @@
                     android:id="@+id/VlblM235"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ"
+                    android:text="কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ(জানা নেই [88])"
                     android:textSize="20sp" />
 
                 <EditText

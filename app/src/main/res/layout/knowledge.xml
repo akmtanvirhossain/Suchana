@@ -97,7 +97,7 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="Rnd"
+                    android:text=""
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -136,7 +136,7 @@
                     android:id="@+id/lblSuchanaId"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="SuchanaId"
+                    android:text=""
                     android:textSize="20sp"
                     android:visibility="gone" />
 
@@ -144,13 +144,13 @@
                     android:id="@+id/VlblSuchanaId"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী সদস্য আইডি সুচনা  নম্বর অনুসারে"
+                    android:text="Suchana Id"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaId"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="1500sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
@@ -602,7 +602,7 @@
                     android:id="@+id/VlblM216"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গর্ভাবস্থায় কয়টি  আয়রন ট্যাবলেট খাওয়া উচিত"
+                    android:text="গর্ভাবস্থায় কয়টি  আয়রন ট্যাবলেট খাওয়া উচিত(জানা নেই [88])"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1319,7 +1319,7 @@
                     android:id="@+id/VlblM2110"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="একটি মেয়ে / মহিলার জন্য বিয়ের ন্যূনতম বয়স কত হওয়া উচিত"
+                    android:text="একটি মেয়ে / মহিলার জন্য বিয়ের ন্যূনতম বয়স কত হওয়া উচিত(জানা নেই [88])"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1486,7 +1486,7 @@
                     android:id="@+id/VlblM2111d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="লিঙ্গ বৈষম্য"
+                    android:text="পড়াশোনার জন্য পরিবারের কম খরচ হয়"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1594,7 +1594,7 @@
                     android:id="@+id/VlblM2111g"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জানা নেই"
+                    android:text="সামাজিক মর্যাদা বৃদ্ধ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1611,6 +1611,44 @@
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM2111h"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM2111h"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="h)"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM2111h"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="বিয়ের সময় কম যৌতুক লাগে"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM2111h"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM2111h"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+
 
             <LinearLayout
                 android:id="@+id/secM2111x"
@@ -1682,6 +1720,42 @@
 
             <View
                 android:id="@+id/lineM2111x1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secM2111i"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblM2111i"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="i)"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblM2111i"
+                    android:layout_width="400sp"
+                    android:layout_height="wrap_content"
+                    android:text="জানি না"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chkM2111i"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineM2111i"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

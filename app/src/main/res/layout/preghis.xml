@@ -551,15 +551,16 @@
                     android:text="কেউ মারা যায়নি"
                     android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/txtM15a"
-                    style="@style/customEdit"
-                    android:layout_width="60sp"
+
+                <CheckBox
+                    android:id="@+id/chkM15a"
+                    android:layout_width="50sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="number"
-                    android:maxLength="2"
+                    android:inputType="text"
                     android:textSize="20sp" />
+
+
             </LinearLayout>
 
             <View
@@ -838,7 +839,7 @@
                     android:id="@+id/VlblM17"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়ে থাকলে কবে শুরু করেছিলেন?"
+                    android:text="গর্ভাবস্তায় আয়রন-ফলিক এসিড খেয়ে থাকলে কবে শুরু করেছিলেন?(কত তম মাস)"
                     android:textSize="20sp" />
 
                 <EditText
