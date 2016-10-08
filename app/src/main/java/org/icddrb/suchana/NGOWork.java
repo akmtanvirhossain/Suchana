@@ -2732,6 +2732,7 @@ public class NGOWork extends Activity {
             objSave.setH1616i((chkH1616i.isChecked() ? "1" : "2"));
             objSave.setH1616x((chkH1616x.isChecked() ? "1" : "2"));
             objSave.setH1616x1(txtH1616x1.getText().toString());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

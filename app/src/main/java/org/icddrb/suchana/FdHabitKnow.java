@@ -791,6 +791,7 @@ public class FdHabitKnow extends Activity {
             objSave.setM239e((chkM239e.isChecked() ? "1" : "2"));
             objSave.setM239f((chkM239f.isChecked() ? "1" : "2"));
             objSave.setM239g((chkM239g.isChecked() ? "1" : "2"));
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

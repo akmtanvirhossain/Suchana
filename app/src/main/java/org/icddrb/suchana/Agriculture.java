@@ -873,7 +873,7 @@ public class Agriculture extends Activity {
                 rb = (RadioButton) rdogrpH152k2.getChildAt(i);
                 if (rb.isChecked()) objSave.setH152k2(d_rdogrpH152k2[i]);
             }
-
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

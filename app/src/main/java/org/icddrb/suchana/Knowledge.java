@@ -552,7 +552,7 @@ public class Knowledge extends Activity {
             lineMSLNumber=(View)findViewById(R.id.lineMSLNumber);
             VlblMSLNumber=(TextView) findViewById(R.id.VlblMSLNumber);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H221 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H220='1'"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union select H21 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H21=(select H221 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H220='1')"));
             secLbM2=(LinearLayout)findViewById(R.id.secLbM2);
             secM212=(LinearLayout)findViewById(R.id.secM212);
             lineM212=(View)findViewById(R.id.lineM212);
@@ -1747,6 +1747,7 @@ public class Knowledge extends Activity {
             objSave.setM222i((chkM222i.isChecked()?"1":"2"));
             objSave.setM222x((chkM222x.isChecked()?"1":"2"));
             objSave.setM222x1(txtM222x1.getText().toString());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

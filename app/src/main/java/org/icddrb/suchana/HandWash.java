@@ -1277,6 +1277,7 @@ public class HandWash extends Activity {
 
             objSave.setM242g1((spnM242g1.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnM242g1.getSelectedItem().toString(), "-")));
             objSave.setM242g1X(txtM242g1X.getText().toString());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
