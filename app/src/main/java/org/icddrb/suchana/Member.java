@@ -497,7 +497,8 @@ public class Member extends Activity {
                             lineH222.setVisibility(View.GONE);
 
                         } else {
-                            txtH26M.setText("");
+                            //txtH26M.setText("");
+
                             secH27.setVisibility(View.VISIBLE);
                             lineH27.setVisibility(View.VISIBLE);
                             secH28.setVisibility(View.VISIBLE);
@@ -505,7 +506,7 @@ public class Member extends Activity {
                             secH29.setVisibility(View.VISIBLE);
                             lineH29.setVisibility(View.VISIBLE);
                             //secH29X.setVisibility(View.VISIBLE);
-                            lineH29X.setVisibility(View.VISIBLE);
+                            //lineH29X.setVisibility(View.VISIBLE);
                             secH210.setVisibility(View.VISIBLE);
                             lineH210.setVisibility(View.VISIBLE);
                             secH211.setVisibility(View.VISIBLE);
@@ -534,6 +535,20 @@ public class Member extends Activity {
                             lineH219.setVisibility(View.VISIBLE);
                             secH222.setVisibility(View.VISIBLE);
                             lineH222.setVisibility(View.VISIBLE);
+
+                            if (!RELIGION.isEmpty()) {
+                                //  spnH29.setSelection(0);
+                                //  spnH29.setSelection(Integer.valueOf(RELIGION));
+
+
+                                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, RELIGION));
+                                txtH29X.setText(RELIGIONX);
+                            }
+                            if (Integer.valueOf(LANGUAGE) == 1) {
+                                rdoH2101.setChecked(true);
+                            } else if (Integer.valueOf(LANGUAGE) == 2) {
+                                rdoH2102.setChecked(true);
+                            }
                         }
                     }
                 }

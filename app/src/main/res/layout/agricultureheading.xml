@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
         android:layout_marginTop="5sp"
-        android:background="#C2E0EC"
+        android:background="@color/HeadingCyan"
         android:orientation="horizontal"
         android:paddingBottom="5px"
         android:paddingTop="5px">
@@ -20,138 +20,161 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Rnd" />
+            android:text="Rnd"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="SuchanaID" />
+            android:text="SuchanaID"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="MSlNo" />
+            android:text="MSlNo"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H151" />
+            android:text="H151"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Sl" />
+            android:text="Sl"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152a" />
+            android:text="H152a"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152bOth" />
+            android:text="H152bOth"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152b" />
+            android:text="H152b"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152c" />
+            android:text="H152c"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152d1" />
+            android:text="H152d1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152d2" />
+            android:text="H152d2"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152e1" />
+            android:text="H152e1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152e2" />
+            android:text="H152e2"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152f" />
+            android:text="H152f"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152g" />
+            android:text="H152g"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152h1" />
+            android:text="H152h1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152h2" />
+            android:text="H152h2"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152i1" />
+            android:text="H152i1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152i2" />
+            android:text="H152i2"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152j1" />
+            android:text="H152j1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152j2" />
+            android:text="H152j2"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152k1" />
+            android:text="H152k1"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152k2" />
+            android:text="H152k2"
+            android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>

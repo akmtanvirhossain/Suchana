@@ -119,9 +119,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <include
+                layout="@layout/illness1heading"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/illness1heading" />
+                android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -146,7 +146,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="690sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
@@ -156,4 +156,20 @@
     </ScrollView>
         </LinearLayout>
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10sp">
+
+        <Button
+            android:id="@+id/cmdSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/button_style"
+            android:text=" Save -> Continue "
+            android:textSize="20sp" />
+    </LinearLayout>
 </LinearLayout>
