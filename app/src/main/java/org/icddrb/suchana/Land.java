@@ -133,6 +133,7 @@ public class Land extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
             SLNO = IDbundle.getString("SlNo");
+            //SLNO = IDbundle.getString("SlNo");
 
             TableName = "Land";
 

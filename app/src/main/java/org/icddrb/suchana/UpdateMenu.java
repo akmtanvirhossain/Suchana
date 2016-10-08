@@ -52,6 +52,8 @@ public class UpdateMenu extends Activity {
     Button cmdMenuFdhabitKnow;
     Button cmdMenuFdHabit;
     Button cmdMenuHandWash;
+    Button cmdMenuFather;
+
 
     Connection C;
     Global g;
@@ -401,6 +403,15 @@ public class UpdateMenu extends Activity {
                 public void onClick(View v) {
                     finish();
                     startActivity(new Intent(UpdateMenu.this, Anthro.class).putExtras(IDBundle));
+                }
+            });
+
+            cmdMenuFather = (Button) findViewById(R.id.cmdMenuFather);
+            cmdMenuFather.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //finish();
+                    //startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
                 }
             });
 
