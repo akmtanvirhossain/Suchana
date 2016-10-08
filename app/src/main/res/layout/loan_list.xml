@@ -52,7 +52,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="NEXT"
+            android:text="HFIAS"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -74,7 +74,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
-        android:gravity="end"
+        android:gravity="center_vertical|end"
         android:orientation="horizontal">
 
         <TextView
@@ -159,7 +159,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="690sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
@@ -169,4 +169,20 @@
     </ScrollView>
         </LinearLayout>
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10sp">
+
+        <Button
+            android:id="@+id/cmdSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/button_style"
+            android:text=" Save -> Continue "
+            android:textSize="20sp" />
+    </LinearLayout>
 </LinearLayout>

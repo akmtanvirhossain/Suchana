@@ -173,6 +173,12 @@ public class AssetB_list extends Activity {
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(AssetB_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to start AssetB [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
                     Bundle IDBundle = new Bundle();
                     IDBundle.putString("Rnd", RND);
                     IDBundle.putString("SuchanaID", SUCHANAID);
@@ -181,6 +187,9 @@ public class AssetB_list extends Activity {
                     intent.putExtras(IDBundle);
                     getApplicationContext().startActivity(intent);
                     finish();
+                        }
+                    });
+                    adb.show();
                 }
             });
             DataSearch(RND, SUCHANAID);

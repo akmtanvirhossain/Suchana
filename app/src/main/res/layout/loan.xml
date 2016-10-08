@@ -22,7 +22,6 @@
             android:id="@+id/lblBack"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
             android:text="Loan List"
@@ -49,14 +48,16 @@
             android:paddingLeft="10sp"
             android:text="HOME"
             android:textColor="@color/pageHeading"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/cmdForward"
             android:layout_width="50sp"
             android:layout_height="match_parent"
             android:background="@color/pageHeadingBack"
-            android:src="@drawable/forward" />
+            android:src="@drawable/forward"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -352,7 +353,6 @@
                     android:id="@+id/lblH113X"
                     android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="H113X. "
                     android:textSize="20sp" />
 
                 <TextView
@@ -368,7 +368,7 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -504,7 +504,6 @@
                     android:id="@+id/lblH114X"
                     android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="X"
                     android:textSize="20sp" />
 
                 <TextView
@@ -520,7 +519,7 @@
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
