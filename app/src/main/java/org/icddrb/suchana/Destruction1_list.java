@@ -203,10 +203,13 @@ public class Destruction1_list extends Activity {
                 map.put("H14a4l", item.getH14a4l());
                 map.put("H14a4m", item.getH14a4m());
                 map.put("H14a14n", item.getH14a14n());
-                map.put("H14a4x", item.getH14a4x());
-                map.put("H14a4x1", item.getH14a4x1());
-                map.put("H14a4x2", item.getH14a4x2());
-                map.put("H14a4x3", item.getH14a4x3());
+                map.put("H14a14o", item.getH14a14o());
+                map.put("H14a14p", item.getH14a14p());
+                map.put("H14a14q", item.getH14a14q());
+                map.put("H14a14r", item.getH14a14r());
+                map.put("H14a14s", item.getH14a14s());
+                map.put("H14a14t", item.getH14a14t());
+                map.put("H14a14u", item.getH14a14u());
                 dataList.add(map);
             }
             dataAdapter = new SimpleAdapter(Destruction1_list.this, dataList, R.layout.destruction1_list, new String[]{"rowsec"},
@@ -239,7 +242,6 @@ public class Destruction1_list extends Activity {
         public long getItemId(int position) {
             return position;
         }
-
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
@@ -284,11 +286,6 @@ public class Destruction1_list extends Activity {
             final TextView H14a4l = (TextView) convertView.findViewById(R.id.H14a4l);
             final TextView H14a4m = (TextView) convertView.findViewById(R.id.H14a4m);
             final TextView H14a14n = (TextView) convertView.findViewById(R.id.H14a14n);
-            final TextView H14a4x = (TextView) convertView.findViewById(R.id.H14a4x);
-            final TextView H14a4x1 = (TextView) convertView.findViewById(R.id.H14a4x1);
-            final TextView H14a4x2 = (TextView) convertView.findViewById(R.id.H14a4x2);
-            final TextView H14a4x3 = (TextView) convertView.findViewById(R.id.H14a4x3);
-
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
             SuchanaID.setText(o.get("SuchanaID"));
@@ -327,10 +324,7 @@ public class Destruction1_list extends Activity {
             H14a4l.setText(o.get("H14a4l"));
             H14a4m.setText(o.get("H14a4m"));
             H14a14n.setText(o.get("H14a14n"));
-            H14a4x.setText(o.get("H14a4x"));
-            H14a4x1.setText(o.get("H14a4x1"));
-            H14a4x2.setText(o.get("H14a4x2"));
-            H14a4x3.setText(o.get("H14a4x3"));
+
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

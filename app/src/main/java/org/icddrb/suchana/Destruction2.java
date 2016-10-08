@@ -104,10 +104,16 @@ public class Destruction2 extends Activity {
     RadioGroup rdogrpH14b8;
     RadioButton rdoH14b81;
     RadioButton rdoH14b82;
-    LinearLayout secH14b8X;
-    View lineH14b8X;
-    TextView VlblH14b8X;
-    EditText txtH14b8X;
+    LinearLayout secH14b9;
+    View lineH14b9;
+    TextView VlblH14b9;
+    RadioGroup rdogrpH14b9;
+    RadioButton rdoH14b91;
+    RadioButton rdoH14b92;
+    LinearLayout secH14b9X;
+    View lineH14b9X;
+    TextView VlblH14b9X;
+    EditText txtH14b9X;
     LinearLayout seclb14c;
     LinearLayout secH14c1;
     View lineH14c1;
@@ -371,31 +377,40 @@ public class Destruction2 extends Activity {
 
             rdoH14b81 = (RadioButton) findViewById(R.id.rdoH14b81);
             rdoH14b82 = (RadioButton) findViewById(R.id.rdoH14b82);
-            rdogrpH14b8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            secH14b9 = (LinearLayout) findViewById(R.id.secH14b9);
+            lineH14b9 = (View) findViewById(R.id.lineH14b9);
+            VlblH14b9 = (TextView) findViewById(R.id.VlblH14b9);
+            rdogrpH14b9 = (RadioGroup) findViewById(R.id.rdogrpH14b9);
+
+            rdoH14b91 = (RadioButton) findViewById(R.id.rdoH14b91);
+            rdoH14b92 = (RadioButton) findViewById(R.id.rdoH14b92);
+
+            rdogrpH14b9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     String rbData = "";
                     RadioButton rb;
-                    String[] d_rdogrpH14b8 = new String[]{"1", "0"};
-                    for (int i = 0; i < rdogrpH14b8.getChildCount(); i++) {
-                        rb = (RadioButton) rdogrpH14b8.getChildAt(i);
-                        if (rb.isChecked()) rbData = d_rdogrpH14b8[i];
+                    String[] d_rdogrpH14b9 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpH14b9.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpH14b9.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH14b9[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
-                        txtH14b8X.setText("");
-                        secH14b8X.setVisibility(View.GONE);
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH14b9X.setVisibility(View.VISIBLE);
                     } else {
-                        secH14b8X.setVisibility(View.VISIBLE);
+                        txtH14b9X.setText("");
+                        secH14b9X.setVisibility(View.GONE);
                     }
 
                 }
             });
-            secH14b8X = (LinearLayout) findViewById(R.id.secH14b8X);
-            lineH14b8X = (View) findViewById(R.id.lineH14b8X);
-            VlblH14b8X = (TextView) findViewById(R.id.VlblH14b8X);
-            txtH14b8X = (EditText) findViewById(R.id.txtH14b8X);
-            secH14b8X.setVisibility(View.GONE);
+            secH14b9X = (LinearLayout) findViewById(R.id.secH14b9X);
+            lineH14b9X = (View) findViewById(R.id.lineH14b9X);
+            VlblH14b9X = (TextView) findViewById(R.id.VlblH14b9X);
+            txtH14b9X = (EditText) findViewById(R.id.txtH14b9X);
+            secH14b9X.setVisibility(View.GONE);
+
             seclb14c = (LinearLayout) findViewById(R.id.seclb14c);
             secH14c1 = (LinearLayout) findViewById(R.id.secH14c1);
             lineH14c1 = (View) findViewById(R.id.lineH14c1);
@@ -629,7 +644,31 @@ public class Destruction2 extends Activity {
             lineH14c1x1 = (View) findViewById(R.id.lineH14c1x1);
             VlblH14c1x1 = (TextView) findViewById(R.id.VlblH14c1x1);
             txtH14c1x1 = (EditText) findViewById(R.id.txtH14c1x1);
-            secH14c1x1.setVisibility(View.GONE);
+
+
+            //Hide all skip variables
+            secH14c1a.setVisibility(View.GONE);
+            secH14c1b.setVisibility(View.GONE);
+            secH14c1c.setVisibility(View.GONE);
+            secH14c1d.setVisibility(View.GONE);
+            secH14c1e.setVisibility(View.GONE);
+            secH14c1f.setVisibility(View.GONE);
+            secH14c1g.setVisibility(View.GONE);
+            secH14c1h.setVisibility(View.GONE);
+            secH14c1i.setVisibility(View.GONE);
+            secH14c1j.setVisibility(View.GONE);
+            secH14c1k.setVisibility(View.GONE);
+            secH14c1l.setVisibility(View.GONE);
+            secH14c1m.setVisibility(View.GONE);
+            secH14c1n.setVisibility(View.GONE);
+            secH14c1o.setVisibility(View.GONE);
+            secH14c1p.setVisibility(View.GONE);
+            secH14c1q.setVisibility(View.GONE);
+            secH14c1r.setVisibility(View.GONE);
+            secH14c1s.setVisibility(View.GONE);
+            secH14c1t.setVisibility(View.GONE);
+            secH14c1x.setVisibility(View.GONE);
+
 
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
@@ -690,12 +729,16 @@ public class Destruction2 extends Activity {
                 rdoH14b71.requestFocus();
                 return;
             } else if (!rdoH14b81.isChecked() & !rdoH14b82.isChecked() & secH14b8.isShown()) {
-                Connection.MessageBox(Destruction2.this, "Select anyone options from (অনান্য).");
+                Connection.MessageBox(Destruction2.this, "Select anyone options from (বিলম্বিত চাষাবাদ করা).");
                 rdoH14b81.requestFocus();
                 return;
-            } else if (txtH14b8X.getText().toString().length() == 0 & secH14b8X.isShown()) {
+            } else if (!rdoH14b91.isChecked() & !rdoH14b92.isChecked() & secH14b9.isShown()) {
+                Connection.MessageBox(Destruction2.this, "Select anyone options from (অনান্য).");
+                rdoH14b91.requestFocus();
+                return;
+            } else if (txtH14b9X.getText().toString().length() == 0 & secH14b9X.isShown()) {
                 Connection.MessageBox(Destruction2.this, "Required field: উল্লেখ কর.");
-                txtH14b8X.requestFocus();
+                txtH14b9X.requestFocus();
                 return;
             } else if (!rdoH14c11.isChecked() & !rdoH14c12.isChecked() & secH14c1.isShown()) {
                 Connection.MessageBox(Destruction2.this, "Select anyone options from (আপনি অথবা আপনার পরিবারের কোনো সদস্য সরকারের তরফ থেকে কোনো ভাতা /বৃত্তি / ক্ষুদ্র ঋণ পেয়েছেন).");
@@ -793,7 +836,14 @@ public class Destruction2 extends Activity {
                 if (rb.isChecked()) objSave.setH14b8(d_rdogrpH14b8[i]);
             }
 
-            objSave.setH14b8X(txtH14b8X.getText().toString());
+            String[] d_rdogrpH14b9 = new String[]{"1", "0"};
+            objSave.setH14b9("");
+            for (int i = 0; i < rdogrpH14b9.getChildCount(); i++) {
+                rb = (RadioButton) rdogrpH14b9.getChildAt(i);
+                if (rb.isChecked()) objSave.setH14b9(d_rdogrpH14b9[i]);
+            }
+
+            objSave.setH14b9X(txtH14b9X.getText().toString());
             String[] d_rdogrpH14c1 = new String[]{"1", "0"};
             objSave.setH14c1("");
             for (int i = 0; i < rdogrpH14c1.getChildCount(); i++) {
@@ -918,7 +968,14 @@ public class Destruction2 extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                txtH14b8X.setText(item.getH14b8X());
+                String[] d_rdogrpH14b9 = new String[]{"1", "0"};
+                for (int i = 0; i < d_rdogrpH14b9.length; i++) {
+                    if (item.getH14b9().equals(String.valueOf(d_rdogrpH14b9[i]))) {
+                        rb = (RadioButton) rdogrpH14b9.getChildAt(i);
+                        rb.setChecked(true);
+                    }
+                }
+                txtH14b9X.setText(item.getH14b9X());
                 String[] d_rdogrpH14c1 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH14c1.length; i++) {
                     if (item.getH14c1().equals(String.valueOf(d_rdogrpH14c1[i]))) {

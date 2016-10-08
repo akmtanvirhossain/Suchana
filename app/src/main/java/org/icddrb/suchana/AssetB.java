@@ -266,7 +266,7 @@ public class AssetB extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), SES.class);
+                            Intent intent = new Intent(getApplicationContext(), AssetB_list.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -300,6 +300,7 @@ public class AssetB extends Activity {
                 }
             });
             // cmdForward.setVisibility(View.INVISIBLE);
+
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);

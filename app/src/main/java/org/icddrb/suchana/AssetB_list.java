@@ -81,6 +81,8 @@ public class AssetB_list extends Activity {
             TableName = "AssetB";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
+            C.Save("Delete from AssetB where SlNo is null or SlNo=''");
+
             ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {
 
@@ -166,6 +168,21 @@ public class AssetB_list extends Activity {
                 }
             });
             cmdForward.setVisibility(View.INVISIBLE);
+
+
+            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Bundle IDBundle = new Bundle();
+                    IDBundle.putString("Rnd", RND);
+                    IDBundle.putString("SuchanaID", SUCHANAID);
+                    Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtras(IDBundle);
+                    getApplicationContext().startActivity(intent);
+                    finish();
+                }
+            });
             DataSearch(RND, SUCHANAID);
 
 

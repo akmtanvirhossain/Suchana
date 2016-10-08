@@ -49,10 +49,13 @@ public class Destruction1_DataModel {
     private String _H14a4l = "";
     private String _H14a4m = "";
     private String _H14a14n = "";
-    private String _H14a4x = "";
-    private String _H14a4x1 = "";
-    private String _H14a4x2 = "";
-    private String _H14a4x3 = "";
+    private String _H14a14o = "";
+    private String _H14a14p = "";
+    private String _H14a14q = "";
+    private String _H14a14r = "";
+    private String _H14a14s = "";
+    private String _H14a14t = "";
+    private String _H14a14u = "";
     private String _StartTime = "";
     private String _EndTime = "";
     private String _UserId = "";
@@ -358,36 +361,60 @@ public class Destruction1_DataModel {
         _H14a14n = newValue;
     }
 
-    public String getH14a4x() {
-        return _H14a4x;
+    public String getH14a14o() {
+        return _H14a14o;
     }
 
-    public void setH14a4x(String newValue) {
-        _H14a4x = newValue;
+    public void setH14a14o(String newValue) {
+        _H14a14o = newValue;
     }
 
-    public String getH14a4x1() {
-        return _H14a4x1;
+    public String getH14a14p() {
+        return _H14a14p;
     }
 
-    public void setH14a4x1(String newValue) {
-        _H14a4x1 = newValue;
+    public void setH14a14p(String newValue) {
+        _H14a14p = newValue;
     }
 
-    public String getH14a4x2() {
-        return _H14a4x2;
+    public String getH14a14q() {
+        return _H14a14q;
     }
 
-    public void setH14a4x2(String newValue) {
-        _H14a4x2 = newValue;
+    public void setH14a14q(String newValue) {
+        _H14a14q = newValue;
     }
 
-    public String getH14a4x3() {
-        return _H14a4x3;
+    public String getH14a14r() {
+        return _H14a14r;
     }
 
-    public void setH14a4x3(String newValue) {
-        _H14a4x3 = newValue;
+    public void setH14a14r(String newValue) {
+        _H14a14r = newValue;
+    }
+
+    public String getH14a14s() {
+        return _H14a14s;
+    }
+
+    public void setH14a14s(String newValue) {
+        _H14a14s = newValue;
+    }
+
+    public String getH14a14t() {
+        return _H14a14t;
+    }
+
+    public void setH14a14t(String newValue) {
+        _H14a14t = newValue;
+    }
+
+    public String getH14a14u() {
+        return _H14a14u;
+    }
+
+    public void setH14a14u(String newValue) {
+        _H14a14u = newValue;
     }
 
     public void setStartTime(String newValue) {
@@ -438,7 +465,7 @@ public class Destruction1_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H14a,H14ax,H14a1,H14a2,H14a3a,H14a3b,H14a3c,H14a3d,H14a3e,H14a3f,H14a3g,H14a3h,H14a3i,H14a3j,H14a3k,H14a3l,H14a3m,H14a3x,H14a3x1,H14a3x2,H14a3x3,H14a4a,H14a4b,H14a4c,H14a4d,H14a4e,H14a4f,H14a4g,H14a4h,H14a4i,H14a4j,H14a4k,H14a4l,H14a4m,H14a14n,H14a4x,H14a4x1,H14a4x2,H14a4x3,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H14a + "', '" + _H14ax + "', '" + _H14a1 + "', '" + _H14a2 + "', '" + _H14a3a + "', '" + _H14a3b + "', '" + _H14a3c + "', '" + _H14a3d + "', '" + _H14a3e + "', '" + _H14a3f + "', '" + _H14a3g + "', '" + _H14a3h + "', '" + _H14a3i + "', '" + _H14a3j + "', '" + _H14a3k + "', '" + _H14a3l + "', '" + _H14a3m + "', '" + _H14a3x + "', '" + _H14a3x1 + "', '" + _H14a3x2 + "', '" + _H14a3x3 + "', '" + _H14a4a + "', '" + _H14a4b + "', '" + _H14a4c + "', '" + _H14a4d + "', '" + _H14a4e + "', '" + _H14a4f + "', '" + _H14a4g + "', '" + _H14a4h + "', '" + _H14a4i + "', '" + _H14a4j + "', '" + _H14a4k + "', '" + _H14a4l + "', '" + _H14a4m + "', '" + _H14a14n + "', '" + _H14a4x + "', '" + _H14a4x1 + "', '" + _H14a4x2 + "', '" + _H14a4x3 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H14a,H14ax,H14a1,H14a2,H14a3a,H14a3b,H14a3c,H14a3d,H14a3e,H14a3f,H14a3g,H14a3h,H14a3i,H14a3j,H14a3k,H14a3l,H14a3m,H14a3x,H14a3x1,H14a3x2,H14a3x3,H14a4a,H14a4b,H14a4c,H14a4d,H14a4e,H14a4f,H14a4g,H14a4h,H14a4i,H14a4j,H14a4k,H14a4l,H14a4m,H14a14n,H14a14o,H14a14p,H14a14q,H14a14r,H14a14s,H14a14t,H14a14u,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H14a + "', '" + _H14ax + "', '" + _H14a1 + "', '" + _H14a2 + "', '" + _H14a3a + "', '" + _H14a3b + "', '" + _H14a3c + "', '" + _H14a3d + "', '" + _H14a3e + "', '" + _H14a3f + "', '" + _H14a3g + "', '" + _H14a3h + "', '" + _H14a3i + "', '" + _H14a3j + "', '" + _H14a3k + "', '" + _H14a3l + "', '" + _H14a3m + "', '" + _H14a3x + "', '" + _H14a3x1 + "', '" + _H14a3x2 + "', '" + _H14a3x3 + "', '" + _H14a4a + "', '" + _H14a4b + "', '" + _H14a4c + "', '" + _H14a4d + "', '" + _H14a4e + "', '" + _H14a4f + "', '" + _H14a4g + "', '" + _H14a4h + "', '" + _H14a4i + "', '" + _H14a4j + "', '" + _H14a4k + "', '" + _H14a4l + "', '" + _H14a4m + "', '" + _H14a14n + "', '" + _H14a14o + "', '" + _H14a14p + "', '" + _H14a14q + "', '" + _H14a14r + "', '" + _H14a14s + "', '" + _H14a14t + "', '" + _H14a14u + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -451,7 +478,7 @@ public class Destruction1_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H14a = '" + _H14a + "',H14ax = '" + _H14ax + "',H14a1 = '" + _H14a1 + "',H14a2 = '" + _H14a2 + "',H14a3a = '" + _H14a3a + "',H14a3b = '" + _H14a3b + "',H14a3c = '" + _H14a3c + "',H14a3d = '" + _H14a3d + "',H14a3e = '" + _H14a3e + "',H14a3f = '" + _H14a3f + "',H14a3g = '" + _H14a3g + "',H14a3h = '" + _H14a3h + "',H14a3i = '" + _H14a3i + "',H14a3j = '" + _H14a3j + "',H14a3k = '" + _H14a3k + "',H14a3l = '" + _H14a3l + "',H14a3m = '" + _H14a3m + "',H14a3x = '" + _H14a3x + "',H14a3x1 = '" + _H14a3x1 + "',H14a3x2 = '" + _H14a3x2 + "',H14a3x3 = '" + _H14a3x3 + "',H14a4a = '" + _H14a4a + "',H14a4b = '" + _H14a4b + "',H14a4c = '" + _H14a4c + "',H14a4d = '" + _H14a4d + "',H14a4e = '" + _H14a4e + "',H14a4f = '" + _H14a4f + "',H14a4g = '" + _H14a4g + "',H14a4h = '" + _H14a4h + "',H14a4i = '" + _H14a4i + "',H14a4j = '" + _H14a4j + "',H14a4k = '" + _H14a4k + "',H14a4l = '" + _H14a4l + "',H14a4m = '" + _H14a4m + "',H14a14n = '" + _H14a14n + "',H14a4x = '" + _H14a4x + "',H14a4x1 = '" + _H14a4x1 + "',H14a4x2 = '" + _H14a4x2 + "',H14a4x3 = '" + _H14a4x3 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H14a='" + _H14a + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H14a = '" + _H14a + "',H14ax = '" + _H14ax + "',H14a1 = '" + _H14a1 + "',H14a2 = '" + _H14a2 + "',H14a3a = '" + _H14a3a + "',H14a3b = '" + _H14a3b + "',H14a3c = '" + _H14a3c + "',H14a3d = '" + _H14a3d + "',H14a3e = '" + _H14a3e + "',H14a3f = '" + _H14a3f + "',H14a3g = '" + _H14a3g + "',H14a3h = '" + _H14a3h + "',H14a3i = '" + _H14a3i + "',H14a3j = '" + _H14a3j + "',H14a3k = '" + _H14a3k + "',H14a3l = '" + _H14a3l + "',H14a3m = '" + _H14a3m + "',H14a3x = '" + _H14a3x + "',H14a3x1 = '" + _H14a3x1 + "',H14a3x2 = '" + _H14a3x2 + "',H14a3x3 = '" + _H14a3x3 + "',H14a4a = '" + _H14a4a + "',H14a4b = '" + _H14a4b + "',H14a4c = '" + _H14a4c + "',H14a4d = '" + _H14a4d + "',H14a4e = '" + _H14a4e + "',H14a4f = '" + _H14a4f + "',H14a4g = '" + _H14a4g + "',H14a4h = '" + _H14a4h + "',H14a4i = '" + _H14a4i + "',H14a4j = '" + _H14a4j + "',H14a4k = '" + _H14a4k + "',H14a4l = '" + _H14a4l + "',H14a4m = '" + _H14a4m + "',H14a14n = '" + _H14a14n + "',H14a14o = '" + _H14a14o + "',H14a14p = '" + _H14a14p + "',H14a14q = '" + _H14a14q + "',H14a14r = '" + _H14a14r + "',H14a14s = '" + _H14a14s + "',H14a14t = '" + _H14a14t + "',H14a14u = '" + _H14a14u + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H14a='" + _H14a + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -506,10 +533,13 @@ public class Destruction1_DataModel {
             d._H14a4l = cur.getString(cur.getColumnIndex("H14a4l"));
             d._H14a4m = cur.getString(cur.getColumnIndex("H14a4m"));
             d._H14a14n = cur.getString(cur.getColumnIndex("H14a14n"));
-            d._H14a4x = cur.getString(cur.getColumnIndex("H14a4x"));
-            d._H14a4x1 = cur.getString(cur.getColumnIndex("H14a4x1"));
-            d._H14a4x2 = cur.getString(cur.getColumnIndex("H14a4x2"));
-            d._H14a4x3 = cur.getString(cur.getColumnIndex("H14a4x3"));
+            d._H14a14o = cur.getString(cur.getColumnIndex("H14a14o"));
+            d._H14a14p = cur.getString(cur.getColumnIndex("H14a14p"));
+            d._H14a14q = cur.getString(cur.getColumnIndex("H14a14q"));
+            d._H14a14r = cur.getString(cur.getColumnIndex("H14a14r"));
+            d._H14a14s = cur.getString(cur.getColumnIndex("H14a14s"));
+            d._H14a14t = cur.getString(cur.getColumnIndex("H14a14t"));
+            d._H14a14u = cur.getString(cur.getColumnIndex("H14a14u"));
             data.add(d);
 
             cur.moveToNext();
@@ -517,6 +547,7 @@ public class Destruction1_DataModel {
         cur.close();
         return data;
     }
+
 
     public List<Destruction1_DataModel> SelectH14a(Context context, String SQL) {
         Connection C = new Connection(context);
