@@ -847,11 +847,14 @@ public class FdHabit extends Activity {
             VlblC11 = (TextView) findViewById(R.id.VlblC11);
             spnCHSLNo = (Spinner) findViewById(R.id.spnCHSLNo);
            // txtC11 = (EditText) findViewById(R.id.txtC11);
+
             secC12 = (LinearLayout) findViewById(R.id.secC12);
             lineC12 = (View) findViewById(R.id.lineC12);
             VlblC12 = (TextView) findViewById(R.id.VlblC12);
+
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
             spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
+
             secC13 = (LinearLayout) findViewById(R.id.secC13);
             lineC13 = (View) findViewById(R.id.lineC13);
             VlblC13 = (TextView) findViewById(R.id.VlblC13);

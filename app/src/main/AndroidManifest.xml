@@ -93,6 +93,7 @@
         <activity android:name=".PregHis" />
         <activity android:name=".Knowledge" />
         <activity android:name=".HandWash" />
+        <activity android:name=".Father" />
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
 

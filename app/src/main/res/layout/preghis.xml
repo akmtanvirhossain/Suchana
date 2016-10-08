@@ -1705,7 +1705,7 @@
                     android:id="@+id/VlblM111d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="দাই (TBA)"
+                    android:text="পরিবার কল্যাণ সহকারী (FWA/CHCP/HA)"
                     android:textSize="20sp" />
 
                 <CheckBox

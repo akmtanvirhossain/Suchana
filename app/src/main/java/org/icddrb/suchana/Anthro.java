@@ -276,14 +276,14 @@ public class Anthro extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Anthro.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to start AssetB [Yes/No]?");
+                    adb.setMessage("Do you want to start Father Form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
                             IDBundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Father.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
@@ -805,7 +805,7 @@ public class Anthro extends Activity {
                 finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                startActivity(new Intent(Anthro.this, HHIdentity_list.class).putExtras(IDBundle));
+                startActivity(new Intent(Anthro.this, Father.class).putExtras(IDBundle));
 
             } else {
                 Connection.MessageBox(Anthro.this, status);

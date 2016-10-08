@@ -410,8 +410,8 @@ public class UpdateMenu extends Activity {
             cmdMenuFather.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //finish();
-                    //startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
                 }
             });
 
