@@ -563,7 +563,7 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH16X.setVisibility(View.VISIBLE);
                         secH13.setVisibility(View.VISIBLE);
                         lineH13.setVisibility(View.VISIBLE);
-                        secH14.setVisibility(View.VISIBLE);
+                        secH14.setVisibility(View.GONE);
                         lineH14.setVisibility(View.VISIBLE);
                         secH01.setVisibility(View.VISIBLE);
                         lineH01.setVisibility(View.VISIBLE);
@@ -1176,35 +1176,27 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
 
-                if (spnResult.getSelectedItemPosition() == 1) {
+                String[] Result = spnResult.getSelectedItem().toString().split("-");
+
+                if (Result[0].equals("1") | Result[0].equals("5")) {
+                    if (rdoH012.isChecked() & rdoH022.isChecked() & rdoH032.isChecked() & rdoH042.isChecked()) {
+                        finish();
+                        startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                    } else if (rdoH051.isChecked() & rdoH061.isChecked() & rdoH072.isChecked()) {
+                        finish();
+                        startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                    } else if (rdoH082.isChecked()) {
+                        finish();
+                        startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
+                    } else {
+                        finish();
+                        startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
+                    }
 
                 } else {
                     finish();
                     startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
                 }
-
-                if (rdoH012.isChecked() & rdoH022.isChecked() & rdoH032.isChecked() & rdoH042.isChecked()) {
-                    finish();
-                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
-                } else if (rdoH051.isChecked() & rdoH061.isChecked() & rdoH072.isChecked()) {
-                    finish();
-                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
-                } else if (rdoH082.isChecked()) {
-                    finish();
-                    startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
-                } else {
-                    finish();
-                    startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
-                }
-
-                /*Bundle bundle = new Bundle();
-                bundle.putString("Rnd", txtRnd.getText().toString());
-                bundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                Intent intent = new Intent(new Intent(HHIdentity.this, Member_list.class));
-                intent.putExtras(bundle);
-                startActivity(intent);
-                finish();*/
-                //Connection.MessageBox(HHIdentity.this, "Saved Successfully");
 
             } else {
                 Connection.MessageBox(HHIdentity.this, status);
