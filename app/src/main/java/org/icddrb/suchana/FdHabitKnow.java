@@ -281,6 +281,13 @@ public class FdHabitKnow extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Knowledge.class);
+                            intent.putExtras(IDbundle);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
@@ -510,6 +517,43 @@ public class FdHabitKnow extends Activity {
                     }
                 }
             });
+
+            chkM237a.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        secM237b.setVisibility(View.GONE);
+                        lineM237b.setVisibility(View.GONE);
+                        chkM237b.setChecked(false);
+                        secM237c.setVisibility(View.GONE);
+                        lineM237c.setVisibility(View.GONE);
+                        chkM237c.setChecked(false);
+                        secM237d.setVisibility(View.GONE);
+                        lineM237d.setVisibility(View.GONE);
+                        chkM237d.setChecked(false);
+                        secM237e.setVisibility(View.GONE);
+                        lineM237e.setVisibility(View.GONE);
+                        chkM237e.setChecked(false);
+                        secM237x.setVisibility(View.GONE);
+                        lineM237x.setVisibility(View.GONE);
+                        chkM237x.setChecked(false);
+                        secM237x1.setVisibility(View.GONE);
+                        lineM237x1.setVisibility(View.GONE);
+                        txtM237x1.setText("");
+
+                    } else {
+                        secM237b.setVisibility(View.VISIBLE);
+                        lineM237b.setVisibility(View.VISIBLE);
+                        secM237c.setVisibility(View.VISIBLE);
+                        lineM237c.setVisibility(View.VISIBLE);
+                        secM237d.setVisibility(View.VISIBLE);
+                        lineM237d.setVisibility(View.VISIBLE);
+                        secM237e.setVisibility(View.VISIBLE);
+                        lineM237e.setVisibility(View.VISIBLE);
+                        secM237x.setVisibility(View.VISIBLE);
+                        lineM237x.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
             secM237x1 = (LinearLayout) findViewById(R.id.secM237x1);
             lineM237x1 = (View) findViewById(R.id.lineM237x1);
             VlblM237x1 = (TextView) findViewById(R.id.VlblM237x1);
@@ -548,7 +592,22 @@ public class FdHabitKnow extends Activity {
             VlblM239g = (TextView) findViewById(R.id.VlblM239g);
             chkM239g = (CheckBox) findViewById(R.id.chkM239g);
 
+            chkM239g.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
 
+                        chkM239a.setChecked(false);
+                        chkM239b.setChecked(false);
+                        chkM239c.setChecked(false);
+                        chkM239d.setChecked(false);
+                        chkM239e.setChecked(false);
+                        chkM239f.setChecked(false);
+
+                    } else {
+
+                    }
+                }
+            });
             txtRnd.setText(RND);
             txtSuchanaID.setText(SUCHANAID);
             txtRnd.setEnabled(false);
@@ -630,27 +689,45 @@ public class FdHabitKnow extends Activity {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়.");
                 txtM233.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM233.getText().toString().length() == 0 ? "0" : txtM233.getText().toString()) < 0 || Integer.valueOf(txtM233.getText().toString().length() == 0 ? "999" : txtM233.getText().toString()) > 999) {
-                Connection.MessageBox(FdHabitKnow.this, "Value should be between 0 and 999(আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়).");
+            } else if (Integer.valueOf(txtM233.getText().toString().length() == 0 ? "0" : txtM233.getText().toString()) < 0 || Integer.valueOf(txtM233.getText().toString().length() == 0 ? "888" : txtM233.getText().toString()) > 888) {
+                Connection.MessageBox(FdHabitKnow.this, "Value should be between 0 and 888(আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়).");
                 txtM233.requestFocus();
                 return;
             } else if (txtM234.getText().toString().length() == 0 & secM234.isShown()) {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয়.");
                 txtM234.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM234.getText().toString().length() == 0 ? "01" : txtM234.getText().toString()) < 01 || Integer.valueOf(txtM234.getText().toString().length() == 0 ? "20" : txtM234.getText().toString()) > 20) {
-                Connection.MessageBox(FdHabitKnow.this, "Value should be between 01 and 20(কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয়).");
-                txtM234.requestFocus();
-                return;
-            } else if (txtM235.getText().toString().length() == 0 & secM235.isShown()) {
+            }
+            else if( txtM234.getText().toString().equals("88"))
+            {
+
+            }
+            else
+            {
+                if (Integer.valueOf(txtM234.getText().toString().length() == 0 ? "01" : txtM234.getText().toString()) < 01 || Integer.valueOf(txtM234.getText().toString().length() == 0 ? "60" : txtM234.getText().toString()) > 60) {
+                    Connection.MessageBox(FdHabitKnow.this, "Value should be between 01 and 60(কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয়).");
+                    txtM234.requestFocus();
+                    return;
+                }
+            }
+             if (txtM235.getText().toString().length() == 0 & secM235.isShown()) {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ.");
                 txtM235.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM235.getText().toString().length() == 0 ? "1" : txtM235.getText().toString()) < 1 || Integer.valueOf(txtM235.getText().toString().length() == 0 ? "18" : txtM235.getText().toString()) > 18) {
-                Connection.MessageBox(FdHabitKnow.this, "Value should be between 1 and 18(কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ).");
-                txtM235.requestFocus();
-                return;
-            } else if (txtM237x1.getText().toString().length() == 0 & secM237x1.isShown()) {
+            }
+             else if( txtM235.getText().toString().equals("88"))
+             {
+
+             }
+             else
+             {
+                 if (Integer.valueOf(txtM235.getText().toString().length() == 0 ? "1" : txtM235.getText().toString()) < 1 || Integer.valueOf(txtM235.getText().toString().length() == 0 ? "18" : txtM235.getText().toString()) > 18) {
+                     Connection.MessageBox(FdHabitKnow.this, "Value should be between 1 and 18(কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ).");
+                     txtM235.requestFocus();
+                     return;
+                 }
+             }
+            if (txtM237x1.getText().toString().length() == 0 & secM237x1.isShown()) {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtM237x1.requestFocus();
                 return;
@@ -664,6 +741,11 @@ public class FdHabitKnow extends Activity {
                 return;
             }
 
+            if((chkM239g.isChecked()==true) &&(chkM239a.isChecked()==true || chkM239b.isChecked()==true|| chkM239c.isChecked()==true|| chkM239d.isChecked()==true|| chkM239e.isChecked()==true|| chkM239f.isChecked()==true))
+            {
+                Connection.MessageBox(FdHabitKnow.this, "Inconsistent value in M239");
+                return;
+            }
             String SQL = "";
             RadioButton rb;
 
@@ -709,6 +791,7 @@ public class FdHabitKnow extends Activity {
             objSave.setM239e((chkM239e.isChecked() ? "1" : "2"));
             objSave.setM239f((chkM239f.isChecked() ? "1" : "2"));
             objSave.setM239g((chkM239g.isChecked() ? "1" : "2"));
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

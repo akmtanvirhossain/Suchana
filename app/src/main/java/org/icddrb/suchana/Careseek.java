@@ -4079,6 +4079,7 @@ public class Careseek extends Activity {
             objSave.setH1812a3((spnH1812a3.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH1812a3.getSelectedItem().toString(), "-")));
             objSave.setH1812a3X(txtH1812a3X.getText().toString());
             objSave.setH1812a4(txtH1812a4.getText().toString());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

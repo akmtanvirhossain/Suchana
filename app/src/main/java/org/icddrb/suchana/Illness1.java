@@ -688,6 +688,7 @@ public class Illness1 extends Activity {
             }
 
             objSave.setH171g(txtH171g.getText().toString());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

@@ -110,7 +110,7 @@ public class PregHis extends Activity {
     LinearLayout secM15a;
     View lineM15a;
     TextView VlblM15a;
-    EditText txtM15a;
+    CheckBox chkM15a;
     LinearLayout secM15b;
     View lineM15b;
     TextView VlblM15b;
@@ -415,6 +415,13 @@ public class PregHis extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), IGA.class);
+                            intent.putExtras(IDbundle);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getApplicationContext().startActivity(intent);
                             finish();
                         }
                     });
@@ -504,7 +511,42 @@ public class PregHis extends Activity {
             secM15a = (LinearLayout) findViewById(R.id.secM15a);
             lineM15a = (View) findViewById(R.id.lineM15a);
             VlblM15a = (TextView) findViewById(R.id.VlblM15a);
-            txtM15a = (EditText) findViewById(R.id.txtM15a);
+            chkM15a = (CheckBox) findViewById(R.id.chkM15a);
+
+            chkM15a.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        secM15b.setVisibility(View.GONE);
+                        lineM15b.setVisibility(View.GONE);
+                        txtM15b.setText("");
+                        secM15c.setVisibility(View.GONE);
+                        lineM15c.setVisibility(View.GONE);
+                        txtM15c.setText("");
+                        secM15d.setVisibility(View.GONE);
+                        lineM15d.setVisibility(View.GONE);
+                        txtM15d.setText("");
+                        secM15e.setVisibility(View.GONE);
+                       // lineM15e.setVisibility(View.GONE);
+                        txtM15e.setText("");
+                        secM15f.setVisibility(View.GONE);
+                        lineM15f.setVisibility(View.GONE);
+                        txtM15f.setText("");
+
+                    } else {
+                        secM15b.setVisibility(View.VISIBLE);
+                        lineM15b.setVisibility(View.VISIBLE);
+                        secM15c.setVisibility(View.VISIBLE);
+                        lineM15c.setVisibility(View.VISIBLE);
+                        secM15d.setVisibility(View.VISIBLE);
+                        lineM15d.setVisibility(View.VISIBLE);
+                        secM15e.setVisibility(View.VISIBLE);
+                       // lineM15e.setVisibility(View.VISIBLE);
+                        secM15f.setVisibility(View.VISIBLE);
+                        lineM15f.setVisibility(View.VISIBLE);
+
+                    }
+                }
+            });
             secM15b = (LinearLayout) findViewById(R.id.secM15b);
             lineM15b = (View) findViewById(R.id.lineM15b);
             VlblM15b = (TextView) findViewById(R.id.VlblM15b);
@@ -545,7 +587,7 @@ public class PregHis extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpM16[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("0") || rbData.equalsIgnoreCase("8")) {
                         secM17.setVisibility(View.GONE);
                         lineM17.setVisibility(View.GONE);
                         txtM17.setText("");
@@ -1272,15 +1314,18 @@ public class PregHis extends Activity {
                 Connection.MessageBox(PregHis.this, "Value should be between 0 and 10(গর্ভে মৃত্যু (IUD)).");
                 txtM14e.requestFocus();
                 return;
-            } else if (txtM15a.getText().toString().length() == 0 & secM15a.isShown()) {
+            }
+          /*  else if (txtM15a.getText().toString().length() == 0 & secM15a.isShown()) {
                 Connection.MessageBox(PregHis.this, "Required field: কেউ মারা যায়নি.");
                 txtM15a.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM15a.getText().toString().length() == 0 ? "0" : txtM15a.getText().toString()) < 0 || Integer.valueOf(txtM15a.getText().toString().length() == 0 ? "10" : txtM15a.getText().toString()) > 10) {
+            }
+            else if (Integer.valueOf(txtM15a.getText().toString().length() == 0 ? "0" : txtM15a.getText().toString()) < 0 || Integer.valueOf(txtM15a.getText().toString().length() == 0 ? "10" : txtM15a.getText().toString()) > 10) {
                 Connection.MessageBox(PregHis.this, "Value should be between 0 and 10(কেউ মারা যায়নি).");
                 txtM15a.requestFocus();
                 return;
-            } else if (txtM15b.getText().toString().length() == 0 & secM15b.isShown()) {
+            } */
+            else if (txtM15b.getText().toString().length() == 0 & secM15b.isShown()) {
                 Connection.MessageBox(PregHis.this, "Required field: 1 year এর মধ্যে.");
                 txtM15b.requestFocus();
                 return;
@@ -1430,6 +1475,12 @@ public class PregHis extends Activity {
                 return;
             }
 
+            if((Integer.valueOf(Integer.valueOf(txtM15b.getText().toString().length() == 0 ? "0" : txtM15b.getText().toString())+Integer.valueOf(txtM15c.getText().toString().length() == 0 ? "0" : txtM15c.getText().toString())+Integer.valueOf(txtM15d.getText().toString().length() == 0 ? "0" : txtM15d.getText().toString())+Integer.valueOf(txtM15e.getText().toString().length() == 0 ? "0" : txtM15e.getText().toString())) != Integer.valueOf(txtM15f.getText().toString().length() == 0 ? "0" : txtM15f.getText().toString())))
+            {
+                Connection.MessageBox(PregHis.this, "Inconsistent in total value.M15");
+                return;
+            }
+
             String SQL = "";
             RadioButton rb;
 
@@ -1444,7 +1495,7 @@ public class PregHis extends Activity {
             objSave.setM14c(txtM14c.getText().toString());
             objSave.setM14d(txtM14d.getText().toString());
             objSave.setM14e(txtM14e.getText().toString());
-            objSave.setM15a(txtM15a.getText().toString());
+            objSave.setM15a((chkM15a.isChecked() ? "1" : "2"));
             objSave.setM15b(txtM15b.getText().toString());
             objSave.setM15c(txtM15c.getText().toString());
             objSave.setM15d(txtM15d.getText().toString());
@@ -1533,7 +1584,7 @@ public class PregHis extends Activity {
                 rb = (RadioButton) rdogrpM121.getChildAt(i);
                 if (rb.isChecked()) objSave.setM121(d_rdogrpM121[i]);
             }
-
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
@@ -1579,7 +1630,13 @@ public class PregHis extends Activity {
                 txtM14c.setText(item.getM14c());
                 txtM14d.setText(item.getM14d());
                 txtM14e.setText(item.getM14e());
-                txtM15a.setText(item.getM15a());
+
+                if (item.getM15a().equals("1")) {
+                    chkM15a.setChecked(true);
+                } else if (item.getM15a().equals("2")) {
+                    chkM15a.setChecked(false);
+                }
+
                 txtM15b.setText(item.getM15b());
                 txtM15c.setText(item.getM15c());
                 txtM15d.setText(item.getM15d());

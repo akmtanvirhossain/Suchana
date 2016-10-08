@@ -53,6 +53,10 @@ public class Member extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String H21 = "";
+    static String RELIGION = "";
+    static String RELIGIONX = "";
+
+    static String LANGUAGE = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -489,13 +493,12 @@ public class Member extends Activity {
                             lineH218.setVisibility(View.GONE);
                             secH219.setVisibility(View.GONE);
                             lineH219.setVisibility(View.GONE);
-                            secH221.setVisibility(View.GONE);
-                            lineH221.setVisibility(View.GONE);
                             secH222.setVisibility(View.GONE);
                             lineH222.setVisibility(View.GONE);
 
                         } else {
-                            txtH26M.setText("");
+                            //txtH26M.setText("");
+
                             secH27.setVisibility(View.VISIBLE);
                             lineH27.setVisibility(View.VISIBLE);
                             secH28.setVisibility(View.VISIBLE);
@@ -503,7 +506,7 @@ public class Member extends Activity {
                             secH29.setVisibility(View.VISIBLE);
                             lineH29.setVisibility(View.VISIBLE);
                             //secH29X.setVisibility(View.VISIBLE);
-                            lineH29X.setVisibility(View.VISIBLE);
+                            //lineH29X.setVisibility(View.VISIBLE);
                             secH210.setVisibility(View.VISIBLE);
                             lineH210.setVisibility(View.VISIBLE);
                             secH211.setVisibility(View.VISIBLE);
@@ -530,10 +533,22 @@ public class Member extends Activity {
                             lineH218.setVisibility(View.VISIBLE);
                             secH219.setVisibility(View.VISIBLE);
                             lineH219.setVisibility(View.VISIBLE);
-                            secH221.setVisibility(View.VISIBLE);
-                            lineH221.setVisibility(View.VISIBLE);
                             secH222.setVisibility(View.VISIBLE);
                             lineH222.setVisibility(View.VISIBLE);
+
+                            if (!RELIGION.isEmpty()) {
+                                //  spnH29.setSelection(0);
+                                //  spnH29.setSelection(Integer.valueOf(RELIGION));
+
+
+                                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, RELIGION));
+                                txtH29X.setText(RELIGIONX);
+                            }
+                            if (Integer.valueOf(LANGUAGE) == 1) {
+                                rdoH2101.setChecked(true);
+                            } else if (Integer.valueOf(LANGUAGE) == 2) {
+                                rdoH2102.setChecked(true);
+                            }
                         }
                     }
                 }
@@ -639,8 +654,10 @@ public class Member extends Activity {
 
                 spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
 
+                RELIGION = item.getH29();
+
                 if (item.getH29().equals("5")) {
-                    txtH29X.setText(item.getH29X());
+                    RELIGIONX = item.getH29X();
                 }
 
             }
@@ -657,11 +674,14 @@ public class Member extends Activity {
             List<Member_DataModel> datar = d.SelectAll(this, SQLr);
             for (Member_DataModel item : datar) {
 
+                LANGUAGE = item.getH210();
+
                 String[] d_rdogrpH210 = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpH210.length; i++) {
                     if (item.getH210().equals(String.valueOf(d_rdogrpH210[i]))) {
                         rb = (RadioButton) rdogrpH210.getChildAt(i);
                         rb.setChecked(true);
+
                     }
                 }
             }
@@ -1343,8 +1363,19 @@ public class Member extends Activity {
                 txtH26M.setText(item.getH26M());
                 spnH27.setSelection(Global.SpinnerItemPositionAnyLength(spnH27, item.getH27()));
                 txtH28.setText(item.getH28());
-                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
-                txtH29X.setText(item.getH29X());
+
+                if (item.getH29().isEmpty()) {
+                    spnH29.setSelection(Integer.valueOf(RELIGION));
+                } else {
+                    spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
+                }
+
+                if (item.getH29X().isEmpty()) {
+                    txtH29X.setText(RELIGIONX);
+                } else {
+                    txtH29X.setText(item.getH29X());
+                }
+
                 String[] d_rdogrpH210 = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpH210.length; i++) {
                     if (item.getH210().equals(String.valueOf(d_rdogrpH210[i]))) {
@@ -1352,6 +1383,16 @@ public class Member extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                if (item.getH210().isEmpty()) {
+                    if (LANGUAGE.equals("1")) {
+                        rdoH2101.setChecked(true);
+                    } else if (LANGUAGE.equals("2")) {
+                        rdoH2102.setChecked(true);
+                    }
+                }
+
+
                 spnH211.setSelection(Global.SpinnerItemPositionAnyLength(spnH211, item.getH211()));
                 spnH212.setSelection(Global.SpinnerItemPositionAnyLength(spnH212, item.getH212()));
                 txtH212X.setText(item.getH212X());

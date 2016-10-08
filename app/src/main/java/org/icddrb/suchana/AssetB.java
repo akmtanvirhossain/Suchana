@@ -1231,6 +1231,8 @@ public class AssetB extends Activity {
                 List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
                 if (datax.size() > 19) {
                     cmdForward.setVisibility(View.VISIBLE);
+
+
                 }
             }
         } catch (Exception e) {
