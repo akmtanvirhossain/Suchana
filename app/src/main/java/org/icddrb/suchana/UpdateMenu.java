@@ -541,6 +541,10 @@ public class UpdateMenu extends Activity {
                 } else cmdMenuAnthro.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
 
+                if ((cur.getString(cur.getColumnIndex("T30")) == null ? "" : cur.getString(cur.getColumnIndex("T30"))).equals("1")) {
+                    cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
                 cur.moveToNext();
             }
             cur.close();
