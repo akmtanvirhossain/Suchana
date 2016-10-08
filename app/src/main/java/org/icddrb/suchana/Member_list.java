@@ -168,6 +168,42 @@ public class Member_list extends Activity {
                     adb.show();
                 }
             });
+            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!C.Existence("Select Rnd from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'")) {
+                        Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন সদস্য এন্ট্রি করতে হবে.");
+                        return;
+                    }
+                    String infoMiss = C.ReturnSingleValue("Select count(*)totalmis from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and length(H23)=0");
+
+                    if (Integer.valueOf(infoMiss) > 0) {
+                        Connection.MessageBox(Member_list.this, infoMiss + " জন সদস্যের তথ্য আপডেট করা হয় নাই");
+                        return;
+                    }
+
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Member_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to go to next [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), SES.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
+                        }
+                    });
+                    adb.show();
+
+                }
+            });
+
+
             btnRefresh = (Button) findViewById(R.id.btnRefresh);
             btnRefresh.setOnClickListener(new View.OnClickListener() {
 

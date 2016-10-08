@@ -196,4 +196,20 @@
             </ScrollView>
         </LinearLayout>
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10sp">
+
+        <Button
+            android:id="@+id/cmdSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/button_style"
+            android:text=" Save -> Continue "
+            android:textSize="20sp" />
+    </LinearLayout>
 </LinearLayout>
