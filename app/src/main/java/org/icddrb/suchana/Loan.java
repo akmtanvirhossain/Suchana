@@ -705,6 +705,8 @@ public class Loan extends Activity {
 
             }
 
+
+
             String SQL = "";
             RadioButton rb;
 
@@ -747,7 +749,7 @@ public class Loan extends Activity {
                 rb = (RadioButton) rdogrpH118.getChildAt(i);
                 if (rb.isChecked()) objSave.setH118(d_rdogrpH118[i]);
             }
-
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

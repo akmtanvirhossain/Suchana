@@ -851,7 +851,7 @@ public class FdHabit extends Activity {
             lineC12 = (View) findViewById(R.id.lineC12);
             VlblC12 = (TextView) findViewById(R.id.VlblC12);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H21=(select H221 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H220='1')"));
             secC13 = (LinearLayout) findViewById(R.id.secC13);
             lineC13 = (View) findViewById(R.id.lineC13);
             VlblC13 = (TextView) findViewById(R.id.VlblC13);
@@ -2790,7 +2790,7 @@ public class FdHabit extends Activity {
 
 
 
-            spnCHSLNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)<12"));
+            spnCHSLNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H220='1'"));
             spnCHSLNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -3728,6 +3728,7 @@ public class FdHabit extends Activity {
             objSave.setC142d((chkC142d.isChecked() ? "1" : "2"));
             objSave.setC142e((chkC142e.isChecked() ? "1" : "2"));
             objSave.setC142f((chkC142f.isChecked() ? "1" : "2"));
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

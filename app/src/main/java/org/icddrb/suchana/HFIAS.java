@@ -916,7 +916,7 @@ public class HFIAS extends Activity {
                 rb = (RadioButton) rdogrpH129b.getChildAt(i);
                 if (rb.isChecked()) objSave.setH129b(d_rdogrpH129b[i]);
             }
-
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

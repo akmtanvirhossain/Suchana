@@ -556,6 +556,7 @@ public class Illness2 extends Activity {
                 rb = (RadioButton) rdogrpH172d.getChildAt(i);
                 if (rb.isChecked()) objSave.setH172d(d_rdogrpH172d[i]);
             }
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

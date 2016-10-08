@@ -1475,7 +1475,7 @@ public class PregHis extends Activity {
                 return;
             }
 
-            if((Integer.valueOf(txtM15b.getText().toString())+Integer.valueOf(txtM15c.getText().toString())+Integer.valueOf(txtM15d.getText().toString())+Integer.valueOf(txtM15e.getText().toString())!=+Integer.valueOf(txtM15f.getText().toString())))
+            if((Integer.valueOf(Integer.valueOf(txtM15b.getText().toString().length() == 0 ? "0" : txtM15b.getText().toString())+Integer.valueOf(txtM15c.getText().toString().length() == 0 ? "0" : txtM15c.getText().toString())+Integer.valueOf(txtM15d.getText().toString().length() == 0 ? "0" : txtM15d.getText().toString())+Integer.valueOf(txtM15e.getText().toString().length() == 0 ? "0" : txtM15e.getText().toString())) != Integer.valueOf(txtM15f.getText().toString().length() == 0 ? "0" : txtM15f.getText().toString())))
             {
                 Connection.MessageBox(PregHis.this, "Inconsistent in total value.M15");
                 return;
@@ -1584,7 +1584,7 @@ public class PregHis extends Activity {
                 rb = (RadioButton) rdogrpM121.getChildAt(i);
                 if (rb.isChecked()) objSave.setM121(d_rdogrpM121[i]);
             }
-
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());

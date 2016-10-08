@@ -2882,6 +2882,7 @@ public class IGA extends Activity {
             }
 
             objSave.setH18b2kX(txtH18b2kX.getText().toString());*/
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
