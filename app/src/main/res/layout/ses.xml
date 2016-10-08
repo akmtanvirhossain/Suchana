@@ -1564,7 +1564,8 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text="H63EX"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/VlblH63EX"
