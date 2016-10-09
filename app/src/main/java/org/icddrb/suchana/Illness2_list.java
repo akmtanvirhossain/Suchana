@@ -49,13 +49,13 @@ public class Illness2_list extends Activity {
     Button btnRefresh;
     String StartTime;
     Bundle IDbundle;
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
-    ImageButton cmdForward;
-    TextView lblNext;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -135,6 +135,29 @@ public class Illness2_list extends Activity {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Illness2_list.this);
                     adb.setTitle("Close");
                     adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), Careseek.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+
+                        }
+                    });
+                    adb.show();
+                }
+            });
+            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Illness2_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to start Careseek [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -281,29 +304,29 @@ public class Illness2_list extends Activity {
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
-            final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
-            final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView H172 = (TextView) convertView.findViewById(R.id.H172);
+            // final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
+            //  final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
+            //     final TextView H172 = (TextView) convertView.findViewById(R.id.H172);
             final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
             final TextView H172a = (TextView) convertView.findViewById(R.id.H172a);
-            final TextView H172aX = (TextView) convertView.findViewById(R.id.H172aX);
+            // final TextView H172aX = (TextView) convertView.findViewById(R.id.H172aX);
             final TextView H172b = (TextView) convertView.findViewById(R.id.H172b);
-            final TextView H172cX = (TextView) convertView.findViewById(R.id.H172cX);
-            final TextView H172cY = (TextView) convertView.findViewById(R.id.H172cY);
-            final TextView H172cM = (TextView) convertView.findViewById(R.id.H172cM);
+            // final TextView H172cX = (TextView) convertView.findViewById(R.id.H172cX);
+            // final TextView H172cY = (TextView) convertView.findViewById(R.id.H172cY);
+            //  final TextView H172cM = (TextView) convertView.findViewById(R.id.H172cM);
             final TextView H172d = (TextView) convertView.findViewById(R.id.H172d);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
-            Rnd.setText(o.get("Rnd"));
-            SuchanaID.setText(o.get("SuchanaID"));
-            H172.setText(o.get("H172"));
+            //   Rnd.setText(o.get("Rnd"));
+            //  SuchanaID.setText(o.get("SuchanaID"));
+            //   H172.setText(o.get("H172"));
             SlNo.setText(o.get("SlNo"));
             H172a.setText(o.get("H172a"));
-            H172aX.setText(o.get("H172aX"));
+            //   H172aX.setText(o.get("H172aX"));
             H172b.setText(o.get("H172b"));
-            H172cX.setText(o.get("H172cX"));
-            H172cY.setText(o.get("H172cY"));
-            H172cM.setText(o.get("H172cM"));
+            //    H172cX.setText(o.get("H172cX"));
+            //    H172cY.setText(o.get("H172cY"));
+            //  H172cM.setText(o.get("H172cM"));
             H172d.setText(o.get("H172d"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
