@@ -758,11 +758,11 @@ public class FdHabitKnow extends Activity {
             objSave.setM232b(txtM232b.getText().toString());
             //objSave.setM232c(txtM232c.getText().toString());
             String[] d_rdogrpM232b = new String[]{"1", "2"};
-            objSave.setM232b("");
             for (int i = 0; i < rdogrpM232b.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpM232b.getChildAt(i);
                 if (rb.isChecked()) objSave.setM232c(d_rdogrpM232b[i]);
             }
+
             objSave.setM233(txtM233.getText().toString());
             objSave.setM234(txtM234.getText().toString());
             objSave.setM235(txtM235.getText().toString());
@@ -841,7 +841,7 @@ public class FdHabitKnow extends Activity {
                     secM232b.setVisibility(View.VISIBLE);
                     txtM232b.setText(item.getM232b());
                 }
-
+                txtM232b.setText(item.getM232b());
                 //txtM232c.setText(item.getM232c());
                 String[] d_rdogrpM232b = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpM232b.length; i++) {

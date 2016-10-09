@@ -407,6 +407,27 @@ public class HandWash extends Activity {
             lineM241i=(View)findViewById(R.id.lineM241i);
             VlblM241i=(TextView) findViewById(R.id.VlblM241i);
             chkM241i=(CheckBox) findViewById(R.id.chkM241i);
+
+
+            chkM241i.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {
+                    if(((CheckBox) v).isChecked())
+                    {
+                        chkM241a.setChecked(false);
+                        chkM241b.setChecked(false);
+                        chkM241c.setChecked(false);
+                        chkM241d.setChecked(false);
+                        chkM241e.setChecked(false);
+                        chkM241f.setChecked(false);
+                        chkM241g.setChecked(false);
+                        chkM241h.setChecked(false);
+                    }
+
+                }
+            });
+
             secM242=(LinearLayout)findViewById(R.id.secM242);
             secM242a=(LinearLayout)findViewById(R.id.secM242a);
             lineM242a=(View)findViewById(R.id.lineM242a);

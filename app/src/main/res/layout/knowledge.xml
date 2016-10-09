@@ -2880,7 +2880,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="M22 স্বাস্থ্যসেবা বিষয়ক জ্ঞান"
+                    android:text="M22 আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2908,7 +2908,7 @@
                     android:id="@+id/VlblM221a"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <Spinner
@@ -2945,7 +2945,7 @@
                     android:id="@+id/VlblM221b"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <Spinner
@@ -2982,7 +2982,7 @@
                     android:id="@+id/VlblM221c"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <Spinner

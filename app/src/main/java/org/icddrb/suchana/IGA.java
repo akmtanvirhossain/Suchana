@@ -2899,7 +2899,7 @@ public class IGA extends Activity {
                 IDBundle.putString("Rnd", txtRND.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
 
-                startActivity(new Intent(IGA.this, HHIdentity_list.class).putExtras(IDBundle));
+                startActivity(new Intent(IGA.this, PregHis.class).putExtras(IDBundle));
 
             } else {
                 Connection.MessageBox(IGA.this, status);

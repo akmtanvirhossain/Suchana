@@ -646,6 +646,19 @@ public class Knowledge extends Activity {
                     }
                 }
             });
+
+            chkM213c.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkM213a.setChecked(false);
+                        chkM213b.setChecked(false);
+                        chkM213x.setChecked(false);
+                        txtM213x1.setText("");
+                    }
+
+                }
+            });
             secM213x1=(LinearLayout)findViewById(R.id.secM213x1);
             lineM213x1=(View)findViewById(R.id.lineM213x1);
             VlblM213x1=(TextView) findViewById(R.id.VlblM213x1);
@@ -767,6 +780,20 @@ public class Knowledge extends Activity {
                         secM217x1.setVisibility(View.VISIBLE);
                         lineM217x1.setVisibility(View.VISIBLE);
                     }
+                }
+            });
+
+            chkM217d.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkM217a.setChecked(false);
+                        chkM217b.setChecked(false);
+                        chkM217c.setChecked(false);
+                        chkM217x.setChecked(false);
+                        txtM217x1.setText("");
+                    }
+
                 }
             });
             secM217x1=(LinearLayout)findViewById(R.id.secM217x1);
@@ -1212,7 +1239,7 @@ public class Knowledge extends Activity {
                         secM222h.setVisibility(View.VISIBLE);
                         secM222i.setVisibility(View.VISIBLE);
                         secM222x.setVisibility(View.VISIBLE);
-                        secM222x1.setVisibility(View.VISIBLE);
+                       // secM222x1.setVisibility(View.VISIBLE);
                     }
                 }
                 @Override
@@ -1575,18 +1602,18 @@ public class Knowledge extends Activity {
                 spnM221a.requestFocus();
                 return;
             }
-            else if(spnM221b.getSelectedItemPosition()==0  & secM221b.isShown())
+           /* else if(spnM221b.getSelectedItemPosition()==0  & secM221b.isShown())
             {
                 Connection.MessageBox(Knowledge.this, "Required field: আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন.");
                 spnM221b.requestFocus();
                 return;
-            }
-            else if(spnM221c.getSelectedItemPosition()==0  & secM221c.isShown())
+            }*/
+            /*else if(spnM221c.getSelectedItemPosition()==0  & secM221c.isShown())
             {
                 Connection.MessageBox(Knowledge.this, "Required field: আপনি কি জানেন আপনার কমিউনিটিতে সাধারণ  চিকিৎসা সেবা কোথা থেকে পেতে পারেন.");
                 spnM221c.requestFocus();
                 return;
-            }
+            }*/
             else if(txtM221x1.getText().toString().length()==0 & secM221x1.isShown())
             {
                 Connection.MessageBox(Knowledge.this, "Required field: অন্যান্য উল্লেখ করুন.");
