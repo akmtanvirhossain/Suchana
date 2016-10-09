@@ -76,9 +76,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
-        android:gravity="end"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suchana ID: " />
+
+        <TextView
+            android:id="@+id/lblSuchanaIdHeader"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25sp" />
         <Button
             android:id="@+id/btnRefresh"
             android:layout_width="wrap_content"
@@ -90,7 +100,8 @@
             android:paddingRight="5sp"
             android:text=" refresh "
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -103,7 +114,7 @@
             android:background="@drawable/button_style_blue"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
-            android:text=" + new "
+            android:text="ADD NEW AGRI"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>

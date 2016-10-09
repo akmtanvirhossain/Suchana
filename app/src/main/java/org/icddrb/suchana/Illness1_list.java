@@ -80,6 +80,9 @@ public class Illness1_list extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
 
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSuchanaId.setText(SUCHANAID);
+
             TableName = "Illness1";
            /* lblHeading = (TextView) findViewById(R.id.lblHeading);
             lblHeading.setOnTouchListener(new View.OnTouchListener() {

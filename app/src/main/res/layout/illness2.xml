@@ -522,7 +522,7 @@
                     android:id="@+id/lblH172d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H172"
+                    android:text="D."
                     android:textSize="20sp" />
 
                 <TextView
