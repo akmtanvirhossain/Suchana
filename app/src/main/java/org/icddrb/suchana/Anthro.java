@@ -323,7 +323,7 @@ public class Anthro extends Activity {
 
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     txtC2CWeight1.setText(
-                            String.valueOf(Double.parseDouble(txtC2MCWeight1.getText().toString().length() == 0 ? "0" : txtC2MCWeight1.getText().toString()) +
+                            String.valueOf(Double.parseDouble(txtC2MCWeight1.getText().toString().length() == 0 ? "0" : txtC2MCWeight1.getText().toString()) -
                                     Double.parseDouble(txtC2MWeight1.getText().toString().length() == 0 ? "0" : txtC2MWeight1.getText().toString())));
                 }
             });
@@ -500,6 +500,12 @@ public class Anthro extends Activity {
             txtC2Haemoglobin = (EditText) findViewById(R.id.txtC2Haemoglobin);
 
 
+            if (C.Existence("select * from HHIdentity where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' and AgeGroup='3'")) {
+                secC2Haemoglobin.setVisibility(View.VISIBLE);
+            } else {
+                secC2Haemoglobin.setVisibility(View.GONE);
+            }
+
             //Hide all skip variables
             DataSearch(RND, SUCHANAID);
 
@@ -576,7 +582,7 @@ public class Anthro extends Activity {
                             Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString());
 
             if (weightDiff >= 50 | weightDiff <= -50) {
-                if (txtC2MCWeight3.getText().toString().length() == 0 & secC2MCWeight3.isShown()) {
+                if (Double.parseDouble(txtC2MCWeight3.getText().toString().length() == 0 ? "0" : txtC2MCWeight3.getText().toString()) < 1 & secC2MCWeight3.isShown()) {
                     Connection.MessageBox(Anthro.this, "Required field(ওজন): শিশু + মা.");
                     txtC2MCWeight3.requestFocus();
                     return;
