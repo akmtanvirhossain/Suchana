@@ -83,7 +83,7 @@
             android:text="Suchana ID: " />
 
         <TextView
-            android:id="@+id/lblSuchanaId"
+            android:id="@+id/lblSuchanaIdHeader"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp" />
@@ -122,16 +122,14 @@
         android:layout_height="1dip"
         android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <include
                 layout="@layout/illness2heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="fill_parent"
@@ -166,7 +164,7 @@
         </LinearLayout>
     </ScrollView>
         </LinearLayout>
-    </HorizontalScrollView>
+
 
     <LinearLayout
         android:layout_width="fill_parent"

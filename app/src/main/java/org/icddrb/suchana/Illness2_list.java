@@ -105,6 +105,9 @@ public class Illness2_list extends Activity {
                 }
             });*/
 
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSuchanaId.setText(SUCHANAID);
+
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

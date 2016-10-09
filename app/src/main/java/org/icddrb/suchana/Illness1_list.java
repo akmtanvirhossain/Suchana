@@ -80,7 +80,7 @@ public class Illness1_list extends Activity {
             RND = IDbundle.getString("Rnd");
             SUCHANAID = IDbundle.getString("SuchanaID");
 
-            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaID);
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
             lblSuchanaId.setText(SUCHANAID);
 
             TableName = "Illness1";

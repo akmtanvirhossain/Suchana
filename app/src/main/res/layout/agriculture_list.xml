@@ -85,7 +85,7 @@
             android:text="Suchana ID: " />
 
         <TextView
-            android:id="@+id/lblSuchanaId"
+            android:id="@+id/lblSuchanaIdHeader"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_marginRight="25sp" />

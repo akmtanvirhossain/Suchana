@@ -107,7 +107,7 @@ public class Agriculture_list extends Activity {
             RND = IDBundle.getString("Rnd");
             SUCHANAID = IDBundle.getString("SuchanaID");
 
-            TextView lblSuchanaId = (TextView) findViewById(R.id.lblAgeGroup);
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
             lblSuchanaId.setText(SUCHANAID);
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);

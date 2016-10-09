@@ -180,7 +180,8 @@ public class Loan_list extends Activity {
                 }
             });
 
-
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSuchanaId.setText(SUCHANAID);
             ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {
 
