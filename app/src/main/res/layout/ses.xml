@@ -1266,7 +1266,7 @@
                     android:id="@+id/VlblH63AX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1342,7 +1342,7 @@
                     android:id="@+id/VlblH63BX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1418,7 +1418,7 @@
                     android:id="@+id/VlblH63CX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1494,7 +1494,7 @@
                     android:id="@+id/VlblH63DX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1571,7 +1571,7 @@
                     android:id="@+id/VlblH63EX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText

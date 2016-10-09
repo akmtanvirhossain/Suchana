@@ -96,13 +96,14 @@
                     android:id="@+id/lblRnd"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="রাউন্ড নাম্বার"
+                    android:text="রাউন্ড নম্বর"
                     android:textSize="20sp" />
 
                 <EditText
@@ -133,13 +134,14 @@
                     android:id="@+id/lblSuchanaID"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="উপকারভোগী/সদস্য আইডি"
+                    android:text="উপকারভোগী/সদস্য  আইডি"
                     android:textSize="20sp" />
 
                 <EditText
@@ -171,18 +173,20 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
-                    android:layout_width="300sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="100sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -280,14 +284,14 @@
                     android:id="@+id/lblH811a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H811"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH811a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) চাল  কিনেছেন"
+                    android:text="1) চাল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -339,7 +343,7 @@
                     android:id="@+id/VlblH811b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -375,16 +379,16 @@
 
                 <TextView
                     android:id="@+id/VlblH811c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH811c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -437,7 +441,7 @@
                     android:id="@+id/VlblH811d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -468,14 +472,14 @@
                     android:id="@+id/lblH812a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H812"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH812a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) গম সুজি /ময়দা কিনেছেন"
+                    android:text="2) গম সুজি /ময়দা কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -527,7 +531,7 @@
                     android:id="@+id/VlblH812b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -563,16 +567,16 @@
 
                 <TextView
                     android:id="@+id/VlblH812c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH812c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -625,7 +629,7 @@
                     android:id="@+id/VlblH812d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -656,14 +660,14 @@
                     android:id="@+id/lblH813a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H813"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH813a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) বন রুটি/পউরুটি/শেঁকা রুটি  কিনেছেন"
+                    android:text="3) বন রুটি/পউরুটি/শেঁকা রুটি  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -715,7 +719,7 @@
                     android:id="@+id/VlblH813b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -751,16 +755,16 @@
 
                 <TextView
                     android:id="@+id/VlblH813c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH813c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -813,7 +817,7 @@
                     android:id="@+id/VlblH813d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -844,14 +848,14 @@
                     android:id="@+id/lblH814a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H814"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH814a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) চিড়া মুড়ি  কিনেছেন"
+                    android:text="4) চিড়া মুড়ি  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -903,7 +907,7 @@
                     android:id="@+id/VlblH814b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -939,16 +943,16 @@
 
                 <TextView
                     android:id="@+id/VlblH814c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH814c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -1001,7 +1005,7 @@
                     android:id="@+id/VlblH814d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1032,14 +1036,14 @@
                     android:id="@+id/lblH815a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H815"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH815a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) সেমাই  কিনেছেন"
+                    android:text="5) সেমাই  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1091,7 +1095,7 @@
                     android:id="@+id/VlblH815b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1127,16 +1131,16 @@
 
                 <TextView
                     android:id="@+id/VlblH815c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH815c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -1189,7 +1193,7 @@
                     android:id="@+id/VlblH815d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1220,14 +1224,14 @@
                     android:id="@+id/lblH816a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H816"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH816a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) বিস্কুট কিনেছেন"
+                    android:text="6) বিস্কুট কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1279,7 +1283,7 @@
                     android:id="@+id/VlblH816b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1315,16 +1319,16 @@
 
                 <TextView
                     android:id="@+id/VlblH816c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH816c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -1377,7 +1381,7 @@
                     android:id="@+id/VlblH816d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1429,14 +1433,14 @@
                     android:id="@+id/lblH821a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H821"
+                    android:text="H82"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH821a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) আপনি গত মাসে ডাল ক্রয় করেছেন"
+                    android:text="1) আপনি গত মাসে ডাল ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1488,7 +1492,7 @@
                     android:id="@+id/VlblH821b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1524,16 +1528,16 @@
 
                 <TextView
                     android:id="@+id/VlblH821c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH821c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -1586,7 +1590,7 @@
                     android:id="@+id/VlblH821d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1690,14 +1694,14 @@
                     android:id="@+id/lblH831a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H831"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH831a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) পামওয়েল/সয়াবিন তেল  কিনেছেন"
+                    android:text="1) পামওয়েল/সয়াবিন তেল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1749,7 +1753,7 @@
                     android:id="@+id/VlblH831b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1785,16 +1789,16 @@
 
                 <TextView
                     android:id="@+id/VlblH831c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH831c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -1847,7 +1851,7 @@
                     android:id="@+id/VlblH831d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1878,14 +1882,14 @@
                     android:id="@+id/lblH832a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H832"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH832a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) সরিষা তেল  কিনেছেন"
+                    android:text="2) সরিষা তেল  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -1937,7 +1941,7 @@
                     android:id="@+id/VlblH832b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1973,16 +1977,16 @@
 
                 <TextView
                     android:id="@+id/VlblH832c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH832c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -2035,7 +2039,7 @@
                     android:id="@+id/VlblH832d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2139,14 +2143,14 @@
                     android:id="@+id/lblH841a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H841"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH841a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) মাছ  কিনেছেন"
+                    android:text="1) মাছ  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2198,7 +2202,7 @@
                     android:id="@+id/VlblH841b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2234,16 +2238,16 @@
 
                 <TextView
                     android:id="@+id/VlblH841c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH841c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -2296,7 +2300,7 @@
                     android:id="@+id/VlblH841d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2327,14 +2331,14 @@
                     android:id="@+id/lblH842a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H842"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH842a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) মাংস  কিনেছেন"
+                    android:text="2) মাংস  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2386,7 +2390,7 @@
                     android:id="@+id/VlblH842b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2422,16 +2426,16 @@
 
                 <TextView
                     android:id="@+id/VlblH842c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH842c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -2484,7 +2488,7 @@
                     android:id="@+id/VlblH842d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2536,14 +2540,14 @@
                     android:id="@+id/lblH851a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H851"
+                    android:text="H85"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH851a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) আপনি গত মাসে ডিম ক্রয় করেছেন"
+                    android:text="আপনি গত মাসে ডিম ক্রয় করেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2595,7 +2599,7 @@
                     android:id="@+id/VlblH851b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2631,16 +2635,16 @@
 
                 <TextView
                     android:id="@+id/VlblH851c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH851c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -2693,7 +2697,7 @@
                     android:id="@+id/VlblH851d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2797,14 +2801,14 @@
                     android:id="@+id/lblH861a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H861"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH861a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) দুধ কিনেছেন"
+                    android:text="1) দুধ কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -2856,7 +2860,7 @@
                     android:id="@+id/VlblH861b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2892,16 +2896,16 @@
 
                 <TextView
                     android:id="@+id/VlblH861c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH861c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -2947,14 +2951,14 @@
                     android:id="@+id/lblH861d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H861"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH861d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText
@@ -2985,14 +2989,14 @@
                     android:id="@+id/lblH862a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H862"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH862a"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="a) দুদ্গজাত পন্য  কিনেছেন"
+                    android:text="2) দুদ্গজাত পন্য  কিনেছেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -3044,7 +3048,7 @@
                     android:id="@+id/VlblH862b"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="b) পরিমাণ"
+                    android:text="-> পরিমাণ"
                     android:textSize="20sp" />
 
                 <EditText
@@ -3080,16 +3084,16 @@
 
                 <TextView
                     android:id="@+id/VlblH862c"
-                    android:layout_width="300sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:text="c) ইউনিট"
+                    android:text="-> ইউনিট"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpH862c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
@@ -3142,7 +3146,7 @@
                     android:id="@+id/VlblH862d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="d) মোট মূল্য কত"
+                    android:text="-> মোট মূল্য কত"
                     android:textSize="20sp" />
 
                 <EditText

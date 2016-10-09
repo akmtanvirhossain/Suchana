@@ -165,7 +165,15 @@
                 android:textSize="20sp" />
 
 
-            <Button
+            <LinearLayout
+                android:id="@+id/secEligible"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingTop="0sp">
+
+                <Button
                 android:id="@+id/cmdMenuMember"
                 style="@style/menuButtonStyle"
                 android:layout_width="fill_parent"
@@ -614,6 +622,7 @@
                 android:text="পিতার প্রশ্নপত্র"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

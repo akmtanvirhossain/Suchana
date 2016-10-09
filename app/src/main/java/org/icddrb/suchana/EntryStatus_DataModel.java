@@ -86,6 +86,12 @@ public class EntryStatus_DataModel {
         else if (TableName.toLowerCase().equals("father"))
             setT("T30");
 
+            //Eligible
+            //------------------------------------------------------------------------------------------
+        else if (TableName.toLowerCase().equals("eligible"))
+            setT("T50");
+
+
     }
 
     private void setRnd(String newValue) {
@@ -134,6 +140,19 @@ public class EntryStatus_DataModel {
         String SQL = "";
         try {
             SQL = "Update EntryStatus Set " + _T + "='1',Upload='2'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            C.Save(SQL);
+        } catch (Exception e) {
+            response = e.getMessage();
+        }
+        return response;
+    }
+
+    public String Eligible(Context context, String Status) {
+        String response = "";
+        C = new Connection(context);
+        String SQL = "";
+        try {
+            SQL = "Update EntryStatus Set T50='" + Status + "',Upload='2'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();

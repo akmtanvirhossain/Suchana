@@ -2400,7 +2400,21 @@ public class SES extends Activity {
                     }
                 }
             });
+            rdogrpH61.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    if (rdoH612.isChecked()) {
+                        secH62.setVisibility(View.GONE);
+                        rdogrpH62.clearCheck();
+                    } else {
+                        secH62.setVisibility(View.VISIBLE);
+                    }
+                }
 
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
 
             secH614c = (LinearLayout) findViewById(R.id.secH614c);

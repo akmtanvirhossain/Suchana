@@ -573,6 +573,10 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                         lineH03.setVisibility(View.VISIBLE);
                         secH04.setVisibility(View.VISIBLE);
                         lineH04.setVisibility(View.VISIBLE);
+                        lineH05.setVisibility(View.VISIBLE);
+                        lineH06.setVisibility(View.VISIBLE);
+                        lineH07.setVisibility(View.VISIBLE);
+                        lineH08.setVisibility(View.VISIBLE);
                         /*secH05.setVisibility(View.VISIBLE);
                         lineH05.setVisibility(View.VISIBLE);
                         secH06.setVisibility(View.VISIBLE);
@@ -639,6 +643,11 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
                     } else {
                         secH16X.setVisibility(View.VISIBLE);
                         lineH16X.setVisibility(View.VISIBLE);
+                        if (rbData.equals("2")) {
+                            VlblH16X.setText("উপজাতীর নাম");
+                        } else if (rbData.equals("3")) {
+                            VlblH16X.setText("অন্যান্য ");
+                        }
                     }
                 }
 
@@ -1180,20 +1189,25 @@ public class HHIdentity extends Activity implements RadioGroup.OnCheckedChangeLi
 
                 if (Result[0].equals("1") | Result[0].equals("5")) {
                     if (rdoH012.isChecked() & rdoH022.isChecked() & rdoH032.isChecked() & rdoH042.isChecked()) {
+                        e.Eligible(this, "2");
                         finish();
                         startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
                     } else if (rdoH051.isChecked() & rdoH061.isChecked() & rdoH072.isChecked()) {
+                        e.Eligible(this, "2");
                         finish();
                         startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
                     } else if (rdoH082.isChecked()) {
+                        e.Eligible(this, "2");
                         finish();
                         startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
                     } else {
+                        e.Eligible(this, "1");
                         finish();
                         startActivity(new Intent(HHIdentity.this, Member_list.class).putExtras(IDBundle));
                     }
 
                 } else {
+                    e.Eligible(this, "2");
                     finish();
                     startActivity(new Intent(HHIdentity.this, HHIdentity_list.class).putExtras(IDBundle));
                 }
