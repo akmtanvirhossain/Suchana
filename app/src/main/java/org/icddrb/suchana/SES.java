@@ -164,6 +164,7 @@ public class SES extends Activity {
     RadioButton rdoH625;
     RadioButton rdoH626;
     RadioButton rdoH627;
+    RadioButton rdoH628;
     LinearLayout seclblH63;
     LinearLayout secH63A;
     View lineH63A;
@@ -1069,6 +1070,7 @@ public class SES extends Activity {
             rdoH625 = (RadioButton) findViewById(R.id.rdoH625);
             rdoH626 = (RadioButton) findViewById(R.id.rdoH626);
             rdoH627 = (RadioButton) findViewById(R.id.rdoH627);
+            rdoH628 = (RadioButton) findViewById(R.id.rdoH628);
             seclblH63 = (LinearLayout) findViewById(R.id.seclblH63);
             secH63A = (LinearLayout) findViewById(R.id.secH63A);
             lineH63A = (View) findViewById(R.id.lineH63A);
@@ -2489,7 +2491,7 @@ public class SES extends Activity {
             listH618.add("4-পানি ফিল্টার ব্যবহার করেন সিরামিক বা বালি ম্পজিটইত্যাদি");
             listH618.add("5-পানিকে পাত্রের ভেতর অনেক্ষণ রেখে স্থির হতে দেন");
             listH618.add("6-অন্যান্য উল্লেখ করুন");
-            listH618.add("7-জানিনা/কিছুই করিনা");
+            //listH618.add("7-জানিনা/কিছুই করিনা");
             ArrayAdapter<String> adptrH618 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH618);
             spnH618.setAdapter(adptrH618);
 
@@ -2720,7 +2722,7 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Select anyone options from (আপনাদের কি কোন শৌচাগার আছে).");
                 rdoH611.requestFocus();
                 return;
-            } else if (!rdoH621.isChecked() & !rdoH622.isChecked() & !rdoH623.isChecked() & !rdoH624.isChecked() & !rdoH625.isChecked() & !rdoH626.isChecked() & !rdoH627.isChecked() & secH62.isShown()) {
+            } else if (!rdoH621.isChecked() & !rdoH622.isChecked() & !rdoH623.isChecked() & !rdoH624.isChecked() & !rdoH625.isChecked() & !rdoH626.isChecked() & !rdoH627.isChecked() & !rdoH628.isChecked() & secH62.isShown()) {
                 Connection.MessageBox(SES.this, "Select anyone options from (কি ধরনের শৌচাগার ব্যবহার করেন).");
                 rdoH621.requestFocus();
                 return;
@@ -3019,7 +3021,7 @@ public class SES extends Activity {
                 if (rb.isChecked()) objSave.setH61(d_rdogrpH61[i]);
             }
 
-            String[] d_rdogrpH62 = new String[]{"1", "2", "3", "4", "5", "6", "7"};
+            String[] d_rdogrpH62 = new String[]{"1", "2", "3", "4", "5", "6", "7", "8"};
             objSave.setH62("");
             for (int i = 0; i < rdogrpH62.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH62.getChildAt(i);
@@ -3313,7 +3315,7 @@ public class SES extends Activity {
                         rb.setChecked(true);
                     }
                 }
-                String[] d_rdogrpH62 = new String[]{"1", "2", "3", "4", "5", "6", "7"};
+                String[] d_rdogrpH62 = new String[]{"1", "2", "3", "4", "5", "6", "7", "8"};
                 for (int i = 0; i < d_rdogrpH62.length; i++) {
                     if (item.getH62().equals(String.valueOf(d_rdogrpH62[i]))) {
                         rb = (RadioButton) rdogrpH62.getChildAt(i);

@@ -30,7 +30,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="ILLNESS1"
+            android:text="অসুস্থতা-১"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -41,7 +41,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Illness2"
+            android:text="(অসুস্থতা-২)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -52,7 +52,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="CARE SEEK"
+            android:text="সেবা গ্রহন"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -119,9 +119,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <include
+                layout="@layout/illness2heading"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/illness2heading" />
+                android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

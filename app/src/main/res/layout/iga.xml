@@ -30,7 +30,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="CARE SEEKING"
+            android:text="সেবা গ্রহন"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -245,7 +245,12 @@
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
-    <View android:id="@+id/lineH18b1a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <View
+                android:id="@+id/lineH18b1a"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/seclb18b2a"

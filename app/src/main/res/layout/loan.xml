@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Loan List"
+            android:text="লোন/ ঋণ তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -35,7 +35,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Loan"
+            android:text="(লোন/ ঋণ)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 

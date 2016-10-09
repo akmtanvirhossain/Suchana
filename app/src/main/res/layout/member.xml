@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Member List"
+            android:text="সদস্যের তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -35,7 +35,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="MEMBER"
+            android:text="(সদস্যের ফর্ম)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 

@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Land List"
+            android:text="ভূমি ও জলাশইয়ের তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -39,7 +39,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Land"
+            android:text="(ভূমি ও জলাশয়)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
