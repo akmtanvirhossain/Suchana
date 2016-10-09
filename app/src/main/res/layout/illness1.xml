@@ -491,7 +491,7 @@
                     android:id="@+id/VlblH171d"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="অসুস্থতার মোট সময়কাল (শুরু থেকে সুস্থ হওয়া পর্যন্ত) (দিন)"
+                    android:text="অসুস্থতার মোট সময়কাল (শুরু থেকে সুস্থ হওয়া পর্যন্ত) (দিন)(অসুস্থতা এখনো রয়েছে [888])"
                     android:textSize="20sp" />
 
                 <EditText
@@ -664,7 +664,7 @@
                     android:id="@+id/VlblH171f"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আয়মূলক কর্মকান্ডে এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)"
+                    android:text="আয়মূলক কর্মকান্ডে এই অসুস্থতা কি কোনো প্রভাব  ফেলেছিল? (>10 বছর)(অসুস্থতা এখনো রয়েছে [888])"
                     android:textSize="20sp" />
 
                 <RadioGroup

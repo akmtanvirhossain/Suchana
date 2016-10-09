@@ -2145,7 +2145,7 @@
                     android:id="@+id/VlblH1611"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="(সূচনা বহির্ভূত) গত ১ বছর এর ভেতর আপনি/আপনার পরিবারের কেউ কি কোন এন,জি,ও কর্মসূচির"
+                    android:text="গত 1 year এর ভেতর আপনি/আপনার পরিবারের কেউ কি কোন এন,জি,ও কর্মসূচির আওতায় ছিলেন /আছেন ?(সুচনা বহির্ভূত)"
                     android:textSize="20sp" />
 
                 <RadioGroup

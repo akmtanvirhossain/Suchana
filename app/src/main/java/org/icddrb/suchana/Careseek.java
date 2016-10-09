@@ -3342,19 +3342,23 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH181a1X.requestFocus();
                 return;
-            } else if (spnH181a2.getSelectedItemPosition() == 0 & secH181a2.isShown()) {
+            }
+           /* else if (spnH181a2.getSelectedItemPosition() == 0 & secH181a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH181a2.requestFocus();
                 return;
-            } else if (txtH181a2X.getText().toString().length() == 0 & secH181a2X.isShown()) {
+            } */
+            else if (txtH181a2X.getText().toString().length() == 0 & secH181a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH181a2X.requestFocus();
                 return;
-            } else if (spnH181a3.getSelectedItemPosition() == 0 & secH181a3.isShown()) {
+            }
+            /*else if (spnH181a3.getSelectedItemPosition() == 0 & secH181a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH181a3.requestFocus();
                 return;
-            } else if (txtH181a3X.getText().toString().length() == 0 & secH181a3X.isShown()) {
+            } */
+            else if (txtH181a3X.getText().toString().length() == 0 & secH181a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH181a3X.requestFocus();
                 return;
@@ -3362,7 +3366,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH181a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH181a4.getText().toString().length() == 0 ? "0" : txtH181a4.getText().toString()) < 0 || Integer.valueOf(txtH181a4.getText().toString().length() == 0 ? "999" : txtH181a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH181a4.getText().toString().length() == 0 ? "0" : txtH181a4.getText().toString()) < 0 || Float.valueOf(txtH181a4.getText().toString().length() == 0 ? "999" : txtH181a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH181a4.requestFocus();
                 return;
@@ -3378,19 +3382,23 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH182a1X.requestFocus();
                 return;
-            } else if (spnH182a2.getSelectedItemPosition() == 0 & secH182a2.isShown()) {
+            }
+            /*else if (spnH182a2.getSelectedItemPosition() == 0 & secH182a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH182a2.requestFocus();
                 return;
-            } else if (txtH182a2X.getText().toString().length() == 0 & secH182a2X.isShown()) {
+            }*/
+             else if (txtH182a2X.getText().toString().length() == 0 & secH182a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH182a2X.requestFocus();
                 return;
-            } else if (spnH182a3.getSelectedItemPosition() == 0 & secH182a3.isShown()) {
+            }
+            /*else if (spnH182a3.getSelectedItemPosition() == 0 & secH182a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH182a3.requestFocus();
                 return;
-            } else if (txtH182a3X.getText().toString().length() == 0 & secH182a3X.isShown()) {
+            } */
+            else if (txtH182a3X.getText().toString().length() == 0 & secH182a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH182a3X.requestFocus();
                 return;
@@ -3398,7 +3406,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH182a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH182a4.getText().toString().length() == 0 ? "0" : txtH182a4.getText().toString()) < 0 || Integer.valueOf(txtH182a4.getText().toString().length() == 0 ? "999" : txtH182a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH182a4.getText().toString().length() == 0 ? "0" : txtH182a4.getText().toString()) < 0 || Float.valueOf(txtH182a4.getText().toString().length() == 0 ? "999" : txtH182a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH182a4.requestFocus();
                 return;
@@ -3414,19 +3422,24 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH183a1X.requestFocus();
                 return;
-            } else if (spnH183a2.getSelectedItemPosition() == 0 & secH183a2.isShown()) {
+            }
+            /*else if (spnH183a2.getSelectedItemPosition() == 0 & secH183a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH183a2.requestFocus();
                 return;
-            } else if (txtH183a2X.getText().toString().length() == 0 & secH183a2X.isShown()) {
+            }*/
+            else if (txtH183a2X.getText().toString().length() == 0 & secH183a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH183a2X.requestFocus();
                 return;
-            } else if (spnH183a3.getSelectedItemPosition() == 0 & secH183a3.isShown()) {
+            }
+            /*else if (spnH183a3.getSelectedItemPosition() == 0 & secH183a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH183a3.requestFocus();
                 return;
-            } else if (txtH183a3X.getText().toString().length() == 0 & secH183a3X.isShown()) {
+            }
+             */
+            else if (txtH183a3X.getText().toString().length() == 0 & secH183a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH183a3X.requestFocus();
                 return;
@@ -3434,7 +3447,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH183a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH183a4.getText().toString().length() == 0 ? "0" : txtH183a4.getText().toString()) < 0 || Integer.valueOf(txtH183a4.getText().toString().length() == 0 ? "999" : txtH183a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH183a4.getText().toString().length() == 0 ? "0" : txtH183a4.getText().toString()) < 0 || Float.valueOf(txtH183a4.getText().toString().length() == 0 ? "999" : txtH183a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH183a4.requestFocus();
                 return;
@@ -3450,19 +3463,21 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH184a1X.requestFocus();
                 return;
-            } else if (spnH184a2.getSelectedItemPosition() == 0 & secH184a2.isShown()) {
+            }
+            /*else if (spnH184a2.getSelectedItemPosition() == 0 & secH184a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH184a2.requestFocus();
                 return;
-            } else if (txtH184a2X.getText().toString().length() == 0 & secH184a2X.isShown()) {
+            }*/ else if (txtH184a2X.getText().toString().length() == 0 & secH184a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH184a2X.requestFocus();
                 return;
-            } else if (spnH184a3.getSelectedItemPosition() == 0 & secH184a3.isShown()) {
+            } /*else if (spnH184a3.getSelectedItemPosition() == 0 & secH184a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH184a3.requestFocus();
                 return;
-            } else if (txtH184a3X.getText().toString().length() == 0 & secH184a3X.isShown()) {
+            } */
+            else if (txtH184a3X.getText().toString().length() == 0 & secH184a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH184a3X.requestFocus();
                 return;
@@ -3470,7 +3485,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH184a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH184a4.getText().toString().length() == 0 ? "0" : txtH184a4.getText().toString()) < 0 || Integer.valueOf(txtH184a4.getText().toString().length() == 0 ? "999" : txtH184a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH184a4.getText().toString().length() == 0 ? "0" : txtH184a4.getText().toString()) < 0 || Float.valueOf(txtH184a4.getText().toString().length() == 0 ? "999" : txtH184a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH184a4.requestFocus();
                 return;
@@ -3486,19 +3501,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH185a1X.requestFocus();
                 return;
-            } else if (spnH185a2.getSelectedItemPosition() == 0 & secH185a2.isShown()) {
+            } /*else if (spnH185a2.getSelectedItemPosition() == 0 & secH185a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH185a2.requestFocus();
                 return;
-            } else if (txtH185a2X.getText().toString().length() == 0 & secH185a2X.isShown()) {
+            }*/ else if (txtH185a2X.getText().toString().length() == 0 & secH185a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH185a2X.requestFocus();
                 return;
-            } else if (spnH185a3.getSelectedItemPosition() == 0 & secH185a3.isShown()) {
+            } /*else if (spnH185a3.getSelectedItemPosition() == 0 & secH185a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH185a3.requestFocus();
                 return;
-            } else if (txtH185a3X.getText().toString().length() == 0 & secH185a3X.isShown()) {
+            }*/ else if (txtH185a3X.getText().toString().length() == 0 & secH185a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH185a3X.requestFocus();
                 return;
@@ -3506,7 +3521,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH185a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH185a4.getText().toString().length() == 0 ? "0" : txtH185a4.getText().toString()) < 0 || Integer.valueOf(txtH185a4.getText().toString().length() == 0 ? "999" : txtH185a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH185a4.getText().toString().length() == 0 ? "0" : txtH185a4.getText().toString()) < 0 || Float.valueOf(txtH185a4.getText().toString().length() == 0 ? "999" : txtH185a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH185a4.requestFocus();
                 return;
@@ -3528,19 +3543,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH186a1X.requestFocus();
                 return;
-            } else if (spnH186a2.getSelectedItemPosition() == 0 & secH186a2.isShown()) {
+            } /*else if (spnH186a2.getSelectedItemPosition() == 0 & secH186a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH186a2.requestFocus();
                 return;
-            } else if (txtH186a2X.getText().toString().length() == 0 & secH186a2X.isShown()) {
+            }*/ else if (txtH186a2X.getText().toString().length() == 0 & secH186a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH186a2X.requestFocus();
                 return;
-            } else if (spnH186a3.getSelectedItemPosition() == 0 & secH186a3.isShown()) {
+            } /*else if (spnH186a3.getSelectedItemPosition() == 0 & secH186a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH186a3.requestFocus();
                 return;
-            } else if (txtH186a3X.getText().toString().length() == 0 & secH186a3X.isShown()) {
+            }*/ else if (txtH186a3X.getText().toString().length() == 0 & secH186a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH186a3X.requestFocus();
                 return;
@@ -3548,7 +3563,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH186a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH186a4.getText().toString().length() == 0 ? "0" : txtH186a4.getText().toString()) < 0 || Integer.valueOf(txtH186a4.getText().toString().length() == 0 ? "999" : txtH186a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH186a4.getText().toString().length() == 0 ? "0" : txtH186a4.getText().toString()) < 0 || Float.valueOf(txtH186a4.getText().toString().length() == 0 ? "999" : txtH186a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH186a4.requestFocus();
                 return;
@@ -3571,19 +3586,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH187a1X.requestFocus();
                 return;
-            } else if (spnH187a2.getSelectedItemPosition() == 0 & secH187a2.isShown()) {
+            } /*else if (spnH187a2.getSelectedItemPosition() == 0 & secH187a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH187a2.requestFocus();
                 return;
-            } else if (txtH187a2X.getText().toString().length() == 0 & secH187a2X.isShown()) {
+            }*/ else if (txtH187a2X.getText().toString().length() == 0 & secH187a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH187a2X.requestFocus();
                 return;
-            } else if (spnH187a3.getSelectedItemPosition() == 0 & secH187a3.isShown()) {
+            } /*else if (spnH187a3.getSelectedItemPosition() == 0 & secH187a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH187a3.requestFocus();
                 return;
-            } else if (txtH187a3X.getText().toString().length() == 0 & secH187a3X.isShown()) {
+            }*/ else if (txtH187a3X.getText().toString().length() == 0 & secH187a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH187a3X.requestFocus();
                 return;
@@ -3591,7 +3606,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH187a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH187a4.getText().toString().length() == 0 ? "0" : txtH187a4.getText().toString()) < 0 || Integer.valueOf(txtH187a4.getText().toString().length() == 0 ? "999" : txtH187a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH187a4.getText().toString().length() == 0 ? "0" : txtH187a4.getText().toString()) < 0 || Float.valueOf(txtH187a4.getText().toString().length() == 0 ? "999" : txtH187a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH187a4.requestFocus();
                 return;
@@ -3607,19 +3622,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH188a1X.requestFocus();
                 return;
-            } else if (spnH188a2.getSelectedItemPosition() == 0 & secH188a2.isShown()) {
+            } /*else if (spnH188a2.getSelectedItemPosition() == 0 & secH188a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH188a2.requestFocus();
                 return;
-            } else if (txtH188a2X.getText().toString().length() == 0 & secH188a2X.isShown()) {
+            }*/ else if (txtH188a2X.getText().toString().length() == 0 & secH188a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH188a2X.requestFocus();
                 return;
-            } else if (spnH188a3.getSelectedItemPosition() == 0 & secH188a3.isShown()) {
+            } /*else if (spnH188a3.getSelectedItemPosition() == 0 & secH188a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH188a3.requestFocus();
                 return;
-            } else if (txtH1881a3X.getText().toString().length() == 0 & secH1881a3X.isShown()) {
+            }*/ else if (txtH1881a3X.getText().toString().length() == 0 & secH1881a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1881a3X.requestFocus();
                 return;
@@ -3627,7 +3642,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH188a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH188a4.getText().toString().length() == 0 ? "0" : txtH188a4.getText().toString()) < 0 || Integer.valueOf(txtH188a4.getText().toString().length() == 0 ? "999" : txtH188a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH188a4.getText().toString().length() == 0 ? "0" : txtH188a4.getText().toString()) < 0 || Float.valueOf(txtH188a4.getText().toString().length() == 0 ? "999" : txtH188a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH188a4.requestFocus();
                 return;
@@ -3643,19 +3658,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH189a1X.requestFocus();
                 return;
-            } else if (spnH189a2.getSelectedItemPosition() == 0 & secH189a2.isShown()) {
+            } /*else if (spnH189a2.getSelectedItemPosition() == 0 & secH189a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH189a2.requestFocus();
                 return;
-            } else if (txtH189a2X.getText().toString().length() == 0 & secH189a2X.isShown()) {
+            }*/ else if (txtH189a2X.getText().toString().length() == 0 & secH189a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH189a2X.requestFocus();
                 return;
-            } else if (spnH189a3.getSelectedItemPosition() == 0 & secH189a3.isShown()) {
+            } /*else if (spnH189a3.getSelectedItemPosition() == 0 & secH189a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH189a3.requestFocus();
                 return;
-            } else if (txtH189a3X.getText().toString().length() == 0 & secH189a3X.isShown()) {
+            }*/ else if (txtH189a3X.getText().toString().length() == 0 & secH189a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH189a3X.requestFocus();
                 return;
@@ -3663,7 +3678,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH189a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH189a4.getText().toString().length() == 0 ? "0" : txtH189a4.getText().toString()) < 0 || Integer.valueOf(txtH189a4.getText().toString().length() == 0 ? "999" : txtH189a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH189a4.getText().toString().length() == 0 ? "0" : txtH189a4.getText().toString()) < 0 || Float.valueOf(txtH189a4.getText().toString().length() == 0 ? "999" : txtH189a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH189a4.requestFocus();
                 return;
@@ -3679,19 +3694,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1810a1X.requestFocus();
                 return;
-            } else if (spnH1810a2.getSelectedItemPosition() == 0 & secH1810a2.isShown()) {
+            } /*else if (spnH1810a2.getSelectedItemPosition() == 0 & secH1810a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH1810a2.requestFocus();
                 return;
-            } else if (txtH1810a2X.getText().toString().length() == 0 & secH1810a2X.isShown()) {
+            }*/ else if (txtH1810a2X.getText().toString().length() == 0 & secH1810a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1810a2X.requestFocus();
                 return;
-            } else if (spnH1810a3.getSelectedItemPosition() == 0 & secH1810a3.isShown()) {
+            } /*else if (spnH1810a3.getSelectedItemPosition() == 0 & secH1810a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH1810a3.requestFocus();
                 return;
-            } else if (txtH1810a3X.getText().toString().length() == 0 & secH1810a3X.isShown()) {
+            }*/ else if (txtH1810a3X.getText().toString().length() == 0 & secH1810a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1810a3X.requestFocus();
                 return;
@@ -3699,7 +3714,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH1810a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH1810a4.getText().toString().length() == 0 ? "0" : txtH1810a4.getText().toString()) < 0 || Integer.valueOf(txtH1810a4.getText().toString().length() == 0 ? "999" : txtH1810a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH1810a4.getText().toString().length() == 0 ? "0" : txtH1810a4.getText().toString()) < 0 || Float.valueOf(txtH1810a4.getText().toString().length() == 0 ? "999" : txtH1810a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH1810a4.requestFocus();
                 return;
@@ -3715,19 +3730,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1811a1X.requestFocus();
                 return;
-            } else if (spnH1811a2.getSelectedItemPosition() == 0 & secH1811a2.isShown()) {
+            } /*else if (spnH1811a2.getSelectedItemPosition() == 0 & secH1811a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH1811a2.requestFocus();
                 return;
-            } else if (txtH1811a2X.getText().toString().length() == 0 & secH1811a2X.isShown()) {
+            }*/ else if (txtH1811a2X.getText().toString().length() == 0 & secH1811a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1811a2X.requestFocus();
                 return;
-            } else if (spnH1811a3.getSelectedItemPosition() == 0 & secH1811a3.isShown()) {
+            } /*else if (spnH1811a3.getSelectedItemPosition() == 0 & secH1811a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH1811a3.requestFocus();
                 return;
-            } else if (txtH1811a3X.getText().toString().length() == 0 & secH1811a3X.isShown()) {
+            }*/ else if (txtH1811a3X.getText().toString().length() == 0 & secH1811a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1811a3X.requestFocus();
                 return;
@@ -3735,7 +3750,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH1811a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH1811a4.getText().toString().length() == 0 ? "0" : txtH1811a4.getText().toString()) < 0 || Integer.valueOf(txtH1811a4.getText().toString().length() == 0 ? "999" : txtH1811a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH1811a4.getText().toString().length() == 0 ? "0" : txtH1811a4.getText().toString()) < 0 || Float.valueOf(txtH1811a4.getText().toString().length() == 0 ? "999" : txtH1811a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH1811a4.requestFocus();
                 return;
@@ -3751,19 +3766,19 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1812a1X.requestFocus();
                 return;
-            } else if (spnH1812a2.getSelectedItemPosition() == 0 & secH1812a2.isShown()) {
+            } /*else if (spnH1812a2.getSelectedItemPosition() == 0 & secH1812a2.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: দ্বিতীয় বাহন.");
                 spnH1812a2.requestFocus();
                 return;
-            } else if (txtH1812a2X.getText().toString().length() == 0 & secH1812a2X.isShown()) {
+            }*/ else if (txtH1812a2X.getText().toString().length() == 0 & secH1812a2X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1812a2X.requestFocus();
                 return;
-            } else if (spnH1812a3.getSelectedItemPosition() == 0 & secH1812a3.isShown()) {
+            } /*else if (spnH1812a3.getSelectedItemPosition() == 0 & secH1812a3.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: তৃতীয় বাহন.");
                 spnH1812a3.requestFocus();
                 return;
-            } else if (txtH1812a3X.getText().toString().length() == 0 & secH1812a3X.isShown()) {
+            }*/ else if (txtH1812a3X.getText().toString().length() == 0 & secH1812a3X.isShown()) {
                 Connection.MessageBox(Careseek.this, "Required field: অন্যান্য.");
                 txtH1812a3X.requestFocus();
                 return;
@@ -3771,7 +3786,7 @@ public class Careseek extends Activity {
                 Connection.MessageBox(Careseek.this, "Required field: দূরত্ব KM.");
                 txtH1812a4.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH1812a4.getText().toString().length() == 0 ? "0" : txtH1812a4.getText().toString()) < 0 || Integer.valueOf(txtH1812a4.getText().toString().length() == 0 ? "999" : txtH1812a4.getText().toString()) > 999) {
+            } else if (Float.valueOf(txtH1812a4.getText().toString().length() == 0 ? "0" : txtH1812a4.getText().toString()) < 0 || Float.valueOf(txtH1812a4.getText().toString().length() == 0 ? "999" : txtH1812a4.getText().toString()) > 999) {
                 Connection.MessageBox(Careseek.this, "Value should be between 0 and 999(দূরত্ব KM).");
                 txtH1812a4.requestFocus();
                 return;

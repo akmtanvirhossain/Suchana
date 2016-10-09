@@ -7,10 +7,13 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -271,7 +274,7 @@ public class Agriculture extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select '' union all select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15"));
             seclbH151 = (LinearLayout) findViewById(R.id.seclbH151);
             secH151 = (LinearLayout) findViewById(R.id.secH151);
             lineH151 = (View) findViewById(R.id.lineH151);
@@ -620,6 +623,175 @@ public class Agriculture extends Activity {
             rdoH152k22 = (RadioButton) findViewById(R.id.rdoH152k22);
 
 
+            txtH152d1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152d1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152d1.getText().toString()) ==0)
+                        {
+                            secH152d2.setVisibility(View.GONE);
+                            rdogrpH152d2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152d2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+
+            txtH152e1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152e1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152e1.getText().toString()) ==0)
+                        {
+                            secH152e2.setVisibility(View.GONE);
+                            rdogrpH152e2.clearCheck();
+                            seclbh152f.setVisibility(View.GONE);
+                            secH152f.setVisibility(View.GONE);
+                            txtH152f.setText(null);
+                        }
+                        else
+                        {
+                            secH152e2.setVisibility(View.VISIBLE);
+                            secH152f.setVisibility(View.VISIBLE);
+                            seclbh152f.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+            txtH152g.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152g.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152g.getText().toString()) ==0)
+                        {
+                            secH152g2.setVisibility(View.GONE);
+                            rdogrpH152g2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152g2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+            txtH152h1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152h1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152h1.getText().toString()) ==0)
+                        {
+                            secH152h2.setVisibility(View.GONE);
+                            rdogrpH152h2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152h2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+            txtH152i1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152i1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152i1.getText().toString()) ==0)
+                        {
+                            secH152i2.setVisibility(View.GONE);
+                            rdogrpH152i2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152i2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+            txtH152j1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152j1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152j1.getText().toString()) ==0)
+                        {
+                            secH152j2.setVisibility(View.GONE);
+                            rdogrpH152j2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152j2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+            txtH152k1.addTextChangedListener(new TextWatcher()
+            {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (txtH152k1.getText().toString().length() != 0)
+                    {
+                        if (Float.valueOf(txtH152k1.getText().toString()) ==0)
+                        {
+                            secH152k2.setVisibility(View.GONE);
+                            rdogrpH152k2.clearCheck();
+                        }
+                        else
+                        {
+                            secH152k2.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+
+
+
             txtRnd.setText(RND);
             txtRnd.setEnabled(false);
             txtSuchanaID.setText(SUCHANAID);
@@ -628,6 +800,8 @@ public class Agriculture extends Activity {
             txtSl.setEnabled(false);
 
             DataSearch(RND, SUCHANAID, SL);
+
+
 
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -658,7 +832,13 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: উপকারভোগী/সদস্য আইডি.");
                 txtSuchanaID.requestFocus();
                 return;
-            } else if (!rdoH1511.isChecked() & !rdoH1512.isChecked() & secH151.isShown()) {
+            }
+            else if (spnMSlNo.getSelectedItem().toString().length() == 0 & secMSlNo.isShown()) {
+                Connection.MessageBox(Agriculture.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                // txtMSlNo.requestFocus();
+                return;
+            }
+            else if (!rdoH1511.isChecked() & !rdoH1512.isChecked() & secH151.isShown()) {
                 Connection.MessageBox(Agriculture.this, "Select anyone options from (আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল).");
                 rdoH1511.requestFocus();
                 return;
@@ -686,15 +866,15 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: জমি/পানির মাপ (জল আয়তন).");
                 txtH152c.requestFocus();
                 return;
-            } else if (Float.valueOf(txtH152c.getText().toString().length() == 0 ? "1" : txtH152c.getText().toString()) < 1 || Float.valueOf(txtH152c.getText().toString().length() == 0 ? "99999" : txtH152c.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(জমি/পানির মাপ (জল আয়তন)).");
+            } else if (Float.valueOf(txtH152c.getText().toString().length() == 0 ? "1" : txtH152c.getText().toString()) < 0 || Float.valueOf(txtH152c.getText().toString().length() == 0 ? "99999" : txtH152c.getText().toString()) > 99999) {
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(জমি/পানির মাপ (জল আয়তন)).");
                 txtH152c.requestFocus();
                 return;
             } else if (txtH152d1.getText().toString().length() == 0 & secH152d1.isShown()) {
                 Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
                 txtH152d1.requestFocus();
                 return;
-            } else if (Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "1" : txtH152d1.getText().toString()) < 1 || Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "99999" : txtH152d1.getText().toString()) > 99999) {
+            } else if (Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "1" : txtH152d1.getText().toString()) < 0 || Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "99999" : txtH152d1.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
                 txtH152d1.requestFocus();
                 return;
@@ -785,7 +965,7 @@ public class Agriculture extends Activity {
                 rdoH152k21.requestFocus();
                 return;
             }
-            if(Integer.valueOf(txtH152e1.getText().toString())==0 && Integer.valueOf(txtH152f.getText().toString())>0 )
+            if(Float.valueOf(txtH152e1.getText().toString().length() == 0 ? "0" : txtH152e1.getText().toString())==0 && Float.valueOf(txtH152f.getText().toString().length() == 0 ? "0" :txtH152f.getText().toString())>0 )
             {
                 Connection.MessageBox(Agriculture.this, "Inconsistent value between sales quantity and sales price");
                 return;
@@ -797,6 +977,61 @@ public class Agriculture extends Activity {
                 return;
             }*/
 
+            Integer a=Integer.valueOf(C.ReturnSingleValue("Select count(*) from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"));
+            if ( a>1)
+            {
+                if(rdoH1512.isChecked()==true)
+                {
+                    Connection.MessageBox(Agriculture.this, "Inconsistent value: আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                    return;
+                }
+                else
+                {
+                    if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H151='0'"))
+                    {
+                        Connection.MessageBox(Agriculture.this, "Inconsistent value: আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                        return;
+                    }
+                }
+            }
+            else if(a==1)
+            {
+                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and Sl='" + SL + "'"))
+                {
+                    if(rdoH1512.isChecked()==true)
+                    {
+                        Connection.MessageBox(Agriculture.this, "Inconsistent value: আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                        return;
+                    }
+                    else
+                    {
+                        if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H151='0'"))
+                        {
+                            Connection.MessageBox(Agriculture.this, "Inconsistent value: আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                            return;
+                        }
+                    }
+                }
+            }
+            /*
+            if(rdoH1511.isChecked()==true)
+            {
+                if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H151='0'"))
+                {
+                    Connection.MessageBox(Agriculture.this, "Inconsistent value: আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                    return;
+                }
+            }
+            else
+            {
+
+                if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"))
+                {
+                    Connection.MessageBox(Agriculture.this, "Inconsistent value:  আপনার খানা কি বিগত 1 year এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল? ");
+                    return;
+                }
+            }
+*/
             String SQL = "";
             RadioButton rb;
 

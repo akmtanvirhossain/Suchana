@@ -301,7 +301,7 @@ public class Illness2 extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "'"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select '' union all select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "'"));
             secH172a = (LinearLayout) findViewById(R.id.secH172a);
             lineH172a = (View) findViewById(R.id.lineH172a);
             VlblH172a = (TextView) findViewById(R.id.VlblH172a);
@@ -528,6 +528,47 @@ public class Illness2 extends Activity {
                 rdoH172d1.requestFocus();
                 return;
             }
+
+
+            Integer a=Integer.valueOf(C.ReturnSingleValue("Select count(*) from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"));
+            if ( a>1)
+            {
+                if(rdoH1722.isChecked()==true)
+                {
+                    Connection.MessageBox(Illness2.this, "Inconsistent value: 1 year of more সময় ধরে কোনো খানা সদস্য অসুস্থ রয়েছে? ");
+                    return;
+                }
+                else
+                {
+                    if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H172='0'"))
+                    {
+                        Connection.MessageBox(Illness2.this, "Inconsistent value: 1 year of more সময় ধরে কোনো খানা সদস্য অসুস্থ রয়েছে? ");
+                        return;
+                    }
+                }
+            }
+            else if(a==1)
+            {
+                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and Sl='" + SlNo + "'"))
+                {
+                    if(rdoH1722.isChecked()==true)
+                    {
+                        Connection.MessageBox(Illness2.this, "Inconsistent value: 1 year of more সময় ধরে কোনো খানা সদস্য অসুস্থ রয়েছে? ");
+                        return;
+                    }
+                    else
+                    {
+                        if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H172='0'"))
+                        {
+                            Connection.MessageBox(Illness2.this, "Inconsistent value: 1 year of more সময় ধরে কোনো খানা সদস্য অসুস্থ রয়েছে? ");
+                            return;
+                        }
+                    }
+                }
+            }
+
+
+
 
             String SQL = "";
             RadioButton rb;

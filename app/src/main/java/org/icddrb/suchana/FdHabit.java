@@ -697,6 +697,10 @@ public class FdHabit extends Activity {
     View lineC142f;
     TextView VlblC142f;
     CheckBox chkC142f;
+    LinearLayout secC142g;
+    View lineC142g;
+    TextView VlblC142g;
+    CheckBox chkC142g;
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -1126,6 +1130,21 @@ public class FdHabit extends Activity {
             lineC117f = (View) findViewById(R.id.lineC117f);
             VlblC117f = (TextView) findViewById(R.id.VlblC117f);
             chkC117f = (CheckBox) findViewById(R.id.chkC117f);
+
+            chkC117f.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkC117a.setChecked(false);
+                        chkC117b.setChecked(false);
+                        chkC117c.setChecked(false);
+                        chkC117d.setChecked(false);
+                        chkC117e.setChecked(false);
+                        txtC117eX.setText("");
+                    }
+
+                }
+            });
+
             secC118d = (LinearLayout) findViewById(R.id.secC118d);
             lineC118d = (View) findViewById(R.id.lineC118d);
             VlblC118d = (TextView) findViewById(R.id.VlblC118d);
@@ -1598,6 +1617,7 @@ public class FdHabit extends Activity {
                     } else {
                         secC125.setVisibility(View.VISIBLE);
                         lineC125.setVisibility(View.VISIBLE);
+                        seclblC126.setVisibility(View.VISIBLE);
                         secC126a.setVisibility(View.VISIBLE);
                         lineC126a.setVisibility(View.VISIBLE);
                         secC126b.setVisibility(View.VISIBLE);
@@ -2244,7 +2264,7 @@ public class FdHabit extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("2")) {
-                     /*   secBCG1.setVisibility(View.GONE);
+                        secBCG1.setVisibility(View.GONE);
                         lineBCG1.setVisibility(View.GONE);
                         rdogrpBCG1.clearCheck();
                         secBCG2.setVisibility(View.GONE);
@@ -2285,7 +2305,7 @@ public class FdHabit extends Activity {
                         rdogrpMR1.clearCheck();
                         secMR2.setVisibility(View.GONE);
                         lineMR2.setVisibility(View.GONE);
-                        rdogrpMR2.clearCheck();*/
+                        rdogrpMR2.clearCheck();
                     } else if (rbData.equalsIgnoreCase("3")) {
                         secBCG1.setVisibility(View.GONE);
                         lineBCG1.setVisibility(View.GONE);
@@ -2544,18 +2564,13 @@ public class FdHabit extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnC141.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnC141.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("1")) {
-                        secC141X.setVisibility(View.GONE);
-                        lineC141X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("2")) {
-                        secC141X.setVisibility(View.GONE);
-                        lineC141X.setVisibility(View.GONE);
-                    } else if (spnData.equalsIgnoreCase("8")) {
-                        secC141X.setVisibility(View.GONE);
-                        lineC141X.setVisibility(View.GONE);
+                    if (spnData.equalsIgnoreCase("3")) {
+                        secC141X.setVisibility(View.VISIBLE);
+                        lineC141X.setVisibility(View.VISIBLE);
                     } else {
-                     //   secC141X.setVisibility(View.VISIBLE);
-                      //  lineC141X.setVisibility(View.VISIBLE);
+                        secC141X.setVisibility(View.GONE);
+                        lineC141X.setVisibility(View.GONE);
+                        txtC141X.setText(null);
                     }
                 }
 
@@ -2594,6 +2609,10 @@ public class FdHabit extends Activity {
             lineC142f = (View) findViewById(R.id.lineC142f);
             VlblC142f = (TextView) findViewById(R.id.VlblC142f);
             chkC142f = (CheckBox) findViewById(R.id.chkC142f);
+            secC142g = (LinearLayout) findViewById(R.id.secC142g);
+            lineC142g = (View) findViewById(R.id.lineC142g);
+            VlblC142g = (TextView) findViewById(R.id.VlblC142g);
+            chkC142g = (CheckBox) findViewById(R.id.chkC142g);
 
 
             dtpC15.setOnTouchListener(new View.OnTouchListener() {
@@ -2905,11 +2924,20 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: জন্ম ওজন.");
                 txtC17.requestFocus();
                 return;
-            } else if (Double.valueOf(txtC17.getText().toString().length() == 0 ? "1" : txtC17.getText().toString()) < 1 || Double.valueOf(txtC17.getText().toString().length() == 0 ? "99" : txtC17.getText().toString()) > 99) {
+            }
+            if(txtC17.getText().toString().equals("8888"))
+            {
+
+            }
+            else
+            {
+                if (Double.valueOf(txtC17.getText().toString().length() == 0 ? "1" : txtC17.getText().toString()) < 1 || Double.valueOf(txtC17.getText().toString().length() == 0 ? "99" : txtC17.getText().toString()) > 99) {
                 Connection.MessageBox(FdHabit.this, "Value should be between 1 and 99(জন্ম ওজন).");
                 txtC17.requestFocus();
                 return;
-            } else if (!rdoC181.isChecked() & !rdoC182.isChecked() & secC18.isShown()) {
+                }
+            }
+             if (!rdoC181.isChecked() & !rdoC182.isChecked() & secC18.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কখনো (নাম) কে বুকের দুধ পান করিয়েছেন? ).");
                 rdoC181.requestFocus();
                 return;
@@ -3248,6 +3276,12 @@ public class FdHabit extends Activity {
                 txtC141X.requestFocus();
                 return;
             }
+            if((chkC117f.isChecked()==true) &&(chkC117a.isChecked()==true || chkC117a.isChecked()==true|| chkC117c.isChecked()==true|| chkC117d.isChecked()==true|| chkC117e.isChecked()==true))
+            {
+                Connection.MessageBox(FdHabit.this, "Inconsistent value between M24.1A to I");
+                return;
+            }
+
 
             String SQL = "";
             RadioButton rb;
@@ -3728,6 +3762,7 @@ public class FdHabit extends Activity {
             objSave.setC142d((chkC142d.isChecked() ? "1" : "2"));
             objSave.setC142e((chkC142e.isChecked() ? "1" : "2"));
             objSave.setC142f((chkC142f.isChecked() ? "1" : "2"));
+            objSave.setC142g((chkC142g.isChecked() ? "1" : "2"));
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -4359,6 +4394,11 @@ public class FdHabit extends Activity {
                     chkC142f.setChecked(true);
                 } else if (item.getC142f().equals("2")) {
                     chkC142f.setChecked(false);
+                }
+                if (item.getC142g().equals("1")) {
+                    chkC142g.setChecked(true);
+                } else if (item.getC142g().equals("2")) {
+                    chkC142g.setChecked(false);
                 }
             }
         } catch (Exception e) {

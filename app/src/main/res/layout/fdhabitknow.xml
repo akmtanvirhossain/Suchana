@@ -473,7 +473,7 @@
                     android:id="@+id/VlblM235"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ(জানা নেই [88])"
+                    android:text="কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ(মাস)(জানা নেই [88])"
                     android:textSize="20sp" />
 
                 <EditText

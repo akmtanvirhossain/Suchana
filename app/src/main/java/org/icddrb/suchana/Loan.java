@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -220,7 +221,7 @@ public class Loan extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select '' union all select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
             secH111 = (LinearLayout) findViewById(R.id.secH111);
             lineH111 = (View) findViewById(R.id.lineH111);
             VlblH111 = (TextView) findViewById(R.id.VlblH111);
@@ -705,8 +706,76 @@ public class Loan extends Activity {
 
             }
 
+            Integer a=Integer.valueOf(C.ReturnSingleValue("Select count(*) from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"));
+            if ( a>1)
+            {
+                if(rdoH1112.isChecked()==true)
+                {
+                    Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                    return;
+                }
+                else
+                {
+                    if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H111='0'"))
+                    {
+                        Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                        return;
+                    }
+                }
+            }
+            else if(a==1)
+            {
+                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H112='" + H112 + "'"))
+                {
+                    if(rdoH1112.isChecked()==true)
+                    {
+                        Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                        return;
+                    }
+                    else
+                    {
+                        if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H111='0'"))
+                        {
+                            Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                            return;
+                        }
+                    }
+                }
+            }
 
 
+            /*
+            if(rdoH1111.isChecked()==true)
+            {
+                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H112='" + H112 + "'"))
+                {
+                    if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H111='0'"))
+                    {
+                        Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                        return;
+                    }
+                }
+
+            }
+            else
+            {
+                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H112='" + H112 + "'"))
+                {
+                    if(C.Existence("select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"))
+                    {
+                        Connection.MessageBox(Loan.this, "Inconsistent value: আপনি এবং  অথবা আপনার স্বামীর কোনো ঋণ (নগদ অথবা পণ্য) আছে? হ্যা");
+                        return;
+                    }
+                }
+                else
+                {
+
+                }
+
+
+            }
+
+*/
             String SQL = "";
             RadioButton rb;
 
