@@ -566,7 +566,7 @@
                     android:id="@+id/VlblH5f"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন"
+                    android:text="জমিটি যদি টাকার বিনিময় ভাড়া/ইজারা নেয়া/দেয়া হয়ে থাকে তাহলেগত ঋতুতেকত টাকা পেয়েছেন/দিয়েছেন"
                     android:textSize="20sp" />
 
                 <EditText

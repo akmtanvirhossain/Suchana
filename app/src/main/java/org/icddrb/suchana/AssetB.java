@@ -1004,8 +1004,8 @@ public class AssetB extends Activity {
                 Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন).");
                 txtH41c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "00" : txtH41c.getText().toString()) < 00 || Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "99" : txtH41c.getText().toString()) > 99) {
-                Connection.MessageBox(AssetB.this, "Value should be between 00 and 99(এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন)).");
+            } else if (Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "000" : txtH41c.getText().toString()) < 000 || Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "999" : txtH41c.getText().toString()) > 999) {
+                Connection.MessageBox(AssetB.this, "Value should be between 000 and 999(এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন)).");
                 txtH41c.requestFocus();
                 return;
             } else if (txtH41d.getText().toString().length() == 0 & secH41d.isShown()) {

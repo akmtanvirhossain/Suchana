@@ -320,54 +320,110 @@ public class Agriculture_list extends Activity {
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
-            final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
-            final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView MSlNo = (TextView) convertView.findViewById(R.id.MSlNo);
-            final TextView H151 = (TextView) convertView.findViewById(R.id.H151);
             final TextView Sl = (TextView) convertView.findViewById(R.id.Sl);
             final TextView H152a = (TextView) convertView.findViewById(R.id.H152a);
-            final TextView H152bOth = (TextView) convertView.findViewById(R.id.H152bOth);
             final TextView H152b = (TextView) convertView.findViewById(R.id.H152b);
             final TextView H152c = (TextView) convertView.findViewById(R.id.H152c);
-            final TextView H152d1 = (TextView) convertView.findViewById(R.id.H152d1);
-            final TextView H152d2 = (TextView) convertView.findViewById(R.id.H152d2);
-            final TextView H152e1 = (TextView) convertView.findViewById(R.id.H152e1);
-            final TextView H152e2 = (TextView) convertView.findViewById(R.id.H152e2);
-            final TextView H152f = (TextView) convertView.findViewById(R.id.H152f);
-            final TextView H152g = (TextView) convertView.findViewById(R.id.H152g);
-            final TextView H152h1 = (TextView) convertView.findViewById(R.id.H152h1);
-            final TextView H152h2 = (TextView) convertView.findViewById(R.id.H152h2);
-            final TextView H152i1 = (TextView) convertView.findViewById(R.id.H152i1);
-            final TextView H152i2 = (TextView) convertView.findViewById(R.id.H152i2);
-            final TextView H152j1 = (TextView) convertView.findViewById(R.id.H152j1);
-            final TextView H152j2 = (TextView) convertView.findViewById(R.id.H152j2);
-            final TextView H152k1 = (TextView) convertView.findViewById(R.id.H152k1);
-            final TextView H152k2 = (TextView) convertView.findViewById(R.id.H152k2);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
-            Rnd.setText(o.get("Rnd"));
-            SuchanaID.setText(o.get("SuchanaID"));
-            MSlNo.setText(o.get("MSlNo"));
-            H151.setText(o.get("H151"));
             Sl.setText(o.get("Sl"));
-            H152a.setText(o.get("H152a"));
-            H152bOth.setText(o.get("H152bOth"));
-            H152b.setText(o.get("H152b"));
+
+            List<String> listH152a = new ArrayList<String>();
+
+            listH152a.add("");
+            listH152a.add("101-ধান");
+            listH152a.add("102-গম");
+            listH152a.add("103-অন্যান্য খাদ্য শস্য  (যেমন: ভুট্টা,  বার্লি, যব ইত্যাদি)");
+            listH152a.add("201-ধনচে");
+            listH152a.add("202-পাট");
+            listH152a.add("203-অন্যান্য তন্তু  জাতীয় ফসল (যেমন , তুলা ইত্যাদি)");
+            listH152a.add("301-ডাল");
+            listH152a.add("401-সরিষা");
+            listH152a.add("402-সয়াবি");
+            listH152a.add("403-অন্যান্য (তিল,তিষি)");
+            listH152a.add("501-মরিচ");
+            listH152a.add("502-পেয়াজ");
+            listH152a.add("503-রসুন");
+            listH152a.add("504-অন্যান্য (আদা, ধনে, হলুদ) ");
+            listH152a.add("601-কুমড়া");
+            listH152a.add("602-বেগুন");
+            listH152a.add("603-পটল");
+            listH152a.add("604-ঢেরস");
+            listH152a.add("605-ঝিঙ্গা");
+            listH152a.add("606-করলা");
+            listH152a.add("607-ডাটা");
+            listH152a.add("608-লাউ");
+            listH152a.add("609-কাঁচা পেঁপে");
+            listH152a.add("610-লেবু");
+            listH152a.add("611-আলু");
+            listH152a.add("612-শিম");
+            listH152a.add("613-গাজর");
+            listH152a.add("614-টমেটো");
+            listH152a.add("615-সজনে  ");
+            listH152a.add("616-পাতা সবজি  ");
+            listH152a.add("617-ফুলকপি ");
+            listH152a.add("618-ওলকপি ");
+            listH152a.add("619-মুলা");
+            listH152a.add("620-বরবটি ");
+            listH152a.add("621-কচু মুখী ");
+            listH152a.add("622-কাচা কলা ");
+            listH152a.add("623-পান ");
+            listH152a.add("624-অন্যান্য সবজি ");
+            listH152a.add("625-কলমি শাক  ");
+            listH152a.add("626-কমলা রঙ্গের মিষ্টি আলু  ");
+            listH152a.add("627-লতিরাজ কচু  ");
+            listH152a.add("628-লাল শাক ");
+            listH152a.add("701-হলুদ ফল");
+            listH152a.add("702-সবুজ ফল");
+            listH152a.add("801-রুই");
+            listH152a.add("802-কাতলা");
+            listH152a.add("803-মৃগেল");
+            listH152a.add("804-তেলাপিয়");
+            listH152a.add("805-পাঙ্গাস");
+            listH152a.add("806-সরপুঁটি");
+            listH152a.add("807-পুটি");
+            listH152a.add("808-মলা ");
+            listH152a.add("809-সিলভার কার্প ");
+            listH152a.add("810-অনান্য ছোট মাছ ");
+            listH152a.add("811-অনান্য বড় মাছ ");
+            listH152a.add("901-শুধু হাস-মুরগি ");
+            listH152a.add("902-হাস-মুরগি ও ডিম");
+
+            for (int i = 0; i < listH152a.size(); i++) {
+                if (listH152a.get(i).contains(o.get("H152a"))) {
+                    H152a.setText(listH152a.get(i));
+                    break;
+                }
+
+            }
+
+
+            List<String> listH152b = new ArrayList<String>();
+
+            listH152b.add("");
+            listH152b.add("01-ভিটেমাটি");
+            listH152b.add("02-চাষযোগ্য/আবাদী জমি");
+            listH152b.add("03-গবাদি পশুর চারণের উপযোগী ভূমি");
+            listH152b.add("04-ঝোপ/জংলা জমি");
+            listH152b.add("05-চাষযোগ্য পুকুর");
+            listH152b.add("06-অন্যের জমি/ পুকুর");
+            listH152b.add("07-বর্জ্য/অনাবাদি জমি");
+            listH152b.add("08-নদীগর্ভের/হাওরের জমি");
+            listH152b.add("09-অন্যান্য আবাসিক/বাণিজ্যিক প্লট ");
+            listH152b.add("10-পুকুরের পাড়");
+
+            for (int i = 0; i < listH152b.size(); i++) {
+                if (listH152b.get(i).contains(o.get("H152b"))) {
+                    H152b.setText(listH152b.get(i));
+                    break;
+                }
+
+            }
+
+
+
             H152c.setText(o.get("H152c"));
-            H152d1.setText(o.get("H152d1"));
-            H152d2.setText(o.get("H152d2"));
-            H152e1.setText(o.get("H152e1"));
-            H152e2.setText(o.get("H152e2"));
-            H152f.setText(o.get("H152f"));
-            H152g.setText(o.get("H152g"));
-            H152h1.setText(o.get("H152h1"));
-            H152h2.setText(o.get("H152h2"));
-            H152i1.setText(o.get("H152i1"));
-            H152i2.setText(o.get("H152i2"));
-            H152j1.setText(o.get("H152j1"));
-            H152j2.setText(o.get("H152j2"));
-            H152k1.setText(o.get("H152k1"));
-            H152k2.setText(o.get("H152k2"));
+
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

@@ -88,7 +88,7 @@
             android:id="@+id/lblSuchanaIdHeader"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="25sp" />
+            android:layout_marginRight="10sp" />
         <Button
             android:id="@+id/btnRefresh"
             android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
             android:background="@drawable/button_style_blue"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
-            android:text="ADD NEW AGRI"
+            android:text="ADD AGRICULTURE"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -124,16 +124,14 @@
         android:layout_height="1dip"
         android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <include
                 layout="@layout/agricultureheading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="fill_parent"
@@ -168,7 +166,7 @@
         </LinearLayout>
     </ScrollView>
         </LinearLayout>
-    </HorizontalScrollView>
+
 
     <LinearLayout
         android:layout_width="fill_parent"

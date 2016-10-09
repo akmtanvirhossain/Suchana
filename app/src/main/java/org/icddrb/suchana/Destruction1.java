@@ -233,6 +233,8 @@ public class Destruction1 extends Activity {
     View lineH14a14u;
     TextView VlblH14a14u;
     CheckBox chkH14a14u;
+    TextView lblHlbH14a3;
+    TextView lblHlbH14a4;
     String StartTime;
     Bundle IDbundle;
     Button buttonAssetType01;
@@ -773,6 +775,13 @@ public class Destruction1 extends Activity {
                         secH14a14t.setVisibility(View.GONE);
                         lineH14a14t.setVisibility(View.GONE);
                         chkH14a14t.setChecked(false);
+                        secH14a14u.setVisibility(View.GONE);
+                        lineH14a14u.setVisibility(View.GONE);
+                        chkH14a14u.setChecked(false);
+
+                        lblHlbH14a3.setVisibility(View.GONE);
+                        lblHlbH14a4.setVisibility(View.GONE);
+
                     } else {
                         secH14a2.setVisibility(View.VISIBLE);
                         lineH14a2.setVisibility(View.VISIBLE);
@@ -850,6 +859,11 @@ public class Destruction1 extends Activity {
                         lineH14a14s.setVisibility(View.VISIBLE);
                         secH14a14t.setVisibility(View.VISIBLE);
                         lineH14a14t.setVisibility(View.VISIBLE);
+                        secH14a14u.setVisibility(View.VISIBLE);
+                        lineH14a14u.setVisibility(View.VISIBLE);
+                        lblHlbH14a3.setVisibility(View.VISIBLE);
+                        lblHlbH14a4.setVisibility(View.VISIBLE);
+
                     }
                 }
 
@@ -1063,6 +1077,9 @@ public class Destruction1 extends Activity {
             VlblH14a14u = (TextView) findViewById(R.id.VlblH14a14u);
             chkH14a14u = (CheckBox) findViewById(R.id.chkH14a14u);
 
+            lblHlbH14a3 = (TextView) findViewById(R.id.lblHlbH14a3);
+            lblHlbH14a4 = (TextView) findViewById(R.id.lblHlbH14a4);
+
             chkH14a14u.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -1087,6 +1104,8 @@ public class Destruction1 extends Activity {
                         chkH14a14r.setChecked(false);
                         chkH14a14s.setChecked(false);
                         chkH14a14t.setChecked(false);
+                        chkH14a14u.setChecked(false);
+
 
                     } else {
                         
@@ -1134,6 +1153,8 @@ public class Destruction1 extends Activity {
             secH14a14r.setVisibility(View.GONE);
             secH14a14s.setVisibility(View.GONE);
             secH14a14t.setVisibility(View.GONE);
+            secH14a14u.setVisibility(View.GONE);
+
             txtRnd.setText(RND);
             txtSuchanaID.setText(SUCHANAID);
             txtRnd.setEnabled(false);

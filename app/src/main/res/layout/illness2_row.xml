@@ -21,20 +21,20 @@
 
         <TextView
             android:id="@+id/H172a"
-            android:layout_width="200sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="left|center" />
 
         <TextView
             android:id="@+id/H172b"
-            android:layout_width="200sp"
+            android:layout_width="285sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="left|center" />
 
         <TextView
             android:id="@+id/H172d"
-            android:layout_width="90sp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="left|center" />
     </LinearLayout>
 </LinearLayout>

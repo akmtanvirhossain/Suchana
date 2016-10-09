@@ -17,38 +17,38 @@
         android:paddingTop="5px">
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="SlNo"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H171a"
+            android:text="অসুস্থতার ধরণ"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="230sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H171b"
+            android:text="চিকিৎসা"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H171c"
+            android:text="দেরি"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H171d"
+            android:text="সময়"
             android:textColor="#ffffff" />
 
     </LinearLayout>

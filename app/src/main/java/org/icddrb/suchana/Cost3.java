@@ -2989,7 +2989,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9a1b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a1b.getText().toString().length() == 0 ? "0" : txtH9a1b.getText().toString()) < 0 || Integer.valueOf(txtH9a1b.getText().toString().length() == 0 ? "9999999" : txtH9a1b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a1b.getText().toString().length() == 0 ? "0" : txtH9a1b.getText().toString()) < 0 || Double.valueOf(txtH9a1b.getText().toString().length() == 0 ? "9999999" : txtH9a1b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9a1b.requestFocus();
@@ -3000,7 +3000,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9a1c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a1c.getText().toString().length() == 0 ? "0" : txtH9a1c.getText().toString()) < 0 || Integer.valueOf(txtH9a1c.getText().toString().length() == 0 ? "9999999" : txtH9a1c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a1c.getText().toString().length() == 0 ? "0" : txtH9a1c.getText().toString()) < 0 || Double.valueOf(txtH9a1c.getText().toString().length() == 0 ? "9999999" : txtH9a1c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9a1c.requestFocus();
@@ -3018,7 +3018,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9a2b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a2b.getText().toString().length() == 0 ? "0" : txtH9a2b.getText().toString()) < 0 || Integer.valueOf(txtH9a2b.getText().toString().length() == 0 ? "9999999" : txtH9a2b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a2b.getText().toString().length() == 0 ? "0" : txtH9a2b.getText().toString()) < 0 || Double.valueOf(txtH9a2b.getText().toString().length() == 0 ? "9999999" : txtH9a2b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9a2b.requestFocus();
@@ -3029,7 +3029,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9a2c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a2c.getText().toString().length() == 0 ? "0" : txtH9a2c.getText().toString()) < 0 || Integer.valueOf(txtH9a2c.getText().toString().length() == 0 ? "9999999" : txtH9a2c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a2c.getText().toString().length() == 0 ? "0" : txtH9a2c.getText().toString()) < 0 || Double.valueOf(txtH9a2c.getText().toString().length() == 0 ? "9999999" : txtH9a2c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9a2c.requestFocus();
@@ -3047,7 +3047,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9a3b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a3b.getText().toString().length() == 0 ? "0" : txtH9a3b.getText().toString()) < 0 || Integer.valueOf(txtH9a3b.getText().toString().length() == 0 ? "9999999" : txtH9a3b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a3b.getText().toString().length() == 0 ? "0" : txtH9a3b.getText().toString()) < 0 || Double.valueOf(txtH9a3b.getText().toString().length() == 0 ? "9999999" : txtH9a3b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9a3b.requestFocus();
@@ -3058,7 +3058,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9a3c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a3c.getText().toString().length() == 0 ? "0" : txtH9a3c.getText().toString()) < 0 || Integer.valueOf(txtH9a3c.getText().toString().length() == 0 ? "9999999" : txtH9a3c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a3c.getText().toString().length() == 0 ? "0" : txtH9a3c.getText().toString()) < 0 || Double.valueOf(txtH9a3c.getText().toString().length() == 0 ? "9999999" : txtH9a3c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9a3c.requestFocus();
@@ -3076,7 +3076,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9a4b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a4b.getText().toString().length() == 0 ? "0" : txtH9a4b.getText().toString()) < 0 || Integer.valueOf(txtH9a4b.getText().toString().length() == 0 ? "9999999" : txtH9a4b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a4b.getText().toString().length() == 0 ? "0" : txtH9a4b.getText().toString()) < 0 || Double.valueOf(txtH9a4b.getText().toString().length() == 0 ? "9999999" : txtH9a4b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9a4b.requestFocus();
@@ -3087,7 +3087,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9a4c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a4c.getText().toString().length() == 0 ? "0" : txtH9a4c.getText().toString()) < 0 || Integer.valueOf(txtH9a4c.getText().toString().length() == 0 ? "9999999" : txtH9a4c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a4c.getText().toString().length() == 0 ? "0" : txtH9a4c.getText().toString()) < 0 || Double.valueOf(txtH9a4c.getText().toString().length() == 0 ? "9999999" : txtH9a4c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9a4c.requestFocus();
@@ -3105,7 +3105,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9a5b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a5b.getText().toString().length() == 0 ? "0" : txtH9a5b.getText().toString()) < 0 || Integer.valueOf(txtH9a5b.getText().toString().length() == 0 ? "9999999" : txtH9a5b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a5b.getText().toString().length() == 0 ? "0" : txtH9a5b.getText().toString()) < 0 || Double.valueOf(txtH9a5b.getText().toString().length() == 0 ? "9999999" : txtH9a5b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9a5b.requestFocus();
@@ -3116,7 +3116,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9a5c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9a5c.getText().toString().length() == 0 ? "0" : txtH9a5c.getText().toString()) < 0 || Integer.valueOf(txtH9a5c.getText().toString().length() == 0 ? "9999999" : txtH9a5c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9a5c.getText().toString().length() == 0 ? "0" : txtH9a5c.getText().toString()) < 0 || Double.valueOf(txtH9a5c.getText().toString().length() == 0 ? "9999999" : txtH9a5c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9a5c.requestFocus();
@@ -3134,7 +3134,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b1b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b1b.getText().toString().length() == 0 ? "0" : txtH9b1b.getText().toString()) < 0 || Integer.valueOf(txtH9b1b.getText().toString().length() == 0 ? "9999999" : txtH9b1b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b1b.getText().toString().length() == 0 ? "0" : txtH9b1b.getText().toString()) < 0 || Double.valueOf(txtH9b1b.getText().toString().length() == 0 ? "9999999" : txtH9b1b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b1b.requestFocus();
@@ -3145,7 +3145,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b1c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b1c.getText().toString().length() == 0 ? "0" : txtH9b1c.getText().toString()) < 0 || Integer.valueOf(txtH9b1c.getText().toString().length() == 0 ? "9999999" : txtH9b1c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b1c.getText().toString().length() == 0 ? "0" : txtH9b1c.getText().toString()) < 0 || Double.valueOf(txtH9b1c.getText().toString().length() == 0 ? "9999999" : txtH9b1c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b1c.requestFocus();
@@ -3163,7 +3163,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b2b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b2b.getText().toString().length() == 0 ? "0" : txtH9b2b.getText().toString()) < 0 || Integer.valueOf(txtH9b2b.getText().toString().length() == 0 ? "9999999" : txtH9b2b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b2b.getText().toString().length() == 0 ? "0" : txtH9b2b.getText().toString()) < 0 || Double.valueOf(txtH9b2b.getText().toString().length() == 0 ? "9999999" : txtH9b2b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b2b.requestFocus();
@@ -3174,7 +3174,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b2c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b2c.getText().toString().length() == 0 ? "0" : txtH9b2c.getText().toString()) < 0 || Integer.valueOf(txtH9b2c.getText().toString().length() == 0 ? "9999999" : txtH9b2c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b2c.getText().toString().length() == 0 ? "0" : txtH9b2c.getText().toString()) < 0 || Double.valueOf(txtH9b2c.getText().toString().length() == 0 ? "9999999" : txtH9b2c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b2c.requestFocus();
@@ -3192,7 +3192,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b3b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b3b.getText().toString().length() == 0 ? "0" : txtH9b3b.getText().toString()) < 0 || Integer.valueOf(txtH9b3b.getText().toString().length() == 0 ? "9999999" : txtH9b3b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b3b.getText().toString().length() == 0 ? "0" : txtH9b3b.getText().toString()) < 0 || Double.valueOf(txtH9b3b.getText().toString().length() == 0 ? "9999999" : txtH9b3b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b3b.requestFocus();
@@ -3203,7 +3203,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b3c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b3c.getText().toString().length() == 0 ? "0" : txtH9b3c.getText().toString()) < 0 || Integer.valueOf(txtH9b3c.getText().toString().length() == 0 ? "9999999" : txtH9b3c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b3c.getText().toString().length() == 0 ? "0" : txtH9b3c.getText().toString()) < 0 || Double.valueOf(txtH9b3c.getText().toString().length() == 0 ? "9999999" : txtH9b3c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b3c.requestFocus();
@@ -3221,7 +3221,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b4b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b4b.getText().toString().length() == 0 ? "0" : txtH9b4b.getText().toString()) < 0 || Integer.valueOf(txtH9b4b.getText().toString().length() == 0 ? "9999999" : txtH9b4b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b4b.getText().toString().length() == 0 ? "0" : txtH9b4b.getText().toString()) < 0 || Double.valueOf(txtH9b4b.getText().toString().length() == 0 ? "9999999" : txtH9b4b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b4b.requestFocus();
@@ -3232,7 +3232,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b4c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b4c.getText().toString().length() == 0 ? "0" : txtH9b4c.getText().toString()) < 0 || Integer.valueOf(txtH9b4c.getText().toString().length() == 0 ? "9999999" : txtH9b4c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b4c.getText().toString().length() == 0 ? "0" : txtH9b4c.getText().toString()) < 0 || Double.valueOf(txtH9b4c.getText().toString().length() == 0 ? "9999999" : txtH9b4c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b4c.requestFocus();
@@ -3250,7 +3250,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b5b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b5b.getText().toString().length() == 0 ? "0" : txtH9b5b.getText().toString()) < 0 || Integer.valueOf(txtH9b5b.getText().toString().length() == 0 ? "9999999" : txtH9b5b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b5b.getText().toString().length() == 0 ? "0" : txtH9b5b.getText().toString()) < 0 || Double.valueOf(txtH9b5b.getText().toString().length() == 0 ? "9999999" : txtH9b5b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b5b.requestFocus();
@@ -3261,7 +3261,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b5c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b5c.getText().toString().length() == 0 ? "0" : txtH9b5c.getText().toString()) < 0 || Integer.valueOf(txtH9b5c.getText().toString().length() == 0 ? "9999999" : txtH9b5c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b5c.getText().toString().length() == 0 ? "0" : txtH9b5c.getText().toString()) < 0 || Double.valueOf(txtH9b5c.getText().toString().length() == 0 ? "9999999" : txtH9b5c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b5c.requestFocus();
@@ -3279,7 +3279,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b6b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b6b.getText().toString().length() == 0 ? "0" : txtH9b6b.getText().toString()) < 0 || Integer.valueOf(txtH9b6b.getText().toString().length() == 0 ? "9999999" : txtH9b6b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b6b.getText().toString().length() == 0 ? "0" : txtH9b6b.getText().toString()) < 0 || Double.valueOf(txtH9b6b.getText().toString().length() == 0 ? "9999999" : txtH9b6b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b6b.requestFocus();
@@ -3290,7 +3290,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b6c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b6c.getText().toString().length() == 0 ? "0" : txtH9b6c.getText().toString()) < 0 || Integer.valueOf(txtH9b6c.getText().toString().length() == 0 ? "9999999" : txtH9b6c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b6c.getText().toString().length() == 0 ? "0" : txtH9b6c.getText().toString()) < 0 || Double.valueOf(txtH9b6c.getText().toString().length() == 0 ? "9999999" : txtH9b6c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b6c.requestFocus();
@@ -3308,7 +3308,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b7b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b7b.getText().toString().length() == 0 ? "0" : txtH9b7b.getText().toString()) < 0 || Integer.valueOf(txtH9b7b.getText().toString().length() == 0 ? "9999999" : txtH9b7b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b7b.getText().toString().length() == 0 ? "0" : txtH9b7b.getText().toString()) < 0 || Double.valueOf(txtH9b7b.getText().toString().length() == 0 ? "9999999" : txtH9b7b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b7b.requestFocus();
@@ -3319,7 +3319,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b7c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b7c.getText().toString().length() == 0 ? "0" : txtH9b7c.getText().toString()) < 0 || Integer.valueOf(txtH9b7c.getText().toString().length() == 0 ? "9999999" : txtH9b7c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b7c.getText().toString().length() == 0 ? "0" : txtH9b7c.getText().toString()) < 0 || Double.valueOf(txtH9b7c.getText().toString().length() == 0 ? "9999999" : txtH9b7c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b7c.requestFocus();
@@ -3337,7 +3337,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b8b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b8b.getText().toString().length() == 0 ? "0" : txtH9b8b.getText().toString()) < 0 || Integer.valueOf(txtH9b8b.getText().toString().length() == 0 ? "9999999" : txtH9b8b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b8b.getText().toString().length() == 0 ? "0" : txtH9b8b.getText().toString()) < 0 || Double.valueOf(txtH9b8b.getText().toString().length() == 0 ? "9999999" : txtH9b8b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b8b.requestFocus();
@@ -3348,7 +3348,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b8c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b8c.getText().toString().length() == 0 ? "0" : txtH9b8c.getText().toString()) < 0 || Integer.valueOf(txtH9b8c.getText().toString().length() == 0 ? "9999999" : txtH9b8c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b8c.getText().toString().length() == 0 ? "0" : txtH9b8c.getText().toString()) < 0 || Double.valueOf(txtH9b8c.getText().toString().length() == 0 ? "9999999" : txtH9b8c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b8c.requestFocus();
@@ -3366,7 +3366,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b9b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b9b.getText().toString().length() == 0 ? "0" : txtH9b9b.getText().toString()) < 0 || Integer.valueOf(txtH9b9b.getText().toString().length() == 0 ? "9999999" : txtH9b9b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b9b.getText().toString().length() == 0 ? "0" : txtH9b9b.getText().toString()) < 0 || Double.valueOf(txtH9b9b.getText().toString().length() == 0 ? "9999999" : txtH9b9b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b9b.requestFocus();
@@ -3377,7 +3377,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b9c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b9c.getText().toString().length() == 0 ? "0" : txtH9b9c.getText().toString()) < 0 || Integer.valueOf(txtH9b9c.getText().toString().length() == 0 ? "9999999" : txtH9b9c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b9c.getText().toString().length() == 0 ? "0" : txtH9b9c.getText().toString()) < 0 || Double.valueOf(txtH9b9c.getText().toString().length() == 0 ? "9999999" : txtH9b9c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b9c.requestFocus();
@@ -3395,7 +3395,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b10b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b10b.getText().toString().length() == 0 ? "0" : txtH9b10b.getText().toString()) < 0 || Integer.valueOf(txtH9b10b.getText().toString().length() == 0 ? "9999999" : txtH9b10b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b10b.getText().toString().length() == 0 ? "0" : txtH9b10b.getText().toString()) < 0 || Double.valueOf(txtH9b10b.getText().toString().length() == 0 ? "9999999" : txtH9b10b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b10b.requestFocus();
@@ -3406,7 +3406,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b10c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b10c.getText().toString().length() == 0 ? "0" : txtH9b10c.getText().toString()) < 0 || Integer.valueOf(txtH9b10c.getText().toString().length() == 0 ? "9999999" : txtH9b10c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b10c.getText().toString().length() == 0 ? "0" : txtH9b10c.getText().toString()) < 0 || Double.valueOf(txtH9b10c.getText().toString().length() == 0 ? "9999999" : txtH9b10c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b10c.requestFocus();
@@ -3424,7 +3424,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b11b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b11b.getText().toString().length() == 0 ? "0" : txtH9b11b.getText().toString()) < 0 || Integer.valueOf(txtH9b11b.getText().toString().length() == 0 ? "9999999" : txtH9b11b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b11b.getText().toString().length() == 0 ? "0" : txtH9b11b.getText().toString()) < 0 || Double.valueOf(txtH9b11b.getText().toString().length() == 0 ? "9999999" : txtH9b11b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b11b.requestFocus();
@@ -3435,7 +3435,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b11c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b11c.getText().toString().length() == 0 ? "0" : txtH9b11c.getText().toString()) < 0 || Integer.valueOf(txtH9b11c.getText().toString().length() == 0 ? "9999999" : txtH9b11c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b11c.getText().toString().length() == 0 ? "0" : txtH9b11c.getText().toString()) < 0 || Double.valueOf(txtH9b11c.getText().toString().length() == 0 ? "9999999" : txtH9b11c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b11c.requestFocus();
@@ -3460,7 +3460,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12a2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12a2.getText().toString().length() == 0 ? "0" : txtH9b12a2.getText().toString()) < 0 || Integer.valueOf(txtH9b12a2.getText().toString().length() == 0 ? "9999999" : txtH9b12a2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12a2.getText().toString().length() == 0 ? "0" : txtH9b12a2.getText().toString()) < 0 || Double.valueOf(txtH9b12a2.getText().toString().length() == 0 ? "9999999" : txtH9b12a2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12a2.requestFocus();
@@ -3471,7 +3471,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12a3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12a3.getText().toString().length() == 0 ? "0" : txtH9b12a3.getText().toString()) < 0 || Integer.valueOf(txtH9b12a3.getText().toString().length() == 0 ? "9999999" : txtH9b12a3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12a3.getText().toString().length() == 0 ? "0" : txtH9b12a3.getText().toString()) < 0 || Double.valueOf(txtH9b12a3.getText().toString().length() == 0 ? "9999999" : txtH9b12a3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12a3.requestFocus();
@@ -3489,7 +3489,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12b2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12b2.getText().toString().length() == 0 ? "0" : txtH9b12b2.getText().toString()) < 0 || Integer.valueOf(txtH9b12b2.getText().toString().length() == 0 ? "9999999" : txtH9b12b2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12b2.getText().toString().length() == 0 ? "0" : txtH9b12b2.getText().toString()) < 0 || Double.valueOf(txtH9b12b2.getText().toString().length() == 0 ? "9999999" : txtH9b12b2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12b2.requestFocus();
@@ -3500,7 +3500,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12b3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12b3.getText().toString().length() == 0 ? "0" : txtH9b12b3.getText().toString()) < 0 || Integer.valueOf(txtH9b12b3.getText().toString().length() == 0 ? "9999999" : txtH9b12b3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12b3.getText().toString().length() == 0 ? "0" : txtH9b12b3.getText().toString()) < 0 || Double.valueOf(txtH9b12b3.getText().toString().length() == 0 ? "9999999" : txtH9b12b3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12b3.requestFocus();
@@ -3518,7 +3518,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12c2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12c2.getText().toString().length() == 0 ? "0" : txtH9b12c2.getText().toString()) < 0 || Integer.valueOf(txtH9b12c2.getText().toString().length() == 0 ? "9999999" : txtH9b12c2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12c2.getText().toString().length() == 0 ? "0" : txtH9b12c2.getText().toString()) < 0 || Double.valueOf(txtH9b12c2.getText().toString().length() == 0 ? "9999999" : txtH9b12c2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12c2.requestFocus();
@@ -3529,7 +3529,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12c3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12c3.getText().toString().length() == 0 ? "0" : txtH9b12c3.getText().toString()) < 0 || Integer.valueOf(txtH9b12c3.getText().toString().length() == 0 ? "9999999" : txtH9b12c3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12c3.getText().toString().length() == 0 ? "0" : txtH9b12c3.getText().toString()) < 0 || Double.valueOf(txtH9b12c3.getText().toString().length() == 0 ? "9999999" : txtH9b12c3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12c3.requestFocus();
@@ -3547,7 +3547,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12d2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12d2.getText().toString().length() == 0 ? "0" : txtH9b12d2.getText().toString()) < 0 || Integer.valueOf(txtH9b12d2.getText().toString().length() == 0 ? "9999999" : txtH9b12d2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12d2.getText().toString().length() == 0 ? "0" : txtH9b12d2.getText().toString()) < 0 || Double.valueOf(txtH9b12d2.getText().toString().length() == 0 ? "9999999" : txtH9b12d2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12d2.requestFocus();
@@ -3558,7 +3558,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12d3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12d3.getText().toString().length() == 0 ? "0" : txtH9b12d3.getText().toString()) < 0 || Integer.valueOf(txtH9b12d3.getText().toString().length() == 0 ? "9999999" : txtH9b12d3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12d3.getText().toString().length() == 0 ? "0" : txtH9b12d3.getText().toString()) < 0 || Double.valueOf(txtH9b12d3.getText().toString().length() == 0 ? "9999999" : txtH9b12d3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12d3.requestFocus();
@@ -3576,7 +3576,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12e2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12e2.getText().toString().length() == 0 ? "0" : txtH9b12e2.getText().toString()) < 0 || Integer.valueOf(txtH9b12e2.getText().toString().length() == 0 ? "9999999" : txtH9b12e2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12e2.getText().toString().length() == 0 ? "0" : txtH9b12e2.getText().toString()) < 0 || Double.valueOf(txtH9b12e2.getText().toString().length() == 0 ? "9999999" : txtH9b12e2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12e2.requestFocus();
@@ -3587,7 +3587,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12e3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12e3.getText().toString().length() == 0 ? "0" : txtH9b12e3.getText().toString()) < 0 || Integer.valueOf(txtH9b12e3.getText().toString().length() == 0 ? "9999999" : txtH9b12e3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12e3.getText().toString().length() == 0 ? "0" : txtH9b12e3.getText().toString()) < 0 || Double.valueOf(txtH9b12e3.getText().toString().length() == 0 ? "9999999" : txtH9b12e3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12e3.requestFocus();
@@ -3605,7 +3605,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12f2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12f2.getText().toString().length() == 0 ? "0" : txtH9b12f2.getText().toString()) < 0 || Integer.valueOf(txtH9b12f2.getText().toString().length() == 0 ? "9999999" : txtH9b12f2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12f2.getText().toString().length() == 0 ? "0" : txtH9b12f2.getText().toString()) < 0 || Double.valueOf(txtH9b12f2.getText().toString().length() == 0 ? "9999999" : txtH9b12f2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12f2.requestFocus();
@@ -3616,7 +3616,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12f3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12f3.getText().toString().length() == 0 ? "0" : txtH9b12f3.getText().toString()) < 0 || Integer.valueOf(txtH9b12f3.getText().toString().length() == 0 ? "9999999" : txtH9b12f3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12f3.getText().toString().length() == 0 ? "0" : txtH9b12f3.getText().toString()) < 0 || Double.valueOf(txtH9b12f3.getText().toString().length() == 0 ? "9999999" : txtH9b12f3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12f3.requestFocus();
@@ -3634,7 +3634,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12g2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12g2.getText().toString().length() == 0 ? "0" : txtH9b12g2.getText().toString()) < 0 || Integer.valueOf(txtH9b12g2.getText().toString().length() == 0 ? "9999999" : txtH9b12g2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12g2.getText().toString().length() == 0 ? "0" : txtH9b12g2.getText().toString()) < 0 || Double.valueOf(txtH9b12g2.getText().toString().length() == 0 ? "9999999" : txtH9b12g2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12g2.requestFocus();
@@ -3645,7 +3645,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12g3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12g3.getText().toString().length() == 0 ? "0" : txtH9b12g3.getText().toString()) < 0 || Integer.valueOf(txtH9b12g3.getText().toString().length() == 0 ? "9999999" : txtH9b12g3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12g3.getText().toString().length() == 0 ? "0" : txtH9b12g3.getText().toString()) < 0 || Double.valueOf(txtH9b12g3.getText().toString().length() == 0 ? "9999999" : txtH9b12g3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12g3.requestFocus();
@@ -3663,7 +3663,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12h2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12h2.getText().toString().length() == 0 ? "0" : txtH9b12h2.getText().toString()) < 0 || Integer.valueOf(txtH9b12h2.getText().toString().length() == 0 ? "9999999" : txtH9b12h2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12h2.getText().toString().length() == 0 ? "0" : txtH9b12h2.getText().toString()) < 0 || Double.valueOf(txtH9b12h2.getText().toString().length() == 0 ? "9999999" : txtH9b12h2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12h2.requestFocus();
@@ -3674,7 +3674,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12h3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12h3.getText().toString().length() == 0 ? "0" : txtH9b12h3.getText().toString()) < 0 || Integer.valueOf(txtH9b12h3.getText().toString().length() == 0 ? "9999999" : txtH9b12h3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12h3.getText().toString().length() == 0 ? "0" : txtH9b12h3.getText().toString()) < 0 || Double.valueOf(txtH9b12h3.getText().toString().length() == 0 ? "9999999" : txtH9b12h3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12h3.requestFocus();
@@ -3692,7 +3692,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12i2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12i2.getText().toString().length() == 0 ? "0" : txtH9b12i2.getText().toString()) < 0 || Integer.valueOf(txtH9b12i2.getText().toString().length() == 0 ? "9999999" : txtH9b12i2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12i2.getText().toString().length() == 0 ? "0" : txtH9b12i2.getText().toString()) < 0 || Double.valueOf(txtH9b12i2.getText().toString().length() == 0 ? "9999999" : txtH9b12i2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12i2.requestFocus();
@@ -3703,7 +3703,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12i3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12i3.getText().toString().length() == 0 ? "0" : txtH9b12i3.getText().toString()) < 0 || Integer.valueOf(txtH9b12i3.getText().toString().length() == 0 ? "9999999" : txtH9b12i3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12i3.getText().toString().length() == 0 ? "0" : txtH9b12i3.getText().toString()) < 0 || Double.valueOf(txtH9b12i3.getText().toString().length() == 0 ? "9999999" : txtH9b12i3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12i3.requestFocus();
@@ -3721,7 +3721,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12j2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12j2.getText().toString().length() == 0 ? "0" : txtH9b12j2.getText().toString()) < 0 || Integer.valueOf(txtH9b12j2.getText().toString().length() == 0 ? "9999999" : txtH9b12j2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12j2.getText().toString().length() == 0 ? "0" : txtH9b12j2.getText().toString()) < 0 || Double.valueOf(txtH9b12j2.getText().toString().length() == 0 ? "9999999" : txtH9b12j2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12j2.requestFocus();
@@ -3732,7 +3732,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12j3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12j3.getText().toString().length() == 0 ? "0" : txtH9b12j3.getText().toString()) < 0 || Integer.valueOf(txtH9b12j3.getText().toString().length() == 0 ? "9999999" : txtH9b12j3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12j3.getText().toString().length() == 0 ? "0" : txtH9b12j3.getText().toString()) < 0 || Double.valueOf(txtH9b12j3.getText().toString().length() == 0 ? "9999999" : txtH9b12j3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12j3.requestFocus();
@@ -3750,7 +3750,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12k2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12k2.getText().toString().length() == 0 ? "0" : txtH9b12k2.getText().toString()) < 0 || Integer.valueOf(txtH9b12k2.getText().toString().length() == 0 ? "9999999" : txtH9b12k2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12k2.getText().toString().length() == 0 ? "0" : txtH9b12k2.getText().toString()) < 0 || Double.valueOf(txtH9b12k2.getText().toString().length() == 0 ? "9999999" : txtH9b12k2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12k2.requestFocus();
@@ -3761,7 +3761,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12k3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12k3.getText().toString().length() == 0 ? "0" : txtH9b12k3.getText().toString()) < 0 || Integer.valueOf(txtH9b12k3.getText().toString().length() == 0 ? "9999999" : txtH9b12k3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12k3.getText().toString().length() == 0 ? "0" : txtH9b12k3.getText().toString()) < 0 || Double.valueOf(txtH9b12k3.getText().toString().length() == 0 ? "9999999" : txtH9b12k3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12k3.requestFocus();
@@ -3779,7 +3779,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12l2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12l2.getText().toString().length() == 0 ? "0" : txtH9b12l2.getText().toString()) < 0 || Integer.valueOf(txtH9b12l2.getText().toString().length() == 0 ? "9999999" : txtH9b12l2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12l2.getText().toString().length() == 0 ? "0" : txtH9b12l2.getText().toString()) < 0 || Double.valueOf(txtH9b12l2.getText().toString().length() == 0 ? "9999999" : txtH9b12l2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12l2.requestFocus();
@@ -3790,7 +3790,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12l3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12l3.getText().toString().length() == 0 ? "0" : txtH9b12l3.getText().toString()) < 0 || Integer.valueOf(txtH9b12l3.getText().toString().length() == 0 ? "9999999" : txtH9b12l3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12l3.getText().toString().length() == 0 ? "0" : txtH9b12l3.getText().toString()) < 0 || Double.valueOf(txtH9b12l3.getText().toString().length() == 0 ? "9999999" : txtH9b12l3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12l3.requestFocus();
@@ -3808,7 +3808,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b12m2.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12m2.getText().toString().length() == 0 ? "0" : txtH9b12m2.getText().toString()) < 0 || Integer.valueOf(txtH9b12m2.getText().toString().length() == 0 ? "9999999" : txtH9b12m2.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12m2.getText().toString().length() == 0 ? "0" : txtH9b12m2.getText().toString()) < 0 || Double.valueOf(txtH9b12m2.getText().toString().length() == 0 ? "9999999" : txtH9b12m2.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b12m2.requestFocus();
@@ -3819,7 +3819,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b12m3.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b12m3.getText().toString().length() == 0 ? "0" : txtH9b12m3.getText().toString()) < 0 || Integer.valueOf(txtH9b12m3.getText().toString().length() == 0 ? "9999999" : txtH9b12m3.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b12m3.getText().toString().length() == 0 ? "0" : txtH9b12m3.getText().toString()) < 0 || Double.valueOf(txtH9b12m3.getText().toString().length() == 0 ? "9999999" : txtH9b12m3.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b12m3.requestFocus();
@@ -3837,7 +3837,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b13b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b13b.getText().toString().length() == 0 ? "0" : txtH9b13b.getText().toString()) < 0 || Integer.valueOf(txtH9b13b.getText().toString().length() == 0 ? "9999999" : txtH9b13b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b13b.getText().toString().length() == 0 ? "0" : txtH9b13b.getText().toString()) < 0 || Double.valueOf(txtH9b13b.getText().toString().length() == 0 ? "9999999" : txtH9b13b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b13b.requestFocus();
@@ -3848,7 +3848,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b13c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b13c.getText().toString().length() == 0 ? "0" : txtH9b13c.getText().toString()) < 0 || Integer.valueOf(txtH9b13c.getText().toString().length() == 0 ? "9999999" : txtH9b13c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b13c.getText().toString().length() == 0 ? "0" : txtH9b13c.getText().toString()) < 0 || Double.valueOf(txtH9b13c.getText().toString().length() == 0 ? "9999999" : txtH9b13c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b13c.requestFocus();
@@ -3872,7 +3872,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: নগদ খরচ.");
                 txtH9b14b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b14b.getText().toString().length() == 0 ? "0" : txtH9b14b.getText().toString()) < 0 || Integer.valueOf(txtH9b14b.getText().toString().length() == 0 ? "9999999" : txtH9b14b.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b14b.getText().toString().length() == 0 ? "0" : txtH9b14b.getText().toString()) < 0 || Double.valueOf(txtH9b14b.getText().toString().length() == 0 ? "9999999" : txtH9b14b.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(নগদ খরচ).");
                 txtH9b14b.requestFocus();
@@ -3883,7 +3883,7 @@ public class Cost3 extends Activity {
                 Connection.MessageBox(Cost3.this, "Required field: যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত.");
                 txtH9b14c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH9b14c.getText().toString().length() == 0 ? "0" : txtH9b14c.getText().toString()) < 0 || Integer.valueOf(txtH9b14c.getText().toString().length() == 0 ? "9999999" : txtH9b14c.getText().toString()) > 9999999)
+            } else if (Double.valueOf(txtH9b14c.getText().toString().length() == 0 ? "0" : txtH9b14c.getText().toString()) < 0 || Double.valueOf(txtH9b14c.getText().toString().length() == 0 ? "9999999" : txtH9b14c.getText().toString()) > 9999999)
             {
                 Connection.MessageBox(Cost3.this, "Value should be between 0 and 9999999(যদি নগদ খরচ না করে অন্য কোন ভাবে পেয়ে থাকেন মূল্য কত).");
                 txtH9b14c.requestFocus();

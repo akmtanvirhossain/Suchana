@@ -309,38 +309,75 @@ public class Illness1_list extends Activity {
             }
             LinearLayout secListRow = (LinearLayout) convertView.findViewById(R.id.secListRow);
 
-            final TextView Rnd = (TextView) convertView.findViewById(R.id.Rnd);
-            final TextView SuchanaID = (TextView) convertView.findViewById(R.id.SuchanaID);
-            final TextView H171 = (TextView) convertView.findViewById(R.id.H171);
             final TextView SlNo = (TextView) convertView.findViewById(R.id.SlNo);
             final TextView H171a = (TextView) convertView.findViewById(R.id.H171a);
-            final TextView H171aX = (TextView) convertView.findViewById(R.id.H171aX);
             final TextView H171b = (TextView) convertView.findViewById(R.id.H171b);
-            final TextView H171bX = (TextView) convertView.findViewById(R.id.H171bX);
             final TextView H171c = (TextView) convertView.findViewById(R.id.H171c);
             final TextView H171d = (TextView) convertView.findViewById(R.id.H171d);
-            final TextView H171VCost = (TextView) convertView.findViewById(R.id.H171VCost);
-            final TextView H171TCost = (TextView) convertView.findViewById(R.id.H171TCost);
-            final TextView H171TrCost = (TextView) convertView.findViewById(R.id.H171TrCost);
-            final TextView H171f = (TextView) convertView.findViewById(R.id.H171f);
-            final TextView H171g = (TextView) convertView.findViewById(R.id.H171g);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
-            Rnd.setText(o.get("Rnd"));
-            SuchanaID.setText(o.get("SuchanaID"));
-            H171.setText(o.get("H171"));
             SlNo.setText(o.get("SlNo"));
-            H171a.setText(o.get("H171a"));
-            H171aX.setText(o.get("H171aX"));
-            H171b.setText(o.get("H171b"));
-            H171bX.setText(o.get("H171bX"));
+
+
+            List<String> listH171a = new ArrayList<String>();
+
+            listH171a.add("");
+            listH171a.add("1-জ্বর");
+            listH171a.add("2-ব্যথা ");
+            listH171a.add("3-দুর্বলতা");
+            listH171a.add("4-ঠান্ডা/কাশি");
+            listH171a.add("5-ত্বকেগুটি");
+            listH171a.add("6-পাতলা পায়খানা");
+            listH171a.add("7-ঝিমুনি");
+            listH171a.add("8-বমিহওয়া বমিভাব");
+            listH171a.add("9-ক্ষুদামন্দা");
+            listH171a.add("10-অনিদ্রা");
+            listH171a.add("11-রাতকানা ছানি");
+            listH171a.add("12-কর্ণশূল শুনতে অসুবিধা");
+            listH171a.add("13-গর্ভাবস্থা জনিত সমস্যা");
+            listH171a.add("14-প্রজননঅঙ্গ জনিত সমস্যা /লিউকোরিয়া");
+            listH171a.add("15-রক্তাল্পতা");
+            listH171a.add("16-ডায়বেটিস");
+            listH171a.add("17-উচ্চরক্তচাপ");
+            listH171a.add("18-গলগন্ড");
+            listH171a.add("19-বেরিবেরি");
+            listH171a.add("20-স্কার্ভি");
+            listH171a.add("21-রিকেটস");
+            listH171a.add("22-অন্যান্য");
+
+            for (int i = 0; i < listH171a.size(); i++) {
+                if (listH171a.get(i).contains(o.get("H171a"))) {
+                    H171a.setText(listH171a.get(i));
+                    break;
+                }
+
+            }
+
+
+            List<String> listH171b = new ArrayList<String>();
+
+            listH171b.add("");
+            listH171b.add("1-কোনো চিকিৎসা নেয়া হয়নি");
+            listH171b.add("2-বাড়তেই সাধারণ চিকিৎসা");
+            listH171b.add("3-গ্রাম ডাক্তার");
+            listH171b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA");
+            listH171b.add("5-এলোপ্যাথিক ঔষুধ বিক্রেতা (রোগ বুঝে চিকিৎসা দেয়)");
+            listH171b.add("6-যোগ্যতাসম্পন্ন সরকারী/বেসরকারী MBBS ডাক্তার");
+            listH171b.add("7-প্যানেল ডাক্তার (BRAC)");
+            listH171b.add("8-কবিরাজ হেকিম  বিশ্বাস বৈদ্য");
+            listH171b.add("9-হোমিওপ্যাথি");
+            listH171b.add("10-অন্যান্য");
+
+            for (int i = 0; i < listH171b.size(); i++) {
+                if (listH171b.get(i).contains(o.get("H171b"))) {
+                    H171b.setText(listH171b.get(i));
+                    break;
+                }
+
+            }
+
             H171c.setText(o.get("H171c"));
             H171d.setText(o.get("H171d"));
-            H171VCost.setText(o.get("H171VCost"));
-            H171TCost.setText(o.get("H171TCost"));
-            H171TrCost.setText(o.get("H171TrCost"));
-            H171f.setText(o.get("H171f"));
-            H171g.setText(o.get("H171g"));
 
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

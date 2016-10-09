@@ -459,7 +459,7 @@
                 <EditText
                     android:id="@+id/txtH152c"
                     style="@style/customEdit"
-                    android:layout_width="60sp"
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="numberDecimal"

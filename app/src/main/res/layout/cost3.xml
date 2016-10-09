@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="45sp"
+        android:layout_height="wrap_content"
         android:background="@color/pageHeadingBack"
         android:orientation="horizontal">
 
@@ -27,9 +27,9 @@
             android:id="@+id/lblBack"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".2"
+            android:layout_weight=".8"
             android:gravity="left|center_vertical"
-            android:paddingLeft="10sp"
+            android:paddingLeft="5sp"
             android:text="খাদ্যের জন্য ব্যায়-২"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
@@ -38,9 +38,9 @@
             android:id="@+id/lblHeading"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".4"
+            android:layout_weight=".8"
             android:gravity="center"
-            android:paddingLeft="10sp"
+            android:paddingLeft="5sp"
             android:text="(খাদ্যের জন্য ব্যায়-৩)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
@@ -49,9 +49,9 @@
             android:id="@+id/lblNext"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight=".2"
-            android:gravity="center_vertical|right"
-            android:paddingLeft="10sp"
+            android:layout_weight=".1"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="5sp"
             android:text="সঞ্চয়"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />

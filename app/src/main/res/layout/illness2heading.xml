@@ -24,24 +24,24 @@
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="200sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H172a"
+            android:text="অসুস্থতার ধরন"
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="200sp"
+            android:layout_width="285sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H172b"
+            android:text="চিকিৎসা"
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="90sp"
+            android:layout_width="50sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H172d"
+            android:text="সময়"
             android:textColor="@android:color/background_light" />
 
     </LinearLayout>

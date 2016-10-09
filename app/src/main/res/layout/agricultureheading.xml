@@ -17,164 +17,32 @@
         android:paddingTop="5px">
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Rnd"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="SuchanaID"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="MSlNo"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H151"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
+            android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Sl"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152a"
+            android:text="কৃষি/মৎস খাত"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="240sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152bOth"
+            android:text="জমি/জলাশয়"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="H152b"
+            android:text="আয়তন"
             android:textColor="#ffffff" />
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152c"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152d1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152d2"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152e1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152e2"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152f"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152g"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152h1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152h2"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152i1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152i2"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152j1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152j2"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152k1"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="H152k2"
-            android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>

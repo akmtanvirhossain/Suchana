@@ -341,11 +341,160 @@ public class Loan_list extends Activity {
             //     MSlNo.setText(o.get("MSlNo"));
             // H111.setText(o.get("H111"));
             H112.setText(o.get("H112"));
-            H113.setText(o.get("H113"));
+
+            List<String> listH113 = new ArrayList<String>();
+
+            listH113.add("");
+            listH113.add("01-ব্যাংক");
+            listH113.add("02-মহাজন");
+            listH113.add("03-দোকানদার");
+            listH113.add("04-আত্মীয়");
+            listH113.add("05-বন্ধু প্রতিবেশী");
+            listH113.add("06-গ্রামীণ");
+            listH113.add("07-আশা");
+            listH113.add("08-টিএমএসএস");
+            listH113.add("09-আরডিআরএস");
+            listH113.add("10-প্রশিখা");
+            listH113.add("11-পদক্ষেপ");
+            listH113.add("12-স্বনির্ভর");
+            listH113.add("13-সিএনআরএস");
+            listH113.add("14-এফআইভিডিবি");
+            listH113.add("15-ব্র্যাক");
+            listH113.add("16-ভারড");
+            listH113.add("17-আশা");
+            listH113.add("18-ব্যুরো");
+            listH113.add("19-হিড");
+            listH113.add("20-অনান্য এন,জি,ও");
+
+            for (int i = 0; i < listH113.size(); i++) {
+                if (listH113.get(i).contains(o.get("H113"))) {
+                    H113.setText(listH113.get(i));
+                    break;
+                }
+
+            }
+            // H113.setText(listH113.get(Integer.valueOf(o.get("H113"))));
             //  H113X.setText(o.get("H113X"));
-            H114a.setText(o.get("H114a"));
-            H114b.setText(o.get("H114b"));
-            H114c.setText(o.get("H114c"));
+
+
+            List<String> listH114a = new ArrayList<String>();
+
+            listH114a.add("");
+            listH114a.add("01-ব্যবসায়িক উদ্যোগ");
+            listH114a.add("02-সার কিনতে");
+            listH114a.add("03-বীজ কিনতে");
+            listH114a.add("04-কীটনাশক কিনতে");
+            listH114a.add("05-সেচ সরঞ্জাম কিনতে");
+            listH114a.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
+            listH114a.add("07-সেচের জন্য পানি কিনতে");
+            listH114a.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
+            listH114a.add("09-কৃষি শ্রম মজুরি");
+            listH114a.add("10-কৃষির জন্য ভাড়া করা মেশিন/ পশুদের খরচ");
+            listH114a.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
+            listH114a.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
+            listH114a.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
+            listH114a.add("14-জমি ক্রয়ের জন্য");
+            listH114a.add("15-গরু ছাগল ক্রয়ের জন্য");
+            listH114a.add("16-চিকিৎসার জন্য");
+            listH114a.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
+            listH114a.add("18-খানা ভাড়া /ক্রয/ উন্নয়নের জন্য");
+            listH114a.add("19-শিক্ষার খরচের জন্য");
+            listH114a.add("20-বিয়ের জন্য ব্যয়");
+            listH114a.add("21-যৌতুক");
+            listH114a.add("22-জানাজা অন্ত্যেষ্টিক্রিয়া");
+            listH114a.add("23-উচ্চ সুদে ধার দেয়ার জন্য");
+            listH114a.add("24-বিদেশে যাওয়ার জন্য");
+            listH114a.add("25-অন্য লোন শোধ করার জন্য");
+            listH114a.add("26-অনান্য");
+
+
+            for (int i = 0; i < listH114a.size(); i++) {
+                if (listH114a.get(i).contains(o.get("H114a"))) {
+                    H114a.setText(listH114a.get(i));
+                    break;
+                }
+
+            }
+            // H114a.setText(listH114a.get(Integer.valueOf(o.get("H114a"))));
+
+            List<String> listH114b = new ArrayList<String>();
+
+            listH114b.add("");
+            listH114b.add("01-ব্যবসায়িক উদ্যোগ");
+            listH114b.add("02-সার কিনতে");
+            listH114b.add("03-বীজ কিনতে");
+            listH114b.add("04-কীটনাশক কিনতে");
+            listH114b.add("05-সেচ সরঞ্জাম কিনতে");
+            listH114b.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
+            listH114b.add("07-সেচের জন্য পানি কিনতে");
+            listH114b.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
+            listH114b.add("09-কৃষি শ্রম মজুরি");
+            listH114b.add("10-কৃষির জন্য ভাড়া করা মেশিন/ পশুদের খরচ");
+            listH114b.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
+            listH114b.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
+            listH114b.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
+            listH114b.add("14-জমি ক্রয়ের জন্য");
+            listH114b.add("15-গরু ছাগল ক্রয়ের জন্য");
+            listH114b.add("16-চিকিৎসার জন্য");
+            listH114b.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
+            listH114b.add("18-খানা ভাড়া /ক্রয/় উন্নয়নের জন্য");
+            listH114b.add("19-শিক্ষার খরচের জন্য");
+            listH114b.add("20-বিয়ের জন্য ব্যয়");
+            listH114b.add("21-যৌতুক");
+            listH114b.add("22-জানাজা অন্ত্যেষ্টিক্রিয়া");
+            listH114b.add("23-উচ্চ সুদে ধার দেয়ার জন্য");
+            listH114b.add("24-বিদেশে যাওয়ার জন্য");
+            listH114b.add("25-অন্য লোন শোধ করার জন্য");
+            listH114b.add("26-অনান্য");
+
+            for (int i = 0; i < listH114b.size(); i++) {
+                if (listH114b.get(i).contains(o.get("H114b"))) {
+                    H114b.setText(listH114b.get(i));
+                    break;
+                }
+
+            }
+            //H114b.setText(listH114b.get(Integer.valueOf(o.get("H114b"))));
+
+            List<String> listH114c = new ArrayList<String>();
+
+            listH114c.add("");
+            listH114c.add("01-ব্যবসায়িক উদ্যোগ");
+            listH114c.add("02-সার কিনতে");
+            listH114c.add("03-বীজ কিনতে");
+            listH114c.add("04-কীটনাশক কিনতে");
+            listH114c.add("05-সেচ সরঞ্জাম কিনতে");
+            listH114c.add("06-অন্যান্য কৃষি উপকরণ কিনতে");
+            listH114c.add("07-সেচের জন্য পানি কিনতে");
+            listH114c.add("08-কৃষির জন্য ডিজেল / বিদ্যুৎ খরচ");
+            listH114c.add("09-কৃষি শ্রম মজুরি");
+            listH114c.add("10-কৃষির জন্য ভাড়া করা মেশিন /পশুদের খরচ");
+            listH114c.add("11-কৃষি ছাড়া অন্য উদ্দেশ্যে উৎপাদনশীল সম্পদ কিনতে");
+            listH114c.add("12-কৃষি জমি ইজারা জন্য (নগদ মাত্র)");
+            listH114c.add("13-কৃষি ছাড়া অন্য (নগদ মাত্র উদ্দেশ্যে) জমি ইজারা জন্য");
+            listH114c.add("14-জমি ক্রয়ের জন্য");
+            listH114c.add("15-গরু ছাগল ক্রয়ের জন্য");
+            listH114c.add("16-চিকিৎসার জন্য");
+            listH114c.add("17-খানার খাবারের চাহিদা পূরণের জন্য");
+            listH114c.add("18-খানা ভাড়া /ক্রয/় উন্নয়নের জন্য");
+            listH114c.add("19-শিক্ষার খরচের জন্য");
+            listH114c.add("20-বিয়ের জন্য ব্যয়");
+            listH114c.add("21-যৌতুক");
+            listH114c.add("22-জানাজা অন্ত্যেষ্টিক্রিয়া");
+            listH114c.add("23-উচ্চ সুদে ধার দেয়ার জন্য");
+            listH114c.add("24-বিদেশে যাওয়ার জন্য");
+            listH114c.add("25-অন্য লোন শোধ করার জন্য");
+            listH114c.add("26-অনান্য");
+
+
+            for (int i = 0; i < listH114c.size(); i++) {
+                if (listH114c.get(i).contains(o.get("H114c"))) {
+                    H114c.setText(listH114c.get(i));
+                    break;
+                }
+
+            }
+            //H114c.setText(listH114c.get(Integer.valueOf(o.get("H114c"))));
             // H114X.setText(o.get("H114X"));
             // H115.setText(o.get("H115"));
             // H116.setText(o.get("H116"));

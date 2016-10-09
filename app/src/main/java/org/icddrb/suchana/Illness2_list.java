@@ -324,9 +324,66 @@ public class Illness2_list extends Activity {
             //  SuchanaID.setText(o.get("SuchanaID"));
             //   H172.setText(o.get("H172"));
             SlNo.setText(o.get("SlNo"));
-            H172a.setText(o.get("H172a"));
+
+            List<String> listH172a = new ArrayList<String>();
+
+            listH172a.add("");
+            listH172a.add("1-জ্বর");
+            listH172a.add("2-ব্যথা");
+            listH172a.add("3-দুর্বলতা");
+            listH172a.add("4-ঠান্ডা/কাশি");
+            listH172a.add("5-ত্বকেগুটি/চার্ম রোগ");
+            listH172a.add("6-পাতলা পায়খানা");
+            listH172a.add("7-ঝিমুনি");
+            listH172a.add("8-বমিহওয়া বমিভাব");
+            listH172a.add("9-ক্ষুধামন্দা");
+            listH172a.add("10-অনিদ্রা");
+            listH172a.add("11-রাতকানা ছানি");
+            listH172a.add("12-কর্ণশূল শুনতে অসুবিধা");
+            listH172a.add("13-গর্ভাবস্থা জনিত সমস্যা");
+            listH172a.add("14-প্রজননঅঙ্গ জনিত সমস্যা");
+            listH172a.add("15-রক্তাল্পতা");
+            listH172a.add("16-ডায়বেটিস");
+            listH172a.add("17-উচ্চরক্তচাপ");
+            listH172a.add("18-গলাফোলা");
+            listH172a.add("19-মানসিক সমস্যা");
+            listH172a.add("20-দাতের সমস্যা");
+            listH172a.add("21-শ্বাসকষষ্ট");
+            listH172a.add("22-পেটে গ্যা ");
+            listH172a.add("23-টিউমার");
+            listH172a.add("24-অন্যান্য");
+
+            for (int i = 0; i < listH172a.size(); i++) {
+                if (listH172a.get(i).contains(o.get("H172a"))) {
+                    H172a.setText(listH172a.get(i));
+                    break;
+                }
+
+            }
+
             //   H172aX.setText(o.get("H172aX"));
-            H172b.setText(o.get("H172b"));
+
+            List<String> listH172b = new ArrayList<String>();
+
+            listH172b.add("");
+            listH172b.add("1-কোন চিকিৎসা নেয়া হয়নি");
+            listH172b.add("2-বাড়ীতেই সাধারণ চিকিৎসা");
+            listH172b.add("3-গ্রাম ডাক্তার");
+            listH172b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA");
+            listH172b.add("5-এলোপ্যাথিক ঔষুধ বিক্রেতা/ফার্মেসিস্ট (রোগ  বুঝে চিকিৎসা দেয়)");
+            listH172b.add("6-যোগ্যতাসম্পন্ন সরকারী/বেসরকারী MBBS ডাক্তার");
+            listH172b.add("7-পীর/ফকির/ওঝা");
+            listH172b.add("8-কবিরাজ/হেকিম/বৈদ্য");
+            listH172b.add("9-হোমিওপ্যাথি");
+            listH172b.add("10-অন্যান্য (নির্দিষ্ট করুন)");
+            for (int i = 0; i < listH172b.size(); i++) {
+                if (listH172b.get(i).contains(o.get("H172b"))) {
+                    H172b.setText(listH172b.get(i));
+                    break;
+                }
+
+            }
+
             //    H172cX.setText(o.get("H172cX"));
             //    H172cY.setText(o.get("H172cY"));
             //  H172cM.setText(o.get("H172cM"));

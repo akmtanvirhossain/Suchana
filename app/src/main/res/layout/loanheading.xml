@@ -31,21 +31,21 @@
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="150sp"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="১ম কারন"
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="150sp"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="২য় কারন"
             android:textColor="@android:color/background_light" />
 
         <TextView
-            android:layout_width="150sp"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="৩য় কারন"
