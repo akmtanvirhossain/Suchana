@@ -50,14 +50,13 @@ public class Agriculture_list extends Activity {
     Button btnRefresh;
     String StartTime;
     Bundle IDBundle;
+    ImageButton cmdForward;
+    TextView lblNext;
     private int hour;
     private int minute;
     private int mDay;
     private int mMonth;
     private int mYear;
-
-    ImageButton cmdForward;
-    TextView lblNext;
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -108,6 +107,9 @@ public class Agriculture_list extends Activity {
             RND = IDBundle.getString("Rnd");
             SUCHANAID = IDBundle.getString("SuchanaID");
 
+            TextView lblSuchanaId = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSuchanaId.setText(SUCHANAID);
+
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -137,7 +139,30 @@ public class Agriculture_list extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Agriculture_list.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to return to Home [Yes/No]?");
+                    adb.setMessage("Do you want to start NGOWORK [Yes/No]?");
+                    adb.setNegativeButton("No", null);
+                    adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", RND);
+                            IDbundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), NGOWork.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDbundle);
+                            getApplicationContext().startActivity(intent);
+
+                        }
+                    });
+                    adb.show();
+                }
+            });
+            Button cmdSave = (Button) findViewById(R.id.cmdSave);
+            cmdSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    AlertDialog.Builder adb = new AlertDialog.Builder(Agriculture_list.this);
+                    adb.setTitle("Close");
+                    adb.setMessage("Do you want to start NGOWORK [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {

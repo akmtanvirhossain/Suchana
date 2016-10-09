@@ -50,6 +50,7 @@ public class AssetB_list extends Activity {
     ImageButton cmdForward;
     String StartTime;
     Bundle IDbundle;
+    TextView lblSuchanaIdHeader;
     private int hour;
     private int minute;
     private int mDay;
@@ -82,6 +83,9 @@ public class AssetB_list extends Activity {
             lblHeading = (TextView) findViewById(R.id.lblHeading);
 
             C.Save("Delete from AssetB where SlNo is null or SlNo=''");
+
+            lblSuchanaIdHeader = (TextView) findViewById(R.id.lblSuchanaIdHeader);
+            lblSuchanaIdHeader.setText(SUCHANAID);
 
             ImageButton cmdHome = (ImageButton) findViewById(R.id.cmdHome);
             cmdHome.setOnClickListener(new View.OnClickListener() {

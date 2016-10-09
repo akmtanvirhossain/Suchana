@@ -30,7 +30,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="NGO WORKER"
+            android:text="এন,জি,ও "
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -41,7 +41,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Illness1"
+            android:text="(অসুস্থতা-১ঃ তালিকা)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -52,7 +52,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="ILLNESS2"
+            android:text="অসুস্থতা-২"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -74,9 +74,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
-        android:gravity="end"
+        android:gravity="center_vertical|end"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suchana ID: " />
+
+        <TextView
+            android:id="@+id/lblSuchanaIdHeader"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5sp" />
         <Button
             android:id="@+id/btnRefresh"
             android:layout_width="wrap_content"
@@ -88,7 +98,8 @@
             android:paddingRight="5sp"
             android:text=" refresh "
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -101,7 +112,7 @@
             android:background="@drawable/button_style_blue"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
-            android:text=" + new "
+            android:text="ADD NEW ILLNESS"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -111,17 +122,10 @@
         android:layout_height="1dip"
         android:layout_marginBottom="0sp"
         android:background="#CCCCCC" />
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
             <include
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/illness1heading" />
+                layout="@layout/illness1heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -146,7 +150,7 @@
                 <ListView
                     android:id="@+id/lstData"
                     android:layout_width="match_parent"
-                    android:layout_height="250sp"
+                    android:layout_height="690sp"
                     android:clickable="true"
                     android:divider="#000000"
                     android:dividerHeight="1px"
@@ -154,6 +158,20 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-        </LinearLayout>
-    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10sp">
+
+        <Button
+            android:id="@+id/cmdSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/button_style"
+            android:text=" Save -> Continue "
+            android:textSize="20sp" />
+    </LinearLayout>
 </LinearLayout>

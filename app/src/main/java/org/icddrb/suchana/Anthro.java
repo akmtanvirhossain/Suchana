@@ -276,14 +276,14 @@ public class Anthro extends Activity {
                 public void onClick(View v) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Anthro.this);
                     adb.setTitle("Close");
-                    adb.setMessage("Do you want to start AssetB [Yes/No]?");
+                    adb.setMessage("Do you want to start Father Form [Yes/No]?");
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Bundle IDBundle = new Bundle();
                             IDBundle.putString("Rnd", RND);
                             IDBundle.putString("SuchanaID", SUCHANAID);
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity_list.class);
+                            Intent intent = new Intent(getApplicationContext(), Father.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDBundle);
                             getApplicationContext().startActivity(intent);
@@ -323,7 +323,7 @@ public class Anthro extends Activity {
 
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     txtC2CWeight1.setText(
-                            String.valueOf(Double.parseDouble(txtC2MCWeight1.getText().toString().length() == 0 ? "0" : txtC2MCWeight1.getText().toString()) +
+                            String.valueOf(Double.parseDouble(txtC2MCWeight1.getText().toString().length() == 0 ? "0" : txtC2MCWeight1.getText().toString()) -
                                     Double.parseDouble(txtC2MWeight1.getText().toString().length() == 0 ? "0" : txtC2MWeight1.getText().toString())));
                 }
             });
@@ -500,6 +500,12 @@ public class Anthro extends Activity {
             txtC2Haemoglobin = (EditText) findViewById(R.id.txtC2Haemoglobin);
 
 
+            if (C.Existence("select * from HHIdentity where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' and AgeGroup='3'")) {
+                secC2Haemoglobin.setVisibility(View.VISIBLE);
+            } else {
+                secC2Haemoglobin.setVisibility(View.GONE);
+            }
+
             //Hide all skip variables
             DataSearch(RND, SUCHANAID);
 
@@ -576,7 +582,7 @@ public class Anthro extends Activity {
                             Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString());
 
             if (weightDiff >= 50 | weightDiff <= -50) {
-                if (txtC2MCWeight3.getText().toString().length() == 0 & secC2MCWeight3.isShown()) {
+                if (Double.parseDouble(txtC2MCWeight3.getText().toString().length() == 0 ? "0" : txtC2MCWeight3.getText().toString()) < 1 & secC2MCWeight3.isShown()) {
                     Connection.MessageBox(Anthro.this, "Required field(ওজন): শিশু + মা.");
                     txtC2MCWeight3.requestFocus();
                     return;
@@ -805,7 +811,7 @@ public class Anthro extends Activity {
                 finish();
                 IDBundle.putString("Rnd", txtRnd.getText().toString());
                 IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
-                startActivity(new Intent(Anthro.this, HHIdentity_list.class).putExtras(IDBundle));
+                startActivity(new Intent(Anthro.this, Father.class).putExtras(IDBundle));
 
             } else {
                 Connection.MessageBox(Anthro.this, status);

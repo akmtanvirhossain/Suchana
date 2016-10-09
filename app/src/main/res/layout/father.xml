@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:orientation="horizontal"
+        android:background="@color/pageHeadingBack">
+
+        <include
+            layout="@layout/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/lblBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10sp"
+            android:text="ANTHRO"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:paddingLeft="10sp"
+            android:text="Father"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="10sp"
+            android:text="Identity List"
+            android:textColor="@color/pageHeading"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cmdForward"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/pageHeadingBack"
+            android:src="@drawable/forward" />
+    </LinearLayout>
+
+    <View android:layout_height="1dip" android:layout_width="fill_parent" android:layout_marginBottom="5sp" android:background="#CCCCCC" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="always" android:isScrollContainer="true" android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideInset" android:scrollbars="vertical">
+        <LinearLayout android:layout_marginLeft="10sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/seclbl211" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/lblHlbl211" android:text="পিতা’র প্রশ্নপত্র" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+            </LinearLayout>
+
+            <View android:id="@+id/linelbl211" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secRnd"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRnd"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Rnd"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/VlblRnd"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="রাউন্ড নম্বর"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtRnd"
+                    style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineRnd"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSuchanaID"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="SuchanaID"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/VlblSuchanaID"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="উপকারভোগী সদস্য আইডি"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtSuchanaID"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSuchanaID"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:id="@+id/secF211"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/rowStyle0">
+
+                <TextView
+                    android:id="@+id/lblF211"
+                    android:text="F211"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblF211"
+                    android:text="পিতার লাইন নম্বর"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnF211"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <View android:id="@+id/lineF211" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/seclbl212" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/lblHlbl212" android:text="2.1.2 জন্মের পর শিশুকে কখন বুকের দুধ দেয়া শুরু করা উচিৎ?" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+            </LinearLayout>
+
+            <View android:id="@+id/linelbl212" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/secF212a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF212a" android:text="F212a" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF212a" android:text="জন্মের পর শিশুকে কখন বুকের দুধ দেয়া শুরু করা উচিৎ?" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <RadioGroup android:id="@+id/rdogrpF212a" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF212a1" android:text="সাথে সাথেই"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF212a2" android:text="ঘণ্টা"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF212a3" android:text="দিন"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <View android:id="@+id/lineF212a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/secF212b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF212b" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF212b" android:text="Duration" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF212b" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+
+            <View android:id="@+id/lineF212b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/secF213" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF213" android:text="F213" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF213" android:text="কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF213" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+
+            <View android:id="@+id/lineF213" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF214" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF214" android:text="F214" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF214" android:text="কত বয়স পর্যন্ত  শিশুকে বুকের দুধ খাওয়াতে হয়? (বছর) (জানা নেই ৮৮ )" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF214" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF214" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/seclbl215" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/lblHlbl215" android:text="2.1.5) ৬-২৩ মাস বয়সী শিশুদের কি কি খাওয়ানো উচিৎ?" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+            </LinearLayout>
+
+            <View android:id="@+id/linelbl215" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/secF215a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215a" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215a" android:text="a) পাউরুটি, ভাত অথবা শষ্য হতে তৈরী খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+
+            <View android:id="@+id/lineF215a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215b" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215b" android:text="b) আলু অথবা মূল ও কন্দ থেকে তৈরী খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215c" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215c" android:text="c) সিম, মটর, ডাল দ্বারা তৈরী খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215d" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215d" android:text="d) বাদাম অথবা বিচি দ্বারা তৈরী খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215e" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215e" android:text="e) দুধ, পনির, দই অথবা অন্যান্য দুগ্ধ জাতীয় খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215f" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215f" android:text="f) যেকোন মাংস অথবা কলিজা" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215f" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215f" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215g" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215g" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215g" android:text="g) যেকোন মাছ" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215g" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215g" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215h" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215h" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215h" android:text="h) ডিম" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215h" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215h" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215i" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215i" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215i" android:text="i) ভিটামিনএ সমৃদ্ধ ফল এবং সবজি যেমন আম, পেপে, গাজর ও মিষ্টি আলু" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215i" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215i" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF215j" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF215j" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF215j" android:text="j) অন্যান্য কোন ফল এবং সবজি" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF215j" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF215j" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/seclbl216" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/lblHlbl216" android:text="2.1.6 আপনার শিশুকে ( নির্বাচিত শিশুর বয়স অনুযায়ী) কি কি খাওয়ানো উচিৎ?" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+            </LinearLayout>
+            <View android:id="@+id/linelbl216" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216a" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216a" android:text="a) শুধু বুকের দুধ" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216b" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216b" android:text="b) বুকের দুধ ও নরম খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216c" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216c" android:text="c) সব ধরনের খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216d" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216d" android:text="d) শাকসবজি/ফলমূল" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216e" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216e" android:text="e) আমিষ" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216x" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216x" android:text="x) অন্যান্য" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF216x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216X1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216X1" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216X1" android:text="অন্যান্য উল্লেক করুন 1" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF216X1" android:maxLength="50" android:layout_width="250sp" android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216X1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+            <LinearLayout android:id="@+id/secF216X2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216X2" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216X2" android:text="অন্যান্য উল্লেক করুন 2" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF216X2" android:maxLength="50" android:layout_width="250sp" android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216X2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF216X3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF216X3" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF216X3" android:text="অন্যান্য উল্লেক করুন 3" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF216X3" android:maxLength="50" android:layout_width="250sp" android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF216X3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF217" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF217" android:text="F217" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF217" android:text="আপনার শিশুকে (নির্বাচিত শিশুর বয়স অনুযায়ী) দৈনিক কতবার খাওয়ানো উচিৎ (জানা নেই ৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF217" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF217" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/seclbl218" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/lblHlbl218" android:text="2.1.8) ডায়রিয়া হলে শিশুদের কি খাওয়ানো উচিৎ" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+            </LinearLayout>
+            <View android:id="@+id/linelbl218" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218a" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218a" android:text="a) প্যাকেটজাত খাবার স্যালাইন" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218b" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218b" android:text="b) ঘরে তৈরী খাবার স্যালাইন" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218c" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218c" android:text="c) জিঙ্ক সিরাপ/ ট্যাবলেট" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218d" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218d" android:text="d) চালের গুড়া" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218e" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218e" android:text="e) সাধারণ খাবার" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218f" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218f" android:text="f) অন্যান্য ঔষধ" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218f" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218f" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF218g" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF218g" android:text="" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF218g" android:text="g) জানা নেই" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <CheckBox android:id="@+id/chkF218g" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF218g" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF219" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF219" android:text="F219" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF219" android:text="গর্ভাবস্থায়  একটি মেয়ের/মহিলার অন্তত কতবার  (স্বাস্থ্য পরীক্ষা) (ANC) করা উচিৎ?  (জানা নেই ৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF219" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF219" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF2110" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF2110" android:text="F2110" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF2110" android:text="গর্ভাবস্থায় একটি মেয়ের/মহিলার অন্য সময়ের তুলনায় দিনের বেলায় কতটুকু ঘুমানো উচিৎ?" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <RadioGroup android:id="@+id/rdogrpF2110" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21101" android:text="কম"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21102" android:text="একইরকম"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21103" android:text="বেশি"/>
+                </RadioGroup>
+            </LinearLayout>
+            <View android:id="@+id/lineF2110" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF2111" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF2111" android:text="F2111" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF2111" android:text="গর্ভাবস্থায় একটি মেয়ের/মহিলার অন্য সময়ের তুলনায় কতটুকু খাওয়া উচিৎ?" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <RadioGroup android:id="@+id/rdogrpF2111" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21111" android:text="কম"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21112" android:text="একইরকম"/>
+                    <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoF21113" android:text="বেশি"/>
+                </RadioGroup>
+            </LinearLayout>
+            <View android:id="@+id/lineF2111" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:id="@+id/secF2112" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
+                <TextView android:id="@+id/lblF2112" android:text="F2112" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF2112" android:text="গর্ভাবস্থায় একটি মেয়ের/মহিলার কয়টি আয়রন ও ফলিক অ্যাসিড ট্যাবলেট খাওয়া উচিৎ? (জানা নেই ৮৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <EditText android:id="@+id/txtF2112" android:maxLength="3" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:id="@+id/lineF2112" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+            <LinearLayout android:layout_width="fill_parent" android:paddingTop="20sp" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/cmdSave" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_style"
+                    android:textSize="20sp" android:text=" Save -> Continue "  android:layout_marginBottom="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

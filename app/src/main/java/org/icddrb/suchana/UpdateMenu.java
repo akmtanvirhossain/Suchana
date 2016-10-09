@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import Common.Connection;
 import Common.Global;
@@ -54,6 +55,7 @@ public class UpdateMenu extends Activity {
     Button cmdMenuHandWash;
     Button cmdMenuFather;
 
+    LinearLayout secEligible;
 
     Connection C;
     Global g;
@@ -143,6 +145,8 @@ public class UpdateMenu extends Activity {
                 }
             });
 
+
+            secEligible = (LinearLayout) findViewById(R.id.secEligible);
 
             cmdMenuInterviewList = (Button) findViewById(R.id.cmdMenuInterviewList);
             cmdMenuInterviewList.setOnClickListener(new View.OnClickListener() {
@@ -410,8 +414,8 @@ public class UpdateMenu extends Activity {
             cmdMenuFather.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //finish();
-                    //startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, Father.class).putExtras(IDBundle));
                 }
             });
 
@@ -423,7 +427,13 @@ public class UpdateMenu extends Activity {
             Cursor cur = C.ReadData("Select * from EntryStatus where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'");
             cur.moveToFirst();
             while (!cur.isAfterLast()) {
-                if (cur.getString(cur.getColumnIndex("T1")).equals("1")) {
+                if ((cur.getString(cur.getColumnIndex("T50")) == null ? "2" : cur.getString(cur.getColumnIndex("T50"))).equals("1"))
+                    secEligible.setVisibility(View.VISIBLE);
+                else
+                    secEligible.setVisibility(View.GONE);
+
+
+                if ((cur.getString(cur.getColumnIndex("T1")) == null ? "" : cur.getString(cur.getColumnIndex("T1"))).equals("1")) {
                     cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
                 } else cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 

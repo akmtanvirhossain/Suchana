@@ -424,7 +424,7 @@ public class Member extends Activity {
                 public void afterTextChanged(Editable s) {
                     if (txtH26Y.getText().toString().length() != 0) {
 
-                        if (Integer.valueOf(txtH26Y.getText().toString()) < 2) {
+                        if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString()) < 2) {
                             secH220.setVisibility(View.VISIBLE);
                             lineH220.setVisibility(View.VISIBLE);
                         } else {
@@ -433,7 +433,7 @@ public class Member extends Activity {
                             lineH220.setVisibility(View.GONE);
                         }
 
-                        if (Integer.valueOf(txtH26Y.getText().toString()) < 5) {
+                        if (Integer.valueOf(txtH26Y.getText().toString().length() == 0 ? "0" : txtH26Y.getText().toString()) < 5) {
 
 
                             txtH26M.setText("");
@@ -497,7 +497,8 @@ public class Member extends Activity {
                             lineH222.setVisibility(View.GONE);
 
                         } else {
-                            txtH26M.setText("");
+                            //txtH26M.setText("");
+
                             secH27.setVisibility(View.VISIBLE);
                             lineH27.setVisibility(View.VISIBLE);
                             secH28.setVisibility(View.VISIBLE);
@@ -505,7 +506,7 @@ public class Member extends Activity {
                             secH29.setVisibility(View.VISIBLE);
                             lineH29.setVisibility(View.VISIBLE);
                             //secH29X.setVisibility(View.VISIBLE);
-                            lineH29X.setVisibility(View.VISIBLE);
+                            //lineH29X.setVisibility(View.VISIBLE);
                             secH210.setVisibility(View.VISIBLE);
                             lineH210.setVisibility(View.VISIBLE);
                             secH211.setVisibility(View.VISIBLE);
@@ -534,6 +535,20 @@ public class Member extends Activity {
                             lineH219.setVisibility(View.VISIBLE);
                             secH222.setVisibility(View.VISIBLE);
                             lineH222.setVisibility(View.VISIBLE);
+
+                            if (!RELIGION.isEmpty()) {
+                                //  spnH29.setSelection(0);
+                                //  spnH29.setSelection(Integer.valueOf(RELIGION));
+
+
+                                spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, RELIGION));
+                                txtH29X.setText(RELIGIONX);
+                            }
+                            if (Integer.valueOf(LANGUAGE.length() == 0 ? "0" : LANGUAGE) == 1) {
+                                rdoH2101.setChecked(true);
+                            } else if (Integer.valueOf(LANGUAGE.length() == 0 ? "0" : LANGUAGE) == 2) {
+                                rdoH2102.setChecked(true);
+                            }
                         }
                     }
                 }
@@ -938,7 +953,6 @@ public class Member extends Activity {
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     DataSave();
-
                 }
             });
         } catch (Exception e) {
@@ -1350,13 +1364,13 @@ public class Member extends Activity {
                 txtH28.setText(item.getH28());
 
                 if (item.getH29().isEmpty()) {
-                    spnH29.setSelection(Integer.valueOf(RELIGION));
+                    spnH29.setSelection(Integer.valueOf(RELIGION.length() == 0 ? "0" : RELIGION));
                 } else {
                     spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
                 }
 
                 if (item.getH29X().isEmpty()) {
-                    txtH29X.setText(RELIGIONX);
+                    txtH29X.setText(RELIGIONX.length() == 0 ? "0" : RELIGIONX);
                 } else {
                     txtH29X.setText(item.getH29X());
                 }

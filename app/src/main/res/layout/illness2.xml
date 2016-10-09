@@ -25,7 +25,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Illness2 List"
+            android:text="অসুস্থতা-২ঃ তালিজা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -36,7 +36,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="Illness 2"
+            android:text="(অসুস্থতা-২)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -522,7 +522,7 @@
                     android:id="@+id/lblH172d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H172"
+                    android:text="D."
                     android:textSize="20sp" />
 
                 <TextView

@@ -29,7 +29,7 @@
             android:layout_weight=".2"
             android:gravity="left|center_vertical"
             android:paddingLeft="10sp"
-            android:text="Member"
+            android:text="সদস্যের তালিকা"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -40,7 +40,7 @@
             android:layout_weight=".4"
             android:gravity="center"
             android:paddingLeft="10sp"
-            android:text="SES"
+            android:text="(খানার অবস্থা)"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -51,7 +51,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Asset B"
+            android:text="সম্পদঃ ব্যাবসায়িক"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -1071,7 +1071,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1181,6 +1181,14 @@
                         android:paddingRight="10dp"
                         android:text="ঝুলন্ত পায়খানা"
                         android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoH628"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="এখানে সেখানে/খোলা জায়গায়"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -1266,7 +1274,7 @@
                     android:id="@+id/VlblH63AX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1342,7 +1350,7 @@
                     android:id="@+id/VlblH63BX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1418,7 +1426,7 @@
                     android:id="@+id/VlblH63CX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1494,7 +1502,7 @@
                     android:id="@+id/VlblH63DX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1571,7 +1579,7 @@
                     android:id="@+id/VlblH63EX"
                     android:layout_width="220sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="     অন্যান্য"
                     android:textSize="20sp" />
 
                 <EditText
@@ -1686,7 +1694,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1738,7 +1746,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1790,7 +1798,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1842,7 +1850,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1894,7 +1902,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -1946,7 +1954,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হাঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3072,7 +3080,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3300,7 +3308,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3636,7 +3644,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -3863,7 +3871,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4924,7 +4932,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -4976,7 +4984,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="হ্যাঁঁ"
+                        android:text="হ্যাঁ"
                         android:textSize="20sp" />
 
                     <RadioButton

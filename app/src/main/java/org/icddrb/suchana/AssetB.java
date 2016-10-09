@@ -1227,10 +1227,12 @@ public class AssetB extends Activity {
                 txtH41o4X.setText(item.getH41o4X());
 
                 AssetB_DataModel dx = new AssetB_DataModel();
-                String SQLx = "Select H41a from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
+                String SQLx = "Select Distinct(H41a) from " + TableName + "  Where cast(H41a as int) < 21 and Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
                 List<AssetB_DataModel> datax = dx.SelectH41a(this, SQLx);
                 if (datax.size() > 19) {
                     cmdForward.setVisibility(View.VISIBLE);
+
+
                 }
             }
         } catch (Exception e) {

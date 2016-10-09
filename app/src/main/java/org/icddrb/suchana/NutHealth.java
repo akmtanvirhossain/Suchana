@@ -331,9 +331,11 @@ public class NutHealth extends Activity {
             lineM31i = (View) findViewById(R.id.lineM31i);
             VlblM31i = (TextView) findViewById(R.id.VlblM31i);
             chkM31i = (CheckBox) findViewById(R.id.chkM31i);
+
             secM31x = (LinearLayout) findViewById(R.id.secM31x);
             lineM31x = (View) findViewById(R.id.lineM31x);
             VlblM31x = (TextView) findViewById(R.id.VlblM31x);
+
             chkM31x = (CheckBox) findViewById(R.id.chkM31x);
             chkM31x.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
