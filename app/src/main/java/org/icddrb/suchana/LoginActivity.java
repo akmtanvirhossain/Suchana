@@ -101,11 +101,44 @@ public class LoginActivity extends Activity {
             String[] CL = uid.getSelectedItem().toString().split("-");
             uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
 
-            //Only for removing the data of training: 17 Nov 2015
-            /*if(Global.DateNowDMY().equals("11/02/2016") & g.getDistrict().equals("12") & g.getUpazila().equals("63"))
+            //Only for removing the data of training: 10 Oct 2016
+            if (Global.DateNowDMY().equals("10/10/2016"))
             {
-                //C.Save("Delete from BirthDeath where date(endt) <= '2016-02-10'");
-            }*/
+                /*if(!C.Existence("Select * from ProcessTab where Userid='"+ UniqueID +"' and ProcessId='1'")) {
+                    //C.Save("Delete from BirthDeath where date(endt) <= '2016-02-10'");
+                    C.Save("Delete from Agriculture");
+                    C.Save("Delete from Anthro");
+                    C.Save("Delete from AssetB");
+                    C.Save("Delete from AssetNB");
+                    C.Save("Delete from Careseek");
+                    C.Save("Delete from Cost");
+                    C.Save("Delete from Destruction1");
+                    C.Save("Delete from Destruction2");
+                    C.Save("Delete from DomViolance");
+                    C.Save("Delete from EntryStatus");
+                    C.Save("Delete from Father");
+                    C.Save("Delete from FdHabit");
+                    C.Save("Delete from FdHabitKnow");
+                    C.Save("Delete from FoodDiversity");
+                    C.Save("Delete from HandWash");
+                    C.Save("Delete from HDDS");
+                    C.Save("Delete from HFIAS");
+                    C.Save("Delete from HHIdentity");
+                    C.Save("Delete from IGA");
+                    C.Save("Delete from Illness1");
+                    C.Save("Delete from Illness2");
+                    C.Save("Delete from Knowledge");
+                    C.Save("Delete from Land");
+                    C.Save("Delete from Loan");
+                    C.Save("Delete from Member");
+                    C.Save("Delete from NGOWork");
+                    C.Save("Delete from NutHealth");
+                    C.Save("Delete from PregHis");
+                    C.Save("Delete from Savings");
+                    C.Save("Delete from SES");
+                    C.Save("Delete from WomenEmp");
+                }*/
+            }
 
             Button btnClose = (Button) findViewById(R.id.btnClose);
             btnClose.setOnClickListener(new View.OnClickListener() {

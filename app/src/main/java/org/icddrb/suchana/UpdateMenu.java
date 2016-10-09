@@ -433,7 +433,7 @@ public class UpdateMenu extends Activity {
                     secEligible.setVisibility(View.GONE);
 
 
-                if (cur.getString(cur.getColumnIndex("T1")).equals("1")) {
+                if ((cur.getString(cur.getColumnIndex("T1")) == null ? "" : cur.getString(cur.getColumnIndex("T1"))).equals("1")) {
                     cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
                 } else cmdMenuIdentity.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
