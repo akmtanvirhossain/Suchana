@@ -183,14 +183,17 @@ public class AssetB_list extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                    Bundle IDBundle = new Bundle();
-                    IDBundle.putString("Rnd", RND);
-                    IDBundle.putString("SuchanaID", SUCHANAID);
-                    Intent intent = new Intent(getApplicationContext(), AssetNB.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtras(IDBundle);
-                    getApplicationContext().startActivity(intent);
-                    finish();
+                            EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                            e.SaveUpdateData(AssetB_list.this);
+
+                            Bundle IDBundle = new Bundle();
+                            IDBundle.putString("Rnd", RND);
+                            IDBundle.putString("SuchanaID", SUCHANAID);
+                            Intent intent = new Intent(getApplicationContext(), AssetNB.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.putExtras(IDBundle);
+                            getApplicationContext().startActivity(intent);
+                            finish();
                         }
                     });
                     adb.show();
