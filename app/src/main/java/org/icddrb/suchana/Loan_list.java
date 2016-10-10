@@ -270,7 +270,6 @@ public class Loan_list extends Activity {
                 map.put("H111", item.getH111());
                 map.put("H112", item.getH112());
                 map.put("H113", item.getH113());
-                map.put("H113X", item.getH113X());
                 map.put("H114a", item.getH114a());
                 map.put("H114b", item.getH114b());
                 map.put("H114c", item.getH114c());
