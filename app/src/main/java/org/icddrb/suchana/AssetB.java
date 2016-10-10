@@ -396,11 +396,18 @@ public class AssetB extends Activity {
                     if (Integer.parseInt(spnData) < 8 | Integer.parseInt(spnData) > 20) {
                         seclblH41a.setVisibility(View.VISIBLE);
                         secH41i.setVisibility(View.VISIBLE);
+                        secH41j.setVisibility(View.VISIBLE);
+                        secH41k.setVisibility(View.VISIBLE);
                     } else {
 
+                        txtH41i.setText("");
+                        txtH41j.setText("");
                         spnH41k.setSelection(0);
                         seclblH41a.setVisibility(View.GONE);
+
                         secH41i.setVisibility(View.GONE);
+                        secH41j.setVisibility(View.GONE);
+                        secH41k.setVisibility(View.GONE);
                     }
 
                     if (spnData.equalsIgnoreCase("21")) {
@@ -439,6 +446,15 @@ public class AssetB extends Activity {
                 @Override
                 public void afterTextChanged(Editable s) {
                     if (Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "0" : txtH41b.getText().toString()) == 0) {
+
+                        txtH41c.setText("");
+                        txtH41d.setText("");
+                        spnH41e.setSelection(0);
+                        txtH41eX.setText("");
+                        spnH41f.setSelection(0);
+                        txtH41fX.setText("");
+                        rdogrpH41g.clearCheck();
+
                         secH41c.setVisibility(View.GONE);
                         lineH41c.setVisibility(View.GONE);
                         secH41d.setVisibility(View.GONE);
@@ -455,8 +471,8 @@ public class AssetB extends Activity {
                         lineH41fX.setVisibility(View.GONE);
                         secH41g.setVisibility(View.GONE);
                         lineH41g.setVisibility(View.GONE);
-                        secH41h.setVisibility(View.GONE);
-                        lineH41h.setVisibility(View.GONE);
+                        //  secH41h.setVisibility(View.GONE);
+                        //  lineH41h.setVisibility(View.GONE);
 
                     } else {
                         secH41c.setVisibility(View.VISIBLE);
@@ -469,8 +485,8 @@ public class AssetB extends Activity {
                         lineH41f.setVisibility(View.VISIBLE);
                         secH41g.setVisibility(View.VISIBLE);
                         lineH41g.setVisibility(View.VISIBLE);
-                        secH41h.setVisibility(View.VISIBLE);
-                        lineH41h.setVisibility(View.VISIBLE);
+                        // secH41h.setVisibility(View.VISIBLE);
+                        //  lineH41h.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -597,13 +613,13 @@ public class AssetB extends Activity {
                         if (rb.isChecked()) rbData = d_rdogrpH41g[i];
                     }
 
-                    if (rbData.equalsIgnoreCase("0")) {
+                    if (rbData.equalsIgnoreCase("1")) {
+                        secH41h.setVisibility(View.VISIBLE);
+                        lineH41h.setVisibility(View.VISIBLE);
+                    } else {
                         secH41h.setVisibility(View.GONE);
                         lineH41h.setVisibility(View.GONE);
                         txtH41h.setText("");
-                    } else if (rbData.equalsIgnoreCase("1")) {
-                        secH41h.setVisibility(View.VISIBLE);
-                        lineH41h.setVisibility(View.VISIBLE);
                     }
                 }
 
@@ -634,6 +650,8 @@ public class AssetB extends Activity {
                 @Override
                 public void afterTextChanged(Editable s) {
                     if (Integer.valueOf((txtH41i.getText().toString().length() == 0) ? "0" : txtH41i.getText().toString()) == 0) {
+
+
                         secH41j.setVisibility(View.GONE);
                         lineH41j.setVisibility(View.GONE);
                         secH41k.setVisibility(View.GONE);
@@ -716,6 +734,9 @@ public class AssetB extends Activity {
                 @Override
                 public void afterTextChanged(Editable s) {
                     if (Integer.valueOf((txtH41l.getText().toString().length() == 0) ? "1" : txtH41l.getText().toString()) == 0) {
+
+                        txtH41m.setText("");
+                        txtH41n.setText("");
                         secH41m.setVisibility(View.GONE);
                         lineH41m.setVisibility(View.GONE);
                         secH41n.setVisibility(View.GONE);
