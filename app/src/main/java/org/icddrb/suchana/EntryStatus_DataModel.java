@@ -160,6 +160,19 @@ public class EntryStatus_DataModel {
         return response;
     }
 
+    public String Finish(Context context, String Status) {
+        String response = "";
+        C = new Connection(context);
+        String SQL = "";
+        try {
+            SQL = "Update EntryStatus Set T49='" + Status + "',Upload='2'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            C.Save(SQL);
+        } catch (Exception e) {
+            response = e.getMessage();
+        }
+        return response;
+    }
+
     public String getT1() {
         return _T1;
     }

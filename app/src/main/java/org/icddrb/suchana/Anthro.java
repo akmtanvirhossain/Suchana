@@ -581,7 +581,7 @@ public class Anthro extends Activity {
                     Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -
                             Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString());
 
-            if (weightDiff >= 50 | weightDiff <= -50) {
+            if (weightDiff >= 0.5 | weightDiff <= -0.5) {
                 if (Double.parseDouble(txtC2MCWeight3.getText().toString().length() == 0 ? "0" : txtC2MCWeight3.getText().toString()) < 1 & secC2MCWeight3.isShown()) {
                     Connection.MessageBox(Anthro.this, "Required field(ওজন): শিশু + মা.");
                     txtC2MCWeight3.requestFocus();
