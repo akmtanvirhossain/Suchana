@@ -81,10 +81,7 @@ public class Loan extends Activity {
     View lineH113;
     TextView VlblH113;
     Spinner spnH113;
-    LinearLayout secH113X;
-    View lineH113X;
-    TextView VlblH113X;
-    EditText txtH113X;
+
     LinearLayout secH114a;
     View lineH114a;
     TextView VlblH114a;
@@ -247,9 +244,7 @@ public class Loan extends Activity {
                         secH113.setVisibility(View.GONE);
                         lineH113.setVisibility(View.GONE);
                         spnH113.setSelection(0);
-                        secH113X.setVisibility(View.GONE);
-                        lineH113X.setVisibility(View.GONE);
-                        txtH113X.setText("");
+
                         secH114a.setVisibility(View.GONE);
                         lineH114a.setVisibility(View.GONE);
                         spnH114a.setSelection(0);
@@ -345,7 +340,7 @@ public class Loan extends Activity {
             listH113.add("20-অনান্য এন,জি,ও");
             ArrayAdapter<String> adptrH113 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH113);
             spnH113.setAdapter(adptrH113);
-
+/*
             spnH113.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -369,7 +364,7 @@ public class Loan extends Activity {
             secH113X = (LinearLayout) findViewById(R.id.secH113X);
             lineH113X = (View) findViewById(R.id.lineH113X);
             VlblH113X = (TextView) findViewById(R.id.VlblH113X);
-            txtH113X = (EditText) findViewById(R.id.txtH113X);
+            txtH113X = (EditText) findViewById(R.id.txtH113X);*/
             secH114a = (LinearLayout) findViewById(R.id.secH114a);
             lineH114a = (View) findViewById(R.id.lineH114a);
             VlblH114a = (TextView) findViewById(R.id.VlblH114a);
@@ -576,8 +571,8 @@ public class Loan extends Activity {
 
             rdoH1181 = (RadioButton) findViewById(R.id.rdoH1181);
             rdoH1182 = (RadioButton) findViewById(R.id.rdoH1182);
-            secH113X.setVisibility(View.GONE);
-            lineH113X.setVisibility(View.GONE);
+         //   secH113X.setVisibility(View.GONE);
+           // lineH113X.setVisibility(View.GONE);
             secH114X.setVisibility(View.GONE);
             lineH114X.setVisibility(View.GONE);
             DataSearch(RND,SUCHANAID,H112);
@@ -636,11 +631,7 @@ public class Loan extends Activity {
                 Connection.MessageBox(Loan.this, "Required field: কার কাছ থেকে.");
                 spnH113.requestFocus();
                 return;
-            } else if (txtH113X.getText().toString().length() == 0 & secH113X.isShown()) {
-                Connection.MessageBox(Loan.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH113X.requestFocus();
-                return;
-            } else if (spnH114a.getSelectedItemPosition() == 0 & secH114a.isShown()) {
+            }  else if (spnH114a.getSelectedItemPosition() == 0 & secH114a.isShown()) {
                 Connection.MessageBox(Loan.this, "Required field: লোনটি প্রধানত কি কাজের জন্য ব্যবহৃত হয়েছে.");
                 spnH114a.requestFocus();
                 return;
@@ -792,7 +783,7 @@ public class Loan extends Activity {
 
             objSave.setH112(txtH112.getText().toString());
             objSave.setH113((spnH113.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH113.getSelectedItem().toString(), "-")));
-            objSave.setH113X(txtH113X.getText().toString());
+
             objSave.setH114a((spnH114a.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH114a.getSelectedItem().toString(), "-")));
             objSave.setH114b((spnH114b.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH114b.getSelectedItem().toString(), "-")));
             objSave.setH114c((spnH114c.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH114c.getSelectedItem().toString(), "-")));
@@ -881,7 +872,7 @@ public class Loan extends Activity {
                 }
                 txtH112.setText(item.getH112());
                 spnH113.setSelection(Global.SpinnerItemPositionAnyLength(spnH113, item.getH113()));
-                txtH113X.setText(item.getH113X());
+
                 spnH114a.setSelection(Global.SpinnerItemPositionAnyLength(spnH114a, item.getH114a()));
                 spnH114b.setSelection(Global.SpinnerItemPositionAnyLength(spnH114b, item.getH114b()));
                 spnH114c.setSelection(Global.SpinnerItemPositionAnyLength(spnH114c, item.getH114c()));

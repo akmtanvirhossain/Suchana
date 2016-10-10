@@ -2615,6 +2615,21 @@ public class FdHabit extends Activity {
             chkC142g = (CheckBox) findViewById(R.id.chkC142g);
 
 
+            chkC142g.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkC142a.setChecked(false);
+                        chkC142b.setChecked(false);
+                        chkC142c.setChecked(false);
+                        chkC142d.setChecked(false);
+                        chkC142e.setChecked(false);
+                        chkC142f.setChecked(false);
+                    }
+
+                }
+            });
+
+
             dtpC15.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -2824,6 +2839,31 @@ public class FdHabit extends Activity {
                     }
 
                     txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+                    if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
+                    {
+
+
+                    }
+                    else
+                    {
+                        seclblC119.setVisibility(View.GONE);
+                        secC119.setVisibility(View.GONE);
+                        seclblC120.setVisibility(View.GONE);
+                        secC120.setVisibility(View.GONE);
+                        seclblC121.setVisibility(View.GONE);
+                        secC121a.setVisibility(View.GONE);
+                        secC121b.setVisibility(View.GONE);
+                        secC121c.setVisibility(View.GONE);
+                        secC121d.setVisibility(View.GONE);
+                        secC121e.setVisibility(View.GONE);
+                        secC121f.setVisibility(View.GONE);
+                        secC121f1.setVisibility(View.GONE);
+                        secC121g.setVisibility(View.GONE);
+                        secC121h.setVisibility(View.GONE);
+                        secC121i.setVisibility(View.GONE);
+                        secC121iX.setVisibility(View.GONE);
+
+                    }
                 }
 
                 @Override
@@ -2841,8 +2881,35 @@ public class FdHabit extends Activity {
                 }
 
                 txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+                if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
+                {
 
+
+
+                }
+                else
+                {
+                    seclblC119.setVisibility(View.GONE);
+                    secC119.setVisibility(View.GONE);
+                    seclblC120.setVisibility(View.GONE);
+                    secC120.setVisibility(View.GONE);
+                    seclblC121.setVisibility(View.GONE);
+                    secC121a.setVisibility(View.GONE);
+                    secC121b.setVisibility(View.GONE);
+                    secC121c.setVisibility(View.GONE);
+                    secC121d.setVisibility(View.GONE);
+                    secC121e.setVisibility(View.GONE);
+                    secC121f.setVisibility(View.GONE);
+                    secC121f1.setVisibility(View.GONE);
+                    secC121g.setVisibility(View.GONE);
+                    secC121h.setVisibility(View.GONE);
+                    secC121i.setVisibility(View.GONE);
+                    secC121iX.setVisibility(View.GONE);
+                }
             }
+
+
+
             DataSearch(RND,SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -3279,6 +3346,12 @@ public class FdHabit extends Activity {
             if((chkC117f.isChecked()==true) &&(chkC117a.isChecked()==true || chkC117a.isChecked()==true|| chkC117c.isChecked()==true|| chkC117d.isChecked()==true|| chkC117e.isChecked()==true))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between M24.1A to I");
+                return;
+            }
+
+            if((chkC142g.isChecked()==true) &&(chkC142a.isChecked()==true || chkC142b.isChecked()==true|| chkC142c.isChecked()==true|| chkC142d.isChecked()==true|| chkC142e.isChecked()==true|| chkC142f.isChecked()==true))
+            {
+                Connection.MessageBox(FdHabit.this, "Inconsistent value between C142 A-G");
                 return;
             }
 

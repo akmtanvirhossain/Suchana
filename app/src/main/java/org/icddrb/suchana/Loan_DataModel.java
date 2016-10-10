@@ -18,7 +18,7 @@ public class Loan_DataModel {
     private String _H111 = "";
     private String _H112 = "";
     private String _H113 = "";
-    private String _H113X = "";
+
     private String _H114a = "";
     private String _H114b = "";
     private String _H114c = "";
@@ -84,13 +84,6 @@ public class Loan_DataModel {
         _H113 = newValue;
     }
 
-    public String getH113X() {
-        return _H113X;
-    }
-
-    public void setH113X(String newValue) {
-        _H113X = newValue;
-    }
 
     public String getH114a() {
         return _H114a;
@@ -204,7 +197,7 @@ public class Loan_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H111,H112,H113,H113X,H114a,H114b,H114c,H114X,H115,H116,H117,H118,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H111 + "', '" + _H112 + "', '" + _H113 + "', '" + _H113X + "', '" + _H114a + "', '" + _H114b + "', '" + _H114c + "', '" + _H114X + "', '" + _H115 + "', '" + _H116 + "', '" + _H117 + "', '" + _H118 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,MSlNo,H111,H112,H113,H114a,H114b,H114c,H114X,H115,H116,H117,H118,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _MSlNo + "', '" + _H111 + "', '" + _H112 + "', '" + _H113 + "', '" + _H114a + "', '" + _H114b + "', '" + _H114c + "', '" + _H114X + "', '" + _H115 + "', '" + _H116 + "', '" + _H117 + "', '" + _H118 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -217,7 +210,7 @@ public class Loan_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H111 = '" + _H111 + "',H112 = '" + _H112 + "',H113 = '" + _H113 + "',H113X = '" + _H113X + "',H114a = '" + _H114a + "',H114b = '" + _H114b + "',H114c = '" + _H114c + "',H114X = '" + _H114X + "',H115 = '" + _H115 + "',H116 = '" + _H116 + "',H117 = '" + _H117 + "',H118 = '" + _H118 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H112='" + _H112 + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',MSlNo = '" + _MSlNo + "',H111 = '" + _H111 + "',H112 = '" + _H112 + "',H113 = '" + _H113 + "',H114a = '" + _H114a + "',H114b = '" + _H114b + "',H114c = '" + _H114c + "',H114X = '" + _H114X + "',H115 = '" + _H115 + "',H116 = '" + _H116 + "',H117 = '" + _H117 + "',H118 = '" + _H118 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H112='" + _H112 + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -241,7 +234,6 @@ public class Loan_DataModel {
             d._H111 = cur.getString(cur.getColumnIndex("H111"));
             d._H112 = cur.getString(cur.getColumnIndex("H112"));
             d._H113 = cur.getString(cur.getColumnIndex("H113"));
-            d._H113X = cur.getString(cur.getColumnIndex("H113X"));
             d._H114a = cur.getString(cur.getColumnIndex("H114a"));
             d._H114b = cur.getString(cur.getColumnIndex("H114b"));
             d._H114c = cur.getString(cur.getColumnIndex("H114c"));

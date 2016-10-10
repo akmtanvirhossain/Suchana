@@ -1214,6 +1214,9 @@ public class PregHis extends Activity {
             secM116.setVisibility(View.GONE);
             secM117.setVisibility(View.GONE);
 
+
+
+
             txtRnd.setText(RND);
             txtSuchanaID.setText(SUCHANAID);
             txtRnd.setEnabled(false);
@@ -1637,12 +1640,27 @@ public class PregHis extends Activity {
                     chkM15a.setChecked(false);
                 }
 
+
                 txtM15b.setText(item.getM15b());
                 txtM15c.setText(item.getM15c());
                 txtM15d.setText(item.getM15d());
                 txtM15e.setText(item.getM15e());
-
                 txtM15f.setText(item.getM15f());
+                if(chkM15a.isChecked()==true)
+                {
+                    secM15b.setVisibility(View.GONE);
+                    lineM15b.setVisibility(View.GONE);
+                    secM15c.setVisibility(View.GONE);
+                    lineM15c.setVisibility(View.GONE);
+                    secM15d.setVisibility(View.GONE);
+                    lineM15d.setVisibility(View.GONE);
+                    secM15e.setVisibility(View.GONE);
+                    secM15f.setVisibility(View.GONE);
+                    lineM15f.setVisibility(View.GONE);
+                }
+
+
+
                 String[] d_rdogrpM16 = new String[]{"1", "0", "8"};
                 for (int i = 0; i < d_rdogrpM16.length; i++) {
                     if (item.getM16().equals(String.valueOf(d_rdogrpM16[i]))) {
