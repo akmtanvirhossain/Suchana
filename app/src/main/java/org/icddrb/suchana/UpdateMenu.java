@@ -435,6 +435,7 @@ public class UpdateMenu extends Activity {
                             EntryStatus_DataModel e = new EntryStatus_DataModel("finish", RND, SUCHANAID);
                             e.Finish(UpdateMenu.this, "1");
                             finish();
+                            startActivity(new Intent(UpdateMenu.this, HHIdentity_list.class).putExtras(IDBundle));
                         }
                     });
                     adb.show();
