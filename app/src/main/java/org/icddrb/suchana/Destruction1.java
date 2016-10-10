@@ -1104,7 +1104,7 @@ public class Destruction1 extends Activity {
                         chkH14a14r.setChecked(false);
                         chkH14a14s.setChecked(false);
                         chkH14a14t.setChecked(false);
-                        chkH14a14u.setChecked(false);
+                        // chkH14a14u.setChecked(false);
 
 
                     } else {
