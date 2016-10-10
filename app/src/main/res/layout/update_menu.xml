@@ -616,12 +616,28 @@
                 android:layout_marginBottom="5sp"
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
-                android:background="@drawable/button_style_blue"
+                android:background="@drawable/button_style_gray"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20sp"
                 android:text="পিতার প্রশ্নপত্র"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/cmdMenuFinish"
+                    style="@style/menuButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@drawable/button_style_blue"
+                    android:gravity="center|center_vertical"
+                    android:paddingLeft="0sp"
+                    android:text="ইন্টারভিউ সম্পন্ন"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

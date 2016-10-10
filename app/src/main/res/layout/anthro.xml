@@ -1193,7 +1193,7 @@
                     android:id="@+id/VlblC2Haemoglobin"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="-> ১২-২৩ মাসের শিশুর হিমোগ্লোবিন এর ঘনত্ব"
+                    android:text="-> ১২-২৩ মাসের শিশুর হিমোগ্লোবিন এর ঘনত্ব  (৯৯৯ অস্নমতি, ৮৮৮ Not Selected"
                     android:textSize="20sp" />
 
                 <EditText

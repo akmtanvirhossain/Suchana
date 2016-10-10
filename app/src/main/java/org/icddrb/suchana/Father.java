@@ -41,6 +41,7 @@ import android.view.LayoutInflater;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -345,6 +346,9 @@ public class Father extends Activity {
                 }
             });
 
+            spnF211 = (Spinner) findViewById(R.id.spnF211);
+            spnF211.setAdapter(C.getArrayAdapter("Select '' union Select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15 and H23='1'"));
+
             seclbl211 = (LinearLayout) findViewById(R.id.seclbl211);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
             lineRnd = (View) findViewById(R.id.lineRnd);
@@ -364,10 +368,6 @@ public class Father extends Activity {
             VlblF211 = (TextView) findViewById(R.id.VlblF211);
             spnF211 = (Spinner) findViewById(R.id.spnF211);
             List<String> listF211 = new ArrayList<String>();
-
-            spnF211 = (Spinner) findViewById(R.id.spnF211);
-            spnF211.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='" + SUCHANAID + "' and cast(H26Y as int)>=15"));
-
 
           //  ArrayAdapter<String> adptrF211 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listF211);
            // spnF211.setAdapter(adptrF211);
@@ -486,6 +486,7 @@ public class Father extends Activity {
 
             chkF216x = (CheckBox) findViewById(R.id.chkF216x);
 
+            /*
             chkF216x.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if (!((CheckBox) v).isChecked()) {
@@ -508,6 +509,35 @@ public class Father extends Activity {
                         lineF216X2.setVisibility(View.VISIBLE);
                         secF216X3.setVisibility(View.VISIBLE);
                         lineF216X3.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+            */
+            chkF216x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (!isChecked) {
+                        secF216X1.setVisibility(View.GONE);
+                        lineF216X1.setVisibility(View.GONE);
+                        txtF216X1.setText("");
+                        secF216X2.setVisibility(View.GONE);
+                        lineF216X2.setVisibility(View.GONE);
+                        txtF216X2.setText("");
+                        secF216X3.setVisibility(View.GONE);
+                        lineF216X3.setVisibility(View.GONE);
+                        txtF216X3.setText("");
+                        secF217.setVisibility(View.GONE);
+                        lineF217.setVisibility(View.GONE);
+                        txtF217.setText("");
+
+                    } else {
+                        secF216X1.setVisibility(View.VISIBLE);
+                        lineF216X1.setVisibility(View.VISIBLE);
+                        secF216X2.setVisibility(View.VISIBLE);
+                        lineF216X2.setVisibility(View.VISIBLE);
+                        secF216X3.setVisibility(View.VISIBLE);
+                        lineF216X3.setVisibility(View.VISIBLE);
+
                     }
                 }
             });
@@ -558,6 +588,21 @@ public class Father extends Activity {
             lineF218g = (View) findViewById(R.id.lineF218g);
             VlblF218g = (TextView) findViewById(R.id.VlblF218g);
             chkF218g = (CheckBox) findViewById(R.id.chkF218g);
+
+            chkF218g.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkF218a.setChecked(false);
+                        chkF218b.setChecked(false);
+                        chkF218c.setChecked(false);
+                        chkF218d.setChecked(false);
+                        chkF218e.setChecked(false);
+                        chkF218f.setChecked(false);
+                    }
+                }
+            });
+
             secF219 = (LinearLayout) findViewById(R.id.secF219);
             lineF219 = (View) findViewById(R.id.lineF219);
             VlblF219 = (TextView) findViewById(R.id.VlblF219);
@@ -662,6 +707,7 @@ public class Father extends Activity {
                 txtF216X1.requestFocus();
                 return;
             }
+
             /*else if (txtF216X2.getText().toString().length() == 0 & secF216X2.isShown()) {
                 Connection.MessageBox(Father.this, "Required field: অন্যান্য উল্লেক করুণ ২.");
                 txtF216X2.requestFocus();
@@ -705,12 +751,47 @@ public class Father extends Activity {
                 txtF2112.requestFocus();
                 return;
             }
-
+            else if (secF215a.isShown() & (!chkF215a.isChecked() &
+                    !chkF215b.isChecked() &
+                    !chkF215c.isChecked() &
+                    !chkF215d.isChecked() &
+                    !chkF215e.isChecked() &
+                    !chkF215f.isChecked() &
+                    !chkF215g.isChecked() &
+                    !chkF215h.isChecked() &
+                    !chkF215i.isChecked() &
+                    !chkF215j.isChecked())) {
+                Connection.MessageBox(Father.this, "Required field: 2.1.5) CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secF215a.requestFocus();
+                return;
+            }
+            else if (secF216a.isShown() & (!chkF216a.isChecked() &
+                    !chkF216b.isChecked() &
+                    !chkF216c.isChecked() &
+                    !chkF216d.isChecked() &
+                    !chkF216e.isChecked() &
+                    !chkF216x.isChecked())) {
+                Connection.MessageBox(Father.this, "Required field: 2.1.6) CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secF216a.requestFocus();
+                return;
+            }
+            else if (secF218a.isShown() & (!chkF218a.isChecked() &
+                    !chkF218b.isChecked() &
+                    !chkF218c.isChecked() &
+                    !chkF218d.isChecked() &
+                    !chkF218e.isChecked() &
+                    !chkF218f.isChecked() &
+                    !chkF218g.isChecked())) {
+                Connection.MessageBox(Father.this, "Required field: 2.1.8) CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                secF216a.requestFocus();
+                return;
+            }
             if((chkF218a.isChecked()==true || chkF218b.isChecked()==true || chkF218c.isChecked()==true  || chkF218d.isChecked()==true || chkF218e.isChecked()==true || chkF218f.isChecked()==true)   && chkF218g.isChecked()==true)
             {
                 Connection.MessageBox(Father.this, "Inconsistent value in 2.1.8 G.জানিনা");
                 return;
             }
+
             String SQL = "";
             RadioButton rb;
 
