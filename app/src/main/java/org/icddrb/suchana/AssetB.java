@@ -844,6 +844,23 @@ public class AssetB extends Activity {
             secH41fX.setVisibility(View.GONE);
             secH41h.setVisibility(View.GONE);
 
+            seclblH41o.setVisibility(View.GONE);
+            secH41o1.setVisibility(View.GONE);
+            lineH41o1.setVisibility(View.GONE);
+            VlblH41o1.setVisibility(View.GONE);
+
+            secH41o2.setVisibility(View.GONE);
+            lineH41o2.setVisibility(View.GONE);
+            VlblH41o2.setVisibility(View.GONE);
+
+            secH41o3.setVisibility(View.GONE);
+            lineH41o3.setVisibility(View.GONE);
+            VlblH41o3.setVisibility(View.GONE);
+
+            secH41o4.setVisibility(View.GONE);
+            lineH41o4.setVisibility(View.GONE);
+            VlblH41o4.setVisibility(View.GONE);
+
             DataSearch(RND, SUCHANAID, SLNO);
 
 
@@ -1116,6 +1133,14 @@ public class AssetB extends Activity {
             } else if (txtH41o4X.getText().toString().length() == 0 & secH41o4X.isShown()) {
                 Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtH41o4X.requestFocus();
+                return;
+            } else if (secH41o1.isShown() & !chkH41o1.isChecked() & !chkH41o2.isChecked() & !chkH41o3.isChecked() & !chkH41o4.isChecked()) {
+                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন");
+                secH41o1.requestFocus();
+                return;
+            } else if (secH41aX.isShown() & txtH41aX.getText().toString().length() == 0) {
+                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন অন্যান্য");
+                txtH41aX.requestFocus();
                 return;
             }
 

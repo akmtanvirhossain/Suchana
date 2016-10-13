@@ -1930,8 +1930,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH871b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH871b.getText().toString().length() == 0 ? "0" : txtH871b.getText().toString()) < 0 || Double.valueOf(txtH871b.getText().toString().length() == 0 ? "999" : txtH871b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH871b.getText().toString().length() == 0 ? "0" : txtH871b.getText().toString()) < 0 || Double.valueOf(txtH871b.getText().toString().length() == 0 ? "999999" : txtH871b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH871b.requestFocus();
                 return;
             } else if (!rdoH871c1.isChecked() & !rdoH871c2.isChecked() & !rdoH871c3.isChecked() & secH871c.isShown()) {
@@ -1954,8 +1954,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH872b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH872b.getText().toString().length() == 0 ? "0" : txtH872b.getText().toString()) < 0 || Double.valueOf(txtH872b.getText().toString().length() == 0 ? "999" : txtH872b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH872b.getText().toString().length() == 0 ? "0" : txtH872b.getText().toString()) < 0 || Double.valueOf(txtH872b.getText().toString().length() == 0 ? "999999" : txtH872b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH872b.requestFocus();
                 return;
             } else if (!rdoH872c1.isChecked() & !rdoH872c2.isChecked() & !rdoH872c3.isChecked() & secH872c.isShown()) {
@@ -1978,8 +1978,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH873b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH873b.getText().toString().length() == 0 ? "0" : txtH873b.getText().toString()) < 0 || Double.valueOf(txtH873b.getText().toString().length() == 0 ? "999" : txtH873b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH873b.getText().toString().length() == 0 ? "0" : txtH873b.getText().toString()) < 0 || Double.valueOf(txtH873b.getText().toString().length() == 0 ? "999999" : txtH873b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH873b.requestFocus();
                 return;
             } else if (!rdoH873c1.isChecked() & !rdoH873c2.isChecked() & !rdoH873c3.isChecked() & secH873c.isShown()) {
@@ -2002,8 +2002,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH874b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH874b.getText().toString().length() == 0 ? "0" : txtH874b.getText().toString()) < 0 || Double.valueOf(txtH874b.getText().toString().length() == 0 ? "999" : txtH874b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH874b.getText().toString().length() == 0 ? "0" : txtH874b.getText().toString()) < 0 || Double.valueOf(txtH874b.getText().toString().length() == 0 ? "999999" : txtH874b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH874b.requestFocus();
                 return;
             } else if (!rdoH874c1.isChecked() & !rdoH874c2.isChecked() & !rdoH874c3.isChecked() & secH874c.isShown()) {
@@ -2026,8 +2026,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH875b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH875b.getText().toString().length() == 0 ? "0" : txtH875b.getText().toString()) < 0 || Double.valueOf(txtH875b.getText().toString().length() == 0 ? "999" : txtH875b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH875b.getText().toString().length() == 0 ? "0" : txtH875b.getText().toString()) < 0 || Double.valueOf(txtH875b.getText().toString().length() == 0 ? "999999" : txtH875b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH875b.requestFocus();
                 return;
             } else if (!rdoH875c1.isChecked() & !rdoH875c2.isChecked() & !rdoH875c3.isChecked() & secH875c.isShown()) {
@@ -2054,8 +2054,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH881b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH881b.getText().toString().length() == 0 ? "0" : txtH881b.getText().toString()) < 0 || Double.valueOf(txtH881b.getText().toString().length() == 0 ? "999" : txtH881b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH881b.getText().toString().length() == 0 ? "0" : txtH881b.getText().toString()) < 0 || Double.valueOf(txtH881b.getText().toString().length() == 0 ? "999999" : txtH881b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH881b.requestFocus();
                 return;
             } else if (!rdoH881c1.isChecked() & !rdoH881c2.isChecked() & !rdoH881c3.isChecked() & secH881c.isShown()) {
@@ -2078,8 +2078,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH882b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH882b.getText().toString().length() == 0 ? "0" : txtH882b.getText().toString()) < 0 || Double.valueOf(txtH882b.getText().toString().length() == 0 ? "999" : txtH882b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH882b.getText().toString().length() == 0 ? "0" : txtH882b.getText().toString()) < 0 || Double.valueOf(txtH882b.getText().toString().length() == 0 ? "999999" : txtH882b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH882b.requestFocus();
                 return;
             } else if (!rdoH882c1.isChecked() & !rdoH882c2.isChecked() & !rdoH882c3.isChecked() & secH882c.isShown()) {
@@ -2102,8 +2102,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH883b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH883b.getText().toString().length() == 0 ? "0" : txtH883b.getText().toString()) < 0 || Double.valueOf(txtH883b.getText().toString().length() == 0 ? "999" : txtH883b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH883b.getText().toString().length() == 0 ? "0" : txtH883b.getText().toString()) < 0 || Double.valueOf(txtH883b.getText().toString().length() == 0 ? "999999" : txtH883b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH883b.requestFocus();
                 return;
             } else if (!rdoH883c1.isChecked() & !rdoH883c2.isChecked() & !rdoH883c3.isChecked() & secH883c.isShown()) {
@@ -2126,8 +2126,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH884b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH884b.getText().toString().length() == 0 ? "0" : txtH884b.getText().toString()) < 0 || Double.valueOf(txtH884b.getText().toString().length() == 0 ? "999" : txtH884b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH884b.getText().toString().length() == 0 ? "0" : txtH884b.getText().toString()) < 0 || Double.valueOf(txtH884b.getText().toString().length() == 0 ? "999999" : txtH884b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH884b.requestFocus();
                 return;
             } else if (!rdoH884c1.isChecked() & !rdoH884c2.isChecked() & !rdoH884c3.isChecked() & secH884c.isShown()) {
@@ -2150,8 +2150,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH885b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH885b.getText().toString().length() == 0 ? "0" : txtH885b.getText().toString()) < 0 || Double.valueOf(txtH885b.getText().toString().length() == 0 ? "999" : txtH885b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH885b.getText().toString().length() == 0 ? "0" : txtH885b.getText().toString()) < 0 || Double.valueOf(txtH885b.getText().toString().length() == 0 ? "999999" : txtH885b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH885b.requestFocus();
                 return;
             } else if (!rdoH885c1.isChecked() & !rdoH885c2.isChecked() & !rdoH885c3.isChecked() & secH885c.isShown()) {
@@ -2174,8 +2174,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH891b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH891b.getText().toString().length() == 0 ? "0" : txtH891b.getText().toString()) < 0 || Double.valueOf(txtH891b.getText().toString().length() == 0 ? "999" : txtH891b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH891b.getText().toString().length() == 0 ? "0" : txtH891b.getText().toString()) < 0 || Double.valueOf(txtH891b.getText().toString().length() == 0 ? "999999" : txtH891b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH891b.requestFocus();
                 return;
             } else if (!rdoH891c1.isChecked() & !rdoH891c2.isChecked() & !rdoH891c3.isChecked() & secH891c.isShown()) {
@@ -2202,8 +2202,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8101b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8101b.getText().toString().length() == 0 ? "0" : txtH8101b.getText().toString()) < 0 || Double.valueOf(txtH8101b.getText().toString().length() == 0 ? "999" : txtH8101b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8101b.getText().toString().length() == 0 ? "0" : txtH8101b.getText().toString()) < 0 || Double.valueOf(txtH8101b.getText().toString().length() == 0 ? "999999" : txtH8101b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8101b.requestFocus();
                 return;
             } else if (!rdoH8101c1.isChecked() & !rdoH8101c2.isChecked() & !rdoH8101c3.isChecked() & secH8101c.isShown()) {
@@ -2226,8 +2226,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8102b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8102b.getText().toString().length() == 0 ? "0" : txtH8102b.getText().toString()) < 0 || Double.valueOf(txtH8102b.getText().toString().length() == 0 ? "999" : txtH8102b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8102b.getText().toString().length() == 0 ? "0" : txtH8102b.getText().toString()) < 0 || Double.valueOf(txtH8102b.getText().toString().length() == 0 ? "999999" : txtH8102b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8102b.requestFocus();
                 return;
             } else if (!rdoH8102c1.isChecked() & !rdoH8102c2.isChecked() & !rdoH8102c3.isChecked() & secH8102c.isShown()) {
@@ -2250,8 +2250,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8103b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8103b.getText().toString().length() == 0 ? "0" : txtH8103b.getText().toString()) < 0 || Double.valueOf(txtH8103b.getText().toString().length() == 0 ? "999" : txtH8103b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8103b.getText().toString().length() == 0 ? "0" : txtH8103b.getText().toString()) < 0 || Double.valueOf(txtH8103b.getText().toString().length() == 0 ? "999999" : txtH8103b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8103b.requestFocus();
                 return;
             } else if (!rdoH8103c1.isChecked() & !rdoH8103c2.isChecked() & !rdoH8103c3.isChecked() & secH8103c.isShown()) {
@@ -2274,8 +2274,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8111b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8111b.getText().toString().length() == 0 ? "0" : txtH8111b.getText().toString()) < 0 || Double.valueOf(txtH8111b.getText().toString().length() == 0 ? "999" : txtH8111b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8111b.getText().toString().length() == 0 ? "0" : txtH8111b.getText().toString()) < 0 || Double.valueOf(txtH8111b.getText().toString().length() == 0 ? "999999" : txtH8111b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8111b.requestFocus();
                 return;
             } else if (!rdoH8111c1.isChecked() & !rdoH8111c2.isChecked() & !rdoH8111c3.isChecked() & secH8111c.isShown()) {
@@ -2302,8 +2302,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8121b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8121b.getText().toString().length() == 0 ? "0" : txtH8121b.getText().toString()) < 0 || Double.valueOf(txtH8121b.getText().toString().length() == 0 ? "999" : txtH8121b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8121b.getText().toString().length() == 0 ? "0" : txtH8121b.getText().toString()) < 0 || Double.valueOf(txtH8121b.getText().toString().length() == 0 ? "999999" : txtH8121b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8121b.requestFocus();
                 return;
             } else if (!rdoH8121c1.isChecked() & !rdoH8121c2.isChecked() & !rdoH8121c3.isChecked() & secH8121c.isShown()) {
@@ -2330,8 +2330,8 @@ public class Cost2 extends Activity {
                 Connection.MessageBox(Cost2.this, "Required field: পরিমাণ(সংখ্যা).");
                 txtH8122b.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH8122b.getText().toString().length() == 0 ? "0" : txtH8122b.getText().toString()) < 0 || Double.valueOf(txtH8122b.getText().toString().length() == 0 ? "999" : txtH8122b.getText().toString()) > 999) {
-                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999(পরিমাণ(সংখ্যা)).");
+            } else if (Double.valueOf(txtH8122b.getText().toString().length() == 0 ? "0" : txtH8122b.getText().toString()) < 0 || Double.valueOf(txtH8122b.getText().toString().length() == 0 ? "999999" : txtH8122b.getText().toString()) > 999999) {
+                Connection.MessageBox(Cost2.this, "Value should be between 0 and 999999(পরিমাণ(সংখ্যা)).");
                 txtH8122b.requestFocus();
                 return;
             } else if (!rdoH8122c1.isChecked() & !rdoH8122c2.isChecked() & !rdoH8122c3.isChecked() & secH8122c.isShown()) {
