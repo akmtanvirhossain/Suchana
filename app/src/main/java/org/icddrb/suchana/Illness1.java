@@ -398,11 +398,11 @@ public class Illness1 extends Activity {
             listH171b.add("1-কোন চিকিৎসা নেয়া হয়নি");
             listH171b.add("2-বাড়ীতেই সাধারণ চিকিৎসা");
             listH171b.add("3-গ্রাম ডাক্তার");
-            listH171b.add("4-প্যারামেডিক PC/CHCP/FWV/CHW/SS/HA/MA");
+            listH171b.add("4-প্যারামেডিক /CHCP/FWV/CHW/SS/HA/MA");
             listH171b.add("5-এলোপ্যাথিক ঔষুধ বিক্রেতা (রোগ বুঝে চিকিৎসা দেয়)");
             listH171b.add("6-যোগ্যতাসম্পন্ন সরকারী/বেসরকারী MBBS ডাক্তার");
             listH171b.add("7-পির/ফকির/ওঝা");
-            listH171b.add("8-কবিরাজ হেকিম  বিশ্বাস বৈদ্য");
+            listH171b.add("8-কবিরাজ /হেকিম /বৈদ্য");
             listH171b.add("9-হোমিওপ্যাথি");
             listH171b.add("10-অন্যান্য");
             ArrayAdapter<String> adptrH171b = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH171b);
