@@ -603,6 +603,50 @@ public class Father extends Activity {
                 }
             });
 
+            chkF218a.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+            chkF218b.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+            chkF218c.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+            chkF218d.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+            chkF218e.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+            chkF218f.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF218g.setChecked(false);
+                    }
+                }
+            });
+
+
             secF219 = (LinearLayout) findViewById(R.id.secF219);
             lineF219 = (View) findViewById(R.id.lineF219);
             VlblF219 = (TextView) findViewById(R.id.VlblF219);
