@@ -91,6 +91,7 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
+                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -116,7 +117,7 @@ public class MainMenu extends Activity {
                                         tableList.add("IGA");
 
                                         //Woman, Child
-                                        tableList.add("PreHis");
+                                        tableList.add("PregHis");
                                         tableList.add("Knowledge");
                                         tableList.add("FdhabitKnow");
                                         tableList.add("Handwash");
@@ -126,6 +127,9 @@ public class MainMenu extends Activity {
                                         tableList.add("FoodDiversity");
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
+                                        */
+
+                                        tableList.add("FdhabitKnow");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 

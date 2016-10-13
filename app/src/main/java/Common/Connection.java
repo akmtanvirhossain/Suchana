@@ -1345,7 +1345,7 @@ public class Connection extends SQLiteOpenHelper {
         String SQLStr = "";
         String Res = "";
 
-        Cursor cur_H = ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where tablename='" + TableName + "'");
+        Cursor cur_H = ReadData("Select ColumnList as columnlist, UniqueID as uniqueid from DatabaseTab where lower(tablename)='" + TableName.toLowerCase() + "'");
         cur_H.moveToFirst();
 
         while (!cur_H.isAfterLast()) {
