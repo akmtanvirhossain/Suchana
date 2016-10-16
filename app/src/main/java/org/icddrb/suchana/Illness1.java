@@ -789,7 +789,7 @@ public class Illness1 extends Activity {
                 txtH171VCost.setText(item.getH171VCost());
                 txtH171TCost.setText(item.getH171TCost());
                 txtH171TrCost.setText(item.getH171TrCost());
-                String[] d_rdogrpH171f = new String[]{"1", "2", "9"};
+                String[] d_rdogrpH171f = new String[]{"1", "0", "8"};
                 for (int i = 0; i < d_rdogrpH171f.length; i++) {
                     if (item.getH171f().equals(String.valueOf(d_rdogrpH171f[i]))) {
                         rb = (RadioButton) rdogrpH171f.getChildAt(i);
