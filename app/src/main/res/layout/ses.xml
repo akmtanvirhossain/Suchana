@@ -376,7 +376,7 @@
                 <EditText
                     android:id="@+id/txtH321X"
                     style="@style/customEdit"
-                    android:layout_width="220sp"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="textMultiLine"
@@ -440,7 +440,7 @@
                     android:id="@+id/lblH322X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H322X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -517,7 +517,7 @@
                     android:id="@+id/lblH323X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H323X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -594,7 +594,7 @@
                     android:id="@+id/lblH324X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H324X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -671,7 +671,7 @@
                     android:id="@+id/lblH325X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="H325X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -731,16 +731,16 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="MSlNo"
+                    android:text=""
                     android:textSize="20sp"
                     android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10sp"
-                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্বর #"
+                    android:text="তথ্যদানে সহায়তাকারীর লাইন নম্ব"
                     android:textSize="20sp" />
 
                 <EditText
@@ -756,7 +756,7 @@
 
                 <Spinner
                     android:id="@+id/spnMSlNo"
-                    android:layout_width="200sp"
+                    android:layout_width="180sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"

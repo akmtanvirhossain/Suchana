@@ -336,10 +336,10 @@ public class Land extends Activity {
 
             listH5d.add("");
             listH5d.add("1-পতিত জমি");
-            listH5d.add("2-নিজপরিচালিত");
+            listH5d.add("2-নিজ পরিচালিত");
             listH5d.add("3-ভাড়া বা ইজারা নেয়া (নগদ)");
             listH5d.add("4-ভাড়া বা ইজারা নেয়া (ফসল ভাগাভাগি)");
-            listH5d.add("5-বন্ধকনেয়া");
+            listH5d.add("5-বন্ধক নেয়া");
             listH5d.add("6-ভাড়া বা ইজারা দেয়া (নগদ)");
             listH5d.add("7-ভাড়া বা ইজারা দেয়া (ফসল ভাগাভাগি)");
             listH5d.add("8-বন্ধক দেয়া");
@@ -354,10 +354,10 @@ public class Land extends Activity {
 
             listH5e.add("");
             listH5e.add("1-পতিত জমি");
-            listH5e.add("2-নিজপরিচালিত");
+            listH5e.add("2-নিজ পরিচালিত");
             listH5e.add("3-ভাড়া/ইজারা নেয়া/নগদ");
             listH5e.add("4-ভাড়া/ইজারা নেয়া/ফসল ভাগাভাগি");
-            listH5e.add("5-বন্ধকনেয়া");
+            listH5e.add("5-বন্ধক নেয়া");
             listH5e.add("6-ভাড়া/ইজারা দেয়া/নগদ");
             listH5e.add("7-ভাড়া/ইজারা দেয়া/ফসল ভাগাভাগি");
             listH5e.add("8-বন্ধক দেয়া");

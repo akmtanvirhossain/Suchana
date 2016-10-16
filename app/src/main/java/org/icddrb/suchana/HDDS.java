@@ -498,7 +498,7 @@ public class HDDS extends Activity {
             listH7L.add("17-খাবারে যোগ করা বা রান্নার জন্য তেল, চর্বি বা মাখন");
             listH7L.add("18-চিনি,মধু,মিষ্টি যুক্ত সোডা বা মিষ্টি যুক্ত রসের পানীয় বা চিনি যুক্ত খাবার যেমন চকলেট,ক্যান্ডি,কুকিজ এবং কেক");
             listH7L.add("19-মশলা,কালো মরিচ,আচার/সস জাতীয় খাবার যেমন সয়া সস");
-            listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফ ইত্যাদিি");
+            listH7L.add("20-চা,বোতল জাত জুস,কোল্ড ড্রিংস,কফি  ইত্যাদিি");
             VlblH7L = (TextView) findViewById(R.id.VlblH7L);
             ArrayAdapter<String> adptrH7 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH7);
             spnH7.setAdapter(adptrH7);
