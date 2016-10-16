@@ -679,7 +679,7 @@ public class Illness1 extends Activity {
             }
             else if(a==1)
             {
-                if(!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and Sl='" + SlNo + "'"))
+                if (!C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and SlNo='" + SlNo + "'"))
                 {
                     if(rdoH1712.isChecked()==true)
                     {
@@ -771,6 +771,7 @@ public class Illness1 extends Activity {
             for (Illness1_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 String[] d_rdogrpH171 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH171.length; i++) {
                     if (item.getH171().equals(String.valueOf(d_rdogrpH171[i]))) {

@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
@@ -1149,6 +1148,7 @@ public class Agriculture extends Activity {
             for (Agriculture_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 String[] d_rdogrpH151 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH151.length; i++) {
                     if (item.getH151().equals(String.valueOf(d_rdogrpH151[i]))) {
