@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "09102016";  //Format: DDMMYYYY
+            SystemUpdateDT = "16102016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -90,6 +90,7 @@ public class LoginActivity extends Activity {
             if (netwoekAvailable) {
                 //Database Structure Update
                 C.Sync_DatabaseStructure(UniqueID);
+                C.Sync_Download("DataCollector", UniqueID, "");
 
                 if (!C.Existence("Select * from VillageList limit 1")) {
                     C.Sync_Download("VillageList", UniqueID, "");
@@ -97,7 +98,7 @@ public class LoginActivity extends Activity {
             }
             //**************************************************************************************
 
-            uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from UserList order by UserName"));
+            uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from DataCollector order by UserName"));
             String[] CL = uid.getSelectedItem().toString().split("-");
             uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
 
@@ -156,7 +157,7 @@ public class LoginActivity extends Activity {
                         String[] U = Connection.split(uid.getSelectedItem().toString(), '-');
                         g.setUserId(U[0]);
 
-                        if (!C.Existence("Select * from UserList where UserId='" + U[0] + "' and Pass='" + pass.getText().toString() + "'")) {
+                        if (!C.Existence("Select * from DataCollector where UserId='" + U[0] + "' and Pass='" + pass.getText().toString() + "'")) {
                             Connection.MessageBox(LoginActivity.this, "This is not a valid user id or password");
                             return;
                         }

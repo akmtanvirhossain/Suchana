@@ -154,7 +154,7 @@ public class MainMenu extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            finishAffinity();
                             System.exit(0);
                         }
                     });
