@@ -22,7 +22,9 @@ public class HHIdentity_DataModel {
     private String _Un = "";
     private String _Vill = "";
     private String _H11 = "";
+    private String _WRHHNo = "";
     private String _SuchanaID = "";
+    private String _ScreeningID = "";
     private String _AgeGroup = "";
     private String _H17 = "";
     private String _Result = "";
@@ -55,6 +57,14 @@ public class HHIdentity_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
+
+    private String _BenName = "";
+    private String _HeadName = "";
+    private String _HsuName = "";
+    private String _MobNo = "";
+    private String _vdate = "";
+
+
 
     public String getRnd() {
         return _Rnd;
@@ -96,6 +106,14 @@ public class HHIdentity_DataModel {
         _Vill = newValue;
     }
 
+    public String getWRHHNo() {
+        return _WRHHNo;
+    }
+
+    public void setWRHHNo(String newValue) {
+        _WRHHNo = newValue;
+    }
+
     public String getH11() {
         return _H11;
     }
@@ -103,6 +121,14 @@ public class HHIdentity_DataModel {
     public void setH11(String newValue) {
         _H11 = newValue;
     }
+    public String getScreeningID() {
+        return _ScreeningID;
+    }
+
+    public void setScreeningID(String newValue) {
+        _ScreeningID = newValue;
+    }
+
 
     public String getSuchanaID() {
         return _SuchanaID;
@@ -111,6 +137,7 @@ public class HHIdentity_DataModel {
     public void setSuchanaID(String newValue) {
         _SuchanaID = newValue;
     }
+
 
     public String getAgeGroup() {
         return _AgeGroup;
@@ -304,6 +331,48 @@ public class HHIdentity_DataModel {
         _H08 = newValue;
     }
 
+    public String getBenName() {
+        return _BenName;
+    }
+
+    public void setBenName(String newValue) {
+        _BenName = newValue;
+    }
+
+    public String getHeadName() {
+        return _HeadName;
+    }
+
+    public void setHeadName(String newValue) {
+        _HeadName = newValue;
+    }
+
+    public String getHsuName() {
+        return _HsuName;
+    }
+
+    public void setHsuName(String newValue) {
+        _HsuName = newValue;
+    }
+
+    public String getMobNo() {
+        return _MobNo;
+    }
+
+    public void setMobNo(String newValue) {
+        _MobNo = newValue;
+    }
+
+    public String getvdate() {
+        return _vdate;
+    }
+
+    public void setvdate(String newValue) {
+        _vdate = newValue;
+    }
+
+
+
     public void setStartTime(String newValue) {
         _StartTime = newValue;
     }
@@ -360,7 +429,7 @@ public class HHIdentity_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,Dist,Upz,Un,Vill,H11,SuchanaID,AgeGroup,H17,Result,ResultX,H16,H16X,H13,H14,H01,H02,H03,H04,H05,H06,H07,H07a,H07b,H07c,H07d,H07e,H07f,H07g,H07h,H08,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _Dist + "', '" + _Upz + "', '" + _Un + "', '" + _Vill + "', '" + _H11 + "', '" + _SuchanaID + "', '" + _AgeGroup + "', '" + _H17 + "', '" + _Result + "', '" + _ResultX + "', '" + _H16 + "', '" + _H16X + "', '" + _H13 + "', '" + _H14 + "', '" + _H01 + "', '" + _H02 + "', '" + _H03 + "', '" + _H04 + "', '" + _H05 + "', '" + _H06 + "', '" + _H07 + "', '" + _H07a + "', '" + _H07b + "', '" + _H07c + "', '" + _H07d + "', '" + _H07e + "', '" + _H07f + "', '" + _H07g + "', '" + _H07h + "', '" + _H08 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,Dist,Upz,Un,Vill,H11,ScreeningID,AgeGroup,H17,Result,ResultX,H16,H16X,H13,H14,H01,H02,H03,H04,H05,H06,H07,H07a,H07b,H07c,H07d,H07e,H07f,H07g,H07h,H08,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _Dist + "', '" + _Upz + "', '" + _Un + "', '" + _Vill + "', '" + _H11 + "', '" + _ScreeningID + "', '" + _AgeGroup + "', '" + _H17 + "', '" + _Result + "', '" + _ResultX + "', '" + _H16 + "', '" + _H16X + "', '" + _H13 + "', '" + _H14 + "', '" + _H01 + "', '" + _H02 + "', '" + _H03 + "', '" + _H04 + "', '" + _H05 + "', '" + _H06 + "', '" + _H07 + "', '" + _H07a + "', '" + _H07b + "', '" + _H07c + "', '" + _H07d + "', '" + _H07e + "', '" + _H07f + "', '" + _H07g + "', '" + _H07h + "', '" + _H08 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -373,7 +442,7 @@ public class HHIdentity_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',Dist = '" + _Dist + "',Upz = '" + _Upz + "',Un = '" + _Un + "',Vill = '" + _Vill + "',H11 = '" + _H11 + "',SuchanaID = '" + _SuchanaID + "',AgeGroup = '" + _AgeGroup + "',H17 = '" + _H17 + "',Result = '" + _Result + "',ResultX = '" + _ResultX + "',H16 = '" + _H16 + "',H16X = '" + _H16X + "',H13 = '" + _H13 + "',H14 = '" + _H14 + "',H01 = '" + _H01 + "',H02 = '" + _H02 + "',H03 = '" + _H03 + "',H04 = '" + _H04 + "',H05 = '" + _H05 + "',H06 = '" + _H06 + "',H07 = '" + _H07 + "',H07a = '" + _H07a + "',H07b = '" + _H07b + "',H07c = '" + _H07c + "',H07d = '" + _H07d + "',H07e = '" + _H07e + "',H07f = '" + _H07f + "',H07g = '" + _H07g + "',H07h = '" + _H07h + "',H08 = '" + _H08 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',Dist = '" + _Dist + "',Upz = '" + _Upz + "',Un = '" + _Un + "',Vill = '" + _Vill + "',H11 = '" + _H11 + "',ScreeningID = '" + _ScreeningID + "',AgeGroup = '" + _AgeGroup + "',H17 = '" + _H17 + "',Result = '" + _Result + "',ResultX = '" + _ResultX + "',H16 = '" + _H16 + "',H16X = '" + _H16X + "',H13 = '" + _H13 + "',H14 = '" + _H14 + "',H01 = '" + _H01 + "',H02 = '" + _H02 + "',H03 = '" + _H03 + "',H04 = '" + _H04 + "',H05 = '" + _H05 + "',H06 = '" + _H06 + "',H07 = '" + _H07 + "',H07a = '" + _H07a + "',H07b = '" + _H07b + "',H07c = '" + _H07c + "',H07d = '" + _H07d + "',H07e = '" + _H07e + "',H07f = '" + _H07f + "',H07g = '" + _H07g + "',H07h = '" + _H07h + "',H08 = '" + _H08 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -395,8 +464,8 @@ public class HHIdentity_DataModel {
             d._Upz = cur.getString(cur.getColumnIndex("Upz"));
             d._Un = cur.getString(cur.getColumnIndex("Un"));
             d._Vill = cur.getString(cur.getColumnIndex("Vill"));
-            d._H11 = cur.getString(cur.getColumnIndex("H11"));
-            d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
+            d._WRHHNo = cur.getString(cur.getColumnIndex("WRHHNo"));
+            d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));
             d._H17 = cur.getString(cur.getColumnIndex("H17"));
             d._Result = cur.getString(cur.getColumnIndex("Result"));
@@ -460,17 +529,19 @@ public class HHIdentity_DataModel {
             d._Upz = cur.getString(cur.getColumnIndex("Upz"));
             d._Un = cur.getString(cur.getColumnIndex("Un"));
             d._Vill = cur.getString(cur.getColumnIndex("Vill"));
-            d._H11 = cur.getString(cur.getColumnIndex("H11"));
-            d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
-            d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));
-            d._H17 = cur.getString(cur.getColumnIndex("H17"));
-            d._Result = cur.getString(cur.getColumnIndex("Result"));
-
+            d._WRHHNo = cur.getString(cur.getColumnIndex("WRHHNo"));
+            d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._distName = cur.getString(cur.getColumnIndex("DistName"));
             d._upzName = cur.getString(cur.getColumnIndex("UPZName"));
             d._unName = cur.getString(cur.getColumnIndex("UNName"));
             d._villName = cur.getString(cur.getColumnIndex("VillName"));
             d._Upload = cur.getString(cur.getColumnIndex("Upload"));
+
+            d._BenName = cur.getString(cur.getColumnIndex("BenName"));
+            d._HeadName = cur.getString(cur.getColumnIndex("HeadName"));
+            d._HsuName = cur.getString(cur.getColumnIndex("HsuName"));
+            d._MobNo = cur.getString(cur.getColumnIndex("MobNo"));
+            d._vdate = cur.getString(cur.getColumnIndex("VDate"));
 
             data.add(d);
 

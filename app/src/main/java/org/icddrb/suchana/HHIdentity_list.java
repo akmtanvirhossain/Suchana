@@ -160,7 +160,7 @@ public class HHIdentity_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", "");
                     IDbundle.putString("SuchanaID", "");
-                    Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
+                    Intent intent = new Intent(getApplicationContext(), Screening.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
                     startActivityForResult(intent,1);
@@ -236,10 +236,10 @@ public class HHIdentity_list extends Activity {
             Integer i = 1;
             HHIdentity_DataModel d = new HHIdentity_DataModel();
             String SQL = "";
-            SQL = "Select Rnd, SuchanaID, Dist, Upz, Un, Vill, H11, AgeGroup, H17, Result,DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload from HHIdentity i";
+            SQL = "Select Rnd, ScreeningID, Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
-            SQL += " where date(H17) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
-            SQL += " order by date(H17) desc, date(EnDt) desc";
+            SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
+            SQL += " order by date(VDate) desc, date(EnDt) desc";
 
             List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
             dataList.clear();
@@ -256,12 +256,13 @@ public class HHIdentity_list extends Activity {
                 map.put("Upz", item.getupzName());
                 map.put("Un", item.getunName());
                 map.put("Vill", item.getvillName());
-                map.put("H11", item.getH11());
-                map.put("SuchanaID", item.getSuchanaID());
-                map.put("AgeGroup", item.getAgeGroup());
-                map.put("H17", item.getH17().toString().length()==0 ? "" : Global.DateConvertDMY(item.getH17()));
-                map.put("Result", item.getResult());
-
+                map.put("H11", item.getWRHHNo());
+                map.put("ScreeningID", item.getScreeningID());
+                map.put("BenName", item.getBenName());
+                map.put("HeadName", item.getHeadName());
+                map.put("HsuName", item.getHsuName());
+                map.put("MobNo", item.getMobNo());
+                map.put("vdate", item.getvdate().toString().length()==0 ? "" : Global.DateConvertDMY(item.getvdate()));
                 map.put("Upload",item.getUpload());
                 map.put("sl", i.toString());
                 i += 1;
@@ -319,16 +320,25 @@ public class HHIdentity_list extends Activity {
             final TextView village = (TextView) convertView.findViewById(R.id.village);
             final TextView hhNo = (TextView) convertView.findViewById(R.id.hhNo);
             final TextView visitdate = (TextView) convertView.findViewById(R.id.visitdate);
+            final TextView BenName = (TextView) convertView.findViewById(R.id.BenName);
+            final TextView HsuName = (TextView) convertView.findViewById(R.id.HsuName);
+            final TextView HeadName = (TextView) convertView.findViewById(R.id.HeadName);
+            final TextView MobNo = (TextView) convertView.findViewById(R.id.MobNo);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
-            SuchanaID.setText(": " + o.get("SuchanaID"));
+            SuchanaID.setText(": " + o.get("ScreeningID"));
             zilla.setText(": " + o.get("Dist"));
             upazila.setText(": " + o.get("Upz"));
             unions.setText(": " + o.get("Un"));
             village.setText(": " + o.get("Vill"));
             hhNo.setText(": " + o.get("H11"));
-            visitdate.setText(": " + o.get("H17"));
+            BenName.setText(": " + o.get("BenName"));
+            HsuName.setText(": " + o.get("HsuName"));
+            HeadName.setText(": " + o.get("HeadName"));
+            MobNo.setText(": " + o.get("MobNo"));
+
+            visitdate.setText(": " + o.get("vdate"));
 
             Integer i = Integer.valueOf(o.get("sl"));
             if (i % 2 == 0)
@@ -352,9 +362,9 @@ public class HHIdentity_list extends Activity {
                     //Write your code here
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
-                    IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                    IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                     Intent f1;
-                    f1 = new Intent(getApplicationContext(), UpdateMenu.class);
+                    f1 = new Intent(getApplicationContext(), Screening.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
                 }
