@@ -159,7 +159,7 @@ public class HHIdentity_list extends Activity {
                 public void onClick(View view) {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", "");
-                    IDbundle.putString("SuchanaID", "");
+                    IDbundle.putString("ScreeningID", "");
                     Intent intent = new Intent(getApplicationContext(), Screening.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
