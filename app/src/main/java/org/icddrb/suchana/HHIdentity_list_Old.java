@@ -100,7 +100,7 @@ public class HHIdentity_list_Old extends Activity {
         super.onCreate(savedInstanceState);
         try
         {
-            setContentView(R.layout.hhidentity_list);
+            setContentView(R.layout.hhidentity_list_old);
             C = new Connection(this);
             g = Global.getInstance();
             StartTime = g.CurrentTime24();
@@ -234,14 +234,14 @@ public class HHIdentity_list_Old extends Activity {
         try
         {
             Integer i = 1;
-            HHIdentity_DataModel d = new HHIdentity_DataModel();
+            HHIdentity_DataModel_Old d = new HHIdentity_DataModel_Old();
             String SQL = "";
             SQL = "Select Rnd, SuchanaID, Dist, Upz, Un, Vill, H11, AgeGroup, H17, Result,DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload from HHIdentity i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where date(H17) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
             SQL += " order by date(H17) desc, date(EnDt) desc";
 
-            List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
+            List<HHIdentity_DataModel_Old> data = d.SelectAllList(this, SQL);
             dataList.clear();
 
             dataAdapter = null;
@@ -249,7 +249,7 @@ public class HHIdentity_list_Old extends Activity {
             ListView list = (ListView)findViewById(R.id.lstData);
             HashMap<String, String> map;
 
-            for(HHIdentity_DataModel item : data){
+            for(HHIdentity_DataModel_Old item : data){
                 map = new HashMap<String, String>();
                 map.put("Rnd", item.getRnd());
                 map.put("Dist", item.getdistName());
@@ -267,7 +267,7 @@ public class HHIdentity_list_Old extends Activity {
                 i += 1;
                 dataList.add(map);
             }
-            dataAdapter = new SimpleAdapter(HHIdentity_list_Old.this, dataList, R.layout.hhidentity_list,new String[] {"rowsec"},
+            dataAdapter = new SimpleAdapter(HHIdentity_list_Old.this, dataList, R.layout.hhidentity_list_old,new String[] {"rowsec"},
                     new int[] {R.id.secListRow});
             list.setAdapter(new DataListAdapter(this, dataAdapter));
 
@@ -307,7 +307,7 @@ public class HHIdentity_list_Old extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.hhidentity_row1, null);
+                convertView = inflater.inflate(R.layout.hhidentity_row1_old, null);
             }
             LinearLayout   secListRow = (LinearLayout)convertView.findViewById(R.id.secListRow);
 

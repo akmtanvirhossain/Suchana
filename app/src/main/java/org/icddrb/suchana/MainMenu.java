@@ -62,7 +62,7 @@ public class MainMenu extends Activity {
                 @Override
                 public void onClick(View v) {
                     finish();
-                    startActivity(new Intent(MainMenu.this,HHIdentity_list.class));
+                    startActivity(new Intent(MainMenu.this,HHIdentity_list_Old.class));
                 }
             });
 
