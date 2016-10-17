@@ -98,7 +98,7 @@ public class LoginActivity extends Activity {
             }
             //**************************************************************************************
 
-            uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from DataCollector order by UserName"));
+            uid.setAdapter(C.getArrayAdapter("select UserId||'-'||UserName User from DataCollector where Active='1' order by UserName"));
             String[] CL = uid.getSelectedItem().toString().split("-");
             uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
 

@@ -90,6 +90,7 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
+                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -127,6 +128,10 @@ public class MainMenu extends Activity {
                                         tableList.add("Anthro");
                                         tableList.add("Father");
 
+                                        C.DataSync_UploadDownload(tableList, USERID);
+                                        */
+
+                                        tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);
 
                                         //Village List
