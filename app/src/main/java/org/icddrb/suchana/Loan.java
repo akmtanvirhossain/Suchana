@@ -10,7 +10,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -863,6 +862,7 @@ public class Loan extends Activity {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
               //  txtMSlNo.setText(item.getMSlNo());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getMSlNo()));
                 String[] d_rdogrpH111 = new String[]{"1", "0"};
                 for (int i = 0; i < d_rdogrpH111.length; i++) {
                     if (item.getH111().equals(String.valueOf(d_rdogrpH111[i]))) {

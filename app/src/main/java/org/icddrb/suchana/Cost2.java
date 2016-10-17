@@ -1542,7 +1542,7 @@ public class Cost2 extends Activity {
                         rdogrpH8103c.clearCheck();
                         secH8103d.setVisibility(View.GONE);
                         lineH8103d.setVisibility(View.GONE);
-                        txtH8102d.setText("");
+                        txtH8103d.setText("");
                     }
                 }
 

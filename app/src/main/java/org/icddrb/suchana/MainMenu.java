@@ -76,7 +76,6 @@ public class MainMenu extends Activity {
                         return;
                     }
 
-
                     AlertDialog.Builder adb = new AlertDialog.Builder(MainMenu.this);
                     adb.setTitle("Data Sync");
                     adb.setMessage("Do you want to Sync Data[Yes/No]?");
@@ -91,7 +90,6 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
-                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -123,13 +121,11 @@ public class MainMenu extends Activity {
                                         tableList.add("Handwash");
                                         tableList.add("NutHealth");
                                         tableList.add("WomenEmp");
-                                        tableList.add("DomViolence");
+                                        tableList.add("DomViolance");
                                         tableList.add("FoodDiversity");
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
-                                        */
-
-                                        tableList.add("FdhabitKnow");
+                                        tableList.add("Father");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 
