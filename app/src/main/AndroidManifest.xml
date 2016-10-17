@@ -45,6 +45,8 @@
         <activity
             android:name=".UpdateMenu"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity android:name=".Screening" />
+
         <activity android:name=".HHIdentity" />
         <activity android:name=".HHIdentity_list" />
         <activity android:name=".Member" />
@@ -62,7 +64,6 @@
         <activity android:name=".FoodDiversity" />
         <activity android:name=".Anthro" />
         <activity android:name=".Destruction1" />
-        <activity android:name=".Destruction1_list" />
         <activity android:name=".Destruction2" />
         <activity android:name=".Agriculture" />
         <activity android:name=".Agriculture_list" />
