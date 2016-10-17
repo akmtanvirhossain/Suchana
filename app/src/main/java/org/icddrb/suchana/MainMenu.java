@@ -90,6 +90,7 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
+                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -128,6 +129,10 @@ public class MainMenu extends Activity {
                                         tableList.add("Father");
 
                                         C.DataSync_UploadDownload(tableList, USERID);
+                                        */
+
+                                        tableList.add("Screening");
+                                        C.DataSync_UploadDownload(tableList, USERID);
 
                                         //Village List
                                         C.Sync_Download("VillageList", USERID, "");
@@ -154,7 +159,7 @@ public class MainMenu extends Activity {
                     adb.setNegativeButton("No", null);
                     adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            finishAffinity();
                             System.exit(0);
                         }
                     });
