@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/secListRow4"
+            android:id="@+id/secListRow0"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5sp"
@@ -21,15 +21,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="110sp"
+                android:layout_width="120sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="সূচনা আইডি"
+                android:text="Screening ID"
                 android:textColor="#006699" />
 
             <TextView
                 android:id="@+id/SuchanaID"
-                android:layout_width="160dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:textColor="#006699" />
@@ -62,14 +62,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="110sp"
+                android:layout_width="120sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="জেলা" />
 
             <TextView
                 android:id="@+id/zilla"
-                android:layout_width="160dp"
+                android:layout_width="150sp"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
 
@@ -101,14 +101,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="110sp"
+                android:layout_width="120sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="ইউনিয়ন" />
 
             <TextView
                 android:id="@+id/unions"
-                android:layout_width="160dp"
+                android:layout_width="150sp"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
 
@@ -124,13 +124,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="left" />
         </LinearLayout>
-
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dip"
             android:layout_marginBottom="0sp"
             android:background="#CCCCCC" />
-
         <LinearLayout
             android:id="@+id/secListRow3"
             android:layout_width="fill_parent"
@@ -140,14 +138,90 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="110sp"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="উপকারভোগী" />
+
+            <TextView
+                android:id="@+id/BenName"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="স্বামী" />
+
+            <TextView
+                android:id="@+id/HsuName"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="0sp"
+            android:background="#CCCCCC" />
+        <LinearLayout
+            android:id="@+id/secListRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="খানা প্রধান" />
+
+            <TextView
+                android:id="@+id/HeadName"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="মোবাইল" />
+
+            <TextView
+                android:id="@+id/MobNo"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="0sp"
+            android:background="#CCCCCC" />
+
+        <LinearLayout
+            android:id="@+id/secListRow5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120sp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="তারিখ " />
 
             <TextView
                 android:id="@+id/visitdate"
-                android:layout_width="160dp"
+                android:layout_width="150sp"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
 
