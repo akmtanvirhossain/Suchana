@@ -23,6 +23,7 @@ import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -38,8 +39,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+import org.joda.time.Months;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -190,7 +197,10 @@ public class Member extends Activity {
     RadioGroup rdogrpH220;
     RadioButton rdoH2201;
     RadioButton rdoH2202;
-
+    LinearLayout secC15;
+    View lineC15;
+    TextView VlblC15;
+    EditText dtpC15;
     LinearLayout secH221;
     View lineH221;
     TextView VlblH221;
@@ -206,20 +216,7 @@ public class Member extends Activity {
     private int mDay;
     private int mMonth;
     private int mYear;
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate = null;
 
-
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
     private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
         public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
             hour = selectedHour;
@@ -231,7 +228,23 @@ public class Member extends Activity {
 
         }
     };
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
 
+            dtpDate = (EditText) findViewById(R.id.dtpC15);
+            if (VariableID.equals("btnC15")) {
+                dtpDate = (EditText) findViewById(R.id.dtpC15);
+            }
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
 
     //Disabled Back/Home key
     //--------------------------------------------------------------------------------------------------
@@ -243,7 +256,6 @@ public class Member extends Activity {
             return true;
         }
     }
-
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -935,6 +947,40 @@ public class Member extends Activity {
             rdogrpH220 = (RadioGroup) findViewById(R.id.rdogrpH220);
             rdoH2201 = (RadioButton) findViewById(R.id.rdoH2201);
             rdoH2202 = (RadioButton) findViewById(R.id.rdoH2202);
+            rdogrpH220.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if (rdoH2201.isChecked()) {
+                        secC15.setVisibility(View.VISIBLE);
+                        lineC15.setVisibility(View.VISIBLE);
+                    } else {
+                        dtpC15.setText("");
+                        secC15.setVisibility(View.GONE);
+                        lineC15.setVisibility(View.GONE);
+                    }
+                }
+            });
+
+            secC15 = (LinearLayout) findViewById(R.id.secC15);
+            lineC15 = (View) findViewById(R.id.lineC15);
+            secC15.setVisibility(View.GONE);
+            lineC15.setVisibility(View.GONE);
+            VlblC15 = (TextView) findViewById(R.id.VlblC15);
+            dtpC15 = (EditText) findViewById(R.id.dtpC15);
+            dtpC15.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    final int DRAWABLE_RIGHT = 2;
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        if (event.getRawX() >= (dtpC15.getRight() - dtpC15.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                            VariableID = "btnC15";
+                            showDialog(DATE_DIALOG);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
 
             secH221 = (LinearLayout) findViewById(R.id.secH221);
             lineH221 = (View) findViewById(R.id.lineH221);
@@ -960,7 +1006,6 @@ public class Member extends Activity {
             return;
         }
     }
-
 
     private void DataSave() {
         try {
@@ -1165,6 +1210,35 @@ public class Member extends Activity {
                 rdogrpH220.requestFocus();
                 return;
             }
+            DV = Global.DateValidate(dtpC15.getText().toString());
+            if (DV.length() != 0 & secC15.isShown()) {
+                Connection.MessageBox(Member.this, DV);
+                dtpC15.requestFocus();
+                return;
+            }
+
+
+            if (secC15.isShown()) {
+
+                SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+                Date date = format1.parse(dtpC15.getText().toString());
+                String intMonth = (String) android.text.format.DateFormat.format("MM", date); //06
+                String year = (String) android.text.format.DateFormat.format("yyyy", date); //2013
+                String day = (String) android.text.format.DateFormat.format("dd", date); //20
+                LocalDate birthdate = new LocalDate(Integer.valueOf(year), Integer.valueOf(intMonth), Integer.valueOf(day));
+                LocalDate now = new LocalDate();
+                // Years age = Years.yearsBetween(birthdate, now);
+                int months = Months.monthsBetween(birthdate, now).getMonths();
+                int days = Days.daysBetween(birthdate, now).getDays();
+                // int xMonths = Integer.parseInt(months.toString());
+                int mDays = (30 * 12 * Integer.valueOf(txtH26Y.getText().toString()) + (30 * Integer.valueOf(txtH26M.getText().toString())));
+                if (Math.abs(days - mDays) > 30) {
+                    Connection.MessageBox(Member.this, "Required field: বয়স এর সাথে জন্মতারিখ মিল নেই");
+                    dtpC15.requestFocus();
+                    return;
+
+                }
+            }
             if (spnH221.getSelectedItemPosition() == 0 & secH221.isShown()) {
                 Connection.MessageBox(Member.this, "Required field: মায়ের লাইন নম্বর.");
                 spnH221.requestFocus();
@@ -1297,6 +1371,7 @@ public class Member extends Activity {
                 rb = (RadioButton) rdogrpH220.getChildAt(i);
                 if (rb.isChecked()) objSave.setH220(d_rdogrpH220[i]);
             }
+            objSave.setC15(dtpC15.getText().toString().length() > 0 ? Global.DateConvertYMD(dtpC15.getText().toString()) : dtpC15.getText().toString());
 
 
             //objSave.setH221(txtH221.getText().toString());
@@ -1418,6 +1493,10 @@ public class Member extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+
+                dtpC15.setText(item.getC15().toString().length() == 0 ? "" : Global.DateConvertDMY(item.getC15()));
+
 
                 //txtH221.setText(item.getH221());
                 spnH221.setSelection(Global.SpinnerItemPositionAnyLength(spnH221, item.getH221()));

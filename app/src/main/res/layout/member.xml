@@ -1185,6 +1185,45 @@
                 android:background="#CCCCCC" />
 
             <LinearLayout
+                android:id="@+id/secC15"
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblC15"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="C15"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/VlblC15"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:text="শিশুর জন্মতারিখ (দিন/মাস/বছর)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/dtpC15"
+                    style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:drawableRight="@drawable/calendersmall"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineC15"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
                 android:id="@+id/secH221"
                 style="@style/rowStyle0"
                 android:layout_width="fill_parent"

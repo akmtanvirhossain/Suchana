@@ -49,6 +49,7 @@ public class Member_DataModel {
     private String _Lon = "";
     private String _EnDt = "";
     private String _Upload = "2";
+    private String _C15 = "";
 
     public String getRnd() {
         return _Rnd;
@@ -266,6 +267,13 @@ public class Member_DataModel {
         _H220 = newValue;
     }
 
+    public String getC15() {
+        return _C15;
+    }
+
+    public void setC15(String newValue) {
+        _C15 = newValue;
+    }
     public String getH221() {
         return _H221;
     }
@@ -330,7 +338,7 @@ public class Member_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24,H25,H26Y,H26M,H27,H28,H29,H29X,H210,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H220,H221,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24 + "', '" + _H25 + "', '" + _H26Y + "', '" + _H26M + "', '" + _H27 + "', '" + _H28 + "', '" + _H29 + "', '" + _H29X + "', '" + _H210 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H220 + "', '" + _H221 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24,H25,H26Y,H26M,H27,H28,H29,H29X,H210,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H220,C15,H221,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24 + "', '" + _H25 + "', '" + _H26Y + "', '" + _H26M + "', '" + _H27 + "', '" + _H28 + "', '" + _H29 + "', '" + _H29X + "', '" + _H210 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H220 + "', '" + _C15 + "', '" + _H221 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -343,7 +351,7 @@ public class Member_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H21 = '" + _H21 + "',H22 = '" + _H22 + "',H23 = '" + _H23 + "',H24 = '" + _H24 + "',H25 = '" + _H25 + "',H26Y = '" + _H26Y + "',H26M = '" + _H26M + "',H27 = '" + _H27 + "',H28 = '" + _H28 + "',H29 = '" + _H29 + "',H29X = '" + _H29X + "',H210 = '" + _H210 + "',H211 = '" + _H211 + "',H212 = '" + _H212 + "',H212X = '" + _H212X + "',H213 = '" + _H213 + "',H214 = '" + _H214 + "',H215 = '" + _H215 + "',H215X = '" + _H215X + "',H216 = '" + _H216 + "',H216X = '" + _H216X + "',H217 = '" + _H217 + "',H218 = '" + _H218 + "',H219 = '" + _H219 + "',H220 = '" + _H220 + "',H221 = '" + _H221 + "',H222 = '" + _H222 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H21='" + _H21 + "'";
+            SQL = "Update " + TableName + " Set Upload='2',Rnd = '" + _Rnd + "',SuchanaID = '" + _SuchanaID + "',H21 = '" + _H21 + "',H22 = '" + _H22 + "',H23 = '" + _H23 + "',H24 = '" + _H24 + "',H25 = '" + _H25 + "',H26Y = '" + _H26Y + "',H26M = '" + _H26M + "',H27 = '" + _H27 + "',H28 = '" + _H28 + "',H29 = '" + _H29 + "',H29X = '" + _H29X + "',H210 = '" + _H210 + "',H211 = '" + _H211 + "',H212 = '" + _H212 + "',H212X = '" + _H212X + "',H213 = '" + _H213 + "',H214 = '" + _H214 + "',H215 = '" + _H215 + "',H215X = '" + _H215X + "',H216 = '" + _H216 + "',H216X = '" + _H216X + "',H217 = '" + _H217 + "',H218 = '" + _H218 + "',H219 = '" + _H219 + "',H220 = '" + _H220 + "',C15 = '" + _C15 + "',H221 = '" + _H221 + "',H222 = '" + _H222 + "'  Where Rnd='" + _Rnd + "' and SuchanaID='" + _SuchanaID + "' and H21='" + _H21 + "'";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();
@@ -388,6 +396,7 @@ public class Member_DataModel {
             d._H218 = cur.getString(cur.getColumnIndex("H218"));
             d._H219 = cur.getString(cur.getColumnIndex("H219"));
             d._H220 = cur.getString(cur.getColumnIndex("H220"));
+            d._C15 = cur.getString(cur.getColumnIndex("C15"));
             d._H221 = cur.getString(cur.getColumnIndex("H221"));
             d._H222 = cur.getString(cur.getColumnIndex("H222"));
             data.add(d);
