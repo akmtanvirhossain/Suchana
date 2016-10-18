@@ -307,7 +307,7 @@ public class HHIdentity_list_Old extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.hhidentity_row1_old, null);
+                convertView = inflater.inflate(R.layout.hhidentity_row_old, null);
             }
             LinearLayout   secListRow = (LinearLayout)convertView.findViewById(R.id.secListRow);
 

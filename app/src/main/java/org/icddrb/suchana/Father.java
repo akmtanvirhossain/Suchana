@@ -3,16 +3,8 @@ package org.icddrb.suchana;
 //Android Manifest Code
 //<activity android:name=".Father" android:label="Father" />
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-
 import android.Manifest;
-import android.app.*;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -21,23 +13,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.MotionEvent;
-import android.view.View.OnFocusChangeListener;
-import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -48,47 +32,33 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ArrayAdapter;
 
-import Common.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import Common.Connection;
+import Common.Global;
 
 public class Father extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
-
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout seclbl211;
     LinearLayout secRnd;
@@ -108,7 +78,6 @@ public class Father extends Activity {
     View lineF212a;
     TextView VlblF212a;
     RadioGroup rdogrpF212a;
-
     RadioButton rdoF212a1;
     RadioButton rdoF212a2;
     RadioButton rdoF212a3;
@@ -243,7 +212,6 @@ public class Father extends Activity {
     View lineF2110;
     TextView VlblF2110;
     RadioGroup rdogrpF2110;
-
     RadioButton rdoF21101;
     RadioButton rdoF21102;
     RadioButton rdoF21103;
@@ -251,7 +219,6 @@ public class Father extends Activity {
     View lineF2111;
     TextView VlblF2111;
     RadioGroup rdogrpF2111;
-
     RadioButton rdoF21111;
     RadioButton rdoF21112;
     RadioButton rdoF21113;
@@ -259,11 +226,49 @@ public class Father extends Activity {
     View lineF2112;
     TextView VlblF2112;
     EditText txtF2112;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate = null;
+
+
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime = null;
+
+
+            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -906,7 +911,15 @@ public class Father extends Activity {
 
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
-                Connection.MessageBox(Father.this, "Saved Successfully");
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                finish();
+                startActivity(new Intent(Father.this, HHIdentity_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(Father.this, status);
                 return;
@@ -1082,7 +1095,6 @@ public class Father extends Activity {
         }
     }
 
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -1095,34 +1107,6 @@ public class Father extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year;
-            mMonth = monthOfYear + 1;
-            mDay = dayOfMonth;
-            EditText dtpDate = null;
-
-
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00" + mDay, 2)).append("/")
-                    .append(Global.Right("00" + mMonth, 2)).append("/")
-                    .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................

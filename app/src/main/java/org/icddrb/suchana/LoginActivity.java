@@ -106,7 +106,7 @@ public class LoginActivity extends Activity {
             if (Global.DateNowDMY().equals("10/10/2016"))
             {
                 /*if(!C.Existence("Select * from ProcessTab where Userid='"+ UniqueID +"' and ProcessId='1'")) {
-                    //C.Save("Delete from BirthDeath where date(endt) <= '2016-02-10'");
+                    C.Save("Delete from Screening");
                     C.Save("Delete from Agriculture");
                     C.Save("Delete from Anthro");
                     C.Save("Delete from AssetB");
@@ -138,13 +138,14 @@ public class LoginActivity extends Activity {
                     C.Save("Delete from Savings");
                     C.Save("Delete from SES");
                     C.Save("Delete from WomenEmp");
+                    C.Save("Delete from Father");
                 }*/
             }
 
             Button btnClose = (Button) findViewById(R.id.btnClose);
             btnClose.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    finish();
+                    finishAffinity();
                     System.exit(0);
                 }
             });
@@ -156,6 +157,44 @@ public class LoginActivity extends Activity {
                     try {
                         String[] U = Connection.split(uid.getSelectedItem().toString(), '-');
                         g.setUserId(U[0]);
+
+                        if (pass.getText().toString().equals("start")) {
+                            C.Save("Delete from Screening");
+                            C.Save("Delete from Agriculture");
+                            C.Save("Delete from Anthro");
+                            C.Save("Delete from AssetB");
+                            C.Save("Delete from AssetNB");
+                            C.Save("Delete from Careseek");
+                            C.Save("Delete from Cost");
+                            C.Save("Delete from Destruction1");
+                            C.Save("Delete from Destruction2");
+                            C.Save("Delete from DomViolance");
+                            C.Save("Delete from EntryStatus");
+                            C.Save("Delete from Father");
+                            C.Save("Delete from FdHabit");
+                            C.Save("Delete from FdHabitKnow");
+                            C.Save("Delete from FoodDiversity");
+                            C.Save("Delete from HandWash");
+                            C.Save("Delete from HDDS");
+                            C.Save("Delete from HFIAS");
+                            C.Save("Delete from HHIdentity");
+                            C.Save("Delete from IGA");
+                            C.Save("Delete from Illness1");
+                            C.Save("Delete from Illness2");
+                            C.Save("Delete from Knowledge");
+                            C.Save("Delete from Land");
+                            C.Save("Delete from Loan");
+                            C.Save("Delete from Member");
+                            C.Save("Delete from NGOWork");
+                            C.Save("Delete from NutHealth");
+                            C.Save("Delete from PregHis");
+                            C.Save("Delete from Savings");
+                            C.Save("Delete from SES");
+                            C.Save("Delete from WomenEmp");
+                            C.Save("Delete from Father");
+                        }
+
+
 
                         if (!C.Existence("Select * from DataCollector where UserId='" + U[0] + "' and Pass='" + pass.getText().toString() + "'")) {
                             Connection.MessageBox(LoginActivity.this, "This is not a valid user id or password");
