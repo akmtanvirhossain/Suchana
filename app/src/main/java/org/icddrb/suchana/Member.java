@@ -43,6 +43,7 @@ import org.joda.time.Days;
 import org.joda.time.LocalDate;
 import org.joda.time.Months;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -250,11 +251,7 @@ public class Member extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -314,7 +311,7 @@ public class Member extends Activity {
                     adb.show();
                 }
             });*/
-            lineH222 = (View) findViewById(R.id.lineH222);
+            lineH222 = findViewById(R.id.lineH222);
             secH222 = (LinearLayout) findViewById(R.id.secH222);
 
             VlblH222 = (TextView) findViewById(R.id.VlblH222);
@@ -331,19 +328,19 @@ public class Member extends Activity {
             spnH222.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' union Select '96-মৃত' union Select '97-অন্যত্র থাকে'"));
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             txtSuchanaID.setEnabled(false);
             txtSuchanaID.setText(SUCHANAID);
 
             secH21 = (LinearLayout) findViewById(R.id.secH21);
-            lineH21 = (View) findViewById(R.id.lineH21);
+            lineH21 = findViewById(R.id.lineH21);
             VlblH21 = (TextView) findViewById(R.id.VlblH21);
             txtH21 = (EditText) findViewById(R.id.txtH21);
 
@@ -361,22 +358,22 @@ public class Member extends Activity {
             txtH21.setText(MemberSerial(RND, SUCHANAID));
 
             secH22 = (LinearLayout) findViewById(R.id.secH22);
-            lineH22 = (View) findViewById(R.id.lineH22);
+            lineH22 = findViewById(R.id.lineH22);
             VlblH22 = (TextView) findViewById(R.id.VlblH22);
             txtH22 = (EditText) findViewById(R.id.txtH22);
             secH23 = (LinearLayout) findViewById(R.id.secH23);
-            lineH23 = (View) findViewById(R.id.lineH23);
+            lineH23 = findViewById(R.id.lineH23);
             VlblH23 = (TextView) findViewById(R.id.VlblH23);
             rdogrpH23 = (RadioGroup) findViewById(R.id.rdogrpH23);
 
             rdoH231 = (RadioButton) findViewById(R.id.rdoH231);
             rdoH232 = (RadioButton) findViewById(R.id.rdoH232);
             secH24 = (LinearLayout) findViewById(R.id.secH24);
-            lineH24 = (View) findViewById(R.id.lineH24);
+            lineH24 = findViewById(R.id.lineH24);
             VlblH24 = (TextView) findViewById(R.id.VlblH24);
             txtH24 = (EditText) findViewById(R.id.txtH24);
             secH25 = (LinearLayout) findViewById(R.id.secH25);
-            lineH25 = (View) findViewById(R.id.lineH25);
+            lineH25 = findViewById(R.id.lineH25);
             VlblH25 = (TextView) findViewById(R.id.VlblH25);
             spnH25 = (Spinner) findViewById(R.id.spnH25);
             List<String> listH25 = new ArrayList<String>();
@@ -418,7 +415,7 @@ public class Member extends Activity {
 
             seclblH26 = (LinearLayout) findViewById(R.id.seclblH26);
             secH26Y = (LinearLayout) findViewById(R.id.secH26Y);
-            lineH26Y = (View) findViewById(R.id.lineH26Y);
+            lineH26Y = findViewById(R.id.lineH26Y);
             VlblH26Y = (TextView) findViewById(R.id.VlblH26Y);
             txtH26Y = (EditText) findViewById(R.id.txtH26Y);
             txtH26Y.addTextChangedListener(new TextWatcher() {
@@ -567,11 +564,11 @@ public class Member extends Activity {
             });
 
             secH26M = (LinearLayout) findViewById(R.id.secH26M);
-            lineH26M = (View) findViewById(R.id.lineH26M);
+            lineH26M = findViewById(R.id.lineH26M);
             VlblH26M = (TextView) findViewById(R.id.VlblH26M);
             txtH26M = (EditText) findViewById(R.id.txtH26M);
             secH27 = (LinearLayout) findViewById(R.id.secH27);
-            lineH27 = (View) findViewById(R.id.lineH27);
+            lineH27 = findViewById(R.id.lineH27);
             VlblH27 = (TextView) findViewById(R.id.VlblH27);
             spnH27 = (Spinner) findViewById(R.id.spnH27);
             List<String> listH27 = new ArrayList<String>();
@@ -615,12 +612,12 @@ public class Member extends Activity {
             });
 
             secH28 = (LinearLayout) findViewById(R.id.secH28);
-            lineH28 = (View) findViewById(R.id.lineH28);
+            lineH28 = findViewById(R.id.lineH28);
             VlblH28 = (TextView) findViewById(R.id.VlblH28);
             txtH28 = (EditText) findViewById(R.id.txtH28);
             secH28.setVisibility(View.GONE);
             secH29 = (LinearLayout) findViewById(R.id.secH29);
-            lineH29 = (View) findViewById(R.id.lineH29);
+            lineH29 = findViewById(R.id.lineH29);
             VlblH29 = (TextView) findViewById(R.id.VlblH29);
             spnH29 = (Spinner) findViewById(R.id.spnH29);
             List<String> listH29 = new ArrayList<String>();
@@ -654,7 +651,7 @@ public class Member extends Activity {
             });
 
             secH29X = (LinearLayout) findViewById(R.id.secH29X);
-            lineH29X = (View) findViewById(R.id.lineH29X);
+            lineH29X = findViewById(R.id.lineH29X);
             VlblH29X = (TextView) findViewById(R.id.VlblH29X);
             txtH29X = (EditText) findViewById(R.id.txtH29X);
             secH29X.setVisibility(View.GONE);
@@ -675,7 +672,7 @@ public class Member extends Activity {
             }
 
             secH210 = (LinearLayout) findViewById(R.id.secH210);
-            lineH210 = (View) findViewById(R.id.lineH210);
+            lineH210 = findViewById(R.id.lineH210);
             VlblH210 = (TextView) findViewById(R.id.VlblH210);
             rdogrpH210 = (RadioGroup) findViewById(R.id.rdogrpH210);
 
@@ -701,7 +698,7 @@ public class Member extends Activity {
             rdoH2101 = (RadioButton) findViewById(R.id.rdoH2101);
             rdoH2102 = (RadioButton) findViewById(R.id.rdoH2102);
             secH211 = (LinearLayout) findViewById(R.id.secH211);
-            lineH211 = (View) findViewById(R.id.lineH211);
+            lineH211 = findViewById(R.id.lineH211);
             VlblH211 = (TextView) findViewById(R.id.VlblH211);
             spnH211 = (Spinner) findViewById(R.id.spnH211);
             List<String> listH211 = new ArrayList<String>();
@@ -716,7 +713,7 @@ public class Member extends Activity {
 
 
             secH212 = (LinearLayout) findViewById(R.id.secH212);
-            lineH212 = (View) findViewById(R.id.lineH212);
+            lineH212 = findViewById(R.id.lineH212);
             VlblH212 = (TextView) findViewById(R.id.VlblH212);
             spnH212 = (Spinner) findViewById(R.id.spnH212);
             List<String> listH212 = new ArrayList<String>();
@@ -770,11 +767,11 @@ public class Member extends Activity {
                 }
             });
             secH212X = (LinearLayout) findViewById(R.id.secH212X);
-            lineH212X = (View) findViewById(R.id.lineH212X);
+            lineH212X = findViewById(R.id.lineH212X);
             VlblH212X = (TextView) findViewById(R.id.VlblH212X);
             txtH212X = (EditText) findViewById(R.id.txtH212X);
             secH213 = (LinearLayout) findViewById(R.id.secH213);
-            lineH213 = (View) findViewById(R.id.lineH213);
+            lineH213 = findViewById(R.id.lineH213);
             VlblH213 = (TextView) findViewById(R.id.VlblH213);
             spnH213 = (Spinner) findViewById(R.id.spnH213);
             List<String> listH213 = new ArrayList<String>();
@@ -790,14 +787,14 @@ public class Member extends Activity {
             spnH213.setAdapter(adptrH213);
 
             secH214 = (LinearLayout) findViewById(R.id.secH214);
-            lineH214 = (View) findViewById(R.id.lineH214);
+            lineH214 = findViewById(R.id.lineH214);
             VlblH214 = (TextView) findViewById(R.id.VlblH214);
             rdogrpH214 = (RadioGroup) findViewById(R.id.rdogrpH214);
 
             rdoH2141 = (RadioButton) findViewById(R.id.rdoH2141);
             rdoH2142 = (RadioButton) findViewById(R.id.rdoH2142);
             secH215 = (LinearLayout) findViewById(R.id.secH215);
-            lineH215 = (View) findViewById(R.id.lineH215);
+            lineH215 = findViewById(R.id.lineH215);
             VlblH215 = (TextView) findViewById(R.id.VlblH215);
             spnH215 = (Spinner) findViewById(R.id.spnH215);
             List<String> listH215 = new ArrayList<String>();
@@ -863,11 +860,11 @@ public class Member extends Activity {
                 }
             });
             secH215X = (LinearLayout) findViewById(R.id.secH215X);
-            lineH215X = (View) findViewById(R.id.lineH215X);
+            lineH215X = findViewById(R.id.lineH215X);
             VlblH215X = (TextView) findViewById(R.id.VlblH215X);
             txtH215X = (EditText) findViewById(R.id.txtH215X);
             secH216 = (LinearLayout) findViewById(R.id.secH216);
-            lineH216 = (View) findViewById(R.id.lineH216);
+            lineH216 = findViewById(R.id.lineH216);
             VlblH216 = (TextView) findViewById(R.id.VlblH216);
             spnH216 = (Spinner) findViewById(R.id.spnH216);
             List<String> listH216 = new ArrayList<String>();
@@ -926,23 +923,23 @@ public class Member extends Activity {
                 }
             });
             secH216X = (LinearLayout) findViewById(R.id.secH216X);
-            lineH216X = (View) findViewById(R.id.lineH216X);
+            lineH216X = findViewById(R.id.lineH216X);
             VlblH216X = (TextView) findViewById(R.id.VlblH216X);
             txtH216X = (EditText) findViewById(R.id.txtH216X);
             secH217 = (LinearLayout) findViewById(R.id.secH217);
-            lineH217 = (View) findViewById(R.id.lineH217);
+            lineH217 = findViewById(R.id.lineH217);
             VlblH217 = (TextView) findViewById(R.id.VlblH217);
             txtH217 = (EditText) findViewById(R.id.txtH217);
             secH218 = (LinearLayout) findViewById(R.id.secH218);
-            lineH218 = (View) findViewById(R.id.lineH218);
+            lineH218 = findViewById(R.id.lineH218);
             VlblH218 = (TextView) findViewById(R.id.VlblH218);
             txtH218 = (EditText) findViewById(R.id.txtH218);
             secH219 = (LinearLayout) findViewById(R.id.secH219);
-            lineH219 = (View) findViewById(R.id.lineH219);
+            lineH219 = findViewById(R.id.lineH219);
             VlblH219 = (TextView) findViewById(R.id.VlblH219);
             txtH219 = (EditText) findViewById(R.id.txtH219);
             secH220 = (LinearLayout) findViewById(R.id.secH220);
-            lineH220 = (View) findViewById(R.id.lineH220);
+            lineH220 = findViewById(R.id.lineH220);
             VlblH220 = (TextView) findViewById(R.id.VlblH220);
             rdogrpH220 = (RadioGroup) findViewById(R.id.rdogrpH220);
             rdoH2201 = (RadioButton) findViewById(R.id.rdoH2201);
@@ -962,7 +959,7 @@ public class Member extends Activity {
             });
 
             secC15 = (LinearLayout) findViewById(R.id.secC15);
-            lineC15 = (View) findViewById(R.id.lineC15);
+            lineC15 = findViewById(R.id.lineC15);
             secC15.setVisibility(View.GONE);
             lineC15.setVisibility(View.GONE);
             VlblC15 = (TextView) findViewById(R.id.VlblC15);
@@ -975,15 +972,18 @@ public class Member extends Activity {
                         if (event.getRawX() >= (dtpC15.getRight() - dtpC15.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
                             VariableID = "btnC15";
                             showDialog(DATE_DIALOG);
+
                             return true;
                         }
                     }
+
+
                     return false;
                 }
             });
 
             secH221 = (LinearLayout) findViewById(R.id.secH221);
-            lineH221 = (View) findViewById(R.id.lineH221);
+            lineH221 = findViewById(R.id.lineH221);
             VlblH221 = (TextView) findViewById(R.id.VlblH221);
             txtH221 = (EditText) findViewById(R.id.txtH221);
 
@@ -1231,7 +1231,7 @@ public class Member extends Activity {
                 int months = Months.monthsBetween(birthdate, now).getMonths();
                 int days = Days.daysBetween(birthdate, now).getDays();
                 // int xMonths = Integer.parseInt(months.toString());
-                int mDays = (30 * 12 * Integer.valueOf(txtH26Y.getText().toString()) + (30 * Integer.valueOf(txtH26M.getText().toString())));
+                int mDays = (365 * Integer.valueOf(txtH26Y.getText().toString()) + (30 * Integer.valueOf(txtH26M.getText().toString())));
                 if (Math.abs(days - mDays) > 30) {
                     Connection.MessageBox(Member.this, "Required field: বয়স এর সাথে জন্মতারিখ মিল নেই");
                     dtpC15.requestFocus();
@@ -1513,9 +1513,25 @@ public class Member extends Activity {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
         minute = c.get(Calendar.MINUTE);
+
+
         switch (id) {
             case DATE_DIALOG:
-                return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
+                if (!dtpC15.getText().toString().isEmpty()) {
+                    SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+                    Date date = null;
+                    try {
+                        date = format1.parse(dtpC15.getText().toString());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    String intMonth = (String) android.text.format.DateFormat.format("MM", date); //06
+                    String year = (String) android.text.format.DateFormat.format("yyyy", date); //2013
+                    String day = (String) android.text.format.DateFormat.format("dd", date); //20
+                    return new DatePickerDialog(this, mDateSetListener, Integer.valueOf(year), Integer.valueOf(intMonth) - 1, Integer.valueOf(day));
+                } else {
+                    return new DatePickerDialog(this, mDateSetListener, g.mYear, g.mMonth - 1, g.mDay);
+                }
             case TIME_DIALOG:
                 return new TimePickerDialog(this, timePickerListener, hour, minute, false);
         }

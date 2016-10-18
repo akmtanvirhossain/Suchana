@@ -89,6 +89,7 @@
         <activity android:name=".HandWash" />
         <activity android:name=".Father" />
         <activity android:name=".HHIdentity_list_Old" />
+        <activity android:name=".HHIdentity_Old" />
 
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->
