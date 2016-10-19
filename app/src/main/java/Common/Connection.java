@@ -974,25 +974,6 @@ public class Connection extends SQLiteOpenHelper {
             //--------------------------------------------------------------------------------------
             ExecuteCommandOnServer("Update UserList set Setting='2' where UserId='" + UserID + "'");
 
-            //Download data from server
-            //------------------------------------------------------------------------------
-            /*String[] TableList = new String[]{
-                    "Screening",
-                    "idnHistory",
-                    "medRecord",
-                    "Admission",
-                    "Folup",
-                    "Medicine",
-                    "OthInvestig",
-                    "SampleAnalysis",
-                    "LabResult",
-                    "SampleStorage"
-            };
-
-            for(int i=0;i<TableList.length;i++)
-                Sync_Download(TableList[i], UserID, "");
-            */
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -1728,4 +1709,33 @@ public class Connection extends SQLiteOpenHelper {
         return resp;
     }
 
+
+    public void DatabaseUpload() {
+        //Upload File from Specific Folder
+        String[] FilePathStrings;
+        String[] FileNameStrings;
+        File[] listFile;
+
+        File file = new File(Environment.getExternalStorageDirectory() + File.separator + Global.DatabaseFolder);
+        file.mkdirs();
+        if (file.isDirectory()) {
+            listFile = file.listFiles();
+            FilePathStrings = new String[listFile.length];
+            FileNameStrings = new String[listFile.length];
+
+            for (int i = 0; i < listFile.length; i++) {
+                FilePathStrings[i] = listFile[i].getAbsolutePath();
+                FileNameStrings[i] = listFile[i].getName();
+
+                //Upload file to server
+                FileUpload myTask = new FileUpload();
+                String[] params = new String[2];
+                if (listFile[i].getName().equalsIgnoreCase(ProjectSetting.DatabaseName)) {
+                    params[0] = listFile[i].getName() + "_" + Global.CurrentDMY();
+                    params[1] = listFile[i].getName() + "_" + Global.CurrentDMY();
+                    myTask.execute(params);
+                }
+            }
+        }
+    }
 }

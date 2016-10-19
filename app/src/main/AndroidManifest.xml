@@ -48,6 +48,7 @@
         <activity android:name=".Screening" />
 
         <activity android:name=".HHIdentity" />
+        <activity android:name=".HHIdentity_final" />
         <activity android:name=".HHIdentity_list" />
         <activity android:name=".Member" />
         <activity android:name=".Member_list" />
