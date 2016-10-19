@@ -10,6 +10,7 @@ import Common.Connection;
 
 public class HHIdentity_DataModel {
 
+
     String TableName = "HHIdentity";
     Connection C;
     String _distName = "";
