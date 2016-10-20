@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "19102016";  //Format: DDMMYYYY
+            SystemUpdateDT = "20102016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -159,7 +159,7 @@ public class LoginActivity extends Activity {
                         g.setUserId(U[0]);
 
                         if (pass.getText().toString().equals("start")) {
-                            C.Save("Delete from Screening");
+                            /*C.Save("Delete from Screening");
                             C.Save("Delete from Agriculture");
                             C.Save("Delete from Anthro");
                             C.Save("Delete from AssetB");
@@ -191,7 +191,7 @@ public class LoginActivity extends Activity {
                             C.Save("Delete from Savings");
                             C.Save("Delete from SES");
                             C.Save("Delete from WomenEmp");
-                            C.Save("Delete from Father");
+                            C.Save("Delete from Father");*/
                         }
 
 

@@ -5178,8 +5178,43 @@
                 </RadioGroup>
             </LinearLayout>
 
+
             <View
                 android:id="@+id/lineH620"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                style="@style/rowStyle0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:text="H621"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:text="আপনার টিউবওয়েলের পানিতে কেম্ন আয়রন আছে?"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spnH621"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/planet_prompt"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <View
+                android:id="@+id/lineH621"
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
                 android:background="#CCCCCC" />

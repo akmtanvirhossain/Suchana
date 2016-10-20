@@ -583,6 +583,8 @@ public class SES extends Activity {
     RadioGroup rdogrpH620;
     RadioButton rdoH6201;
     RadioButton rdoH6202;
+    Spinner spnH621;
+
     String StartTime;
     Bundle IDbundle;
     private int hour;
@@ -682,6 +684,19 @@ public class SES extends Activity {
                     adb.show();
                 }
             });
+
+            spnH621 = (Spinner) findViewById(R.id.spnH621);
+            List<String> listH621 = new ArrayList<String>();
+
+            listH621.add("");
+            listH621.add("1-নেই");
+            listH621.add("2-অল্প আছে");
+            listH621.add("3-মোটামুটি আছে ");
+            listH621.add("4-অনেক আছে");
+            listH621.add("5-প্রযোজ্য নয়");
+
+            ArrayAdapter<String> adptrH621 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH621);
+            spnH621.setAdapter(adptrH621);
 
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
             spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
@@ -2974,7 +2989,12 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Select anyone options from (খানায় তৈরী/রান্না করা খাবার ঢেকে রেখে দেয় কিছুক্ষণ পর খাবার জন্য  ).");
                 rdoH6201.requestFocus();
                 return;
+            } else if (spnH621.getSelectedItemPosition() == 0) {
+                Connection.MessageBox(SES.this, "Select anyone options from (আপনার টিউবওয়েলের পানিতে কেম্ন আয়রন আছে?).");
+                spnH621.requestFocus();
+                return;
             }
+
 
             String SQL = "";
             RadioButton rb;
@@ -3237,6 +3257,8 @@ public class SES extends Activity {
                 rb = (RadioButton) rdogrpH620.getChildAt(i);
                 if (rb.isChecked()) objSave.setH620(d_rdogrpH620[i]);
             }
+            objSave.setH621((spnH621.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnH621.getSelectedItem().toString(), "-")));
+
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -3652,6 +3674,8 @@ public class SES extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
+                spnH621.setSelection(Global.SpinnerItemPositionAnyLength(spnH621, item.getH621()));
             }
         } catch (Exception e) {
             Connection.MessageBox(SES.this, e.getMessage());

@@ -92,6 +92,7 @@ public class MainMenu extends Activity {
 
                                         tableList.add("Screening");
 
+                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -128,13 +129,12 @@ public class MainMenu extends Activity {
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
                                         tableList.add("Father");
+                                        */
 
                                         C.DataSync_UploadDownload(tableList, USERID);
 
                                         //Village List
-                                        C.Sync_Download("VillageList", USERID, "");
-
-
+                                        //C.Sync_Download("VillageList", USERID, "");
 
                                         /*
 

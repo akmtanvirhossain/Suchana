@@ -361,24 +361,24 @@ public class HHIdentity_list extends Activity {
                 public void onClick(View v) {
 
                     //For Screening
-                    /*Bundle IDbundle = new Bundle();
+                    Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), Screening.class);
                     f1.putExtras(IDbundle);
-                    startActivity(f1);*/
+                    startActivity(f1);
 
 
                     //For Household Interview
-                    Bundle IDbundle = new Bundle();
+                    /*Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("SuchanaID", o.get("ScreeningID"));
                     Intent f1;
                     //f1 = new Intent(getApplicationContext(), UpdateMenu.class);
                     f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
                     f1.putExtras(IDbundle);
-                    startActivity(f1);
+                    startActivity(f1);*/
                 }
             });
 
