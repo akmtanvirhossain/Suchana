@@ -1710,7 +1710,7 @@ public class Connection extends SQLiteOpenHelper {
     }
 
 
-    public void DatabaseUpload() {
+/*    public void DatabaseUpload() {
         //Upload File from Specific Folder
         String[] FilePathStrings;
         String[] FileNameStrings;
@@ -1737,5 +1737,36 @@ public class Connection extends SQLiteOpenHelper {
                 }
             }
         }
+    }*/
+
+
+    public void DatabaseUpload(String DeviceID) {
+        //Upload File from Specific Folder
+        String[] FilePathStrings;
+        String[] FileNameStrings;
+        File[] listFile;
+
+        File file = new File(Environment.getExternalStorageDirectory() + File.separator + Global.DatabaseFolder);
+        file.mkdirs();
+        if (file.isDirectory()) {
+            listFile = file.listFiles();
+            FilePathStrings = new String[listFile.length];
+            FileNameStrings = new String[listFile.length];
+
+            for (int i = 0; i < listFile.length; i++) {
+                FilePathStrings[i] = listFile[i].getAbsolutePath();
+                FileNameStrings[i] = listFile[i].getName();
+
+                //Upload file to server
+                FileUpload myTask = new FileUpload();
+                String[] params = new String[2];
+                if (listFile[i].getName().equalsIgnoreCase(ProjectSetting.DatabaseName)) {
+                    params[0] = listFile[i].getName();
+                    params[1] = DeviceID + "_" + Global.CurrentDMY() + "_" + listFile[i].getName();
+                    myTask.execute(params);
+                }
+            }
+        }
     }
+
 }

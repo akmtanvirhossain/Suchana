@@ -369,7 +369,6 @@ public class HHIdentity_list extends Activity {
                     f1.putExtras(IDbundle);
                     startActivity(f1);
 
-
                     //For Household Interview
                     /*Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));

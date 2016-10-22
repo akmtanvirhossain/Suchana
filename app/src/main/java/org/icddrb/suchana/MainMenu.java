@@ -90,7 +90,7 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
-                                        tableList.add("Screening");
+
 
                                         /*
                                         //Entry Status
@@ -131,42 +131,21 @@ public class MainMenu extends Activity {
                                         tableList.add("Father");
                                         */
 
+                                        tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);
+
+                                        C.DatabaseUpload(USERID);
+                                        /*String[] ServerVal  = Connection.split(C.ReturnResult("ReturnSingleValue","sp_ServerCheck '"+ USERID +"'"),',');
+                                        String DBUploadRequest = ServerVal[2].toString();
+
+                                        if(DBUploadRequest.equals("1")) {
+                                            C.DatabaseUpload(USERID);
+                                            C.ExecuteCommandOnServer("Update UserList set DBRequest='2' where UserId='"+ USERID +"'");
+                                        }
+                                        */
 
                                         //Village List
                                         //C.Sync_Download("VillageList", USERID, "");
-
-                                        /*
-
-                                        //Upload File from Specific Folder
-                                        String[] FilePathStrings;
-                                        String[] FileNameStrings;
-                                        File[] listFile;
-
-                                        File file = new File(Environment.getExternalStorageDirectory()+ File.separator + Global.DatabaseFolder);
-                                        file.mkdirs();
-                                        if (file.isDirectory()) {
-                                            listFile = file.listFiles();
-                                            FilePathStrings = new String[listFile.length];
-                                            FileNameStrings = new String[listFile.length];
-
-                                            for (int i = 0; i < listFile.length; i++) {
-                                                FilePathStrings[i] = listFile[i].getAbsolutePath();
-                                                FileNameStrings[i] = listFile[i].getName();
-
-                                                //Upload file to server
-                                                FileUpload myTask = new FileUpload();
-                                                String[] params = new String[2];
-                                                if(listFile[i].getName().equalsIgnoreCase(ProjectSetting.DatabaseName))
-                                                {
-                                                    params[0]=listFile[i].getName();
-                                                    params[1]=listFile[i].getName();
-                                                    myTask.execute(params);
-                                                }
-                                            }
-                                        }
-
-                                        */
 
                                     } catch (Exception e) {
 
