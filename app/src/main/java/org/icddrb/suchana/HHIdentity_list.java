@@ -239,7 +239,7 @@ public class HHIdentity_list extends Activity {
             SQL = "Select Rnd, ScreeningID, Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
-            SQL += " order by date(VDate) desc, date(EnDt) desc";
+            SQL += " order by date(VDate) desc, datetime(EnDt) desc";
 
             List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
             dataList.clear();

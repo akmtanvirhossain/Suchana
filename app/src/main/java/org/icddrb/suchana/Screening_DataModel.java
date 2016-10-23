@@ -2,350 +2,455 @@ package org.icddrb.suchana;
 
 import android.content.Context;
 import android.database.Cursor;
-import Common.Connection;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import Common.Connection;
 public class Screening_DataModel{
 
+    String TableName = "Screening";
+    Connection C;
     private String _Rnd = "";
+    private String _Dist = "";
+    private String _Upz = "";
+    private String _Un = "";
+    private String _Vill = "";
+    private String _Ward = "";
+    private String _VDate = "";
+    private String _ImpOrg = "";
+    private String _HHType = "";
+    private String _WRUn = "";
+    private String _WRVill = "";
+    private String _WRNo = "";
+    private String _WRHHNo = "";
+    private String _HHDist = "";
+    private String _HHUpz = "";
+    private String _HHUn = "";
+    private String _HHVill = "";
+    private String _HHNo = "";
+    private String _ScreeningID = "";
+    private String _BenName = "";
+    private String _HeadName = "";
+    private String _FName = "";
+    private String _HsuName = "";
+    private String _MobNo = "";
+    private String _ReqMobNo = "";
+    private String _HHLocation = "";
+    private String _ResName = "";
+    private String _Relation = "";
+    private String _Q1 = "";
+    private String _Q2 = "";
+    private String _Q3 = "";
+    private String _Q4 = "";
+    private String _Q5 = "";
+    private String _Q6 = "";
+    private String _Q7 = "";
+    private String _Q8 = "";
+    private String _Q8a = "";
+    private String _Q9 = "";
+    private String _BDate = "";
+    private String _Q9a = "";
+    private String _Q10 = "";
+    private String _Q10a = "";
+    private String _Q11 = "";
+    private String _Comments = "";
+    private String _StartTime = "";
+    private String _EndTime = "";
+    private String _UserId = "";
+    private String _EntryUser = "";
+    private String _Lat = "";
+    private String _Lon = "";
+    private String _EnDt = "";
+    private String _Upload = "2";
+
     public String getRnd(){
         return _Rnd;
     }
+
     public void setRnd(String newValue){
         _Rnd = newValue;
     }
-    private String _Dist = "";
+
     public String getDist(){
         return _Dist;
     }
+
     public void setDist(String newValue){
         _Dist = newValue;
     }
-    private String _Upz = "";
+
     public String getUpz(){
         return _Upz;
     }
+
     public void setUpz(String newValue){
         _Upz = newValue;
     }
-    private String _Un = "";
+
     public String getUn(){
         return _Un;
     }
+
     public void setUn(String newValue){
         _Un = newValue;
     }
-    private String _Vill = "";
+
     public String getVill(){
         return _Vill;
     }
+
     public void setVill(String newValue){
         _Vill = newValue;
     }
-    private String _Ward = "";
+
     public String getWard(){
         return _Ward;
     }
+
     public void setWard(String newValue){
         _Ward = newValue;
     }
-    private String _VDate = "";
+
     public String getVDate(){
         return _VDate;
     }
+
     public void setVDate(String newValue){
         _VDate = newValue;
     }
-    private String _ImpOrg = "";
+
     public String getImpOrg(){
         return _ImpOrg;
     }
+
     public void setImpOrg(String newValue){
         _ImpOrg = newValue;
     }
-    private String _HHType = "";
+
     public String getHHType(){
         return _HHType;
     }
+
     public void setHHType(String newValue){
         _HHType = newValue;
     }
-    private String _WRUn = "";
+
     public String getWRUn(){
         return _WRUn;
     }
+
     public void setWRUn(String newValue){
         _WRUn = newValue;
     }
-    private String _WRVill = "";
+
     public String getWRVill(){
         return _WRVill;
     }
+
     public void setWRVill(String newValue){
         _WRVill = newValue;
     }
-    private String _WRNo = "";
+
     public String getWRNo(){
         return _WRNo;
     }
+
     public void setWRNo(String newValue){
         _WRNo = newValue;
     }
-    private String _WRHHNo = "";
+
     public String getWRHHNo(){
         return _WRHHNo;
     }
+
     public void setWRHHNo(String newValue){
         _WRHHNo = newValue;
     }
-    private String _HHDist = "";
+
     public String getHHDist(){
         return _HHDist;
     }
+
     public void setHHDist(String newValue){
         _HHDist = newValue;
     }
-    private String _HHUpz = "";
+
     public String getHHUpz(){
         return _HHUpz;
     }
+
     public void setHHUpz(String newValue){
         _HHUpz = newValue;
     }
-    private String _HHUn = "";
+
     public String getHHUn(){
         return _HHUn;
     }
+
     public void setHHUn(String newValue){
         _HHUn = newValue;
     }
-    private String _HHVill = "";
+
     public String getHHVill(){
         return _HHVill;
     }
+
     public void setHHVill(String newValue){
         _HHVill = newValue;
     }
-    private String _HHNo = "";
+
     public String getHHNo(){
         return _HHNo;
     }
+
     public void setHHNo(String newValue){
         _HHNo = newValue;
     }
-    private String _ScreeningID = "";
+
     public String getScreeningID(){
         return _ScreeningID;
     }
+
     public void setScreeningID(String newValue){
         _ScreeningID = newValue;
     }
-    private String _BenName = "";
+
     public String getBenName(){
         return _BenName;
     }
+
     public void setBenName(String newValue){
         _BenName = newValue;
     }
-    private String _HeadName = "";
+
     public String getHeadName(){
         return _HeadName;
     }
+
     public void setHeadName(String newValue){
         _HeadName = newValue;
     }
-    private String _FName = "";
+
     public String getFName(){
         return _FName;
     }
+
     public void setFName(String newValue){
         _FName = newValue;
     }
-    private String _HsuName = "";
+
     public String getHsuName(){
         return _HsuName;
     }
+
     public void setHsuName(String newValue){
         _HsuName = newValue;
     }
-    private String _MobNo = "";
+
     public String getMobNo(){
         return _MobNo;
     }
+
     public void setMobNo(String newValue){
         _MobNo = newValue;
     }
-    private String _ReqMobNo = "";
+
     public String getReqMobNo(){
         return _ReqMobNo;
     }
+
     public void setReqMobNo(String newValue){
         _ReqMobNo = newValue;
     }
-    private String _HHLocation = "";
+
     public String getHHLocation(){
         return _HHLocation;
     }
+
     public void setHHLocation(String newValue){
         _HHLocation = newValue;
     }
-    private String _ResName = "";
+
     public String getResName(){
         return _ResName;
     }
+
     public void setResName(String newValue){
         _ResName = newValue;
     }
-    private String _Relation = "";
+
     public String getRelation(){
         return _Relation;
     }
+
     public void setRelation(String newValue){
         _Relation = newValue;
     }
-    private String _Q1 = "";
+
     public String getQ1(){
         return _Q1;
     }
+
     public void setQ1(String newValue){
         _Q1 = newValue;
     }
-    private String _Q2 = "";
+
     public String getQ2(){
         return _Q2;
     }
+
     public void setQ2(String newValue){
         _Q2 = newValue;
     }
-    private String _Q3 = "";
+
     public String getQ3(){
         return _Q3;
     }
+
     public void setQ3(String newValue){
         _Q3 = newValue;
     }
-    private String _Q4 = "";
+
     public String getQ4(){
         return _Q4;
     }
+
     public void setQ4(String newValue){
         _Q4 = newValue;
     }
-    private String _Q5 = "";
+
     public String getQ5(){
         return _Q5;
     }
+
     public void setQ5(String newValue){
         _Q5 = newValue;
     }
-    private String _Q6 = "";
+
     public String getQ6(){
         return _Q6;
     }
+
     public void setQ6(String newValue){
         _Q6 = newValue;
     }
-    private String _Q7 = "";
+
     public String getQ7(){
         return _Q7;
     }
+
     public void setQ7(String newValue){
         _Q7 = newValue;
     }
-    private String _Q8 = "";
+
     public String getQ8(){
         return _Q8;
     }
+
     public void setQ8(String newValue){
         _Q8 = newValue;
     }
-    private String _Q8a = "";
+
     public String getQ8a(){
         return _Q8a;
     }
+
     public void setQ8a(String newValue){
         _Q8a = newValue;
     }
-    private String _Q9 = "";
+
     public String getQ9(){
         return _Q9;
     }
+
     public void setQ9(String newValue){
         _Q9 = newValue;
     }
-    private String _BDate = "";
+
     public String getBDate(){
         return _BDate;
     }
+
     public void setBDate(String newValue){
         _BDate = newValue;
     }
-    private String _Q9a = "";
+
     public String getQ9a(){
         return _Q9a;
     }
+
     public void setQ9a(String newValue){
         _Q9a = newValue;
     }
-    private String _Q10 = "";
+
     public String getQ10(){
         return _Q10;
     }
+
     public void setQ10(String newValue){
         _Q10 = newValue;
     }
-    private String _Q10a = "";
+
     public String getQ10a(){
         return _Q10a;
     }
+
     public void setQ10a(String newValue){
         _Q10a = newValue;
     }
-    private String _Q11 = "";
+
     public String getQ11(){
         return _Q11;
     }
+
     public void setQ11(String newValue){
         _Q11 = newValue;
     }
-    private String _Comments = "";
+
     public String getComments(){
         return _Comments;
     }
+
     public void setComments(String newValue){
         _Comments = newValue;
     }
-    private String _StartTime = "";
+
     public void setStartTime(String newValue){
         _StartTime = newValue;
     }
-    private String _EndTime = "";
+
     public void setEndTime(String newValue){
         _EndTime = newValue;
     }
-    private String _UserId = "";
+
     public void setUserId(String newValue){
         _UserId = newValue;
     }
-    private String _EntryUser = "";
+
     public void setEntryUser(String newValue){
         _EntryUser = newValue;
     }
-    private String _Lat = "";
+
     public void setLat(String newValue){
         _Lat = newValue;
     }
-    private String _Lon = "";
+
     public void setLon(String newValue){
         _Lon = newValue;
     }
-    private String _EnDt = "";
+
     public void setEnDt(String newValue){
         _EnDt = newValue;
     }
-    private String _Upload = "2";
 
-    String TableName = "Screening";
+    public String getUpload() {
+        return _Upload;
+    }
+
+    public void setUpload(String newValue) {
+        _Upload = newValue;
+    }
 
     public String SaveUpdateData(Context context)
     {
@@ -365,7 +470,6 @@ public class Screening_DataModel{
         }
         return response;
     }
-    Connection C;
 
     private String SaveData(Context context)
     {
@@ -457,6 +561,7 @@ public class Screening_DataModel{
             d._Q10a = cur.getString(cur.getColumnIndex("Q10a"));
             d._Q11 = cur.getString(cur.getColumnIndex("Q11"));
             d._Comments = cur.getString(cur.getColumnIndex("Comments"));
+            d._Upload = cur.getString(cur.getColumnIndex("Upload"));
             data.add(d);
 
             cur.moveToNext();
