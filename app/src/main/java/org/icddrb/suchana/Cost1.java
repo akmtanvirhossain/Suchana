@@ -391,11 +391,7 @@ public class Cost1 extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -477,21 +473,21 @@ public class Cost1 extends Activity {
             });
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
-            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            lineMSlNo = findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
             spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
             secLBH8 = (LinearLayout) findViewById(R.id.secLBH8);
             secH81 = (LinearLayout) findViewById(R.id.secH81);
-            lineH81 = (View) findViewById(R.id.lineH81);
+            lineH81 = findViewById(R.id.lineH81);
             VlblH81 = (TextView) findViewById(R.id.VlblH81);
             rdogrpH81 = (RadioGroup) findViewById(R.id.rdogrpH81);
 
@@ -609,7 +605,7 @@ public class Cost1 extends Activity {
                 }
             });
             secH811a = (LinearLayout) findViewById(R.id.secH811a);
-            lineH811a = (View) findViewById(R.id.lineH811a);
+            lineH811a = findViewById(R.id.lineH811a);
             VlblH811a = (TextView) findViewById(R.id.VlblH811a);
             rdogrpH811a = (RadioGroup) findViewById(R.id.rdogrpH811a);
 
@@ -651,11 +647,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH811b = (LinearLayout) findViewById(R.id.secH811b);
-            lineH811b = (View) findViewById(R.id.lineH811b);
+            lineH811b = findViewById(R.id.lineH811b);
             VlblH811b = (TextView) findViewById(R.id.VlblH811b);
             txtH811b = (EditText) findViewById(R.id.txtH811b);
             secH811c = (LinearLayout) findViewById(R.id.secH811c);
-            lineH811c = (View) findViewById(R.id.lineH811c);
+            lineH811c = findViewById(R.id.lineH811c);
             VlblH811c = (TextView) findViewById(R.id.VlblH811c);
             rdogrpH811c = (RadioGroup) findViewById(R.id.rdogrpH811c);
 
@@ -663,11 +659,11 @@ public class Cost1 extends Activity {
             rdoH811c2 = (RadioButton) findViewById(R.id.rdoH811c2);
             rdoH811c3 = (RadioButton) findViewById(R.id.rdoH811c3);
             secH811d = (LinearLayout) findViewById(R.id.secH811d);
-            lineH811d = (View) findViewById(R.id.lineH811d);
+            lineH811d = findViewById(R.id.lineH811d);
             VlblH811d = (TextView) findViewById(R.id.VlblH811d);
             txtH811d = (EditText) findViewById(R.id.txtH811d);
             secH812a = (LinearLayout) findViewById(R.id.secH812a);
-            lineH812a = (View) findViewById(R.id.lineH812a);
+            lineH812a = findViewById(R.id.lineH812a);
             VlblH812a = (TextView) findViewById(R.id.VlblH812a);
             rdogrpH812a = (RadioGroup) findViewById(R.id.rdogrpH812a);
 
@@ -709,11 +705,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH812b = (LinearLayout) findViewById(R.id.secH812b);
-            lineH812b = (View) findViewById(R.id.lineH812b);
+            lineH812b = findViewById(R.id.lineH812b);
             VlblH812b = (TextView) findViewById(R.id.VlblH812b);
             txtH812b = (EditText) findViewById(R.id.txtH812b);
             secH812c = (LinearLayout) findViewById(R.id.secH812c);
-            lineH812c = (View) findViewById(R.id.lineH812c);
+            lineH812c = findViewById(R.id.lineH812c);
             VlblH812c = (TextView) findViewById(R.id.VlblH812c);
             rdogrpH812c = (RadioGroup) findViewById(R.id.rdogrpH812c);
 
@@ -721,11 +717,11 @@ public class Cost1 extends Activity {
             rdoH812c2 = (RadioButton) findViewById(R.id.rdoH812c2);
             rdoH812c3 = (RadioButton) findViewById(R.id.rdoH812c3);
             secH812d = (LinearLayout) findViewById(R.id.secH812d);
-            lineH812d = (View) findViewById(R.id.lineH812d);
+            lineH812d = findViewById(R.id.lineH812d);
             VlblH812d = (TextView) findViewById(R.id.VlblH812d);
             txtH812d = (EditText) findViewById(R.id.txtH812d);
             secH813a = (LinearLayout) findViewById(R.id.secH813a);
-            lineH813a = (View) findViewById(R.id.lineH813a);
+            lineH813a = findViewById(R.id.lineH813a);
             VlblH813a = (TextView) findViewById(R.id.VlblH813a);
             rdogrpH813a = (RadioGroup) findViewById(R.id.rdogrpH813a);
 
@@ -767,11 +763,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH813b = (LinearLayout) findViewById(R.id.secH813b);
-            lineH813b = (View) findViewById(R.id.lineH813b);
+            lineH813b = findViewById(R.id.lineH813b);
             VlblH813b = (TextView) findViewById(R.id.VlblH813b);
             txtH813b = (EditText) findViewById(R.id.txtH813b);
             secH813c = (LinearLayout) findViewById(R.id.secH813c);
-            lineH813c = (View) findViewById(R.id.lineH813c);
+            lineH813c = findViewById(R.id.lineH813c);
             VlblH813c = (TextView) findViewById(R.id.VlblH813c);
             rdogrpH813c = (RadioGroup) findViewById(R.id.rdogrpH813c);
 
@@ -779,11 +775,11 @@ public class Cost1 extends Activity {
             rdoH813c2 = (RadioButton) findViewById(R.id.rdoH813c2);
             rdoH813c3 = (RadioButton) findViewById(R.id.rdoH813c3);
             secH813d = (LinearLayout) findViewById(R.id.secH813d);
-            lineH813d = (View) findViewById(R.id.lineH813d);
+            lineH813d = findViewById(R.id.lineH813d);
             VlblH813d = (TextView) findViewById(R.id.VlblH813d);
             txtH813d = (EditText) findViewById(R.id.txtH813d);
             secH814a = (LinearLayout) findViewById(R.id.secH814a);
-            lineH814a = (View) findViewById(R.id.lineH814a);
+            lineH814a = findViewById(R.id.lineH814a);
             VlblH814a = (TextView) findViewById(R.id.VlblH814a);
             rdogrpH814a = (RadioGroup) findViewById(R.id.rdogrpH814a);
 
@@ -825,11 +821,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH814b = (LinearLayout) findViewById(R.id.secH814b);
-            lineH814b = (View) findViewById(R.id.lineH814b);
+            lineH814b = findViewById(R.id.lineH814b);
             VlblH814b = (TextView) findViewById(R.id.VlblH814b);
             txtH814b = (EditText) findViewById(R.id.txtH814b);
             secH814c = (LinearLayout) findViewById(R.id.secH814c);
-            lineH814c = (View) findViewById(R.id.lineH814c);
+            lineH814c = findViewById(R.id.lineH814c);
             VlblH814c = (TextView) findViewById(R.id.VlblH814c);
             rdogrpH814c = (RadioGroup) findViewById(R.id.rdogrpH814c);
 
@@ -837,11 +833,11 @@ public class Cost1 extends Activity {
             rdoH814c2 = (RadioButton) findViewById(R.id.rdoH814c2);
             rdoH814c3 = (RadioButton) findViewById(R.id.rdoH814c3);
             secH814d = (LinearLayout) findViewById(R.id.secH814d);
-            lineH814d = (View) findViewById(R.id.lineH814d);
+            lineH814d = findViewById(R.id.lineH814d);
             VlblH814d = (TextView) findViewById(R.id.VlblH814d);
             txtH814d = (EditText) findViewById(R.id.txtH814d);
             secH815a = (LinearLayout) findViewById(R.id.secH815a);
-            lineH815a = (View) findViewById(R.id.lineH815a);
+            lineH815a = findViewById(R.id.lineH815a);
             VlblH815a = (TextView) findViewById(R.id.VlblH815a);
             rdogrpH815a = (RadioGroup) findViewById(R.id.rdogrpH815a);
 
@@ -883,11 +879,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH815b = (LinearLayout) findViewById(R.id.secH815b);
-            lineH815b = (View) findViewById(R.id.lineH815b);
+            lineH815b = findViewById(R.id.lineH815b);
             VlblH815b = (TextView) findViewById(R.id.VlblH815b);
             txtH815b = (EditText) findViewById(R.id.txtH815b);
             secH815c = (LinearLayout) findViewById(R.id.secH815c);
-            lineH815c = (View) findViewById(R.id.lineH815c);
+            lineH815c = findViewById(R.id.lineH815c);
             VlblH815c = (TextView) findViewById(R.id.VlblH815c);
             rdogrpH815c = (RadioGroup) findViewById(R.id.rdogrpH815c);
 
@@ -895,11 +891,11 @@ public class Cost1 extends Activity {
             rdoH815c2 = (RadioButton) findViewById(R.id.rdoH815c2);
             rdoH815c3 = (RadioButton) findViewById(R.id.rdoH815c3);
             secH815d = (LinearLayout) findViewById(R.id.secH815d);
-            lineH815d = (View) findViewById(R.id.lineH815d);
+            lineH815d = findViewById(R.id.lineH815d);
             VlblH815d = (TextView) findViewById(R.id.VlblH815d);
             txtH815d = (EditText) findViewById(R.id.txtH815d);
             secH816a = (LinearLayout) findViewById(R.id.secH816a);
-            lineH816a = (View) findViewById(R.id.lineH816a);
+            lineH816a = findViewById(R.id.lineH816a);
             VlblH816a = (TextView) findViewById(R.id.VlblH816a);
             rdogrpH816a = (RadioGroup) findViewById(R.id.rdogrpH816a);
 
@@ -941,11 +937,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH816b = (LinearLayout) findViewById(R.id.secH816b);
-            lineH816b = (View) findViewById(R.id.lineH816b);
+            lineH816b = findViewById(R.id.lineH816b);
             VlblH816b = (TextView) findViewById(R.id.VlblH816b);
             txtH816b = (EditText) findViewById(R.id.txtH816b);
             secH816c = (LinearLayout) findViewById(R.id.secH816c);
-            lineH816c = (View) findViewById(R.id.lineH816c);
+            lineH816c = findViewById(R.id.lineH816c);
             VlblH816c = (TextView) findViewById(R.id.VlblH816c);
             rdogrpH816c = (RadioGroup) findViewById(R.id.rdogrpH816c);
 
@@ -953,14 +949,14 @@ public class Cost1 extends Activity {
             rdoH816c2 = (RadioButton) findViewById(R.id.rdoH816c2);
             rdoH816c3 = (RadioButton) findViewById(R.id.rdoH816c3);
             secH816d = (LinearLayout) findViewById(R.id.secH816d);
-            lineH816d = (View) findViewById(R.id.lineH816d);
+            lineH816d = findViewById(R.id.lineH816d);
             VlblH816d = (TextView) findViewById(R.id.VlblH816d);
             txtH816d = (EditText) findViewById(R.id.txtH816d);
 
 
             secLBH82 = (LinearLayout) findViewById(R.id.secLBH82);
             secH821a = (LinearLayout) findViewById(R.id.secH821a);
-            lineH821a = (View) findViewById(R.id.lineH821a);
+            lineH821a = findViewById(R.id.lineH821a);
             VlblH821a = (TextView) findViewById(R.id.VlblH821a);
             rdogrpH821a = (RadioGroup) findViewById(R.id.rdogrpH821a);
 
@@ -1002,11 +998,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH821b = (LinearLayout) findViewById(R.id.secH821b);
-            lineH821b = (View) findViewById(R.id.lineH821b);
+            lineH821b = findViewById(R.id.lineH821b);
             VlblH821b = (TextView) findViewById(R.id.VlblH821b);
             txtH821b = (EditText) findViewById(R.id.txtH821b);
             secH821c = (LinearLayout) findViewById(R.id.secH821c);
-            lineH821c = (View) findViewById(R.id.lineH821c);
+            lineH821c = findViewById(R.id.lineH821c);
             VlblH821c = (TextView) findViewById(R.id.VlblH821c);
             rdogrpH821c = (RadioGroup) findViewById(R.id.rdogrpH821c);
 
@@ -1014,12 +1010,12 @@ public class Cost1 extends Activity {
             rdoH821c2 = (RadioButton) findViewById(R.id.rdoH821c2);
             rdoH821c3 = (RadioButton) findViewById(R.id.rdoH821c3);
             secH821d = (LinearLayout) findViewById(R.id.secH821d);
-            lineH821d = (View) findViewById(R.id.lineH821d);
+            lineH821d = findViewById(R.id.lineH821d);
             VlblH821d = (TextView) findViewById(R.id.VlblH821d);
             txtH821d = (EditText) findViewById(R.id.txtH821d);
             secLBH83 = (LinearLayout) findViewById(R.id.secLBH83);
             secH83 = (LinearLayout) findViewById(R.id.secH83);
-            lineH83 = (View) findViewById(R.id.lineH83);
+            lineH83 = findViewById(R.id.lineH83);
             VlblH83 = (TextView) findViewById(R.id.VlblH83);
             rdogrpH83 = (RadioGroup) findViewById(R.id.rdogrpH83);
 
@@ -1077,7 +1073,7 @@ public class Cost1 extends Activity {
                 }
             });
             secH831a = (LinearLayout) findViewById(R.id.secH831a);
-            lineH831a = (View) findViewById(R.id.lineH831a);
+            lineH831a = findViewById(R.id.lineH831a);
             VlblH831a = (TextView) findViewById(R.id.VlblH831a);
             rdogrpH831a = (RadioGroup) findViewById(R.id.rdogrpH831a);
 
@@ -1119,11 +1115,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH831b = (LinearLayout) findViewById(R.id.secH831b);
-            lineH831b = (View) findViewById(R.id.lineH831b);
+            lineH831b = findViewById(R.id.lineH831b);
             VlblH831b = (TextView) findViewById(R.id.VlblH831b);
             txtH831b = (EditText) findViewById(R.id.txtH831b);
             secH831c = (LinearLayout) findViewById(R.id.secH831c);
-            lineH831c = (View) findViewById(R.id.lineH831c);
+            lineH831c = findViewById(R.id.lineH831c);
             VlblH831c = (TextView) findViewById(R.id.VlblH831c);
             rdogrpH831c = (RadioGroup) findViewById(R.id.rdogrpH831c);
 
@@ -1131,11 +1127,11 @@ public class Cost1 extends Activity {
             rdoH831c2 = (RadioButton) findViewById(R.id.rdoH831c2);
             rdoH831c3 = (RadioButton) findViewById(R.id.rdoH831c3);
             secH831d = (LinearLayout) findViewById(R.id.secH831d);
-            lineH831d = (View) findViewById(R.id.lineH831d);
+            lineH831d = findViewById(R.id.lineH831d);
             VlblH831d = (TextView) findViewById(R.id.VlblH831d);
             txtH831d = (EditText) findViewById(R.id.txtH831d);
             secH832a = (LinearLayout) findViewById(R.id.secH832a);
-            lineH832a = (View) findViewById(R.id.lineH832a);
+            lineH832a = findViewById(R.id.lineH832a);
             VlblH832a = (TextView) findViewById(R.id.VlblH832a);
             rdogrpH832a = (RadioGroup) findViewById(R.id.rdogrpH832a);
 
@@ -1177,11 +1173,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH832b = (LinearLayout) findViewById(R.id.secH832b);
-            lineH832b = (View) findViewById(R.id.lineH832b);
+            lineH832b = findViewById(R.id.lineH832b);
             VlblH832b = (TextView) findViewById(R.id.VlblH832b);
             txtH832b = (EditText) findViewById(R.id.txtH832b);
             secH832c = (LinearLayout) findViewById(R.id.secH832c);
-            lineH832c = (View) findViewById(R.id.lineH832c);
+            lineH832c = findViewById(R.id.lineH832c);
             VlblH832c = (TextView) findViewById(R.id.VlblH832c);
             rdogrpH832c = (RadioGroup) findViewById(R.id.rdogrpH832c);
 
@@ -1189,12 +1185,12 @@ public class Cost1 extends Activity {
             rdoH832c2 = (RadioButton) findViewById(R.id.rdoH832c2);
             rdoH832c3 = (RadioButton) findViewById(R.id.rdoH832c3);
             secH832d = (LinearLayout) findViewById(R.id.secH832d);
-            lineH832d = (View) findViewById(R.id.lineH832d);
+            lineH832d = findViewById(R.id.lineH832d);
             VlblH832d = (TextView) findViewById(R.id.VlblH832d);
             txtH832d = (EditText) findViewById(R.id.txtH832d);
             secLBH84 = (LinearLayout) findViewById(R.id.secLBH84);
             secH84 = (LinearLayout) findViewById(R.id.secH84);
-            lineH84 = (View) findViewById(R.id.lineH84);
+            lineH84 = findViewById(R.id.lineH84);
             VlblH84 = (TextView) findViewById(R.id.VlblH84);
             rdogrpH84 = (RadioGroup) findViewById(R.id.rdogrpH84);
 
@@ -1251,7 +1247,7 @@ public class Cost1 extends Activity {
                 }
             });
             secH841a = (LinearLayout) findViewById(R.id.secH841a);
-            lineH841a = (View) findViewById(R.id.lineH841a);
+            lineH841a = findViewById(R.id.lineH841a);
             VlblH841a = (TextView) findViewById(R.id.VlblH841a);
             rdogrpH841a = (RadioGroup) findViewById(R.id.rdogrpH841a);
 
@@ -1293,11 +1289,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH841b = (LinearLayout) findViewById(R.id.secH841b);
-            lineH841b = (View) findViewById(R.id.lineH841b);
+            lineH841b = findViewById(R.id.lineH841b);
             VlblH841b = (TextView) findViewById(R.id.VlblH841b);
             txtH841b = (EditText) findViewById(R.id.txtH841b);
             secH841c = (LinearLayout) findViewById(R.id.secH841c);
-            lineH841c = (View) findViewById(R.id.lineH841c);
+            lineH841c = findViewById(R.id.lineH841c);
             VlblH841c = (TextView) findViewById(R.id.VlblH841c);
             rdogrpH841c = (RadioGroup) findViewById(R.id.rdogrpH841c);
 
@@ -1305,11 +1301,11 @@ public class Cost1 extends Activity {
             rdoH841c2 = (RadioButton) findViewById(R.id.rdoH841c2);
             rdoH841c3 = (RadioButton) findViewById(R.id.rdoH841c3);
             secH841d = (LinearLayout) findViewById(R.id.secH841d);
-            lineH841d = (View) findViewById(R.id.lineH841d);
+            lineH841d = findViewById(R.id.lineH841d);
             VlblH841d = (TextView) findViewById(R.id.VlblH841d);
             txtH841d = (EditText) findViewById(R.id.txtH841d);
             secH842a = (LinearLayout) findViewById(R.id.secH842a);
-            lineH842a = (View) findViewById(R.id.lineH842a);
+            lineH842a = findViewById(R.id.lineH842a);
             VlblH842a = (TextView) findViewById(R.id.VlblH842a);
             rdogrpH842a = (RadioGroup) findViewById(R.id.rdogrpH842a);
 
@@ -1351,11 +1347,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH842b = (LinearLayout) findViewById(R.id.secH842b);
-            lineH842b = (View) findViewById(R.id.lineH842b);
+            lineH842b = findViewById(R.id.lineH842b);
             VlblH842b = (TextView) findViewById(R.id.VlblH842b);
             txtH842b = (EditText) findViewById(R.id.txtH842b);
             secH842c = (LinearLayout) findViewById(R.id.secH842c);
-            lineH842c = (View) findViewById(R.id.lineH842c);
+            lineH842c = findViewById(R.id.lineH842c);
             VlblH842c = (TextView) findViewById(R.id.VlblH842c);
             rdogrpH842c = (RadioGroup) findViewById(R.id.rdogrpH842c);
 
@@ -1363,12 +1359,12 @@ public class Cost1 extends Activity {
             rdoH842c2 = (RadioButton) findViewById(R.id.rdoH842c2);
             rdoH842c3 = (RadioButton) findViewById(R.id.rdoH842c3);
             secH842d = (LinearLayout) findViewById(R.id.secH842d);
-            lineH842d = (View) findViewById(R.id.lineH842d);
+            lineH842d = findViewById(R.id.lineH842d);
             VlblH842d = (TextView) findViewById(R.id.VlblH842d);
             txtH842d = (EditText) findViewById(R.id.txtH842d);
             secLBH85 = (LinearLayout) findViewById(R.id.secLBH85);
             secH851a = (LinearLayout) findViewById(R.id.secH851a);
-            lineH851a = (View) findViewById(R.id.lineH851a);
+            lineH851a = findViewById(R.id.lineH851a);
             VlblH851a = (TextView) findViewById(R.id.VlblH851a);
             rdogrpH851a = (RadioGroup) findViewById(R.id.rdogrpH851a);
 
@@ -1410,11 +1406,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH851b = (LinearLayout) findViewById(R.id.secH851b);
-            lineH851b = (View) findViewById(R.id.lineH851b);
+            lineH851b = findViewById(R.id.lineH851b);
             VlblH851b = (TextView) findViewById(R.id.VlblH851b);
             txtH851b = (EditText) findViewById(R.id.txtH851b);
             secH851c = (LinearLayout) findViewById(R.id.secH851c);
-            lineH851c = (View) findViewById(R.id.lineH851c);
+            lineH851c = findViewById(R.id.lineH851c);
             VlblH851c = (TextView) findViewById(R.id.VlblH851c);
             rdogrpH851c = (RadioGroup) findViewById(R.id.rdogrpH851c);
 
@@ -1422,12 +1418,12 @@ public class Cost1 extends Activity {
             rdoH851c2 = (RadioButton) findViewById(R.id.rdoH851c2);
             rdoH851c3 = (RadioButton) findViewById(R.id.rdoH851c3);
             secH851d = (LinearLayout) findViewById(R.id.secH851d);
-            lineH851d = (View) findViewById(R.id.lineH851d);
+            lineH851d = findViewById(R.id.lineH851d);
             VlblH851d = (TextView) findViewById(R.id.VlblH851d);
             txtH851d = (EditText) findViewById(R.id.txtH851d);
             secLBH86 = (LinearLayout) findViewById(R.id.secLBH86);
             secH86 = (LinearLayout) findViewById(R.id.secH86);
-            lineH86 = (View) findViewById(R.id.lineH86);
+            lineH86 = findViewById(R.id.lineH86);
             VlblH86 = (TextView) findViewById(R.id.VlblH86);
             rdogrpH86 = (RadioGroup) findViewById(R.id.rdogrpH86);
 
@@ -1481,7 +1477,7 @@ public class Cost1 extends Activity {
                 }
             });
             secH861a = (LinearLayout) findViewById(R.id.secH861a);
-            lineH861a = (View) findViewById(R.id.lineH861a);
+            lineH861a = findViewById(R.id.lineH861a);
             VlblH861a = (TextView) findViewById(R.id.VlblH861a);
             rdogrpH861a = (RadioGroup) findViewById(R.id.rdogrpH861a);
 
@@ -1523,11 +1519,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH861b = (LinearLayout) findViewById(R.id.secH861b);
-            lineH861b = (View) findViewById(R.id.lineH861b);
+            lineH861b = findViewById(R.id.lineH861b);
             VlblH861b = (TextView) findViewById(R.id.VlblH861b);
             txtH861b = (EditText) findViewById(R.id.txtH861b);
             secH861c = (LinearLayout) findViewById(R.id.secH861c);
-            lineH861c = (View) findViewById(R.id.lineH861c);
+            lineH861c = findViewById(R.id.lineH861c);
             VlblH861c = (TextView) findViewById(R.id.VlblH861c);
             rdogrpH861c = (RadioGroup) findViewById(R.id.rdogrpH861c);
 
@@ -1535,11 +1531,11 @@ public class Cost1 extends Activity {
             rdoH861c2 = (RadioButton) findViewById(R.id.rdoH861c2);
             rdoH861c3 = (RadioButton) findViewById(R.id.rdoH861c3);
             secH861d = (LinearLayout) findViewById(R.id.secH861d);
-            lineH861d = (View) findViewById(R.id.lineH861d);
+            lineH861d = findViewById(R.id.lineH861d);
             VlblH861d = (TextView) findViewById(R.id.VlblH861d);
             txtH861d = (EditText) findViewById(R.id.txtH861d);
             secH862a = (LinearLayout) findViewById(R.id.secH862a);
-            lineH862a = (View) findViewById(R.id.lineH862a);
+            lineH862a = findViewById(R.id.lineH862a);
             VlblH862a = (TextView) findViewById(R.id.VlblH862a);
             rdogrpH862a = (RadioGroup) findViewById(R.id.rdogrpH862a);
 
@@ -1583,11 +1579,11 @@ public class Cost1 extends Activity {
                 }
             });
             secH862b = (LinearLayout) findViewById(R.id.secH862b);
-            lineH862b = (View) findViewById(R.id.lineH862b);
+            lineH862b = findViewById(R.id.lineH862b);
             VlblH862b = (TextView) findViewById(R.id.VlblH862b);
             txtH862b = (EditText) findViewById(R.id.txtH862b);
             secH862c = (LinearLayout) findViewById(R.id.secH862c);
-            lineH862c = (View) findViewById(R.id.lineH862c);
+            lineH862c = findViewById(R.id.lineH862c);
             VlblH862c = (TextView) findViewById(R.id.VlblH862c);
             rdogrpH862c = (RadioGroup) findViewById(R.id.rdogrpH862c);
 
@@ -1595,7 +1591,7 @@ public class Cost1 extends Activity {
             rdoH862c2 = (RadioButton) findViewById(R.id.rdoH862c2);
             rdoH862c3 = (RadioButton) findViewById(R.id.rdoH862c3);
             secH862d = (LinearLayout) findViewById(R.id.secH862d);
-            lineH862d = (View) findViewById(R.id.lineH862d);
+            lineH862d = findViewById(R.id.lineH862d);
             VlblH862d = (TextView) findViewById(R.id.VlblH862d);
             txtH862d = (EditText) findViewById(R.id.txtH862d);
 
@@ -2181,6 +2177,36 @@ public class Cost1 extends Activity {
                 txtH862d.requestFocus();
                 return;
             }
+
+            //cross check of data
+
+            if (rdoH811.isChecked() && rdoH811a2.isChecked() && rdoH812a2.isChecked() && rdoH813a2.isChecked() && rdoH814a2.isChecked() && rdoH815a2.isChecked()
+                    && rdoH816a2.isChecked()) {
+                Connection.MessageBox(Cost1.this, "অসামঞ্জস্য) ইনপুট ");
+                rdoH811.requestFocus();
+                return;
+            }
+
+            if (rdoH831.isChecked() && rdoH831a2.isChecked() && rdoH832a2.isChecked()) {
+                Connection.MessageBox(Cost1.this, "অসামঞ্জস্য) ইনপুট ");
+                rdoH831.requestFocus();
+                return;
+
+            }
+            if (rdoH841.isChecked() && rdoH841a2.isChecked() && rdoH842a2.isChecked()) {
+                Connection.MessageBox(Cost1.this, "অসামঞ্জস্য) ইনপুট ");
+                rdoH841.requestFocus();
+                return;
+
+            }
+            if (rdoH861.isChecked() && rdoH861a2.isChecked() && rdoH862a2.isChecked()) {
+                Connection.MessageBox(Cost1.this, "অসামঞ্জস্য) ইনপুট ");
+                rdoH861.requestFocus();
+                return;
+
+            }
+
+
 
             String SQL = "";
             RadioButton rb;
