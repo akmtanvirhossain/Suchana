@@ -459,7 +459,7 @@ public class Illness1 extends Activity {
                 {
                     try
                     {
-                        if(Connection.SelectedSpinnerValue(spnH171a.getSelectedItem().toString(), "-").equals("22"))
+                        if (Connection.SelectedSpinnerValue(spnH171a.getSelectedItem().toString(), "-").equals("24"))
                         {
                             secH171aX.setVisibility(View.VISIBLE);
                         }
@@ -782,8 +782,14 @@ public class Illness1 extends Activity {
                 txtSlNo.setText(item.getSlNo());
                 spnH171a.setSelection(Global.SpinnerItemPositionAnyLength(spnH171a, item.getH171a()));
                 txtH171aX.setText(item.getH171aX());
+                if (txtH171aX.getText().toString().length() > 0) {
+                    secH171aX.setVisibility(View.VISIBLE);
+                }
                 spnH171b.setSelection(Global.SpinnerItemPositionAnyLength(spnH171b, item.getH171b()));
                 txtH171bX.setText(item.getH171bX());
+                if (txtH171bX.getText().toString().length() > 0) {
+                    secH171bX.setVisibility(View.VISIBLE);
+                }
                 txtH171c.setText(item.getH171c());
                 txtH171d.setText(item.getH171d());
                 txtH171VCost.setText(item.getH171VCost());

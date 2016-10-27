@@ -2698,6 +2698,58 @@ public class IGA extends Activity {
                 txtH18b2j5X.requestFocus();
                 return;
             }
+
+            if (rdoH18b1a1.isChecked() == true) {
+                if (chkH18b2a0.isChecked() == false && chkH18b2a1.isChecked() == false && chkH18b2a2.isChecked() == false && chkH18b2a3.isChecked() == false && chkH18b2a4.isChecked() == false && chkH18b2a5.isChecked() == false && chkH18b2a6.isChecked() == false && chkH18b2a7.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2A");
+                    return;
+                }
+            } else if (rdoH18b1b1.isChecked() == true) {
+                if (chkH18b2b0.isChecked() == false && chkH18b2b1.isChecked() == false && chkH18b2b2.isChecked() == false && chkH18b2b3.isChecked() == false && chkH18b2b4.isChecked() == false && chkH18b2b5.isChecked() == false && chkH18b2b6.isChecked() == false && chkH18b2b7.isChecked() == false && chkH18b2b8.isChecked() == false && chkH18b2b9.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2B");
+                    return;
+                }
+            } else if (rdoH18b1c1.isChecked() == true) {
+                if (chkH18b2c0.isChecked() == false && chkH18b2c1.isChecked() == false && chkH18b2c2.isChecked() == false && chkH18b2c3.isChecked() == false && chkH18b2c4.isChecked() == false && chkH18b2c5.isChecked() == false && chkH18b2c6.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2C");
+                    return;
+                }
+            } else if (rdoH18b1d1.isChecked() == true) {
+                if (chkH18b2d0.isChecked() == false && chkH18b2d1.isChecked() == false && chkH18b2d2.isChecked() == false && chkH18b2d3.isChecked() == false && chkH18b2d4.isChecked() == false && chkH18b2d5.isChecked() == false && chkH18b2d6.isChecked() == false && chkH18b2d7.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2D");
+                    return;
+                }
+            } else if (rdoH18b1e1.isChecked() == true) {
+                if (chkH18b2e0.isChecked() == false && chkH18b2e1.isChecked() == false && chkH18b2e2.isChecked() == false && chkH18b2e3.isChecked() == false && chkH18b2e4.isChecked() == false && chkH18b2e5.isChecked() == false && chkH18b2e6.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2E");
+                    return;
+                }
+            } else if (rdoH18b1f1.isChecked() == true) {
+                if (chkH18b2f0.isChecked() == false && chkH18b2f1.isChecked() == false && chkH18b2f2.isChecked() == false && chkH18b2f3.isChecked() == false && chkH18b2f4.isChecked() == false && chkH18b2f5.isChecked() == false && chkH18b2f6.isChecked() == false && chkH18b2f7.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2F");
+                    return;
+                }
+            } else if (rdoH18b1g1.isChecked() == true) {
+                if (chkH18b2g0.isChecked() == false && chkH18b2g1.isChecked() == false && chkH18b2g2.isChecked() == false && chkH18b2g3.isChecked() == false && chkH18b2g4.isChecked() == false && chkH18b2g5.isChecked() == false && chkH18b2g6.isChecked() == false && chkH18b2g7.isChecked() == false && chkH18b2g8.isChecked() == false && chkH18b2g9.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2G");
+                    return;
+                }
+            } else if (rdoH18b1h1.isChecked() == true) {
+                if (chkH18b2h0.isChecked() == false && chkH18b2h1.isChecked() == false && chkH18b2h2.isChecked() == false && chkH18b2h3.isChecked() == false && chkH18b2h4.isChecked() == false && chkH18b2h5.isChecked() == false && chkH18b2h6.isChecked() == false && chkH18b2h7.isChecked() == false && chkH18b2h8.isChecked() == false && chkH18b2h9.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2H");
+                    return;
+                }
+            } else if (rdoH18b1i1.isChecked() == true) {
+                if (chkH18b2i0.isChecked() == false && chkH18b2i1.isChecked() == false && chkH18b2i2.isChecked() == false && chkH18b2i3.isChecked() == false && chkH18b2i4.isChecked() == false && chkH18b2i5.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2I");
+                    return;
+                }
+            } else if (rdoH18b1j1.isChecked() == true) {
+                if (chkH18b2j0.isChecked() == false && chkH18b2j1.isChecked() == false && chkH18b2j2.isChecked() == false && chkH18b2j3.isChecked() == false && chkH18b2j4.isChecked() == false && chkH18b2j5.isChecked() == false) {
+                    Connection.MessageBox(IGA.this, "Required field:All the value can not be  empty H18b2J");
+                    return;
+                }
+            }
             /*else if (!rdoH18b1k1.isChecked() & !rdoH18b1k2.isChecked() & secH18b1k.isShown()) {
                 Connection.MessageBox(IGA.this, "Select anyone options from (অনান্য).");
                 rdoH18b1k1.requestFocus();

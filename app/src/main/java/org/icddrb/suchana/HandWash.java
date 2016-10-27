@@ -422,6 +422,7 @@ public class HandWash extends Activity {
                         chkM241e.setChecked(false);
                         chkM241f.setChecked(false);
                         chkM241g.setChecked(false);
+                        txtM241gX.setText(null);
                         chkM241h.setChecked(false);
                     }
 
@@ -934,6 +935,7 @@ public class HandWash extends Activity {
                         secM242g1.setVisibility(View.GONE);
                         lineM242g1.setVisibility(View.GONE);
                         spnM242g1.setSelection(0);
+                        txtM242g1X.setText(null);
                     }
                     else
                     {

@@ -1626,14 +1626,31 @@ public class Knowledge extends Activity {
                 txtM222x1.requestFocus();
                 return;
             }
+            if (rdoM2121.isChecked() == true) {
+                if (chkM213a.isChecked() == true && chkM213b.isChecked() == true && chkM213c.isChecked() == true && chkM213x.isChecked() == true) {
+                    Connection.MessageBox(Knowledge.this, "Inconsistent value in M212 and M213");
+                    return;
+                }
+            }
+
             if((chkM213a.isChecked()==true || chkM213b.isChecked()==true || chkM213x.isChecked()==true) && chkM213c.isChecked()==true)
             {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M213");
                 return;
             }
+            if (rdoM2151.isChecked() == true) {
+                if (chkM217a.isChecked() == true && chkM217b.isChecked() == true && chkM217c.isChecked() == true && chkM217d.isChecked() == true && chkM217x.isChecked() == true) {
+                    Connection.MessageBox(Knowledge.this, "Inconsistent value in M215 and M217");
+                    return;
+                }
+            }
             else if((chkM217a.isChecked()==true || chkM217b.isChecked()==true || chkM217c.isChecked()==true || chkM217x.isChecked()==true) && chkM217d.isChecked()==true)
             {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M217");
+                return;
+            }
+            if (chkM218a.isChecked() == false && chkM218b.isChecked() == false && chkM218x.isChecked() == false && chkM218c.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M218");
                 return;
             }
             else  if((chkM218a.isChecked()==true || chkM218b.isChecked()==true || chkM218x.isChecked()==true) && chkM218c.isChecked()==true)
@@ -1641,14 +1658,34 @@ public class Knowledge extends Activity {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M218");
                 return;
             }
+            if (chkM219a.isChecked() == false && chkM219b.isChecked() == false && chkM219c.isChecked() == false && chkM219d.isChecked() == false && chkM219e.isChecked() == false && chkM219f.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M219");
+                return;
+            }
+            if (chkM2111a.isChecked() == false && chkM2111b.isChecked() == false && chkM2111c.isChecked() == false && chkM2111d.isChecked() == false && chkM2111e.isChecked() == false && chkM2111f.isChecked() == false && chkM2111g.isChecked() == false && chkM2111h.isChecked() == false && chkM2111i.isChecked() == false && chkM2111x.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M2111");
+                return;
+            }
             else if((chkM2111a.isChecked()==true || chkM2111b.isChecked()==true || chkM2111c.isChecked()==true || chkM2111d.isChecked()==true || chkM2111e.isChecked()==true || chkM2111f.isChecked()==true || chkM2111g.isChecked()==true || chkM2111h.isChecked()==true || chkM2111x.isChecked()==true) && chkM2111i.isChecked()==true)
             {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M2111");
                 return;
             }
+            if (chkM2112a.isChecked() == false && chkM2112b.isChecked() == false && chkM2112c.isChecked() == false && chkM2112d.isChecked() == false && chkM2112e.isChecked() == false && chkM2112f.isChecked() == false && chkM2112g.isChecked() == false && chkM2112x.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M2112");
+                return;
+            }
             else if((chkM2112a.isChecked()==true || chkM2112b.isChecked()==true || chkM2112c.isChecked()==true || chkM2112d.isChecked()==true || chkM2112e.isChecked()==true || chkM2112f.isChecked()==true || chkM2112x.isChecked()==true) && chkM2112g.isChecked()==true)
             {
                 Connection.MessageBox(Knowledge.this, "Inconsistent value in M2112");
+                return;
+            }
+            if (chkM2113a.isChecked() == false && chkM2113b.isChecked() == false && chkM2113c.isChecked() == false && chkM2113d.isChecked() == false && chkM2113e.isChecked() == false && chkM2113f.isChecked() == false && chkM2113g.isChecked() == false && chkM2113h.isChecked() == false && chkM2113i.isChecked() == false && chkM2113j.isChecked() == false && chkM2113k.isChecked() == false && chkM2113l.isChecked() == false && chkM2113M.isChecked() == false && chkM2113x.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M2113");
+                return;
+            }
+            if (chkM222a.isChecked() == false && chkM222b.isChecked() == false && chkM222c.isChecked() == false && chkM222d.isChecked() == false && chkM222e.isChecked() == false && chkM222f.isChecked() == false && chkM222g.isChecked() == false && chkM222h.isChecked() == false && chkM222i.isChecked() == false && chkM222x.isChecked() == false) {
+                Connection.MessageBox(Knowledge.this, "Inconsistent value in M222");
                 return;
             }
             String SQL = "";
@@ -1863,6 +1900,10 @@ public class Knowledge extends Activity {
                     chkM213x.setChecked(false);
                 }
                 txtM213x1.setText(item.getM213x1());
+                if (txtM213x1.getText().toString().length() > 0) {
+                    secM213x1.setVisibility(View.VISIBLE);
+                }
+
                 String[] d_rdogrpM214 = new String[] {"1","0"};
                 for (int i = 0; i < d_rdogrpM214.length; i++)
                 {
@@ -1923,6 +1964,9 @@ public class Knowledge extends Activity {
                     chkM217x.setChecked(false);
                 }
                 txtM217x1.setText(item.getM217x1());
+                if (txtM217x1.getText().toString().length() > 0) {
+                    secM217x1.setVisibility(View.VISIBLE);
+                }
                 if(item.getM218a().equals("1"))
                 {
                     chkM218a.setChecked(true);
@@ -1956,6 +2000,9 @@ public class Knowledge extends Activity {
                     chkM218x.setChecked(false);
                 }
                 txtM218x1.setText(item.getM218x1());
+                if (txtM218x1.getText().toString().length() > 0) {
+                    secM218x1.setVisibility(View.VISIBLE);
+                }
                 if(item.getM219a().equals("1"))
                 {
                     chkM219a.setChecked(true);
@@ -2089,6 +2136,9 @@ public class Knowledge extends Activity {
                     chkM2111x.setChecked(false);
                 }
                 txtM2111x1.setText(item.getM2111x1());
+                if (txtM2111x1.getText().toString().length() > 0) {
+                    secM2111x1.setVisibility(View.VISIBLE);
+                }
                 if(item.getM2112a().equals("1"))
                 {
                     chkM2112a.setChecked(true);
@@ -2154,6 +2204,9 @@ public class Knowledge extends Activity {
                     chkM2112x.setChecked(false);
                 }
                 txtM2112x1.setText(item.getM2112x1());
+                if (txtM2112x1.getText().toString().length() > 0) {
+                    secM2112x1.setVisibility(View.VISIBLE);
+                }
                 if(item.getM2113a().equals("1"))
                 {
                     chkM2113a.setChecked(true);
@@ -2267,6 +2320,9 @@ public class Knowledge extends Activity {
                     chkM2113x.setChecked(false);
                 }
                 txtM2113x1.setText(item.getM2113x1());
+                if (txtM2113x1.getText().toString().length() > 0) {
+                    secM2113x1.setVisibility(View.VISIBLE);
+                }
                 txtM2114.setText(item.getM2114());
                 String[] d_rdogrpM2115 = new String[] {"1","2","3"};
                 for (int i = 0; i < d_rdogrpM2115.length; i++)
@@ -2372,6 +2428,9 @@ public class Knowledge extends Activity {
                     chkM222x.setChecked(false);
                 }
                 txtM222x1.setText(item.getM222x1());
+                if (txtM222x1.getText().toString().length() > 0) {
+                    secM222x1.setVisibility(View.VISIBLE);
+                }
             }
         }
         catch(Exception  e)

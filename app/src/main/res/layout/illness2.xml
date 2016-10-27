@@ -299,7 +299,7 @@
                 <TextView
                     android:id="@+id/VlblH172a"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="বিগত ১ বছর বা বেশী সময় এর মধ্যে অসুস্থতার ধরন"
                     android:textSize="20sp" />
 
@@ -445,7 +445,7 @@
                     android:id="@+id/lblH172cY"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C. "
+                    android:text="C(YY). "
                     android:textSize="20sp" />
 
                 <TextView
@@ -484,7 +484,7 @@
                     android:id="@+id/lblH172cM"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C. "
+                    android:text="C(MM). "
                     android:textSize="20sp" />
 
                 <TextView

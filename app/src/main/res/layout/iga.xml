@@ -3549,7 +3549,7 @@
                     android:id="@+id/VlblH18b2h7"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="মিশ্রনের বিবরণ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3618,14 +3618,14 @@
                     android:id="@+id/lblH18b2h9"
                     android:layout_width="80sp"
                     android:layout_height="wrap_content"
-                    android:text="H7. "
+                    android:text="H9. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblH18b2h9"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মিশ্রনের বিবরণ"
+                    android:text="অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox

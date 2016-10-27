@@ -277,12 +277,17 @@ public class Illness2 extends Activity {
                         secMSlNo.setVisibility(View.VISIBLE);
                         seclblH172.setVisibility(View.VISIBLE);
                         secH172a.setVisibility(View.VISIBLE);
-                        secH172aX.setVisibility(View.VISIBLE);
+                        //  secH172aX.setVisibility(View.VISIBLE);
                         secH172b.setVisibility(View.VISIBLE);
-                        secH172cX.setVisibility(View.VISIBLE);
+                        //  secH172cX.setVisibility(View.VISIBLE);
                         secH172cY.setVisibility(View.VISIBLE);
                         secH172cM.setVisibility(View.VISIBLE);
-                        secH172d.setVisibility(View.VISIBLE);
+                        if (Integer.valueOf(txtSlNo.getText().toString()) == 1) {
+                            secH172d.setVisibility(View.VISIBLE);
+                        } else {
+                            secH172d.setVisibility(View.GONE);
+                        }
+
                     }
                 }
 
@@ -387,7 +392,7 @@ public class Illness2 extends Activity {
                 {
                     try
                     {
-                        if(Connection.SelectedSpinnerValue(spnH172a.getSelectedItem().toString(), "-").equals("22"))
+                        if (Connection.SelectedSpinnerValue(spnH172a.getSelectedItem().toString(), "-").equals("24"))
                         {
                             secH172aX.setVisibility(View.VISIBLE);
                         }
@@ -448,6 +453,12 @@ public class Illness2 extends Activity {
                     DataSave();
                 }
             });
+
+            if (Integer.valueOf(txtSlNo.getText().toString()) == 1) {
+                secH172d.setVisibility(View.VISIBLE);
+            } else {
+                secH172d.setVisibility(View.GONE);
+            }
 
 
         } catch (Exception e) {
@@ -523,11 +534,14 @@ public class Illness2 extends Activity {
                 txtH172cM.requestFocus();
                 return;
             }
-            else if (!rdoH172d1.isChecked() & !rdoH172d2.isChecked() & secH172d.isShown()) {
-                Connection.MessageBox(Illness2.this, "Select anyone options from (এই খানায় 5 years or below কোন জীবিত শিশুর মৃত্যু হয়েছে গত 5 years ).");
-                rdoH172d1.requestFocus();
-                return;
+            if (Integer.valueOf(txtSlNo.getText().toString()) == 1) {
+                if (!rdoH172d1.isChecked() & !rdoH172d2.isChecked() & secH172d.isShown()) {
+                    Connection.MessageBox(Illness2.this, "Select anyone options from (এই খানায় 5 years or below কোন জীবিত শিশুর মৃত্যু হয়েছে গত 5 years ).");
+                    rdoH172d1.requestFocus();
+                    return;
+                }
             }
+
 
 
             Integer a=Integer.valueOf(C.ReturnSingleValue("Select count(*) from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"));
@@ -592,11 +606,16 @@ public class Illness2 extends Activity {
             objSave.setH172cY(txtH172cY.getText().toString());
             objSave.setH172cM(txtH172cM.getText().toString());
             String[] d_rdogrpH172d = new String[]{"1", "0"};
-            objSave.setH172d("");
-            for (int i = 0; i < rdogrpH172d.getChildCount(); i++) {
-                rb = (RadioButton) rdogrpH172d.getChildAt(i);
-                if (rb.isChecked()) objSave.setH172d(d_rdogrpH172d[i]);
+            if (Integer.valueOf(txtSlNo.getText().toString()) == 1) {
+                objSave.setH172d("");
+                for (int i = 0; i < rdogrpH172d.getChildCount(); i++) {
+                    rb = (RadioButton) rdogrpH172d.getChildAt(i);
+                    if (rb.isChecked()) objSave.setH172d(d_rdogrpH172d[i]);
+                }
+            } else {
+                objSave.setH172d("");
             }
+
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -647,8 +666,15 @@ public class Illness2 extends Activity {
                 txtSlNo.setText(item.getSlNo());
                 spnH172a.setSelection(Global.SpinnerItemPositionAnyLength(spnH172a, item.getH172a()));
                 txtH172aX.setText(item.getH172aX());
+                if (txtH172aX.getText().toString().length() > 0) {
+                    secH172aX.setVisibility(View.VISIBLE);
+                }
+
                 spnH172b.setSelection(Global.SpinnerItemPositionAnyLength(spnH172b, item.getH172b()));
                 txtH172cX.setText(item.getH172cX());
+                if (txtH172cX.getText().toString().length() > 0) {
+                    secH172cX.setVisibility(View.VISIBLE);
+                }
                 txtH172cY.setText(item.getH172cY());
                 txtH172cM.setText(item.getH172cM());
                 String[] d_rdogrpH172d = new String[]{"1", "0"};

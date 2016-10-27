@@ -475,13 +475,12 @@ public class NutHealth extends Activity {
             listM38.add("");
             listM38.add("1-কনডম");
             listM38.add("2-জন্মনিয়ন্ত্রন বড়ি");
-            listM38.add("3-ইমপ্ল্যান্ট");
-            listM38.add("4- কপার T");
-            listM38.add("5-ইঞ্জেকশন ভিত্তিক গর্ভনিরোধক");
-            listM38.add("6-ভ্যাসেকটমি ");
-            listM38.add("7-টিউবেকটমি");
-            listM38.add("8-সনাতন (আজল, নিরাপদ কাল)");
-            listM38.add("9-অন্যান্য (নির্দিষ্ট করুন) ");
+            listM38.add("3-ইমপ্ল্যান্ট/4- কপার T");
+            listM38.add("4-ইঞ্জেকশন ভিত্তিক গর্ভনিরোধক");
+            listM38.add("5-ভ্যাসেকটমি ");
+            listM38.add("6-টিউবেকটমি");
+            listM38.add("7-সনাতন (আজল, নিরাপদ কাল)");
+            listM38.add("8-অন্যান্য (নির্দিষ্ট করুন) ");
             ArrayAdapter<String> adptrM38 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listM38);
             spnM38.setAdapter(adptrM38);
 
@@ -490,7 +489,7 @@ public class NutHealth extends Activity {
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     if (spnM38.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnM38.getSelectedItem().toString(), "-");
-                    if (spnData.equalsIgnoreCase("9")) {
+                    if (spnData.equalsIgnoreCase("8")) {
                         secM38X1.setVisibility(View.VISIBLE);
                     } else {
                         secM38X1.setVisibility(View.GONE);
@@ -580,6 +579,10 @@ public class NutHealth extends Activity {
             } else if (txtM38X1.getText().toString().length() == 0 & secM38X1.isShown()) {
                 Connection.MessageBox(NutHealth.this, "Required field: অন্যান্য (নির্দিষ্ট করুন).");
                 txtM38X1.requestFocus();
+                return;
+            }
+            if (chkM31a.isChecked() == false & chkM31b.isChecked() == false & chkM31c.isChecked() == false & chkM31d.isChecked() == false & chkM31e.isChecked() == false & chkM31f.isChecked() == false & chkM31g.isChecked() == false & chkM31h.isChecked() == false & chkM31i.isChecked() == false & chkM31x.isChecked() == false) {
+                Connection.MessageBox(NutHealth.this, "Required field: M31");
                 return;
             }
 
@@ -721,6 +724,10 @@ public class NutHealth extends Activity {
                     chkM31x.setChecked(false);
                 }
                 txtM31x1.setText(item.getM31x1());
+                if (txtM31x1.getText().toString().length() > 0) {
+                    secM31x1.setVisibility(View.VISIBLE);
+                }
+
                 String[] d_rdogrpM32 = new String[]{"1", "0", "3"};
                 for (int i = 0; i < d_rdogrpM32.length; i++) {
                     if (item.getM32().equals(String.valueOf(d_rdogrpM32[i]))) {

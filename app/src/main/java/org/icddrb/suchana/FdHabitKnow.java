@@ -677,6 +677,10 @@ public class FdHabitKnow extends Activity {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: অন্যান্য (নির্দিষ্ট করুন).");
                 txtM231x1.requestFocus();
                 return;
+            } else if (rdoM232b1.isChecked() == false & rdoM232b2.isChecked() == false & secM232b.isShown()) {
+                Connection.MessageBox(FdHabitKnow.this, "Required field: M232");
+                txtM232b.requestFocus();
+                return;
             } else if (txtM232b.getText().toString().length() == 0 & secM232b.isShown()) {
                 Connection.MessageBox(FdHabitKnow.this, "Required field: ঘণ্টা.");
                 txtM232b.requestFocus();
@@ -741,6 +745,18 @@ public class FdHabitKnow extends Activity {
                 return;
             }
 
+            if (chkM236a.isChecked() == false & chkM236b.isChecked() == false & chkM236c.isChecked() == false & chkM236d.isChecked() == false & chkM236e.isChecked() == false & chkM236f.isChecked() == false & chkM236g.isChecked() == false & chkM236h.isChecked() == false & chkM236i.isChecked() == false & chkM236j.isChecked() == false) {
+                Connection.MessageBox(FdHabitKnow.this, "Inconsistent value in M236");
+                return;
+            }
+            if (chkM237a.isChecked() == false & chkM237b.isChecked() == false & chkM237c.isChecked() == false & chkM237d.isChecked() == false & chkM237e.isChecked() == false & chkM237x.isChecked() == false) {
+                Connection.MessageBox(FdHabitKnow.this, "Inconsistent value in M237");
+                return;
+            }
+            if (chkM239a.isChecked() == false & chkM239b.isChecked() == false & chkM239c.isChecked() == false & chkM239d.isChecked() == false & chkM239e.isChecked() == false & chkM239f.isChecked() == false & chkM239g.isChecked() == false) {
+                Connection.MessageBox(FdHabitKnow.this, "Inconsistent value in M239");
+                return;
+            }
             if((chkM239g.isChecked()==true) &&(chkM239a.isChecked()==true || chkM239b.isChecked()==true|| chkM239c.isChecked()==true|| chkM239d.isChecked()==true|| chkM239e.isChecked()==true|| chkM239f.isChecked()==true))
             {
                 Connection.MessageBox(FdHabitKnow.this, "Inconsistent value in M239");

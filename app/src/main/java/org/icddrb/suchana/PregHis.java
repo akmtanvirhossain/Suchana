@@ -591,6 +591,7 @@ public class PregHis extends Activity {
                         secM17.setVisibility(View.GONE);
                         lineM17.setVisibility(View.GONE);
                         txtM17.setText("");
+                        seclblM18.setVisibility(View.GONE);
                         secM18a.setVisibility(View.GONE);
                         lineM18a.setVisibility(View.GONE);
                         txtM18a.setText("");
@@ -603,6 +604,7 @@ public class PregHis extends Activity {
                     } else {
                         secM17.setVisibility(View.VISIBLE);
                         lineM17.setVisibility(View.VISIBLE);
+                        seclblM18.setVisibility(View.VISIBLE);
                         secM18a.setVisibility(View.VISIBLE);
                         lineM18a.setVisibility(View.VISIBLE);
                         secM18b.setVisibility(View.VISIBLE);
@@ -733,7 +735,7 @@ public class PregHis extends Activity {
                         secM111nX.setVisibility(View.GONE);
                         lineM111nX.setVisibility(View.GONE);
                         txtM111nX.setText("");
-                        secM112.setVisibility(View.GONE);
+                      /*  secM112.setVisibility(View.GONE);
                         lineM112.setVisibility(View.GONE);
                         spnM112.setSelection(0);
                         secM112X.setVisibility(View.GONE);
@@ -764,7 +766,7 @@ public class PregHis extends Activity {
                         lineM119.setVisibility(View.GONE);
                         rdogrpM119.clearCheck();
                         seclblM110.setVisibility(View.GONE);
-                        seclblM111.setVisibility(View.GONE);
+                        seclblM111.setVisibility(View.GONE);*/
                     } else {
                         seclblM110.setVisibility(View.VISIBLE);
                         seclblM111.setVisibility(View.VISIBLE);
@@ -827,7 +829,7 @@ public class PregHis extends Activity {
                         lineM111n.setVisibility(View.VISIBLE);
                         //secM111nX.setVisibility(View.VISIBLE);
                         //lineM111nX.setVisibility(View.VISIBLE);
-                        secM112.setVisibility(View.VISIBLE);
+                     /*   secM112.setVisibility(View.VISIBLE);
                         lineM112.setVisibility(View.VISIBLE);
                         //secM112X.setVisibility(View.VISIBLE);
                         //lineM112X.setVisibility(View.VISIBLE);
@@ -846,7 +848,7 @@ public class PregHis extends Activity {
                         secM118.setVisibility(View.VISIBLE);
                         lineM118.setVisibility(View.VISIBLE);
                         secM119.setVisibility(View.VISIBLE);
-                        lineM119.setVisibility(View.VISIBLE);
+                        lineM119.setVisibility(View.VISIBLE);*/
                     }
                 }
             });
@@ -910,14 +912,30 @@ public class PregHis extends Activity {
                         secM110mX.setVisibility(View.GONE);
                         lineM110mX.setVisibility(View.GONE);
                         txtM110mX.setText("");
-                        secM111a.setVisibility(View.GONE);
-                        lineM111a.setVisibility(View.GONE);
-                        chkM111a.setChecked(false);
+
                     } else {
                         secM110mX.setVisibility(View.VISIBLE);
                         lineM110mX.setVisibility(View.VISIBLE);
-                        secM111a.setVisibility(View.VISIBLE);
-                        lineM111a.setVisibility(View.VISIBLE);
+
+                    }
+                }
+            });
+
+            chkM110l.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkM110a.setChecked(false);
+                        chkM110b.setChecked(false);
+                        chkM110c.setChecked(false);
+                        chkM110d.setChecked(false);
+                        chkM110e.setChecked(false);
+                        chkM110f.setChecked(false);
+                        chkM110g.setChecked(false);
+                        chkM110h.setChecked(false);
+                        chkM110i.setChecked(false);
+                        chkM110j.setChecked(false);
+                        chkM110k.setChecked(false);
+                        chkM110m.setChecked(false);
 
                     }
                 }
@@ -1257,19 +1275,31 @@ public class PregHis extends Activity {
                 Connection.MessageBox(PregHis.this, "Required field: প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?.");
                 txtM11.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM11.getText().toString().length() == 0 ? "10" : txtM11.getText().toString()) < 10 || Integer.valueOf(txtM11.getText().toString().length() == 0 ? "80" : txtM11.getText().toString()) > 80) {
-                Connection.MessageBox(PregHis.this, "Value should be between 10 and 80(প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?).");
-                txtM11.requestFocus();
-                return;
-            } else if (txtM12.getText().toString().length() == 0 & secM12.isShown()) {
+            }
+            if (txtM11.getText().toString().equals("88")) {
+
+            } else {
+                if (Integer.valueOf(txtM11.getText().toString().length() == 0 ? "10" : txtM11.getText().toString()) < 10 || Integer.valueOf(txtM11.getText().toString().length() == 0 ? "80" : txtM11.getText().toString()) > 80) {
+                    Connection.MessageBox(PregHis.this, "Value should be between 10 and 80(প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?).");
+                    txtM11.requestFocus();
+                    return;
+                }
+            }
+            if (txtM12.getText().toString().length() == 0 & secM12.isShown()) {
                 Connection.MessageBox(PregHis.this, "Required field: প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?.");
                 txtM12.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtM12.getText().toString().length() == 0 ? "1" : txtM12.getText().toString()) < 1 || Integer.valueOf(txtM12.getText().toString().length() == 0 ? "60" : txtM12.getText().toString()) > 60) {
-                Connection.MessageBox(PregHis.this, "Value should be between 1 and 60(প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?).");
-                txtM12.requestFocus();
-                return;
-            } else if (txtM13.getText().toString().length() == 0 & secM13.isShown()) {
+            }
+            if (txtM12.getText().toString().equals("88")) {
+
+            } else {
+                if (Integer.valueOf(txtM12.getText().toString().length() == 0 ? "1" : txtM12.getText().toString()) < 1 || Integer.valueOf(txtM12.getText().toString().length() == 0 ? "60" : txtM12.getText().toString()) > 60) {
+                    Connection.MessageBox(PregHis.this, "Value should be between 1 and 60(প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?).");
+                    txtM12.requestFocus();
+                    return;
+                }
+            }
+            if (txtM13.getText().toString().length() == 0 & secM13.isShown()) {
                 Connection.MessageBox(PregHis.this, "Required field: আপনি সর্বমোট কতবার গর্ভধারণ করেছেন?  (সর্বমোট গর্ভধারণের সংখ্যা, গর্ভপাত/MR এবং গর্ভধারণ সহ).");
                 txtM13.requestFocus();
                 return;
@@ -1481,6 +1511,10 @@ public class PregHis extends Activity {
             if((Integer.valueOf(Integer.valueOf(txtM15b.getText().toString().length() == 0 ? "0" : txtM15b.getText().toString())+Integer.valueOf(txtM15c.getText().toString().length() == 0 ? "0" : txtM15c.getText().toString())+Integer.valueOf(txtM15d.getText().toString().length() == 0 ? "0" : txtM15d.getText().toString())+Integer.valueOf(txtM15e.getText().toString().length() == 0 ? "0" : txtM15e.getText().toString())) != Integer.valueOf(txtM15f.getText().toString().length() == 0 ? "0" : txtM15f.getText().toString())))
             {
                 Connection.MessageBox(PregHis.this, "Inconsistent in total value.M15");
+                return;
+            }
+            if ((chkM110l.isChecked() == true) && (chkM110a.isChecked() == true || chkM110b.isChecked() == true || chkM110c.isChecked() == true || chkM110d.isChecked() == true || chkM110e.isChecked() == true || chkM110f.isChecked() == true || chkM110g.isChecked() == true || chkM110h.isChecked() == true || chkM110i.isChecked() == true || chkM110j.isChecked() == true || chkM110k.isChecked() == true || chkM110m.isChecked() == true)) {
+                Connection.MessageBox(PregHis.this, "Inconsistent value in M110");
                 return;
             }
 
@@ -1739,6 +1773,10 @@ public class PregHis extends Activity {
                     chkM110m.setChecked(false);
                 }
                 txtM110mX.setText(item.getM110mX());
+                if (txtM110mX.getText().toString().length() > 0) {
+                    secM110mX.setVisibility(View.VISIBLE);
+                }
+
                 if (item.getM111a().equals("1")) {
                     chkM111a.setChecked(true);
                 } else if (item.getM111a().equals("2")) {
@@ -1810,6 +1848,9 @@ public class PregHis extends Activity {
                     chkM111n.setChecked(false);
                 }
                 txtM111nX.setText(item.getM111nX());
+                if (txtM111nX.getText().toString().length() > 0) {
+                    secM111nX.setVisibility(View.VISIBLE);
+                }
                 spnM112.setSelection(Global.SpinnerItemPositionAnyLength(spnM112, item.getM112()));
                 txtM112X.setText(item.getM112X());
                 spnM113.setSelection(Global.SpinnerItemPositionAnyLength(spnM113, item.getM113()));

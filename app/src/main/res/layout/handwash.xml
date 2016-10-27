@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:scrollbars="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="45sp"
-        android:orientation="horizontal"
-        android:background="@color/pageHeadingBack">
+        android:background="@color/pageHeadingBack"
+        android:orientation="horizontal">
 
         <include
             layout="@layout/home_button"
@@ -65,24 +65,24 @@
     </LinearLayout>
 
     <View
-        android:layout_height="1dip"
         android:layout_width="fill_parent"
+        android:layout_height="1dip"
         android:layout_marginBottom="5sp"
         android:background="#CCCCCC" />
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:overScrollMode="always"
         android:isScrollContainer="true"
+        android:overScrollMode="always"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="vertical">
 
         <LinearLayout
-            android:layout_marginLeft="10sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -93,93 +93,93 @@
 
                 <TextView
                     android:id="@+id/lblHM24"
-                    android:text="M2.4 হাত ধোয়া সম্পর্কে জ্ঞান এবং অভ্যাস"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M2.4 হাত ধোয়া সম্পর্কে জ্ঞান এবং অভ্যাস"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM24"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secRnd"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblRnd"
-                    android:text=""
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:text="রাউন্ড নাম্বার"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtRnd"
-                    android:maxLength="1"
-                    android:layout_width="60sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="1"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineRnd"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secSuchanaID"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblSuchanaID"
-                    android:text=""
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:text="Suchana ID"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
+                    android:text="Suchana ID"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtSuchanaID"
-                    android:maxLength="12"
-                    android:layout_width="150sp"
-                    android:inputType="number"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="number"
+                    android:maxLength="12"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineSuchanaID"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -190,38 +190,38 @@
 
                 <TextView
                     android:id="@+id/lblHM241"
-                    android:text="M2.4 হাত ধোয়া সম্পর্কে জ্ঞান"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="M2.4 হাত ধোয়া সম্পর্কে জ্ঞান"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/seclblM24"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lbllblM24"
-                    android:text="M2.4.1 "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="M2.4.1 "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlbllblM24"
-                    android:text="আপনার কখন হাত ধোয়া উচিৎ? (উত্তর পড়বেন না, আরো কিছু? বলে মা কে সাহায্য করুন)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="আপনার কখন হাত ধোয়া উচিৎ? (উত্তর পড়বেন না, আরো কিছু? বলে মা কে সাহায্য করুন)"
                     android:textSize="20sp" />
 
 
@@ -229,370 +229,370 @@
 
             <View
                 android:id="@+id/linelblM24"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241a"
-                    android:text="A. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="A. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241a"
-                    android:text="খাবার পূর্বে"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="খাবার পূর্বে"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241a"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241b"
-                    android:text="B. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="B. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241b"
-                    android:text="পায়খানা ব্যবহারের পর"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পায়খানা ব্যবহারের পর"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241b"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241c"
-                    android:text="C. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241c"
-                    android:text="শিশুকে খাওয়ানোর পূর্বে"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="শিশুকে খাওয়ানোর পূর্বে"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241c"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241d"
-                    android:text="D. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="D. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241d"
-                    android:text="শিশু পায়খানা করলে তা পরিষ্কার করার পর"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="শিশু পায়খানা করলে তা পরিষ্কার করার পর"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241d"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241e"
-                    android:text="E. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="E. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241e"
-                    android:text="খাবার তৈরী করার পূর্বে"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="খাবার তৈরী করার পূর্বে"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241e"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241e"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241f"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241f"
-                    android:text="F. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="F. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241f"
-                    android:text="পশুপাখি ধরার পর অথবা তাদের মলমুত্র পরিষ্কারের পর"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="পশুপাখি ধরার পর অথবা তাদের মলমুত্র পরিষ্কারের পর"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241f"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241f"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241g"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241g"
-                    android:text="G. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="G. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241g"
-                    android:text="অন্যান্"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241g"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241g"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241gX"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241gX"
-                    android:text="GX. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="GX. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241gX"
-                    android:text="উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM241gX"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241gX"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241h"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241h"
-                    android:text="H. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="H. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241h"
-                    android:text="খাবার পরিবেশনের পূর্বে"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="খাবার পরিবেশনের পূর্বে"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241h"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241h"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM241i"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM241i"
-                    android:text="I. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="I. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM241i"
-                    android:text="জানিনা"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
+                    android:text="জানিনা"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/chkM241i"
                     android:layout_width="50sp"
-                    android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM241i"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
@@ -603,922 +603,922 @@
 
                 <TextView
                     android:id="@+id/lblHM242"
-                    android:text="2.4.2 হাত ধোয়ার অভ্যাস"
+                    style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    style="@style/rowHeading" />
+                    android:text="2.4.2 হাত ধোয়ার অভ্যাস"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242a"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242a"
-                    android:text="A. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="A. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242a"
-                    android:text="রান্নার পূর্বে হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="রান্নার পূর্বে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242a"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242a1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242a2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242a"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242a1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242a1"
-                    android:text="A1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="A1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242a1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242a1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242a1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242a1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242a1X"
-                    android:text="A1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="A1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242a1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242a1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242a1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242b"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242b"
-                    android:text="B. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="B. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242b"
-                    android:text="শিশুকে খাওয়ানোর পূর্বে হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="শিশুকে খাওয়ানোর পূর্বে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242b"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242b1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242b2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242b"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242b1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242b1"
-                    android:text="B1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="B1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242b1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242b1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242b1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242b1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242b1X"
-                    android:text="B1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="B1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242b1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242b1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242b1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242c"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242c"
-                    android:text="C. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242c"
-                    android:text="খাদ্য গ্রহনের পূর্বে হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="খাদ্য গ্রহনের পূর্বে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242c"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242c1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242c2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242c"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242c1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242c1"
-                    android:text="C1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242c1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242c1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242c1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242c1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242c1X"
-                    android:text="C1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="C1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242c1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242c1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242c1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242d"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242d"
-                    android:text="D. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="D. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242d"
-                    android:text="শিশুর নিম্নাঙ্গ পরিষ্কার করার পর হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="শিশুর নিম্নাঙ্গ পরিষ্কার করার পর হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242d"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242d1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242d2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242d"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242d1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242d1"
-                    android:text="D1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="D1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242d1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242d1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242d1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242d1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242d1X"
-                    android:text="D1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="D1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242d1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242d1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242d1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242e"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242e"
-                    android:text="E. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="E. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242e"
-                    android:text="পায়খানা করার পর হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="পায়খানা করার পর হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242e"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242e1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242e2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242e"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242e1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242e1"
-                    android:text="E1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="E1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242e1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242e1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242e1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242e1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242e1X"
-                    android:text="E1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="E1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242e1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242e1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242e1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242f"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242f"
-                    android:text="F. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="F. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242f"
-                    android:text="পশুপাখি ধরার পর অথবা তাদের মলমুত্র পরিষ্কারের পর হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="পশুপাখি ধরার পর অথবা তাদের মলমুত্র পরিষ্কারের পর হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242f"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242f1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242f2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242f"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242f1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242f1"
-                    android:text="F1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="F1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242f1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242f1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242f1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242f1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242f1X"
-                    android:text="F1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="F1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242f1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242f1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242f1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242g"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242g"
-                    android:text="G. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="G. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242g"
-                    android:text="খাবার পরিবেসনের পূর্বে হাত ধৌত করেন"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
+                    android:text="খাবার পরিবেসনের পূর্বে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <RadioGroup
                     android:id="@+id/rdogrpM242g"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:textSize="20sp">
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242g1"
-                        android:text="হ্যা" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="হ্যা"
+                        android:textSize="20sp" />
 
                     <RadioButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:paddingRight="10dp"
-                        android:textSize="20sp"
                         android:id="@+id/rdoM242g2"
-                        android:text="না" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="না"
+                        android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242g"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242g1"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242g1"
-                    android:text="G1. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="G1. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242g1"
-                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnM242g1"
-                    android:drawSelectorOnTop="true"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:drawSelectorOnTop="true"
                     android:prompt="@string/planet_prompt"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242g1"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:id="@+id/secM242g1X"
+                style="@style/rowStyle0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/rowStyle0">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblM242g1X"
-                    android:text="G1X. "
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
+                    android:text="G1X. "
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM242g1X"
-                    android:text="অন্যান্য উল্লেখ করুন"
                     android:layout_width="200sp"
                     android:layout_height="wrap_content"
+                    android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/txtM242g1X"
-                    android:maxLength="50"
-                    android:layout_width="250sp"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
                     style="@style/customEdit"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
+                    android:inputType="text"
+                    android:maxLength="50"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/lineM242g1X"
-                android:layout_height="1dip"
                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
                 android:background="#CCCCCC" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:paddingTop="20sp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="20sp">
 
                 <Button
                     android:id="@+id/cmdSave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
                     android:background="@drawable/button_style"
-                    android:textSize="20sp"
                     android:text=" Save -> Continue "
-                    android:layout_marginBottom="10sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

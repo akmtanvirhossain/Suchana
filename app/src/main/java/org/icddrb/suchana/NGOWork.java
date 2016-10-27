@@ -1119,6 +1119,7 @@ public class NGOWork extends Activity {
                     }
 
                     if (rbData.equalsIgnoreCase("0")) {
+
                         seclbH167.setVisibility(View.GONE);
                         secH167a.setVisibility(View.GONE);
                         lineH167a.setVisibility(View.GONE);
@@ -1184,6 +1185,7 @@ public class NGOWork extends Activity {
                         lineH168x.setVisibility(View.GONE);
                         txtH168x.setText("");
                     } else {
+
                         seclbH167.setVisibility(View.VISIBLE);
                         secH167a.setVisibility(View.VISIBLE);
                         lineH167a.setVisibility(View.VISIBLE);
@@ -1585,6 +1587,7 @@ public class NGOWork extends Activity {
                         secH1613.setVisibility(View.GONE);
                         lineH1613.setVisibility(View.GONE);
                         rdogrpH1613.clearCheck();
+                        secH1614.setVisibility(View.GONE);
                         secH1614a.setVisibility(View.GONE);
                         lineH1614a.setVisibility(View.GONE);
                         chkH1614a.setChecked(false);
@@ -1612,6 +1615,7 @@ public class NGOWork extends Activity {
                         secH1615.setVisibility(View.GONE);
                         lineH1615.setVisibility(View.GONE);
                         rdogrpH1615.clearCheck();
+                        secH1616.setVisibility(View.GONE);
                         secH1616a.setVisibility(View.GONE);
                         lineH1616a.setVisibility(View.GONE);
                         chkH1616a.setChecked(false);
@@ -1683,6 +1687,7 @@ public class NGOWork extends Activity {
                         lineH1613.setVisibility(View.VISIBLE);
                         secH1614.setVisibility(View.VISIBLE);
                         lblHlbH1614.setVisibility(View.VISIBLE);
+                        secH1614.setVisibility(View.VISIBLE);
                         secH1614a.setVisibility(View.VISIBLE);
                         lineH1614a.setVisibility(View.VISIBLE);
                         secH1614b.setVisibility(View.VISIBLE);
@@ -1915,6 +1920,7 @@ public class NGOWork extends Activity {
                         chkH165g.setChecked(false);
                         chkH165h.setChecked(false);
                         chkH165x.setChecked(false);
+                        txtH16x1.setText(null);
                     }
                 }
             });
@@ -2001,6 +2007,19 @@ public class NGOWork extends Activity {
                 }
             });
 
+            chkH165x.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (!((CheckBox) v).isChecked()) {
+                        secH16x1.setVisibility(View.GONE);
+                        lineH16x1.setVisibility(View.GONE);
+                        txtH16x1.setText("");
+                    } else {
+                        secH16x1.setVisibility(View.VISIBLE);
+                        lineH16x1.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
            // chkH167x=(CheckBox) findViewById(R.id.chkM222x);
             chkH167x.setOnClickListener(new View.OnClickListener()
             {
@@ -2062,7 +2081,8 @@ public class NGOWork extends Activity {
                 }
             });
 
-          //  chkH1616x=(CheckBox) findViewById(R.id.chkM222x);
+
+            //  chkH1616x=(CheckBox) findViewById(R.id.chkM222x);
             chkH1616x.setOnClickListener(new View.OnClickListener()
             {
                 public void onClick(View v)
@@ -2478,6 +2498,7 @@ public class NGOWork extends Activity {
             lineH163x.setVisibility(View.GONE);
             lineH163oth.setVisibility(View.GONE);
             lineH164.setVisibility(View.GONE);
+            seclbH165.setVisibility(View.GONE);
             lineH165a.setVisibility(View.GONE);
             lineH165b.setVisibility(View.GONE);
             lineH165c.setVisibility(View.GONE);
@@ -2571,7 +2592,7 @@ public class NGOWork extends Activity {
             lineH1616x.setVisibility(View.GONE);
             lblHlbH163.setVisibility(View.GONE);
             //   lblHlbH165.setVisibility(View.GONE);
-            lblHlbH167.setVisibility(View.GONE);
+            seclbH167.setVisibility(View.GONE);
             lblHlbH1612.setVisibility(View.GONE);
             lblHlbH1614.setVisibility(View.GONE);
             lblHlbH1616.setVisibility(View.GONE);
@@ -2761,6 +2782,49 @@ public class NGOWork extends Activity {
                 Connection.MessageBox(NGOWork.this, "Required field: উল্লেখ কর.");
                 txtH1616x1.requestFocus();
                 return;
+            }
+            if ((chkH163a.isChecked() == false & secH163a.isShown()) & (chkH163a.isChecked() == false & secH163a.isShown())) {
+                Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H163");
+                return;
+            }
+
+            if (rdoH1621.isChecked()) {
+                if (chkH163a.isChecked() == false && chkH163b.isChecked() == false && chkH163c.isChecked() == false && chkH163d.isChecked() == false && chkH163e.isChecked() == false && chkH163f.isChecked() == false && chkH163g.isChecked() == false && chkH163h.isChecked() == false && chkH163i.isChecked() == false && chkH163x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H163");
+                    return;
+                }
+                if (chkH165a.isChecked() == false && chkH165b.isChecked() == false && chkH165c.isChecked() == false && chkH165d.isChecked() == false && chkH165e.isChecked() == false && chkH165f.isChecked() == false && chkH165g.isChecked() == false && chkH165h.isChecked() == false && chkH165i.isChecked() == false && chkH165x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H165");
+                    return;
+                }
+            }
+
+            if (rdoH1661.isChecked()) {
+                if (chkH167a.isChecked() == false && chkH167b.isChecked() == false && chkH167c.isChecked() == false && chkH167d.isChecked() == false && chkH167e.isChecked() == false && chkH167f.isChecked() == false && chkH167g.isChecked() == false && chkH167h.isChecked() == false && chkH167i.isChecked() == false && chkH167x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H167");
+                    return;
+                }
+            }
+
+            if (rdoH16111.isChecked()) {
+                if (chkH1612a.isChecked() == false && chkH1612b.isChecked() == false && chkH1612c.isChecked() == false && chkH1612d.isChecked() == false && chkH1612e.isChecked() == false && chkH1612f.isChecked() == false && chkH1612g.isChecked() == false && chkH1612h.isChecked() == false && chkH1612i.isChecked() == false && chkH1612j.isChecked() == false && chkH1612k.isChecked() == false && chkH1612l.isChecked() == false && chkH1612m.isChecked() == false && chkH1612n.isChecked() == false && chkH1612x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H1612");
+                    return;
+                }
+            }
+            if (rdoH16131.isChecked()) {
+                if (chkH1614a.isChecked() == false && chkH1614b.isChecked() == false && chkH1614c.isChecked() == false && chkH1614d.isChecked() == false && chkH1614e.isChecked() == false && chkH1614f.isChecked() == false && chkH1614x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H1614");
+                    return;
+                }
+
+            }
+            if (rdoH16151.isChecked()) {
+                if (chkH1616a.isChecked() == false && chkH1616b.isChecked() == false && chkH1616c.isChecked() == false && chkH1616d.isChecked() == false && chkH1616e.isChecked() == false && chkH1616f.isChecked() == false && chkH1616g.isChecked() == false && chkH1616h.isChecked() == false && chkH1616i.isChecked() == false && chkH1616x.isChecked() == false) {
+                    Connection.MessageBox(NGOWork.this, "Required field:All the value can not be  empty H1616");
+                    return;
+                }
+
             }
 
             String SQL = "";
@@ -3006,6 +3070,7 @@ public class NGOWork extends Activity {
                 }
                 if (item.getH163x().equals("1")) {
                     chkH163x.setChecked(true);
+                    secH163oth.setVisibility(View.VISIBLE);
                 } else if (item.getH163x().equals("2")) {
                     chkH163x.setChecked(false);
                 }
@@ -3053,6 +3118,7 @@ public class NGOWork extends Activity {
                 }
                 if (item.getH165x().equals("1")) {
                     chkH165x.setChecked(true);
+                    secH16x1.setVisibility(View.VISIBLE);
                 } else if (item.getH165x().equals("2")) {
                     chkH165x.setChecked(false);
                 }
@@ -3125,6 +3191,7 @@ public class NGOWork extends Activity {
                 txtH168i.setText(item.getH168i());
                 if (item.getH167x().equals("1")) {
                     chkH167x.setChecked(true);
+                    secH167x1.setVisibility(View.VISIBLE);
                 } else if (item.getH167x().equals("2")) {
                     chkH167x.setChecked(false);
                 }
@@ -3222,6 +3289,7 @@ public class NGOWork extends Activity {
 
                 if (item.getH1612x().equals("1")) {
                     chkH1612x.setChecked(true);
+                    secH1612x1.setVisibility(View.VISIBLE);
                 } else if (item.getH1612x().equals("2")) {
                     chkH1612x.setChecked(false);
                 }
@@ -3265,6 +3333,7 @@ public class NGOWork extends Activity {
                 }
                 if (item.getH1614x().equals("1")) {
                     chkH1614x.setChecked(true);
+                    secH1614x1.setVisibility(View.VISIBLE);
                 } else if (item.getH1614x().equals("2")) {
                     chkH1614x.setChecked(false);
                 }
@@ -3323,6 +3392,7 @@ public class NGOWork extends Activity {
                 }
                 if (item.getH1616x().equals("1")) {
                     chkH1616x.setChecked(true);
+                    secH1616x1.setVisibility(View.VISIBLE);
                 } else if (item.getH1616x().equals("2")) {
                     chkH1616x.setChecked(false);
                 }
