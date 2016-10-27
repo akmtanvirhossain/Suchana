@@ -236,7 +236,7 @@ public class HHIdentity_list extends Activity {
             Integer i = 1;
             HHIdentity_DataModel d = new HHIdentity_DataModel();
             String SQL = "";
-            SQL = "Select Rnd, ScreeningID, Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
+            SQL = "Select Rnd, ScreeningID, Dist||Upz||Un||Vill||HHNo SuchanaID,Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
             SQL += " order by date(VDate) desc, datetime(EnDt) desc";
@@ -257,6 +257,7 @@ public class HHIdentity_list extends Activity {
                 map.put("Un", item.getunName());
                 map.put("Vill", item.getvillName());
                 map.put("H11", item.getWRHHNo());
+                map.put("SuchanaID", item.getSuchanaID());
                 map.put("ScreeningID", item.getScreeningID());
                 map.put("BenName", item.getBenName());
                 map.put("HeadName", item.getHeadName());
@@ -360,7 +361,7 @@ public class HHIdentity_list extends Activity {
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
-                    //For Screening
+               /*     //For Screening
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("ScreeningID", o.get("ScreeningID"));
@@ -368,16 +369,17 @@ public class HHIdentity_list extends Activity {
                     f1 = new Intent(getApplicationContext(), Screening.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
-
+*/
                     //For Household Interview
-                    /*Bundle IDbundle = new Bundle();
+                    Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
-                    IDbundle.putString("SuchanaID", o.get("ScreeningID"));
+                    IDbundle.putString("ScreeningID", o.get("ScreeningID"));
+                    IDbundle.putString("SuchanaID", o.get("SuchanaID"));
                     Intent f1;
                     //f1 = new Intent(getApplicationContext(), UpdateMenu.class);
                     f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
                     f1.putExtras(IDbundle);
-                    startActivity(f1);*/
+                    startActivity(f1);
                 }
             });
 

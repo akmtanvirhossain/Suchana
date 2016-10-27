@@ -55,6 +55,7 @@ public class UpdateMenu extends Activity {
     Button cmdMenuHandWash;
     Button cmdMenuFather;
     Button cmdMenuFinish;
+    Button cmdScreening;
 
 
     LinearLayout secEligible;
@@ -421,6 +422,14 @@ public class UpdateMenu extends Activity {
                 }
             });
 
+            cmdScreening = (Button) findViewById(R.id.cmdScreening);
+            cmdScreening.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, Screening.class).putExtras(IDBundle));
+                }
+            });
 
             cmdMenuFinish = (Button) findViewById(R.id.cmdMenuFinish);
             cmdMenuFinish.setOnClickListener(new View.OnClickListener() {

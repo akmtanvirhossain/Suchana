@@ -51,6 +51,7 @@ public class HHIdentity_final extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    static String ScreeningID = "";
     private static String Status = "new";
     String[] SuchanaIdBuilder;
     boolean networkAvailable = false;
@@ -261,6 +262,7 @@ public class HHIdentity_final extends Activity {
             StartTime = g.CurrentTime24();
             IDbundle = getIntent().getExtras();
             RND = IDbundle.getString("Rnd");
+            ScreeningID = IDbundle.getString("ScreeningID");
             SUCHANAID = IDbundle.getString("SuchanaID");
 
             TableName = "HHIdentity";
@@ -812,7 +814,7 @@ public class HHIdentity_final extends Activity {
 
             RadioButton rb;
             Screening_DataModel d = new Screening_DataModel();
-            String SQL = "Select * from Screening  Where Rnd='" + Rnd + "' and ScreeningID='" + SuchanaID + "'";
+            String SQL = "Select * from Screening  Where Rnd='" + Rnd + "' and ScreeningID='" + ScreeningID + "'";
             List<Screening_DataModel> data = d.SelectAll(this, SQL);
             for (Screening_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
