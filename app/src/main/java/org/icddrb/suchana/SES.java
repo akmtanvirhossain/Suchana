@@ -557,6 +557,7 @@ public class SES extends Activity {
     RadioGroup rdogrpH616;
     RadioButton rdoH6161;
     RadioButton rdoH6162;
+    RadioButton rdoH6163;
     LinearLayout secH617;
     View lineH617;
     TextView VlblH617;
@@ -597,11 +598,7 @@ public class SES extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -703,24 +700,24 @@ public class SES extends Activity {
 
             seclblH311 = (LinearLayout) findViewById(R.id.seclblH311);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             txtRnd.setText(RND);
             txtRnd.setEnabled(false);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             txtSuchanaID.setText(SUCHANAID);
             txtSuchanaID.setEnabled(false);
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
-            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            lineMSlNo = findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
 
             secH311 = (LinearLayout) findViewById(R.id.secH311);
-            lineH311 = (View) findViewById(R.id.lineH311);
+            lineH311 = findViewById(R.id.lineH311);
             VlblH311 = (TextView) findViewById(R.id.VlblH311);
             spnH311 = (Spinner) findViewById(R.id.spnH311);
             List<String> listH311 = new ArrayList<String>();
@@ -734,16 +731,16 @@ public class SES extends Activity {
             spnH311.setAdapter(adptrH311);
 
             secH312 = (LinearLayout) findViewById(R.id.secH312);
-            lineH312 = (View) findViewById(R.id.lineH312);
+            lineH312 = findViewById(R.id.lineH312);
             VlblH312 = (TextView) findViewById(R.id.VlblH312);
             txtH312 = (EditText) findViewById(R.id.txtH312);
             secH313 = (LinearLayout) findViewById(R.id.secH313);
-            lineH313 = (View) findViewById(R.id.lineH313);
+            lineH313 = findViewById(R.id.lineH313);
             VlblH313 = (TextView) findViewById(R.id.VlblH313);
             txtH313 = (EditText) findViewById(R.id.txtH313);
             seclblH321 = (LinearLayout) findViewById(R.id.seclblH321);
             secH321 = (LinearLayout) findViewById(R.id.secH321);
-            lineH321 = (View) findViewById(R.id.lineH321);
+            lineH321 = findViewById(R.id.lineH321);
             VlblH321 = (TextView) findViewById(R.id.VlblH321);
             spnH321 = (Spinner) findViewById(R.id.spnH321);
             List<String> listH321 = new ArrayList<String>();
@@ -781,11 +778,11 @@ public class SES extends Activity {
             });
             secH321X = (LinearLayout) findViewById(R.id.secH321X);
 
-            lineH321X = (View) findViewById(R.id.lineH321X);
+            lineH321X = findViewById(R.id.lineH321X);
             VlblH321X = (TextView) findViewById(R.id.VlblH321X);
             txtH321X = (EditText) findViewById(R.id.txtH321X);
             secH322 = (LinearLayout) findViewById(R.id.secH322);
-            lineH322 = (View) findViewById(R.id.lineH322);
+            lineH322 = findViewById(R.id.lineH322);
             VlblH322 = (TextView) findViewById(R.id.VlblH322);
             spnH322 = (Spinner) findViewById(R.id.spnH322);
             List<String> listH322 = new ArrayList<String>();
@@ -822,11 +819,11 @@ public class SES extends Activity {
                 }
             });
             secH322X = (LinearLayout) findViewById(R.id.secH322X);
-            lineH322X = (View) findViewById(R.id.lineH322X);
+            lineH322X = findViewById(R.id.lineH322X);
             VlblH322X = (TextView) findViewById(R.id.VlblH322X);
             txtH322X = (EditText) findViewById(R.id.txtH322X);
             secH323 = (LinearLayout) findViewById(R.id.secH323);
-            lineH323 = (View) findViewById(R.id.lineH323);
+            lineH323 = findViewById(R.id.lineH323);
             VlblH323 = (TextView) findViewById(R.id.VlblH323);
             spnH323 = (Spinner) findViewById(R.id.spnH323);
             List<String> listH323 = new ArrayList<String>();
@@ -863,11 +860,11 @@ public class SES extends Activity {
                 }
             });
             secH323X = (LinearLayout) findViewById(R.id.secH323X);
-            lineH323X = (View) findViewById(R.id.lineH323X);
+            lineH323X = findViewById(R.id.lineH323X);
             VlblH323X = (TextView) findViewById(R.id.VlblH323X);
             txtH323X = (EditText) findViewById(R.id.txtH323X);
             secH324 = (LinearLayout) findViewById(R.id.secH324);
-            lineH324 = (View) findViewById(R.id.lineH324);
+            lineH324 = findViewById(R.id.lineH324);
             VlblH324 = (TextView) findViewById(R.id.VlblH324);
             spnH324 = (Spinner) findViewById(R.id.spnH324);
             List<String> listH324 = new ArrayList<String>();
@@ -903,11 +900,11 @@ public class SES extends Activity {
                 }
             });
             secH324X = (LinearLayout) findViewById(R.id.secH324X);
-            lineH324X = (View) findViewById(R.id.lineH324X);
+            lineH324X = findViewById(R.id.lineH324X);
             VlblH324X = (TextView) findViewById(R.id.VlblH324X);
             txtH324X = (EditText) findViewById(R.id.txtH324X);
             secH325 = (LinearLayout) findViewById(R.id.secH325);
-            lineH325 = (View) findViewById(R.id.lineH325);
+            lineH325 = findViewById(R.id.lineH325);
             VlblH325 = (TextView) findViewById(R.id.VlblH325);
             spnH325 = (Spinner) findViewById(R.id.spnH325);
             List<String> listH325 = new ArrayList<String>();
@@ -972,12 +969,12 @@ public class SES extends Activity {
                 }
             });
             secH325X = (LinearLayout) findViewById(R.id.secH325X);
-            lineH325X = (View) findViewById(R.id.lineH325X);
+            lineH325X = findViewById(R.id.lineH325X);
             VlblH325X = (TextView) findViewById(R.id.VlblH325X);
             txtH325X = (EditText) findViewById(R.id.txtH325X);
             seclblH331 = (LinearLayout) findViewById(R.id.seclblH331);
             secH331 = (LinearLayout) findViewById(R.id.secH331);
-            lineH331 = (View) findViewById(R.id.lineH331);
+            lineH331 = findViewById(R.id.lineH331);
             VlblH331 = (TextView) findViewById(R.id.VlblH331);
             rdogrpH331 = (RadioGroup) findViewById(R.id.rdogrpH331);
 
@@ -1021,16 +1018,16 @@ public class SES extends Activity {
                 }
             });
             secH332A = (LinearLayout) findViewById(R.id.secH332A);
-            lineH332A = (View) findViewById(R.id.lineH332A);
+            lineH332A = findViewById(R.id.lineH332A);
             VlblH332A = (TextView) findViewById(R.id.VlblH332A);
             txtH332A = (EditText) findViewById(R.id.txtH332A);
             secH332B = (LinearLayout) findViewById(R.id.secH332B);
-            lineH332B = (View) findViewById(R.id.lineH332B);
+            lineH332B = findViewById(R.id.lineH332B);
             VlblH332B = (TextView) findViewById(R.id.VlblH332B);
             txtH332B = (EditText) findViewById(R.id.txtH332B);
             seclblH341 = (LinearLayout) findViewById(R.id.seclblH341);
             secH341 = (LinearLayout) findViewById(R.id.secH341);
-            lineH341 = (View) findViewById(R.id.lineH341);
+            lineH341 = findViewById(R.id.lineH341);
             VlblH341 = (TextView) findViewById(R.id.VlblH341);
             rdogrpH341 = (RadioGroup) findViewById(R.id.rdogrpH341);
 
@@ -1061,12 +1058,12 @@ public class SES extends Activity {
                 }
             });
             secH342 = (LinearLayout) findViewById(R.id.secH342);
-            lineH342 = (View) findViewById(R.id.lineH342);
+            lineH342 = findViewById(R.id.lineH342);
             VlblH342 = (TextView) findViewById(R.id.VlblH342);
             txtH342 = (EditText) findViewById(R.id.txtH342);
             seclbH61 = (LinearLayout) findViewById(R.id.seclbH61);
             secH61 = (LinearLayout) findViewById(R.id.secH61);
-            lineH61 = (View) findViewById(R.id.lineH61);
+            lineH61 = findViewById(R.id.lineH61);
             VlblH61 = (TextView) findViewById(R.id.VlblH61);
             rdogrpH61 = (RadioGroup) findViewById(R.id.rdogrpH61);
 
@@ -1074,7 +1071,7 @@ public class SES extends Activity {
             rdoH612 = (RadioButton) findViewById(R.id.rdoH612);
             rdoH613 = (RadioButton) findViewById(R.id.rdoH613);
             secH62 = (LinearLayout) findViewById(R.id.secH62);
-            lineH62 = (View) findViewById(R.id.lineH62);
+            lineH62 = findViewById(R.id.lineH62);
             VlblH62 = (TextView) findViewById(R.id.VlblH62);
             rdogrpH62 = (RadioGroup) findViewById(R.id.rdogrpH62);
 
@@ -1088,7 +1085,7 @@ public class SES extends Activity {
             rdoH628 = (RadioButton) findViewById(R.id.rdoH628);
             seclblH63 = (LinearLayout) findViewById(R.id.seclblH63);
             secH63A = (LinearLayout) findViewById(R.id.secH63A);
-            lineH63A = (View) findViewById(R.id.lineH63A);
+            lineH63A = findViewById(R.id.lineH63A);
             VlblH63A = (TextView) findViewById(R.id.VlblH63A);
             spnH63A = (Spinner) findViewById(R.id.spnH63A);
             List<String> listH63A = new ArrayList<String>();
@@ -1122,11 +1119,11 @@ public class SES extends Activity {
             });
             secH63AX = (LinearLayout) findViewById(R.id.secH63AX);
             secH63AX.setVisibility(View.GONE);
-            lineH63AX = (View) findViewById(R.id.lineH63AX);
+            lineH63AX = findViewById(R.id.lineH63AX);
             VlblH63AX = (TextView) findViewById(R.id.VlblH63AX);
             txtH63AX = (EditText) findViewById(R.id.txtH63AX);
             secH63B = (LinearLayout) findViewById(R.id.secH63B);
-            lineH63B = (View) findViewById(R.id.lineH63B);
+            lineH63B = findViewById(R.id.lineH63B);
             VlblH63B = (TextView) findViewById(R.id.VlblH63B);
             spnH63B = (Spinner) findViewById(R.id.spnH63B);
             List<String> listH63B = new ArrayList<String>();
@@ -1160,11 +1157,11 @@ public class SES extends Activity {
             });
             secH63BX = (LinearLayout) findViewById(R.id.secH63BX);
             secH63BX.setVisibility(View.GONE);
-            lineH63BX = (View) findViewById(R.id.lineH63BX);
+            lineH63BX = findViewById(R.id.lineH63BX);
             VlblH63BX = (TextView) findViewById(R.id.VlblH63BX);
             txtH63BX = (EditText) findViewById(R.id.txtH63BX);
             secH63C = (LinearLayout) findViewById(R.id.secH63C);
-            lineH63C = (View) findViewById(R.id.lineH63C);
+            lineH63C = findViewById(R.id.lineH63C);
             VlblH63C = (TextView) findViewById(R.id.VlblH63C);
             spnH63C = (Spinner) findViewById(R.id.spnH63C);
             List<String> listH63C = new ArrayList<String>();
@@ -1200,11 +1197,11 @@ public class SES extends Activity {
             });
             secH63CX = (LinearLayout) findViewById(R.id.secH63CX);
             secH63CX.setVisibility(View.GONE);
-            lineH63CX = (View) findViewById(R.id.lineH63CX);
+            lineH63CX = findViewById(R.id.lineH63CX);
             VlblH63CX = (TextView) findViewById(R.id.VlblH63CX);
             txtH63CX = (EditText) findViewById(R.id.txtH63CX);
             secH63D = (LinearLayout) findViewById(R.id.secH63D);
-            lineH63D = (View) findViewById(R.id.lineH63D);
+            lineH63D = findViewById(R.id.lineH63D);
             VlblH63D = (TextView) findViewById(R.id.VlblH63D);
             spnH63D = (Spinner) findViewById(R.id.spnH63D);
             List<String> listH63D = new ArrayList<String>();
@@ -1240,11 +1237,11 @@ public class SES extends Activity {
             });
             secH63DX = (LinearLayout) findViewById(R.id.secH63DX);
             secH63DX.setVisibility(View.GONE);
-            lineH63DX = (View) findViewById(R.id.lineH63DX);
+            lineH63DX = findViewById(R.id.lineH63DX);
             VlblH63DX = (TextView) findViewById(R.id.VlblH63DX);
             txtH63DX = (EditText) findViewById(R.id.txtH63DX);
             secH63E = (LinearLayout) findViewById(R.id.secH63E);
-            lineH63E = (View) findViewById(R.id.lineH63E);
+            lineH63E = findViewById(R.id.lineH63E);
             VlblH63E = (TextView) findViewById(R.id.VlblH63E);
             spnH63E = (Spinner) findViewById(R.id.spnH63E);
             List<String> listH63E = new ArrayList<String>();
@@ -1279,23 +1276,23 @@ public class SES extends Activity {
             });
             secH63EX = (LinearLayout) findViewById(R.id.secH63EX);
             secH63EX.setVisibility(View.GONE);
-            lineH63EX = (View) findViewById(R.id.lineH63EX);
+            lineH63EX = findViewById(R.id.lineH63EX);
             VlblH63EX = (TextView) findViewById(R.id.VlblH63EX);
             txtH63EX = (EditText) findViewById(R.id.txtH63EX);
             secH63X = (LinearLayout) findViewById(R.id.secH63X);
-            lineH63X = (View) findViewById(R.id.lineH63X);
+            lineH63X = findViewById(R.id.lineH63X);
             VlblH63X = (TextView) findViewById(R.id.VlblH63X);
             txtH63X = (EditText) findViewById(R.id.txtH63X);
             seclblH64 = (LinearLayout) findViewById(R.id.seclblH64);
             secH64 = (LinearLayout) findViewById(R.id.secH64);
-            lineH64 = (View) findViewById(R.id.lineH64);
+            lineH64 = findViewById(R.id.lineH64);
             VlblH64 = (TextView) findViewById(R.id.VlblH64);
             rdogrpH64 = (RadioGroup) findViewById(R.id.rdogrpH64);
 
             rdoH641 = (RadioButton) findViewById(R.id.rdoH641);
             rdoH642 = (RadioButton) findViewById(R.id.rdoH642);
             secH65 = (LinearLayout) findViewById(R.id.secH65);
-            lineH65 = (View) findViewById(R.id.lineH65);
+            lineH65 = findViewById(R.id.lineH65);
             VlblH65 = (TextView) findViewById(R.id.VlblH65);
             rdogrpH65 = (RadioGroup) findViewById(R.id.rdogrpH65);
 
@@ -1331,7 +1328,7 @@ public class SES extends Activity {
                 }
             });
             secH66 = (LinearLayout) findViewById(R.id.secH66);
-            lineH66 = (View) findViewById(R.id.lineH66);
+            lineH66 = findViewById(R.id.lineH66);
             VlblH66 = (TextView) findViewById(R.id.VlblH66);
             rdogrpH66 = (RadioGroup) findViewById(R.id.rdogrpH66);
 
@@ -1362,21 +1359,21 @@ public class SES extends Activity {
                 }
             });
             secH67 = (LinearLayout) findViewById(R.id.secH67);
-            lineH67 = (View) findViewById(R.id.lineH67);
+            lineH67 = findViewById(R.id.lineH67);
             VlblH67 = (TextView) findViewById(R.id.VlblH67);
             rdogrpH67 = (RadioGroup) findViewById(R.id.rdogrpH67);
 
             rdoH671 = (RadioButton) findViewById(R.id.rdoH671);
             rdoH672 = (RadioButton) findViewById(R.id.rdoH672);
             secH68 = (LinearLayout) findViewById(R.id.secH68);
-            lineH68 = (View) findViewById(R.id.lineH68);
+            lineH68 = findViewById(R.id.lineH68);
             VlblH68 = (TextView) findViewById(R.id.VlblH68);
             rdogrpH68 = (RadioGroup) findViewById(R.id.rdogrpH68);
 
             rdoH681 = (RadioButton) findViewById(R.id.rdoH681);
             rdoH682 = (RadioButton) findViewById(R.id.rdoH682);
             secH69 = (LinearLayout) findViewById(R.id.secH69);
-            lineH69 = (View) findViewById(R.id.lineH69);
+            lineH69 = findViewById(R.id.lineH69);
             VlblH69 = (TextView) findViewById(R.id.VlblH69);
             rdogrpH69 = (RadioGroup) findViewById(R.id.rdogrpH69);
 
@@ -1384,7 +1381,7 @@ public class SES extends Activity {
             rdoH692 = (RadioButton) findViewById(R.id.rdoH692);
             seclblH610R = (LinearLayout) findViewById(R.id.seclblH610R);
             secH610R = (LinearLayout) findViewById(R.id.secH610R);
-            lineH610R = (View) findViewById(R.id.lineH610R);
+            lineH610R = findViewById(R.id.lineH610R);
             VlblH610R = (TextView) findViewById(R.id.VlblH610R);
             spnH610R = (Spinner) findViewById(R.id.spnH610R);
             List<String> listH610 = new ArrayList<String>();
@@ -1417,11 +1414,11 @@ public class SES extends Activity {
                 }
             });
             secH610RX = (LinearLayout) findViewById(R.id.secH610RX);
-            lineH610RX = (View) findViewById(R.id.lineH610RX);
+            lineH610RX = findViewById(R.id.lineH610RX);
             VlblH610RX = (TextView) findViewById(R.id.VlblH610RX);
             txtH610RX = (EditText) findViewById(R.id.txtH610RX);
             secH610D = (LinearLayout) findViewById(R.id.secH610D);
-            lineH610D = (View) findViewById(R.id.lineH610D);
+            lineH610D = findViewById(R.id.lineH610D);
             VlblH610D = (TextView) findViewById(R.id.VlblH610D);
             spnH610D = (Spinner) findViewById(R.id.spnH610D);
             List<String> listH610D = new ArrayList<String>();
@@ -1454,11 +1451,11 @@ public class SES extends Activity {
                 }
             });
             secH610DX = (LinearLayout) findViewById(R.id.secH610DX);
-            lineH610DX = (View) findViewById(R.id.lineH610DX);
+            lineH610DX = findViewById(R.id.lineH610DX);
             VlblH610DX = (TextView) findViewById(R.id.VlblH610DX);
             txtH610DX = (EditText) findViewById(R.id.txtH610DX);
             secH610a = (LinearLayout) findViewById(R.id.secH610a);
-            lineH610a = (View) findViewById(R.id.lineH610a);
+            lineH610a = findViewById(R.id.lineH610a);
             VlblH610a = (TextView) findViewById(R.id.VlblH610a);
             rdogrpH610a = (RadioGroup) findViewById(R.id.rdogrpH610a);
 
@@ -1467,23 +1464,23 @@ public class SES extends Activity {
             rdoH610a3 = (RadioButton) findViewById(R.id.rdoH610a3);
             seclblH6101 = (LinearLayout) findViewById(R.id.seclblH6101);
             secH610b1 = (LinearLayout) findViewById(R.id.secH610b1);
-            lineH610b1 = (View) findViewById(R.id.lineH610b1);
+            lineH610b1 = findViewById(R.id.lineH610b1);
             VlblH610b1 = (TextView) findViewById(R.id.VlblH610b1);
             chkH610b1 = (CheckBox) findViewById(R.id.chkH610b1);
             secH610b2 = (LinearLayout) findViewById(R.id.secH610b2);
-            lineH610b2 = (View) findViewById(R.id.lineH610b2);
+            lineH610b2 = findViewById(R.id.lineH610b2);
             VlblH610b2 = (TextView) findViewById(R.id.VlblH610b2);
             chkH610b2 = (CheckBox) findViewById(R.id.chkH610b2);
             secH610b3 = (LinearLayout) findViewById(R.id.secH610b3);
-            lineH610b3 = (View) findViewById(R.id.lineH610b3);
+            lineH610b3 = findViewById(R.id.lineH610b3);
             VlblH610b3 = (TextView) findViewById(R.id.VlblH610b3);
             chkH610b3 = (CheckBox) findViewById(R.id.chkH610b3);
             secH610b4 = (LinearLayout) findViewById(R.id.secH610b4);
-            lineH610b4 = (View) findViewById(R.id.lineH610b4);
+            lineH610b4 = findViewById(R.id.lineH610b4);
             VlblH610b4 = (TextView) findViewById(R.id.VlblH610b4);
             chkH610b4 = (CheckBox) findViewById(R.id.chkH610b4);
             secH610b5 = (LinearLayout) findViewById(R.id.secH610b5);
-            lineH610b5 = (View) findViewById(R.id.lineH610b5);
+            lineH610b5 = findViewById(R.id.lineH610b5);
             VlblH610b5 = (TextView) findViewById(R.id.VlblH610b5);
             chkH610b5 = (CheckBox) findViewById(R.id.chkH610b5);
 /*            chkH610b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1503,11 +1500,11 @@ public class SES extends Activity {
             });*/
 
             secH610b5X = (LinearLayout) findViewById(R.id.secH610b5X);
-            lineH610b5X = (View) findViewById(R.id.lineH610b5X);
+            lineH610b5X = findViewById(R.id.lineH610b5X);
             VlblH610b5X = (TextView) findViewById(R.id.VlblH610b5X);
             txtH610b5X = (EditText) findViewById(R.id.txtH610b5X);
             secH610b6 = (LinearLayout) findViewById(R.id.secH610b6);
-            lineH610b6 = (View) findViewById(R.id.lineH610b6);
+            lineH610b6 = findViewById(R.id.lineH610b6);
             VlblH610b6 = (TextView) findViewById(R.id.VlblH610b6);
             chkH610b6 = (CheckBox) findViewById(R.id.chkH610b6);
             chkH610b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1582,7 +1579,7 @@ public class SES extends Activity {
             });
 
             secH610c = (LinearLayout) findViewById(R.id.secH610c);
-            lineH610c = (View) findViewById(R.id.lineH610c);
+            lineH610c = findViewById(R.id.lineH610c);
             VlblH610c = (TextView) findViewById(R.id.VlblH610c);
             rdogrpH610c = (RadioGroup) findViewById(R.id.rdogrpH610c);
 
@@ -1590,7 +1587,7 @@ public class SES extends Activity {
             rdoH610c2 = (RadioButton) findViewById(R.id.rdoH610c2);
             seclblH611 = (LinearLayout) findViewById(R.id.seclblH611);
             secH611R = (LinearLayout) findViewById(R.id.secH611R);
-            lineH611R = (View) findViewById(R.id.lineH611R);
+            lineH611R = findViewById(R.id.lineH611R);
             VlblH611R = (TextView) findViewById(R.id.VlblH611R);
             spnH611R = (Spinner) findViewById(R.id.spnH611R);
             List<String> listH611R = new ArrayList<String>();
@@ -1623,11 +1620,11 @@ public class SES extends Activity {
                 }
             });
             secH611RX = (LinearLayout) findViewById(R.id.secH611RX);
-            lineH611RX = (View) findViewById(R.id.lineH611RX);
+            lineH611RX = findViewById(R.id.lineH611RX);
             VlblH611RX = (TextView) findViewById(R.id.VlblH611RX);
             txtH611RX = (EditText) findViewById(R.id.txtH611RX);
             secH611D = (LinearLayout) findViewById(R.id.secH611D);
-            lineH611D = (View) findViewById(R.id.lineH611D);
+            lineH611D = findViewById(R.id.lineH611D);
             VlblH611D = (TextView) findViewById(R.id.VlblH611D);
             spnH611D = (Spinner) findViewById(R.id.spnH611D);
             List<String> listH611D = new ArrayList<String>();
@@ -1660,11 +1657,11 @@ public class SES extends Activity {
                 }
             });
             secH611DX = (LinearLayout) findViewById(R.id.secH611DX);
-            lineH611DX = (View) findViewById(R.id.lineH611DX);
+            lineH611DX = findViewById(R.id.lineH611DX);
             VlblH611DX = (TextView) findViewById(R.id.VlblH611DX);
             txtH611DX = (EditText) findViewById(R.id.txtH611DX);
             secH611a = (LinearLayout) findViewById(R.id.secH611a);
-            lineH611a = (View) findViewById(R.id.lineH611a);
+            lineH611a = findViewById(R.id.lineH611a);
             VlblH611a = (TextView) findViewById(R.id.VlblH611a);
             rdogrpH611a = (RadioGroup) findViewById(R.id.rdogrpH611a);
 
@@ -1673,23 +1670,23 @@ public class SES extends Activity {
             rdoH611a3 = (RadioButton) findViewById(R.id.rdoH611a3);
             seclblH6111 = (LinearLayout) findViewById(R.id.seclblH6111);
             secH611b1 = (LinearLayout) findViewById(R.id.secH611b1);
-            lineH611b1 = (View) findViewById(R.id.lineH611b1);
+            lineH611b1 = findViewById(R.id.lineH611b1);
             VlblH611b1 = (TextView) findViewById(R.id.VlblH611b1);
             chkH611b1 = (CheckBox) findViewById(R.id.chkH611b1);
             secH611b2 = (LinearLayout) findViewById(R.id.secH611b2);
-            lineH611b2 = (View) findViewById(R.id.lineH611b2);
+            lineH611b2 = findViewById(R.id.lineH611b2);
             VlblH611b2 = (TextView) findViewById(R.id.VlblH611b2);
             chkH611b2 = (CheckBox) findViewById(R.id.chkH611b2);
             secH611b3 = (LinearLayout) findViewById(R.id.secH611b3);
-            lineH611b3 = (View) findViewById(R.id.lineH611b3);
+            lineH611b3 = findViewById(R.id.lineH611b3);
             VlblH611b3 = (TextView) findViewById(R.id.VlblH611b3);
             chkH611b3 = (CheckBox) findViewById(R.id.chkH611b3);
             secH611b4 = (LinearLayout) findViewById(R.id.secH611b4);
-            lineH611b4 = (View) findViewById(R.id.lineH611b4);
+            lineH611b4 = findViewById(R.id.lineH611b4);
             VlblH611b4 = (TextView) findViewById(R.id.VlblH611b4);
             chkH611b4 = (CheckBox) findViewById(R.id.chkH611b4);
             secH611b5 = (LinearLayout) findViewById(R.id.secH611b5);
-            lineH611b5 = (View) findViewById(R.id.lineH611b5);
+            lineH611b5 = findViewById(R.id.lineH611b5);
             VlblH611b5 = (TextView) findViewById(R.id.VlblH611b5);
             chkH611b5 = (CheckBox) findViewById(R.id.chkH611b5);
 /*            chkH611b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1710,11 +1707,11 @@ public class SES extends Activity {
                 }
             });*/
             secH611b5X = (LinearLayout) findViewById(R.id.secH611b5X);
-            lineH611b5X = (View) findViewById(R.id.lineH611b5X);
+            lineH611b5X = findViewById(R.id.lineH611b5X);
             VlblH611b5X = (TextView) findViewById(R.id.VlblH611b5X);
             txtH611b5X = (EditText) findViewById(R.id.txtH611b5X);
             secH611b6 = (LinearLayout) findViewById(R.id.secH611b6);
-            lineH611b6 = (View) findViewById(R.id.lineH611b6);
+            lineH611b6 = findViewById(R.id.lineH611b6);
             VlblH611b6 = (TextView) findViewById(R.id.VlblH611b6);
             chkH611b6 = (CheckBox) findViewById(R.id.chkH611b6);
             chkH611b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1790,7 +1787,7 @@ public class SES extends Activity {
             });
 
             secH611c = (LinearLayout) findViewById(R.id.secH611c);
-            lineH611c = (View) findViewById(R.id.lineH611c);
+            lineH611c = findViewById(R.id.lineH611c);
             VlblH611c = (TextView) findViewById(R.id.VlblH611c);
             rdogrpH611c = (RadioGroup) findViewById(R.id.rdogrpH611c);
 
@@ -1798,7 +1795,7 @@ public class SES extends Activity {
             rdoH611c2 = (RadioButton) findViewById(R.id.rdoH611c2);
             seclblH612 = (LinearLayout) findViewById(R.id.seclblH612);
             secH612R = (LinearLayout) findViewById(R.id.secH612R);
-            lineH612R = (View) findViewById(R.id.lineH612R);
+            lineH612R = findViewById(R.id.lineH612R);
             VlblH612R = (TextView) findViewById(R.id.VlblH612R);
             spnH612R = (Spinner) findViewById(R.id.spnH612R);
             List<String> listH612R = new ArrayList<String>();
@@ -1831,11 +1828,11 @@ public class SES extends Activity {
                 }
             });
             secH612RX = (LinearLayout) findViewById(R.id.secH612RX);
-            lineH612RX = (View) findViewById(R.id.lineH612RX);
+            lineH612RX = findViewById(R.id.lineH612RX);
             VlblH612RX = (TextView) findViewById(R.id.VlblH612RX);
             txtH612RX = (EditText) findViewById(R.id.txtH612RX);
             secH612D = (LinearLayout) findViewById(R.id.secH612D);
-            lineH612D = (View) findViewById(R.id.lineH612D);
+            lineH612D = findViewById(R.id.lineH612D);
             VlblH612D = (TextView) findViewById(R.id.VlblH612D);
             spnH612D = (Spinner) findViewById(R.id.spnH612D);
             List<String> listH612D = new ArrayList<String>();
@@ -1868,11 +1865,11 @@ public class SES extends Activity {
                 }
             });
             secH612DX = (LinearLayout) findViewById(R.id.secH612DX);
-            lineH612DX = (View) findViewById(R.id.lineH612DX);
+            lineH612DX = findViewById(R.id.lineH612DX);
             VlblH612DX = (TextView) findViewById(R.id.VlblH612DX);
             txtH612DX = (EditText) findViewById(R.id.txtH612DX);
             secH612a = (LinearLayout) findViewById(R.id.secH612a);
-            lineH612a = (View) findViewById(R.id.lineH612a);
+            lineH612a = findViewById(R.id.lineH612a);
             VlblH612a = (TextView) findViewById(R.id.VlblH612a);
             rdogrpH612a = (RadioGroup) findViewById(R.id.rdogrpH612a);
 
@@ -1881,23 +1878,23 @@ public class SES extends Activity {
             rdoH612a3 = (RadioButton) findViewById(R.id.rdoH612a3);
             seclblH6121 = (LinearLayout) findViewById(R.id.seclblH6121);
             secH612b1 = (LinearLayout) findViewById(R.id.secH612b1);
-            lineH612b1 = (View) findViewById(R.id.lineH612b1);
+            lineH612b1 = findViewById(R.id.lineH612b1);
             VlblH612b1 = (TextView) findViewById(R.id.VlblH612b1);
             chkH612b1 = (CheckBox) findViewById(R.id.chkH612b1);
             secH612b2 = (LinearLayout) findViewById(R.id.secH612b2);
-            lineH612b2 = (View) findViewById(R.id.lineH612b2);
+            lineH612b2 = findViewById(R.id.lineH612b2);
             VlblH612b2 = (TextView) findViewById(R.id.VlblH612b2);
             chkH612b2 = (CheckBox) findViewById(R.id.chkH612b2);
             secH612b3 = (LinearLayout) findViewById(R.id.secH612b3);
-            lineH612b3 = (View) findViewById(R.id.lineH612b3);
+            lineH612b3 = findViewById(R.id.lineH612b3);
             VlblH612b3 = (TextView) findViewById(R.id.VlblH612b3);
             chkH612b3 = (CheckBox) findViewById(R.id.chkH612b3);
             secH612b4 = (LinearLayout) findViewById(R.id.secH612b4);
-            lineH612b4 = (View) findViewById(R.id.lineH612b4);
+            lineH612b4 = findViewById(R.id.lineH612b4);
             VlblH612b4 = (TextView) findViewById(R.id.VlblH612b4);
             chkH612b4 = (CheckBox) findViewById(R.id.chkH612b4);
             secH612b5 = (LinearLayout) findViewById(R.id.secH612b5);
-            lineH612b5 = (View) findViewById(R.id.lineH612b5);
+            lineH612b5 = findViewById(R.id.lineH612b5);
             VlblH612b5 = (TextView) findViewById(R.id.VlblH612b5);
             chkH612b5 = (CheckBox) findViewById(R.id.chkH612b5);
 /*            chkH612b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1919,11 +1916,11 @@ public class SES extends Activity {
             });*/
 
             secH612b5X = (LinearLayout) findViewById(R.id.secH612b5X);
-            lineH612b5X = (View) findViewById(R.id.lineH612b5X);
+            lineH612b5X = findViewById(R.id.lineH612b5X);
             VlblH612b5X = (TextView) findViewById(R.id.VlblH612b5X);
             txtH612b5X = (EditText) findViewById(R.id.txtH612b5X);
             secH612b6 = (LinearLayout) findViewById(R.id.secH612b6);
-            lineH612b6 = (View) findViewById(R.id.lineH612b6);
+            lineH612b6 = findViewById(R.id.lineH612b6);
             VlblH612b6 = (TextView) findViewById(R.id.VlblH612b6);
             chkH612b6 = (CheckBox) findViewById(R.id.chkH612b6);
             chkH612b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1999,7 +1996,7 @@ public class SES extends Activity {
 
 
             secH612c = (LinearLayout) findViewById(R.id.secH612c);
-            lineH612c = (View) findViewById(R.id.lineH612c);
+            lineH612c = findViewById(R.id.lineH612c);
             VlblH612c = (TextView) findViewById(R.id.VlblH612c);
             rdogrpH612c = (RadioGroup) findViewById(R.id.rdogrpH612c);
 
@@ -2007,7 +2004,7 @@ public class SES extends Activity {
             rdoH612c2 = (RadioButton) findViewById(R.id.rdoH612c2);
             seclblH613 = (LinearLayout) findViewById(R.id.seclblH613);
             secH613R = (LinearLayout) findViewById(R.id.secH613R);
-            lineH613R = (View) findViewById(R.id.lineH613R);
+            lineH613R = findViewById(R.id.lineH613R);
             VlblH613R = (TextView) findViewById(R.id.VlblH613R);
             spnH613R = (Spinner) findViewById(R.id.spnH613R);
             List<String> listH613R = new ArrayList<String>();
@@ -2040,11 +2037,11 @@ public class SES extends Activity {
                 }
             });
             secH613RX = (LinearLayout) findViewById(R.id.secH613RX);
-            lineH613RX = (View) findViewById(R.id.lineH613RX);
+            lineH613RX = findViewById(R.id.lineH613RX);
             VlblH613RX = (TextView) findViewById(R.id.VlblH613RX);
             txtH613RX = (EditText) findViewById(R.id.txtH613RX);
             secH613D = (LinearLayout) findViewById(R.id.secH613D);
-            lineH613D = (View) findViewById(R.id.lineH613D);
+            lineH613D = findViewById(R.id.lineH613D);
             VlblH613D = (TextView) findViewById(R.id.VlblH613D);
             spnH613D = (Spinner) findViewById(R.id.spnH613D);
             List<String> listH613D = new ArrayList<String>();
@@ -2077,11 +2074,11 @@ public class SES extends Activity {
                 }
             });
             secH613DX = (LinearLayout) findViewById(R.id.secH613DX);
-            lineH613DX = (View) findViewById(R.id.lineH613DX);
+            lineH613DX = findViewById(R.id.lineH613DX);
             VlblH613DX = (TextView) findViewById(R.id.VlblH613DX);
             txtH613DX = (EditText) findViewById(R.id.txtH613DX);
             secH613a = (LinearLayout) findViewById(R.id.secH613a);
-            lineH613a = (View) findViewById(R.id.lineH613a);
+            lineH613a = findViewById(R.id.lineH613a);
             VlblH613a = (TextView) findViewById(R.id.VlblH613a);
             rdogrpH613a = (RadioGroup) findViewById(R.id.rdogrpH613a);
 
@@ -2090,23 +2087,23 @@ public class SES extends Activity {
             rdoH613a3 = (RadioButton) findViewById(R.id.rdoH613a3);
             seclblH6131 = (LinearLayout) findViewById(R.id.seclblH6131);
             secH613b1 = (LinearLayout) findViewById(R.id.secH613b1);
-            lineH613b1 = (View) findViewById(R.id.lineH613b1);
+            lineH613b1 = findViewById(R.id.lineH613b1);
             VlblH613b1 = (TextView) findViewById(R.id.VlblH613b1);
             chkH613b1 = (CheckBox) findViewById(R.id.chkH613b1);
             secH613b2 = (LinearLayout) findViewById(R.id.secH613b2);
-            lineH613b2 = (View) findViewById(R.id.lineH613b2);
+            lineH613b2 = findViewById(R.id.lineH613b2);
             VlblH613b2 = (TextView) findViewById(R.id.VlblH613b2);
             chkH613b2 = (CheckBox) findViewById(R.id.chkH613b2);
             secH613b3 = (LinearLayout) findViewById(R.id.secH613b3);
-            lineH613b3 = (View) findViewById(R.id.lineH613b3);
+            lineH613b3 = findViewById(R.id.lineH613b3);
             VlblH613b3 = (TextView) findViewById(R.id.VlblH613b3);
             chkH613b3 = (CheckBox) findViewById(R.id.chkH613b3);
             secH613b4 = (LinearLayout) findViewById(R.id.secH613b4);
-            lineH613b4 = (View) findViewById(R.id.lineH613b4);
+            lineH613b4 = findViewById(R.id.lineH613b4);
             VlblH613b4 = (TextView) findViewById(R.id.VlblH613b4);
             chkH613b4 = (CheckBox) findViewById(R.id.chkH613b4);
             secH613b5 = (LinearLayout) findViewById(R.id.secH613b5);
-            lineH613b5 = (View) findViewById(R.id.lineH613b5);
+            lineH613b5 = findViewById(R.id.lineH613b5);
             VlblH613b5 = (TextView) findViewById(R.id.VlblH613b5);
             chkH613b5 = (CheckBox) findViewById(R.id.chkH613b5);
 /*            chkH613b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -2128,11 +2125,11 @@ public class SES extends Activity {
             });*/
 
             secH613b5X = (LinearLayout) findViewById(R.id.secH613b5X);
-            lineH613b5X = (View) findViewById(R.id.lineH613b5X);
+            lineH613b5X = findViewById(R.id.lineH613b5X);
             VlblH613b5X = (TextView) findViewById(R.id.VlblH613b5X);
             txtH613b5X = (EditText) findViewById(R.id.txtH613b5X);
             secH613b6 = (LinearLayout) findViewById(R.id.secH613b6);
-            lineH613b6 = (View) findViewById(R.id.lineH613b6);
+            lineH613b6 = findViewById(R.id.lineH613b6);
             VlblH613b6 = (TextView) findViewById(R.id.VlblH613b6);
             chkH613b6 = (CheckBox) findViewById(R.id.chkH613b6);
             chkH613b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -2210,7 +2207,7 @@ public class SES extends Activity {
 
 
             secH613c = (LinearLayout) findViewById(R.id.secH613c);
-            lineH613c = (View) findViewById(R.id.lineH613c);
+            lineH613c = findViewById(R.id.lineH613c);
             VlblH613c = (TextView) findViewById(R.id.VlblH613c);
             rdogrpH613c = (RadioGroup) findViewById(R.id.rdogrpH613c);
 
@@ -2218,7 +2215,7 @@ public class SES extends Activity {
             rdoH613c2 = (RadioButton) findViewById(R.id.rdoH613c2);
             seclblH614 = (LinearLayout) findViewById(R.id.seclblH614);
             secH614R = (LinearLayout) findViewById(R.id.secH614R);
-            lineH614R = (View) findViewById(R.id.lineH614R);
+            lineH614R = findViewById(R.id.lineH614R);
             VlblH614R = (TextView) findViewById(R.id.VlblH614R);
             spnH614R = (Spinner) findViewById(R.id.spnH614R);
             List<String> listH614R = new ArrayList<String>();
@@ -2251,11 +2248,11 @@ public class SES extends Activity {
                 }
             });
             secH614RX = (LinearLayout) findViewById(R.id.secH614RX);
-            lineH614RX = (View) findViewById(R.id.lineH614RX);
+            lineH614RX = findViewById(R.id.lineH614RX);
             VlblH614RX = (TextView) findViewById(R.id.VlblH614RX);
             txtH614RX = (EditText) findViewById(R.id.txtH614RX);
             secH614D = (LinearLayout) findViewById(R.id.secH614D);
-            lineH614D = (View) findViewById(R.id.lineH614D);
+            lineH614D = findViewById(R.id.lineH614D);
             VlblH614D = (TextView) findViewById(R.id.VlblH614D);
             spnH614D = (Spinner) findViewById(R.id.spnH614D);
             List<String> listH614D = new ArrayList<String>();
@@ -2288,11 +2285,11 @@ public class SES extends Activity {
                 }
             });
             secH614DX = (LinearLayout) findViewById(R.id.secH614DX);
-            lineH614DX = (View) findViewById(R.id.lineH614DX);
+            lineH614DX = findViewById(R.id.lineH614DX);
             VlblH614DX = (TextView) findViewById(R.id.VlblH614DX);
             txtH614DX = (EditText) findViewById(R.id.txtH614DX);
             secH614a = (LinearLayout) findViewById(R.id.secH614a);
-            lineH614a = (View) findViewById(R.id.lineH614a);
+            lineH614a = findViewById(R.id.lineH614a);
             VlblH614a = (TextView) findViewById(R.id.VlblH614a);
             rdogrpH614a = (RadioGroup) findViewById(R.id.rdogrpH614a);
 
@@ -2301,23 +2298,23 @@ public class SES extends Activity {
             rdoH614a3 = (RadioButton) findViewById(R.id.rdoH614a3);
             seclblH6141 = (LinearLayout) findViewById(R.id.seclblH6141);
             secH614b1 = (LinearLayout) findViewById(R.id.secH614b1);
-            lineH614b1 = (View) findViewById(R.id.lineH614b1);
+            lineH614b1 = findViewById(R.id.lineH614b1);
             VlblH614b1 = (TextView) findViewById(R.id.VlblH614b1);
             chkH614b1 = (CheckBox) findViewById(R.id.chkH614b1);
             secH614b2 = (LinearLayout) findViewById(R.id.secH614b2);
-            lineH614b2 = (View) findViewById(R.id.lineH614b2);
+            lineH614b2 = findViewById(R.id.lineH614b2);
             VlblH614b2 = (TextView) findViewById(R.id.VlblH614b2);
             chkH614b2 = (CheckBox) findViewById(R.id.chkH614b2);
             secH614b3 = (LinearLayout) findViewById(R.id.secH614b3);
-            lineH614b3 = (View) findViewById(R.id.lineH614b3);
+            lineH614b3 = findViewById(R.id.lineH614b3);
             VlblH614b3 = (TextView) findViewById(R.id.VlblH614b3);
             chkH614b3 = (CheckBox) findViewById(R.id.chkH614b3);
             secH614b4 = (LinearLayout) findViewById(R.id.secH614b4);
-            lineH614b4 = (View) findViewById(R.id.lineH614b4);
+            lineH614b4 = findViewById(R.id.lineH614b4);
             VlblH614b4 = (TextView) findViewById(R.id.VlblH614b4);
             chkH614b4 = (CheckBox) findViewById(R.id.chkH614b4);
             secH614b5 = (LinearLayout) findViewById(R.id.secH614b5);
-            lineH614b5 = (View) findViewById(R.id.lineH614b5);
+            lineH614b5 = findViewById(R.id.lineH614b5);
             VlblH614b5 = (TextView) findViewById(R.id.VlblH614b5);
             chkH614b5 = (CheckBox) findViewById(R.id.chkH614b5);
             /*chkH614b5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -2338,11 +2335,11 @@ public class SES extends Activity {
                 }
             });*/
             secH614b5X = (LinearLayout) findViewById(R.id.secH614b5X);
-            lineH614b5X = (View) findViewById(R.id.lineH614b5X);
+            lineH614b5X = findViewById(R.id.lineH614b5X);
             VlblH614b5X = (TextView) findViewById(R.id.VlblH614b5X);
             txtH614b5X = (EditText) findViewById(R.id.txtH614b5X);
             secH614b6 = (LinearLayout) findViewById(R.id.secH614b6);
-            lineH614b6 = (View) findViewById(R.id.lineH614b6);
+            lineH614b6 = findViewById(R.id.lineH614b6);
             VlblH614b6 = (TextView) findViewById(R.id.VlblH614b6);
             chkH614b6 = (CheckBox) findViewById(R.id.chkH614b6);
             chkH614b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -2435,7 +2432,7 @@ public class SES extends Activity {
 
 
             secH614c = (LinearLayout) findViewById(R.id.secH614c);
-            lineH614c = (View) findViewById(R.id.lineH614c);
+            lineH614c = findViewById(R.id.lineH614c);
             VlblH614c = (TextView) findViewById(R.id.VlblH614c);
             rdogrpH614c = (RadioGroup) findViewById(R.id.rdogrpH614c);
 
@@ -2443,22 +2440,24 @@ public class SES extends Activity {
             rdoH614c2 = (RadioButton) findViewById(R.id.rdoH614c2);
             seclblH615 = (LinearLayout) findViewById(R.id.seclblH615);
             secH615a = (LinearLayout) findViewById(R.id.secH615a);
-            lineH615a = (View) findViewById(R.id.lineH615a);
+            lineH615a = findViewById(R.id.lineH615a);
             VlblH615a = (TextView) findViewById(R.id.VlblH615a);
             txtH615a = (EditText) findViewById(R.id.txtH615a);
             secH615b = (LinearLayout) findViewById(R.id.secH615b);
-            lineH615b = (View) findViewById(R.id.lineH615b);
+            lineH615b = findViewById(R.id.lineH615b);
             VlblH615b = (TextView) findViewById(R.id.VlblH615b);
             txtH615b = (EditText) findViewById(R.id.txtH615b);
             secH616 = (LinearLayout) findViewById(R.id.secH616);
-            lineH616 = (View) findViewById(R.id.lineH616);
+            lineH616 = findViewById(R.id.lineH616);
             VlblH616 = (TextView) findViewById(R.id.VlblH616);
             rdogrpH616 = (RadioGroup) findViewById(R.id.rdogrpH616);
 
             rdoH6161 = (RadioButton) findViewById(R.id.rdoH6161);
             rdoH6162 = (RadioButton) findViewById(R.id.rdoH6162);
+            rdoH6163 = (RadioButton) findViewById(R.id.rdoH6163);
+
             secH617 = (LinearLayout) findViewById(R.id.secH617);
-            lineH617 = (View) findViewById(R.id.lineH617);
+            lineH617 = findViewById(R.id.lineH617);
             VlblH617 = (TextView) findViewById(R.id.VlblH617);
             rdogrpH617 = (RadioGroup) findViewById(R.id.rdogrpH617);
 
@@ -2494,7 +2493,7 @@ public class SES extends Activity {
                 }
             });
             secH618 = (LinearLayout) findViewById(R.id.secH618);
-            lineH618 = (View) findViewById(R.id.lineH618);
+            lineH618 = findViewById(R.id.lineH618);
             VlblH618 = (TextView) findViewById(R.id.VlblH618);
             spnH618 = (Spinner) findViewById(R.id.spnH618);
             List<String> listH618 = new ArrayList<String>();
@@ -2529,11 +2528,11 @@ public class SES extends Activity {
                 }
             });
             secH618X = (LinearLayout) findViewById(R.id.secH618X);
-            lineH618X = (View) findViewById(R.id.lineH618X);
+            lineH618X = findViewById(R.id.lineH618X);
             VlblH618X = (TextView) findViewById(R.id.VlblH618X);
             txtH618X = (EditText) findViewById(R.id.txtH618X);
             secH619 = (LinearLayout) findViewById(R.id.secH619);
-            lineH619 = (View) findViewById(R.id.lineH619);
+            lineH619 = findViewById(R.id.lineH619);
             VlblH619 = (TextView) findViewById(R.id.VlblH619);
             rdogrpH619 = (RadioGroup) findViewById(R.id.rdogrpH619);
 
@@ -2563,7 +2562,7 @@ public class SES extends Activity {
                 }
             });
             secH620 = (LinearLayout) findViewById(R.id.secH620);
-            lineH620 = (View) findViewById(R.id.lineH620);
+            lineH620 = findViewById(R.id.lineH620);
             VlblH620 = (TextView) findViewById(R.id.VlblH620);
             rdogrpH620 = (RadioGroup) findViewById(R.id.rdogrpH620);
 
@@ -2965,7 +2964,7 @@ public class SES extends Activity {
                 Connection.MessageBox(SES.this, "Value should be between 000 and 999(অন্যান্য ব্যবহার্য পানির উৎসের দূরত্ব).");
                 txtH615b.requestFocus();
                 return;
-            } else if (!rdoH6161.isChecked() & !rdoH6162.isChecked() & secH616.isShown()) {
+            } else if (!rdoH6161.isChecked() & !rdoH6162.isChecked() & !rdoH6163.isChecked() & secH616.isShown()) {
                 Connection.MessageBox(SES.this, "Select anyone options from (আপনার ব্যবহৃত পানিতে গত এক বছরের মধ্যে আর্সেনিক এর জন্য টেস্ট করেছেন  (টিউবওয়েলের ক্ষেত্রে প্রযোজ্য)).");
                 rdoH6161.requestFocus();
                 return;
@@ -3228,7 +3227,7 @@ public class SES extends Activity {
 
             objSave.setH615a(txtH615a.getText().toString());
             objSave.setH615b(txtH615b.getText().toString());
-            String[] d_rdogrpH616 = new String[]{"1", "0"};
+            String[] d_rdogrpH616 = new String[]{"1", "0", "9"};
             objSave.setH616("");
             for (int i = 0; i < rdogrpH616.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH616.getChildAt(i);
@@ -3644,7 +3643,7 @@ public class SES extends Activity {
                 }
                 txtH615a.setText(item.getH615a());
                 txtH615b.setText(item.getH615b());
-                String[] d_rdogrpH616 = new String[]{"1", "0"};
+                String[] d_rdogrpH616 = new String[]{"1", "0", "9"};
                 for (int i = 0; i < d_rdogrpH616.length; i++) {
                     if (item.getH616().equals(String.valueOf(d_rdogrpH616[i]))) {
                         rb = (RadioButton) rdogrpH616.getChildAt(i);

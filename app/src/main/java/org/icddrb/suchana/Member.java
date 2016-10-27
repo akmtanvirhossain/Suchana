@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -1313,7 +1314,35 @@ public class Member extends Activity {
             }
 
 
+            if (((spnH24.getSelectedItem().toString().equals(spnH221.getSelectedItem().toString())) & secH24.isShown() & secH221.isShown() &
+                    ((Connection.split(spnH24.getSelectedItem().toString(), '-').equals("97")) | (Connection.split(spnH24.getSelectedItem().toString(), '-').equals("96")))) |
+                    ((spnH24.getSelectedItem().toString().equals(spnH222.getSelectedItem().toString()) & secH24.isShown() & secH222.isShown()) &
+                            ((Connection.split(spnH24.getSelectedItem().toString(), '-').equals("97")) | (Connection.split(spnH24.getSelectedItem().toString(), '-').equals("96")))) |
+                    ((spnH221.getSelectedItem().toString().equals(spnH222.getSelectedItem().toString()) & secH221.isShown() & secH222.isShown()) &
+                            ((Connection.split(spnH24.getSelectedItem().toString(), '-').equals("97")) | (Connection.split(spnH24.getSelectedItem().toString(), '-').equals("96"))))
+                    ) {
+                Connection.MessageBox(Member.this, "পিতা মাতার স্বামী/স্ত্রী এর লাইন নম্বর এক হবেনা");
+                spnH221.requestFocus();
+                return;
+            }
 
+            if (!isAgeDifferenceWithParentsValid(txtRnd.getText().toString(),
+                    txtSuchanaID.getText().toString(),
+                    Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-"),
+                    Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-"),
+                    txtH26Y.getText().toString())) {
+
+                Connection.MessageBox(Member.this, "পিতা মাতার সাথে বয়স মিল নেই");
+                txtH26Y.requestFocus();
+                return;
+
+            }
+
+            if (Connection.SelectedSpinnerValue(spnH25.getSelectedItem().toString(), "-").equals("10") & !isHhHeadValid(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), txtH21.getText().toString())) {
+                Connection.MessageBox(Member.this, "খানা প্রধান ২ জন হতে পারবেনা");
+                txtH26Y.requestFocus();
+                return;
+            }
             String SQL = "";
             RadioButton rb;
 
@@ -1615,6 +1644,40 @@ public class Member extends Activity {
 
     private String MemberSerial(String Rnd, String SuchanaID) {
         return C.ReturnSingleValue("Select (ifnull(max(H21),0)+1)serial from Member where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
+    }
+
+    private boolean isAgeDifferenceWithParentsValid(String RND, String suchanaID, String fatherSL, String motherSL, String Age) {
+        // Cursor fCursor,mCursor;
+
+        String fAge = C.ReturnSingleValue("select H26Y from MEMBER where rnd='" + RND + "' and suchanaid='" + suchanaID + "' and H21='" + fatherSL + "'");
+        String mAge = C.ReturnSingleValue("select H26Y from MEMBER where rnd='" + RND + "' and suchanaid='" + suchanaID + "' and H21='" + motherSL + "'");
+
+        if (fAge.isEmpty()) {
+            fAge = "0";
+
+        }
+        if (mAge.isEmpty()) {
+            mAge = "0";
+        }
+        if (fAge.equals("0") | mAge.equals("0")) {
+            return true;
+        }
+
+        int cAge = Integer.valueOf(Age);
+        return !(((Integer.valueOf(fAge) - cAge) < 12) | ((Integer.valueOf(mAge) - cAge) < 12));
+    }
+
+    private boolean isHhHeadValid(String RND, String suchanaID, String H21) {
+        Cursor cursor;
+        cursor = C.ReadData("select * from MEMBER where rnd='" + RND + "' and suchanaid='" + suchanaID + "' and H25 =10 and H21 !='" + H21 + "'");
+        if (cursor.getCount() > 0) {
+
+            cursor.close();
+            return false;
+        } else {
+            cursor.close();
+            return true;
+        }
     }
 
 }

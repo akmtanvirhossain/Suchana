@@ -221,11 +221,7 @@ public class Destruction2 extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -307,11 +303,11 @@ public class Destruction2 extends Activity {
                 }
             });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
 
@@ -322,63 +318,63 @@ public class Destruction2 extends Activity {
 
             seclb14b = (LinearLayout) findViewById(R.id.seclb14b);
             secH14b1 = (LinearLayout) findViewById(R.id.secH14b1);
-            lineH14b1 = (View) findViewById(R.id.lineH14b1);
+            lineH14b1 = findViewById(R.id.lineH14b1);
             VlblH14b1 = (TextView) findViewById(R.id.VlblH14b1);
             rdogrpH14b1 = (RadioGroup) findViewById(R.id.rdogrpH14b1);
 
             rdoH14b11 = (RadioButton) findViewById(R.id.rdoH14b11);
             rdoH14b12 = (RadioButton) findViewById(R.id.rdoH14b12);
             secH14b2 = (LinearLayout) findViewById(R.id.secH14b2);
-            lineH14b2 = (View) findViewById(R.id.lineH14b2);
+            lineH14b2 = findViewById(R.id.lineH14b2);
             VlblH14b2 = (TextView) findViewById(R.id.VlblH14b2);
             rdogrpH14b2 = (RadioGroup) findViewById(R.id.rdogrpH14b2);
 
             rdoH14b21 = (RadioButton) findViewById(R.id.rdoH14b21);
             rdoH14b22 = (RadioButton) findViewById(R.id.rdoH14b22);
             secH14b3 = (LinearLayout) findViewById(R.id.secH14b3);
-            lineH14b3 = (View) findViewById(R.id.lineH14b3);
+            lineH14b3 = findViewById(R.id.lineH14b3);
             VlblH14b3 = (TextView) findViewById(R.id.VlblH14b3);
             rdogrpH14b3 = (RadioGroup) findViewById(R.id.rdogrpH14b3);
 
             rdoH14b31 = (RadioButton) findViewById(R.id.rdoH14b31);
             rdoH14b32 = (RadioButton) findViewById(R.id.rdoH14b32);
             secH14b4 = (LinearLayout) findViewById(R.id.secH14b4);
-            lineH14b4 = (View) findViewById(R.id.lineH14b4);
+            lineH14b4 = findViewById(R.id.lineH14b4);
             VlblH14b4 = (TextView) findViewById(R.id.VlblH14b4);
             rdogrpH14b4 = (RadioGroup) findViewById(R.id.rdogrpH14b4);
 
             rdoH14b41 = (RadioButton) findViewById(R.id.rdoH14b41);
             rdoH14b42 = (RadioButton) findViewById(R.id.rdoH14b42);
             secH14b5 = (LinearLayout) findViewById(R.id.secH14b5);
-            lineH14b5 = (View) findViewById(R.id.lineH14b5);
+            lineH14b5 = findViewById(R.id.lineH14b5);
             VlblH14b5 = (TextView) findViewById(R.id.VlblH14b5);
             rdogrpH14b5 = (RadioGroup) findViewById(R.id.rdogrpH14b5);
 
             rdoH14b51 = (RadioButton) findViewById(R.id.rdoH14b51);
             rdoH14b52 = (RadioButton) findViewById(R.id.rdoH14b52);
             secH14b6 = (LinearLayout) findViewById(R.id.secH14b6);
-            lineH14b6 = (View) findViewById(R.id.lineH14b6);
+            lineH14b6 = findViewById(R.id.lineH14b6);
             VlblH14b6 = (TextView) findViewById(R.id.VlblH14b6);
             rdogrpH14b6 = (RadioGroup) findViewById(R.id.rdogrpH14b6);
 
             rdoH14b61 = (RadioButton) findViewById(R.id.rdoH14b61);
             rdoH14b62 = (RadioButton) findViewById(R.id.rdoH14b62);
             secH14b7 = (LinearLayout) findViewById(R.id.secH14b7);
-            lineH14b7 = (View) findViewById(R.id.lineH14b7);
+            lineH14b7 = findViewById(R.id.lineH14b7);
             VlblH14b7 = (TextView) findViewById(R.id.VlblH14b7);
             rdogrpH14b7 = (RadioGroup) findViewById(R.id.rdogrpH14b7);
 
             rdoH14b71 = (RadioButton) findViewById(R.id.rdoH14b71);
             rdoH14b72 = (RadioButton) findViewById(R.id.rdoH14b72);
             secH14b8 = (LinearLayout) findViewById(R.id.secH14b8);
-            lineH14b8 = (View) findViewById(R.id.lineH14b8);
+            lineH14b8 = findViewById(R.id.lineH14b8);
             VlblH14b8 = (TextView) findViewById(R.id.VlblH14b8);
             rdogrpH14b8 = (RadioGroup) findViewById(R.id.rdogrpH14b8);
 
             rdoH14b81 = (RadioButton) findViewById(R.id.rdoH14b81);
             rdoH14b82 = (RadioButton) findViewById(R.id.rdoH14b82);
             secH14b9 = (LinearLayout) findViewById(R.id.secH14b9);
-            lineH14b9 = (View) findViewById(R.id.lineH14b9);
+            lineH14b9 = findViewById(R.id.lineH14b9);
             VlblH14b9 = (TextView) findViewById(R.id.VlblH14b9);
             rdogrpH14b9 = (RadioGroup) findViewById(R.id.rdogrpH14b9);
 
@@ -406,14 +402,14 @@ public class Destruction2 extends Activity {
                 }
             });
             secH14b9X = (LinearLayout) findViewById(R.id.secH14b9X);
-            lineH14b9X = (View) findViewById(R.id.lineH14b9X);
+            lineH14b9X = findViewById(R.id.lineH14b9X);
             VlblH14b9X = (TextView) findViewById(R.id.VlblH14b9X);
             txtH14b9X = (EditText) findViewById(R.id.txtH14b9X);
             secH14b9X.setVisibility(View.GONE);
 
             seclb14c = (LinearLayout) findViewById(R.id.seclb14c);
             secH14c1 = (LinearLayout) findViewById(R.id.secH14c1);
-            lineH14c1 = (View) findViewById(R.id.lineH14c1);
+            lineH14c1 = findViewById(R.id.lineH14c1);
             VlblH14c1 = (TextView) findViewById(R.id.VlblH14c1);
             rdogrpH14c1 = (RadioGroup) findViewById(R.id.rdogrpH14c1);
 
@@ -546,87 +542,87 @@ public class Destruction2 extends Activity {
                 }
             });
             secH14c1a = (LinearLayout) findViewById(R.id.secH14c1a);
-            lineH14c1a = (View) findViewById(R.id.lineH14c1a);
+            lineH14c1a = findViewById(R.id.lineH14c1a);
             VlblH14c1a = (TextView) findViewById(R.id.VlblH14c1a);
             chkH14c1a = (CheckBox) findViewById(R.id.chkH14c1a);
             secH14c1b = (LinearLayout) findViewById(R.id.secH14c1b);
-            lineH14c1b = (View) findViewById(R.id.lineH14c1b);
+            lineH14c1b = findViewById(R.id.lineH14c1b);
             VlblH14c1b = (TextView) findViewById(R.id.VlblH14c1b);
             chkH14c1b = (CheckBox) findViewById(R.id.chkH14c1b);
             secH14c1c = (LinearLayout) findViewById(R.id.secH14c1c);
-            lineH14c1c = (View) findViewById(R.id.lineH14c1c);
+            lineH14c1c = findViewById(R.id.lineH14c1c);
             VlblH14c1c = (TextView) findViewById(R.id.VlblH14c1c);
             chkH14c1c = (CheckBox) findViewById(R.id.chkH14c1c);
             secH14c1d = (LinearLayout) findViewById(R.id.secH14c1d);
-            lineH14c1d = (View) findViewById(R.id.lineH14c1d);
+            lineH14c1d = findViewById(R.id.lineH14c1d);
             VlblH14c1d = (TextView) findViewById(R.id.VlblH14c1d);
             chkH14c1d = (CheckBox) findViewById(R.id.chkH14c1d);
             secH14c1e = (LinearLayout) findViewById(R.id.secH14c1e);
-            lineH14c1e = (View) findViewById(R.id.lineH14c1e);
+            lineH14c1e = findViewById(R.id.lineH14c1e);
             VlblH14c1e = (TextView) findViewById(R.id.VlblH14c1e);
             chkH14c1e = (CheckBox) findViewById(R.id.chkH14c1e);
             secH14c1f = (LinearLayout) findViewById(R.id.secH14c1f);
-            lineH14c1f = (View) findViewById(R.id.lineH14c1f);
+            lineH14c1f = findViewById(R.id.lineH14c1f);
             VlblH14c1f = (TextView) findViewById(R.id.VlblH14c1f);
             chkH14c1f = (CheckBox) findViewById(R.id.chkH14c1f);
             secH14c1g = (LinearLayout) findViewById(R.id.secH14c1g);
-            lineH14c1g = (View) findViewById(R.id.lineH14c1g);
+            lineH14c1g = findViewById(R.id.lineH14c1g);
             VlblH14c1g = (TextView) findViewById(R.id.VlblH14c1g);
             chkH14c1g = (CheckBox) findViewById(R.id.chkH14c1g);
             secH14c1h = (LinearLayout) findViewById(R.id.secH14c1h);
-            lineH14c1h = (View) findViewById(R.id.lineH14c1h);
+            lineH14c1h = findViewById(R.id.lineH14c1h);
             VlblH14c1h = (TextView) findViewById(R.id.VlblH14c1h);
             chkH14c1h = (CheckBox) findViewById(R.id.chkH14c1h);
             secH14c1i = (LinearLayout) findViewById(R.id.secH14c1i);
-            lineH14c1i = (View) findViewById(R.id.lineH14c1i);
+            lineH14c1i = findViewById(R.id.lineH14c1i);
             VlblH14c1i = (TextView) findViewById(R.id.VlblH14c1i);
             chkH14c1i = (CheckBox) findViewById(R.id.chkH14c1i);
             secH14c1j = (LinearLayout) findViewById(R.id.secH14c1j);
-            lineH14c1j = (View) findViewById(R.id.lineH14c1j);
+            lineH14c1j = findViewById(R.id.lineH14c1j);
             VlblH14c1j = (TextView) findViewById(R.id.VlblH14c1j);
             chkH14c1j = (CheckBox) findViewById(R.id.chkH14c1j);
             secH14c1k = (LinearLayout) findViewById(R.id.secH14c1k);
-            lineH14c1k = (View) findViewById(R.id.lineH14c1k);
+            lineH14c1k = findViewById(R.id.lineH14c1k);
             VlblH14c1k = (TextView) findViewById(R.id.VlblH14c1k);
             chkH14c1k = (CheckBox) findViewById(R.id.chkH14c1k);
             secH14c1l = (LinearLayout) findViewById(R.id.secH14c1l);
-            lineH14c1l = (View) findViewById(R.id.lineH14c1l);
+            lineH14c1l = findViewById(R.id.lineH14c1l);
             VlblH14c1l = (TextView) findViewById(R.id.VlblH14c1l);
             chkH14c1l = (CheckBox) findViewById(R.id.chkH14c1l);
             secH14c1m = (LinearLayout) findViewById(R.id.secH14c1m);
-            lineH14c1m = (View) findViewById(R.id.lineH14c1m);
+            lineH14c1m = findViewById(R.id.lineH14c1m);
             VlblH14c1m = (TextView) findViewById(R.id.VlblH14c1m);
             chkH14c1m = (CheckBox) findViewById(R.id.chkH14c1m);
             secH14c1n = (LinearLayout) findViewById(R.id.secH14c1n);
-            lineH14c1n = (View) findViewById(R.id.lineH14c1n);
+            lineH14c1n = findViewById(R.id.lineH14c1n);
             VlblH14c1n = (TextView) findViewById(R.id.VlblH14c1n);
             chkH14c1n = (CheckBox) findViewById(R.id.chkH14c1n);
             secH14c1o = (LinearLayout) findViewById(R.id.secH14c1o);
-            lineH14c1o = (View) findViewById(R.id.lineH14c1o);
+            lineH14c1o = findViewById(R.id.lineH14c1o);
             VlblH14c1o = (TextView) findViewById(R.id.VlblH14c1o);
             chkH14c1o = (CheckBox) findViewById(R.id.chkH14c1o);
             secH14c1p = (LinearLayout) findViewById(R.id.secH14c1p);
-            lineH14c1p = (View) findViewById(R.id.lineH14c1p);
+            lineH14c1p = findViewById(R.id.lineH14c1p);
             VlblH14c1p = (TextView) findViewById(R.id.VlblH14c1p);
             chkH14c1p = (CheckBox) findViewById(R.id.chkH14c1p);
             secH14c1q = (LinearLayout) findViewById(R.id.secH14c1q);
-            lineH14c1q = (View) findViewById(R.id.lineH14c1q);
+            lineH14c1q = findViewById(R.id.lineH14c1q);
             VlblH14c1q = (TextView) findViewById(R.id.VlblH14c1q);
             chkH14c1q = (CheckBox) findViewById(R.id.chkH14c1q);
             secH14c1r = (LinearLayout) findViewById(R.id.secH14c1r);
-            lineH14c1r = (View) findViewById(R.id.lineH14c1r);
+            lineH14c1r = findViewById(R.id.lineH14c1r);
             VlblH14c1r = (TextView) findViewById(R.id.VlblH14c1r);
             chkH14c1r = (CheckBox) findViewById(R.id.chkH14c1r);
             secH14c1s = (LinearLayout) findViewById(R.id.secH14c1s);
-            lineH14c1s = (View) findViewById(R.id.lineH14c1s);
+            lineH14c1s = findViewById(R.id.lineH14c1s);
             VlblH14c1s = (TextView) findViewById(R.id.VlblH14c1s);
             chkH14c1s = (CheckBox) findViewById(R.id.chkH14c1s);
             secH14c1t = (LinearLayout) findViewById(R.id.secH14c1t);
-            lineH14c1t = (View) findViewById(R.id.lineH14c1t);
+            lineH14c1t = findViewById(R.id.lineH14c1t);
             VlblH14c1t = (TextView) findViewById(R.id.VlblH14c1t);
             chkH14c1t = (CheckBox) findViewById(R.id.chkH14c1t);
             secH14c1x = (LinearLayout) findViewById(R.id.secH14c1x);
-            lineH14c1x = (View) findViewById(R.id.lineH14c1x);
+            lineH14c1x = findViewById(R.id.lineH14c1x);
             VlblH14c1x = (TextView) findViewById(R.id.VlblH14c1x);
             chkH14c1x = (CheckBox) findViewById(R.id.chkH14c1x);
             chkH14c1x.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -641,7 +637,7 @@ public class Destruction2 extends Activity {
                 }
             });
             secH14c1x1 = (LinearLayout) findViewById(R.id.secH14c1x1);
-            lineH14c1x1 = (View) findViewById(R.id.lineH14c1x1);
+            lineH14c1x1 = findViewById(R.id.lineH14c1x1);
             VlblH14c1x1 = (TextView) findViewById(R.id.VlblH14c1x1);
             txtH14c1x1 = (EditText) findViewById(R.id.txtH14c1x1);
 
@@ -668,7 +664,7 @@ public class Destruction2 extends Activity {
             secH14c1s.setVisibility(View.GONE);
             secH14c1t.setVisibility(View.GONE);
             secH14c1x.setVisibility(View.GONE);
-
+            secH14c1x1.setVisibility(View.GONE);
 
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);

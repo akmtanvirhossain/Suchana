@@ -206,11 +206,7 @@ public class Anthro extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -294,14 +290,14 @@ public class Anthro extends Activity {
                 }
             });
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             txtRnd.setText(RND);
             txtRnd.setEnabled(false);
 
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
             txtSuchanaID.setText(SUCHANAID);
@@ -310,7 +306,7 @@ public class Anthro extends Activity {
             seclblC2 = (LinearLayout) findViewById(R.id.seclblC2);
             seclblWeight1 = (LinearLayout) findViewById(R.id.seclblWeight1);
             secC2MCWeight1 = (LinearLayout) findViewById(R.id.secC2MCWeight1);
-            lineC2MCWeight1 = (View) findViewById(R.id.lineC2MCWeight1);
+            lineC2MCWeight1 = findViewById(R.id.lineC2MCWeight1);
             VlblC2MCWeight1 = (TextView) findViewById(R.id.VlblC2MCWeight1);
             txtC2MCWeight1 = (EditText) findViewById(R.id.txtC2MCWeight1);
             txtC2MCWeight1.addTextChangedListener(new TextWatcher() {
@@ -329,7 +325,7 @@ public class Anthro extends Activity {
             });
 
             secC2MWeight1 = (LinearLayout) findViewById(R.id.secC2MWeight1);
-            lineC2MWeight1 = (View) findViewById(R.id.lineC2MWeight1);
+            lineC2MWeight1 = findViewById(R.id.lineC2MWeight1);
             VlblC2MWeight1 = (TextView) findViewById(R.id.VlblC2MWeight1);
             txtC2MWeight1 = (EditText) findViewById(R.id.txtC2MWeight1);
             txtC2MWeight1.addTextChangedListener(new TextWatcher() {
@@ -348,13 +344,13 @@ public class Anthro extends Activity {
             });
 
             secC2CWeight1 = (LinearLayout) findViewById(R.id.secC2CWeight1);
-            lineC2CWeight1 = (View) findViewById(R.id.lineC2CWeight1);
+            lineC2CWeight1 = findViewById(R.id.lineC2CWeight1);
             VlblC2CWeight1 = (TextView) findViewById(R.id.VlblC2CWeight1);
             txtC2CWeight1 = (EditText) findViewById(R.id.txtC2CWeight1);
 
             seclblWeight2 = (LinearLayout) findViewById(R.id.seclblWeight2);
             secC2MCWeight2 = (LinearLayout) findViewById(R.id.secC2MCWeight2);
-            lineC2MCWeight2 = (View) findViewById(R.id.lineC2MCWeight2);
+            lineC2MCWeight2 = findViewById(R.id.lineC2MCWeight2);
             VlblC2MCWeight2 = (TextView) findViewById(R.id.VlblC2MCWeight2);
             txtC2MCWeight2 = (EditText) findViewById(R.id.txtC2MCWeight2);
             txtC2MCWeight2.addTextChangedListener(new TextWatcher() {
@@ -373,7 +369,7 @@ public class Anthro extends Activity {
             });
 
             secC2MWeight2 = (LinearLayout) findViewById(R.id.secC2MWeight2);
-            lineC2MWeight2 = (View) findViewById(R.id.lineC2MWeight2);
+            lineC2MWeight2 = findViewById(R.id.lineC2MWeight2);
             VlblC2MWeight2 = (TextView) findViewById(R.id.VlblC2MWeight2);
             txtC2MWeight2 = (EditText) findViewById(R.id.txtC2MWeight2);
             txtC2MWeight2.addTextChangedListener(new TextWatcher() {
@@ -393,12 +389,12 @@ public class Anthro extends Activity {
 
 
             secC2CWeight2 = (LinearLayout) findViewById(R.id.secC2CWeight2);
-            lineC2CWeight2 = (View) findViewById(R.id.lineC2CWeight2);
+            lineC2CWeight2 = findViewById(R.id.lineC2CWeight2);
             VlblC2CWeight2 = (TextView) findViewById(R.id.VlblC2CWeight2);
             txtC2CWeight2 = (EditText) findViewById(R.id.txtC2CWeight2);
             seclblWeight3 = (LinearLayout) findViewById(R.id.seclblWeight3);
             secC2MCWeight3 = (LinearLayout) findViewById(R.id.secC2MCWeight3);
-            lineC2MCWeight3 = (View) findViewById(R.id.lineC2MCWeight3);
+            lineC2MCWeight3 = findViewById(R.id.lineC2MCWeight3);
             VlblC2MCWeight3 = (TextView) findViewById(R.id.VlblC2MCWeight3);
             txtC2MCWeight3 = (EditText) findViewById(R.id.txtC2MCWeight3);
             txtC2MCWeight3.addTextChangedListener(new TextWatcher() {
@@ -418,7 +414,7 @@ public class Anthro extends Activity {
 
 
             secC2MWeight3 = (LinearLayout) findViewById(R.id.secC2MWeight3);
-            lineC2MWeight3 = (View) findViewById(R.id.lineC2MWeight3);
+            lineC2MWeight3 = findViewById(R.id.lineC2MWeight3);
             VlblC2MWeight3 = (TextView) findViewById(R.id.VlblC2MWeight3);
             txtC2MWeight3 = (EditText) findViewById(R.id.txtC2MWeight3);
             txtC2MWeight3.addTextChangedListener(new TextWatcher() {
@@ -437,73 +433,76 @@ public class Anthro extends Activity {
             });
 
             secC2CWeight3 = (LinearLayout) findViewById(R.id.secC2CWeight3);
-            lineC2CWeight3 = (View) findViewById(R.id.lineC2CWeight3);
+            lineC2CWeight3 = findViewById(R.id.lineC2CWeight3);
             VlblC2CWeight3 = (TextView) findViewById(R.id.VlblC2CWeight3);
             txtC2CWeight3 = (EditText) findViewById(R.id.txtC2CWeight3);
             seclblHeight = (LinearLayout) findViewById(R.id.seclblHeight);
             seclblC2a = (LinearLayout) findViewById(R.id.seclblC2a);
             secC2CHeight1 = (LinearLayout) findViewById(R.id.secC2CHeight1);
-            lineC2CHeight1 = (View) findViewById(R.id.lineC2CHeight1);
+            lineC2CHeight1 = findViewById(R.id.lineC2CHeight1);
             VlblC2CHeight1 = (TextView) findViewById(R.id.VlblC2CHeight1);
             txtC2CHeight1 = (EditText) findViewById(R.id.txtC2CHeight1);
             secC2CHeight2 = (LinearLayout) findViewById(R.id.secC2CHeight2);
-            lineC2CHeight2 = (View) findViewById(R.id.lineC2CHeight2);
+            lineC2CHeight2 = findViewById(R.id.lineC2CHeight2);
             VlblC2CHeight2 = (TextView) findViewById(R.id.VlblC2CHeight2);
             txtC2CHeight2 = (EditText) findViewById(R.id.txtC2CHeight2);
             secC2CHeight3 = (LinearLayout) findViewById(R.id.secC2CHeight3);
-            lineC2CHeight3 = (View) findViewById(R.id.lineC2CHeight3);
+            lineC2CHeight3 = findViewById(R.id.lineC2CHeight3);
             VlblC2CHeight3 = (TextView) findViewById(R.id.VlblC2CHeight3);
             txtC2CHeight3 = (EditText) findViewById(R.id.txtC2CHeight3);
             seclblC2b = (LinearLayout) findViewById(R.id.seclblC2b);
             secC2MHeight1 = (LinearLayout) findViewById(R.id.secC2MHeight1);
-            lineC2MHeight1 = (View) findViewById(R.id.lineC2MHeight1);
+            lineC2MHeight1 = findViewById(R.id.lineC2MHeight1);
             VlblC2MHeight1 = (TextView) findViewById(R.id.VlblC2MHeight1);
             txtC2MHeight1 = (EditText) findViewById(R.id.txtC2MHeight1);
             secC2MHeight2 = (LinearLayout) findViewById(R.id.secC2MHeight2);
-            lineC2MHeight2 = (View) findViewById(R.id.lineC2MHeight2);
+            lineC2MHeight2 = findViewById(R.id.lineC2MHeight2);
             VlblC2MHeight2 = (TextView) findViewById(R.id.VlblC2MHeight2);
             txtC2MHeight2 = (EditText) findViewById(R.id.txtC2MHeight2);
             secC2MHeight3 = (LinearLayout) findViewById(R.id.secC2MHeight3);
-            lineC2MHeight3 = (View) findViewById(R.id.lineC2MHeight3);
+            lineC2MHeight3 = findViewById(R.id.lineC2MHeight3);
             VlblC2MHeight3 = (TextView) findViewById(R.id.VlblC2MHeight3);
             txtC2MHeight3 = (EditText) findViewById(R.id.txtC2MHeight3);
             seclblMuac = (LinearLayout) findViewById(R.id.seclblMuac);
             seclblC2c = (LinearLayout) findViewById(R.id.seclblC2c);
             secC2CMUAC1 = (LinearLayout) findViewById(R.id.secC2CMUAC1);
-            lineC2CMUAC1 = (View) findViewById(R.id.lineC2CMUAC1);
+            lineC2CMUAC1 = findViewById(R.id.lineC2CMUAC1);
             VlblC2CMUAC1 = (TextView) findViewById(R.id.VlblC2CMUAC1);
             txtC2CMUAC1 = (EditText) findViewById(R.id.txtC2CMUAC1);
             secC2CMUAC2 = (LinearLayout) findViewById(R.id.secC2CMUAC2);
-            lineC2CMUAC2 = (View) findViewById(R.id.lineC2CMUAC2);
+            lineC2CMUAC2 = findViewById(R.id.lineC2CMUAC2);
             VlblC2CMUAC2 = (TextView) findViewById(R.id.VlblC2CMUAC2);
             txtC2CMUAC2 = (EditText) findViewById(R.id.txtC2CMUAC2);
             secC2CMUAC3 = (LinearLayout) findViewById(R.id.secC2CMUAC3);
-            lineC2CMUAC3 = (View) findViewById(R.id.lineC2CMUAC3);
+            lineC2CMUAC3 = findViewById(R.id.lineC2CMUAC3);
             VlblC2CMUAC3 = (TextView) findViewById(R.id.VlblC2CMUAC3);
             txtC2CMUAC3 = (EditText) findViewById(R.id.txtC2CMUAC3);
             seclblC2d = (LinearLayout) findViewById(R.id.seclblC2d);
             secC2MMUAC1 = (LinearLayout) findViewById(R.id.secC2MMUAC1);
-            lineC2MMUAC1 = (View) findViewById(R.id.lineC2MMUAC1);
+            lineC2MMUAC1 = findViewById(R.id.lineC2MMUAC1);
             VlblC2MMUAC1 = (TextView) findViewById(R.id.VlblC2MMUAC1);
             txtC2MMUAC1 = (EditText) findViewById(R.id.txtC2MMUAC1);
             secC2MMUAC2 = (LinearLayout) findViewById(R.id.secC2MMUAC2);
-            lineC2MMUAC2 = (View) findViewById(R.id.lineC2MMUAC2);
+            lineC2MMUAC2 = findViewById(R.id.lineC2MMUAC2);
             VlblC2MMUAC2 = (TextView) findViewById(R.id.VlblC2MMUAC2);
             txtC2MMUAC2 = (EditText) findViewById(R.id.txtC2MMUAC2);
             secC2MMUAC3 = (LinearLayout) findViewById(R.id.secC2MMUAC3);
-            lineC2MMUAC3 = (View) findViewById(R.id.lineC2MMUAC3);
+            lineC2MMUAC3 = findViewById(R.id.lineC2MMUAC3);
             VlblC2MMUAC3 = (TextView) findViewById(R.id.VlblC2MMUAC3);
             txtC2MMUAC3 = (EditText) findViewById(R.id.txtC2MMUAC3);
             secC2Haemoglobin = (LinearLayout) findViewById(R.id.secC2Haemoglobin);
-            lineC2Haemoglobin = (View) findViewById(R.id.lineC2Haemoglobin);
+            lineC2Haemoglobin = findViewById(R.id.lineC2Haemoglobin);
             VlblC2Haemoglobin = (TextView) findViewById(R.id.VlblC2Haemoglobin);
             txtC2Haemoglobin = (EditText) findViewById(R.id.txtC2Haemoglobin);
 
 
             if (C.Existence("select * from HHIdentity where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' and AgeGroup='3'")) {
                 secC2Haemoglobin.setVisibility(View.VISIBLE);
+                lineC2Haemoglobin.setVisibility(View.VISIBLE);
             } else {
+                txtC2Haemoglobin.setText("");
                 secC2Haemoglobin.setVisibility(View.GONE);
+                lineC2Haemoglobin.setVisibility(View.GONE);
             }
 
             //Hide all skip variables

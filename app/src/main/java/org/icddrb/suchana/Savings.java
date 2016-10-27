@@ -133,11 +133,7 @@ public class Savings extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -220,11 +216,11 @@ public class Savings extends Activity {
 
 
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
 
@@ -234,28 +230,28 @@ public class Savings extends Activity {
             txtSuchanaID.setEnabled(false);
 
             secMSlNo = (LinearLayout) findViewById(R.id.secMSlNo);
-            lineMSlNo = (View) findViewById(R.id.lineMSlNo);
+            lineMSlNo = findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             //txtMSlNo = (EditText) findViewById(R.id.txtMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
             spnMSlNo.setAdapter(C.getArrayAdapter("Select '' union Select H21||'-'||H22 from Member where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "'"));
 
             secH101 = (LinearLayout) findViewById(R.id.secH101);
-            lineH101 = (View) findViewById(R.id.lineH101);
+            lineH101 = findViewById(R.id.lineH101);
             VlblH101 = (TextView) findViewById(R.id.VlblH101);
             rdogrpH101 = (RadioGroup) findViewById(R.id.rdogrpH101);
 
             rdoH1011 = (RadioButton) findViewById(R.id.rdoH1011);
             rdoH1012 = (RadioButton) findViewById(R.id.rdoH1012);
             secH102 = (LinearLayout) findViewById(R.id.secH102);
-            lineH102 = (View) findViewById(R.id.lineH102);
+            lineH102 = findViewById(R.id.lineH102);
             VlblH102 = (TextView) findViewById(R.id.VlblH102);
             rdogrpH102 = (RadioGroup) findViewById(R.id.rdogrpH102);
 
             rdoH1021 = (RadioButton) findViewById(R.id.rdoH1021);
             rdoH1022 = (RadioButton) findViewById(R.id.rdoH1022);
             secH103 = (LinearLayout) findViewById(R.id.secH103);
-            lineH103 = (View) findViewById(R.id.lineH103);
+            lineH103 = findViewById(R.id.lineH103);
             VlblH103 = (TextView) findViewById(R.id.VlblH103);
             rdogrpH103 = (RadioGroup) findViewById(R.id.rdogrpH103);
 
@@ -336,31 +332,31 @@ public class Savings extends Activity {
                 }
             });
             secH1031 = (LinearLayout) findViewById(R.id.secH1031);
-            lineH1031 = (View) findViewById(R.id.lineH1031);
+            lineH1031 = findViewById(R.id.lineH1031);
             VlblH1031 = (TextView) findViewById(R.id.VlblH1031);
             txtH1031 = (EditText) findViewById(R.id.txtH1031);
             secH1032 = (LinearLayout) findViewById(R.id.secH1032);
-            lineH1032 = (View) findViewById(R.id.lineH1032);
+            lineH1032 = findViewById(R.id.lineH1032);
             VlblH1032 = (TextView) findViewById(R.id.VlblH1032);
             txtH1032 = (EditText) findViewById(R.id.txtH1032);
             secH1033 = (LinearLayout) findViewById(R.id.secH1033);
-            lineH1033 = (View) findViewById(R.id.lineH1033);
+            lineH1033 = findViewById(R.id.lineH1033);
             VlblH1033 = (TextView) findViewById(R.id.VlblH1033);
             txtH1033 = (EditText) findViewById(R.id.txtH1033);
             secH1034 = (LinearLayout) findViewById(R.id.secH1034);
-            lineH1034 = (View) findViewById(R.id.lineH1034);
+            lineH1034 = findViewById(R.id.lineH1034);
             VlblH1034 = (TextView) findViewById(R.id.VlblH1034);
             txtH1034 = (EditText) findViewById(R.id.txtH1034);
             secH1035 = (LinearLayout) findViewById(R.id.secH1035);
-            lineH1035 = (View) findViewById(R.id.lineH1035);
+            lineH1035 = findViewById(R.id.lineH1035);
             VlblH1035 = (TextView) findViewById(R.id.VlblH1035);
             txtH1035 = (EditText) findViewById(R.id.txtH1035);
             secH1036 = (LinearLayout) findViewById(R.id.secH1036);
-            lineH1036 = (View) findViewById(R.id.lineH1036);
+            lineH1036 = findViewById(R.id.lineH1036);
             VlblH1036 = (TextView) findViewById(R.id.VlblH1036);
             txtH1036 = (EditText) findViewById(R.id.txtH1036);
             secH1037a = (LinearLayout) findViewById(R.id.secH1037a);
-            lineH1037a = (View) findViewById(R.id.lineH1037a);
+            lineH1037a = findViewById(R.id.lineH1037a);
             VlblH1037a = (TextView) findViewById(R.id.VlblH1037a);
             spnH1037a = (Spinner) findViewById(R.id.spnH1037a);
             List<String> listH1037a = new ArrayList<String>();
@@ -402,7 +398,7 @@ public class Savings extends Activity {
                 }
             });
             secH1037b = (LinearLayout) findViewById(R.id.secH1037b);
-            lineH1037b = (View) findViewById(R.id.lineH1037b);
+            lineH1037b = findViewById(R.id.lineH1037b);
             VlblH1037b = (TextView) findViewById(R.id.VlblH1037b);
             spnH1037b = (Spinner) findViewById(R.id.spnH1037b);
             List<String> listH1037b = new ArrayList<String>();
@@ -444,7 +440,7 @@ public class Savings extends Activity {
                 }
             });
             secH1037c = (LinearLayout) findViewById(R.id.secH1037c);
-            lineH1037c = (View) findViewById(R.id.lineH1037c);
+            lineH1037c = findViewById(R.id.lineH1037c);
             VlblH1037c = (TextView) findViewById(R.id.VlblH1037c);
             spnH1037c = (Spinner) findViewById(R.id.spnH1037c);
             List<String> listH1037c = new ArrayList<String>();
@@ -486,7 +482,7 @@ public class Savings extends Activity {
                 }
             });
             secH1037d = (LinearLayout) findViewById(R.id.secH1037d);
-            lineH1037d = (View) findViewById(R.id.lineH1037d);
+            lineH1037d = findViewById(R.id.lineH1037d);
             VlblH1037d = (TextView) findViewById(R.id.VlblH1037d);
             spnH1037d = (Spinner) findViewById(R.id.spnH1037d);
             List<String> listH1037d = new ArrayList<String>();
@@ -528,7 +524,7 @@ public class Savings extends Activity {
                 }
             });
             secH1037X = (LinearLayout) findViewById(R.id.secH1037X);
-            lineH1037X = (View) findViewById(R.id.lineH1037X);
+            lineH1037X = findViewById(R.id.lineH1037X);
             VlblH1037X = (TextView) findViewById(R.id.VlblH1037X);
             txtH1037X = (EditText) findViewById(R.id.txtH1037X);
 
@@ -630,6 +626,22 @@ public class Savings extends Activity {
                 return;
             } else if (spnH1037a.getSelectedItemPosition() == 0 & secH1037a.isShown()) {
                 Connection.MessageBox(Savings.this, "Required field: ১. কিসের জন্য সঞ্চয় করছেন.");
+                spnH1037a.requestFocus();
+                return;
+            } else if (spnH1037a.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
+                    spnH1037a.getSelectedItem().equals(spnH1037c.getSelectedItem()) |
+                    spnH1037a.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
+                    spnH1037b.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
+                    spnH1037b.getSelectedItem().equals(spnH1037c.getSelectedItem()) |
+                    spnH1037b.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
+                    spnH1037c.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
+                    spnH1037c.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
+                    spnH1037c.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
+                    spnH1037d.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
+                    spnH1037d.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
+                    spnH1037d.getSelectedItem().equals(spnH1037c.getSelectedItem())) {
+
+                Connection.MessageBox(Savings.this, "Required field: কিসের জন্য সঞ্চয় করছেন ভিন্ন ভিন্ন হবে !");
                 spnH1037a.requestFocus();
                 return;
             }

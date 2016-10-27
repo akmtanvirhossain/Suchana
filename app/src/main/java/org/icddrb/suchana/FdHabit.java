@@ -26,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -51,6 +52,7 @@ public class FdHabit extends Activity {
     static String TableName;
     static String RND = "";
     static String SUCHANAID = "";
+    static int CHILDAGEM = 0;
     boolean networkAvailable = false;
     Location currentLocation;
     double currentLatitude, currentLongitude;
@@ -742,11 +744,7 @@ public class FdHabit extends Activity {
     //--------------------------------------------------------------------------------------------------
     @Override
     public boolean onKeyDown(int iKeyCode, KeyEvent event) {
-        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME);
     }
 
     public void onCreate(Bundle savedInstanceState) {
@@ -833,11 +831,11 @@ public class FdHabit extends Activity {
 
             secM4 = (LinearLayout) findViewById(R.id.secM4);
             secRnd = (LinearLayout) findViewById(R.id.secRnd);
-            lineRnd = (View) findViewById(R.id.lineRnd);
+            lineRnd = findViewById(R.id.lineRnd);
             VlblRnd = (TextView) findViewById(R.id.VlblRnd);
             txtRnd = (EditText) findViewById(R.id.txtRnd);
             secSuchanaID = (LinearLayout) findViewById(R.id.secSuchanaID);
-            lineSuchanaID = (View) findViewById(R.id.lineSuchanaID);
+            lineSuchanaID = findViewById(R.id.lineSuchanaID);
             VlblSuchanaID = (TextView) findViewById(R.id.VlblSuchanaID);
             txtSuchanaID = (EditText) findViewById(R.id.txtSuchanaID);
 
@@ -847,47 +845,47 @@ public class FdHabit extends Activity {
             txtSuchanaID.setEnabled(false);
 
             secC11 = (LinearLayout) findViewById(R.id.secC11);
-            lineC11 = (View) findViewById(R.id.lineC11);
+            lineC11 = findViewById(R.id.lineC11);
             VlblC11 = (TextView) findViewById(R.id.VlblC11);
             spnCHSLNo = (Spinner) findViewById(R.id.spnCHSLNo);
            // txtC11 = (EditText) findViewById(R.id.txtC11);
             secC12 = (LinearLayout) findViewById(R.id.secC12);
-            lineC12 = (View) findViewById(R.id.lineC12);
+            lineC12 = findViewById(R.id.lineC12);
             VlblC12 = (TextView) findViewById(R.id.VlblC12);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
             spnMSlNo.setAdapter(C.getArrayAdapter("select H21 ||'-'||H22 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H21=(select H221 from member where Rnd='" + RND + "' and suchanaId='" + SUCHANAID + "' and H220='1')"));
             secC13 = (LinearLayout) findViewById(R.id.secC13);
-            lineC13 = (View) findViewById(R.id.lineC13);
+            lineC13 = findViewById(R.id.lineC13);
             VlblC13 = (TextView) findViewById(R.id.VlblC13);
             txtC13 = (EditText) findViewById(R.id.txtC13);
             secC14 = (LinearLayout) findViewById(R.id.secC14);
-            lineC14 = (View) findViewById(R.id.lineC14);
+            lineC14 = findViewById(R.id.lineC14);
             VlblC14 = (TextView) findViewById(R.id.VlblC14);
             rdogrpC14 = (RadioGroup) findViewById(R.id.rdogrpC14);
 
             rdoC141 = (RadioButton) findViewById(R.id.rdoC141);
             rdoC142 = (RadioButton) findViewById(R.id.rdoC142);
             secC15 = (LinearLayout) findViewById(R.id.secC15);
-            lineC15 = (View) findViewById(R.id.lineC15);
+            lineC15 = findViewById(R.id.lineC15);
             VlblC15 = (TextView) findViewById(R.id.VlblC15);
             dtpC15 = (EditText) findViewById(R.id.dtpC15);
             secC16 = (LinearLayout) findViewById(R.id.secC16);
-            lineC16 = (View) findViewById(R.id.lineC16);
+            lineC16 = findViewById(R.id.lineC16);
             VlblC16 = (TextView) findViewById(R.id.VlblC16);
             txtC16 = (EditText) findViewById(R.id.txtC16);
             secC17 = (LinearLayout) findViewById(R.id.secC17);
-            lineC17 = (View) findViewById(R.id.lineC17);
+            lineC17 = findViewById(R.id.lineC17);
             VlblC17 = (TextView) findViewById(R.id.VlblC17);
             txtC17 = (EditText) findViewById(R.id.txtC17);
             secC18 = (LinearLayout) findViewById(R.id.secC18);
-            lineC18 = (View) findViewById(R.id.lineC18);
+            lineC18 = findViewById(R.id.lineC18);
             VlblC18 = (TextView) findViewById(R.id.VlblC18);
             rdogrpC18 = (RadioGroup) findViewById(R.id.rdogrpC18);
 
             rdoC181 = (RadioButton) findViewById(R.id.rdoC181);
             rdoC182 = (RadioButton) findViewById(R.id.rdoC182);
             secC19a = (LinearLayout) findViewById(R.id.secC19a);
-            lineC19a = (View) findViewById(R.id.lineC19a);
+            lineC19a = findViewById(R.id.lineC19a);
             VlblC19a = (TextView) findViewById(R.id.VlblC19a);
 
             spnC19a = (Spinner) findViewById(R.id.spnC19a);
@@ -923,14 +921,14 @@ public class FdHabit extends Activity {
             txtC19b = (EditText) findViewById(R.id.txtC19b);
             txtC19b.setVisibility(View.GONE);
             secC110 = (LinearLayout) findViewById(R.id.secC110);
-            lineC110 = (View) findViewById(R.id.lineC110);
+            lineC110 = findViewById(R.id.lineC110);
             VlblC110 = (TextView) findViewById(R.id.VlblC110);
             rdogrpC110 = (RadioGroup) findViewById(R.id.rdogrpC110);
 
             rdoC1101 = (RadioButton) findViewById(R.id.rdoC1101);
             rdoC1102 = (RadioButton) findViewById(R.id.rdoC1102);
             secC111 = (LinearLayout) findViewById(R.id.secC111);
-            lineC111 = (View) findViewById(R.id.lineC111);
+            lineC111 = findViewById(R.id.lineC111);
             VlblC111 = (TextView) findViewById(R.id.VlblC111);
             rdogrpC111 = (RadioGroup) findViewById(R.id.rdogrpC111);
 
@@ -977,7 +975,7 @@ public class FdHabit extends Activity {
             });
 
             secC112 = (LinearLayout) findViewById(R.id.secC112);
-            lineC112 = (View) findViewById(R.id.lineC112);
+            lineC112 = findViewById(R.id.lineC112);
             VlblC112 = (TextView) findViewById(R.id.VlblC112);
             rdogrpC112 = (RadioGroup) findViewById(R.id.rdogrpC112);
 
@@ -985,7 +983,7 @@ public class FdHabit extends Activity {
             rdoC1122 = (RadioButton) findViewById(R.id.rdoC1122);
             rdoC1123 = (RadioButton) findViewById(R.id.rdoC1123);
             secC113 = (LinearLayout) findViewById(R.id.secC113);
-            lineC113 = (View) findViewById(R.id.lineC113);
+            lineC113 = findViewById(R.id.lineC113);
             VlblC113 = (TextView) findViewById(R.id.VlblC113);
             rdogrpC113 = (RadioGroup) findViewById(R.id.rdogrpC113);
 
@@ -993,15 +991,15 @@ public class FdHabit extends Activity {
             rdoC1132 = (RadioButton) findViewById(R.id.rdoC1132);
             rdoC1133 = (RadioButton) findViewById(R.id.rdoC1133);
             secC114d = (LinearLayout) findViewById(R.id.secC114d);
-            lineC114d = (View) findViewById(R.id.lineC114d);
+            lineC114d = findViewById(R.id.lineC114d);
             VlblC114d = (TextView) findViewById(R.id.VlblC114d);
             txtC114d = (EditText) findViewById(R.id.txtC114d);
             secC114m = (LinearLayout) findViewById(R.id.secC114m);
-            lineC114m = (View) findViewById(R.id.lineC114m);
+            lineC114m = findViewById(R.id.lineC114m);
             VlblC114m = (TextView) findViewById(R.id.VlblC114m);
             txtC114m = (EditText) findViewById(R.id.txtC114m);
             secC115 = (LinearLayout) findViewById(R.id.secC115);
-            lineC115 = (View) findViewById(R.id.lineC115);
+            lineC115 = findViewById(R.id.lineC115);
             VlblC115 = (TextView) findViewById(R.id.VlblC115);
             rdogrpC115 = (RadioGroup) findViewById(R.id.rdogrpC115);
 
@@ -1081,81 +1079,84 @@ public class FdHabit extends Activity {
                 }
             });
             secC116 = (LinearLayout) findViewById(R.id.secC116);
-            lineC116 = (View) findViewById(R.id.lineC116);
+            lineC116 = findViewById(R.id.lineC116);
             VlblC116 = (TextView) findViewById(R.id.VlblC116);
             txtC116 = (EditText) findViewById(R.id.txtC116);
 
             seclblC117 = (LinearLayout) findViewById(R.id.seclblC117);
             seclblC117.setVisibility(View.GONE);
             secC117a = (LinearLayout) findViewById(R.id.secC117a);
-            lineC117a = (View) findViewById(R.id.lineC117a);
+            lineC117a = findViewById(R.id.lineC117a);
             VlblC117a = (TextView) findViewById(R.id.VlblC117a);
             chkC117a = (CheckBox) findViewById(R.id.chkC117a);
             secC117b = (LinearLayout) findViewById(R.id.secC117b);
-            lineC117b = (View) findViewById(R.id.lineC117b);
+            lineC117b = findViewById(R.id.lineC117b);
             VlblC117b = (TextView) findViewById(R.id.VlblC117b);
             chkC117b = (CheckBox) findViewById(R.id.chkC117b);
             secC117c = (LinearLayout) findViewById(R.id.secC117c);
-            lineC117c = (View) findViewById(R.id.lineC117c);
+            lineC117c = findViewById(R.id.lineC117c);
             VlblC117c = (TextView) findViewById(R.id.VlblC117c);
             chkC117c = (CheckBox) findViewById(R.id.chkC117c);
             secC117d = (LinearLayout) findViewById(R.id.secC117d);
-            lineC117d = (View) findViewById(R.id.lineC117d);
+            lineC117d = findViewById(R.id.lineC117d);
             VlblC117d = (TextView) findViewById(R.id.VlblC117d);
             chkC117d = (CheckBox) findViewById(R.id.chkC117d);
             secC117e = (LinearLayout) findViewById(R.id.secC117e);
-            lineC117e = (View) findViewById(R.id.lineC117e);
+            lineC117e = findViewById(R.id.lineC117e);
             VlblC117e = (TextView) findViewById(R.id.VlblC117e);
             chkC117e = (CheckBox) findViewById(R.id.chkC117e);
-            chkC117e.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (!((CheckBox) v).isChecked()) {
+
+            chkC117e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        secC117eX.setVisibility(View.VISIBLE);
+                        lineC117eX.setVisibility(View.VISIBLE);
+                    } else {
+
                         secC117eX.setVisibility(View.GONE);
                         lineC117eX.setVisibility(View.GONE);
                         txtC117eX.setText("");
-
-                    }
-                    else
-                    {
-                        secC117eX.setVisibility(View.VISIBLE);
-                        lineC117eX.setVisibility(View.VISIBLE);
                     }
                 }
             });
+
             secC117eX = (LinearLayout) findViewById(R.id.secC117eX);
-            lineC117eX = (View) findViewById(R.id.lineC117eX);
+            lineC117eX = findViewById(R.id.lineC117eX);
             VlblC117eX = (TextView) findViewById(R.id.VlblC117eX);
             txtC117eX = (EditText) findViewById(R.id.txtC117eX);
             secC117f = (LinearLayout) findViewById(R.id.secC117f);
-            lineC117f = (View) findViewById(R.id.lineC117f);
+            lineC117f = findViewById(R.id.lineC117f);
             VlblC117f = (TextView) findViewById(R.id.VlblC117f);
             chkC117f = (CheckBox) findViewById(R.id.chkC117f);
 
-            chkC117f.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (((CheckBox) v).isChecked()) {
-                        chkC117a.setChecked(false);
-                        chkC117b.setChecked(false);
-                        chkC117c.setChecked(false);
-                        chkC117d.setChecked(false);
-                        chkC117e.setChecked(false);
-                        txtC117eX.setText("");
-                    }
+            chkC117f.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+
+                    chkC117a.setChecked(false);
+                    chkC117b.setChecked(false);
+                    chkC117c.setChecked(false);
+                    chkC117d.setChecked(false);
+                    chkC117e.setChecked(false);
+                    txtC117eX.setText("");
 
                 }
             });
 
+
             secC118d = (LinearLayout) findViewById(R.id.secC118d);
-            lineC118d = (View) findViewById(R.id.lineC118d);
+            lineC118d = findViewById(R.id.lineC118d);
             VlblC118d = (TextView) findViewById(R.id.VlblC118d);
             txtC118d = (EditText) findViewById(R.id.txtC118d);
             secC118m = (LinearLayout) findViewById(R.id.secC118m);
-            lineC118m = (View) findViewById(R.id.lineC118m);
+            lineC118m = findViewById(R.id.lineC118m);
             VlblC118m = (TextView) findViewById(R.id.VlblC118m);
             txtC118m = (EditText) findViewById(R.id.txtC118m);
             seclblC119 = (LinearLayout) findViewById(R.id.seclblC119);
             secC119 = (LinearLayout) findViewById(R.id.secC119);
-            lineC119 = (View) findViewById(R.id.lineC119);
+            lineC119 = findViewById(R.id.lineC119);
             VlblC119 = (TextView) findViewById(R.id.VlblC119);
             rdogrpC119 = (RadioGroup) findViewById(R.id.rdogrpC119);
 
@@ -1164,7 +1165,7 @@ public class FdHabit extends Activity {
             rdoC1193 = (RadioButton) findViewById(R.id.rdoC1193);
             seclblC120 = (LinearLayout) findViewById(R.id.seclblC120);
             secC120 = (LinearLayout) findViewById(R.id.secC120);
-            lineC120 = (View) findViewById(R.id.lineC120);
+            lineC120 = findViewById(R.id.lineC120);
             VlblC120 = (TextView) findViewById(R.id.VlblC120);
             rdogrpC120 = (RadioGroup) findViewById(R.id.rdogrpC120);
 
@@ -1173,7 +1174,7 @@ public class FdHabit extends Activity {
             rdoC1203 = (RadioButton) findViewById(R.id.rdoC1203);
             seclblC121 = (LinearLayout) findViewById(R.id.seclblC121);
             secC121a = (LinearLayout) findViewById(R.id.secC121a);
-            lineC121a = (View) findViewById(R.id.lineC121a);
+            lineC121a = findViewById(R.id.lineC121a);
             VlblC121a = (TextView) findViewById(R.id.VlblC121a);
             rdogrpC121a = (RadioGroup) findViewById(R.id.rdogrpC121a);
 
@@ -1181,7 +1182,7 @@ public class FdHabit extends Activity {
             rdoC121a2 = (RadioButton) findViewById(R.id.rdoC121a2);
             rdoC121a3 = (RadioButton) findViewById(R.id.rdoC121a3);
             secC121b = (LinearLayout) findViewById(R.id.secC121b);
-            lineC121b = (View) findViewById(R.id.lineC121b);
+            lineC121b = findViewById(R.id.lineC121b);
             VlblC121b = (TextView) findViewById(R.id.VlblC121b);
             rdogrpC121b = (RadioGroup) findViewById(R.id.rdogrpC121b);
 
@@ -1218,11 +1219,11 @@ public class FdHabit extends Activity {
                 }
             });
             secC121b1 = (LinearLayout) findViewById(R.id.secC121b1);
-            lineC121b1 = (View) findViewById(R.id.lineC121b1);
+            lineC121b1 = findViewById(R.id.lineC121b1);
             VlblC121b1 = (TextView) findViewById(R.id.VlblC121b1);
             txtC121b1 = (EditText) findViewById(R.id.txtC121b1);
             secC121c = (LinearLayout) findViewById(R.id.secC121c);
-            lineC121c = (View) findViewById(R.id.lineC121c);
+            lineC121c = findViewById(R.id.lineC121c);
             VlblC121c = (TextView) findViewById(R.id.VlblC121c);
             rdogrpC121c = (RadioGroup) findViewById(R.id.rdogrpC121c);
 
@@ -1259,11 +1260,11 @@ public class FdHabit extends Activity {
                 }
             });
             secC121c1 = (LinearLayout) findViewById(R.id.secC121c1);
-            lineC121c1 = (View) findViewById(R.id.lineC121c1);
+            lineC121c1 = findViewById(R.id.lineC121c1);
             VlblC121c1 = (TextView) findViewById(R.id.VlblC121c1);
             txtC121c1 = (EditText) findViewById(R.id.txtC121c1);
             secC121d = (LinearLayout) findViewById(R.id.secC121d);
-            lineC121d = (View) findViewById(R.id.lineC121d);
+            lineC121d = findViewById(R.id.lineC121d);
             VlblC121d = (TextView) findViewById(R.id.VlblC121d);
             rdogrpC121d = (RadioGroup) findViewById(R.id.rdogrpC121d);
 
@@ -1271,7 +1272,7 @@ public class FdHabit extends Activity {
             rdoC121d2 = (RadioButton) findViewById(R.id.rdoC121d2);
             rdoC121d3 = (RadioButton) findViewById(R.id.rdoC121d3);
             secC121e = (LinearLayout) findViewById(R.id.secC121e);
-            lineC121e = (View) findViewById(R.id.lineC121e);
+            lineC121e = findViewById(R.id.lineC121e);
             VlblC121e = (TextView) findViewById(R.id.VlblC121e);
             rdogrpC121e = (RadioGroup) findViewById(R.id.rdogrpC121e);
 
@@ -1279,7 +1280,7 @@ public class FdHabit extends Activity {
             rdoC121e2 = (RadioButton) findViewById(R.id.rdoC121e2);
             rdoC121e3 = (RadioButton) findViewById(R.id.rdoC121e3);
             secC121f = (LinearLayout) findViewById(R.id.secC121f);
-            lineC121f = (View) findViewById(R.id.lineC121f);
+            lineC121f = findViewById(R.id.lineC121f);
             VlblC121f = (TextView) findViewById(R.id.VlblC121f);
             rdogrpC121f = (RadioGroup) findViewById(R.id.rdogrpC121f);
 
@@ -1316,11 +1317,11 @@ public class FdHabit extends Activity {
                 }
             });
             secC121f1 = (LinearLayout) findViewById(R.id.secC121f1);
-            lineC121f1 = (View) findViewById(R.id.lineC121f1);
+            lineC121f1 = findViewById(R.id.lineC121f1);
             VlblC121f1 = (TextView) findViewById(R.id.VlblC121f1);
             txtC121f1 = (EditText) findViewById(R.id.txtC121f1);
             secC121g = (LinearLayout) findViewById(R.id.secC121g);
-            lineC121g = (View) findViewById(R.id.lineC121g);
+            lineC121g = findViewById(R.id.lineC121g);
             VlblC121g = (TextView) findViewById(R.id.VlblC121g);
             rdogrpC121g = (RadioGroup) findViewById(R.id.rdogrpC121g);
 
@@ -1328,7 +1329,7 @@ public class FdHabit extends Activity {
             rdoC121g2 = (RadioButton) findViewById(R.id.rdoC121g2);
             rdoC121g3 = (RadioButton) findViewById(R.id.rdoC121g3);
             secC121h = (LinearLayout) findViewById(R.id.secC121h);
-            lineC121h = (View) findViewById(R.id.lineC121h);
+            lineC121h = findViewById(R.id.lineC121h);
             VlblC121h = (TextView) findViewById(R.id.VlblC121h);
             rdogrpC121h = (RadioGroup) findViewById(R.id.rdogrpC121h);
 
@@ -1336,7 +1337,7 @@ public class FdHabit extends Activity {
             rdoC121h2 = (RadioButton) findViewById(R.id.rdoC121h2);
             rdoC121h3 = (RadioButton) findViewById(R.id.rdoC121h3);
             secC121i = (LinearLayout) findViewById(R.id.secC121i);
-            lineC121i = (View) findViewById(R.id.lineC121i);
+            lineC121i = findViewById(R.id.lineC121i);
             VlblC121i = (TextView) findViewById(R.id.VlblC121i);
             rdogrpC121i = (RadioGroup) findViewById(R.id.rdogrpC121i);
 
@@ -1373,11 +1374,11 @@ public class FdHabit extends Activity {
                 }
             });
             secC121iX = (LinearLayout) findViewById(R.id.secC121iX);
-            lineC121iX = (View) findViewById(R.id.lineC121iX);
+            lineC121iX = findViewById(R.id.lineC121iX);
             VlblC121iX = (TextView) findViewById(R.id.VlblC121iX);
             txtC121iX = (EditText) findViewById(R.id.txtC121iX);
             secC122 = (LinearLayout) findViewById(R.id.secC122);
-            lineC122 = (View) findViewById(R.id.lineC122);
+            lineC122 = findViewById(R.id.lineC122);
             VlblC122 = (TextView) findViewById(R.id.VlblC122);
             rdogrpC122 = (RadioGroup) findViewById(R.id.rdogrpC122);
 
@@ -1385,7 +1386,7 @@ public class FdHabit extends Activity {
             rdoC1222 = (RadioButton) findViewById(R.id.rdoC1222);
             rdoC1223 = (RadioButton) findViewById(R.id.rdoC1223);
             secC123 = (LinearLayout) findViewById(R.id.secC123);
-            lineC123 = (View) findViewById(R.id.lineC123);
+            lineC123 = findViewById(R.id.lineC123);
             VlblC123 = (TextView) findViewById(R.id.VlblC123);
             rdogrpC123 = (RadioGroup) findViewById(R.id.rdogrpC123);
 
@@ -1393,7 +1394,7 @@ public class FdHabit extends Activity {
             rdoC1232 = (RadioButton) findViewById(R.id.rdoC1232);
             rdoC1233 = (RadioButton) findViewById(R.id.rdoC1233);
             secC124 = (LinearLayout) findViewById(R.id.secC124);
-            lineC124 = (View) findViewById(R.id.lineC124);
+            lineC124 = findViewById(R.id.lineC124);
             VlblC124 = (TextView) findViewById(R.id.VlblC124);
             rdogrpC124 = (RadioGroup) findViewById(R.id.rdogrpC124);
 
@@ -1758,7 +1759,7 @@ public class FdHabit extends Activity {
                 }
             });
             secC125 = (LinearLayout) findViewById(R.id.secC125);
-            lineC125 = (View) findViewById(R.id.lineC125);
+            lineC125 = findViewById(R.id.lineC125);
             VlblC125 = (TextView) findViewById(R.id.VlblC125);
             txtC125 = (EditText) findViewById(R.id.txtC125);
             seclblC126 = (LinearLayout) findViewById(R.id.seclblC126);
@@ -1767,7 +1768,7 @@ public class FdHabit extends Activity {
             seclblC126a = (LinearLayout) findViewById(R.id.seclblC126a);
             seclblC126a.setVisibility(View.GONE);
             secC126a = (LinearLayout) findViewById(R.id.secC126a);
-            lineC126a = (View) findViewById(R.id.lineC126a);
+            lineC126a = findViewById(R.id.lineC126a);
             VlblC126a = (TextView) findViewById(R.id.VlblC126a);
             rdogrpC126a = (RadioGroup) findViewById(R.id.rdogrpC126a);
 
@@ -1775,7 +1776,7 @@ public class FdHabit extends Activity {
             rdoC126a2 = (RadioButton) findViewById(R.id.rdoC126a2);
             rdoC126a3 = (RadioButton) findViewById(R.id.rdoC126a3);
             secC126b = (LinearLayout) findViewById(R.id.secC126b);
-            lineC126b = (View) findViewById(R.id.lineC126b);
+            lineC126b = findViewById(R.id.lineC126b);
             VlblC126b = (TextView) findViewById(R.id.VlblC126b);
             rdogrpC126b = (RadioGroup) findViewById(R.id.rdogrpC126b);
 
@@ -1783,7 +1784,7 @@ public class FdHabit extends Activity {
             rdoC126b2 = (RadioButton) findViewById(R.id.rdoC126b2);
             rdoC126b3 = (RadioButton) findViewById(R.id.rdoC126b3);
             secC126c = (LinearLayout) findViewById(R.id.secC126c);
-            lineC126c = (View) findViewById(R.id.lineC126c);
+            lineC126c = findViewById(R.id.lineC126c);
             VlblC126c = (TextView) findViewById(R.id.VlblC126c);
             rdogrpC126c = (RadioGroup) findViewById(R.id.rdogrpC126c);
 
@@ -1791,7 +1792,7 @@ public class FdHabit extends Activity {
             rdoC126c2 = (RadioButton) findViewById(R.id.rdoC126c2);
             rdoC126c3 = (RadioButton) findViewById(R.id.rdoC126c3);
             secC126d = (LinearLayout) findViewById(R.id.secC126d);
-            lineC126d = (View) findViewById(R.id.lineC126d);
+            lineC126d = findViewById(R.id.lineC126d);
             VlblC126d = (TextView) findViewById(R.id.VlblC126d);
             rdogrpC126d = (RadioGroup) findViewById(R.id.rdogrpC126d);
 
@@ -1799,7 +1800,7 @@ public class FdHabit extends Activity {
             rdoC126d2 = (RadioButton) findViewById(R.id.rdoC126d2);
             rdoC126d3 = (RadioButton) findViewById(R.id.rdoC126d3);
             secC126e = (LinearLayout) findViewById(R.id.secC126e);
-            lineC126e = (View) findViewById(R.id.lineC126e);
+            lineC126e = findViewById(R.id.lineC126e);
             VlblC126e = (TextView) findViewById(R.id.VlblC126e);
             rdogrpC126e = (RadioGroup) findViewById(R.id.rdogrpC126e);
 
@@ -1807,7 +1808,7 @@ public class FdHabit extends Activity {
             rdoC126e2 = (RadioButton) findViewById(R.id.rdoC126e2);
             rdoC126e3 = (RadioButton) findViewById(R.id.rdoC126e3);
             secC126f = (LinearLayout) findViewById(R.id.secC126f);
-            lineC126f = (View) findViewById(R.id.lineC126f);
+            lineC126f = findViewById(R.id.lineC126f);
             VlblC126f = (TextView) findViewById(R.id.VlblC126f);
             rdogrpC126f = (RadioGroup) findViewById(R.id.rdogrpC126f);
 
@@ -1815,7 +1816,7 @@ public class FdHabit extends Activity {
             rdoC126f2 = (RadioButton) findViewById(R.id.rdoC126f2);
             rdoC126f3 = (RadioButton) findViewById(R.id.rdoC126f3);
             secC126g = (LinearLayout) findViewById(R.id.secC126g);
-            lineC126g = (View) findViewById(R.id.lineC126g);
+            lineC126g = findViewById(R.id.lineC126g);
             VlblC126g = (TextView) findViewById(R.id.VlblC126g);
             rdogrpC126g = (RadioGroup) findViewById(R.id.rdogrpC126g);
 
@@ -1823,7 +1824,7 @@ public class FdHabit extends Activity {
             rdoC126g2 = (RadioButton) findViewById(R.id.rdoC126g2);
             rdoC126g3 = (RadioButton) findViewById(R.id.rdoC126g3);
             secC126h = (LinearLayout) findViewById(R.id.secC126h);
-            lineC126h = (View) findViewById(R.id.lineC126h);
+            lineC126h = findViewById(R.id.lineC126h);
             VlblC126h = (TextView) findViewById(R.id.VlblC126h);
             rdogrpC126h = (RadioGroup) findViewById(R.id.rdogrpC126h);
 
@@ -1831,7 +1832,7 @@ public class FdHabit extends Activity {
             rdoC126h2 = (RadioButton) findViewById(R.id.rdoC126h2);
             rdoC126h3 = (RadioButton) findViewById(R.id.rdoC126h3);
             secC126i = (LinearLayout) findViewById(R.id.secC126i);
-            lineC126i = (View) findViewById(R.id.lineC126i);
+            lineC126i = findViewById(R.id.lineC126i);
             VlblC126i = (TextView) findViewById(R.id.VlblC126i);
             rdogrpC126i = (RadioGroup) findViewById(R.id.rdogrpC126i);
 
@@ -1839,7 +1840,7 @@ public class FdHabit extends Activity {
             rdoC126i2 = (RadioButton) findViewById(R.id.rdoC126i2);
             rdoC126i3 = (RadioButton) findViewById(R.id.rdoC126i3);
             secC126j = (LinearLayout) findViewById(R.id.secC126j);
-            lineC126j = (View) findViewById(R.id.lineC126j);
+            lineC126j = findViewById(R.id.lineC126j);
             VlblC126j = (TextView) findViewById(R.id.VlblC126j);
             rdogrpC126j = (RadioGroup) findViewById(R.id.rdogrpC126j);
 
@@ -1847,7 +1848,7 @@ public class FdHabit extends Activity {
             rdoC126j2 = (RadioButton) findViewById(R.id.rdoC126j2);
             rdoC126j3 = (RadioButton) findViewById(R.id.rdoC126j3);
             secC126k = (LinearLayout) findViewById(R.id.secC126k);
-            lineC126k = (View) findViewById(R.id.lineC126k);
+            lineC126k = findViewById(R.id.lineC126k);
             VlblC126k = (TextView) findViewById(R.id.VlblC126k);
             rdogrpC126k = (RadioGroup) findViewById(R.id.rdogrpC126k);
 
@@ -1855,7 +1856,7 @@ public class FdHabit extends Activity {
             rdoC126k2 = (RadioButton) findViewById(R.id.rdoC126k2);
             rdoC126k3 = (RadioButton) findViewById(R.id.rdoC126k3);
             secC126l = (LinearLayout) findViewById(R.id.secC126l);
-            lineC126l = (View) findViewById(R.id.lineC126l);
+            lineC126l = findViewById(R.id.lineC126l);
             VlblC126l = (TextView) findViewById(R.id.VlblC126l);
             rdogrpC126l = (RadioGroup) findViewById(R.id.rdogrpC126l);
 
@@ -1863,7 +1864,7 @@ public class FdHabit extends Activity {
             rdoC126l2 = (RadioButton) findViewById(R.id.rdoC126l2);
             rdoC126l3 = (RadioButton) findViewById(R.id.rdoC126l3);
             secC126m = (LinearLayout) findViewById(R.id.secC126m);
-            lineC126m = (View) findViewById(R.id.lineC126m);
+            lineC126m = findViewById(R.id.lineC126m);
             VlblC126m = (TextView) findViewById(R.id.VlblC126m);
             rdogrpC126m = (RadioGroup) findViewById(R.id.rdogrpC126m);
 
@@ -1871,7 +1872,7 @@ public class FdHabit extends Activity {
             rdoC126m2 = (RadioButton) findViewById(R.id.rdoC126m2);
             rdoC126m3 = (RadioButton) findViewById(R.id.rdoC126m3);
             secC126n = (LinearLayout) findViewById(R.id.secC126n);
-            lineC126n = (View) findViewById(R.id.lineC126n);
+            lineC126n = findViewById(R.id.lineC126n);
             VlblC126n = (TextView) findViewById(R.id.VlblC126n);
             rdogrpC126n = (RadioGroup) findViewById(R.id.rdogrpC126n);
 
@@ -1879,7 +1880,7 @@ public class FdHabit extends Activity {
             rdoC126n2 = (RadioButton) findViewById(R.id.rdoC126n2);
             rdoC126n3 = (RadioButton) findViewById(R.id.rdoC126n3);
             secC126o = (LinearLayout) findViewById(R.id.secC126o);
-            lineC126o = (View) findViewById(R.id.lineC126o);
+            lineC126o = findViewById(R.id.lineC126o);
             VlblC126o = (TextView) findViewById(R.id.VlblC126o);
             rdogrpC126o = (RadioGroup) findViewById(R.id.rdogrpC126o);
 
@@ -1887,7 +1888,7 @@ public class FdHabit extends Activity {
             rdoC126o2 = (RadioButton) findViewById(R.id.rdoC126o2);
             rdoC126o3 = (RadioButton) findViewById(R.id.rdoC126o3);
             secC126q = (LinearLayout) findViewById(R.id.secC126q);
-            lineC126q = (View) findViewById(R.id.lineC126q);
+            lineC126q = findViewById(R.id.lineC126q);
             VlblC126q = (TextView) findViewById(R.id.VlblC126q);
             rdogrpC126q = (RadioGroup) findViewById(R.id.rdogrpC126q);
 
@@ -1895,7 +1896,7 @@ public class FdHabit extends Activity {
             rdoC126q2 = (RadioButton) findViewById(R.id.rdoC126q2);
             rdoC126q3 = (RadioButton) findViewById(R.id.rdoC126q3);
             secC126r = (LinearLayout) findViewById(R.id.secC126r);
-            lineC126r = (View) findViewById(R.id.lineC126r);
+            lineC126r = findViewById(R.id.lineC126r);
             VlblC126r = (TextView) findViewById(R.id.VlblC126r);
             rdogrpC126r = (RadioGroup) findViewById(R.id.rdogrpC126r);
 
@@ -1903,7 +1904,7 @@ public class FdHabit extends Activity {
             rdoC126r2 = (RadioButton) findViewById(R.id.rdoC126r2);
             rdoC126r3 = (RadioButton) findViewById(R.id.rdoC126r3);
             secC129 = (LinearLayout) findViewById(R.id.secC129);
-            lineC129 = (View) findViewById(R.id.lineC129);
+            lineC129 = findViewById(R.id.lineC129);
             VlblC129 = (TextView) findViewById(R.id.VlblC129);
             rdogrpC129 = (RadioGroup) findViewById(R.id.rdogrpC129);
 
@@ -1911,21 +1912,21 @@ public class FdHabit extends Activity {
             rdoC1292 = (RadioButton) findViewById(R.id.rdoC1292);
             rdoC1293 = (RadioButton) findViewById(R.id.rdoC1293);
             secC130 = (LinearLayout) findViewById(R.id.secC130);
-            lineC130 = (View) findViewById(R.id.lineC130);
+            lineC130 = findViewById(R.id.lineC130);
             VlblC130 = (TextView) findViewById(R.id.VlblC130);
             rdogrpC130 = (RadioGroup) findViewById(R.id.rdogrpC130);
 
             rdoC1301 = (RadioButton) findViewById(R.id.rdoC1301);
             rdoC1302 = (RadioButton) findViewById(R.id.rdoC1302);
             secC131 = (LinearLayout) findViewById(R.id.secC131);
-            lineC131 = (View) findViewById(R.id.lineC131);
+            lineC131 = findViewById(R.id.lineC131);
             VlblC131 = (TextView) findViewById(R.id.VlblC131);
             rdogrpC131 = (RadioGroup) findViewById(R.id.rdogrpC131);
 
             rdoC1311 = (RadioButton) findViewById(R.id.rdoC1311);
             rdoC1312 = (RadioButton) findViewById(R.id.rdoC1312);
             secC134 = (LinearLayout) findViewById(R.id.secC134);
-            lineC134 = (View) findViewById(R.id.lineC134);
+            lineC134 = findViewById(R.id.lineC134);
             VlblC134 = (TextView) findViewById(R.id.VlblC134);
             rdogrpC134 = (RadioGroup) findViewById(R.id.rdogrpC134);
 
@@ -1982,23 +1983,23 @@ public class FdHabit extends Activity {
                 }
             });
             secC135a = (LinearLayout) findViewById(R.id.secC135a);
-            lineC135a = (View) findViewById(R.id.lineC135a);
+            lineC135a = findViewById(R.id.lineC135a);
             VlblC135a = (TextView) findViewById(R.id.VlblC135a);
             chkC135a = (CheckBox) findViewById(R.id.chkC135a);
             secC135b = (LinearLayout) findViewById(R.id.secC135b);
-            lineC135b = (View) findViewById(R.id.lineC135b);
+            lineC135b = findViewById(R.id.lineC135b);
             VlblC135b = (TextView) findViewById(R.id.VlblC135b);
             chkC135b = (CheckBox) findViewById(R.id.chkC135b);
             secC135c = (LinearLayout) findViewById(R.id.secC135c);
-            lineC135c = (View) findViewById(R.id.lineC135c);
+            lineC135c = findViewById(R.id.lineC135c);
             VlblC135c = (TextView) findViewById(R.id.VlblC135c);
             chkC135c = (CheckBox) findViewById(R.id.chkC135c);
             secC135d = (LinearLayout) findViewById(R.id.secC135d);
-            lineC135d = (View) findViewById(R.id.lineC135d);
+            lineC135d = findViewById(R.id.lineC135d);
             VlblC135d = (TextView) findViewById(R.id.VlblC135d);
             chkC135d = (CheckBox) findViewById(R.id.chkC135d);
             secC135e = (LinearLayout) findViewById(R.id.secC135e);
-            lineC135e = (View) findViewById(R.id.lineC135e);
+            lineC135e = findViewById(R.id.lineC135e);
             VlblC135e = (TextView) findViewById(R.id.VlblC135e);
             chkC135e = (CheckBox) findViewById(R.id.chkC135e);
             chkC135e.setOnClickListener(new View.OnClickListener() {
@@ -2017,11 +2018,11 @@ public class FdHabit extends Activity {
                 }
             });
             secC135eX = (LinearLayout) findViewById(R.id.secC135eX);
-            lineC135eX = (View) findViewById(R.id.lineC135eX);
+            lineC135eX = findViewById(R.id.lineC135eX);
             VlblC135eX = (TextView) findViewById(R.id.VlblC135eX);
             txtC135eX = (EditText) findViewById(R.id.txtC135eX);
             secC136 = (LinearLayout) findViewById(R.id.secC136);
-            lineC136 = (View) findViewById(R.id.lineC136);
+            lineC136 = findViewById(R.id.lineC136);
             VlblC136 = (TextView) findViewById(R.id.VlblC136);
             rdogrpC136 = (RadioGroup) findViewById(R.id.rdogrpC136);
 
@@ -2167,55 +2168,55 @@ public class FdHabit extends Activity {
             seclblC137 = (LinearLayout) findViewById(R.id.seclblC137);
             seclblC137.setVisibility(View.GONE);
             secC137a = (LinearLayout) findViewById(R.id.secC137a);
-            lineC137a = (View) findViewById(R.id.lineC137a);
+            lineC137a = findViewById(R.id.lineC137a);
             VlblC137a = (TextView) findViewById(R.id.VlblC137a);
             chkC137a = (CheckBox) findViewById(R.id.chkC137a);
             secC137b = (LinearLayout) findViewById(R.id.secC137b);
-            lineC137b = (View) findViewById(R.id.lineC137b);
+            lineC137b = findViewById(R.id.lineC137b);
             VlblC137b = (TextView) findViewById(R.id.VlblC137b);
             chkC137b = (CheckBox) findViewById(R.id.chkC137b);
             secC137c = (LinearLayout) findViewById(R.id.secC137c);
-            lineC137c = (View) findViewById(R.id.lineC137c);
+            lineC137c = findViewById(R.id.lineC137c);
             VlblC137c = (TextView) findViewById(R.id.VlblC137c);
             chkC137c = (CheckBox) findViewById(R.id.chkC137c);
             secC137d = (LinearLayout) findViewById(R.id.secC137d);
-            lineC137d = (View) findViewById(R.id.lineC137d);
+            lineC137d = findViewById(R.id.lineC137d);
             VlblC137d = (TextView) findViewById(R.id.VlblC137d);
             chkC137d = (CheckBox) findViewById(R.id.chkC137d);
             secC137e = (LinearLayout) findViewById(R.id.secC137e);
-            lineC137e = (View) findViewById(R.id.lineC137e);
+            lineC137e = findViewById(R.id.lineC137e);
             VlblC137e = (TextView) findViewById(R.id.VlblC137e);
             chkC137e = (CheckBox) findViewById(R.id.chkC137e);
             secC137f = (LinearLayout) findViewById(R.id.secC137f);
-            lineC137f = (View) findViewById(R.id.lineC137f);
+            lineC137f = findViewById(R.id.lineC137f);
             VlblC137f = (TextView) findViewById(R.id.VlblC137f);
             chkC137f = (CheckBox) findViewById(R.id.chkC137f);
             secC137g = (LinearLayout) findViewById(R.id.secC137g);
-            lineC137g = (View) findViewById(R.id.lineC137g);
+            lineC137g = findViewById(R.id.lineC137g);
             VlblC137g = (TextView) findViewById(R.id.VlblC137g);
             chkC137g = (CheckBox) findViewById(R.id.chkC137g);
             secC137h = (LinearLayout) findViewById(R.id.secC137h);
-            lineC137h = (View) findViewById(R.id.lineC137h);
+            lineC137h = findViewById(R.id.lineC137h);
             VlblC137h = (TextView) findViewById(R.id.VlblC137h);
             chkC137h = (CheckBox) findViewById(R.id.chkC137h);
             secC137i = (LinearLayout) findViewById(R.id.secC137i);
-            lineC137i = (View) findViewById(R.id.lineC137i);
+            lineC137i = findViewById(R.id.lineC137i);
             VlblC137i = (TextView) findViewById(R.id.VlblC137i);
             chkC137i = (CheckBox) findViewById(R.id.chkC137i);
             secC137j = (LinearLayout) findViewById(R.id.secC137j);
-            lineC137j = (View) findViewById(R.id.lineC137j);
+            lineC137j = findViewById(R.id.lineC137j);
             VlblC137j = (TextView) findViewById(R.id.VlblC137j);
             chkC137j = (CheckBox) findViewById(R.id.chkC137j);
             secC137k = (LinearLayout) findViewById(R.id.secC137k);
-            lineC137k = (View) findViewById(R.id.lineC137k);
+            lineC137k = findViewById(R.id.lineC137k);
             VlblC137k = (TextView) findViewById(R.id.VlblC137k);
             chkC137k = (CheckBox) findViewById(R.id.chkC137k);
             secC137l = (LinearLayout) findViewById(R.id.secC137l);
-            lineC137l = (View) findViewById(R.id.lineC137l);
+            lineC137l = findViewById(R.id.lineC137l);
             VlblC137l = (TextView) findViewById(R.id.VlblC137l);
             chkC137l = (CheckBox) findViewById(R.id.chkC137l);
             secC137m = (LinearLayout) findViewById(R.id.secC137m);
-            lineC137m = (View) findViewById(R.id.lineC137m);
+            lineC137m = findViewById(R.id.lineC137m);
             VlblC137m = (TextView) findViewById(R.id.VlblC137m);
             chkC137m = (CheckBox) findViewById(R.id.chkC137m);
             chkC137m.setOnClickListener(new View.OnClickListener() {
@@ -2234,18 +2235,18 @@ public class FdHabit extends Activity {
                 }
             });
             secC137mX = (LinearLayout) findViewById(R.id.secC137mX);
-            lineC137mX = (View) findViewById(R.id.lineC137mX);
+            lineC137mX = findViewById(R.id.lineC137mX);
             VlblC137mX = (TextView) findViewById(R.id.VlblC137mX);
             txtC137mX = (EditText) findViewById(R.id.txtC137mX);
             secC138 = (LinearLayout) findViewById(R.id.secC138);
-            lineC138 = (View) findViewById(R.id.lineC138);
+            lineC138 = findViewById(R.id.lineC138);
             VlblC138 = (TextView) findViewById(R.id.VlblC138);
             rdogrpC138 = (RadioGroup) findViewById(R.id.rdogrpC138);
 
             rdoC1381 = (RadioButton) findViewById(R.id.rdoC1381);
             rdoC1382 = (RadioButton) findViewById(R.id.rdoC1382);
             secC139 = (LinearLayout) findViewById(R.id.secC139);
-            lineC139 = (View) findViewById(R.id.lineC139);
+            lineC139 = findViewById(R.id.lineC139);
             VlblC139 = (TextView) findViewById(R.id.VlblC139);
             rdogrpC139 = (RadioGroup) findViewById(R.id.rdogrpC139);
 
@@ -2386,7 +2387,7 @@ public class FdHabit extends Activity {
                 }
             });
             secBCG1 = (LinearLayout) findViewById(R.id.secBCG1);
-            lineBCG1 = (View) findViewById(R.id.lineBCG1);
+            lineBCG1 = findViewById(R.id.lineBCG1);
             VlblBCG1 = (TextView) findViewById(R.id.VlblBCG1);
             rdogrpBCG1 = (RadioGroup) findViewById(R.id.rdogrpBCG1);
 
@@ -2394,7 +2395,7 @@ public class FdHabit extends Activity {
             rdoBCG12 = (RadioButton) findViewById(R.id.rdoBCG12);
             rdoBCG13 = (RadioButton) findViewById(R.id.rdoBCG13);
             secBCG2 = (LinearLayout) findViewById(R.id.secBCG2);
-            lineBCG2 = (View) findViewById(R.id.lineBCG2);
+            lineBCG2 = findViewById(R.id.lineBCG2);
             VlblBCG2 = (TextView) findViewById(R.id.VlblBCG2);
             rdogrpBCG2 = (RadioGroup) findViewById(R.id.rdogrpBCG2);
 
@@ -2402,7 +2403,7 @@ public class FdHabit extends Activity {
             rdoBCG22 = (RadioButton) findViewById(R.id.rdoBCG22);
             rdoBCG23 = (RadioButton) findViewById(R.id.rdoBCG23);
             secPenta1 = (LinearLayout) findViewById(R.id.secPenta1);
-            linePenta1 = (View) findViewById(R.id.linePenta1);
+            linePenta1 = findViewById(R.id.linePenta1);
             VlblPenta1 = (TextView) findViewById(R.id.VlblPenta1);
             rdogrpPenta1 = (RadioGroup) findViewById(R.id.rdogrpPenta1);
 
@@ -2410,7 +2411,7 @@ public class FdHabit extends Activity {
             rdoPenta12 = (RadioButton) findViewById(R.id.rdoPenta12);
             rdoPenta13 = (RadioButton) findViewById(R.id.rdoPenta13);
             secPenta2 = (LinearLayout) findViewById(R.id.secPenta2);
-            linePenta2 = (View) findViewById(R.id.linePenta2);
+            linePenta2 = findViewById(R.id.linePenta2);
             VlblPenta2 = (TextView) findViewById(R.id.VlblPenta2);
             rdogrpPenta2 = (RadioGroup) findViewById(R.id.rdogrpPenta2);
 
@@ -2418,7 +2419,7 @@ public class FdHabit extends Activity {
             rdoPenta22 = (RadioButton) findViewById(R.id.rdoPenta22);
             rdoPenta23 = (RadioButton) findViewById(R.id.rdoPenta23);
             secPenta3 = (LinearLayout) findViewById(R.id.secPenta3);
-            linePenta3 = (View) findViewById(R.id.linePenta3);
+            linePenta3 = findViewById(R.id.linePenta3);
             VlblPenta3 = (TextView) findViewById(R.id.VlblPenta3);
             rdogrpPenta3 = (RadioGroup) findViewById(R.id.rdogrpPenta3);
 
@@ -2426,7 +2427,7 @@ public class FdHabit extends Activity {
             rdoPenta32 = (RadioButton) findViewById(R.id.rdoPenta32);
             rdoPenta33 = (RadioButton) findViewById(R.id.rdoPenta33);
             secOPV1 = (LinearLayout) findViewById(R.id.secOPV1);
-            lineOPV1 = (View) findViewById(R.id.lineOPV1);
+            lineOPV1 = findViewById(R.id.lineOPV1);
             VlblOPV1 = (TextView) findViewById(R.id.VlblOPV1);
             rdogrpOPV1 = (RadioGroup) findViewById(R.id.rdogrpOPV1);
 
@@ -2434,7 +2435,7 @@ public class FdHabit extends Activity {
             rdoOPV12 = (RadioButton) findViewById(R.id.rdoOPV12);
             rdoOPV13 = (RadioButton) findViewById(R.id.rdoOPV13);
             secOPV2 = (LinearLayout) findViewById(R.id.secOPV2);
-            lineOPV2 = (View) findViewById(R.id.lineOPV2);
+            lineOPV2 = findViewById(R.id.lineOPV2);
             VlblOPV2 = (TextView) findViewById(R.id.VlblOPV2);
             rdogrpOPV2 = (RadioGroup) findViewById(R.id.rdogrpOPV2);
 
@@ -2442,7 +2443,7 @@ public class FdHabit extends Activity {
             rdoOPV22 = (RadioButton) findViewById(R.id.rdoOPV22);
             rdoOPV23 = (RadioButton) findViewById(R.id.rdoOPV23);
             secOPV3 = (LinearLayout) findViewById(R.id.secOPV3);
-            lineOPV3 = (View) findViewById(R.id.lineOPV3);
+            lineOPV3 = findViewById(R.id.lineOPV3);
             VlblOPV3 = (TextView) findViewById(R.id.VlblOPV3);
             rdogrpOPV3 = (RadioGroup) findViewById(R.id.rdogrpOPV3);
 
@@ -2450,7 +2451,7 @@ public class FdHabit extends Activity {
             rdoOPV32 = (RadioButton) findViewById(R.id.rdoOPV32);
             rdoOPV33 = (RadioButton) findViewById(R.id.rdoOPV33);
             secPCV1 = (LinearLayout) findViewById(R.id.secPCV1);
-            linePCV1 = (View) findViewById(R.id.linePCV1);
+            linePCV1 = findViewById(R.id.linePCV1);
             VlblPCV1 = (TextView) findViewById(R.id.VlblPCV1);
             rdogrpPCV1 = (RadioGroup) findViewById(R.id.rdogrpPCV1);
 
@@ -2458,7 +2459,7 @@ public class FdHabit extends Activity {
             rdoPCV12 = (RadioButton) findViewById(R.id.rdoPCV12);
             rdoPCV13 = (RadioButton) findViewById(R.id.rdoPCV13);
             secPCV2 = (LinearLayout) findViewById(R.id.secPCV2);
-            linePCV2 = (View) findViewById(R.id.linePCV2);
+            linePCV2 = findViewById(R.id.linePCV2);
             VlblPCV2 = (TextView) findViewById(R.id.VlblPCV2);
             rdogrpPCV2 = (RadioGroup) findViewById(R.id.rdogrpPCV2);
 
@@ -2466,7 +2467,7 @@ public class FdHabit extends Activity {
             rdoPCV22 = (RadioButton) findViewById(R.id.rdoPCV22);
             rdoPCV23 = (RadioButton) findViewById(R.id.rdoPCV23);
             secPCV3 = (LinearLayout) findViewById(R.id.secPCV3);
-            linePCV3 = (View) findViewById(R.id.linePCV3);
+            linePCV3 = findViewById(R.id.linePCV3);
             VlblPCV3 = (TextView) findViewById(R.id.VlblPCV3);
             rdogrpPCV3 = (RadioGroup) findViewById(R.id.rdogrpPCV3);
 
@@ -2474,7 +2475,7 @@ public class FdHabit extends Activity {
             rdoPCV32 = (RadioButton) findViewById(R.id.rdoPCV32);
             rdoPCV33 = (RadioButton) findViewById(R.id.rdoPCV33);
             secIPV = (LinearLayout) findViewById(R.id.secIPV);
-            lineIPV = (View) findViewById(R.id.lineIPV);
+            lineIPV = findViewById(R.id.lineIPV);
             VlblIPV = (TextView) findViewById(R.id.VlblIPV);
             rdogrpIPV = (RadioGroup) findViewById(R.id.rdogrpIPV);
 
@@ -2482,7 +2483,7 @@ public class FdHabit extends Activity {
             rdoIPV2 = (RadioButton) findViewById(R.id.rdoIPV2);
             rdoIPV3 = (RadioButton) findViewById(R.id.rdoIPV3);
             secMR1 = (LinearLayout) findViewById(R.id.secMR1);
-            lineMR1 = (View) findViewById(R.id.lineMR1);
+            lineMR1 = findViewById(R.id.lineMR1);
             VlblMR1 = (TextView) findViewById(R.id.VlblMR1);
             rdogrpMR1 = (RadioGroup) findViewById(R.id.rdogrpMR1);
 
@@ -2490,7 +2491,7 @@ public class FdHabit extends Activity {
             rdoMR12 = (RadioButton) findViewById(R.id.rdoMR12);
             rdoMR13 = (RadioButton) findViewById(R.id.rdoMR13);
             secMR2 = (LinearLayout) findViewById(R.id.secMR2);
-            lineMR2 = (View) findViewById(R.id.lineMR2);
+            lineMR2 = findViewById(R.id.lineMR2);
             VlblMR2 = (TextView) findViewById(R.id.VlblMR2);
             rdogrpMR2 = (RadioGroup) findViewById(R.id.rdogrpMR2);
 
@@ -2498,7 +2499,7 @@ public class FdHabit extends Activity {
             rdoMR22 = (RadioButton) findViewById(R.id.rdoMR22);
             rdoMR23 = (RadioButton) findViewById(R.id.rdoMR23);
             secC140 = (LinearLayout) findViewById(R.id.secC140);
-            lineC140 = (View) findViewById(R.id.lineC140);
+            lineC140 = findViewById(R.id.lineC140);
             VlblC140 = (TextView) findViewById(R.id.VlblC140);
             rdogrpC140 = (RadioGroup) findViewById(R.id.rdogrpC140);
 
@@ -2546,7 +2547,7 @@ public class FdHabit extends Activity {
                 }
             });
             secC141 = (LinearLayout) findViewById(R.id.secC141);
-            lineC141 = (View) findViewById(R.id.lineC141);
+            lineC141 = findViewById(R.id.lineC141);
             VlblC141 = (TextView) findViewById(R.id.VlblC141);
             spnC141 = (Spinner) findViewById(R.id.spnC141);
             List<String> listC141 = new ArrayList<String>();
@@ -2579,38 +2580,38 @@ public class FdHabit extends Activity {
                 }
             });
             secC141X = (LinearLayout) findViewById(R.id.secC141X);
-            lineC141X = (View) findViewById(R.id.lineC141X);
+            lineC141X = findViewById(R.id.lineC141X);
             VlblC141X = (TextView) findViewById(R.id.VlblC141X);
             txtC141X = (EditText) findViewById(R.id.txtC141X);
             secC141X.setVisibility(View.GONE);
             lineC141X.setVisibility(View.GONE);
             secC142 = (LinearLayout) findViewById(R.id.secC142);
             secC142a = (LinearLayout) findViewById(R.id.secC142a);
-            lineC142a = (View) findViewById(R.id.lineC142a);
+            lineC142a = findViewById(R.id.lineC142a);
             VlblC142a = (TextView) findViewById(R.id.VlblC142a);
             chkC142a = (CheckBox) findViewById(R.id.chkC142a);
             secC142b = (LinearLayout) findViewById(R.id.secC142b);
-            lineC142b = (View) findViewById(R.id.lineC142b);
+            lineC142b = findViewById(R.id.lineC142b);
             VlblC142b = (TextView) findViewById(R.id.VlblC142b);
             chkC142b = (CheckBox) findViewById(R.id.chkC142b);
             secC142c = (LinearLayout) findViewById(R.id.secC142c);
-            lineC142c = (View) findViewById(R.id.lineC142c);
+            lineC142c = findViewById(R.id.lineC142c);
             VlblC142c = (TextView) findViewById(R.id.VlblC142c);
             chkC142c = (CheckBox) findViewById(R.id.chkC142c);
             secC142d = (LinearLayout) findViewById(R.id.secC142d);
-            lineC142d = (View) findViewById(R.id.lineC142d);
+            lineC142d = findViewById(R.id.lineC142d);
             VlblC142d = (TextView) findViewById(R.id.VlblC142d);
             chkC142d = (CheckBox) findViewById(R.id.chkC142d);
             secC142e = (LinearLayout) findViewById(R.id.secC142e);
-            lineC142e = (View) findViewById(R.id.lineC142e);
+            lineC142e = findViewById(R.id.lineC142e);
             VlblC142e = (TextView) findViewById(R.id.VlblC142e);
             chkC142e = (CheckBox) findViewById(R.id.chkC142e);
             secC142f = (LinearLayout) findViewById(R.id.secC142f);
-            lineC142f = (View) findViewById(R.id.lineC142f);
+            lineC142f = findViewById(R.id.lineC142f);
             VlblC142f = (TextView) findViewById(R.id.VlblC142f);
             chkC142f = (CheckBox) findViewById(R.id.chkC142f);
             secC142g = (LinearLayout) findViewById(R.id.secC142g);
-            lineC142g = (View) findViewById(R.id.lineC142g);
+            lineC142g = findViewById(R.id.lineC142g);
             VlblC142g = (TextView) findViewById(R.id.VlblC142g);
             chkC142g = (CheckBox) findViewById(R.id.chkC142g);
 
@@ -2907,8 +2908,40 @@ public class FdHabit extends Activity {
                     secC121iX.setVisibility(View.GONE);
                 }
             }
+            Connection C = new Connection(this);
+            String childYear = C.ReturnSingleValue("Select H26Y from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
+            String childMonth = C.ReturnSingleValue("Select H26M from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
+            CHILDAGEM = Integer.valueOf(childYear) * 12 + Integer.valueOf(childMonth);
+            
+      /*      if (CHILDAGEM < 6){
+                secC119.setVisibility(View.GONE);
+                secC120.setVisibility(View.GONE);
+                secC121a.setVisibility(View.GONE);
+                secC121b.setVisibility(View.GONE);
+                secC121c.setVisibility(View.GONE);
+                secC121d.setVisibility(View.GONE);
+                secC121e.setVisibility(View.GONE);
+                secC121f.setVisibility(View.GONE);
+                secC121g.setVisibility(View.GONE);
+                secC121h.setVisibility(View.GONE);
+                secC121i.setVisibility(View.GONE);
+                secC121a.setVisibility(View.GONE);
+                seclblC121.setVisibility(View.GONE);
+                
+                lineC119.setVisibility(View.GONE);
+                lineC120.setVisibility(View.GONE);
+                lineC121a.setVisibility(View.GONE);
+                lineC121b.setVisibility(View.GONE);
+                lineC121c.setVisibility(View.GONE);
+                lineC121d.setVisibility(View.GONE);
+                lineC121e.setVisibility(View.GONE);
+                lineC121f.setVisibility(View.GONE);
+                lineC121g.setVisibility(View.GONE);
+                lineC121h.setVisibility(View.GONE);
+                lineC121i.setVisibility(View.GONE);
+                lineC121a.setVisibility(View.GONE);
 
-
+            }*/
 
             DataSearch(RND,SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
@@ -2918,8 +2951,9 @@ public class FdHabit extends Activity {
                 }
             });
         } catch (Exception e) {
-            Connection.MessageBox(FdHabit.this, e.getMessage());
-            return;
+            throw e;
+            // Connection.MessageBox(FdHabit.this, e.getMessage());
+            // return;
         }
     }
 
@@ -3010,6 +3044,11 @@ public class FdHabit extends Activity {
                 return;
             }
 
+            if (spnC19a.getSelectedItemPosition() == 0) {
+                Connection.MessageBox(FdHabit.this, "Select anyone options from: আপনি জন্মের কতক্ষণ পর (নাম) কে বুকের দুধ পান করিয়েছেন?");
+                spnC19a.requestFocus();
+                return;
+            }
             else if ((spnC19a.getSelectedItemPosition()==3 || spnC19a.getSelectedItemPosition()==4) && txtC19b.getText().toString().length() == 0 ) {
                 Connection.MessageBox(FdHabit.this, "Required field: ঘণ্টা.");
                 txtC19b.requestFocus();
@@ -3034,14 +3073,21 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days.");
                 txtC114d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtC114d.getText().toString().length() == 0 ? "0" : txtC114d.getText().toString()) < 0 || Integer.valueOf(txtC114d.getText().toString().length() == 0 ? "29" : txtC114d.getText().toString()) > 29) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 29(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days).");
-                txtC114d.requestFocus();
-                return;
-            } else if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months.");
-                txtC114m.requestFocus();
-                return;
+            }
+            if (!txtC114d.getText().toString().equals("88")) {
+                if (Integer.valueOf(txtC114d.getText().toString().length() == 0 ? "0" : txtC114d.getText().toString()) < 0 || Integer.valueOf(txtC114d.getText().toString().length() == 0 ? "29" : txtC114d.getText().toString()) > 29) {
+                    Connection.MessageBox(FdHabit.this, "Value should be between 0 and 29(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days).");
+                    txtC114d.requestFocus();
+                    return;
+                }
+            }
+
+            if (!txtC114m.getText().toString().equals("88")) {
+                if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
+                    Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months.");
+                    txtC114m.requestFocus();
+                    return;
+                }
             } else if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "50" : txtC114m.getText().toString()) > 50) {
                 Connection.MessageBox(FdHabit.this, "Value should be between 0 and 50(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months).");
                 txtC114m.requestFocus();
@@ -3063,20 +3109,25 @@ public class FdHabit extends Activity {
                 txtC117eX.requestFocus();
                 return;
             } else if (txtC118d.getText().toString().length() == 0 & secC118d.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন? Days.");
+                Connection.MessageBox(FdHabit.this, "Required field: শিশুটিকে কত দিন যাবৎ বুকের দুধ খাইয়েছেন?");
                 txtC118d.requestFocus();
                 return;
             } else if (Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "0" : txtC118d.getText().toString()) < 0 || Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "29" : txtC118d.getText().toString()) > 29) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 29(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন? Days).");
+                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 29(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন?).");
                 txtC118d.requestFocus();
                 return;
             } else if (txtC118m.getText().toString().length() == 0 & secC118m.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন? Months.");
+                Connection.MessageBox(FdHabit.this, "Required field: শিশুটিকে কত মাস যাবৎ বুকের দুধ খাইয়েছেন?");
                 txtC118m.requestFocus();
                 return;
             } else if (Integer.valueOf(txtC118m.getText().toString().length() == 0 ? "0" : txtC118m.getText().toString()) < 0 || Integer.valueOf(txtC118m.getText().toString().length() == 0 ? "99" : txtC118m.getText().toString()) > 99) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 99(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন? Months).");
+                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 99(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন?)");
                 txtC118m.requestFocus();
+                return;
+            } else if ((Integer.valueOf(txtC118d.getText().toString()) > CHILDAGEM * 30) |
+                    Integer.valueOf(txtC118m.getText().toString()) > CHILDAGEM) {
+                Connection.MessageBox(FdHabit.this, "শিশুর বয়সের চেয়ে বুকের দুধ খাওয়ানোর সময় বেশি হবেনা");
+                txtC118d.requestFocus();
                 return;
             } else if (!rdoC1191.isChecked() & !rdoC1192.isChecked() & !rdoC1193.isChecked() & secC119.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (শিশুটি (নাম) গতকাল, দিনে অথবা রাতে বুকের দুধ খেয়েছিল?  ).");
@@ -3254,6 +3305,10 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনার সাথে কি কেউ কখনো শিশুকে কিভাবে খাওয়াবেন এই নিয়ে কথা বলেছে).");
                 rdoC1341.requestFocus();
                 return;
+            } else if (rdoC1341.isChecked() & (!chkC135a.isChecked() | !chkC135b.isChecked() | !chkC135c.isChecked() | !chkC135d.isChecked() | !chkC135e.isChecked())) {
+                Connection.MessageBox(FdHabit.this, "Select anyone option from: আপনার সাথে কি কেউ কখনো শিশুকে কিভাবে খাওয়াবেন এই নিয়ে কথা বলেছে");
+                chkC135a.requestFocus();
+                return;
             } else if (txtC135eX.getText().toString().length() == 0 & secC135eX.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন.");
                 txtC135eX.requestFocus();
@@ -3261,6 +3316,12 @@ public class FdHabit extends Activity {
             } else if (!rdoC1361.isChecked() & !rdoC1362.isChecked() & !rdoC1363.isChecked() & secC136.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কি বুকের দুধ/পরিপূরক খাবার সম্পর্কে কোনো তথ্য শুনেছেন/দেখেছেন/পড়েছেন ).");
                 rdoC1361.requestFocus();
+                return;
+            } else if (rdoC1361.isChecked() & (!chkC137a.isChecked() | !chkC137b.isChecked() | !chkC137c.isChecked() | !chkC137d.isChecked() | !chkC137e.isChecked() |
+                    !chkC137f.isChecked() | !chkC137g.isChecked() | !chkC137h.isChecked() | !chkC137i.isChecked() | !chkC137j.isChecked() | !chkC137k.isChecked() |
+                    !chkC137l.isChecked() | !chkC137m.isChecked())) {
+                Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কি বুকের দুধ/পরিপূরক খাবার সম্পর্কে কোনো তথ্য শুনেছেন/দেখেছেন/পড়েছেন ).");
+                chkC137a.requestFocus();
                 return;
             } else if (txtC137mX.getText().toString().length() == 0 & secC137mX.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন.");
@@ -3343,13 +3404,13 @@ public class FdHabit extends Activity {
                 txtC141X.requestFocus();
                 return;
             }
-            if((chkC117f.isChecked()==true) &&(chkC117a.isChecked()==true || chkC117a.isChecked()==true|| chkC117c.isChecked()==true|| chkC117d.isChecked()==true|| chkC117e.isChecked()==true))
+            if ((chkC117f.isChecked()) && (chkC117a.isChecked() || chkC117a.isChecked() || chkC117c.isChecked() || chkC117d.isChecked() || chkC117e.isChecked()))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between M24.1A to I");
                 return;
             }
 
-            if((chkC142g.isChecked()==true) &&(chkC142a.isChecked()==true || chkC142b.isChecked()==true|| chkC142c.isChecked()==true|| chkC142d.isChecked()==true|| chkC142e.isChecked()==true|| chkC142f.isChecked()==true))
+            if ((chkC142g.isChecked()) && (chkC142a.isChecked() || chkC142b.isChecked() || chkC142c.isChecked() || chkC142d.isChecked() || chkC142e.isChecked() || chkC142f.isChecked()))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between C142 A-G");
                 return;
@@ -4475,8 +4536,9 @@ public class FdHabit extends Activity {
                 }
             }
         } catch (Exception e) {
-            Connection.MessageBox(FdHabit.this, e.getMessage());
-            return;
+            throw e;
+            //Connection.MessageBox(FdHabit.this, e.getMessage());
+            //return;
         }
     }
 
