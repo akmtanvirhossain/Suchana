@@ -623,7 +623,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-
                 <Button
                     android:id="@+id/cmdMenuFinish"
                     style="@style/menuButtonStyle"

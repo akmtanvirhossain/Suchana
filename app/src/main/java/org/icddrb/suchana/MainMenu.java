@@ -38,6 +38,7 @@ public class MainMenu extends Activity {
     Button cmdMenuCareseek;
     Button cmdMenuIGA;
     Button cmdMenuStart;
+    Button cmdMenuAdolescent;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -70,6 +71,22 @@ public class MainMenu extends Activity {
                     f1.putExtras(IDbundle);
                     startActivity(f1);*/
                     startActivity(new Intent(MainMenu.this, HHIdentity_list.class));
+                }
+            });
+
+            cmdMenuAdolescent = (Button) findViewById(R.id.cmdMenuAdolescent);
+            cmdMenuAdolescent.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                  /*  Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", "1");
+                    IDbundle.putString("SuchanaID", "123456789123");
+                    finish();
+                    Intent f1;
+                    f1 = new Intent(getApplicationContext(), HHIdentity_list.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);*/
+                    startActivity(new Intent(MainMenu.this, Adolescent_list.class));
                 }
             });
 

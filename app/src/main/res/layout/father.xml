@@ -52,7 +52,7 @@
             android:layout_weight=".2"
             android:gravity="center_vertical|right"
             android:paddingLeft="10sp"
-            android:text="Identity List"
+            android:text="Adolescent"
             android:textColor="@color/pageHeading"
             android:textSize="20sp" />
 
@@ -168,13 +168,13 @@
                 <TextView
                     android:id="@+id/VlblF211"
                     android:text="পিতার লাইন নম্বর"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spnF211"
-                    android:layout_width="200sp"
+                    android:layout_width="160sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:drawSelectorOnTop="true"
@@ -215,14 +215,14 @@
 
             <LinearLayout android:id="@+id/secF213" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
                 <TextView android:id="@+id/lblF213" android:text="F213" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
-                <TextView android:id="@+id/VlblF213" android:text="কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF213" android:text="কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
                 <EditText android:id="@+id/txtF213" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
             </LinearLayout>
 
             <View android:id="@+id/lineF213" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
             <LinearLayout android:id="@+id/secF214" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
                 <TextView android:id="@+id/lblF214" android:text="F214" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
-                <TextView android:id="@+id/VlblF214" android:text="কত বয়স পর্যন্ত  শিশুকে বুকের দুধ খাওয়াতে হয়? (বছর) (জানা নেই ৮৮ )" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF214" android:text="কত বয়স পর্যন্ত  শিশুকে বুকের দুধ খাওয়াতে হয়? (বছর) (জানা নেই ৮৮ )" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
                 <EditText android:id="@+id/txtF214" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
             </LinearLayout>
             <View android:id="@+id/lineF214" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
@@ -355,7 +355,7 @@
             <View android:id="@+id/lineF216X3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
             <LinearLayout android:id="@+id/secF217" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
                 <TextView android:id="@+id/lblF217" android:text="F217" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
-                <TextView android:id="@+id/VlblF217" android:text="আপনার শিশুকে (নির্বাচিত শিশুর বয়স অনুযায়ী) দৈনিক কতবার খাওয়ানো উচিৎ (জানা নেই ৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF217" android:text="আপনার শিশুকে (নির্বাচিত শিশুর বয়স অনুযায়ী) দৈনিক কতবার খাওয়ানো উচিৎ (জানা নেই ৮৮)" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
                 <EditText android:id="@+id/txtF217" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
             </LinearLayout>
             <View android:id="@+id/lineF217" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
@@ -407,7 +407,7 @@
             <View android:id="@+id/lineF218g" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
             <LinearLayout android:id="@+id/secF219" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
                 <TextView android:id="@+id/lblF219" android:text="F219" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
-                <TextView android:id="@+id/VlblF219" android:text="গর্ভাবস্থায়  একটি মেয়ের/মহিলার অন্তত কতবার  (স্বাস্থ্য পরীক্ষা) (ANC) করা উচিৎ?  (জানা নেই ৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF219" android:text="গর্ভাবস্থায়  একটি মেয়ের/মহিলার অন্তত কতবার  (স্বাস্থ্য পরীক্ষা) (ANC) করা উচিৎ?  (জানা নেই ৮৮)" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
                 <EditText android:id="@+id/txtF219" android:maxLength="2" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
             </LinearLayout>
             <View android:id="@+id/lineF219" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
@@ -435,7 +435,7 @@
             <View android:id="@+id/lineF2111" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
             <LinearLayout android:id="@+id/secF2112" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" style="@style/rowStyle0">
                 <TextView android:id="@+id/lblF2112" android:text="F2112" android:layout_width="60sp" android:layout_height="wrap_content" android:textSize="20sp" />
-                <TextView android:id="@+id/VlblF2112" android:text="গর্ভাবস্থায় একটি মেয়ের/মহিলার কয়টি আয়রন ও ফলিক অ্যাসিড ট্যাবলেট খাওয়া উচিৎ? (জানা নেই ৮৮৮)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                <TextView android:id="@+id/VlblF2112" android:text="গর্ভাবস্থায় একটি মেয়ের/মহিলার কয়টি আয়রন ও ফলিক অ্যাসিড ট্যাবলেট খাওয়া উচিৎ? (জানা নেই ৮৮৮)" android:layout_width="400sp" android:layout_height="wrap_content" android:textSize="20sp" />
                 <EditText android:id="@+id/txtF2112" android:maxLength="3" android:layout_width="60sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
             </LinearLayout>
             <View android:id="@+id/lineF2112" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />

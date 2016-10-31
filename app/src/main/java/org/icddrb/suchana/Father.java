@@ -531,10 +531,6 @@ public class Father extends Activity {
                         secF216X3.setVisibility(View.GONE);
                         lineF216X3.setVisibility(View.GONE);
                         txtF216X3.setText("");
-                        secF217.setVisibility(View.GONE);
-                        lineF217.setVisibility(View.GONE);
-                        txtF217.setText("");
-
                     } else {
                         secF216X1.setVisibility(View.VISIBLE);
                         lineF216X1.setVisibility(View.VISIBLE);
@@ -683,7 +679,7 @@ public class Father extends Activity {
             secF216X1.setVisibility(View.GONE);
             secF216X2.setVisibility(View.GONE);
             secF216X3.setVisibility(View.GONE);
-            secF217.setVisibility(View.GONE);
+            //secF217.setVisibility(View.GONE);
 
             DataSearch(RND, SUCHANAID);
 
@@ -835,7 +831,7 @@ public class Father extends Activity {
                 secF216a.requestFocus();
                 return;
             }
-            if((chkF218a.isChecked()==true || chkF218b.isChecked()==true || chkF218c.isChecked()==true  || chkF218d.isChecked()==true || chkF218e.isChecked()==true || chkF218f.isChecked()==true)   && chkF218g.isChecked()==true)
+            if((chkF218a.isChecked()==true || chkF218b.isChecked()==true || chkF218c.isChecked()==true  || chkF218d.isChecked()==true || chkF218e.isChecked()==true || chkF218f.isChecked()==true) && chkF218g.isChecked()==true)
             {
                 Connection.MessageBox(Father.this, "Inconsistent value in 2.1.8 G.জানিনা");
                 return;
@@ -858,33 +854,34 @@ public class Father extends Activity {
             objSave.setF212b(txtF212b.getText().toString());
             objSave.setF213(txtF213.getText().toString());
             objSave.setF214(txtF214.getText().toString());
-            objSave.setF215a((chkF215a.isChecked() ? "1" : "2"));
-            objSave.setF215b((chkF215b.isChecked() ? "1" : "2"));
-            objSave.setF215c((chkF215c.isChecked() ? "1" : "2"));
-            objSave.setF215d((chkF215d.isChecked() ? "1" : "2"));
-            objSave.setF215e((chkF215e.isChecked() ? "1" : "2"));
-            objSave.setF215f((chkF215f.isChecked() ? "1" : "2"));
-            objSave.setF215g((chkF215g.isChecked() ? "1" : "2"));
-            objSave.setF215h((chkF215h.isChecked() ? "1" : "2"));
-            objSave.setF215i((chkF215i.isChecked() ? "1" : "2"));
-            objSave.setF215j((chkF215j.isChecked() ? "1" : "2"));
-            objSave.setF216a((chkF216a.isChecked() ? "1" : "2"));
-            objSave.setF216b((chkF216b.isChecked() ? "1" : "2"));
-            objSave.setF216c((chkF216c.isChecked() ? "1" : "2"));
-            objSave.setF216d((chkF216d.isChecked() ? "1" : "2"));
-            objSave.setF216e((chkF216e.isChecked() ? "1" : "2"));
-            objSave.setF216x((chkF216x.isChecked() ? "1" : "2"));
+            objSave.setF215a((chkF215a.isChecked() ? "1" :(chkF215a.isShown()? "2":"")));
+            objSave.setF215b((chkF215b.isChecked() ? "1" :(chkF215b.isShown()? "2":"")));
+            objSave.setF215c((chkF215c.isChecked() ? "1" :(chkF215c.isShown()? "2":"")));
+            objSave.setF215d((chkF215d.isChecked() ? "1" :(chkF215d.isShown()? "2":"")));
+            objSave.setF215e((chkF215e.isChecked() ? "1" :(chkF215e.isShown()? "2":"")));
+            objSave.setF215f((chkF215f.isChecked() ? "1" :(chkF215f.isShown()? "2":"")));
+            objSave.setF215g((chkF215g.isChecked() ? "1" :(chkF215g.isShown()? "2":"")));
+            objSave.setF215h((chkF215h.isChecked() ? "1" :(chkF215h.isShown()? "2":"")));
+            objSave.setF215i((chkF215i.isChecked() ? "1" :(chkF215i.isShown()? "2":"")));
+            objSave.setF215j((chkF215j.isChecked() ? "1" :(chkF215j.isShown()? "2":"")));
+
+            objSave.setF216a((chkF216a.isChecked() ? "1" :(chkF216a.isShown()? "2":"")));
+            objSave.setF216b((chkF216b.isChecked() ? "1" :(chkF216b.isShown()? "2":"")));
+            objSave.setF216c((chkF216c.isChecked() ? "1" :(chkF216c.isShown()? "2":"")));
+            objSave.setF216d((chkF216d.isChecked() ? "1" :(chkF216d.isShown()? "2":"")));
+            objSave.setF216e((chkF216e.isChecked() ? "1" :(chkF216e.isShown()? "2":"")));
+            objSave.setF216x((chkF216x.isChecked() ? "1" :(chkF216x.isShown()? "2":"")));
             objSave.setF216X1(txtF216X1.getText().toString());
             objSave.setF216X2(txtF216X2.getText().toString());
             objSave.setF216X3(txtF216X3.getText().toString());
             objSave.setF217(txtF217.getText().toString());
-            objSave.setF218a((chkF218a.isChecked() ? "1" : "2"));
-            objSave.setF218b((chkF218b.isChecked() ? "1" : "2"));
-            objSave.setF218c((chkF218c.isChecked() ? "1" : "2"));
-            objSave.setF218d((chkF218d.isChecked() ? "1" : "2"));
-            objSave.setF218e((chkF218e.isChecked() ? "1" : "2"));
-            objSave.setF218f((chkF218f.isChecked() ? "1" : "2"));
-            objSave.setF218g((chkF218g.isChecked() ? "1" : "2"));
+            objSave.setF218a((chkF218a.isChecked() ? "1" :(chkF218a.isShown()? "2":"")));
+            objSave.setF218b((chkF218b.isChecked() ? "1" :(chkF218b.isShown()? "2":"")));
+            objSave.setF218c((chkF218c.isChecked() ? "1" :(chkF218c.isShown()? "2":"")));
+            objSave.setF218d((chkF218d.isChecked() ? "1" :(chkF218d.isShown()? "2":"")));
+            objSave.setF218e((chkF218e.isChecked() ? "1" :(chkF218e.isShown()? "2":"")));
+            objSave.setF218f((chkF218f.isChecked() ? "1" :(chkF218f.isShown()? "2":"")));
+            objSave.setF218g((chkF218g.isChecked() ? "1" :(chkF218g.isShown()? "2":"")));
             objSave.setF219(txtF219.getText().toString());
             String[] d_rdogrpF2110 = new String[]{"1", "2", "3"};
             objSave.setF2110("");
