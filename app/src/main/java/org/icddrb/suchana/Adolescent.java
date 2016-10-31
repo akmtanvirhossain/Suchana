@@ -2881,6 +2881,7 @@ public class Adolescent extends Activity {
                         rb.setChecked(true);
                     }
                 }
+
                 txtQ12Y.setText(item.getQ12Y());
                 txtQ12M.setText(item.getQ12M());
                 spnQ13.setSelection(Global.SpinnerItemPositionAnyLength(spnQ13, item.getQ13()));
