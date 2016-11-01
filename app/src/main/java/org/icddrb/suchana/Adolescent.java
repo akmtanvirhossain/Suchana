@@ -2311,6 +2311,16 @@ public class Adolescent extends Activity {
                 spnQ14.requestFocus();
                 return;
             }
+            else if (spnQ13.getSelectedItemPosition() == 1 && spnQ14.getSelectedItemPosition() == 12) {
+                Connection.MessageBox(Adolescent.this, "Q13- সাক্ষর জ্ঞ্যান এবং Q14-সর্বোচ্চ ক্লাস পাস তথ্য সামঞ্জস্যপূর্ণ নয়");
+                spnQ14.requestFocus();
+                return;
+            }
+            else if (spnQ13.getSelectedItemPosition() == 1 && spnQ14.getSelectedItemPosition() == 14) {
+                Connection.MessageBox(Adolescent.this, "Q13- সাক্ষর জ্ঞ্যান এবং Q14-সর্বোচ্চ ক্লাস পাস তথ্য সামঞ্জস্যপূর্ণ নয়");
+                spnQ14.requestFocus();
+                return;
+            }
             else if(txtQ14X.getText().toString().length()==0 & secQ14X.isShown())
             {
                 Connection.MessageBox(Adolescent.this, "Required field:Q14 অন্যান্য উল্লেখ করুন.");
