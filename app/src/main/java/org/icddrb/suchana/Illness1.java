@@ -272,6 +272,8 @@ public class Illness1 extends Activity {
                         secSlNo.setVisibility(View.GONE);
                         lineSlNo.setVisibility(View.GONE);
                         //txtSlNo.setText("");
+                        secMSlNo.setVisibility(View.GONE);
+                        spnMSlNo.setSelection(0);
                         secH171a.setVisibility(View.GONE);
                         lineH171a.setVisibility(View.GONE);
                         spnH171a.setSelection(0);
@@ -310,6 +312,7 @@ public class Illness1 extends Activity {
                     } else {
                         secSlNo.setVisibility(View.VISIBLE);
                         lineSlNo.setVisibility(View.VISIBLE);
+                        secMSlNo.setVisibility(View.VISIBLE);
                         secH171a.setVisibility(View.VISIBLE);
                         lineH171a.setVisibility(View.VISIBLE);
                        // secH171aX.setVisibility(View.VISIBLE);

@@ -118,12 +118,12 @@ public class Agriculture extends Activity {
     View lineH152f;
     TextView VlblH152f;
     EditText txtH152f;
+
     LinearLayout seclbH152g;
     LinearLayout secH152g;
     View lineH152g;
     TextView VlblH152g;
     EditText txtH152g;
-
     LinearLayout secH152g2;
     View lineH152g2;
     TextView VlblH152g2;
@@ -142,6 +142,7 @@ public class Agriculture extends Activity {
     RadioGroup rdogrpH152h2;
     RadioButton rdoH152h21;
     RadioButton rdoH152h22;
+
     LinearLayout seclbH15i;
     LinearLayout secH152i1;
     View lineH152i1;
@@ -870,19 +871,19 @@ public class Agriculture extends Activity {
                 txtH152c.requestFocus();
                 return;
             } else if (txtH152d1.getText().toString().length() == 0 & secH152d1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152D পরিমান");
                 txtH152d1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "1" : txtH152d1.getText().toString()) < 0 || Float.valueOf(txtH152d1.getText().toString().length() == 0 ? "99999" : txtH152d1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Value should be between 1 and 99999(H152D কিলো/সংখ্যা).");
                 txtH152d1.requestFocus();
                 return;
             } else if (!rdoH152d21.isChecked() & !rdoH152d22.isChecked() & secH152d2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152D কিলো/সংখ্যা).");
                 rdoH152d21.requestFocus();
                 return;
             } else if (txtH152e1.getText().toString().length() == 0 & secH152e1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152E পরিমান");
                 txtH152e1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152e1.getText().toString().length() == 0 ? "1" : txtH152e1.getText().toString()) < 0 || Float.valueOf(txtH152e1.getText().toString().length() == 0 ? "99999" : txtH152e1.getText().toString()) > 99999) {
@@ -890,7 +891,7 @@ public class Agriculture extends Activity {
                 txtH152e1.requestFocus();
                 return;
             } else if (!rdoH152e21.isChecked() & !rdoH152e22.isChecked() & secH152e2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152E কিলো/সংখ্যা).");
                 rdoH152e21.requestFocus();
                 return;
             } else if (txtH152f.getText().toString().length() == 0 & secH152f.isShown()) {
@@ -901,58 +902,57 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 9999999(বিক্রি করে কত টাকা পেয়েছিলেন).");
                 txtH152f.requestFocus();
                 return;
-            } else if (txtH152g.getText().toString().length() == 0 & secH152g.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো.");
-                txtH152g.requestFocus();
-                return;
-            }
-
-            else if (txtH152g.getText().toString().length() == 0 & secH152g2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+            }else if (txtH152g.getText().toString().length() == 0 & secH152g.isShown()) {
+                Connection.MessageBox(Agriculture.this, "Required field: H152G পরিমান");
                 txtH152g.requestFocus();
                 return;
             }else if (Float.valueOf(txtH152g.getText().toString().length() == 0 ? "1" : txtH152g.getText().toString()) < 0 || Float.valueOf(txtH152g.getText().toString().length() == 0 ? "99999" : txtH152g.getText().toString()) > 99999) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো).");
                 txtH152g.requestFocus();
                 return;
+            }else if (!rdoH152g21.isChecked() & !rdoH152g22.isChecked() & secH152g2.isShown()) {
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152G কিলো/সংখ্যা).");
+                rdoH152g21.requestFocus();
+                return;
             } else if (txtH152h1.getText().toString().length() == 0 & secH152h1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152H পরিমান");
                 txtH152h1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152h1.getText().toString().length() == 0 ? "1" : txtH152h1.getText().toString()) < 0 || Float.valueOf(txtH152h1.getText().toString().length() == 0 ? "99999" : txtH152h1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা)");
                 txtH152h1.requestFocus();
                 return;
             } else if (!rdoH152h21.isChecked() & !rdoH152h22.isChecked() & secH152h2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152H কিলো/সংখ্যা)");
                 rdoH152h21.requestFocus();
                 return;
+
             } else if (txtH152i1.getText().toString().length() == 0 & secH152i1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152I পরিমান");
                 txtH152i1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152i1.getText().toString().length() == 0 ? "1" : txtH152i1.getText().toString()) < 0 || Float.valueOf(txtH152i1.getText().toString().length() == 0 ? "99999" : txtH152i1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা)");
                 txtH152i1.requestFocus();
                 return;
             } else if (!rdoH152i21.isChecked() & !rdoH152i22.isChecked() & secH152i2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152I কিলো/সংখ্যা)");
                 rdoH152i21.requestFocus();
                 return;
             } else if (txtH152j1.getText().toString().length() == 0 & secH152j1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152J পরিমান");
                 txtH152j1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152j1.getText().toString().length() == 0 ? "1" : txtH152j1.getText().toString()) < 0 || Float.valueOf(txtH152j1.getText().toString().length() == 0 ? "99999" : txtH152j1.getText().toString()) > 99999) {
-                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Value should be between 0 and 99999(কিলো/সংখ্যা)");
                 txtH152j1.requestFocus();
                 return;
             } else if (!rdoH152j21.isChecked() & !rdoH152j22.isChecked() & secH152j2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152J কিলো/সংখ্যা)");
                 rdoH152j21.requestFocus();
                 return;
             } else if (txtH152k1.getText().toString().length() == 0 & secH152k1.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Required field: কিলো/সংখ্যা.");
+                Connection.MessageBox(Agriculture.this, "Required field: H152K পরিমান");
                 txtH152k1.requestFocus();
                 return;
             } else if (Float.valueOf(txtH152k1.getText().toString().length() == 0 ? "1" : txtH152k1.getText().toString()) < 0 || Float.valueOf(txtH152k1.getText().toString().length() == 0 ? "99999" : txtH152k1.getText().toString()) > 99999) {
@@ -960,7 +960,7 @@ public class Agriculture extends Activity {
                 txtH152k1.requestFocus();
                 return;
             } else if (!rdoH152k21.isChecked() & !rdoH152k22.isChecked() & secH152k2.isShown()) {
-                Connection.MessageBox(Agriculture.this, "Select anyone options from (কিলো/সংখ্যা).");
+                Connection.MessageBox(Agriculture.this, "Select anyone options from (H152K কিলো/সংখ্যা).");
                 rdoH152k21.requestFocus();
                 return;
             }
@@ -1072,7 +1072,7 @@ public class Agriculture extends Activity {
             objSave.setH152g2("");
             for (int i = 0; i < rdogrpH152g2.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpH152g2.getChildAt(i);
-                if (rb.isChecked()) objSave.setH152d2(d_rdogrpH152g2[i]);
+                if (rb.isChecked()) objSave.setH152g2(d_rdogrpH152g2[i]);
             }
 
 

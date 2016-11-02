@@ -638,9 +638,11 @@ public class Member extends Activity {
                     if (spnH29.getSelectedItem().toString().length() == 0) return;
                     String spnData = Connection.SelectedSpinnerValue(spnH29.getSelectedItem().toString(), "-");
                     if (!spnData.equalsIgnoreCase("5")) {
+                        txtH29X.setText(null);
                         secH29X.setVisibility(View.GONE);
                         lineH29X.setVisibility(View.GONE);
                     } else {
+
                         secH29X.setVisibility(View.VISIBLE);
                         lineH29X.setVisibility(View.VISIBLE);
                     }
@@ -669,6 +671,7 @@ public class Member extends Activity {
                 if (item.getH29().equals("5")) {
                     RELIGIONX = item.getH29X();
                 }
+
 
             }
 
@@ -1472,12 +1475,8 @@ public class Member extends Activity {
                 } else {
                     spnH29.setSelection(Global.SpinnerItemPositionAnyLength(spnH29, item.getH29()));
                 }
+                txtH29X.setText(item.getH29X());
 
-                if (item.getH29X().isEmpty()) {
-                    txtH29X.setText(RELIGIONX.length() == 0 ? "0" : RELIGIONX);
-                } else {
-                    txtH29X.setText(item.getH29X());
-                }
 
                 String[] d_rdogrpH210 = new String[]{"1", "2"};
                 for (int i = 0; i < d_rdogrpH210.length; i++) {

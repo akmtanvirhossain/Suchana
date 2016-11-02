@@ -870,10 +870,10 @@ public class AssetNB extends Activity {
             objSave.setH42aX(txtH42aX.getText().toString());
             objSave.setH42b(txtH42b.getText().toString());
             objSave.setH42c(txtH42c.getText().toString());
-            objSave.setH42d1((chkH42d1.isChecked() ? "1" : "2"));
-            objSave.setH42d2((chkH42d2.isChecked() ? "1" : "2"));
-            objSave.setH42d3((chkH42d3.isChecked() ? "1" : "2"));
-            objSave.setH42d4((chkH42d4.isChecked() ? "1" : "2"));
+            objSave.setH42d1((chkH42d1.isChecked() ? "1" :(chkH42d1.isShown()? "2":"")));
+            objSave.setH42d2((chkH42d2.isChecked() ? "1" :(chkH42d2.isShown()? "2":"")));
+            objSave.setH42d3((chkH42d3.isChecked() ? "1" :(chkH42d3.isShown()? "2":"")));
+            objSave.setH42d4((chkH42d4.isChecked() ? "1" :(chkH42d4.isShown()? "2":"")));
             objSave.setH42d4X(txtH42d4X.getText().toString());
             objSave.setH42d4X1(txtH42d4X1.getText().toString());
             objSave.setH42d4X2(txtH42d4X2.getText().toString());

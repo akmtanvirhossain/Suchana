@@ -217,14 +217,14 @@
                     android:id="@+id/lblMSlNo"
                     android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="M.SL"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblMSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="লাইন নম্বর#"
+                    android:text="লাইন নম্বর"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -255,14 +255,14 @@
                     android:id="@+id/lblSlNo"
                     android:layout_width="70sp"
                     android:layout_height="wrap_content"
-                    android:text="SL. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblSlNo"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="Illness No."
+                    android:text="অসুস্থতার নম্বর"
                     android:textSize="20sp" />
 
                 <EditText

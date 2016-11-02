@@ -676,10 +676,10 @@ public class HDDS extends Activity {
                 if (rb.isChecked()) objSave.setH7a(d_rdogrpH7a[i]);
             }
 
-            objSave.setH7b1((chkH7b1.isChecked() ? "1" : "2"));
-            objSave.setH7b2((chkH7b2.isChecked() ? "1" : "2"));
-            objSave.setH7b3((chkH7b3.isChecked() ? "1" : "2"));
-            objSave.setH7b4((chkH7b4.isChecked() ? "1" : "2"));
+            objSave.setH7b1((chkH7b1.isChecked() ? "1" :(chkH7b1.isShown()? "2":"")));
+            objSave.setH7b2((chkH7b2.isChecked() ? "1" :(chkH7b2.isShown()? "2":"")));
+            objSave.setH7b3((chkH7b3.isChecked() ? "1" :(chkH7b3.isShown()? "2":"")));
+            objSave.setH7b4((chkH7b4.isChecked() ? "1" :(chkH7b4.isShown()? "2":"")));
             String[] d_rdogrpH7c = new String[]{"1", "0"};
             objSave.setH7c("");
             for (int i = 0; i < rdogrpH7c.getChildCount(); i++) {

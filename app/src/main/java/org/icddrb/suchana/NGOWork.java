@@ -2847,29 +2847,29 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH162(d_rdogrpH162[i]);
             }
 
-            objSave.setH163a((chkH163a.isChecked() ? "1" : "2"));
-            objSave.setH163b((chkH163b.isChecked() ? "1" : "2"));
-            objSave.setH163c((chkH163c.isChecked() ? "1" : "2"));
-            objSave.setH163d((chkH163d.isChecked() ? "1" : "2"));
-            objSave.setH163e((chkH163e.isChecked() ? "1" : "2"));
-            objSave.setH163f((chkH163f.isChecked() ? "1" : "2"));
-            objSave.setH163g((chkH163g.isChecked() ? "1" : "2"));
-            objSave.setH163h((chkH163h.isChecked() ? "1" : "2"));
-            objSave.setH163i((chkH163i.isChecked() ? "1" : "2"));
-            objSave.setH163x((chkH163x.isChecked() ? "1" : "2"));
+            objSave.setH163a((chkH163a.isChecked() ? "1" :(chkH163a.isShown()? "2":"")));
+            objSave.setH163b((chkH163b.isChecked() ? "1" :(chkH163b.isShown()? "2":"")));
+            objSave.setH163c((chkH163c.isChecked() ? "1" :(chkH163c.isShown()? "2":"")));
+            objSave.setH163d((chkH163d.isChecked() ? "1" :(chkH163d.isShown()? "2":"")));
+            objSave.setH163e((chkH163e.isChecked() ? "1" :(chkH163e.isShown()? "2":"")));
+            objSave.setH163f((chkH163f.isChecked() ? "1" :(chkH163f.isShown()? "2":"")));
+            objSave.setH163g((chkH163g.isChecked() ? "1" :(chkH163g.isShown()? "2":"")));
+            objSave.setH163h((chkH163h.isChecked() ? "1" :(chkH163h.isShown()? "2":"")));
+            objSave.setH163i((chkH163i.isChecked() ? "1" :(chkH163i.isShown()? "2":"")));
+            objSave.setH163x((chkH163x.isChecked() ? "1" :(chkH163x.isShown()? "2":"")));
             objSave.setH163oth(txtH163oth.getText().toString());
             objSave.setH164(txtH164.getText().toString());
-            objSave.setH165a((chkH165a.isChecked() ? "1" : "2"));
-            objSave.setH165b((chkH165b.isChecked() ? "1" : "2"));
-            objSave.setH165c((chkH165c.isChecked() ? "1" : "2"));
-            objSave.setH165d((chkH165d.isChecked() ? "1" : "2"));
-            objSave.setH165e((chkH165e.isChecked() ? "1" : "2"));
-            objSave.setH165f((chkH165f.isChecked() ? "1" : "2"));
-            objSave.setH165g((chkH165g.isChecked() ? "1" : "2"));
-            objSave.setH165h((chkH165h.isChecked() ? "1" : "2"));
-            objSave.setH165x((chkH165x.isChecked() ? "1" : "2"));
+            objSave.setH165a((chkH165a.isChecked() ? "1" :(chkH165a.isShown()? "2":"")));
+            objSave.setH165b((chkH165b.isChecked() ? "1" :(chkH165b.isShown()? "2":"")));
+            objSave.setH165c((chkH165c.isChecked() ? "1" :(chkH165c.isShown()? "2":"")));
+            objSave.setH165d((chkH165d.isChecked() ? "1" :(chkH165d.isShown()? "2":"")));
+            objSave.setH165e((chkH165e.isChecked() ? "1" :(chkH165e.isShown()? "2":"")));
+            objSave.setH165f((chkH165f.isChecked() ? "1" :(chkH165f.isShown()? "2":"")));
+            objSave.setH165g((chkH165g.isChecked() ? "1" :(chkH165g.isShown()? "2":"")));
+            objSave.setH165h((chkH165h.isChecked() ? "1" :(chkH165h.isShown()? "2":"")));
+            objSave.setH165x((chkH165x.isChecked() ? "1" :(chkH165x.isShown()? "2":"")));
             objSave.setH16x1(txtH16x1.getText().toString());
-            objSave.setH165i((chkH165i.isChecked() ? "1" : "2"));
+            objSave.setH165i((chkH165i.isChecked() ? "1" :(chkH165i.isShown()? "2":"")));
             String[] d_rdogrpH166 = new String[]{"1", "0"};
             objSave.setH166("");
             for (int i = 0; i < rdogrpH166.getChildCount(); i++) {
@@ -2877,25 +2877,25 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH166(d_rdogrpH166[i]);
             }
 
-            objSave.setH167a((chkH167a.isChecked() ? "1" : "2"));
+            objSave.setH167a((chkH167a.isChecked() ? "1" :(chkH167a.isShown()? "2":"")));
             objSave.setH168a(txtH168a.getText().toString());
-            objSave.setH167b((chkH167b.isChecked() ? "1" : "2"));
+            objSave.setH167b((chkH167b.isChecked() ? "1" :(chkH167b.isShown()? "2":"")));
             objSave.setH168b(txtH168b.getText().toString());
-            objSave.setH167c((chkH167c.isChecked() ? "1" : "2"));
+            objSave.setH167c((chkH167c.isChecked() ? "1" :(chkH167c.isShown()? "2":"")));
             objSave.setH168c(txtH168c.getText().toString());
-            objSave.setH167d((chkH167d.isChecked() ? "1" : "2"));
+            objSave.setH167d((chkH167d.isChecked() ? "1" :(chkH167d.isShown()? "2":"")));
             objSave.setH168d(txtH168d.getText().toString());
-            objSave.setH167e((chkH167e.isChecked() ? "1" : "2"));
+            objSave.setH167e((chkH167e.isChecked() ? "1" :(chkH167e.isShown()? "2":"")));
             objSave.setH168e(txtH168e.getText().toString());
-            objSave.setH167f((chkH167f.isChecked() ? "1" : "2"));
+            objSave.setH167f((chkH167f.isChecked() ? "1" :(chkH167f.isShown()? "2":"")));
             objSave.setH168f(txtH168f.getText().toString());
-            objSave.setH167g((chkH167g.isChecked() ? "1" : "2"));
+            objSave.setH167g((chkH167g.isChecked() ? "1" :(chkH167g.isShown()? "2":"")));
             objSave.setH168g(txtH168g.getText().toString());
-            objSave.setH167h((chkH167h.isChecked() ? "1" : "2"));
+            objSave.setH167h((chkH167h.isChecked() ? "1" :(chkH167h.isShown()? "2":"")));
             objSave.setH168h(txtH168h.getText().toString());
-            objSave.setH167i((chkH167i.isChecked() ? "1" : "2"));
+            objSave.setH167i((chkH167i.isChecked() ? "1" :(chkH167i.isShown()? "2":"")));
             objSave.setH168i(txtH168i.getText().toString());
-            objSave.setH167x((chkH167x.isChecked() ? "1" : "2"));
+            objSave.setH167x((chkH167x.isChecked() ? "1" :(chkH167x.isShown()? "2":"")));
             objSave.setH167x1(txtH167x1.getText().toString());
             objSave.setH168x(txtH168x.getText().toString());
             String[] d_rdogrpH169 = new String[]{"1", "0"};
@@ -2913,23 +2913,23 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH1611(d_rdogrpH1611[i]);
             }
 
-            objSave.setH1612a((chkH1612a.isChecked() ? "1" : "2"));
-            objSave.setH1612b((chkH1612b.isChecked() ? "1" : "2"));
-            objSave.setH1612c((chkH1612c.isChecked() ? "1" : "2"));
-            objSave.setH1612d((chkH1612d.isChecked() ? "1" : "2"));
-            objSave.setH1612e((chkH1612e.isChecked() ? "1" : "2"));
-            objSave.setH1612f((chkH1612f.isChecked() ? "1" : "2"));
-            objSave.setH1612g((chkH1612g.isChecked() ? "1" : "2"));
-            objSave.setH1612h((chkH1612h.isChecked() ? "1" : "2"));
-            objSave.setH1612i((chkH1612i.isChecked() ? "1" : "2"));
-            objSave.setH1612j((chkH1612j.isChecked() ? "1" : "2"));
+            objSave.setH1612a((chkH1612a.isChecked() ? "1" :(chkH1612a.isShown()? "2":"")));
+            objSave.setH1612b((chkH1612b.isChecked() ? "1" :(chkH1612b.isShown()? "2":"")));
+            objSave.setH1612c((chkH1612c.isChecked() ? "1" :(chkH1612c.isShown()? "2":"")));
+            objSave.setH1612d((chkH1612d.isChecked() ? "1" :(chkH1612d.isShown()? "2":"")));
+            objSave.setH1612e((chkH1612e.isChecked() ? "1" :(chkH1612e.isShown()? "2":"")));
+            objSave.setH1612f((chkH1612f.isChecked() ? "1" :(chkH1612f.isShown()? "2":"")));
+            objSave.setH1612g((chkH1612g.isChecked() ? "1" :(chkH1612g.isShown()? "2":"")));
+            objSave.setH1612h((chkH1612h.isChecked() ? "1" :(chkH1612h.isShown()? "2":"")));
+            objSave.setH1612i((chkH1612i.isChecked() ? "1" :(chkH1612i.isShown()? "2":"")));
+            objSave.setH1612j((chkH1612j.isChecked() ? "1" :(chkH1612j.isShown()? "2":"")));
 
-            objSave.setH1612k((chkH1612k.isChecked() ? "1" : "2"));
-            objSave.setH1612l((chkH1612l.isChecked() ? "1" : "2"));
-            objSave.setH1612m((chkH1612m.isChecked() ? "1" : "2"));
-            objSave.setH1612n((chkH1612n.isChecked() ? "1" : "2"));
+            objSave.setH1612k((chkH1612k.isChecked() ? "1" :(chkH1612k.isShown()? "2":"")));
+            objSave.setH1612l((chkH1612l.isChecked() ? "1" :(chkH1612l.isShown()? "2":"")));
+            objSave.setH1612m((chkH1612m.isChecked() ? "1" :(chkH1612m.isShown()? "2":"")));
+            objSave.setH1612n((chkH1612n.isChecked() ? "1" :(chkH1612n.isShown()? "2":"")));
 
-            objSave.setH1612x((chkH1612x.isChecked() ? "1" : "2"));
+            objSave.setH1612x((chkH1612x.isChecked() ? "1" :(chkH1612x.isShown()? "2":"")));
             objSave.setH1612x1(txtH1612x1.getText().toString());
             String[] d_rdogrpH1613 = new String[]{"1", "0"};
             objSave.setH1613("");
@@ -2938,13 +2938,13 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH1613(d_rdogrpH1613[i]);
             }
 
-            objSave.setH1614a((chkH1614a.isChecked() ? "1" : "2"));
-            objSave.setH1614b((chkH1614b.isChecked() ? "1" : "2"));
-            objSave.setH1614c((chkH1614c.isChecked() ? "1" : "2"));
-            objSave.setH1614d((chkH1614d.isChecked() ? "1" : "2"));
-            objSave.setH1614e((chkH1614e.isChecked() ? "1" : "2"));
-            objSave.setH1614f((chkH1614f.isChecked() ? "1" : "2"));
-            objSave.setH1614x((chkH1614x.isChecked() ? "1" : "2"));
+            objSave.setH1614a((chkH1614a.isChecked() ? "1" :(chkH1614a.isShown()? "2":"")));
+            objSave.setH1614b((chkH1614b.isChecked() ? "1" :(chkH1614b.isShown()? "2":"")));
+            objSave.setH1614c((chkH1614c.isChecked() ? "1" :(chkH1614c.isShown()? "2":"")));
+            objSave.setH1614d((chkH1614d.isChecked() ? "1" :(chkH1614d.isShown()? "2":"")));
+            objSave.setH1614e((chkH1614e.isChecked() ? "1" :(chkH1614e.isShown()? "2":"")));
+            objSave.setH1614f((chkH1614f.isChecked() ? "1" :(chkH1614f.isShown()? "2":"")));
+            objSave.setH1614x((chkH1614x.isChecked() ? "1" :(chkH1614x.isShown()? "2":"")));
             objSave.setH1614x1(txtH1614x1.getText().toString());
             String[] d_rdogrpH1615 = new String[]{"1", "0"};
             objSave.setH1615("");
@@ -2953,16 +2953,16 @@ public class NGOWork extends Activity {
                 if (rb.isChecked()) objSave.setH1615(d_rdogrpH1615[i]);
             }
 
-            objSave.setH1616a((chkH1616a.isChecked() ? "1" : "2"));
-            objSave.setH1616b((chkH1616b.isChecked() ? "1" : "2"));
-            objSave.setH1616c((chkH1616c.isChecked() ? "1" : "2"));
-            objSave.setH1616d((chkH1616d.isChecked() ? "1" : "2"));
-            objSave.setH1616e((chkH1616e.isChecked() ? "1" : "2"));
-            objSave.setH1616f((chkH1616f.isChecked() ? "1" : "2"));
-            objSave.setH1616g((chkH1616g.isChecked() ? "1" : "2"));
-            objSave.setH1616h((chkH1616h.isChecked() ? "1" : "2"));
-            objSave.setH1616i((chkH1616i.isChecked() ? "1" : "2"));
-            objSave.setH1616x((chkH1616x.isChecked() ? "1" : "2"));
+            objSave.setH1616a((chkH1616a.isChecked() ? "1" :(chkH1616a.isShown()? "2":"")));
+            objSave.setH1616b((chkH1616b.isChecked() ? "1" :(chkH1616b.isShown()? "2":"")));
+            objSave.setH1616c((chkH1616c.isChecked() ? "1" :(chkH1616c.isShown()? "2":"")));
+            objSave.setH1616d((chkH1616d.isChecked() ? "1" :(chkH1616d.isShown()? "2":"")));
+            objSave.setH1616e((chkH1616e.isChecked() ? "1" :(chkH1616e.isShown()? "2":"")));
+            objSave.setH1616f((chkH1616f.isChecked() ? "1" :(chkH1616f.isShown()? "2":"")));
+            objSave.setH1616g((chkH1616g.isChecked() ? "1" :(chkH1616g.isShown()? "2":"")));
+            objSave.setH1616h((chkH1616h.isChecked() ? "1" :(chkH1616h.isShown()? "2":"")));
+            objSave.setH1616i((chkH1616i.isChecked() ? "1" :(chkH1616i.isShown()? "2":"")));
+            objSave.setH1616x((chkH1616x.isChecked() ? "1" :(chkH1616x.isShown()? "2":"")));
             objSave.setH1616x1(txtH1616x1.getText().toString());
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);

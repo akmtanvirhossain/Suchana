@@ -2483,7 +2483,7 @@ public class Careseek extends Activity {
                 {
                     try
                     {
-                        if(Connection.SelectedSpinnerValue(spnH188a1.getSelectedItem().toString(), "-").equals("11"))
+                        if(Connection.SelectedSpinnerValue(spnH189a1.getSelectedItem().toString(), "-").equals("11"))
                         {
                             secH189a1X.setVisibility(View.VISIBLE);
                             lineH189a1X.setVisibility(View.VISIBLE);
@@ -2535,7 +2535,7 @@ public class Careseek extends Activity {
                 {
                     try
                     {
-                        if(Connection.SelectedSpinnerValue(spnH188a2.getSelectedItem().toString(), "-").equals("11"))
+                        if(Connection.SelectedSpinnerValue(spnH189a2.getSelectedItem().toString(), "-").equals("11"))
                         {
                             secH189a2X.setVisibility(View.VISIBLE);
                             lineH189a2X.setVisibility(View.VISIBLE);
@@ -2587,7 +2587,7 @@ public class Careseek extends Activity {
                 {
                     try
                     {
-                        if(Connection.SelectedSpinnerValue(spnH188a3.getSelectedItem().toString(), "-").equals("11"))
+                        if(Connection.SelectedSpinnerValue(spnH189a3.getSelectedItem().toString(), "-").equals("11"))
                         {
                             secH189a3X.setVisibility(View.VISIBLE);
                             lineH189a3X.setVisibility(View.VISIBLE);
