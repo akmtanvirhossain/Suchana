@@ -64,8 +64,7 @@ public class HHIdentity_DataModel {
     private String _HsuName = "";
     private String _MobNo = "";
     private String _vdate = "";
-
-
+    private String _QC = "";
 
     public String getRnd() {
         return _Rnd;
@@ -122,6 +121,7 @@ public class HHIdentity_DataModel {
     public void setH11(String newValue) {
         _H11 = newValue;
     }
+
     public String getScreeningID() {
         return _ScreeningID;
     }
@@ -130,7 +130,6 @@ public class HHIdentity_DataModel {
         _ScreeningID = newValue;
     }
 
-
     public String getSuchanaID() {
         return _SuchanaID;
     }
@@ -138,7 +137,6 @@ public class HHIdentity_DataModel {
     public void setSuchanaID(String newValue) {
         _SuchanaID = newValue;
     }
-
 
     public String getAgeGroup() {
         return _AgeGroup;
@@ -372,8 +370,6 @@ public class HHIdentity_DataModel {
         _vdate = newValue;
     }
 
-
-
     public void setStartTime(String newValue) {
         _StartTime = newValue;
     }
@@ -517,6 +513,14 @@ public class HHIdentity_DataModel {
         return _villName;
     }
 
+    public String getQC() {
+        return _QC;
+    }
+
+    public void setQC(String newValue) {
+        _QC = newValue;
+    }
+
     public List<HHIdentity_DataModel> SelectAllList(Context context, String SQL) {
         Connection C = new Connection(context);
         List<HHIdentity_DataModel> data = new ArrayList<HHIdentity_DataModel>();
@@ -531,7 +535,8 @@ public class HHIdentity_DataModel {
             d._Upz = cur.getString(cur.getColumnIndex("Upz"));
             d._Un = cur.getString(cur.getColumnIndex("Un"));
             d._Vill = cur.getString(cur.getColumnIndex("Vill"));
-            d._WRHHNo = cur.getString(cur.getColumnIndex("WRHHNo"));
+            //d._WRHHNo = cur.getString(cur.getColumnIndex("WRHHNo"));
+            d._WRHHNo = cur.getString(cur.getColumnIndex("HHNo"));
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
             d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._distName = cur.getString(cur.getColumnIndex("DistName"));
@@ -544,7 +549,10 @@ public class HHIdentity_DataModel {
             d._HeadName = cur.getString(cur.getColumnIndex("HeadName"));
             d._HsuName = cur.getString(cur.getColumnIndex("HsuName"));
             d._MobNo = cur.getString(cur.getColumnIndex("MobNo"));
-            d._vdate = cur.getString(cur.getColumnIndex("VDate"));
+            //d._vdate = cur.getString(cur.getColumnIndex("VDate"));
+            d._vdate = cur.getString(cur.getColumnIndex("H17"));
+
+            d._QC = cur.getString(cur.getColumnIndex("QC"));
 
             data.add(d);
 
