@@ -115,8 +115,6 @@ public class MainMenu extends Activity {
                                         List<String> tableList = new ArrayList<String>();
 
 
-
-                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -153,9 +151,10 @@ public class MainMenu extends Activity {
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
                                         tableList.add("Father");
-                                        */
+                                        tableList.add("Adolescent");
 
-                                        tableList.add("Screening");
+
+                                        //tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);
 
                                         C.DatabaseUpload(USERID);

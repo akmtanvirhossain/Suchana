@@ -198,7 +198,7 @@
 
                 <TextView
                     android:id="@+id/VlblC11"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর লাইন নম্বর"
                     android:textSize="20sp" />
@@ -236,7 +236,7 @@
 
                 <TextView
                     android:id="@+id/VlblC12"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="মায়ের লাইন নম্বর"
                     android:textSize="20sp" />
@@ -274,7 +274,7 @@
 
                 <TextView
                     android:id="@+id/VlblC13"
-                    android:layout_width="220sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার শিশুর নাম কি?"
                     android:textSize="20sp" />
@@ -282,11 +282,11 @@
                 <EditText
                     android:id="@+id/txtC13"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
-                    android:maxLength="50"
+                    android:maxLength="20"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -312,7 +312,7 @@
 
                 <TextView
                     android:id="@+id/VlblC14"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর লিঙ্গ"
                     android:textSize="20sp" />
@@ -364,7 +364,7 @@
 
                 <TextView
                     android:id="@+id/VlblC15"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর জন্মতারিখ (দিন/মাস/বছর)"
                     android:textSize="20sp" />
@@ -403,7 +403,7 @@
 
                 <TextView
                     android:id="@+id/VlblC16"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর জন্মক্রম"
                     android:textSize="20sp" />
@@ -441,7 +441,7 @@
 
                 <TextView
                     android:id="@+id/VlblC17"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="জন্ম ওজন(জানা নেই (KG) [8888])"
                     android:textSize="20sp" />
@@ -479,7 +479,7 @@
 
                 <TextView
                     android:id="@+id/VlblC18"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কখনো (নাম) কে বুকের দুধ পান করিয়েছেন?"
                     android:textSize="20sp" />
@@ -531,7 +531,7 @@
 
                 <TextView
                     android:id="@+id/VlblC19a"
-                    android:layout_width="200sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি জন্মের কতক্ষণ পর (নাম) কে বুকের দুধ পান করিয়েছেন?"
                     android:textSize="20sp" />
@@ -579,7 +579,7 @@
 
                 <TextView
                     android:id="@+id/VlblC110"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি এই শিশুকে শালদুধ দিয়েছিলেন?"
                     android:textSize="20sp" />
@@ -631,7 +631,7 @@
 
                 <TextView
                     android:id="@+id/VlblC111"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুকে (নাম) বুকের প্রথম দুধ পান করানোর পূর্বে কি অন্য কিছু মুখে দিয়েছিলেন? (যেমন চিনি অথবা মধু)?"
                     android:textSize="20sp" />
@@ -691,7 +691,7 @@
 
                 <TextView
                     android:id="@+id/VlblC112"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুকে (নাম) জন্মের 3 Days এর ভেতর কি অন্য কিছু মুখে দিয়েছিলেন?"
                     android:textSize="20sp" />
@@ -751,7 +751,7 @@
 
                 <TextView
                     android:id="@+id/VlblC113"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুকে (নাম) জন্মের 6 months এর ভেতর কি কোনো খাবার অথবা পানীয় মুখে দিয়েছিলেন? (পানির কথা জানতে চান)"
                     android:textSize="20sp" />
@@ -811,7 +811,7 @@
 
                 <TextView
                     android:id="@+id/VlblC114d"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days"
                     android:textSize="20sp" />
@@ -849,7 +849,7 @@
 
                 <TextView
                     android:id="@+id/VlblC114m"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months"
                     android:textSize="20sp" />
@@ -887,7 +887,7 @@
 
                 <TextView
                     android:id="@+id/VlblC115"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি কি এখনো বুকের দুধ খায়?"
                     android:textSize="20sp" />
@@ -939,7 +939,7 @@
 
                 <TextView
                     android:id="@+id/VlblC116"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="যদি না খায়, কোন বয়সে বুকের দুধ খাওয়ানো বন্ধ করেছিলেন? (দিন)"
                     android:textSize="20sp" />
@@ -972,7 +972,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="বুকের দুধ খাওয়ানো বন্ধ করেছিলেন কেন?"
+                    android:text="C117 বুকের দুধ খাওয়ানো বন্ধ করেছিলেন কেন?"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -993,7 +993,7 @@
                     android:id="@+id/lblC117a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1029,7 +1029,7 @@
                     android:id="@+id/lblC117b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1065,7 +1065,7 @@
                     android:id="@+id/lblC117c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1101,7 +1101,7 @@
                     android:id="@+id/lblC117d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1137,7 +1137,7 @@
                     android:id="@+id/lblC117e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1173,7 +1173,7 @@
                     android:id="@+id/lblC117eX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117eX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1186,7 +1186,7 @@
                 <EditText
                     android:id="@+id/txtC117eX"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -1211,7 +1211,7 @@
                     android:id="@+id/lblC117f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C117f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -1252,7 +1252,7 @@
 
                 <TextView
                     android:id="@+id/VlblC118d"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটিকে কত দিন যাবৎ বুকের দুধ খাইয়েছেন?"
                     android:textSize="20sp" />
@@ -1290,7 +1290,7 @@
 
                 <TextView
                     android:id="@+id/VlblC118m"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটিকে কত মাস যাবৎ বুকের দুধ খাইয়েছেন?"
                     android:textSize="20sp" />
@@ -1349,7 +1349,7 @@
 
                 <TextView
                     android:id="@+id/VlblC119"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) গতকাল, দিনে অথবা রাতে বুকের দুধ খেয়েছিল?"
                     android:textSize="20sp" />
@@ -1430,7 +1430,7 @@
 
                 <TextView
                     android:id="@+id/VlblC120"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) গতকাল, দিনে অথবা রাতে এই রকম কোনো উপায়ে বুকের দুধ খেয়েছিল কি?"
                     android:textSize="20sp" />
@@ -1511,7 +1511,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121a"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পানি"
                     android:textSize="20sp" />
@@ -1571,7 +1571,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121b"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশু ফর্মুলা যেমন [স্থানীয় কিছু উদাহরণ দিন]?"
                     android:textSize="20sp" />
@@ -1631,7 +1631,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121b1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বার"
                     android:textSize="20sp" />
@@ -1669,7 +1669,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121c"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="দুধ, যেমন টিনজাত, গুড়ো অথবা টাটকা দুধ ?"
                     android:textSize="20sp" />
@@ -1729,7 +1729,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121c1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বার"
                     android:textSize="20sp" />
@@ -1767,7 +1767,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121d"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ফলের রস?"
                     android:textSize="20sp" />
@@ -1827,7 +1827,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121e"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পাতলা ঝোল/সুপ?"
                     android:textSize="20sp" />
@@ -1887,7 +1887,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121f"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="দই ?"
                     android:textSize="20sp" />
@@ -1947,7 +1947,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121f1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বার"
                     android:textSize="20sp" />
@@ -1985,7 +1985,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121g"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পাতলা জাউ?"
                     android:textSize="20sp" />
@@ -2045,7 +2045,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121h"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্য কোন পানীয় যেমন [স্থানীয়ভাবে সহজলভ্য কোন তরল খাবার]?"
                     android:textSize="20sp" />
@@ -2105,7 +2105,7 @@
 
                 <TextView
                     android:id="@+id/VlblC121i"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য কোন পানীয়?"
                     android:textSize="20sp" />
@@ -2173,7 +2173,7 @@
                 <EditText
                     android:id="@+id/txtC121iX"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -2203,7 +2203,7 @@
 
                 <TextView
                     android:id="@+id/VlblC122"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) গতকাল, দিনে অথবা রাতে ORS [স্থানীয়নাম ব্যবহার করুন] খাওয়ানো হয়েছিল?"
                     android:textSize="20sp" />
@@ -2263,7 +2263,7 @@
 
                 <TextView
                     android:id="@+id/VlblC123"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটিকে (নাম) গতকাল, দিনে অথবা রাতে কোন ভিটামিন অথবা ওষুধ ড্রপ আকারে খাওয়ানো হয়েছিল?"
                     android:textSize="20sp" />
@@ -2323,7 +2323,7 @@
 
                 <TextView
                     android:id="@+id/VlblC124"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) গতকাল, দিনে অথবা রাতে শক্ত, আধা-শক্ত অথবা নরম খাবার খেয়েছিল ?"
                     android:textSize="20sp" />
@@ -2375,7 +2375,7 @@
 
                 <TextView
                     android:id="@+id/VlblC125"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) গতকাল, দিনে অথবা রাতে পানীয় ব্যাতিত কতবার শক্ত, আধা-শক্ত অথবা নরম খাবার খেয়েছিলো?"
                     android:textSize="20sp" />
@@ -2408,7 +2408,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="পড়ুন: এখন আমি আপনার কাছে  শিশুটি (নাম) বিগত 24 Hours এ যা খাবার ও পানীয় খেয়েছে তা জানতে চাইব . গতকাল, দিনে অথবা রাতে শিশুটি (নাম)"
+                    android:text="C126 পড়ুন: এখন আমি আপনার কাছে  শিশুটি (নাম) বিগত ২৪ ঘণ্টায় এ যা খাবার ও পানীয় খেয়েছে তা জানতে চাইব. গতকাল, দিনে অথবা রাতে শিশুটি (নাম)"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2450,12 +2450,12 @@
                     android:id="@+id/lblC126a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126a"
+                    android:text="A)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126a"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পাউরুটি, ভাত অথবা শষ্য হতে তৈরী খাবার"
                     android:textSize="20sp" />
@@ -2510,12 +2510,12 @@
                     android:id="@+id/lblC126b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126b"
+                    android:text="B)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126b"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="কুমড়া, গাজর, স্কোয়াশ অথবা মিষ্টি আলু যা ভেতরে হলুদ অথবা কমলা রঙের"
                     android:textSize="20sp" />
@@ -2570,12 +2570,12 @@
                     android:id="@+id/lblC126c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126c"
+                    android:text="C)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126c"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আলু অথবা মূল হতে তৈরী খাবার"
                     android:textSize="20sp" />
@@ -2630,12 +2630,12 @@
                     android:id="@+id/lblC126d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126d"
+                    android:text="D)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126d"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="গাঢ় সবুজ পাতা সবজি"
                     android:textSize="20sp" />
@@ -2690,12 +2690,12 @@
                     android:id="@+id/lblC126e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126e"
+                    android:text="E)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126e"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পাকা আম, পাকা পেঁপে অথবা (ভিটামিন এ সমৃদ্ধ স্থানীয় কিছু ফলের নাম  বলুন)"
                     android:textSize="20sp" />
@@ -2750,12 +2750,12 @@
                     android:id="@+id/lblC126f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126f"
+                    android:text="F)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126f"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য যেকোন ফল অথবা সবজি"
                     android:textSize="20sp" />
@@ -2810,12 +2810,12 @@
                     android:id="@+id/lblC126g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126g"
+                    android:text="G)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126g"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="কলিজা অথবা যেকোন অঙ্গের মাংস"
                     android:textSize="20sp" />
@@ -2870,12 +2870,12 @@
                     android:id="@+id/lblC126h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126h"
+                    android:text="H)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126h"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="যেকোন মাংস (যেমন যেকোন গরু, ভেড়া, ছাগল, মুরগি অথবা হাঁস)"
                     android:textSize="20sp" />
@@ -2930,12 +2930,12 @@
                     android:id="@+id/lblC126i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126i"
+                    android:text="I)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126i"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ডিম"
                     android:textSize="20sp" />
@@ -2990,12 +2990,12 @@
                     android:id="@+id/lblC126j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126j"
+                    android:text="J)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126j"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="তাজা অথবা শুকনো মাছ, খোলসওয়ালা মাছ (shellfish) অথবা সামুদ্রিক মাছ"
                     android:textSize="20sp" />
@@ -3050,12 +3050,12 @@
                     android:id="@+id/lblC126k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126k"
+                    android:text="K)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126k"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="সিম, মটর, ডাল, বাদাম অথবা বিচি দ্বারা তৈরী খাবার"
                     android:textSize="20sp" />
@@ -3110,12 +3110,12 @@
                     android:id="@+id/lblC126l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126l"
+                    android:text="L)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126l"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পনির, দই অথবা অন্যান্য দুগ্ধ জাতীয় খাবার"
                     android:textSize="20sp" />
@@ -3170,12 +3170,12 @@
                     android:id="@+id/lblC126m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126m"
+                    android:text="M)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126m"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="যেকোন তেল, চর্বি অথবা এর থেকে তৈরী খাদ্য"
                     android:textSize="20sp" />
@@ -3230,12 +3230,12 @@
                     android:id="@+id/lblC126n"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126n"
+                    android:text="N)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126n"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="চিনি জাতীয় খাদ্য যেমন চকলেট, মিষ্টি, লজেন্স, কেক, বিস্কুট"
                     android:textSize="20sp" />
@@ -3290,12 +3290,12 @@
                     android:id="@+id/lblC126o"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126o"
+                    android:text="O)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126o"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="মশলা যেমন মরিচ,সুগন্ধির জন্যে ভেষজ উপাদান"
                     android:textSize="20sp" />
@@ -3350,12 +3350,12 @@
                     android:id="@+id/lblC126q"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126q"
+                    android:text="Q)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126q"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="স্নাক্স অথবা ফাস্ট ফুড যেমন চিপস"
                     android:textSize="20sp" />
@@ -3410,12 +3410,12 @@
                     android:id="@+id/lblC126r"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C126r"
+                    android:text="R)"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC126r"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য: চা, কোমল পানীয়/ফলের রস"
                     android:textSize="20sp" />
@@ -3475,7 +3475,7 @@
 
                 <TextView
                     android:id="@+id/VlblC129"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি (নাম) কি গতকাল, দিনে অথবা রাতে নিপল যুক্ত বোতল হতে কিছু পান করেছিল?"
                     android:textSize="20sp" />
@@ -3535,7 +3535,7 @@
 
                 <TextView
                     android:id="@+id/VlblC130"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি কখনো পাউডার/স্প্রিংকেল এর সম্পর্কে শুনেছেন যা খাবারে যোগ করা যায়? (স্থানীয় ভাবে প্রাপ্ত পন্যের নাম ব্যবহার করুন)"
                     android:textSize="20sp" />
@@ -3587,7 +3587,7 @@
 
                 <TextView
                     android:id="@+id/VlblC131"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="গতকাল, দিনে অথবা রাতে শিশুটি (নাম) কি কোনো খাবার খেয়েছে যাতে আপনি পাউডার অথবা স্প্রিংকেল যোগ করে দিয়েছিলেন?"
                     android:textSize="20sp" />
@@ -3639,7 +3639,7 @@
 
                 <TextView
                     android:id="@+id/VlblC134"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার সাথে কি কেউ কখনো শিশুকে কিভাবে খাওয়াবেন এই নিয়ে কথা বলেছে"
                     android:textSize="20sp" />
@@ -3866,7 +3866,7 @@
                     android:id="@+id/lblC135eX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135eX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -3879,7 +3879,7 @@
                 <EditText
                     android:id="@+id/txtC135eX"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -3909,7 +3909,7 @@
 
                 <TextView
                     android:id="@+id/VlblC136"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি বুকের দুধ/পরিপূরক খাবার সম্পর্কে কোনো তথ্য শুনেছেন/দেখেছেন/পড়েছেন"
                     android:textSize="20sp" />
@@ -4466,7 +4466,7 @@
                 <EditText
                     android:id="@+id/txtC137mX"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -4496,7 +4496,7 @@
 
                 <TextView
                     android:id="@+id/VlblC138"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি সাধারণত (অন্তত সপ্তাহে 1 বার) রেডিও শুনেন এবং টেলিভিশন দেখেন (অন্য কারোর বাড়িতে হলেও)"
                     android:textSize="20sp" />
@@ -4548,7 +4548,7 @@
 
                 <TextView
                     android:id="@+id/VlblC139"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি কি কোন টিকা EPI এর মাধ্যমে পেয়েছিল"
                     android:textSize="20sp" />
@@ -4558,7 +4558,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:textSize="20sp">
+                    android:textSize="15sp">
 
                     <RadioButton
                         android:id="@+id/rdoC1391"
@@ -4566,7 +4566,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
                         android:text="টিকা দিয়েছে কার্ডও আছে"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <RadioButton
                         android:id="@+id/rdoC1392"
@@ -4574,7 +4574,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
                         android:text="টিকা দিয়েছে কার্ড নাই"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <RadioButton
                         android:id="@+id/rdoC1393"
@@ -4582,7 +4582,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
                         android:text="কোন টিকা দেয়নি"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -4608,7 +4608,7 @@
 
                 <TextView
                     android:id="@+id/VlblBCG1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বিসিজি (১ম ডোজ)"
                     android:textSize="20sp" />
@@ -4668,7 +4668,7 @@
 
                 <TextView
                     android:id="@+id/VlblBCG2"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="বিসিজি (২য় ডোজ)"
                     android:textSize="20sp" />
@@ -4728,7 +4728,7 @@
 
                 <TextView
                     android:id="@+id/VlblPenta1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পেনটা (১ম ডোজ)"
                     android:textSize="20sp" />
@@ -4788,7 +4788,7 @@
 
                 <TextView
                     android:id="@+id/VlblPenta2"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পেনটা (২য় ডোজ)"
                     android:textSize="20sp" />
@@ -4848,7 +4848,7 @@
 
                 <TextView
                     android:id="@+id/VlblPenta3"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পেনটা (৩য় ডোজ)"
                     android:textSize="20sp" />
@@ -4908,7 +4908,7 @@
 
                 <TextView
                     android:id="@+id/VlblOPV1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ওপিভি (১ম ডোজ)"
                     android:textSize="20sp" />
@@ -4968,7 +4968,7 @@
 
                 <TextView
                     android:id="@+id/VlblOPV2"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ওপিভি (২য় ডোজ)"
                     android:textSize="20sp" />
@@ -5028,7 +5028,7 @@
 
                 <TextView
                     android:id="@+id/VlblOPV3"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="ওপিভি (৩য় ডোজ)"
                     android:textSize="20sp" />
@@ -5088,7 +5088,7 @@
 
                 <TextView
                     android:id="@+id/VlblPCV1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পিসিভি (১ম ডোজ)"
                     android:textSize="20sp" />
@@ -5148,7 +5148,7 @@
 
                 <TextView
                     android:id="@+id/VlblPCV2"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পিসিভি (২য় ডোজ)"
                     android:textSize="20sp" />
@@ -5208,7 +5208,7 @@
 
                 <TextView
                     android:id="@+id/VlblPCV3"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="পিসিভি (৩য় ডোজ)"
                     android:textSize="20sp" />
@@ -5268,7 +5268,7 @@
 
                 <TextView
                     android:id="@+id/VlblIPV"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="আই পি ভি"
                     android:textSize="20sp" />
@@ -5328,7 +5328,7 @@
 
                 <TextView
                     android:id="@+id/VlblMR1"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="হাম ও রুবেলা (১ম ডোজ)"
                     android:textSize="20sp" />
@@ -5388,7 +5388,7 @@
 
                 <TextView
                     android:id="@+id/VlblMR2"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="হাম (২য় ডোজ)"
                     android:textSize="20sp" />
@@ -5448,7 +5448,7 @@
 
                 <TextView
                     android:id="@+id/VlblC140"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি কি গত ছয় মাসে উচ্চমাত্রার ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল"
                     android:textSize="20sp" />
@@ -5509,8 +5509,8 @@
 
                 <TextView
                     android:id="@+id/VlblC141"
-                    android:layout_width="250sp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="300sp"
+                    android:layout_height="match_parent"
                     android:text="শিশুটি কোথা থেকে ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল"
                     android:textSize="20sp" />
 
@@ -5541,7 +5541,7 @@
                     android:id="@+id/lblC141X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C141X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -5554,7 +5554,7 @@
                 <EditText
                     android:id="@+id/txtC141X"
                     style="@style/customEdit"
-                    android:layout_width="250sp"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="text"
@@ -5579,7 +5579,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="শিশুটির গত ছয় মাসে ডায়রিয়া হলে কি খেয়েছিল"
+                    android:text="C142 শিশুটির গত ছয় মাসে ডায়রিয়া হলে কি খেয়েছিল"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -5600,7 +5600,7 @@
                     android:id="@+id/lblC142a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5636,7 +5636,7 @@
                     android:id="@+id/lblC142b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5672,7 +5672,7 @@
                     android:id="@+id/lblC142c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5708,7 +5708,7 @@
                     android:id="@+id/lblC142d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5744,7 +5744,7 @@
                     android:id="@+id/lblC142e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5780,7 +5780,7 @@
                     android:id="@+id/lblC142f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -5817,7 +5817,7 @@
                     android:id="@+id/lblC142g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C142g"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView

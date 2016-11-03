@@ -3392,21 +3392,51 @@ public class FdHabit extends Activity {
                 rdoMR21.requestFocus();
                 return;
             } else if (!rdoC1401.isChecked() & !rdoC1402.isChecked() & !rdoC1403.isChecked() & secC140.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Select anyone options from (শিশুটি কি গত ছয় মাসে উচ্চমাত্রার ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল ).");
+                Connection.MessageBox(FdHabit.this, "Select anyone options from (শিশুটি কি গত ছয় মাসে উচ্চমাত্রার ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল )");
                 rdoC1401.requestFocus();
                 return;
             } else if (spnC141.getSelectedItemPosition() == 0 & secC141.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: শিশুটি কোথা থেকে ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল.");
+                Connection.MessageBox(FdHabit.this, "Required field: শিশুটি কোথা থেকে ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল");
                 spnC141.requestFocus();
                 return;
             } else if (txtC141X.getText().toString().length() == 0 & secC141X.isShown()) {
-                Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন.");
+                Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন");
                 txtC141X.requestFocus();
                 return;
             }
-            if ((chkC117f.isChecked()) && (chkC117a.isChecked() || chkC117a.isChecked() || chkC117c.isChecked() || chkC117d.isChecked() || chkC117e.isChecked()))
+            else if (secC117a.isShown() & (!chkC117a.isChecked() &
+                    !chkC117b.isChecked() &
+                    !chkC117c.isChecked() &
+                    !chkC117d.isChecked() &
+                    !chkC117e.isChecked() &
+                    !chkC117f.isChecked())) {
+                Connection.MessageBox(FdHabit.this,"Required field: C117 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
+                chkC117a.requestFocus();
+                return;
+            }
+            else if (secC135a.isShown() & (!chkC135a.isChecked() &
+                    !chkC135b.isChecked() &
+                    !chkC135c.isChecked() &
+                    !chkC135d.isChecked() &
+                    !chkC135e.isChecked())) {
+                Connection.MessageBox(FdHabit.this,"Required field: C135 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
+                chkC135a.requestFocus();
+                return;
+            }
+            else if (secC142a.isShown() & (!chkC142a.isChecked() &
+                    !chkC142b.isChecked() &
+                    !chkC142c.isChecked() &
+                    !chkC142d.isChecked() &
+                    !chkC142e.isChecked() &
+                    !chkC142f.isChecked() &
+                    !chkC142g.isChecked())) {
+                Connection.MessageBox(FdHabit.this,"Required field: C142 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
+                chkC142a.requestFocus();
+                return;
+            }
+            if ((chkC117f.isChecked()) && (chkC117a.isChecked() || chkC117b.isChecked() || chkC117c.isChecked() || chkC117d.isChecked() || chkC117e.isChecked()))
             {
-                Connection.MessageBox(FdHabit.this, "Inconsistent value between M24.1A to I");
+                Connection.MessageBox(FdHabit.this, "Inconsistent value between C117 (A to I)");
                 return;
             }
 
@@ -3423,8 +3453,8 @@ public class FdHabit extends Activity {
             FdHabit_DataModel objSave = new FdHabit_DataModel();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setSuchanaID(txtSuchanaID.getText().toString());
-           // objSave.setC11(txtC11.getText().toString());
-           // objSave.setC12(txtC12.getText().toString());
+            objSave.setC11(Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-"));
+            objSave.setC12(Connection.SelectedSpinnerValue(spnMSlNo.getSelectedItem().toString(), "-"));
             objSave.setC13(txtC13.getText().toString());
             String[] d_rdogrpC14 = new String[]{"1", "0"};
             objSave.setC14("");
@@ -3483,13 +3513,13 @@ public class FdHabit extends Activity {
             }
 
             objSave.setC116(txtC116.getText().toString());
-            objSave.setC117a((chkC117a.isChecked() ? "1" : "2"));
-            objSave.setC117b((chkC117b.isChecked() ? "1" : "2"));
-            objSave.setC117c((chkC117c.isChecked() ? "1" : "2"));
-            objSave.setC117d((chkC117d.isChecked() ? "1" : "2"));
-            objSave.setC117e((chkC117e.isChecked() ? "1" : "2"));
+            objSave.setC117a((chkC117a.isChecked() ? "1" :(chkC117a.isShown()? "2":"")));
+            objSave.setC117b((chkC117b.isChecked() ? "1" :(chkC117b.isShown()? "2":"")));
+            objSave.setC117c((chkC117c.isChecked() ? "1" :(chkC117c.isShown()? "2":"")));
+            objSave.setC117d((chkC117d.isChecked() ? "1" :(chkC117d.isShown()? "2":"")));
+            objSave.setC117e((chkC117e.isChecked() ? "1" :(chkC117e.isShown()? "2":"")));
             objSave.setC117eX(txtC117eX.getText().toString());
-            objSave.setC117f((chkC117f.isChecked() ? "1" : "2"));
+            objSave.setC117f((chkC117f.isChecked() ? "1" :(chkC117f.isShown()? "2":"")));
             objSave.setC118d(txtC118d.getText().toString());
             objSave.setC118m(txtC118m.getText().toString());
             String[] d_rdogrpC119 = new String[]{"1", "0", "8"};
@@ -3742,11 +3772,11 @@ public class FdHabit extends Activity {
                 if (rb.isChecked()) objSave.setC134(d_rdogrpC134[i]);
             }
 
-            objSave.setC135a((chkC135a.isChecked() ? "1" : "2"));
-            objSave.setC135b((chkC135b.isChecked() ? "1" : "2"));
-            objSave.setC135c((chkC135c.isChecked() ? "1" : "2"));
-            objSave.setC135d((chkC135d.isChecked() ? "1" : "2"));
-            objSave.setC135e((chkC135e.isChecked() ? "1" : "2"));
+            objSave.setC135a((chkC135a.isChecked() ? "1" :(chkC135a.isShown()? "2":"")));
+            objSave.setC135b((chkC135b.isChecked() ? "1" :(chkC135b.isShown()? "2":"")));
+            objSave.setC135c((chkC135c.isChecked() ? "1" :(chkC135c.isShown()? "2":"")));
+            objSave.setC135d((chkC135d.isChecked() ? "1" :(chkC135d.isShown()? "2":"")));
+            objSave.setC135e((chkC135e.isChecked() ? "1" :(chkC135e.isShown()? "2":"")));
             objSave.setC135eX(txtC135eX.getText().toString());
             String[] d_rdogrpC136 = new String[]{"1", "0", "8"};
             objSave.setC136("");
@@ -3755,19 +3785,19 @@ public class FdHabit extends Activity {
                 if (rb.isChecked()) objSave.setC136(d_rdogrpC136[i]);
             }
 
-            objSave.setC137a((chkC137a.isChecked() ? "1" : "2"));
-            objSave.setC137b((chkC137b.isChecked() ? "1" : "2"));
-            objSave.setC137c((chkC137c.isChecked() ? "1" : "2"));
-            objSave.setC137d((chkC137d.isChecked() ? "1" : "2"));
-            objSave.setC137e((chkC137e.isChecked() ? "1" : "2"));
-            objSave.setC137f((chkC137f.isChecked() ? "1" : "2"));
-            objSave.setC137g((chkC137g.isChecked() ? "1" : "2"));
-            objSave.setC137h((chkC137h.isChecked() ? "1" : "2"));
-            objSave.setC137i((chkC137i.isChecked() ? "1" : "2"));
-            objSave.setC137j((chkC137j.isChecked() ? "1" : "2"));
-            objSave.setC137k((chkC137k.isChecked() ? "1" : "2"));
-            objSave.setC137l((chkC137l.isChecked() ? "1" : "2"));
-            objSave.setC137m((chkC137m.isChecked() ? "1" : "2"));
+            objSave.setC137a((chkC137a.isChecked() ? "1" :(chkC137a.isShown()? "2":"")));
+            objSave.setC137b((chkC137b.isChecked() ? "1" :(chkC137b.isShown()? "2":"")));
+            objSave.setC137c((chkC137c.isChecked() ? "1" :(chkC137c.isShown()? "2":"")));
+            objSave.setC137d((chkC137d.isChecked() ? "1" :(chkC137d.isShown()? "2":"")));
+            objSave.setC137e((chkC137e.isChecked() ? "1" :(chkC137e.isShown()? "2":"")));
+            objSave.setC137f((chkC137f.isChecked() ? "1" :(chkC137f.isShown()? "2":"")));
+            objSave.setC137g((chkC137g.isChecked() ? "1" :(chkC137g.isShown()? "2":"")));
+            objSave.setC137h((chkC137h.isChecked() ? "1" :(chkC137h.isShown()? "2":"")));
+            objSave.setC137i((chkC137i.isChecked() ? "1" :(chkC137i.isShown()? "2":"")));
+            objSave.setC137j((chkC137j.isChecked() ? "1" :(chkC137j.isShown()? "2":"")));
+            objSave.setC137k((chkC137k.isChecked() ? "1" :(chkC137k.isShown()? "2":"")));
+            objSave.setC137l((chkC137l.isChecked() ? "1" :(chkC137l.isShown()? "2":"")));
+            objSave.setC137m((chkC137m.isChecked() ? "1" :(chkC137m.isShown()? "2":"")));
             objSave.setC137mX(txtC137mX.getText().toString());
             String[] d_rdogrpC138 = new String[]{"1", "0"};
             objSave.setC138("");
@@ -3890,13 +3920,13 @@ public class FdHabit extends Activity {
 
             objSave.setC141((spnC141.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnC141.getSelectedItem().toString(), "-")));
             objSave.setC141X(txtC141X.getText().toString());
-            objSave.setC142a((chkC142a.isChecked() ? "1" : "2"));
-            objSave.setC142b((chkC142b.isChecked() ? "1" : "2"));
-            objSave.setC142c((chkC142c.isChecked() ? "1" : "2"));
-            objSave.setC142d((chkC142d.isChecked() ? "1" : "2"));
-            objSave.setC142e((chkC142e.isChecked() ? "1" : "2"));
-            objSave.setC142f((chkC142f.isChecked() ? "1" : "2"));
-            objSave.setC142g((chkC142g.isChecked() ? "1" : "2"));
+            objSave.setC142a((chkC142a.isChecked() ? "1" :(chkC142a.isShown()? "2":"")));
+            objSave.setC142b((chkC142b.isChecked() ? "1" :(chkC142b.isShown()? "2":"")));
+            objSave.setC142c((chkC142c.isChecked() ? "1" :(chkC142c.isShown()? "2":"")));
+            objSave.setC142d((chkC142d.isChecked() ? "1" :(chkC142d.isShown()? "2":"")));
+            objSave.setC142e((chkC142e.isChecked() ? "1" :(chkC142e.isShown()? "2":"")));
+            objSave.setC142f((chkC142f.isChecked() ? "1" :(chkC142f.isShown()? "2":"")));
+            objSave.setC142g((chkC142g.isChecked() ? "1" :(chkC142g.isShown()? "2":"")));
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
@@ -3935,6 +3965,8 @@ public class FdHabit extends Activity {
             for (FdHabit_DataModel item : data) {
                 txtRnd.setText(item.getRnd());
                 txtSuchanaID.setText(item.getSuchanaID());
+                spnMSlNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getC11()));
+                spnCHSLNo.setSelection(Global.SpinnerItemPositionAnyLength(spnMSlNo, item.getC12()));
                // txtC11.setText(item.getC11());
               //  txtC12.setText(item.getC12());
                 txtC13.setText(item.getC13());

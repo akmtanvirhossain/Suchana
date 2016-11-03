@@ -249,11 +249,11 @@ public class NutHealth extends Activity {
                             Bundle IDbundle = new Bundle();
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
-                            /*Intent intent = new Intent(getApplicationContext(), HandWash.class);
+                            Intent intent = new Intent(getApplicationContext(), HandWash.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
-                            finish();*/
+                            finish();
                         }
                     });
                     adb.show();
@@ -582,7 +582,7 @@ public class NutHealth extends Activity {
                 return;
             }
             if (chkM31a.isChecked() == false & chkM31b.isChecked() == false & chkM31c.isChecked() == false & chkM31d.isChecked() == false & chkM31e.isChecked() == false & chkM31f.isChecked() == false & chkM31g.isChecked() == false & chkM31h.isChecked() == false & chkM31i.isChecked() == false & chkM31x.isChecked() == false) {
-                Connection.MessageBox(NutHealth.this, "Required field: M31");
+                Connection.MessageBox(NutHealth.this, "Required field: : M31 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন ");
                 return;
             }
 

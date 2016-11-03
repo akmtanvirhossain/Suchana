@@ -103,7 +103,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="310sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -142,7 +142,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="310sp"
                     android:layout_height="wrap_content"
                     android:text="Suchana ID"
                     android:textSize="20sp" />
@@ -234,7 +234,7 @@
                     android:id="@+id/lblM231x1"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M231x1"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -355,7 +355,7 @@
 
                     <RadioButton
                         android:id="@+id/rdoM232b2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="250sp"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
                         android:text="দিন"
@@ -395,7 +395,7 @@
 
                 <TextView
                     android:id="@+id/VlblM233"
-                    android:layout_width="300sp"
+                    android:layout_width="387sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি  জানেন শুধু মাত্র বুকের দুধ কতদিন খাওয়াতে হয়(জানা নেই [888])"
                     android:textSize="20sp" />
@@ -433,7 +433,7 @@
 
                 <TextView
                     android:id="@+id/VlblM234"
-                    android:layout_width="300sp"
+                    android:layout_width="387sp"
                     android:layout_height="wrap_content"
                     android:text="কত বয়স পর্যন্ত বচ্চাকে বুকের দুধ খাওয়াতে হয় (মাস)(জানা নেই [88])"
                     android:textSize="20sp" />
@@ -471,7 +471,7 @@
 
                 <TextView
                     android:id="@+id/VlblM235"
-                    android:layout_width="300sp"
+                    android:layout_width="387sp"
                     android:layout_height="wrap_content"
                     android:text="কত বয়সের সময় নরম খাবার খাওয়ানো শুরু করা উচিৎ(মাস)(জানা নেই [88])"
                     android:textSize="20sp" />
@@ -1165,7 +1165,7 @@
 
                 <TextView
                     android:id="@+id/VlblM238"
-                    android:layout_width="300sp"
+                    android:layout_width="387sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার শিশুকে (বয়স অনুযায়ী) দৈনিক কতবার খাওয়ানো উচিৎ"
                     android:textSize="20sp" />

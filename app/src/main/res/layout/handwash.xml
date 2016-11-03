@@ -496,7 +496,7 @@
                     android:id="@+id/lblM241gX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="GX. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -716,7 +716,7 @@
                     android:id="@+id/lblM242a1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="A1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -843,7 +843,7 @@
                     android:id="@+id/lblM242b1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="B1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -970,7 +970,7 @@
                     android:id="@+id/lblM242c1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1097,7 +1097,7 @@
                     android:id="@+id/lblM242d1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="D1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1224,7 +1224,7 @@
                     android:id="@+id/lblM242e1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="E1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1351,7 +1351,7 @@
                     android:id="@+id/lblM242f1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="F1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -1478,7 +1478,7 @@
                     android:id="@+id/lblM242g1X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="G1X. "
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView

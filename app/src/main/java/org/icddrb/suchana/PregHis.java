@@ -1507,7 +1507,41 @@ public class PregHis extends Activity {
                 rdoM1211.requestFocus();
                 return;
             }
-
+            else if (secM110a.isShown() & (!chkM110a.isChecked() &
+                    !chkM110b.isChecked() &
+                    !chkM110c.isChecked() &
+                    !chkM110d.isChecked() &
+                    !chkM110e.isChecked() &
+                    !chkM110f.isChecked() &
+                    !chkM110g.isChecked() &
+                    !chkM110h.isChecked() &
+                    !chkM110i.isChecked() &
+                    !chkM110j.isChecked() &
+                    !chkM110k.isChecked() &
+                    !chkM110l.isChecked() &
+                    !chkM110m.isChecked())) {
+                Connection.MessageBox(PregHis.this, "Required field: M1.10) CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                chkM110a.requestFocus();
+                return;
+            }
+            else if (secM111a.isShown() & (!chkM111a.isChecked() &
+                    !chkM111b.isChecked() &
+                    !chkM111c.isChecked() &
+                    !chkM111d.isChecked() &
+                    !chkM111e.isChecked() &
+                    !chkM111f.isChecked() &
+                    !chkM111g.isChecked() &
+                    !chkM111h.isChecked() &
+                    !chkM111i.isChecked() &
+                    !chkM111j.isChecked() &
+                    !chkM111k.isChecked() &
+                    !chkM111l.isChecked() &
+                    !chkM111m.isChecked() &
+                    !chkM111n.isChecked())) {
+                Connection.MessageBox(PregHis.this, "Required field: M1.11) CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                chkM111a.requestFocus();
+                return;
+            }
             if((Integer.valueOf(Integer.valueOf(txtM15b.getText().toString().length() == 0 ? "0" : txtM15b.getText().toString())+Integer.valueOf(txtM15c.getText().toString().length() == 0 ? "0" : txtM15c.getText().toString())+Integer.valueOf(txtM15d.getText().toString().length() == 0 ? "0" : txtM15d.getText().toString())+Integer.valueOf(txtM15e.getText().toString().length() == 0 ? "0" : txtM15e.getText().toString())) != Integer.valueOf(txtM15f.getText().toString().length() == 0 ? "0" : txtM15f.getText().toString())))
             {
                 Connection.MessageBox(PregHis.this, "Inconsistent in total value.M15");

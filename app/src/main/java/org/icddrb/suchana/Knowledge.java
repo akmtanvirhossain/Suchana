@@ -1703,10 +1703,10 @@ public class Knowledge extends Activity {
                 if (rb.isChecked()) objSave.setM212(d_rdogrpM212[i]);
             }
 
-            objSave.setM213a((chkM213a.isChecked()?"1":"2"));
-            objSave.setM213b((chkM213b.isChecked()?"1":"2"));
-            objSave.setM213c((chkM213c.isChecked()?"1":"2"));
-            objSave.setM213x((chkM213x.isChecked()?"1":"2"));
+            objSave.setM213a((chkM213a.isChecked()?"1":(chkM213a.isShown()? "2":"")));
+            objSave.setM213b((chkM213b.isChecked()?"1":(chkM213b.isShown()? "2":"")));
+            objSave.setM213c((chkM213c.isChecked()?"1":(chkM213c.isShown()? "2":"")));
+            objSave.setM213x((chkM213x.isChecked()?"1":(chkM213x.isShown()? "2":"")));
             objSave.setM213x1(txtM213x1.getText().toString());
             String[] d_rdogrpM214 = new String[] {"1","0"};
             objSave.setM214("");
@@ -1725,12 +1725,13 @@ public class Knowledge extends Activity {
             }
 
             objSave.setM216(txtM216.getText().toString());
-            objSave.setM217a((chkM217a.isChecked()?"1":"2"));
-            objSave.setM217b((chkM217b.isChecked()?"1":"2"));
-            objSave.setM217c((chkM217c.isChecked()?"1":"2"));
-            objSave.setM217d((chkM217d.isChecked()?"1":"2"));
-            objSave.setM217x((chkM217x.isChecked()?"1":"2"));
+            objSave.setM217a((chkM217a.isChecked()?"1":(chkM217a.isShown()? "2":"")));
+            objSave.setM217b((chkM217b.isChecked()?"1":(chkM217b.isShown()? "2":"")));
+            objSave.setM217c((chkM217c.isChecked()?"1":(chkM217c.isShown()? "2":"")));
+            objSave.setM217d((chkM217d.isChecked()?"1":(chkM217d.isShown()? "2":"")));
+            objSave.setM217x((chkM217x.isChecked()?"1":(chkM217x.isShown()? "2":"")));
             objSave.setM217x1(txtM217x1.getText().toString());
+
             objSave.setM218a((chkM218a.isChecked()?"1":"2"));
             objSave.setM218b((chkM218b.isChecked()?"1":"2"));
             objSave.setM218c((chkM218c.isChecked()?"1":"2"));

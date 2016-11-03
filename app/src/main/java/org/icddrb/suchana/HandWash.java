@@ -1206,7 +1206,19 @@ public class HandWash extends Activity {
                 txtM242g1X.requestFocus();
                 return;
             }
-
+            else if (secM241a.isShown() & (!chkM241a.isChecked() &
+                    !chkM241b.isChecked() &
+                    !chkM241c.isChecked() &
+                    !chkM241d.isChecked() &
+                    !chkM241e.isChecked() &
+                    !chkM241f.isChecked() &
+                    !chkM241g.isChecked() &
+                    !chkM241h.isChecked() &
+                    !chkM241i.isChecked())) {
+                Connection.MessageBox(HandWash.this,"Required field: M2.4.1 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন ");
+                chkM241a.requestFocus();
+                return;
+            }
             if((chkM241i.isChecked()==true) &&(chkM241a.isChecked()==true || chkM241b.isChecked()==true|| chkM241c.isChecked()==true|| chkM241d.isChecked()==true|| chkM241e.isChecked()==true|| chkM241f.isChecked()==true|| chkM241g.isChecked()==true))
             {
                 Connection.MessageBox(HandWash.this, "Inconsistent value between M24.1A to I");

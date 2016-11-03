@@ -2170,7 +2170,7 @@
                     android:id="@+id/lblM112X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M112X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
@@ -2282,12 +2282,12 @@
                     android:id="@+id/lblM114X"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="M114X"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblM114X"
-                    android:layout_width="220sp"
+                    android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য উল্লেখ করুন"
                     android:textSize="20sp" />
