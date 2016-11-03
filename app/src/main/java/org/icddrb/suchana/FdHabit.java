@@ -3404,6 +3404,7 @@ public class FdHabit extends Activity {
                 txtC141X.requestFocus();
                 return;
             }
+
             else if (secC117a.isShown() & (!chkC117a.isChecked() &
                     !chkC117b.isChecked() &
                     !chkC117c.isChecked() &
