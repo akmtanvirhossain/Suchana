@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -25,6 +26,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -59,6 +61,19 @@ public class HHIdentity_list extends Activity {
     Button btnSearch;
     ImageButton dateSearch;
     LinearLayout secDateSearch;
+    Spinner spnDist;
+    LinearLayout secUpz;
+    View lineUpz;
+    TextView VlblUpz;
+    Spinner spnUpz;
+    LinearLayout secUn;
+    View lineUn;
+    TextView VlblUn;
+    Spinner spnUn;
+    LinearLayout secVill;
+    View lineVill;
+    TextView VlblVill;
+    Spinner spnVill;
     private int hour;
     private int minute;
     private int mDay;
@@ -144,13 +159,33 @@ public class HHIdentity_list extends Activity {
                     adb.show();
                 }});
 
-            btnRefresh = (Button) findViewById(R.id.btnRefresh);
-            btnRefresh.setOnClickListener(new View.OnClickListener() {
-
+            Button btnDataSearch = (Button) findViewById(R.id.btnDataSearch);
+            btnDataSearch.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    //write your code here
-                    DataSearch();
+                    if (spnUpz.getSelectedItemPosition() == 0) {
+                        Connection.MessageBox(HHIdentity_list.this, "Select a valid upazila from list.");
+                        spnUpz.requestFocus();
+                        return;
+                    } else if (spnUn.getSelectedItemPosition() == 0) {
+                        Connection.MessageBox(HHIdentity_list.this, "Select a valid union from list.");
+                        spnUn.requestFocus();
+                        return;
+                    } else {
+                        DataSearch();
+                    }
+                    /*final ProgressDialog progDailog = ProgressDialog.show(HHIdentity_list.this, "", "Please Wait . . .", true);
 
+                    new Thread() {
+                        public void run() {
+                            try {
+
+
+                            } catch (Exception e) {
+
+                            }
+                            progDailog.dismiss();
+                        }
+                    }.start();*/
                 }});
 
             btnAdd   = (Button) findViewById(R.id.btnAdd);
@@ -210,7 +245,83 @@ public class HHIdentity_list extends Activity {
                 }
             });
 
-            DataSearch();
+
+            spnDist = (Spinner) findViewById(R.id.spnDist);
+            secUpz = (LinearLayout) findViewById(R.id.secUpz);
+            lineUpz = (View) findViewById(R.id.lineUpz);
+            VlblUpz = (TextView) findViewById(R.id.VlblUpz);
+            spnUpz = (Spinner) findViewById(R.id.spnUpz);
+            secUn = (LinearLayout) findViewById(R.id.secUn);
+            lineUn = (View) findViewById(R.id.lineUn);
+            VlblUn = (TextView) findViewById(R.id.VlblUn);
+            spnUn = (Spinner) findViewById(R.id.spnUn);
+            secVill = (LinearLayout) findViewById(R.id.secVill);
+            lineVill = (View) findViewById(R.id.lineVill);
+            VlblVill = (TextView) findViewById(R.id.VlblVill);
+            spnVill = (Spinner) findViewById(R.id.spnVill);
+
+            //spnDist.setAdapter(C.getArrayAdapter("Select '' DistCode union select distinct DistCode||'-'||DistName from VillageList order by DistCode"));
+            spnDist.setAdapter(C.getArrayAdapter("Select distinct DistCode||'-'||DistName from VillageList order by DistCode"));
+            spnDist.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    spnUpz.setAdapter(C.getArrayAdapter("Select '' union Select distinct UPZCode||'-'||UPZName from VillageList where DistCode='" + D + "'"));
+                    //DataSearch();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+            spnUpz.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    String U = Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-");
+                    spnUn.setAdapter(C.getArrayAdapter("Select '' union Select distinct UNCode||'-'||UNName from VillageList where DistCode='" + D + "' and UpzCode='" + U + "'"));
+                    //DataSearch();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+            spnUn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+                    String U = Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-");
+                    String UN = Connection.SelectedSpinnerValue(spnUn.getSelectedItem().toString(), "-");
+                    spnVill.setAdapter(C.getArrayAdapter("Select '' union Select distinct VillCode||'-'||VillName from VillageList where DistCode='" + D + "' and UpzCode='" + U + "' and UNCode='" + UN + "'"));
+                    //DataSearch();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+            spnVill.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    //DataSearch();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+            //DataSearch();
 
 
         }
@@ -236,10 +347,30 @@ public class HHIdentity_list extends Activity {
             Integer i = 1;
             HHIdentity_DataModel d = new HHIdentity_DataModel();
             String SQL = "";
-            SQL = "Select Rnd, ScreeningID, Dist||Upz||Un||Vill||HHNo SuchanaID,Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
+            //for screening
+            /*SQL = "Select Rnd, ScreeningID, Dist||Upz||Un||Vill||HHNo SuchanaID,Dist, Upz, Un, Vill, WRHHNo, BenName, HeadName, HsuName,case when length(MobNo)=0 then ReqMobNo else MobNo end MobNo, DistCode, DistName, UPZCode, UPZName, UNCode, UNName, VillCode, VillName,Upload,VDate from Screening i";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
             SQL += " order by date(VDate) desc, datetime(EnDt) desc";
+            */
+
+            String D = Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-");
+            String U = spnUpz.getCount() > 0 ? spnUpz.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-") : "";
+            String UN = spnUn.getCount() > 0 ? spnUn.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnUn.getSelectedItem().toString(), "-") : "";
+            String V = spnVill.getCount() > 0 ? spnVill.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnVill.getSelectedItem().toString(), "-") : "";
+
+            //household interview
+            SQL = "Select i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,ifnull(h.Upload,'2')Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC from Screening i";
+            SQL += " left outer join HHIdentity h on i.rnd=h.rnd and i.suchanaid=h.suchanaid";
+            SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
+            SQL += " where";
+            SQL += " i.Dist like('" + D + "') and";
+            SQL += " i.Upz like('" + U + "') and";
+            SQL += " i.Un like('" + UN + "') and";
+            SQL += " i.Vill like('" + V + "')";
+
+            //SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
+            //SQL += " order by date(VDate) desc, datetime(EnDt) desc";
 
             List<HHIdentity_DataModel> data = d.SelectAllList(this, SQL);
             dataList.clear();
@@ -265,6 +396,7 @@ public class HHIdentity_list extends Activity {
                 map.put("MobNo", item.getMobNo());
                 map.put("vdate", item.getvdate().toString().length()==0 ? "" : Global.DateConvertDMY(item.getvdate()));
                 map.put("Upload",item.getUpload());
+                map.put("QC", item.getQC());
                 map.put("sl", i.toString());
                 i += 1;
                 dataList.add(map);
@@ -361,7 +493,7 @@ public class HHIdentity_list extends Activity {
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
-               /*     //For Screening
+                    /*//For Screening
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("ScreeningID", o.get("ScreeningID"));
@@ -369,7 +501,7 @@ public class HHIdentity_list extends Activity {
                     f1 = new Intent(getApplicationContext(), Screening.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
-*/
+                    */
                     //For Household Interview
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));

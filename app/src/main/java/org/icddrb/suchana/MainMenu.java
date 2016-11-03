@@ -114,9 +114,6 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
-
-
-                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -153,12 +150,15 @@ public class MainMenu extends Activity {
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
                                         tableList.add("Father");
-                                        */
 
-                                        tableList.add("Screening");
+
+                                        //tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);
+                                        C.Sync_Download("VillageList", USERID, "");
 
+                                        //Uplaod Database
                                         C.DatabaseUpload(USERID);
+
                                         /*String[] ServerVal  = Connection.split(C.ReturnResult("ReturnSingleValue","sp_ServerCheck '"+ USERID +"'"),',');
                                         String DBUploadRequest = ServerVal[2].toString();
 

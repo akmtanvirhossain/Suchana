@@ -827,8 +827,11 @@ public class HHIdentity_final extends Activity {
                 spnVill.setSelection(Global.SpinnerItemPositionAnyLength(spnVill, item.getVill()));
                 VILL = item.getVill();
 
-                //txtH11.setText(item.getHHNo());
-                txtH11.setText(item.getWRHHNo());
+                //for household interview
+                txtH11.setText(item.getHHNo());
+
+                //for screening
+                //txtH11.setText(item.getWRHHNo());
                 txtSuchanaID.setText(item.getScreeningID());
 
                 spnDist.setEnabled(false);
