@@ -2829,7 +2829,7 @@ public class FdHabit extends Activity {
             spnCHSLNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                    if (spnC141.getSelectedItem().toString().length() == 0) return;
+                    //   if (spnC141.getSelectedItem().toString().length() == 0) return;
                     // String spnData = Connection.SelectedSpinnerValue(spnC141.getSelectedItem().toString(), "-");
 
                     String spnData = C.ReturnSingleValue("select H23 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'");
@@ -2840,6 +2840,7 @@ public class FdHabit extends Activity {
                     }
 
                     txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+                    dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                     if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                     {
 
@@ -2882,6 +2883,7 @@ public class FdHabit extends Activity {
                 }
 
                 txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
+                dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                 if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                 {
 
@@ -2942,6 +2944,10 @@ public class FdHabit extends Activity {
 
             }*/
 
+            dtpC15.setEnabled(false);
+            txtC13.setEnabled(false);
+            rdoC141.setEnabled(false);
+            rdoC142.setEnabled(false);
             DataSearch(RND,SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -3454,6 +3460,7 @@ public class FdHabit extends Activity {
             }
 
             objSave.setC15(dtpC15.getText().toString().length() > 0 ? Global.DateConvertYMD(dtpC15.getText().toString()) : dtpC15.getText().toString());
+
             objSave.setC16(txtC16.getText().toString());
             objSave.setC17(txtC17.getText().toString());
             String[] d_rdogrpC18 = new String[]{"1", "0"};
