@@ -59,36 +59,22 @@ import android.widget.ArrayAdapter;
 import Common.*;
 
 public class Adolescent extends Activity {
+    static final int DATE_DIALOG = 1;
+    static final int TIME_DIALOG = 2;
+    static String TableName;
+    static String RND = "";
+    static String SUCHANAID = "";
+    private static String Status = "new";
     boolean networkAvailable=false;
     Location currentLocation;
     double currentLatitude,currentLongitude;
-    //Disabled Back/Home key
-    //--------------------------------------------------------------------------------------------------
-    @Override
-    public boolean onKeyDown(int iKeyCode, KeyEvent event)
-    {
-        if(iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME)
-        { return false; }
-        else { return true;  }
-    }
     String VariableID;
-    private int hour;
-    private int minute;
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG = 1;
-    static final int TIME_DIALOG = 2;
-
     Connection C;
     Global g;
     SimpleAdapter dataAdapter;
     ArrayList<HashMap<String, String>> dataList = new ArrayList<HashMap<String, String>>();
-    static String TableName;
-
     TextView lblHeading;
     LinearLayout seclblHeading;
-
     LinearLayout secRnd;
     View lineRnd;
     TextView VlblRnd;
@@ -141,13 +127,11 @@ public class Adolescent extends Activity {
     View lineResultX;
     TextView VlblResultX;
     EditText txtResultX;
-
     LinearLayout seclblQ1;
     LinearLayout secQ11;
     View lineQ11;
     TextView VlblQ11;
     RadioGroup rdogrpQ11;
-
     RadioButton rdoQ111;
     RadioButton rdoQ112;
     LinearLayout seclblQ12;
@@ -175,7 +159,6 @@ public class Adolescent extends Activity {
     View lineQ15;
     TextView VlblQ15;
     RadioGroup rdogrpQ15;
-
     RadioButton rdoQ151;
     RadioButton rdoQ152;
     LinearLayout secQ16;
@@ -210,14 +193,12 @@ public class Adolescent extends Activity {
     View lineQ111;
     TextView VlblQ111;
     RadioGroup rdogrpQ111;
-
     RadioButton rdoQ1111;
     RadioButton rdoQ1112;
     LinearLayout secQ112;
     View lineQ112;
     TextView VlblQ112;
     RadioGroup rdogrpQ112;
-
     RadioButton rdoQ1121;
     RadioButton rdoQ1122;
     LinearLayout seclblQ2;
@@ -295,7 +276,6 @@ public class Adolescent extends Activity {
     View lineQ213;
     TextView VlblQ213;
     EditText txtQ213;
-
     LinearLayout seclblQ214;
     LinearLayout secQ214a;
     View lineQ214a;
@@ -341,7 +321,6 @@ public class Adolescent extends Activity {
     View lineQ214i;
     TextView VlblQ214i;
     CheckBox chkQ214i;
-
     LinearLayout seclblQ215;
     LinearLayout secQ215a;
     View lineQ215a;
@@ -388,28 +367,24 @@ public class Adolescent extends Activity {
     View lineQ221;
     TextView VlblQ221;
     RadioGroup rdogrpQ221;
-
     RadioButton rdoQ2211;
     RadioButton rdoQ2212;
     LinearLayout secQ222;
     View lineQ222;
     TextView VlblQ222;
     RadioGroup rdogrpQ222;
-
     RadioButton rdoQ2221;
     RadioButton rdoQ2222;
     LinearLayout secQ223;
     View lineQ223;
     TextView VlblQ223;
     RadioGroup rdogrpQ223;
-
     RadioButton rdoQ2231;
     RadioButton rdoQ2232;
     LinearLayout secQ224;
     View lineQ224;
     TextView VlblQ224;
     RadioGroup rdogrpQ224;
-
     RadioButton rdoQ2241;
     RadioButton rdoQ2242;
     LinearLayout secQ225;
@@ -421,35 +396,30 @@ public class Adolescent extends Activity {
     View lineQ31;
     TextView VlblQ31;
     RadioGroup rdogrpQ31;
-
     RadioButton rdoQ311;
     RadioButton rdoQ312;
     LinearLayout secQ32;
     View lineQ32;
     TextView VlblQ32;
     RadioGroup rdogrpQ32;
-
     RadioButton rdoQ321;
     RadioButton rdoQ322;
     LinearLayout secQ33;
     View lineQ33;
     TextView VlblQ33;
     RadioGroup rdogrpQ33;
-
     RadioButton rdoQ331;
     RadioButton rdoQ332;
     LinearLayout secQ34;
     View lineQ34;
     TextView VlblQ34;
     RadioGroup rdogrpQ34;
-
     RadioButton rdoQ341;
     RadioButton rdoQ342;
     LinearLayout secQ35;
     View lineQ35;
     TextView VlblQ35;
     RadioGroup rdogrpQ35;
-
     RadioButton rdoQ351;
     RadioButton rdoQ352;
     RadioButton rdoQ353;
@@ -457,7 +427,6 @@ public class Adolescent extends Activity {
     View lineQ36;
     TextView VlblQ36;
     RadioGroup rdogrpQ36;
-
     RadioButton rdoQ361;
     RadioButton rdoQ362;
     RadioButton rdoQ363;
@@ -465,24 +434,61 @@ public class Adolescent extends Activity {
     View lineQ37;
     TextView VlblQ37;
     RadioGroup rdogrpQ37;
-
     RadioButton rdoQ371;
     RadioButton rdoQ372;
-
     String StartTime;
     Bundle IDbundle;
-    static String RND = "";
-    static String SUCHANAID = "";
     String DIS = "";
     String UPZ = "";
     String UN = "";
     String VILL = "";
-    private static String Status = "new";
-
-
     ImageButton cmdForward;
     TextView lblNext;
     ImageButton cmdHome;
+    private int hour;
+    private int minute;
+    private int mDay;
+    private int mMonth;
+    private int mYear;
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            mMonth = monthOfYear + 1;
+            mDay = dayOfMonth;
+            EditText dtpDate;
+
+
+            dtpDate = (EditText) findViewById(R.id.dtpVDate);
+            if (VariableID.equals("btnVDate")) {
+                dtpDate = (EditText) findViewById(R.id.dtpVDate);
+            }
+            dtpDate.setText(new StringBuilder()
+                    .append(Global.Right("00" + mDay, 2)).append("/")
+                    .append(Global.Right("00" + mMonth, 2)).append("/")
+                    .append(mYear));
+        }
+    };
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+            hour = selectedHour;
+            minute = selectedMinute;
+            EditText tpTime = null;
+
+            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
+
+        }
+    };
+
+    //Disabled Back/Home key
+    //--------------------------------------------------------------------------------------------------
+    @Override
+    public boolean onKeyDown(int iKeyCode, KeyEvent event) {
+        if (iKeyCode == KeyEvent.KEYCODE_BACK || iKeyCode == KeyEvent.KEYCODE_HOME) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -969,8 +975,8 @@ public class Adolescent extends Activity {
                         seclblQ211.setVisibility(View.GONE);
                         seclbl221.setVisibility(View.GONE);
                         seclbl3.setVisibility(View.GONE);
-                        //seclblQ214.setVisibility(View.GONE);
-                        //seclblQ215.setVisibility(View.GONE);
+                        seclblQ214.setVisibility(View.GONE);
+                        seclblQ215.setVisibility(View.GONE);
                     }
                     else
                     {
@@ -1104,6 +1110,8 @@ public class Adolescent extends Activity {
                         //lineQ36.setVisibility(View.VISIBLE);
                         secQ37.setVisibility(View.VISIBLE);
                         lineQ37.setVisibility(View.VISIBLE);
+                        seclblQ214.setVisibility(View.VISIBLE);
+                        seclblQ215.setVisibility(View.VISIBLE);
                     }
                 }
                 @Override
@@ -1115,6 +1123,8 @@ public class Adolescent extends Activity {
             VlblResultX=(TextView) findViewById(R.id.VlblResultX);
             txtResultX=(EditText) findViewById(R.id.txtResultX);
             seclblQ1=(LinearLayout)findViewById(R.id.seclblQ1);
+            seclblQ214 = (LinearLayout) findViewById(R.id.seclblQ214);
+            seclblQ215 = (LinearLayout) findViewById(R.id.seclblQ215);
             secQ11=(LinearLayout)findViewById(R.id.secQ11);
             lineQ11=(View)findViewById(R.id.lineQ11);
             VlblQ11 = (TextView) findViewById(R.id.VlblQ11);
@@ -2342,49 +2352,49 @@ public class Adolescent extends Activity {
             }
             else if(Integer.valueOf(txtQ16.getText().toString().length()==0 ? "1" : txtQ16.getText().toString()) < 1 || Integer.valueOf(txtQ16.getText().toString().length()==0 ? "30" : txtQ16.getText().toString()) > 30)
             {
-                Connection.MessageBox(Adolescent.this, "Value should be between 1 and 30(Q16.খানা’র বর্তমান সদস্য সংখ্যা).");
+                Connection.MessageBox(Adolescent.this, "Value should be between 1 and 30(Q16.খানা’র বর্তমান সদস্য সংখ্যা)");
                 txtQ16.requestFocus();
                 return;
             }
             else if(spnQ17.getSelectedItemPosition()==0  & secQ17.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q17 খানা’র প্রধান কে?.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q17 খানা’র প্রধান কে?");
                 spnQ17.requestFocus();
                 return;
             }
             else if(spnQ18.getSelectedItemPosition()==0  & secQ18.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q18 খানা প্রধানের বর্তমান পেশা কি?.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q18 খানা প্রধানের বর্তমান পেশা কি?");
                 spnQ18.requestFocus();
                 return;
             }
             else if(txtQ18X.getText().toString().length()==0 & secQ18X.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q18 অন্যান্য উল্লেখ করুণ.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q18 অন্যান্য উল্লেখ করুণ");
                 txtQ18X.requestFocus();
                 return;
             }
             else if(spnQ19.getSelectedItemPosition()==0  & secQ19.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q19 আপনি কোন ধর্ম পালন করেন?.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q19 আপনি কোন ধর্ম পালন করেন?");
                 spnQ19.requestFocus();
                 return;
             }
             else if(txtQ19X.getText().toString().length()==0 & secQ19X.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q19. অন্যান্য উল্লেখ করুণ.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q19. অন্যান্য উল্লেখ করুণ");
                 txtQ19X.requestFocus();
                 return;
             }
             else if(txtQ110.getText().toString().length()==0 & secQ110.isShown())
             {
-                Connection.MessageBox(Adolescent.this, "Required field:Q110. এই খানায় বর্তমানে কতজন কিশোর/কিশোরী আছে?.");
+                Connection.MessageBox(Adolescent.this, "Required field:Q110. এই খানায় বর্তমানে কতজন কিশোর/কিশোরী আছে?");
                 txtQ110.requestFocus();
                 return;
             }
             else if(Integer.valueOf(txtQ110.getText().toString().length()==0 ? "0" : txtQ110.getText().toString()) < 0 || Integer.valueOf(txtQ110.getText().toString().length()==0 ? "20" : txtQ110.getText().toString()) > 20)
             {
-                Connection.MessageBox(Adolescent.this, "Value should be between 0 and 20(Q110. এই খানায় বর্তমানে কতজন কিশোর/কিশোরী আছে?).");
+                Connection.MessageBox(Adolescent.this, "Value should be between 0 and 20(Q110. এই খানায় বর্তমানে কতজন কিশোর/কিশোরী আছে?)");
                 txtQ110.requestFocus();
                 return;
             }
@@ -2810,6 +2820,7 @@ public class Adolescent extends Activity {
             return;
         }
     }
+
     private void DataSearchAdolescent(String Rnd, String SuchanaID) {
         try {
 
@@ -3317,8 +3328,6 @@ public class Adolescent extends Activity {
         }
     }
 
-
-
     protected Dialog onCreateDialog(int id) {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY);
@@ -3331,36 +3340,6 @@ public class Adolescent extends Activity {
         }
         return null;
     }
-
-    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            mYear = year; mMonth = monthOfYear+1; mDay = dayOfMonth;
-            EditText dtpDate;
-
-
-            dtpDate = (EditText)findViewById(R.id.dtpVDate);
-            if (VariableID.equals("btnVDate"))
-            {
-                dtpDate = (EditText)findViewById(R.id.dtpVDate);
-            }
-            dtpDate.setText(new StringBuilder()
-                    .append(Global.Right("00"+mDay,2)).append("/")
-                    .append(Global.Right("00"+mMonth,2)).append("/")
-                    .append(mYear));
-        }
-    };
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-            hour = selectedHour;
-            minute = selectedMinute;
-            EditText tpTime = null;
-
-            tpTime.setText(new StringBuilder().append(Global.Right("00" + hour, 2)).append(":").append(Global.Right("00" + minute, 2)));
-
-        }
-    };
-
 
     //GPS Reading
     //.....................................................................................................

@@ -2839,6 +2839,7 @@ public class FdHabit extends Activity {
                         rdoC142.setChecked(true);
                     }
 
+
                     txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
                     if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                     {
@@ -2884,7 +2885,6 @@ public class FdHabit extends Activity {
                 txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
                 if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                 {
-
 
 
                 }
@@ -3088,7 +3088,8 @@ public class FdHabit extends Activity {
                     txtC114m.requestFocus();
                     return;
                 }
-            } else if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "50" : txtC114m.getText().toString()) > 50) {
+            }
+            if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "50" : txtC114m.getText().toString()) > 50) {
                 Connection.MessageBox(FdHabit.this, "Value should be between 0 and 50(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months).");
                 txtC114m.requestFocus();
                 return;
@@ -3305,8 +3306,12 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনার সাথে কি কেউ কখনো শিশুকে কিভাবে খাওয়াবেন এই নিয়ে কথা বলেছে).");
                 rdoC1341.requestFocus();
                 return;
-            } else if (rdoC1341.isChecked() & (!chkC135a.isChecked() | !chkC135b.isChecked() | !chkC135c.isChecked() | !chkC135d.isChecked() | !chkC135e.isChecked())) {
-                Connection.MessageBox(FdHabit.this, "Select anyone option from: আপনার সাথে কি কেউ কখনো শিশুকে কিভাবে খাওয়াবেন এই নিয়ে কথা বলেছে");
+            } else if (secC135a.isShown() & (!chkC135a.isChecked() &
+                    !chkC135b.isChecked() &
+                    !chkC135c.isChecked() &
+                    !chkC135d.isChecked() &
+                    !chkC135e.isChecked())) {
+                Connection.MessageBox(FdHabit.this, "Required field: C135 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
                 chkC135a.requestFocus();
                 return;
             } else if (txtC135eX.getText().toString().length() == 0 & secC135eX.isShown()) {
@@ -3317,10 +3322,10 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কি বুকের দুধ/পরিপূরক খাবার সম্পর্কে কোনো তথ্য শুনেছেন/দেখেছেন/পড়েছেন ).");
                 rdoC1361.requestFocus();
                 return;
-            } else if (rdoC1361.isChecked() & (!chkC137a.isChecked() | !chkC137b.isChecked() | !chkC137c.isChecked() | !chkC137d.isChecked() | !chkC137e.isChecked() |
-                    !chkC137f.isChecked() | !chkC137g.isChecked() | !chkC137h.isChecked() | !chkC137i.isChecked() | !chkC137j.isChecked() | !chkC137k.isChecked() |
-                    !chkC137l.isChecked() | !chkC137m.isChecked())) {
-                Connection.MessageBox(FdHabit.this, "Select anyone options from (আপনি কি বুকের দুধ/পরিপূরক খাবার সম্পর্কে কোনো তথ্য শুনেছেন/দেখেছেন/পড়েছেন ).");
+            } else if (secC137a.isShown() & (!chkC137a.isChecked() & !chkC137b.isChecked() & !chkC137c.isChecked() & !chkC137d.isChecked() & !chkC137e.isChecked() &
+                    !chkC137f.isChecked() & !chkC137g.isChecked() & !chkC137h.isChecked() & !chkC137i.isChecked() & !chkC137j.isChecked() & !chkC137k.isChecked() &
+                    !chkC137l.isChecked() & !chkC137m.isChecked())) {
+                Connection.MessageBox(FdHabit.this, "Required field: C137 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
                 chkC137a.requestFocus();
                 return;
             } else if (txtC137mX.getText().toString().length() == 0 & secC137mX.isShown()) {
@@ -3403,9 +3408,7 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন");
                 txtC141X.requestFocus();
                 return;
-            }
-
-            else if (secC117a.isShown() & (!chkC117a.isChecked() &
+            } else if (secC117a.isShown() & (!chkC117a.isChecked() &
                     !chkC117b.isChecked() &
                     !chkC117c.isChecked() &
                     !chkC117d.isChecked() &
@@ -3414,17 +3417,7 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this,"Required field: C117 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
                 chkC117a.requestFocus();
                 return;
-            }
-            else if (secC135a.isShown() & (!chkC135a.isChecked() &
-                    !chkC135b.isChecked() &
-                    !chkC135c.isChecked() &
-                    !chkC135d.isChecked() &
-                    !chkC135e.isChecked())) {
-                Connection.MessageBox(FdHabit.this,"Required field: C135 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
-                chkC135a.requestFocus();
-                return;
-            }
-            else if (secC142a.isShown() & (!chkC142a.isChecked() &
+            } else if (secC142a.isShown() & (!chkC142a.isChecked() &
                     !chkC142b.isChecked() &
                     !chkC142c.isChecked() &
                     !chkC142d.isChecked() &
@@ -3434,14 +3427,11 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this,"Required field: C142 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন");
                 chkC142a.requestFocus();
                 return;
-            }
-            if ((chkC117f.isChecked()) && (chkC117a.isChecked() || chkC117b.isChecked() || chkC117c.isChecked() || chkC117d.isChecked() || chkC117e.isChecked()))
+            } else if ((chkC117f.isChecked()) && (chkC117a.isChecked() || chkC117b.isChecked() || chkC117c.isChecked() || chkC117d.isChecked() || chkC117e.isChecked()))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between C117 (A to I)");
                 return;
-            }
-
-            if ((chkC142g.isChecked()) && (chkC142a.isChecked() || chkC142b.isChecked() || chkC142c.isChecked() || chkC142d.isChecked() || chkC142e.isChecked() || chkC142f.isChecked()))
+            } else if ((chkC142g.isChecked()) && (chkC142a.isChecked() || chkC142b.isChecked() || chkC142c.isChecked() || chkC142d.isChecked() || chkC142e.isChecked() || chkC142f.isChecked()))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between C142 A-G");
                 return;

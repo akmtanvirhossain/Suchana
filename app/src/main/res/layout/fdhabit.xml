@@ -993,14 +993,14 @@
                     android:id="@+id/lblC117a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="a)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="বন্ধ করার সময় হয়েছিল"
+                    android:text="a) বন্ধ করার সময় হয়েছিল"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1029,14 +1029,14 @@
                     android:id="@+id/lblC117b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="b)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117b"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="শিশুর অসুস্থতা"
+                    android:text="b) শিশুর অসুস্থতা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1065,14 +1065,14 @@
                     android:id="@+id/lblC117c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="c)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মায়ের অসুস্থতা"
+                    android:text="c) মায়ের অসুস্থতা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1101,14 +1101,14 @@
                     android:id="@+id/lblC117d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="d)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="শিশু দুধ পাচ্ছিলনা"
+                    android:text="d) শিশু দুধ পাচ্ছিলনা"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1137,14 +1137,14 @@
                     android:id="@+id/lblC117e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="e)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="e) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -1211,14 +1211,14 @@
                     android:id="@+id/lblC117f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="f)"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC117f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="জানা নেই"
+                    android:text="f) জানা নেই"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3686,14 +3686,14 @@
                     android:id="@+id/lblC135a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135a"
+                    android:text="C135"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC135a"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="সরকারি স্বাস্থ্যকর্মী"
+                    android:text="a) সরকারি স্বাস্থ্যকর্মী"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3722,14 +3722,14 @@
                     android:id="@+id/lblC135b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135b"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC135b"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="NGO স্বাস্থ্যকর্মী"
+                    android:text="b) NGO স্বাস্থ্যকর্মী"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3758,14 +3758,14 @@
                     android:id="@+id/lblC135c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135c"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC135c"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="মা/শাশুড়ি/পরিবারের অন্য কেউ"
+                    android:text="c) মা/শাশুড়ি/পরিবারের অন্য কেউ"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3794,14 +3794,14 @@
                     android:id="@+id/lblC135d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135d"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC135d"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="পাড়াপ্রতিবেশী"
+                    android:text="d) পাড়াপ্রতিবেশী"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3830,14 +3830,14 @@
                     android:id="@+id/lblC135e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C135e"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/VlblC135e"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="e) অন্যান্য"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -3964,7 +3964,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="কার কাছ থেকে অথবা কোথা থেকে শুনেছেন/দেখেছেন/পড়েছেন"
+                    android:text="C137. কার কাছ থেকে অথবা কোথা থেকে শুনেছেন/দেখেছেন/পড়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -3985,7 +3985,7 @@
                     android:id="@+id/lblC137a"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137a"
+                    android:text="a)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4021,7 +4021,7 @@
                     android:id="@+id/lblC137b"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137b"
+                    android:text="b)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4057,7 +4057,7 @@
                     android:id="@+id/lblC137c"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137c"
+                    android:text="c)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4093,7 +4093,7 @@
                     android:id="@+id/lblC137d"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137d"
+                    android:text="d)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4129,7 +4129,7 @@
                     android:id="@+id/lblC137e"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137e"
+                    android:text="e)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4165,7 +4165,7 @@
                     android:id="@+id/lblC137f"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137f"
+                    android:text="f)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4201,7 +4201,7 @@
                     android:id="@+id/lblC137g"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137g"
+                    android:text="g)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4237,7 +4237,7 @@
                     android:id="@+id/lblC137h"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137h"
+                    android:text="h)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4273,7 +4273,7 @@
                     android:id="@+id/lblC137i"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137i"
+                    android:text="i)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4309,7 +4309,7 @@
                     android:id="@+id/lblC137j"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137j"
+                    android:text="j)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4345,7 +4345,7 @@
                     android:id="@+id/lblC137k"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137k"
+                    android:text="k)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4381,7 +4381,7 @@
                     android:id="@+id/lblC137l"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137l"
+                    android:text="l)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4417,7 +4417,7 @@
                     android:id="@+id/lblC137m"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137m"
+                    android:text="m)"
                     android:textSize="20sp" />
 
                 <TextView
@@ -4453,7 +4453,7 @@
                     android:id="@+id/lblC137mX"
                     android:layout_width="60sp"
                     android:layout_height="wrap_content"
-                    android:text="C137mX"
+                    android:text=""
                     android:textSize="20sp" />
 
                 <TextView
