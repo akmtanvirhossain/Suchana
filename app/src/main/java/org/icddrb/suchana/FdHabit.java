@@ -2839,7 +2839,6 @@ public class FdHabit extends Activity {
                         rdoC142.setChecked(true);
                     }
 
-
                     txtC13.setText(C.ReturnSingleValue("select H22 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'"));
                     if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                     {
