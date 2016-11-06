@@ -200,6 +200,39 @@
         android:layout_height="1dip"
         android:background="#CCCCCC" />
 
+    <LinearLayout
+        style="@style/rowStyle0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rdogrpSampling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textSize="20sp">
+
+            <RadioButton
+                android:id="@+id/rdoSampling1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingRight="10dp"
+                android:text="প্রাইমারি খানা"
+                android:textColor="#01DF74"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rdoSampling2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Replacement খানা"
+                android:textColor="#FF8000"
+                android:textSize="20sp" />
+        </RadioGroup>
+    </LinearLayout>
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"
