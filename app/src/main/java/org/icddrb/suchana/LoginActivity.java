@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "23102016";  //Format: DDMMYYYY
+            SystemUpdateDT = "07112016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -157,6 +157,8 @@ public class LoginActivity extends Activity {
                     try {
                         String[] U = Connection.split(uid.getSelectedItem().toString(), '-');
                         g.setUserId(U[0]);
+
+                        C.Save("Update Screening set HHNo=WRHHNo");
 
                         if (pass.getText().toString().equals("start")) {
                             /*C.Save("Delete from Screening");

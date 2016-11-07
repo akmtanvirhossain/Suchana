@@ -43,12 +43,6 @@ public class Connection extends SQLiteOpenHelper {
         super(context, DBLocation, null, DATABASE_VERSION);
         dbContext = context;
         ud_context = context;
-
-        //String SQL = "Create Table OthInvestig( SiteCode Varchar(2), ParticipantID Varchar(10), ChCXR Varchar(1), Bronchitis Varchar(1), Pneumonia Varchar(1), AbUSG Varchar(1), IntBleed Varchar(1), PeyPatches Varchar(1), IntHemorrhage Varchar(1), IntPerforation Varchar(1), Hepatomegaly Varchar(1), Splenomegaly Varchar(1), Cholecystitis Varchar(1), Pancreatitis Varchar(1), Peritonitis Varchar(1), BldCBC Varchar(1), Leucopeia Varchar(1), WBC Varchar(7),Neutrophils Varchar(5), Lymphocyte Varchar(5), RBC Varchar(5), Hb Varchar(4), Thrombocyt Varchar(1), Widal1 Varchar(1), Widal1Dt Varchar(10), Widal1Tm Varchar(5), TyphiO1 Varchar(6), TyphiH1 Varchar(6), PTyphiAH1 Varchar(6), Widal2 Varchar(1), Widal2Dt Varchar(10), Widal2Tm Varchar(5), TyphiO2 Varchar(6), TyphiH2 Varchar(6), PTyphiAH2 Varchar(6), StartTime varchar(5), EndTime varchar(5), UserId Varchar(10), Lat varchar(20), Lon varchar(20), EnDt Varchar(20), Upload Varchar(1), UploadDT datetime, modifyDate datetime)";
-
-        //CreateTable("OthInvestig",SQL);
-
-        //CreateTable("Folup","Create Table Folup( SiteCode Varchar(2), ParticipantID Varchar(10), FApntDt Varchar(10), DieClnVst Varchar(1), FDthcause1 Varchar(200), FDthcause2 Varchar(200), FDthcause3 Varchar(200), RefOthFac Varchar(1), RefFacNam Varchar(200), RefFacDept Varchar(200), StayHospObs Varchar(1), StartTime varchar(5), EndTime varchar(5), UserId Varchar(10), Lat varchar(20), Lon varchar(20), EnDt Varchar(20), Upload Varchar(1), UploadDT datetime, modifyDate datetime)");
     }
 
     //Split function

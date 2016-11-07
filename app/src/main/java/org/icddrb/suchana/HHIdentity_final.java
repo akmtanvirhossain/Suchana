@@ -870,7 +870,7 @@ public class HHIdentity_final extends Activity {
                 UN = item.getUn();
                 spnVill.setSelection(Global.SpinnerItemPositionAnyLength(spnVill, item.getVill()));
                 VILL = item.getVill();
-                //txtH11.setText(item.getH11());
+                txtH11.setText(item.getH11());
                 txtSuchanaID.setText(item.getSuchanaID());
 
                 spnDist.setEnabled(false);

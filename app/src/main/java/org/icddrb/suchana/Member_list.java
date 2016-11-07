@@ -106,6 +106,7 @@ public class Member_list extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", RND);
                     IDbundle.putString("SuchanaID", SUCHANAID);
+
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), UpdateMenu.class);
                     f1.putExtras(IDbundle);
@@ -126,7 +127,7 @@ public class Member_list extends Activity {
                             IDbundle.putString("Rnd", RND);
                             IDbundle.putString("SuchanaID", SUCHANAID);
 
-                            Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
+                            Intent intent = new Intent(getApplicationContext(), HHIdentity_final.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.putExtras(IDbundle);
                             getApplicationContext().startActivity(intent);
@@ -169,6 +170,7 @@ public class Member_list extends Activity {
                     adb.show();
                 }
             });
+
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

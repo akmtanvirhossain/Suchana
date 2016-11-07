@@ -462,7 +462,7 @@ public class HHIdentity_DataModel {
             d._Upz = cur.getString(cur.getColumnIndex("Upz"));
             d._Un = cur.getString(cur.getColumnIndex("Un"));
             d._Vill = cur.getString(cur.getColumnIndex("Vill"));
-            d._WRHHNo = cur.getString(cur.getColumnIndex("WRHHNo"));
+            d._WRHHNo = cur.getString(cur.getColumnIndex("HHNo"));
 
             d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));

@@ -534,7 +534,9 @@ public class Screening_DataModel{
             d._HHUpz = cur.getString(cur.getColumnIndex("HHUpz"));
             d._HHUn = cur.getString(cur.getColumnIndex("HHUn"));
             d._HHVill = cur.getString(cur.getColumnIndex("HHVill"));
+
             d._HHNo = cur.getString(cur.getColumnIndex("HHNo"));
+
             d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._BenName = cur.getString(cur.getColumnIndex("BenName"));
             d._HeadName = cur.getString(cur.getColumnIndex("HeadName"));
