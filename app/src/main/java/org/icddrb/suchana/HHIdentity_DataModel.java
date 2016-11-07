@@ -65,6 +65,7 @@ public class HHIdentity_DataModel {
     private String _MobNo = "";
     private String _vdate = "";
     private String _QC = "";
+    private String _Sampling;
 
     public String getRnd() {
         return _Rnd;
@@ -521,6 +522,10 @@ public class HHIdentity_DataModel {
         _QC = newValue;
     }
 
+    public String getSampling() {
+        return _Sampling;
+    }
+
     public List<HHIdentity_DataModel> SelectAllList(Context context, String SQL) {
         Connection C = new Connection(context);
         List<HHIdentity_DataModel> data = new ArrayList<HHIdentity_DataModel>();
@@ -530,6 +535,7 @@ public class HHIdentity_DataModel {
         cur.moveToFirst();
         while (!cur.isAfterLast()) {
             d = new HHIdentity_DataModel();
+            d._Sampling = cur.getString(cur.getColumnIndex("Sampling"));
             d._Rnd = cur.getString(cur.getColumnIndex("Rnd"));
             d._Dist = cur.getString(cur.getColumnIndex("Dist"));
             d._Upz = cur.getString(cur.getColumnIndex("Upz"));
