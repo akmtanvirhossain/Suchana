@@ -87,7 +87,7 @@
 
                 <TextView
                     android:id="@+id/VlblRnd"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="রাউন্ড নাম্বার"
                     android:textSize="20sp" />
@@ -125,7 +125,7 @@
 
                 <TextView
                     android:id="@+id/VlblSuchanaID"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="উপকারভোগী/সদস্য আইডি"
                     android:textSize="20sp" />
@@ -184,7 +184,7 @@
 
                 <TextView
                     android:id="@+id/VlblH311"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="খানার মালিকানা"
                     android:textSize="20sp" />
@@ -221,7 +221,7 @@
 
                 <TextView
                     android:id="@+id/VlblH312"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="এই খানায়ে কয়টি কক্ষ আছে"
                     android:textSize="20sp" />
@@ -259,7 +259,7 @@
 
                 <TextView
                     android:id="@+id/VlblH313"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="ঘুমের জন্য কয়টি কক্ষ ব্যবহার করা হয়"
                     android:textSize="20sp" />
@@ -297,7 +297,7 @@
 
                 <TextView
                     android:id="@+id/VlblH61"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনাদের কি কোন শৌচাগার/পায়খানা আছে"
                     android:textSize="20sp" />
@@ -357,7 +357,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14c1"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি অথবা আপনার পরিবারের কোনো সদস্য সরকারের তরফ থেকে কোনো ভাতা /বৃত্তি / ক্ষুদ্র ঋণ পেয়েছেন"
                     android:textSize="20sp" />
@@ -430,7 +430,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b1"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="1) আগাম চাশাবাদ করা"
                     android:textSize="20sp" />
@@ -482,7 +482,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b2"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="2)  খাঁচায় মাছ চাষ"
                     android:textSize="20sp" />
@@ -534,7 +534,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b3"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="3) উচু জায়গায় বাগান করা"
                     android:textSize="20sp" />
@@ -586,7 +586,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b4"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="4) পানি সহিষ্ণু প্রজাতি আবাদ"
                     android:textSize="20sp" />
@@ -638,7 +638,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b5"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="5) উলম্ব বাগান করা"
                     android:textSize="20sp" />
@@ -690,7 +690,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b6"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="6) বস্তায় চাষ করা"
                     android:textSize="20sp" />
@@ -742,7 +742,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b7"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="7) বিকল্প জীবিকানির্বাহ কার্যক্রম"
                     android:textSize="20sp" />
@@ -794,7 +794,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b8"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="8) বিলম্বিত চাষাবাদ করা"
                     android:textSize="20sp" />
@@ -846,7 +846,7 @@
 
                 <TextView
                     android:id="@+id/VlblH14b9"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="9) অনান্য"
                     android:textSize="20sp" />
@@ -957,7 +957,7 @@
 
                 <TextView
                     android:id="@+id/VlblM11"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথমবার বিয়ের সময় আপনার বয়স কত ছিল?"
                     android:textSize="20sp" />
@@ -995,7 +995,7 @@
 
                 <TextView
                     android:id="@+id/VlblM12"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="প্রথম গর্ভধারণের সময় আপনার বয়স কত ছিল?"
                     android:textSize="20sp" />
@@ -1033,7 +1033,7 @@
 
                 <TextView
                     android:id="@+id/VlblM13"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি সর্বমোট কতবার গর্ভধারণ করেছেন?  (সর্বমোট গর্ভধারণের সংখ্যা, গর্ভপাত/MR এবং গর্ভধারণ সহ)"
                     android:textSize="20sp" />
@@ -1071,7 +1071,7 @@
 
                 <TextView
                     android:id="@+id/VlblM19"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনার ছোট শিশুটির ক্ষেত্রে গর্ভাবস্তার সময় আপনি কতবার স্বাস্থ্য পরীক্ষার জন্য গিয়েছিলেন ? (ANC)"
                     android:textSize="20sp" />
@@ -1123,7 +1123,7 @@
 
                 <TextView
                     android:id="@+id/VlblM115"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="সর্বশেষ শিশুর ক্ষেত্রে আপনি কি কোনো গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন?"
                     android:textSize="20sp" />
@@ -1183,7 +1183,7 @@
 
                 <TextView
                     android:id="@+id/VlblM116"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="কতবার পেয়েছিলেন?"
                     android:textSize="20sp" />
@@ -1221,7 +1221,7 @@
 
                 <TextView
                     android:id="@+id/VlblM120"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম খেয়েছেন?"
                     android:textSize="20sp" />
@@ -1281,7 +1281,7 @@
 
                 <TextView
                     android:id="@+id/VlblM121"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি আপনার শেষ গর্ভাবস্থার সময় দিনের বেলায় সাধারণ সময়ের তুলনায় বেশি, একই রকম অথবা কম বিশ্রাম নিয়েছেন?"
                     android:textSize="20sp" />
@@ -1362,7 +1362,7 @@
 
                 <TextView
                     android:id="@+id/VlblC14"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর লিঙ্গ"
                     android:textSize="20sp" />
@@ -1414,7 +1414,7 @@
 
                 <TextView
                     android:id="@+id/VlblC15"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর জন্মতারিখ (দিন/মাস/বছর)"
                     android:textSize="20sp" />
@@ -1453,7 +1453,7 @@
 
                 <TextView
                     android:id="@+id/VlblC16"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুর জন্মক্রম"
                     android:textSize="20sp" />
@@ -1491,7 +1491,7 @@
 
                 <TextView
                     android:id="@+id/VlblC110"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="আপনি কি এই শিশুকে শালদুধ দিয়েছিলেন?"
                     android:textSize="20sp" />
@@ -1543,7 +1543,7 @@
 
                 <TextView
                     android:id="@+id/VlblC115"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি কি এখনো বুকের দুধ খায়?"
                     android:textSize="20sp" />
@@ -1595,7 +1595,7 @@
 
                 <TextView
                     android:id="@+id/VlblC140"
-                    android:layout_width="300sp"
+                    android:layout_width="260sp"
                     android:layout_height="wrap_content"
                     android:text="শিশুটি কি গত ছয় মাসে উচ্চমাত্রার ভিটামিন এ ক্যাপসুল পেয়েছিল/খেয়েছিল"
                     android:textSize="20sp" />
