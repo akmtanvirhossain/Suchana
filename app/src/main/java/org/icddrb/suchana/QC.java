@@ -1078,6 +1078,15 @@ public class QC extends Activity {
             String status = objSave.SaveUpdateData(this);
             if (status.length() == 0) {
                 Connection.MessageBox(QC.this, "Saved Successfully");
+                EntryStatus_DataModel e = new EntryStatus_DataModel(TableName, RND, SUCHANAID);
+                e.SaveUpdateData(this);
+
+                Bundle IDBundle = new Bundle();
+                IDBundle.putString("Rnd", txtRnd.getText().toString());
+                IDBundle.putString("SuchanaID", txtSuchanaID.getText().toString());
+                finish();
+                startActivity(new Intent(QC.this, HHIdentity_list.class).putExtras(IDBundle));
+
             } else {
                 Connection.MessageBox(QC.this, status);
                 return;
