@@ -158,8 +158,6 @@ public class LoginActivity extends Activity {
                         String[] U = Connection.split(uid.getSelectedItem().toString(), '-');
                         g.setUserId(U[0]);
 
-                        C.Save("Update Screening set HHNo=WRHHNo");
-
                         if (pass.getText().toString().equals("start")) {
                             /*C.Save("Delete from Screening");
                             C.Save("Delete from Agriculture");
