@@ -22,6 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import Utility.CompressZip;
+
 //--------------------------------------------------------------------------------------------------
 // Created by TanvirHossain on 17/03/2015.
 //--------------------------------------------------------------------------------------------------
@@ -1763,4 +1765,47 @@ public class Connection extends SQLiteOpenHelper {
         }
     }
 
+    private void zipDatabase(String DeviceID) {
+        CompressZip compressZip = new CompressZip();
+        String[] dbFile = new String[1];
+        dbFile[0] = Environment.getExternalStorageDirectory() + File.separator + Global.DatabaseFolder + File.separator + ProjectSetting.DatabaseName;
+        String dbFolder = Environment.getExternalStorageDirectory() + File.separator + Global.DatabaseFolder;
+        String output = ProjectSetting.zipDatabaseName;
+        compressZip.zip(dbFile, dbFolder, output);
+    }
+
+    public void DatabaseUploadZip(String DeviceID) {
+
+        //Compress database
+        zipDatabase(DeviceID);
+
+        //Upload File from Specific Folder
+        String[] FilePathStrings;
+        String[] FileNameStrings;
+        File[] listFile;
+
+        //
+        File file = new File(Environment.getExternalStorageDirectory() + File.separator + Global.DatabaseFolder);
+        file.mkdirs();
+        if (file.isDirectory()) {
+            listFile = file.listFiles();
+            FilePathStrings = new String[listFile.length];
+            FileNameStrings = new String[listFile.length];
+
+            for (int i = 0; i < listFile.length; i++) {
+                FilePathStrings[i] = listFile[i].getAbsolutePath();
+                FileNameStrings[i] = listFile[i].getName();
+
+                //Upload file to server
+                FileUpload myTask = new FileUpload();
+                String[] params = new String[2];
+
+                if (listFile[i].getName().equalsIgnoreCase(ProjectSetting.zipDatabaseName)) {
+                    params[0] = listFile[i].getName();
+                    params[1] = DeviceID + "_" + Global.CurrentDMY() + "_" + listFile[i].getName();
+                    myTask.execute(params);
+                }
+            }
+        }
+    }
 }

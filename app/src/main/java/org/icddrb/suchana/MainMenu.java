@@ -115,6 +115,7 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
+                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -160,6 +161,10 @@ public class MainMenu extends Activity {
 
                                         //Uplaod Database
                                         C.DatabaseUpload(USERID);
+                                        */
+
+                                        //Uplaod Database
+                                        C.DatabaseUploadZip(USERID);
 
                                         /*String[] ServerVal  = Connection.split(C.ReturnResult("ReturnSingleValue","sp_ServerCheck '"+ USERID +"'"),',');
                                         String DBUploadRequest = ServerVal[2].toString();
