@@ -636,7 +636,8 @@
                     android:paddingLeft="20sp"
                     android:text="Suchana QC"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/cmdMenuFinish"

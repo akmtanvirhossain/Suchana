@@ -115,7 +115,6 @@ public class MainMenu extends Activity {
                                     try {
                                         List<String> tableList = new ArrayList<String>();
 
-                                        /*
                                         //Entry Status
                                         tableList.add("EntryStatus");
 
@@ -160,8 +159,8 @@ public class MainMenu extends Activity {
                                         C.Sync_Download("VillageList", USERID, "");
 
                                         //Uplaod Database
-                                        C.DatabaseUpload(USERID);
-                                        */
+                                        //C.DatabaseUpload(USERID);
+
 
                                         //Uplaod Database
                                         C.DatabaseUploadZip(USERID);

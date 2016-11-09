@@ -471,6 +471,7 @@ public class HHIdentity_list extends Activity {
             final TextView HsuName = (TextView) convertView.findViewById(R.id.HsuName);
             final TextView HeadName = (TextView) convertView.findViewById(R.id.HeadName);
             final TextView MobNo = (TextView) convertView.findViewById(R.id.MobNo);
+            final Button cmdQC = (Button) convertView.findViewById(R.id.cmdQC);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
@@ -505,30 +506,63 @@ public class HHIdentity_list extends Activity {
                 Upload.setTextColor(Color.RED);
                 //status.setImageResource(R.mipmap.pending);
             }
+
+
+            //for household interview
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
-                    /*//For Screening
-                    Bundle IDbundle = new Bundle();
+                    //For Screening
+                    /*Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                     Intent f1;
                     f1 = new Intent(getApplicationContext(), Screening.class);
                     f1.putExtras(IDbundle);
-                    startActivity(f1);
-                    */
-                    //For Household Interview
+                    startActivity(f1);*/
+
+                    //QC Device
+                    if (g.getDeviceNo().equals("385") | g.getDeviceNo().equals("382") | g.getDeviceNo().equals("380") | g.getDeviceNo().equals("383")) {
+
+                    } else {
+                        //For Household Interview
+                        Bundle IDbundle = new Bundle();
+                        IDbundle.putString("Rnd", o.get("Rnd"));
+                        IDbundle.putString("ScreeningID", o.get("ScreeningID"));
+                        IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                        Intent f1;
+
+                        f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
+                        f1.putExtras(IDbundle);
+                        startActivity(f1);
+                    }
+                }
+            });
+
+            //QC Device
+            if (g.getDeviceNo().equals("385") | g.getDeviceNo().equals("382") | g.getDeviceNo().equals("380") | g.getDeviceNo().equals("383")) {
+                cmdQC.setVisibility(View.VISIBLE);
+            } else {
+                cmdQC.setVisibility(View.GONE);
+            }
+
+            //for QC
+            cmdQC.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", o.get("Rnd"));
                     IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                     IDbundle.putString("SuchanaID", o.get("SuchanaID"));
                     Intent f1;
-                    //f1 = new Intent(getApplicationContext(), UpdateMenu.class);
-                    f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
+
+                    f1 = new Intent(getApplicationContext(), QC.class);
                     f1.putExtras(IDbundle);
                     startActivity(f1);
                 }
             });
+
 
             return convertView;
         }
