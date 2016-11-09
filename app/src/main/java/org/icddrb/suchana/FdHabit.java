@@ -2921,6 +2921,7 @@ public class FdHabit extends Activity {
                 secC113.setVisibility(View.GONE);
                 lineC113.setVisibility(View.GONE);
                 rdogrpC113.clearCheck();
+
             } else {
 
                 secC113.setVisibility(View.VISIBLE);
