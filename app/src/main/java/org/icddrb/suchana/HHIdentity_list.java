@@ -77,6 +77,8 @@ public class HHIdentity_list extends Activity {
     TextView VlblVill;
     Spinner spnVill;
 
+    Spinner spnAgeGroup;
+
     RadioGroup rdogrpSampling;
     RadioButton rdoSampling1;
     RadioButton rdoSampling2;
@@ -150,6 +152,8 @@ public class HHIdentity_list extends Activity {
                     return false;
                 }
             });*/
+            spnAgeGroup = (Spinner) findViewById(R.id.spnAgeGroup);
+            spnAgeGroup.setAdapter(C.getArrayAdapter("Select '.All Age' Agegp union Select '00-05' union Select '06-11' union Select '12-23' union Select 'Adolescent (Male)' union Select 'Adolescent (Female)' order by Agegp"));
 
             ImageButton cmdBack = (ImageButton) findViewById(R.id.cmdBack);
             cmdBack.setOnClickListener(new View.OnClickListener() {

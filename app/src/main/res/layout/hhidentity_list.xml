@@ -204,12 +204,37 @@
         style="@style/rowStyle0"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="#D7D7D7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="বয়স"
+            android:textColor="#006699"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spnAgeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/planet_prompt"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/rowStyle0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioGroup
             android:id="@+id/rdogrpSampling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"
             android:orientation="horizontal"
             android:textSize="20sp">
 
@@ -233,6 +258,8 @@
                 android:textSize="20sp" />
         </RadioGroup>
     </LinearLayout>
+
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"
