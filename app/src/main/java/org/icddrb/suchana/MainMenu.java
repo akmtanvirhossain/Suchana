@@ -39,6 +39,7 @@ public class MainMenu extends Activity {
     Button cmdMenuIGA;
     Button cmdMenuStart;
     Button cmdMenuAdolescent;
+    Button cmdMenuQC;
 
     Button cmdDataUpload;
     Button cmdDataSync;
@@ -150,6 +151,7 @@ public class MainMenu extends Activity {
                                         tableList.add("FdHabit");
                                         tableList.add("Anthro");
                                         tableList.add("Father");
+                                        tableList.add("QC");
 
 
                                         //tableList.add("Screening");

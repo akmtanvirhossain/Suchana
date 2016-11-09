@@ -85,6 +85,8 @@ public class EntryStatus_DataModel {
             setT("T29");
         else if (TableName.toLowerCase().equals("father"))
             setT("T30");
+        else if (TableName.toLowerCase().equals("adolescent"))
+            setT("T31");
 
             //Eligible
             //------------------------------------------------------------------------------------------

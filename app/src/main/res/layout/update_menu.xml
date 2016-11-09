@@ -624,6 +624,21 @@
                 android:textSize="20sp" />
 
                 <Button
+                    android:id="@+id/cmdMenuQC"
+                    style="@style/menuButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@drawable/button_style_gray"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20sp"
+                    android:text="Suchana QC"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Button
                     android:id="@+id/cmdMenuFinish"
                     style="@style/menuButtonStyle"
                     android:layout_width="fill_parent"

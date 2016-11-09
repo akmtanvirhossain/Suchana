@@ -2139,7 +2139,7 @@
                 <TextView
                     android:id="@+id/VlblM112"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="সর্বশেষ শিশুর ডেলিভারি/প্রসব কে করিয়েছেন?"
                     android:textSize="20sp" />
 
@@ -2214,7 +2214,7 @@
                 <TextView
                     android:id="@+id/VlblM113"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="কিভাবে প্রসবটি সম্পন্ন হয়েছিল?"
                     android:textSize="20sp" />
 
@@ -2251,7 +2251,7 @@
                 <TextView
                     android:id="@+id/VlblM114"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনার শেষ বাচ্চাটির প্রসব কোথায় হয়েছিল?"
                     android:textSize="20sp" />
 

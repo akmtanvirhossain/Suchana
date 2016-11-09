@@ -300,7 +300,7 @@
                 <TextView
                     android:id="@+id/VlblH171a"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="বিগত ১৫ দিনের মধ্যে অসুস্থতার ধরণ"
                     android:textSize="20sp" />
 
@@ -376,7 +376,7 @@
                 <TextView
                     android:id="@+id/VlblH171b"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="প্রথম কোন চিকিৎসা নেয়া হয়েছিল"
                     android:textSize="20sp" />
 

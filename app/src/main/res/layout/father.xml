@@ -350,7 +350,7 @@
                     android:id="@+id/VlblF213"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )"
+                    android:text="কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮৮ )"
                     android:textSize="20sp" />
 
                 <EditText
@@ -360,7 +360,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:textSize="20sp" />
             </LinearLayout>
 

@@ -299,7 +299,7 @@
                 <TextView
                     android:id="@+id/VlblH172a"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="বিগত ১ বছর বা বেশী সময় এর মধ্যে অসুস্থতার ধরন"
                     android:textSize="20sp" />
 
@@ -410,7 +410,7 @@
 
                 <TextView
                     android:id="@+id/VlblH172cX"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="অন্যান্য"
                     android:textSize="20sp" />

@@ -56,6 +56,7 @@ public class UpdateMenu extends Activity {
     Button cmdMenuFather;
     Button cmdMenuFinish;
     Button cmdScreening;
+    Button cmdMenuQC;
 
 
     LinearLayout secEligible;
@@ -430,6 +431,14 @@ public class UpdateMenu extends Activity {
             //    startActivity(new Intent(UpdateMenu.this, Screening.class).putExtras(IDBundle));
             //}
             //});
+            cmdMenuQC = (Button) findViewById(R.id.cmdMenuQC);
+            cmdMenuQC.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    startActivity(new Intent(UpdateMenu.this, QC.class).putExtras(IDBundle));
+                }
+            });
 
             cmdMenuFinish = (Button) findViewById(R.id.cmdMenuFinish);
             cmdMenuFinish.setOnClickListener(new View.OnClickListener() {
@@ -585,6 +594,10 @@ public class UpdateMenu extends Activity {
                 if ((cur.getString(cur.getColumnIndex("T30")) == null ? "" : cur.getString(cur.getColumnIndex("T30"))).equals("1")) {
                     cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
                 } else cmdMenuFather.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                if ((cur.getString(cur.getColumnIndex("T31")) == null ? "" : cur.getString(cur.getColumnIndex("T31"))).equals("1")) {
+                    cmdMenuQC.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);
+                } else cmdMenuQC.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
                 if ((cur.getString(cur.getColumnIndex("T49")) == null ? "" : cur.getString(cur.getColumnIndex("T49"))).equals("1")) {
                     cmdMenuFinish.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_action_accept, 0, 0, 0);

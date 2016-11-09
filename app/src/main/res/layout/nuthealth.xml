@@ -801,7 +801,7 @@
                 <TextView
                     android:id="@+id/VlblM36"
                     android:layout_width="300sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="কমিউনিটি ক্লিনিকে আপনি কত ঘনঘন যান?"
                     android:textSize="20sp" />
 

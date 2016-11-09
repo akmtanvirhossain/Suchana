@@ -210,7 +210,7 @@
                     android:id="@+id/VlblH151"
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
-                    android:text="আপনার খানা কি বিগত ১ বাছ্র এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
+                    android:text="আপনার খানা কি বিগত ১ বছর এ জমি/জলাশয়ে নিজ দায়িত্বে (নিজ/ভাড়া নেয়া) শস্য আবাদ/ ভিটেমাটিতে উৎপাদন /মাছ চাষে জড়িত ছিল"
                     android:textSize="20sp" />
 
                 <RadioGroup
