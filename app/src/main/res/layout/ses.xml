@@ -5211,7 +5211,7 @@
                     android:layout_width="250sp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10sp"
-                    android:text="আপনার টিউবওয়েলের পানিতে কেম্ন আয়রন আছে?"
+                    android:text="আপনার টিউবওয়েলের পানিতে কেমন আয়রন আছে?"
                     android:textSize="20sp" />
 
                 <Spinner

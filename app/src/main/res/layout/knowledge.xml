@@ -2849,7 +2849,7 @@
                 <TextView
                     android:id="@+id/VlblM2117"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ধরনের লবণ ব্যবহার করেন? প্যাকেট ((যদি থাকে দেখে নিশ্চিত হন আয়োডিনযুক্ত কিনা"
                     android:textSize="20sp" />
 

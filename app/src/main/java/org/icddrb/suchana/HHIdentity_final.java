@@ -614,7 +614,7 @@ public class HHIdentity_final extends Activity {
             secResultX.setVisibility(View.GONE);
             secH16X.setVisibility(View.GONE);
 
-            DataSearchScreening(RND, SUCHANAID);
+            DataSearchScreening(RND, ScreeningID);
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

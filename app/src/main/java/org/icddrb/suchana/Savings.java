@@ -628,18 +628,18 @@ public class Savings extends Activity {
                 Connection.MessageBox(Savings.this, "Required field: ১. কিসের জন্য সঞ্চয় করছেন.");
                 spnH1037a.requestFocus();
                 return;
-            } else if (spnH1037a.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
-                    spnH1037a.getSelectedItem().equals(spnH1037c.getSelectedItem()) |
-                    spnH1037a.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
-                    spnH1037b.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
-                    spnH1037b.getSelectedItem().equals(spnH1037c.getSelectedItem()) |
-                    spnH1037b.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
-                    spnH1037c.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
-                    spnH1037c.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
-                    spnH1037c.getSelectedItem().equals(spnH1037d.getSelectedItem()) |
-                    spnH1037d.getSelectedItem().equals(spnH1037a.getSelectedItem()) |
-                    spnH1037d.getSelectedItem().equals(spnH1037b.getSelectedItem()) |
-                    spnH1037d.getSelectedItem().equals(spnH1037c.getSelectedItem())) {
+            } else if ((spnH1037a.getSelectedItem().equals(spnH1037b.getSelectedItem()) && spnH1037a.getSelectedItemPosition() > 0 && spnH1037b.getSelectedItemPosition() > 0) |
+                    (spnH1037a.getSelectedItem().equals(spnH1037c.getSelectedItem()) & spnH1037a.getSelectedItemPosition() > 0 & spnH1037c.getSelectedItemPosition() > 0) |
+                    (spnH1037a.getSelectedItem().equals(spnH1037d.getSelectedItem()) & spnH1037a.getSelectedItemPosition() > 0 & spnH1037d.getSelectedItemPosition() > 0) |
+                    (spnH1037b.getSelectedItem().equals(spnH1037a.getSelectedItem()) & spnH1037b.getSelectedItemPosition() > 0 & spnH1037a.getSelectedItemPosition() > 0) |
+                    (spnH1037b.getSelectedItem().equals(spnH1037c.getSelectedItem()) & spnH1037b.getSelectedItemPosition() > 0 & spnH1037c.getSelectedItemPosition() > 0) |
+                    (spnH1037b.getSelectedItem().equals(spnH1037d.getSelectedItem()) & spnH1037b.getSelectedItemPosition() > 0 & spnH1037d.getSelectedItemPosition() > 0) |
+                    (spnH1037c.getSelectedItem().equals(spnH1037a.getSelectedItem()) & spnH1037c.getSelectedItemPosition() > 0 & spnH1037a.getSelectedItemPosition() > 0) |
+                    (spnH1037c.getSelectedItem().equals(spnH1037b.getSelectedItem()) & spnH1037c.getSelectedItemPosition() > 0 & spnH1037b.getSelectedItemPosition() > 0) |
+                    (spnH1037c.getSelectedItem().equals(spnH1037d.getSelectedItem()) & spnH1037c.getSelectedItemPosition() > 0 & spnH1037d.getSelectedItemPosition() > 0) |
+                    (spnH1037d.getSelectedItem().equals(spnH1037a.getSelectedItem()) & spnH1037d.getSelectedItemPosition() > 0 & spnH1037a.getSelectedItemPosition() > 0) |
+                    (spnH1037d.getSelectedItem().equals(spnH1037b.getSelectedItem()) & spnH1037d.getSelectedItemPosition() > 0 & spnH1037b.getSelectedItemPosition() > 0) |
+                    (spnH1037d.getSelectedItem().equals(spnH1037c.getSelectedItem()) & spnH1037d.getSelectedItemPosition() > 0 & spnH1037c.getSelectedItemPosition() > 0)) {
 
                 Connection.MessageBox(Savings.this, "Required field: কিসের জন্য সঞ্চয় করছেন ভিন্ন ভিন্ন হবে !");
                 spnH1037a.requestFocus();

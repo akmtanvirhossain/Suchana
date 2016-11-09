@@ -491,6 +491,53 @@ public class Father extends Activity {
 
             chkF216x = (CheckBox) findViewById(R.id.chkF216x);
 
+            chkF216a.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        chkF216b.setChecked(false);
+                        chkF216c.setChecked(false);
+                        chkF216d.setChecked(false);
+                        chkF216e.setChecked(false);
+                        chkF216x.setChecked(false);
+                    }
+                }
+            });
+            chkF216b.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF216a.setChecked(false);
+                    }
+                }
+            });
+            chkF216c.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF216a.setChecked(false);
+                    }
+                }
+            });
+            chkF216d.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF216a.setChecked(false);
+                    }
+                }
+            });
+            chkF216e.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF216a.setChecked(false);
+                    }
+                }
+            });
+            chkF216x.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (((CheckBox) v).isChecked()) {
+                        chkF216a.setChecked(false);
+                    }
+                }
+            });
             /*
             chkF216x.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -732,11 +779,11 @@ public class Father extends Activity {
                 txtF212b.requestFocus();
                 return;
             } else if (txtF213.getText().toString().length() == 0 & secF213.isShown()) {
-                Connection.MessageBox(Father.this, "Required field: কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ ).");
+                Connection.MessageBox(Father.this, "Required field: কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮৮ ).");
                 txtF213.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtF213.getText().toString().length() == 0 ? "0" : txtF213.getText().toString()) < 0 || Integer.valueOf(txtF213.getText().toString().length() == 0 ? "99" : txtF213.getText().toString()) > 99) {
-                Connection.MessageBox(Father.this, "Value should be between 0 and 99(কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )).");
+            } else if (Integer.valueOf(txtF213.getText().toString().length() == 0 ? "0" : txtF213.getText().toString()) < 0 || Integer.valueOf(txtF213.getText().toString().length() == 0 ? "888" : txtF213.getText().toString()) > 888) {
+                Connection.MessageBox(Father.this, "Value should be between 0 and 888(কত বয়স পর্যন্ত  শিশুকে শুধু বুকের দুধ খাওয়াতে হয়? (দিন) (জানা নেই ৮৮ )).");
                 txtF213.requestFocus();
                 return;
             } else if (txtF214.getText().toString().length() == 0 & secF214.isShown()) {

@@ -2843,12 +2843,15 @@ public class FdHabit extends Activity {
                     dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                     if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                     {
-
-
+                        secC113.setVisibility(View.VISIBLE);
+                        lineC113.setVisibility(View.VISIBLE);
                     }
                     else
                     {
-                        seclblC119.setVisibility(View.GONE);
+                        secC113.setVisibility(View.GONE);
+                        lineC113.setVisibility(View.GONE);
+                        rdogrpC113.clearCheck();
+                      /*  seclblC119.setVisibility(View.GONE);
                         secC119.setVisibility(View.GONE);
                         seclblC120.setVisibility(View.GONE);
                         secC120.setVisibility(View.GONE);
@@ -2863,7 +2866,7 @@ public class FdHabit extends Activity {
                         secC121g.setVisibility(View.GONE);
                         secC121h.setVisibility(View.GONE);
                         secC121i.setVisibility(View.GONE);
-                        secC121iX.setVisibility(View.GONE);
+                        secC121iX.setVisibility(View.GONE);*/
 
                     }
                 }
@@ -2886,33 +2889,63 @@ public class FdHabit extends Activity {
                 dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                 if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                 {
-
-
+                    secC113.setVisibility(View.VISIBLE);
+                    lineC113.setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    seclblC119.setVisibility(View.GONE);
-                    secC119.setVisibility(View.GONE);
-                    seclblC120.setVisibility(View.GONE);
-                    secC120.setVisibility(View.GONE);
-                    seclblC121.setVisibility(View.GONE);
-                    secC121a.setVisibility(View.GONE);
-                    secC121b.setVisibility(View.GONE);
-                    secC121c.setVisibility(View.GONE);
-                    secC121d.setVisibility(View.GONE);
-                    secC121e.setVisibility(View.GONE);
-                    secC121f.setVisibility(View.GONE);
-                    secC121f1.setVisibility(View.GONE);
-                    secC121g.setVisibility(View.GONE);
-                    secC121h.setVisibility(View.GONE);
-                    secC121i.setVisibility(View.GONE);
-                    secC121iX.setVisibility(View.GONE);
+                    secC113.setVisibility(View.GONE);
+                    lineC113.setVisibility(View.GONE);
+                    rdogrpC113.clearCheck();
+                      /*  seclblC119.setVisibility(View.GONE);
+                        secC119.setVisibility(View.GONE);
+                        seclblC120.setVisibility(View.GONE);
+                        secC120.setVisibility(View.GONE);
+                        seclblC121.setVisibility(View.GONE);
+                        secC121a.setVisibility(View.GONE);
+                        secC121b.setVisibility(View.GONE);
+                        secC121c.setVisibility(View.GONE);
+                        secC121d.setVisibility(View.GONE);
+                        secC121e.setVisibility(View.GONE);
+                        secC121f.setVisibility(View.GONE);
+                        secC121f1.setVisibility(View.GONE);
+                        secC121g.setVisibility(View.GONE);
+                        secC121h.setVisibility(View.GONE);
+                        secC121i.setVisibility(View.GONE);
+                        secC121iX.setVisibility(View.GONE);*/
+
                 }
             }
             Connection C = new Connection(this);
-            String childYear = C.ReturnSingleValue("Select H26Y from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
-            String childMonth = C.ReturnSingleValue("Select H26M from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
-            CHILDAGEM = Integer.valueOf(childYear) * 12 + Integer.valueOf(childMonth);
+            if (C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6")) {
+                secC113.setVisibility(View.VISIBLE);
+                lineC113.setVisibility(View.VISIBLE);
+            } else {
+                secC113.setVisibility(View.GONE);
+                lineC113.setVisibility(View.GONE);
+                rdogrpC113.clearCheck();
+                      /*  seclblC119.setVisibility(View.GONE);
+                        secC119.setVisibility(View.GONE);
+                        seclblC120.setVisibility(View.GONE);
+                        secC120.setVisibility(View.GONE);
+                        seclblC121.setVisibility(View.GONE);
+                        secC121a.setVisibility(View.GONE);
+                        secC121b.setVisibility(View.GONE);
+                        secC121c.setVisibility(View.GONE);
+                        secC121d.setVisibility(View.GONE);
+                        secC121e.setVisibility(View.GONE);
+                        secC121f.setVisibility(View.GONE);
+                        secC121f1.setVisibility(View.GONE);
+                        secC121g.setVisibility(View.GONE);
+                        secC121h.setVisibility(View.GONE);
+                        secC121i.setVisibility(View.GONE);
+                        secC121iX.setVisibility(View.GONE);*/
+
+            }
+            //   String SQL="Select H26Y from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'";
+            //   String childYear = C.ReturnSingleValue(SQL);
+            //   String childMonth = C.ReturnSingleValue("Select H26M from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
+            //    CHILDAGEM = Integer.valueOf(childYear) * 12 + Integer.valueOf(childMonth);
             
       /*      if (CHILDAGEM < 6){
                 secC119.setVisibility(View.GONE);
@@ -3074,6 +3107,7 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from (শিশুকে (নাম) জন্মের 6 months এর ভেতর কি কোনো খাবার অথবা পানীয় মুখে দিয়েছিলেন? (পানির কথা জানতে চান) ).");
                 rdoC1131.requestFocus();
                 return;
+
             } else if (txtC114d.getText().toString().length() == 0 & secC114d.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days.");
                 txtC114d.requestFocus();
@@ -3086,16 +3120,14 @@ public class FdHabit extends Activity {
                     return;
                 }
             }
-
             if (!txtC114m.getText().toString().equals("88")) {
-                if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
-                    Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months.");
+                if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "29" : txtC114m.getText().toString()) > 29) {
+                    Connection.MessageBox(FdHabit.this, "Value should be between 0 and 50(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months).");
                     txtC114m.requestFocus();
                     return;
                 }
-            }
-            if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "50" : txtC114m.getText().toString()) > 50) {
-                Connection.MessageBox(FdHabit.this, "Value should be between 0 and 50(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months).");
+            } else if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
+                Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Month.");
                 txtC114m.requestFocus();
                 return;
             } else if (!rdoC1151.isChecked() & !rdoC1152.isChecked() & secC115.isShown()) {

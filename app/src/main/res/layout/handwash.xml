@@ -685,7 +685,7 @@
                 <TextView
                     android:id="@+id/VlblM242a1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -812,7 +812,7 @@
                 <TextView
                     android:id="@+id/VlblM242b1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -939,7 +939,7 @@
                 <TextView
                     android:id="@+id/VlblM242c1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -1066,7 +1066,7 @@
                 <TextView
                     android:id="@+id/VlblM242d1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -1193,7 +1193,7 @@
                 <TextView
                     android:id="@+id/VlblM242e1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -1320,7 +1320,7 @@
                 <TextView
                     android:id="@+id/VlblM242f1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
@@ -1447,7 +1447,7 @@
                 <TextView
                     android:id="@+id/VlblM242g1"
                     android:layout_width="250sp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="আপনি কি ভাবে হাত ধৌত করেন"
                     android:textSize="20sp" />
 
