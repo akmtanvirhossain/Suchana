@@ -2843,14 +2843,14 @@ public class FdHabit extends Activity {
                     dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                     if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                     {
-                        secC113.setVisibility(View.VISIBLE);
-                        lineC113.setVisibility(View.VISIBLE);
-                    }
-                    else
-                    {
                         secC113.setVisibility(View.GONE);
                         lineC113.setVisibility(View.GONE);
                         rdogrpC113.clearCheck();
+                    }
+                    else
+                    {
+                        secC113.setVisibility(View.VISIBLE);
+                        lineC113.setVisibility(View.VISIBLE);
                       /*  seclblC119.setVisibility(View.GONE);
                         secC119.setVisibility(View.GONE);
                         seclblC120.setVisibility(View.GONE);
@@ -2889,14 +2889,14 @@ public class FdHabit extends Activity {
                 dtpC15.setText(Global.DateConvertDMY(C.ReturnSingleValue("select C15 from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "'")));
                 if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
                 {
-                    secC113.setVisibility(View.VISIBLE);
-                    lineC113.setVisibility(View.VISIBLE);
-                }
-                else
-                {
                     secC113.setVisibility(View.GONE);
                     lineC113.setVisibility(View.GONE);
                     rdogrpC113.clearCheck();
+                }
+                else
+                {
+                    secC113.setVisibility(View.VISIBLE);
+                    lineC113.setVisibility(View.VISIBLE);
                       /*  seclblC119.setVisibility(View.GONE);
                         secC119.setVisibility(View.GONE);
                         seclblC120.setVisibility(View.GONE);
@@ -2918,12 +2918,13 @@ public class FdHabit extends Activity {
             }
             Connection C = new Connection(this);
             if (C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6")) {
-                secC113.setVisibility(View.VISIBLE);
-                lineC113.setVisibility(View.VISIBLE);
-            } else {
                 secC113.setVisibility(View.GONE);
                 lineC113.setVisibility(View.GONE);
                 rdogrpC113.clearCheck();
+            } else {
+
+                secC113.setVisibility(View.VISIBLE);
+                lineC113.setVisibility(View.VISIBLE);
                       /*  seclblC119.setVisibility(View.GONE);
                         secC119.setVisibility(View.GONE);
                         seclblC120.setVisibility(View.GONE);
