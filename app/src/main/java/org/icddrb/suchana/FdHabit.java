@@ -2942,10 +2942,7 @@ public class FdHabit extends Activity {
                         secC121iX.setVisibility(View.GONE);*/
 
             }
-            //   String SQL="Select H26Y from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'";
-            //   String childYear = C.ReturnSingleValue(SQL);
-            //   String childMonth = C.ReturnSingleValue("Select H26M from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
-            //    CHILDAGEM = Integer.valueOf(childYear) * 12 + Integer.valueOf(childMonth);
+
             
       /*      if (CHILDAGEM < 6){
                 secC119.setVisibility(View.GONE);
@@ -2999,6 +2996,11 @@ public class FdHabit extends Activity {
         try {
 
             String DV = "";
+
+            String SQL="Select H26Y from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'";
+            String childYear = C.ReturnSingleValue(SQL);
+            String childMonth = C.ReturnSingleValue("Select H26M from member where suchanaID='" + SUCHANAID + "' and H21='" + Connection.SelectedSpinnerValue(spnCHSLNo.getSelectedItem().toString(), "-") + "'");
+            CHILDAGEM = Integer.valueOf(childYear) * 12 + Integer.valueOf(childMonth);
 
             if (txtRnd.getText().toString().length() == 0 & secRnd.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: রাউন্ড নাম্বার.");
@@ -3120,13 +3122,16 @@ public class FdHabit extends Activity {
                     return;
                 }
             }
-            if (!txtC114m.getText().toString().equals("88")) {
-                if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "29" : txtC114m.getText().toString()) > 29) {
+            if (!txtC114m.getText().toString().equals("88"))
+            {
+                if (Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "0" : txtC114m.getText().toString()) < 0 || Integer.valueOf(txtC114m.getText().toString().length() == 0 ? "29" : txtC114m.getText().toString()) > 29)
+                {
                     Connection.MessageBox(FdHabit.this, "Value should be between 0 and 50(সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months).");
                     txtC114m.requestFocus();
                     return;
                 }
-            } else if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
+            }
+            if (txtC114m.getText().toString().length() == 0 & secC114m.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Required field: সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Month.");
                 txtC114m.requestFocus();
                 return;
@@ -3150,7 +3155,8 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: শিশুটিকে কত দিন যাবৎ বুকের দুধ খাইয়েছেন?");
                 txtC118d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "0" : txtC118d.getText().toString()) < 0 || Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "29" : txtC118d.getText().toString()) > 29) {
+            }
+            else if (Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "0" : txtC118d.getText().toString()) < 0 || Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "29" : txtC118d.getText().toString()) > 29) {
                 Connection.MessageBox(FdHabit.this, "Value should be between 0 and 29(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন?).");
                 txtC118d.requestFocus();
                 return;
@@ -3445,7 +3451,8 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Required field: অন্যান্য উল্লেখ করুন");
                 txtC141X.requestFocus();
                 return;
-            } else if (secC117a.isShown() & (!chkC117a.isChecked() &
+            }
+            else if (secC117a.isShown() & (!chkC117a.isChecked() &
                     !chkC117b.isChecked() &
                     !chkC117c.isChecked() &
                     !chkC117d.isChecked() &
@@ -3468,14 +3475,15 @@ public class FdHabit extends Activity {
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between C117 (A to I)");
                 return;
-            } else if ((chkC142g.isChecked()) && (chkC142a.isChecked() || chkC142b.isChecked() || chkC142c.isChecked() || chkC142d.isChecked() || chkC142e.isChecked() || chkC142f.isChecked()))
+            }
+
+            else if ((chkC142g.isChecked()) && (chkC142a.isChecked() || chkC142b.isChecked() || chkC142c.isChecked() || chkC142d.isChecked() || chkC142e.isChecked() || chkC142f.isChecked()))
             {
                 Connection.MessageBox(FdHabit.this, "Inconsistent value between C142 A-G");
                 return;
             }
 
 
-            String SQL = "";
             RadioButton rb;
 
             FdHabit_DataModel objSave = new FdHabit_DataModel();
