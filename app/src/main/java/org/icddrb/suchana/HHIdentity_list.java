@@ -376,7 +376,7 @@ public class HHIdentity_list extends Activity {
             SQL += " left outer join HHIdentity h on i.rnd=h.rnd and i.suchanaid=h.suchanaid";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where";
-            SQL += " (case when i.Sampling is null then '2' else '1' end)='" + (rdoSampling1.isChecked() ? "1" : "2") + "' and";
+            SQL += " (case when i.Sampling is null then '2' else i.Sampling end)='" + (rdoSampling1.isChecked() ? "1" : "2") + "' and";
             SQL += " i.Dist like('" + D + "') and";
             SQL += " i.Upz like('" + U + "') and";
             SQL += " i.Un like('" + UN + "') and";
