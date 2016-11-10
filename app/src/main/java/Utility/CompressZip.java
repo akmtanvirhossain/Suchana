@@ -146,7 +146,9 @@ public class CompressZip {
                 if (ze.isDirectory()) {
                     createDirIfNotExists(ze.getName());
                 } else {
-                    FileOutputStream fout = new FileOutputStream(Environment.getExternalStorageDirectory() + _targetLocation + File.separator + ze.getName());
+                    File fexist = new File(Environment.getExternalStorageDirectory() + File.separator + _targetLocation + File.separator + ze.getName());
+                    if (fexist.exists()) fexist.delete();
+                    FileOutputStream fout = new FileOutputStream(Environment.getExternalStorageDirectory() + File.separator + _targetLocation + File.separator + ze.getName());
                     for (int c = zin.read(); c != -1; c = zin.read()) {
                         fout.write(c);
                     }

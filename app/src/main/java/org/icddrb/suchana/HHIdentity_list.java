@@ -376,11 +376,12 @@ public class HHIdentity_list extends Activity {
             String V = spnVill.getCount() > 0 ? spnVill.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnVill.getSelectedItem().toString(), "-") : "";
 
             //household interview
-            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,ifnull(h.Upload,'2')Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC from Screening i";
+            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,ifnull(h.Upload,'2')Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC,HHLocation from Screening i";
             SQL += " left outer join HHIdentity h on i.rnd=h.rnd and i.suchanaid=h.suchanaid";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where";
-            SQL += " (case when i.Sampling is null then '2' else i.Sampling end)='" + (rdoSampling1.isChecked() ? "1" : "2") + "' and";
+            //SQL += " (case when i.Sampling is null then '2' else i.Sampling end)='" + (rdoSampling1.isChecked() ? "1" : "2") + "' and";
+            //SQL += " (case when i.Sampling is null then '2' else '1' end)='" + (rdoSampling1.isChecked() ? "1" : "2") + "' and";
             SQL += " i.Dist like('" + D + "') and";
             SQL += " i.Upz like('" + U + "') and";
             SQL += " i.Un like('" + UN + "') and";
@@ -415,6 +416,8 @@ public class HHIdentity_list extends Activity {
                 map.put("vdate", item.getvdate().toString().length()==0 ? "" : Global.DateConvertDMY(item.getvdate()));
                 map.put("Upload",item.getUpload());
                 map.put("QC", item.getQC());
+                map.put("hhlocation", item.getHHLocation());
+
                 map.put("sl", i.toString());
                 i += 1;
                 dataList.add(map);
@@ -476,6 +479,7 @@ public class HHIdentity_list extends Activity {
             final TextView HeadName = (TextView) convertView.findViewById(R.id.HeadName);
             final TextView MobNo = (TextView) convertView.findViewById(R.id.MobNo);
             final Button cmdQC = (Button) convertView.findViewById(R.id.cmdQC);
+            final TextView hhLocation = (TextView) convertView.findViewById(R.id.hhLocation);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
             Rnd.setText(o.get("Rnd"));
@@ -491,6 +495,7 @@ public class HHIdentity_list extends Activity {
             MobNo.setText(": " + o.get("MobNo"));
 
             visitdate.setText(": " + o.get("vdate"));
+            hhLocation.setText(": " + o.get("hhlocation"));
 
             Integer i = Integer.valueOf(o.get("sl"));
 

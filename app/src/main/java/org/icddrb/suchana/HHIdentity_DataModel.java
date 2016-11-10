@@ -66,6 +66,7 @@ public class HHIdentity_DataModel {
     private String _vdate = "";
     private String _QC = "";
     private String _Sampling;
+    private String _HHLocation = "";
 
     public String getRnd() {
         return _Rnd;
@@ -522,6 +523,10 @@ public class HHIdentity_DataModel {
         _QC = newValue;
     }
 
+    public String getHHLocation() {
+        return _HHLocation;
+    }
+
     public String getSampling() {
         return _Sampling;
     }
@@ -559,6 +564,7 @@ public class HHIdentity_DataModel {
             d._vdate = cur.getString(cur.getColumnIndex("H17"));
 
             d._QC = cur.getString(cur.getColumnIndex("QC"));
+            d._HHLocation = cur.getString(cur.getColumnIndex("HHLocation"));
 
             data.add(d);
 

@@ -93,6 +93,7 @@
         <activity android:name=".HHIdentity_list_Old" />
         <activity android:name=".Adolescent_list" />
         <activity android:name=".QC" />
+        <activity android:name=".SettingFormNew" />
 
 
         <!--<activity android:name="navigationDrawer.NavigationActivity" android:label="Nav"/>-->

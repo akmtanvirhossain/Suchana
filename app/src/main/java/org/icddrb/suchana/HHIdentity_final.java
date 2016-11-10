@@ -829,6 +829,7 @@ public class HHIdentity_final extends Activity {
 
                 //for household interview
                 txtH11.setText(item.getHHNo());
+                txtH13.setText(item.getMobNo() + (item.getReqMobNo().length() > 0 ? "," + item.getReqMobNo() : ""));
 
                 //for screening
                 //txtH11.setText(item.getWRHHNo());

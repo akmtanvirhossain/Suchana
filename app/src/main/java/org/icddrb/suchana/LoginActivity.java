@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "07112016";  //Format: DDMMYYYY
+            SystemUpdateDT = "09112016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -72,7 +72,8 @@ public class LoginActivity extends Activity {
                 if (netwoekAvailable) {
                     //Call Setting Form
                     finish();
-                    Intent f1 = new Intent(getApplicationContext(), SettingForm.class);
+                    //Intent f1 = new Intent(getApplicationContext(), SettingForm.class);
+                    Intent f1 = new Intent(getApplicationContext(), SettingFormNew.class);
                     startActivity(f1);
                     return;
                 } else {
