@@ -343,6 +343,7 @@ public class Anthro extends Activity {
                 }
             });
 
+
             secC2CWeight1 = (LinearLayout) findViewById(R.id.secC2CWeight1);
             lineC2CWeight1 = findViewById(R.id.lineC2CWeight1);
             VlblC2CWeight1 = (TextView) findViewById(R.id.VlblC2CWeight1);
@@ -495,6 +496,359 @@ public class Anthro extends Activity {
             VlblC2Haemoglobin = (TextView) findViewById(R.id.VlblC2Haemoglobin);
             txtC2Haemoglobin = (EditText) findViewById(R.id.txtC2Haemoglobin);
 
+            txtC2CWeight1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CWeight1.getText().toString().length()>0 & txtC2CWeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString()) -Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            seclblWeight3.setVisibility(View.VISIBLE);
+                            secC2MCWeight3.setVisibility(View.VISIBLE);
+                            lineC2MCWeight3.setVisibility(View.VISIBLE);
+                            secC2MWeight3.setVisibility(View.VISIBLE);
+                            lineC2MWeight3.setVisibility(View.VISIBLE);
+                            secC2CWeight3.setVisibility(View.VISIBLE);
+                            lineC2CWeight3.setVisibility(View.VISIBLE);
+
+                        }
+                        else
+                        {
+                            seclblWeight3.setVisibility(View.GONE);
+                            secC2MCWeight3.setVisibility(View.GONE);
+                            lineC2MCWeight3.setVisibility(View.GONE);
+                            secC2MWeight3.setVisibility(View.GONE);
+                            lineC2MWeight3.setVisibility(View.GONE);
+                            secC2CWeight3.setVisibility(View.GONE);
+                            lineC2CWeight3.setVisibility(View.GONE);
+                            txtC2MCWeight3.setText(null);
+                            txtC2MWeight3.setText(null);
+                            txtC2CWeight3.setText(null);
+
+                        }
+                    }
+                   }
+            });
+
+
+            txtC2CWeight2.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CWeight1.getText().toString().length()>0 & txtC2CWeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString()) -Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        {
+                            seclblWeight3.setVisibility(View.VISIBLE);
+                            secC2MCWeight3.setVisibility(View.VISIBLE);
+                            lineC2MCWeight3.setVisibility(View.VISIBLE);
+                            secC2MWeight3.setVisibility(View.VISIBLE);
+                            lineC2MWeight3.setVisibility(View.VISIBLE);
+                            secC2CWeight3.setVisibility(View.VISIBLE);
+                            lineC2CWeight3.setVisibility(View.VISIBLE);
+
+                        }
+                        else
+                        {
+                            seclblWeight3.setVisibility(View.GONE);
+                            secC2MCWeight3.setVisibility(View.GONE);
+                            lineC2MCWeight3.setVisibility(View.GONE);
+                            secC2MWeight3.setVisibility(View.GONE);
+                            lineC2MWeight3.setVisibility(View.GONE);
+                            secC2CWeight3.setVisibility(View.GONE);
+                            lineC2CWeight3.setVisibility(View.GONE);
+
+                        }
+                    }
+                }
+            });
+
+
+            txtC2CHeight1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CHeight1.getText().toString().length()>0 & txtC2CHeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CHeight1.getText().toString().length() == 0 ? "0" : txtC2CHeight1.getText().toString()) -Double.parseDouble(txtC2CHeight2.getText().toString().length() == 0 ? "0" : txtC2CHeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CHeight2.getText().toString().length() == 0 ? "0" : txtC2CHeight2.getText().toString()) -Double.parseDouble(txtC2CHeight1.getText().toString().length() == 0 ? "0" : txtC2CHeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2CHeight3.setVisibility(View.VISIBLE);
+                            lineC2CHeight3.setVisibility(View.VISIBLE);
+
+
+                        }
+                        else
+                        {
+                            secC2CHeight3.setVisibility(View.GONE);
+                            lineC2CHeight3.setVisibility(View.GONE);
+                            txtC2CHeight3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+
+            txtC2CHeight2.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CHeight1.getText().toString().length()>0 & txtC2CHeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CHeight1.getText().toString().length() == 0 ? "0" : txtC2CHeight1.getText().toString()) -Double.parseDouble(txtC2CHeight2.getText().toString().length() == 0 ? "0" : txtC2CHeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CHeight2.getText().toString().length() == 0 ? "0" : txtC2CHeight2.getText().toString()) -Double.parseDouble(txtC2CHeight1.getText().toString().length() == 0 ? "0" : txtC2CHeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2CHeight3.setVisibility(View.VISIBLE);
+                            lineC2CHeight3.setVisibility(View.VISIBLE);
+
+
+                        }
+                        else
+                        {
+                            secC2CHeight3.setVisibility(View.GONE);
+                            lineC2CHeight3.setVisibility(View.GONE);
+                            txtC2CHeight3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+
+            txtC2MHeight1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2MHeight1.getText().toString().length()>0 & txtC2MHeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2MHeight1.getText().toString().length() == 0 ? "0" : txtC2MHeight1.getText().toString()) -Double.parseDouble(txtC2MHeight2.getText().toString().length() == 0 ? "0" : txtC2MHeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2MHeight2.getText().toString().length() == 0 ? "0" : txtC2MHeight2.getText().toString()) -Double.parseDouble(txtC2MHeight1.getText().toString().length() == 0 ? "0" : txtC2MHeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2MHeight3.setVisibility(View.VISIBLE);
+                            lineC2MHeight3.setVisibility(View.VISIBLE);
+
+
+                        }
+                        else
+                        {
+                            secC2MHeight3.setVisibility(View.GONE);
+                            lineC2MHeight3.setVisibility(View.GONE);
+                            txtC2MHeight3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+
+
+            txtC2MHeight2.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2MHeight1.getText().toString().length()>0 & txtC2MHeight2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2MHeight1.getText().toString().length() == 0 ? "0" : txtC2MHeight1.getText().toString()) -Double.parseDouble(txtC2MHeight2.getText().toString().length() == 0 ? "0" : txtC2MHeight2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2MHeight2.getText().toString().length() == 0 ? "0" : txtC2MHeight2.getText().toString()) -Double.parseDouble(txtC2MHeight1.getText().toString().length() == 0 ? "0" : txtC2MHeight1.getText().toString());
+                        }
+                        if(d>.5)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2MHeight3.setVisibility(View.VISIBLE);
+                            txtC2MHeight3.setVisibility(View.VISIBLE);
+                            lineC2MHeight3.setVisibility(View.VISIBLE);
+
+
+                        }
+                        else
+                        {
+                            secC2MHeight3.setVisibility(View.GONE);
+                            txtC2MHeight3.setVisibility(View.GONE);
+                            lineC2MHeight3.setVisibility(View.GONE);
+                            txtC2MHeight3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+            txtC2CMUAC1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CMUAC1.getText().toString().length()>0 & txtC2CMUAC2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CMUAC1.getText().toString().length() == 0 ? "0" : txtC2CMUAC1.getText().toString()) -Double.parseDouble(txtC2CMUAC2.getText().toString().length() == 0 ? "0" : txtC2CMUAC2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CMUAC2.getText().toString().length() == 0 ? "0" : txtC2CMUAC2.getText().toString()) -Double.parseDouble(txtC2CMUAC1.getText().toString().length() == 0 ? "0" : txtC2CMUAC1.getText().toString());
+                        }
+                        if(d>.2)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2CMUAC3.setVisibility(View.VISIBLE);
+                            lineC2CMUAC3.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secC2CMUAC3.setVisibility(View.GONE);
+                            lineC2CMUAC3.setVisibility(View.GONE);
+                            txtC2CMUAC3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+            txtC2CMUAC2.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2CMUAC1.getText().toString().length()>0 & txtC2CMUAC2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2CMUAC1.getText().toString().length() == 0 ? "0" : txtC2CMUAC1.getText().toString()) -Double.parseDouble(txtC2CMUAC2.getText().toString().length() == 0 ? "0" : txtC2CMUAC2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2CMUAC2.getText().toString().length() == 0 ? "0" : txtC2CMUAC2.getText().toString()) -Double.parseDouble(txtC2CMUAC1.getText().toString().length() == 0 ? "0" : txtC2CMUAC1.getText().toString());
+                        }
+                        if(d>.2)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2CMUAC3.setVisibility(View.VISIBLE);
+                            lineC2CMUAC3.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secC2CMUAC3.setVisibility(View.GONE);
+                            lineC2CMUAC3.setVisibility(View.GONE);
+                            txtC2CMUAC3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+            txtC2MMUAC1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2MMUAC1.getText().toString().length()>0 & txtC2MMUAC2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2MMUAC1.getText().toString().length() == 0 ? "0" : txtC2MMUAC1.getText().toString()) -Double.parseDouble(txtC2MMUAC2.getText().toString().length() == 0 ? "0" : txtC2MMUAC2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2MMUAC2.getText().toString().length() == 0 ? "0" : txtC2MMUAC2.getText().toString()) -Double.parseDouble(txtC2MMUAC1.getText().toString().length() == 0 ? "0" : txtC2MMUAC1.getText().toString());
+                        }
+                        if(d>.2)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2MMUAC3.setVisibility(View.VISIBLE);
+                            lineC2MMUAC3.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secC2MMUAC3.setVisibility(View.GONE);
+                            lineC2MMUAC3.setVisibility(View.GONE);
+                            txtC2MMUAC3.setText(null);
+
+                        }
+                    }
+                }
+            });
+            seclblWeight3.setVisibility(View.GONE);
+            secC2MCWeight3.setVisibility(View.GONE);
+            lineC2MCWeight3.setVisibility(View.GONE);
+            secC2MWeight3.setVisibility(View.GONE);
+            lineC2MWeight3.setVisibility(View.GONE);
+            secC2CWeight3.setVisibility(View.GONE);
+            lineC2CWeight3.setVisibility(View.GONE);
+
+            secC2CHeight3.setVisibility(View.GONE);
+            lineC2CHeight3.setVisibility(View.GONE);
+
+            secC2MHeight3.setVisibility(View.GONE);
+            lineC2MHeight3.setVisibility(View.GONE);
+
+            secC2CMUAC3.setVisibility(View.GONE);
+            lineC2CMUAC3.setVisibility(View.GONE);
+
+            secC2MMUAC3.setVisibility(View.GONE);
+            lineC2MMUAC3.setVisibility(View.GONE);
 
             if (C.Existence("select * from HHIdentity where Rnd='" + RND + "' and SuchanaId='" + SUCHANAID + "' and AgeGroup='3'")) {
                 secC2Haemoglobin.setVisibility(View.VISIBLE);

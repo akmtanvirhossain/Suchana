@@ -467,7 +467,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ওজন (কেজি)-৩য়"
+                    android:text="ওজন (কেজি)-৩য়(১ম ও ২য় ওজনের পার্থক্য।৫ আর বেশি হলে ৩য় ওজন নিন)"
                     android:textSize="20sp" />
             </LinearLayout>
 

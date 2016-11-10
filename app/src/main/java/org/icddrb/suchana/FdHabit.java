@@ -2851,6 +2851,7 @@ public class FdHabit extends Activity {
                     {
                         secC113.setVisibility(View.VISIBLE);
                         lineC113.setVisibility(View.VISIBLE);
+
                       /*  seclblC119.setVisibility(View.GONE);
                         secC119.setVisibility(View.GONE);
                         seclblC120.setVisibility(View.GONE);
@@ -2917,13 +2918,14 @@ public class FdHabit extends Activity {
                 }
             }
             Connection C = new Connection(this);
-            if (C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6")) {
+            if(C.Existence("select * from member where H21 ||'-'||H22='" + spnCHSLNo.getSelectedItem() + "' and cast(H26Y as int)=0 and cast(H26M as int)<=6"))
+            {
                 secC113.setVisibility(View.GONE);
                 lineC113.setVisibility(View.GONE);
                 rdogrpC113.clearCheck();
-
-            } else {
-
+            }
+            else
+            {
                 secC113.setVisibility(View.VISIBLE);
                 lineC113.setVisibility(View.VISIBLE);
                       /*  seclblC119.setVisibility(View.GONE);
@@ -3086,7 +3088,7 @@ public class FdHabit extends Activity {
                 return;
             }
 
-            if (spnC19a.getSelectedItemPosition() == 0) {
+            if (spnC19a.getSelectedItemPosition() == 0 & secC19a.isShown()) {
                 Connection.MessageBox(FdHabit.this, "Select anyone options from: আপনি জন্মের কতক্ষণ পর (নাম) কে বুকের দুধ পান করিয়েছেন?");
                 spnC19a.requestFocus();
                 return;
@@ -3170,8 +3172,8 @@ public class FdHabit extends Activity {
                 Connection.MessageBox(FdHabit.this, "Value should be between 0 and 99(শিশুটিকে কত দিন/মাস যাবৎ বুকের দুধ খাইয়েছেন?)");
                 txtC118m.requestFocus();
                 return;
-            } else if ((Integer.valueOf(txtC118d.getText().toString()) > CHILDAGEM * 30) |
-                    Integer.valueOf(txtC118m.getText().toString()) > CHILDAGEM) {
+            } else if ((Integer.valueOf(txtC118d.getText().toString().length() == 0 ? "0" : txtC118d.getText().toString()) > CHILDAGEM * 30) |
+                    Integer.valueOf(txtC118m.getText().toString().length() == 0 ? "0" : txtC118m.getText().toString()) > CHILDAGEM) {
                 Connection.MessageBox(FdHabit.this, "শিশুর বয়সের চেয়ে বুকের দুধ খাওয়ানোর সময় বেশি হবেনা");
                 txtC118d.requestFocus();
                 return;

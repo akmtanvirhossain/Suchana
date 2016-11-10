@@ -1123,6 +1123,100 @@ public class Adolescent extends Activity {
             rdoQ111 = (RadioButton) findViewById(R.id.rdoQ111);
             rdoQ112 = (RadioButton) findViewById(R.id.rdoQ112);
 
+            rdogrpQ11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpH151 = new String[]{"1", "0"};
+                    for (int i = 0; i < rdogrpQ11.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpQ11.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpH151[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("1"))
+                    {
+                        seclblQ214.setVisibility(View.VISIBLE);
+                        secQ214a.setVisibility(View.VISIBLE);
+                        secQ214b.setVisibility(View.VISIBLE);
+                        secQ214c.setVisibility(View.VISIBLE);
+                        secQ214d.setVisibility(View.VISIBLE);
+                        secQ214e.setVisibility(View.VISIBLE);
+                        secQ214f.setVisibility(View.VISIBLE);
+                        secQ214g.setVisibility(View.VISIBLE);
+                        secQ214h.setVisibility(View.VISIBLE);
+                        secQ214X.setVisibility(View.VISIBLE);
+                        secQ214X1.setVisibility(View.VISIBLE);
+                        secQ214i.setVisibility(View.VISIBLE);
+
+                        seclblQ215.setVisibility(View.VISIBLE);
+                        secQ215a.setVisibility(View.VISIBLE);
+                        secQ215b.setVisibility(View.VISIBLE);
+                        secQ215c.setVisibility(View.VISIBLE);
+                        secQ215d.setVisibility(View.VISIBLE);
+                        secQ215e.setVisibility(View.VISIBLE);
+                        secQ215f.setVisibility(View.VISIBLE);
+                        secQ215g.setVisibility(View.VISIBLE);
+                        secQ215h.setVisibility(View.VISIBLE);
+                        secQ215X.setVisibility(View.VISIBLE);
+                        secQ215X1.setVisibility(View.VISIBLE);
+
+                    } else
+                    {
+                        seclblQ214.setVisibility(View.GONE);
+                        secQ214a.setVisibility(View.GONE);
+                        secQ214b.setVisibility(View.GONE);
+                        secQ214c.setVisibility(View.GONE);
+                        secQ214d.setVisibility(View.GONE);
+                        secQ214e.setVisibility(View.GONE);
+                        secQ214f.setVisibility(View.GONE);
+                        secQ214g.setVisibility(View.GONE);
+                        secQ214h.setVisibility(View.GONE);
+                        secQ214X.setVisibility(View.GONE);
+                        secQ214X1.setVisibility(View.GONE);
+                        secQ214i.setVisibility(View.GONE);
+                        chkQ214a.setChecked(false);
+                        chkQ214b.setChecked(false);
+                        chkQ214c.setChecked(false);
+                        chkQ214d.setChecked(false);
+                        chkQ214e.setChecked(false);
+                        chkQ214f.setChecked(false);
+                        chkQ214g.setChecked(false);
+                        chkQ214h.setChecked(false);
+                        chkQ214X.setChecked(false);
+                        chkQ214i.setChecked(false);
+                        txtQ214X1.setText(null);
+
+                        seclblQ215.setVisibility(View.GONE);
+                        secQ215a.setVisibility(View.GONE);
+                        secQ215b.setVisibility(View.GONE);
+                        secQ215c.setVisibility(View.GONE);
+                        secQ215d.setVisibility(View.GONE);
+                        secQ215e.setVisibility(View.GONE);
+                        secQ215f.setVisibility(View.GONE);
+                        secQ215g.setVisibility(View.GONE);
+                        secQ215h.setVisibility(View.GONE);
+                        secQ215X.setVisibility(View.GONE);
+                        secQ215X1.setVisibility(View.GONE);
+                        chkQ215a.setChecked(false);
+                        chkQ215b.setChecked(false);
+                        chkQ215c.setChecked(false);
+                        chkQ215d.setChecked(false);
+                        chkQ215e.setChecked(false);
+                        chkQ215f.setChecked(false);
+                        chkQ215g.setChecked(false);
+                        chkQ215h.setChecked(false);
+                        chkQ215X.setChecked(false);
+                        txtQ215X1.setText(null);
+
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             seclblQ12=(LinearLayout)findViewById(R.id.seclblQ12);
             secQ12Y=(LinearLayout)findViewById(R.id.secQ12Y);
             lineQ12Y=(View)findViewById(R.id.lineQ12Y);
@@ -1917,7 +2011,7 @@ public class Adolescent extends Activity {
 
             rdoQ311 = (RadioButton) findViewById(R.id.rdoQ311);
             rdoQ312 = (RadioButton) findViewById(R.id.rdoQ312);
-            rdogrpQ31.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+          /*  rdogrpQ31.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup,int radioButtonID) {
                     String rbData = "";
@@ -1943,7 +2037,7 @@ public class Adolescent extends Activity {
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
-            });
+            });*/
             secQ32=(LinearLayout)findViewById(R.id.secQ32);
             lineQ32=(View)findViewById(R.id.lineQ32);
             VlblQ32 = (TextView) findViewById(R.id.VlblQ32);
@@ -1951,7 +2045,7 @@ public class Adolescent extends Activity {
 
             rdoQ321 = (RadioButton) findViewById(R.id.rdoQ321);
             rdoQ322 = (RadioButton) findViewById(R.id.rdoQ322);
-            rdogrpQ32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            /*rdogrpQ32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup,int radioButtonID) {
                     String rbData = "";
@@ -1981,7 +2075,7 @@ public class Adolescent extends Activity {
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
-            });
+            });*/
             secQ33=(LinearLayout)findViewById(R.id.secQ33);
             lineQ33=(View)findViewById(R.id.lineQ33);
             VlblQ33 = (TextView) findViewById(R.id.VlblQ33);

@@ -1778,7 +1778,7 @@
                     android:id="@+id/VlblH14a14q"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="q) আশা"
+                    android:text="q) সিমান্তিক"
                     android:textSize="20sp" />
 
                 <CheckBox

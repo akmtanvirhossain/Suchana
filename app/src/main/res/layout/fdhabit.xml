@@ -813,7 +813,7 @@
                     android:id="@+id/VlblC114d"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days"
+                    android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Days(এখনো কিছু দেয় নি-৮৮)"
                     android:textSize="20sp" />
 
                 <EditText
@@ -851,7 +851,7 @@
                     android:id="@+id/VlblC114m"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months"
+                    android:text="সর্বপ্রথম কোন বয়সে শিশুকে (নাম) বুকের দুধ বাদে অন্য কোনো কিছু (খাবার অথবা পানীয়) মুখে দিয়েছিলেন? Months(এখনো কিছু দেয় নি-৮৮)"
                     android:textSize="20sp" />
 
                 <EditText

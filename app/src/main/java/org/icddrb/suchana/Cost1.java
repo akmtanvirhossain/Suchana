@@ -2471,7 +2471,9 @@ public class Cost1 extends Activity {
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
             objSave.setUserId(g.getUserId());
-            objSave.setEntryUser(g.getUserId()); //from data entry user list
+            objSave.setEntryUser(g.getUserId());
+            objSave.setEnDt(Global.DateTimeNowYMDHMS());
+            //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));
 
