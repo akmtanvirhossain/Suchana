@@ -407,6 +407,7 @@ public class Cost1 extends Activity {
 
             TableName = "Cost";
 
+
             //turnGPSOn();
 
             //GPS Location
