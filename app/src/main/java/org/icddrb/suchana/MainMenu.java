@@ -154,9 +154,9 @@ public class MainMenu extends Activity {
                                         tableList.add("QC");
 
 
-                                        //tableList.add("Screening");
+                                        tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);
-                                        C.Sync_Download("VillageList", USERID, "");
+                                        //C.Sync_Download("VillageList", USERID, "");
 
                                         //Uplaod Database
                                         //C.DatabaseUpload(USERID);
