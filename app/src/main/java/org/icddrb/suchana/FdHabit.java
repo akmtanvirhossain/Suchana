@@ -194,7 +194,7 @@ public class FdHabit extends Activity {
     View lineC118m;
     TextView VlblC118m;
     EditText txtC118m;
-    LinearLayout seclblC119;
+
     LinearLayout secC119;
     View lineC119;
     TextView VlblC119;
@@ -1154,7 +1154,7 @@ public class FdHabit extends Activity {
             lineC118m = findViewById(R.id.lineC118m);
             VlblC118m = (TextView) findViewById(R.id.VlblC118m);
             txtC118m = (EditText) findViewById(R.id.txtC118m);
-            seclblC119 = (LinearLayout) findViewById(R.id.seclblC119);
+
             secC119 = (LinearLayout) findViewById(R.id.secC119);
             lineC119 = findViewById(R.id.lineC119);
             VlblC119 = (TextView) findViewById(R.id.VlblC119);
@@ -3971,7 +3971,7 @@ public class FdHabit extends Activity {
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));

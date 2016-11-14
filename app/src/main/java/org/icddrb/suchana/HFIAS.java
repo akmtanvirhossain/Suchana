@@ -919,7 +919,7 @@ public class HFIAS extends Activity {
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));

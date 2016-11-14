@@ -879,7 +879,7 @@ public class AssetNB extends Activity {
             objSave.setH42d4X2(txtH42d4X2.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));

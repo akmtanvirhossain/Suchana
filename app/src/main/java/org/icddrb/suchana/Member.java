@@ -1340,6 +1340,33 @@ public class Member extends Activity {
                 return;
 
             }
+            if(txtH21.getText().toString().equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-")))
+            {
+                Connection.MessageBox(Member.this, "পিতার লাইন ও সদস্যের লাইন একই হবে না");
+                spnH24.requestFocus();
+                return;
+            }
+            else if(txtH21.getText().toString().equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-")))
+            {
+                Connection.MessageBox(Member.this, "মাতার লাইন ও সদস্যের লাইন একই হবে না");
+                spnH221.requestFocus();
+                return;
+            }
+            else if (txtH21.getText().toString().equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
+                Connection.MessageBox(Member.this, "স্বামী অথবা স্ত্রী  ও সদস্যের লাইন একই হবে না");
+                spnH222.requestFocus();
+                return;
+            }
+            else if (Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
+                Connection.MessageBox(Member.this, "মাতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
+                spnH222.requestFocus();
+                return;
+            }
+            else if (Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
+                Connection.MessageBox(Member.this, "পিতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
+                spnH222.requestFocus();
+                return;
+            }
 
             if (Connection.SelectedSpinnerValue(spnH25.getSelectedItem().toString(), "-").equals("10") & !isHhHeadValid(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), txtH21.getText().toString())) {
                 Connection.MessageBox(Member.this, "খানা প্রধান ২ জন হতে পারবেনা");
@@ -1415,7 +1442,7 @@ public class Member extends Activity {
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));

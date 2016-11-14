@@ -385,7 +385,17 @@ public class HHIdentity_list extends Activity {
             SQL += " i.Dist like('" + D + "') and";
             SQL += " i.Upz like('" + U + "') and";
             SQL += " i.Un like('" + UN + "') and";
-            SQL += " i.Vill like('" + V + "')";
+            SQL += " i.Vill like('" + V + "') ";
+            if(spnAgeGroup.getSelectedItemPosition()==1 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='1' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==1 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling='2' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==2 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='3' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==2 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling='4' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==3 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='5' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==3 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling='6' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==4 && rdoSampling1.isChecked()==true) { SQL += "and i.Adolescent='gp' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==4 && rdoSampling2.isChecked()==true) { SQL += "and i.Adolescent='gs' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==5 && rdoSampling1.isChecked()==true) { SQL += "and i.Adolescent='bp' "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==5 && rdoSampling2.isChecked()==true) { SQL += "and i.Adolescent='bs' "; }
 
             //SQL += " where date(VDate) between '" + Global.DateConvertYMD(dtpFDate.getText().toString()) + "' and '" + Global.DateConvertYMD(dtpTDate.getText().toString()) + "'";
             //SQL += " order by date(VDate) desc, datetime(EnDt) desc";
@@ -479,6 +489,7 @@ public class HHIdentity_list extends Activity {
             final TextView HeadName = (TextView) convertView.findViewById(R.id.HeadName);
             final TextView MobNo = (TextView) convertView.findViewById(R.id.MobNo);
             final Button cmdQC = (Button) convertView.findViewById(R.id.cmdQC);
+            final Button cmdGPS = (Button) convertView.findViewById(R.id.cmdGPS);
             final TextView hhLocation = (TextView) convertView.findViewById(R.id.hhLocation);
 
             final HashMap<String, String> o = (HashMap<String, String>) dataAdap.getItem(position);
@@ -572,6 +583,21 @@ public class HHIdentity_list extends Activity {
                 }
             });
 
+            cmdGPS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    Bundle IDbundle = new Bundle();
+                    IDbundle.putString("Rnd", o.get("Rnd"));
+                    IDbundle.putString("ScreeningID", o.get("ScreeningID"));
+                    IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                    Intent f1;
+
+                    f1 = new Intent(getApplicationContext(), GPSDialogActivity.class);
+                    f1.putExtras(IDbundle);
+                    startActivity(f1);
+                }
+            });
 
             return convertView;
         }

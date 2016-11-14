@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Common.Connection;
+import Common.Global;
 
 public class Member_DataModel {
 
@@ -338,7 +339,7 @@ public class Member_DataModel {
         C = new Connection(context);
         String SQL = "";
         try {
-            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24,H25,H26Y,H26M,H27,H28,H29,H29X,H210,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H220,C15,H221,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24 + "', '" + _H25 + "', '" + _H26Y + "', '" + _H26M + "', '" + _H27 + "', '" + _H28 + "', '" + _H29 + "', '" + _H29X + "', '" + _H210 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H220 + "', '" + _C15 + "', '" + _H221 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + _EnDt + "', '" + _Upload + "')";
+            SQL = "Insert into " + TableName + " (Rnd,SuchanaID,H21,H22,H23,H24,H25,H26Y,H26M,H27,H28,H29,H29X,H210,H211,H212,H212X,H213,H214,H215,H215X,H216,H216X,H217,H218,H219,H220,C15,H221,H222,StartTime,EndTime,UserId,EntryUser,Lat,Lon,EnDt,Upload)Values('" + _Rnd + "', '" + _SuchanaID + "', '" + _H21 + "', '" + _H22 + "', '" + _H23 + "', '" + _H24 + "', '" + _H25 + "', '" + _H26Y + "', '" + _H26M + "', '" + _H27 + "', '" + _H28 + "', '" + _H29 + "', '" + _H29X + "', '" + _H210 + "', '" + _H211 + "', '" + _H212 + "', '" + _H212X + "', '" + _H213 + "', '" + _H214 + "', '" + _H215 + "', '" + _H215X + "', '" + _H216 + "', '" + _H216X + "', '" + _H217 + "', '" + _H218 + "', '" + _H219 + "', '" + _H220 + "', '" + _C15 + "', '" + _H221 + "', '" + _H222 + "', '" + _StartTime + "', '" + _EndTime + "', '" + _UserId + "', '" + _EntryUser + "', '" + _Lat + "', '" + _Lon + "', '" + Global.DateTimeNowYMDHMS() + "', '" + _Upload + "')";
             C.Save(SQL);
         } catch (Exception e) {
             response = e.getMessage();

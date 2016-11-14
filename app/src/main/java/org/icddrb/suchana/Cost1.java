@@ -2470,7 +2470,7 @@ public class Cost1 extends Activity {
             objSave.setH862d(txtH862d.getText().toString());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId());
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             //from data entry user list

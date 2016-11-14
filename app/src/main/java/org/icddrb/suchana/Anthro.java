@@ -512,7 +512,7 @@ public class Anthro extends Activity {
                         {
                             d=Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString()) -Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString());
                         }
-                        if(d>.5)
+                        if(d>.05)
                         //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
                         {
                             seclblWeight3.setVisibility(View.VISIBLE);
@@ -559,7 +559,7 @@ public class Anthro extends Activity {
                         {
                             d=Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString()) -Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString());
                         }
-                        if(d>.5)
+                        if(d>.05)
                         {
                             seclblWeight3.setVisibility(View.VISIBLE);
                             secC2MCWeight3.setVisibility(View.VISIBLE);
@@ -799,6 +799,39 @@ public class Anthro extends Activity {
             });
 
             txtC2MMUAC1.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start,
+                                              int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if(txtC2MMUAC1.getText().toString().length()>0 & txtC2MMUAC2.getText().toString().length()>0)
+                    {
+                        Double d=Double.parseDouble(txtC2MMUAC1.getText().toString().length() == 0 ? "0" : txtC2MMUAC1.getText().toString()) -Double.parseDouble(txtC2MMUAC2.getText().toString().length() == 0 ? "0" : txtC2MMUAC2.getText().toString());
+                        if(d<0)
+                        {
+                            d=Double.parseDouble(txtC2MMUAC2.getText().toString().length() == 0 ? "0" : txtC2MMUAC2.getText().toString()) -Double.parseDouble(txtC2MMUAC1.getText().toString().length() == 0 ? "0" : txtC2MMUAC1.getText().toString());
+                        }
+                        if(d>.2)
+                        //if(Double.parseDouble(txtC2CWeight1.getText().toString().length() == 0 ? "0" : txtC2CWeight1.getText().toString()) -Double.parseDouble(txtC2CWeight2.getText().toString().length() == 0 ? "0" : txtC2CWeight2.getText().toString())>.5)
+                        {
+                            secC2MMUAC3.setVisibility(View.VISIBLE);
+                            lineC2MMUAC3.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            secC2MMUAC3.setVisibility(View.GONE);
+                            lineC2MMUAC3.setVisibility(View.GONE);
+                            txtC2MMUAC3.setText(null);
+
+                        }
+                    }
+                }
+            });
+
+            txtC2MMUAC2.addTextChangedListener(new TextWatcher() {
                 public void afterTextChanged(Editable s) {
                 }
 
@@ -1151,7 +1184,7 @@ public class Anthro extends Activity {
             objSave.setEnDt(Global.DateTimeNowYMDHMS());
             objSave.setStartTime(StartTime);
             objSave.setEndTime(g.CurrentTime24());
-            objSave.setUserId(g.getUserId());
+            objSave.setUserId(g.getDeviceNo());
             objSave.setEntryUser(g.getUserId()); //from data entry user list
             //objSave.setLat(Double.toString(currentLatitude));
             //objSave.setLon(Double.toString(currentLongitude));
