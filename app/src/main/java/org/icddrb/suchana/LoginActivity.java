@@ -72,7 +72,7 @@ public class LoginActivity extends Activity {
                 if (netwoekAvailable) {
                     //Call Setting Form
                     finish();
-                    Intent f1 = new Intent(getApplicationContext(), SettingForm.class);
+                    Intent f1 = new Intent(getApplicationContext(), SettingFormNew.class);
                     startActivity(f1);
                     return;
                 } else {

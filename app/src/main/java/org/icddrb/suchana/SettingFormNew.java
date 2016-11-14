@@ -27,7 +27,6 @@ import java.util.List;
 import Common.Connection;
 import Common.Global;
 import Common.ProjectSetting;
-import Utility.CompressZip;
 
 public class SettingFormNew extends Activity {
     Connection C;
@@ -102,7 +101,7 @@ public class SettingFormNew extends Activity {
 
         CommonDBDownload commonDBDownload = new CommonDBDownload();
         commonDBDownload.setContext(getApplicationContext());
-        commonDBDownload.execute(Global.CommonDB);
+        commonDBDownload.execute(Global.CommonDBtxt);
 
     }
 
@@ -177,7 +176,8 @@ public class SettingFormNew extends Activity {
 
                 File file = Environment.getExternalStorageDirectory();
 
-                File mDatabase = new File(file.getAbsolutePath() + "/" + ProjectSetting.DatabaseFolder + "/" + ProjectSetting.zipDatabaseName);
+                //File mDatabase = new File(file.getAbsolutePath() + "/" + ProjectSetting.DatabaseFolder + "/" + ProjectSetting.zipDatabaseName);
+                File mDatabase = new File(file.getAbsolutePath() + "/" + ProjectSetting.DatabaseFolder + "/" + ProjectSetting.DatabaseName);
 
                 mDatabase.mkdir();
                 if (mDatabase.exists()) {
@@ -219,8 +219,8 @@ public class SettingFormNew extends Activity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             //File file = new File(Environment.getExternalStorageDirectory() + "/" + Global.DatabaseFolder + "/" + ProjectSetting.zipDatabaseName);
-            CompressZip unzip = new CompressZip();
-            unzip.unzip(Environment.getExternalStorageDirectory() + "/" + Global.DatabaseFolder + "/" + ProjectSetting.zipDatabaseName, Global.DatabaseFolder);
+            //CompressZip unzip = new CompressZip();
+            //unzip.unzip(Environment.getExternalStorageDirectory() + "/" + Global.DatabaseFolder + "/" + ProjectSetting.zipDatabaseName, Global.DatabaseFolder);
 
             File file = new File(Environment.getExternalStorageDirectory() + "/" + Global.DatabaseFolder + "/" + Global.DatabaseName);
             if (file.exists()) {
