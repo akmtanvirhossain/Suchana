@@ -526,7 +526,9 @@ public class HHIdentity_DataModel {
     public String getHHLocation() {
         return _HHLocation;
     }
-
+    public String getLat() {
+        return _Lat;
+    }
     public String getSampling() {
         return _Sampling;
     }
@@ -565,7 +567,8 @@ public class HHIdentity_DataModel {
 
             d._QC = cur.getString(cur.getColumnIndex("QC"));
             d._HHLocation = cur.getString(cur.getColumnIndex("HHLocation"));
-
+            d._Lat = cur.getString(cur.getColumnIndex("Lat"));
+            d._H17 = cur.getString(cur.getColumnIndex("H17"));
             data.add(d);
 
             cur.moveToNext();

@@ -144,6 +144,10 @@ public class Member_list extends Activity {
                         Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন সদস্য এন্ট্রি করতে হবে.");
                         return;
                     }
+                    if (!C.Existence("Select * from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H220='1'")) {
+                        Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন রেফারেন্স শিশু থাকতে হবে.");
+                        return;
+                    }
                     String infoMiss = C.ReturnSingleValue("Select count(*)totalmis from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and length(H23)=0");
 
                     if (Integer.valueOf(infoMiss) > 0) {
@@ -176,6 +180,10 @@ public class Member_list extends Activity {
                 public void onClick(View v) {
                     if (!C.Existence("Select Rnd from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'")) {
                         Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন সদস্য এন্ট্রি করতে হবে.");
+                        return;
+                    }
+                    if (!C.Existence("Select * from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H220='1'")) {
+                        Connection.MessageBox(Member_list.this, "Required: কমপক্ষে একজন রেফারেন্স শিশু থাকতে হবে.");
                         return;
                     }
                     String infoMiss = C.ReturnSingleValue("Select count(*)totalmis from Member where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and length(H23)=0");

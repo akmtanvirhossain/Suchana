@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.content.Context;
+import Common.Connection;
 
 public class GPSDialogActivity extends Activity implements LocationListener {
     Location currentLocation;
@@ -33,10 +35,13 @@ public class GPSDialogActivity extends Activity implements LocationListener {
     Spinner spinnerLandmarkList;
     Button btnSave;
     LocationManager locationManager;
-
+    EditText txtRnd;
+    EditText txtSuchanaID;
     Bundle IDbundle;
     static String RND = "";
     static String SUCHANAID = "";
+    Button cmdClose;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,15 +70,21 @@ public class GPSDialogActivity extends Activity implements LocationListener {
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         setContentView(R.layout.activity_gpsdialog);
 
-
-
+        txtRnd=(EditText) findViewById(R.id.txtRnd);
+        txtSuchanaID=(EditText) findViewById(R.id.txtSuchanaID);
         editTextLat = (EditText) findViewById(R.id.editTextLatitude);
         editTextLong = (EditText) findViewById(R.id.editTextLongitude);
 
         editTextAccuracy = (EditText) findViewById(R.id.editTextAccuracy);
         editTextSatCount = (EditText) findViewById(R.id.editTextSatelite);
 
+        editTextAccuracy.setEnabled(false);
+        editTextSatCount.setEnabled(false);
+        editTextLat.setEnabled(false);
+        editTextLong.setEnabled(false);
 
+        txtRnd.setText(RND);
+        txtSuchanaID.setText(SUCHANAID);
         btnSave = (Button) findViewById(R.id.cmdSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,13 +93,50 @@ public class GPSDialogActivity extends Activity implements LocationListener {
             }
         });
 
+        cmdClose = (Button) findViewById(R.id.cmdClose);
+        cmdClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GPSDialogActivity.this, HHIdentity_list.class));
+            }
+        });
     }
 
     private void saveGPSFormData() {
+
         mLat = editTextLat.getText().toString();
         mLong = editTextLong.getText().toString();
         mAccuracy = editTextAccuracy.getText().toString();
         mSatCount = editTextSatCount.getText().toString();
+        if (mLat.toString().length() == 0 ) {
+            Connection.MessageBox(GPSDialogActivity.this, "Latitude information missing");
+            return;
+        } else if (mLong.toString().length()==0) {
+            Connection.MessageBox(GPSDialogActivity.this, "Longitude information missing");
+            return;
+        }
+        if(mSatCount.toString().length()>0)
+        {
+            if(Integer.valueOf(mSatCount)>=4)
+            {
+                Connection C;
+                C = new Connection(this);
+                String SQL = "Update Screening Set Lat='" + mLat + "',Lon='" + mLong + "' where Rnd = '" + txtRnd.getText() + "' and SuchanaID = '" + txtSuchanaID.getText() + "'";
+                C.Save(SQL);
+                startActivity(new Intent(GPSDialogActivity.this, HHIdentity_list.class));
+            }
+            else
+            {
+                Connection.MessageBox(GPSDialogActivity.this, "Please wait for at least 4 satelites connection");
+                return;
+            }
+        }
+        else
+        {
+            Connection.MessageBox(GPSDialogActivity.this, "Please wait for GPS reading");
+            return;
+        }
+
     }
 
     //GPS Reading

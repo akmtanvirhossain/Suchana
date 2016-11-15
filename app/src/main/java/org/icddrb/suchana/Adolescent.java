@@ -2204,7 +2204,8 @@ public class Adolescent extends Activity {
             txtRnd.setEnabled(false);
             txtSuchanaID.setEnabled(false);
 
-            //DataSearchAdolescent(RND, SUCHANAID);
+            DataSearchScreening(RND, SUCHANAID);
+         //   DataSearchAdolescent(RND, SUCHANAID);
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -2899,6 +2900,46 @@ public class Adolescent extends Activity {
             } else {
                 Connection.MessageBox(Adolescent.this, status);
                 return;
+            }
+        } catch (Exception e) {
+            Connection.MessageBox(Adolescent.this, e.getMessage());
+            return;
+        }
+    }
+
+    private void DataSearchScreening(String Rnd, String SuchanaID) {
+        try {
+
+            RadioButton rb;
+            Screening_DataModel d = new Screening_DataModel();
+            String SQL = "Select * from Screening  Where Rnd='" + Rnd + "' and suchanaid='" + SuchanaID + "'";
+            List<Screening_DataModel> data = d.SelectAll(this, SQL);
+            for (Screening_DataModel item : data) {
+                txtRnd.setText(item.getRnd());
+                spnDist.setSelection(Global.SpinnerItemPositionAnyLength(spnDist, item.getDist()));
+                DIS = item.getDist();
+                spnUpz.setSelection(Global.SpinnerItemPositionAnyLength(spnUpz, item.getUpz()));
+                UPZ = item.getUpz();
+                spnUn.setSelection(Global.SpinnerItemPositionAnyLength(spnUn, item.getUn()));
+                UN = item.getUn();
+                spnVill.setSelection(Global.SpinnerItemPositionAnyLength(spnVill, item.getVill()));
+                VILL = item.getVill();
+
+                //for household interview
+                txtHHNo.setText(item.getHHNo());
+                txtMobNo.setText(item.getMobNo() + (item.getReqMobNo().length() > 0 ? "," + item.getReqMobNo() : ""));
+
+                //for screening
+                //txtH11.setText(item.getWRHHNo());
+                txtSuchanaID.setText(item.getScreeningID());
+
+                spnDist.setEnabled(false);
+                spnUpz.setEnabled(false);
+                spnUn.setEnabled(false);
+                spnVill.setEnabled(false);
+                txtHHNo.setEnabled(false);
+                //txtMobNo.setEnabled(false);
+                txtSuchanaID.setEnabled(false);
             }
         } catch (Exception e) {
             Connection.MessageBox(Adolescent.this, e.getMessage());

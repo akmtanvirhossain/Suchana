@@ -76,6 +76,7 @@ public class MainMenu extends Activity {
             });
 
             cmdMenuAdolescent = (Button) findViewById(R.id.cmdMenuAdolescent);
+            cmdMenuAdolescent.setVisibility(View.GONE);
             cmdMenuAdolescent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

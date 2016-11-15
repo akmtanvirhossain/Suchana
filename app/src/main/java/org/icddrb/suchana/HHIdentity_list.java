@@ -376,7 +376,7 @@ public class HHIdentity_list extends Activity {
             String V = spnVill.getCount() > 0 ? spnVill.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnVill.getSelectedItem().toString(), "-") : "";
 
             //household interview
-            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,ifnull(h.Upload,'2')Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC,HHLocation from Screening i";
+            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,ifnull(h.Upload,'2')Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC,HHLocation, case when length(i.Lat)==0 or i.Lat is null then 0 else 1 end Lat from Screening i";
             SQL += " left outer join HHIdentity h on i.rnd=h.rnd and i.suchanaid=h.suchanaid";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";
             SQL += " where";
@@ -386,7 +386,9 @@ public class HHIdentity_list extends Activity {
             SQL += " i.Upz like('" + U + "') and";
             SQL += " i.Un like('" + UN + "') and";
             SQL += " i.Vill like('" + V + "') ";
-            if(spnAgeGroup.getSelectedItemPosition()==1 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='1' "; }
+            if(spnAgeGroup.getSelectedItemPosition()==0 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling in('1','3','5') "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==0 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling in('2','4','6') "; }
+            else if(spnAgeGroup.getSelectedItemPosition()==1 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='1' "; }
             else if(spnAgeGroup.getSelectedItemPosition()==1 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling='2' "; }
             else if(spnAgeGroup.getSelectedItemPosition()==2 && rdoSampling1.isChecked()==true) { SQL += "and i.Sampling='3' "; }
             else if(spnAgeGroup.getSelectedItemPosition()==2 && rdoSampling2.isChecked()==true) { SQL += "and i.Sampling='4' "; }
@@ -427,7 +429,8 @@ public class HHIdentity_list extends Activity {
                 map.put("Upload",item.getUpload());
                 map.put("QC", item.getQC());
                 map.put("hhlocation", item.getHHLocation());
-
+                map.put("Lat", item.getLat());
+                map.put("H17", item.getH17());
                 map.put("sl", i.toString());
                 i += 1;
                 dataList.add(map);
@@ -527,7 +530,19 @@ public class HHIdentity_list extends Activity {
                 //status.setImageResource(R.mipmap.pending);
             }
 
-
+            if ( o.get("H17").length()>0 && o.get("Lat").equals("0"))
+            {
+                cmdGPS.setBackgroundColor(Color.RED);
+            }
+            else if ( o.get("H17").length()>0 && o.get("Lat").equals("1"))
+            {
+                cmdGPS.setBackgroundColor(Color.GREEN);
+            }
+            else
+            {
+               // cmdGPS.setBackgroundColor(Color.RED);
+                cmdGPS.setVisibility(View.GONE);
+            }
             //for household interview
             secListRow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -546,15 +561,31 @@ public class HHIdentity_list extends Activity {
 
                     } else {
                         //For Household Interview
-                        Bundle IDbundle = new Bundle();
-                        IDbundle.putString("Rnd", o.get("Rnd"));
-                        IDbundle.putString("ScreeningID", o.get("ScreeningID"));
-                        IDbundle.putString("SuchanaID", o.get("SuchanaID"));
-                        Intent f1;
+                        if(spnAgeGroup.getSelectedItemPosition()==4 || spnAgeGroup.getSelectedItemPosition()==5)
+                        {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", o.get("Rnd"));
+                            IDbundle.putString("ScreeningID", o.get("ScreeningID"));
+                            IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                            Intent f1;
 
-                        f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
-                        f1.putExtras(IDbundle);
-                        startActivity(f1);
+                            f1 = new Intent(getApplicationContext(), Adolescent.class);
+                            f1.putExtras(IDbundle);
+                            startActivity(f1);
+                        }
+                        else
+                        {
+                            Bundle IDbundle = new Bundle();
+                            IDbundle.putString("Rnd", o.get("Rnd"));
+                            IDbundle.putString("ScreeningID", o.get("ScreeningID"));
+                            IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                            Intent f1;
+
+                            f1 = new Intent(getApplicationContext(), HHIdentity_final.class);
+                            f1.putExtras(IDbundle);
+                            startActivity(f1);
+                        }
+
                     }
                 }
             });
