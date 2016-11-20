@@ -160,7 +160,7 @@ public class HHIdentity_list_Old extends Activity {
                     Bundle IDbundle = new Bundle();
                     IDbundle.putString("Rnd", "");
                     IDbundle.putString("SuchanaID", "");
-                    Intent intent = new Intent(getApplicationContext(), HHIdentity.class);
+                    Intent intent = new Intent(getApplicationContext(), HHIdentity_Old.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.putExtras(IDbundle);
                     startActivityForResult(intent,1);
@@ -307,7 +307,7 @@ public class HHIdentity_list_Old extends Activity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.hhidentity_row_old, null);
+                convertView = inflater.inflate(R.layout.hhidentity_row1_old, null);
             }
             LinearLayout   secListRow = (LinearLayout)convertView.findViewById(R.id.secListRow);
 

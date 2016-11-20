@@ -1357,16 +1357,31 @@ public class Member extends Activity {
                 spnH222.requestFocus();
                 return;
             }
-            else if (Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
-                Connection.MessageBox(Member.this, "মাতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
-                spnH222.requestFocus();
-                return;
+            if(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-").equalsIgnoreCase("96") || Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-").equalsIgnoreCase("97"))
+            {
+
             }
-            else if (Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
-                Connection.MessageBox(Member.this, "পিতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
-                spnH222.requestFocus();
-                return;
+            else
+            {
+                if (Connection.SelectedSpinnerValue(spnH24.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
+                    Connection.MessageBox(Member.this, "মাতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
+                    spnH222.requestFocus();
+                    return;
+                }
             }
+            if(Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-").equalsIgnoreCase("96") || Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-").equalsIgnoreCase("97") || Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-").equalsIgnoreCase("96") || Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-").equalsIgnoreCase("97"))
+            {
+
+            }
+            else
+            {
+                if (Connection.SelectedSpinnerValue(spnH221.getSelectedItem().toString(), "-").equalsIgnoreCase(Connection.SelectedSpinnerValue(spnH222.getSelectedItem().toString(), "-"))& secH222.isShown()) {
+                    Connection.MessageBox(Member.this, "পিতার লাইন ও সদস্যের স্বামী অথবা স্ত্রী  লাইন একই হবে না");
+                    spnH222.requestFocus();
+                    return;
+                }
+            }
+
 
             if (Connection.SelectedSpinnerValue(spnH25.getSelectedItem().toString(), "-").equals("10") & !isHhHeadValid(txtRnd.getText().toString(), txtSuchanaID.getText().toString(), txtH21.getText().toString())) {
                 Connection.MessageBox(Member.this, "খানা প্রধান ২ জন হতে পারবেনা");

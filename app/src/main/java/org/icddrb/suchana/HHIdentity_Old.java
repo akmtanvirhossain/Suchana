@@ -1081,7 +1081,7 @@ public class HHIdentity_Old extends Activity implements RadioGroup.OnCheckedChan
             String SQL = "";
             RadioButton rb;
 
-            HHIdentity_DataModel objSave = new HHIdentity_DataModel();
+            HHIdentity_DataModel_Old objSave = new HHIdentity_DataModel_Old();
             objSave.setRnd(txtRnd.getText().toString());
             objSave.setDist((spnDist.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnDist.getSelectedItem().toString(), "-")));
             objSave.setUpz((spnUpz.getSelectedItemPosition() == 0 ? "" : Connection.SelectedSpinnerValue(spnUpz.getSelectedItem().toString(), "-")));
@@ -1226,10 +1226,10 @@ public class HHIdentity_Old extends Activity implements RadioGroup.OnCheckedChan
         try {
 
             RadioButton rb;
-            HHIdentity_DataModel d = new HHIdentity_DataModel();
+            HHIdentity_DataModel_Old d = new HHIdentity_DataModel_Old();
             String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
-            List<HHIdentity_DataModel> data = d.SelectAll(this, SQL);
-            for (HHIdentity_DataModel item : data) {
+            List<HHIdentity_DataModel_Old> data = d.SelectAll(this, SQL);
+            for (HHIdentity_DataModel_Old item : data) {
                 lblNext.setVisibility(View.GONE);
                 cmdForward.setVisibility(View.GONE);
                 cmdHome.setVisibility(View.VISIBLE);

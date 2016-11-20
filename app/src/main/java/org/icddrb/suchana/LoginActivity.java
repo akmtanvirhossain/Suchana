@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "15112016";  //Format: DDMMYYYY
+            SystemUpdateDT = "20112016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -90,6 +90,7 @@ public class LoginActivity extends Activity {
             if (netwoekAvailable) {
                 //Database Structure Update
                 C.Sync_DatabaseStructure(UniqueID);
+                C.Sync_Download("DatabaseTab", UniqueID, "");
                 C.Sync_Download("DataCollector", UniqueID, "");
 
                 if (!C.Existence("Select * from VillageList limit 1")) {

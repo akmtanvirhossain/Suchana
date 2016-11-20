@@ -1283,7 +1283,7 @@
                     android:id="@+id/VlblM219f"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
-                    android:text="অন্যান্য"
+                    android:text="অন্যান্য ওষুধ "
                     android:textSize="20sp" />
 
                 <CheckBox

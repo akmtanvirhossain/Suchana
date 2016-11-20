@@ -19,6 +19,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.IntegerRes;
 import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
@@ -515,6 +516,34 @@ public class Illness1 extends Activity {
             });
 
 
+            spnMSlNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+                {
+                    try
+                    {
+                        Integer a=Integer.valueOf(C.ReturnSingleValue("select H26Y from member where H21 ||'-'||H22='" + spnMSlNo.getSelectedItem() + "'"));
+                        if(a>10)
+                        {
+                            secH171f.setVisibility(View.VISIBLE);
+
+                        }
+                        else
+                        {
+                            secH171f.setVisibility(View.GONE);
+                            secH171g.setVisibility(View.GONE);
+                            rdogrpH171f.clearCheck();
+                            txtH171g.setText(null);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
 
             rdogrpH171f.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -533,16 +562,21 @@ public class Illness1 extends Activity {
                         secH171g.setVisibility(View.GONE);
                         txtH171g.setText("");
 
-                    } else {
+                    } else if (rbData.equalsIgnoreCase("1") || rbData.equalsIgnoreCase("8")){
                         secH171g.setVisibility(View.VISIBLE);
 
                     }
                 }
 
+
+
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
             });
+
+            secH171f.setVisibility(View.GONE);
+            secH171g.setVisibility(View.GONE);
             DataSearch(RND,SUCHANAID,SlNo);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {

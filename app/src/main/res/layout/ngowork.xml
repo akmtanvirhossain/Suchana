@@ -298,7 +298,7 @@
                     style="@style/rowHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="H163. সুচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কি"
+                    android:text="H163. সুচনা কর্মসূচি আওতায় কোন ‘কোর’ গ্রুপের সদস্য হওয়াতে আপনি কি কি ট্রেনিং পেয়েছেন"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -1450,7 +1450,7 @@
                     android:id="@+id/VlblH168c"
                     android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:text="গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন (অনুমান)"
+                    android:text="গ্রান্ট/অনুদানগুলি কত মাস আগে পেয়েছিলেন (অনুমান)"
                     android:textSize="20sp" />
 
                 <EditText

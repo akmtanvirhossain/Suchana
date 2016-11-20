@@ -23,6 +23,7 @@ public class HHIdentity_DataModel_Final {
     private String _Vill = "";
     private String _H11 = "";
     private String _SuchanaID = "";
+    private String _ScreeningID="";
     private String _AgeGroup = "";
     private String _H17 = "";
     private String _Result = "";
@@ -111,6 +112,14 @@ public class HHIdentity_DataModel_Final {
     public void setSuchanaID(String newValue) {
         _SuchanaID = newValue;
     }
+    public String getScreeningID() {
+        return _ScreeningID;
+    }
+
+    public void setScreeningID(String newValue) {
+        _ScreeningID = newValue;
+    }
+
 
     public String getAgeGroup() {
         return _AgeGroup;
@@ -463,6 +472,7 @@ public class HHIdentity_DataModel_Final {
             d._H11 = cur.getString(cur.getColumnIndex("H11"));
 
             d._SuchanaID = cur.getString(cur.getColumnIndex("SuchanaID"));
+            d._ScreeningID = cur.getString(cur.getColumnIndex("ScreeningID"));
             d._AgeGroup = cur.getString(cur.getColumnIndex("AgeGroup"));
             d._H17 = cur.getString(cur.getColumnIndex("H17"));
             d._Result = cur.getString(cur.getColumnIndex("Result"));

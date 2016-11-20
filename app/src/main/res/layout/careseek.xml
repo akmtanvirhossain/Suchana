@@ -1798,11 +1798,11 @@
                 <EditText
                     android:id="@+id/txtH185a5"
                     style="@style/customEdit"
-                    android:layout_width="150sp"
+                    android:layout_width="220sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="numberDecimal"
-                    android:maxLength="15"
+                    android:inputType="text"
+                    android:maxLength="20"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -2155,11 +2155,11 @@
                 <EditText
                     android:id="@+id/txtH186a5"
                     style="@style/customEdit"
-                    android:layout_width="150sp"
+                    android:layout_width="220sp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10sp"
-                    android:inputType="numberDecimal"
-                    android:maxLength="15"
+                    android:inputType="text"
+                    android:maxLength="20"
                     android:textSize="20sp" />
             </LinearLayout>
 
