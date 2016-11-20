@@ -177,9 +177,7 @@ public class QC extends Activity {
     LinearLayout secM19;
     View lineM19;
     TextView VlblM19;
-    RadioGroup rdogrpM19;
-    RadioButton rdoM191;
-    RadioButton rdoM192;
+    EditText txtM19;
     LinearLayout secM115;
     View lineM115;
     TextView VlblM115;
@@ -532,10 +530,7 @@ public class QC extends Activity {
             secM19 = (LinearLayout) findViewById(R.id.secM19);
             lineM19 = (View) findViewById(R.id.lineM19);
             VlblM19 = (TextView) findViewById(R.id.VlblM19);
-            rdogrpM19 = (RadioGroup) findViewById(R.id.rdogrpM19);
-
-            rdoM191 = (RadioButton) findViewById(R.id.rdoM191);
-            rdoM192 = (RadioButton) findViewById(R.id.rdoM192);
+            txtM19 = (EditText) findViewById(R.id.txtM19);
             secM115 = (LinearLayout) findViewById(R.id.secM115);
             lineM115 = (View) findViewById(R.id.lineM115);
             VlblM115 = (TextView) findViewById(R.id.VlblM115);
@@ -548,6 +543,37 @@ public class QC extends Activity {
             lineM116 = (View) findViewById(R.id.lineM116);
             VlblM116 = (TextView) findViewById(R.id.VlblM116);
             txtM116 = (EditText) findViewById(R.id.txtM116);
+
+            rdogrpM115.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int radioButtonID) {
+                    String rbData = "";
+                    RadioButton rb;
+                    String[] d_rdogrpM115 = new String[]{"1","3", "0"};
+                    for (int i = 0; i < rdogrpM115.getChildCount(); i++) {
+                        rb = (RadioButton) rdogrpM115.getChildAt(i);
+                        if (rb.isChecked()) rbData = d_rdogrpM115[i];
+                    }
+
+                    if (rbData.equalsIgnoreCase("0") || rbData.equalsIgnoreCase("3")) {
+                        secM116.setVisibility(View.GONE);
+                        lineM116.setVisibility(View.GONE);
+                        txtM116.setVisibility(View.GONE);
+                        VlblM116.setVisibility(View.GONE);
+                        txtM116.setText("");
+                    } else {
+                        secM116.setVisibility(View.VISIBLE);
+                        lineM116.setVisibility(View.VISIBLE);
+                        txtM116.setVisibility(View.VISIBLE);
+                        VlblM116.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
+
             secM120 = (LinearLayout) findViewById(R.id.secM120);
             lineM120 = (View) findViewById(R.id.lineM120);
             VlblM120 = (TextView) findViewById(R.id.VlblM120);
@@ -839,9 +865,9 @@ public class QC extends Activity {
                 Connection.MessageBox(QC.this, "Value should be between 1 and 30(M13 আপনি সর্বমোট কতবার গর্ভধারণ করেছেন?  (সর্বমোট গর্ভধারণের সংখ্যা, গর্ভপাত/MR এবং গর্ভধারণ সহ)).");
                 txtM13.requestFocus();
                 return;
-            } else if (!rdoM191.isChecked() & !rdoM192.isChecked() & secM19.isShown()) {
+            } else if (txtM19.getText().toString().length() == 0 & secM19.isShown()) {
                 Connection.MessageBox(QC.this, "Select anyone options from (M19 আপনার ছোট শিশুটির ক্ষেত্রে গর্ভাবস্তার সময় আপনি কতবার স্বাস্থ্য পরীক্ষার জন্য গিয়েছিলেন ? (ANC)).");
-                rdoM191.requestFocus();
+
                 return;
             } else if (!rdoM1151.isChecked() & !rdoM1152.isChecked() & !rdoM1153.isChecked() & secM115.isShown()) {
                 Connection.MessageBox(QC.this, "Select anyone options from (M115 সর্বশেষ শিশুর ক্ষেত্রে আপনি কি কোনো গর্ভ পরবর্তী সেবা (PNC) পেয়েছিলেন? ).");
@@ -997,14 +1023,9 @@ public class QC extends Activity {
             objSave.setM11(txtM11.getText().toString());
             objSave.setM12(txtM12.getText().toString());
             objSave.setM13(txtM13.getText().toString());
-            String[] d_rdogrpM19 = new String[]{"1", "0"};
-            objSave.setM19("");
-            for (int i = 0; i < rdogrpM19.getChildCount(); i++) {
-                rb = (RadioButton) rdogrpM19.getChildAt(i);
-                if (rb.isChecked()) objSave.setM19(d_rdogrpM19[i]);
-            }
+            objSave.setM19(txtM19.getText().toString());
 
-            String[] d_rdogrpM115 = new String[]{"1", "2", "0"};
+            String[] d_rdogrpM115 = new String[]{"1", "3", "0"};
             objSave.setM115("");
             for (int i = 0; i < rdogrpM115.getChildCount(); i++) {
                 rb = (RadioButton) rdogrpM115.getChildAt(i);
@@ -1186,14 +1207,9 @@ public class QC extends Activity {
                 txtM11.setText(item.getM11());
                 txtM12.setText(item.getM12());
                 txtM13.setText(item.getM13());
-                String[] d_rdogrpM19 = new String[]{"1", "0"};
-                for (int i = 0; i < d_rdogrpM19.length; i++) {
-                    if (item.getM19().equals(String.valueOf(d_rdogrpM19[i]))) {
-                        rb = (RadioButton) rdogrpM19.getChildAt(i);
-                        rb.setChecked(true);
-                    }
-                }
-                String[] d_rdogrpM115 = new String[]{"1", "2", "0"};
+                txtM19.setText(item.getM19());
+
+                String[] d_rdogrpM115 = new String[]{"1", "3", "0"};
                 for (int i = 0; i < d_rdogrpM115.length; i++) {
                     if (item.getM115().equals(String.valueOf(d_rdogrpM115[i]))) {
                         rb = (RadioButton) rdogrpM115.getChildAt(i);

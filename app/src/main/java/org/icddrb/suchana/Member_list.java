@@ -267,7 +267,7 @@ public class Member_list extends Activity {
         try {
 
             Member_DataModel d = new Member_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "' order by cast(H21 as int) asc";
             ;
             List<Member_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
@@ -421,7 +421,7 @@ public class Member_list extends Activity {
     }*/
 
     private String MemberSerial(String Rnd, String SuchanaID) {
-        return C.ReturnSingleValue("Select (ifnull(max(H21),0)+1)serial from Member where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
+        return C.ReturnSingleValue("Select (ifnull(max(cast(H21 as int)),0)+1)serial from Member where Rnd='" + Rnd + "' and SuchanaId='" + SuchanaID + "'");
     }
 
 
