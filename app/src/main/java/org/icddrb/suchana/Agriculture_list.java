@@ -244,7 +244,7 @@ public class Agriculture_list extends Activity {
         try {
 
             Agriculture_DataModel d = new Agriculture_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' order by cast(Sl as int) asc";
             List<Agriculture_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 

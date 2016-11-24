@@ -1136,33 +1136,6 @@ public class Adolescent extends Activity {
 
                     if (rbData.equalsIgnoreCase("1"))
                     {
-                        seclblQ214.setVisibility(View.VISIBLE);
-                        secQ214a.setVisibility(View.VISIBLE);
-                        secQ214b.setVisibility(View.VISIBLE);
-                        secQ214c.setVisibility(View.VISIBLE);
-                        secQ214d.setVisibility(View.VISIBLE);
-                        secQ214e.setVisibility(View.VISIBLE);
-                        secQ214f.setVisibility(View.VISIBLE);
-                        secQ214g.setVisibility(View.VISIBLE);
-                        secQ214h.setVisibility(View.VISIBLE);
-                        secQ214X.setVisibility(View.VISIBLE);
-                        secQ214X1.setVisibility(View.VISIBLE);
-                        secQ214i.setVisibility(View.VISIBLE);
-
-                        seclblQ215.setVisibility(View.VISIBLE);
-                        secQ215a.setVisibility(View.VISIBLE);
-                        secQ215b.setVisibility(View.VISIBLE);
-                        secQ215c.setVisibility(View.VISIBLE);
-                        secQ215d.setVisibility(View.VISIBLE);
-                        secQ215e.setVisibility(View.VISIBLE);
-                        secQ215f.setVisibility(View.VISIBLE);
-                        secQ215g.setVisibility(View.VISIBLE);
-                        secQ215h.setVisibility(View.VISIBLE);
-                        secQ215X.setVisibility(View.VISIBLE);
-                        secQ215X1.setVisibility(View.VISIBLE);
-
-                    } else
-                    {
                         seclblQ214.setVisibility(View.GONE);
                         secQ214a.setVisibility(View.GONE);
                         secQ214b.setVisibility(View.GONE);
@@ -1208,6 +1181,35 @@ public class Adolescent extends Activity {
                         chkQ215h.setChecked(false);
                         chkQ215X.setChecked(false);
                         txtQ215X1.setText(null);
+
+                    } else
+                    {
+                        seclblQ214.setVisibility(View.VISIBLE);
+                        secQ214a.setVisibility(View.VISIBLE);
+                        secQ214b.setVisibility(View.VISIBLE);
+                        secQ214c.setVisibility(View.VISIBLE);
+                        secQ214d.setVisibility(View.VISIBLE);
+                        secQ214e.setVisibility(View.VISIBLE);
+                        secQ214f.setVisibility(View.VISIBLE);
+                        secQ214g.setVisibility(View.VISIBLE);
+                        secQ214h.setVisibility(View.VISIBLE);
+                        secQ214X.setVisibility(View.VISIBLE);
+                        // secQ214X1.setVisibility(View.VISIBLE);
+                        secQ214i.setVisibility(View.VISIBLE);
+
+                        seclblQ215.setVisibility(View.VISIBLE);
+                        secQ215a.setVisibility(View.VISIBLE);
+                        secQ215b.setVisibility(View.VISIBLE);
+                        secQ215c.setVisibility(View.VISIBLE);
+                        secQ215d.setVisibility(View.VISIBLE);
+                        secQ215e.setVisibility(View.VISIBLE);
+                        secQ215f.setVisibility(View.VISIBLE);
+                        secQ215g.setVisibility(View.VISIBLE);
+                        secQ215h.setVisibility(View.VISIBLE);
+                        secQ215X.setVisibility(View.VISIBLE);
+                        //  secQ215X1.setVisibility(View.VISIBLE);
+
+
 
                     }
                 }
@@ -2654,34 +2656,41 @@ public class Adolescent extends Activity {
                 secQ215a.requestFocus();
                 return;
             }
-            else if (secQ214a.isShown() & (!chkQ214a.isChecked() &
-                    !chkQ214b.isChecked() &
-                    !chkQ214c.isChecked() &
-                    !chkQ214d.isChecked() &
-                    !chkQ214e.isChecked() &
-                    !chkQ214f.isChecked() &
-                    !chkQ214g.isChecked() &
-                    !chkQ214h.isChecked() &
-                    !chkQ214i.isChecked() &
-                    !chkQ211X.isChecked())) {
-                Connection.MessageBox(Adolescent.this,"Required field: 2.1.4 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
-                secQ215a.requestFocus();
-                return;
+            else if(!chkQ214i.isChecked())
+            {
+                if (secQ214a.isShown() & (!chkQ214a.isChecked() &
+                        !chkQ214b.isChecked() &
+                        !chkQ214c.isChecked() &
+                        !chkQ214d.isChecked() &
+                        !chkQ214e.isChecked() &
+                        !chkQ214f.isChecked() &
+                        !chkQ214g.isChecked() &
+                        !chkQ214h.isChecked() &
+                        !chkQ211X.isChecked())) {
+                    Connection.MessageBox(Adolescent.this,"Required field: 2.1.4 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                    secQ215a.requestFocus();
+                    return;
+                }
             }
-            else if (secQ215a.isShown() & (!chkQ215a.isChecked() &
-                    !chkQ215b.isChecked() &
-                    !chkQ215c.isChecked() &
-                    !chkQ215d.isChecked() &
-                    !chkQ215e.isChecked() &
-                    !chkQ215f.isChecked() &
-                    !chkQ215g.isChecked() &
-                    !chkQ215h.isChecked() &
-                    !chkQ215X.isChecked() &
-                    !chkQ215h.isChecked())) {
-                Connection.MessageBox(Adolescent.this,"Required field: 2.1.5 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
-                secQ215a.requestFocus();
-                return;
+
+            else if(!chkQ215h.isChecked())
+            {
+                if (secQ215a.isShown() & (!chkQ215a.isChecked() &
+                        !chkQ215b.isChecked() &
+                        !chkQ215c.isChecked() &
+                        !chkQ215d.isChecked() &
+                        !chkQ215e.isChecked() &
+                        !chkQ215f.isChecked() &
+                        !chkQ215g.isChecked() &
+                        !chkQ215X.isChecked() &
+                        !chkQ215h.isChecked())) {
+                    Connection.MessageBox(Adolescent.this,"Required field: 2.1.5 CheckList থেকে কমপক্ষে একটি অপশন সিলেক্ট করুন !");
+                    secQ215a.requestFocus();
+                    return;
+                }
             }
+
+
 
             String SQL = "";
             RadioButton rb;

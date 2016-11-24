@@ -153,7 +153,7 @@ public class MainMenu extends Activity {
                                         tableList.add("Anthro");
                                         tableList.add("Father");
                                         tableList.add("QC");
-
+                                        tableList.add("Adolescent");
 
                                         //tableList.add("Screening");
                                         C.DataSync_UploadDownload(tableList, USERID);

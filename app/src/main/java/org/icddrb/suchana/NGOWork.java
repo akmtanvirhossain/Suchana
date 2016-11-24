@@ -2666,72 +2666,72 @@ public class NGOWork extends Activity {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168a.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168a.getText().toString().length() == 0 ? "1" : txtH168a.getText().toString()) < 1 || Integer.valueOf(txtH168a.getText().toString().length() == 0 ? "50" : txtH168a.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168a.getText().toString().length() == 0 ? "0" : txtH168a.getText().toString()) < 0 || Integer.valueOf(txtH168a.getText().toString().length() == 0 ? "50" : txtH168a.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168a.requestFocus();
                 return;
             } else if (txtH168b.getText().toString().length() == 0 & secH168b.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168b.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168b.getText().toString().length() == 0 ? "1" : txtH168b.getText().toString()) < 1 || Integer.valueOf(txtH168b.getText().toString().length() == 0 ? "50" : txtH168b.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168b.getText().toString().length() == 0 ? "0" : txtH168b.getText().toString()) < 0 || Integer.valueOf(txtH168b.getText().toString().length() == 0 ? "50" : txtH168b.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168b.requestFocus();
                 return;
             } else if (txtH168c.getText().toString().length() == 0 & secH168c.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168c.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168c.getText().toString().length() == 0 ? "1" : txtH168c.getText().toString()) < 1 || Integer.valueOf(txtH168c.getText().toString().length() == 0 ? "50" : txtH168c.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168c.getText().toString().length() == 0 ? "0" : txtH168c.getText().toString()) < 0 || Integer.valueOf(txtH168c.getText().toString().length() == 0 ? "50" : txtH168c.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168c.requestFocus();
                 return;
             } else if (txtH168d.getText().toString().length() == 0 & secH168d.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168d.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168d.getText().toString().length() == 0 ? "1" : txtH168d.getText().toString()) < 1 || Integer.valueOf(txtH168d.getText().toString().length() == 0 ? "50" : txtH168d.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168d.getText().toString().length() == 0 ? "0" : txtH168d.getText().toString()) < 0 || Integer.valueOf(txtH168d.getText().toString().length() == 0 ? "50" : txtH168d.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168d.requestFocus();
                 return;
             } else if (txtH168e.getText().toString().length() == 0 & secH168e.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168e.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168e.getText().toString().length() == 0 ? "1" : txtH168e.getText().toString()) < 1 || Integer.valueOf(txtH168e.getText().toString().length() == 0 ? "50" : txtH168e.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168e.getText().toString().length() == 0 ? "0" : txtH168e.getText().toString()) < 0 || Integer.valueOf(txtH168e.getText().toString().length() == 0 ? "50" : txtH168e.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168e.requestFocus();
                 return;
             } else if (txtH168f.getText().toString().length() == 0 & secH168f.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168f.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168f.getText().toString().length() == 0 ? "1" : txtH168f.getText().toString()) < 1 || Integer.valueOf(txtH168f.getText().toString().length() == 0 ? "50" : txtH168f.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168f.getText().toString().length() == 0 ? "0" : txtH168f.getText().toString()) < 0 || Integer.valueOf(txtH168f.getText().toString().length() == 0 ? "50" : txtH168f.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168f.requestFocus();
                 return;
             } else if (txtH168g.getText().toString().length() == 0 & secH168g.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168g.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168g.getText().toString().length() == 0 ? "1" : txtH168g.getText().toString()) < 1 || Integer.valueOf(txtH168g.getText().toString().length() == 0 ? "50" : txtH168g.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168g.getText().toString().length() == 0 ? "0" : txtH168g.getText().toString()) < 0 || Integer.valueOf(txtH168g.getText().toString().length() == 0 ? "50" : txtH168g.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168g.requestFocus();
                 return;
             } else if (txtH168h.getText().toString().length() == 0 & secH168h.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168h.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168h.getText().toString().length() == 0 ? "1" : txtH168h.getText().toString()) < 1 || Integer.valueOf(txtH168h.getText().toString().length() == 0 ? "50" : txtH168h.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168h.getText().toString().length() == 0 ? "0" : txtH168h.getText().toString()) < 0 || Integer.valueOf(txtH168h.getText().toString().length() == 0 ? "50" : txtH168h.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168h.requestFocus();
                 return;
             } else if (txtH168i.getText().toString().length() == 0 & secH168i.isShown()) {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168i.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168i.getText().toString().length() == 0 ? "1" : txtH168i.getText().toString()) < 1 || Integer.valueOf(txtH168i.getText().toString().length() == 0 ? "50" : txtH168i.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168i.getText().toString().length() == 0 ? "0" : txtH168i.getText().toString()) < 0 || Integer.valueOf(txtH168i.getText().toString().length() == 0 ? "50" : txtH168i.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168i.requestFocus();
                 return;
             } else if (txtH167x1.getText().toString().length() == 0 & secH167x1.isShown()) {
@@ -2742,8 +2742,8 @@ public class NGOWork extends Activity {
                 Connection.MessageBox(NGOWork.this, "Required field: গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন.");
                 txtH168x.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH168x.getText().toString().length() == 0 ? "1" : txtH168x.getText().toString()) < 1 || Integer.valueOf(txtH168x.getText().toString().length() == 0 ? "50" : txtH168x.getText().toString()) > 50) {
-                Connection.MessageBox(NGOWork.this, "Value should be between 1 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
+            } else if (Integer.valueOf(txtH168x.getText().toString().length() == 0 ? "0" : txtH168x.getText().toString()) < 0 || Integer.valueOf(txtH168x.getText().toString().length() == 0 ? "50" : txtH168x.getText().toString()) > 50) {
+                Connection.MessageBox(NGOWork.this, "Value should be between 0 and 50(গ্রান্ট/অনুদানগুলি কবে পেয়েছিলেন).");
                 txtH168x.requestFocus();
                 return;
             } else if (!rdoH1691.isChecked()& !rdoH1692.isChecked() & secH169.isShown()) {

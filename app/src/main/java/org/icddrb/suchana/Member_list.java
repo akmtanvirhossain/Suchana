@@ -381,7 +381,7 @@ public class Member_list extends Activity {
                     objSave.setH22(txtH22.getText().toString());
                     objSave.setStartTime(StartTime);
                     objSave.setEndTime(g.CurrentTime24());
-                    objSave.setUserId(g.getUserId());
+                    objSave.setUserId(g.getDeviceNo());
                     objSave.setEntryUser(g.getUserId()); //from data entry user list
                     String status = objSave.SaveUpdateData(Member_list.this);
 

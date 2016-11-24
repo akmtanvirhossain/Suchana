@@ -139,7 +139,7 @@ public class AssetNB extends Activity {
     Button buttonAssetType12;
     Button buttonAssetType13;
     Button buttonAssetType14;
-    Button buttonAssetType15;
+    Button buttonAssetType99;
     boolean allItemsCompleted = false;
     Button cmdSave;
     ImageButton cmdForward;
@@ -298,7 +298,7 @@ public class AssetNB extends Activity {
             buttonAssetType12 = (Button) findViewById(R.id.buttonAssetType12);
             buttonAssetType13 = (Button) findViewById(R.id.buttonAssetType13);
             buttonAssetType14 = (Button) findViewById(R.id.buttonAssetType14);
-            buttonAssetType15 = (Button) findViewById(R.id.buttonAssetType15);
+            buttonAssetType99 = (Button) findViewById(R.id.buttonAssetType99);
 
             buttonColor();
 
@@ -430,13 +430,13 @@ public class AssetNB extends Activity {
                     spnH42a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
                 }
             });
-            buttonAssetType15.setOnClickListener(new View.OnClickListener() {
+            buttonAssetType99.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     buttonColor();
                     (v).setBackgroundColor(Color.CYAN);
                     ;
-                    spnH42a.setSelection(Integer.valueOf((((Button) v).getText().toString())));
+                    spnH42a.setSelection(15);
                 }
             });
 
@@ -463,7 +463,7 @@ public class AssetNB extends Activity {
             listH42a.add("12-অলঙ্কার");
             listH42a.add("13-বিয়ে বা পালা পর্বনের জন্য দামি শাড়ি");
             listH42a.add("14- অন্যান্য");
-            listH42a.add("15- অন্যান্য");
+            listH42a.add("99- কিছুই নাই");
             ArrayAdapter<String> adptrH42a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH42a);
             spnH42a.setAdapter(adptrH42a);
             spnH42a.setClickable(false);
@@ -485,9 +485,6 @@ public class AssetNB extends Activity {
 
                     if (spnData.equalsIgnoreCase("14")) {
                         secH42aX.setVisibility(View.VISIBLE);
-                    } else if (spnData.equalsIgnoreCase("15")) {
-                        secH42aX.setVisibility(View.VISIBLE);
-
                     } else {
                         txtH42aX.setText("");
                         secH42aX.setVisibility(View.GONE);
@@ -723,7 +720,7 @@ public class AssetNB extends Activity {
         buttonAssetType12.setBackgroundColor(Color.LTGRAY);
         buttonAssetType13.setBackgroundColor(Color.LTGRAY);
         buttonAssetType14.setBackgroundColor(Color.LTGRAY);
-        buttonAssetType15.setBackgroundColor(Color.LTGRAY);
+        buttonAssetType99.setBackgroundColor(Color.LTGRAY);
 
         AssetNB_DataModel d = new AssetNB_DataModel();
         String SQL = "Select H42a from " + TableName + "  Where Rnd='" + txtRnd.getText().toString() + "' and SuchanaID='" + txtSuchanaID.getText().toString() + "'";
@@ -787,8 +784,8 @@ public class AssetNB extends Activity {
             if (code == 14) {
                 buttonAssetType14.setBackgroundColor(color);
             }
-            if (code == 15) {
-                buttonAssetType15.setBackgroundColor(color);
+            if (code == 99) {
+                buttonAssetType99.setBackgroundColor(color);
             }
 
         }
@@ -800,56 +797,74 @@ public class AssetNB extends Activity {
         try {
 
             String DV = "";
+            if( Connection.SelectedSpinnerValue(spnH42a.getSelectedItem().toString(), "-").equalsIgnoreCase("99"))
+            {
+                if (C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"))
+                {
+                    Connection.MessageBox(AssetNB.this, "99 is not applicable here.");
+                    return;
+                }
+            }
+            else  if (C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H42a='99'"))
+            {
+                Connection.MessageBox(AssetNB.this, "Perviusly mentioned This household has no asset.");
+                return;
+            }
+            if( Connection.SelectedSpinnerValue(spnH42a.getSelectedItem().toString(), "-").equalsIgnoreCase("99"))
+            {
 
-            if (txtRnd.getText().toString().length() == 0 & secRnd.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: রাউন্ড নাম্বার.");
-                txtRnd.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "1" : txtRnd.getText().toString()) < 1 || Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "5" : txtRnd.getText().toString()) > 5) {
-                Connection.MessageBox(AssetNB.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
-                txtRnd.requestFocus();
-                return;
-            } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: উপকারভোগী সদস্য আইডি.");
-                txtSuchanaID.requestFocus();
-                return;
-            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                spnMSlNo.requestFocus();
-                return;
-            } else if (spnH42a.getSelectedItemPosition() == 0 & secH42a.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: সম্পদ.");
-                spnH42a.requestFocus();
-                return;
-            } else if (txtH42aX.getText().toString().length() == 0 & secH42aX.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: অন্যান্য সম্পদ.");
-                txtH42aX.requestFocus();
-                return;
-            } else if (txtH42b.getText().toString().length() == 0 & secH42b.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: সংখ্যা.");
-                txtH42b.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH42b.getText().toString().length() == 0 ? "0" : txtH42b.getText().toString()) < 0 || Integer.valueOf(txtH42b.getText().toString().length() == 0 ? "99" : txtH42b.getText().toString()) > 99) {
-                Connection.MessageBox(AssetNB.this, "Value should be between 0 and 99(সংখ্যা).");
-                txtH42b.requestFocus();
-                return;
-            } else if (txtH42c.getText().toString().length() == 0 & secH42c.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: সম্পদের বর্তমান মূল্য.");
-                txtH42c.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH42c.getText().toString().length() == 0 ? "0" : txtH42c.getText().toString()) < 0 || Integer.valueOf(txtH42c.getText().toString().length() == 0 ? "999999" : txtH42c.getText().toString()) > 999999) {
-                Connection.MessageBox(AssetNB.this, "Value should be between 0 and 999999(সম্পদের বর্তমান মূল্য).");
-                txtH42c.requestFocus();
-                return;
-            } else if (!chkH42d1.isChecked() && !chkH42d2.isChecked() && !chkH42d3.isChecked() && !chkH42d4.isChecked() && secH42d1.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: কিভাবে বদলি করেছেন ");
-                chkH42d1.requestFocus();
-                return;
-            } else if (txtH42d4X.getText().toString().length() == 0 & secH42d4X.isShown()) {
-                Connection.MessageBox(AssetNB.this, "Required field: অনান্য উল্লেখ করুন.");
-                txtH42d4X.requestFocus();
-                return;
-            } /*else if (txtH42d4X1.getText().toString().length() == 0 & secH42d4X1.isShown()) {
+            }
+            else
+            {
+                if (txtRnd.getText().toString().length() == 0 & secRnd.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: রাউন্ড নাম্বার.");
+                    txtRnd.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "1" : txtRnd.getText().toString()) < 1 || Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "5" : txtRnd.getText().toString()) > 5) {
+                    Connection.MessageBox(AssetNB.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
+                    txtRnd.requestFocus();
+                    return;
+                } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: উপকারভোগী সদস্য আইডি.");
+                    txtSuchanaID.requestFocus();
+                    return;
+                } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                    spnMSlNo.requestFocus();
+                    return;
+                } else if (spnH42a.getSelectedItemPosition() == 0 & secH42a.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: সম্পদ.");
+                    spnH42a.requestFocus();
+                    return;
+                } else if (txtH42aX.getText().toString().length() == 0 & secH42aX.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: অন্যান্য সম্পদ.");
+                    txtH42aX.requestFocus();
+                    return;
+                } else if (txtH42b.getText().toString().length() == 0 & secH42b.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: সংখ্যা.");
+                    txtH42b.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH42b.getText().toString().length() == 0 ? "0" : txtH42b.getText().toString()) < 0 || Integer.valueOf(txtH42b.getText().toString().length() == 0 ? "99" : txtH42b.getText().toString()) > 99) {
+                    Connection.MessageBox(AssetNB.this, "Value should be between 0 and 99(সংখ্যা).");
+                    txtH42b.requestFocus();
+                    return;
+                } else if (txtH42c.getText().toString().length() == 0 & secH42c.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: সম্পদের বর্তমান মূল্য.");
+                    txtH42c.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH42c.getText().toString().length() == 0 ? "0" : txtH42c.getText().toString()) < 0 || Integer.valueOf(txtH42c.getText().toString().length() == 0 ? "999999" : txtH42c.getText().toString()) > 999999) {
+                    Connection.MessageBox(AssetNB.this, "Value should be between 0 and 999999(সম্পদের বর্তমান মূল্য).");
+                    txtH42c.requestFocus();
+                    return;
+                } else if (!chkH42d1.isChecked() && !chkH42d2.isChecked() && !chkH42d3.isChecked() && !chkH42d4.isChecked() && secH42d1.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: কিভাবে বদলি করেছেন ");
+                    chkH42d1.requestFocus();
+                    return;
+                } else if (txtH42d4X.getText().toString().length() == 0 & secH42d4X.isShown()) {
+                    Connection.MessageBox(AssetNB.this, "Required field: অনান্য উল্লেখ করুন.");
+                    txtH42d4X.requestFocus();
+                    return;
+                } /*else if (txtH42d4X1.getText().toString().length() == 0 & secH42d4X1.isShown()) {
                 Connection.MessageBox(AssetNB.this, "Required field: অনান্য উল্লেখ করুন.");
                 txtH42d4X1.requestFocus();
                 return;
@@ -858,6 +873,8 @@ public class AssetNB extends Activity {
                 txtH42d4X2.requestFocus();
                 return;
             }*/
+
+            }
 
             String SQL = "";
             RadioButton rb;

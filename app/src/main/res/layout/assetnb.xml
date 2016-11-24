@@ -354,12 +354,12 @@
                         android:text="14" />
 
                     <Button
-                        android:id="@+id/buttonAssetType15"
+                        android:id="@+id/buttonAssetType99"
                         android:layout_width="55sp"
                         android:layout_height="match_parent"
                         android:layout_margin="2sp"
                         android:layout_weight="1"
-                        android:text="15" />
+                        android:text="99" />
 
 
                 </LinearLayout>

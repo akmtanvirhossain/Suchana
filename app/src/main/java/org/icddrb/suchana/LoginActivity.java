@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "20112016";  //Format: DDMMYYYY
+            SystemUpdateDT = "22112016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -105,43 +105,44 @@ public class LoginActivity extends Activity {
             uid.setSelection(Global.SpinnerItemPosition(uid, CL[0].length(), C.ReturnSingleValue("Select UserId from LastLogin")));
 
             //Only for removing the data of training: 10 Oct 2016
-            if (Global.DateNowDMY().equals("10/10/2016"))
+            if (Global.DateNowDMY().equals("22/11/2016") || Global.DateNowDMY().equals("23/11/2016"))
             {
-                /*if(!C.Existence("Select * from ProcessTab where Userid='"+ UniqueID +"' and ProcessId='1'")) {
-                    C.Save("Delete from Screening");
-                    C.Save("Delete from Agriculture");
-                    C.Save("Delete from Anthro");
-                    C.Save("Delete from AssetB");
-                    C.Save("Delete from AssetNB");
-                    C.Save("Delete from Careseek");
-                    C.Save("Delete from Cost");
-                    C.Save("Delete from Destruction1");
-                    C.Save("Delete from Destruction2");
-                    C.Save("Delete from DomViolance");
-                    C.Save("Delete from EntryStatus");
-                    C.Save("Delete from Father");
-                    C.Save("Delete from FdHabit");
-                    C.Save("Delete from FdHabitKnow");
-                    C.Save("Delete from FoodDiversity");
-                    C.Save("Delete from HandWash");
-                    C.Save("Delete from HDDS");
-                    C.Save("Delete from HFIAS");
-                    C.Save("Delete from HHIdentity");
-                    C.Save("Delete from IGA");
-                    C.Save("Delete from Illness1");
-                    C.Save("Delete from Illness2");
-                    C.Save("Delete from Knowledge");
-                    C.Save("Delete from Land");
-                    C.Save("Delete from Loan");
-                    C.Save("Delete from Member");
-                    C.Save("Delete from NGOWork");
-                    C.Save("Delete from NutHealth");
-                    C.Save("Delete from PregHis");
-                    C.Save("Delete from Savings");
-                    C.Save("Delete from SES");
-                    C.Save("Delete from WomenEmp");
-                    C.Save("Delete from Father");
-                }*/
+
+                    C.Save("Delete from Agriculture where  endt<'2016-11-22'");
+                    C.Save("Delete from Anthro where  endt<'2016-11-22'");
+                    C.Save("Delete from AssetB where  endt<'2016-11-22'");
+                    C.Save("Delete from AssetNB where  endt<'2016-11-22'");
+                    C.Save("Delete from Careseek where  endt<'2016-11-22'");
+                    C.Save("Delete from Cost where  endt<'2016-11-22'");
+                    C.Save("Delete from Destruction1 where  endt<'2016-11-22'");
+                    C.Save("Delete from Destruction2 where  endt<'2016-11-22'");
+                    C.Save("Delete from DomViolance where  endt<'2016-11-22'");
+                  //  C.Save("Delete from EntryStatus where  endt<'2016-11-22'");
+                    C.Save("Delete from Father where  endt<'2016-11-22'");
+                    C.Save("Delete from FdHabit where  endt<'2016-11-22'");
+                    C.Save("Delete from FdHabitKnow where  endt<'2016-11-22'");
+                    C.Save("Delete from FoodDiversity where  endt<'2016-11-22'");
+                    C.Save("Delete from HandWash where  endt<'2016-11-22'");
+                    C.Save("Delete from HDDS where  endt<'2016-11-22'");
+                    C.Save("Delete from HFIAS where  endt<'2016-11-22'");
+                    C.Save("Delete from HHIdentity where  endt<'2016-11-22'");
+                    C.Save("Delete from IGA where  endt<'2016-11-22'");
+                    C.Save("Delete from Illness1 where  endt<'2016-11-22'");
+                    C.Save("Delete from Illness2 where  endt<'2016-11-22'");
+                    C.Save("Delete from Knowledge where  endt<'2016-11-22'");
+                    C.Save("Delete from Land where  endt<'2016-11-22'");
+                    C.Save("Delete from Loan where  endt<'2016-11-22'");
+                    C.Save("Delete from Member where  endt<'2016-11-22'");
+                    C.Save("Delete from NGOWork where  endt<'2016-11-22'");
+                    C.Save("Delete from NutHealth where  endt<'2016-11-22'");
+                    C.Save("Delete from PregHis where  endt<'2016-11-22'");
+                    C.Save("Delete from Savings where  endt<'2016-11-22'");
+                    C.Save("Delete from SES where  endt<'2016-11-22'");
+                    C.Save("Delete from WomenEmp where  endt<'2016-11-22'");
+                    C.Save("Delete from Father where  endt<'2016-11-22'");
+                    C.Save("Delete from Adolescent where  endt<'2016-11-22'");
+                    C.Save("Delete from QC where  endt<'2016-11-22'");
+
             }
 
             Button btnClose = (Button) findViewById(R.id.btnClose);

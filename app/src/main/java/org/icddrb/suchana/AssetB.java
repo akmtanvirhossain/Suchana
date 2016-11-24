@@ -382,7 +382,7 @@ public class AssetB extends Activity {
             listH41a.add("19-সেলাই মেশিন");
             listH41a.add("20-CNG/নসিমন");
             listH41a.add("21-অন্যান্য");
-            listH41a.add("22-অন্যান্য");
+            listH41a.add("99-কিছুই নাই");
             ArrayAdapter<String> adptrH41a = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listH41a);
             spnH41a.setAdapter(adptrH41a);
 
@@ -996,152 +996,172 @@ public class AssetB extends Activity {
     private void DataSave() {
         try {
 
-            String DV = "";
+            if( Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-").equalsIgnoreCase("99"))
+            {
+                if (C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "'"))
+                {
+                    Connection.MessageBox(AssetB.this, "99 is not applicable here.");
+                    return;
+                }
+            }
+            else  if (C.Existence("Select * from " + TableName + "  Where Rnd='" + RND + "' and SuchanaID='" + SUCHANAID + "' and H41a='99'"))
+            {
+                Connection.MessageBox(AssetB.this, "Perviusly mentioned This household has no asset.");
+                return;
+            }
+            if( Connection.SelectedSpinnerValue(spnH41a.getSelectedItem().toString(), "-").equalsIgnoreCase("99"))
+            {
+            }
+            else
+            {
+                String DV = "";
 
-            if (txtRnd.getText().toString().length() == 0 & secRnd.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: রাউন্ড নাম্বার.");
-                txtRnd.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "1" : txtRnd.getText().toString()) < 1 || Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "5" : txtRnd.getText().toString()) > 5) {
-                Connection.MessageBox(AssetB.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
-                txtRnd.requestFocus();
-                return;
-            } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: উপকারভোগী সদস্য আইডি.");
-                txtSuchanaID.requestFocus();
-                return;
-            } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
-                spnMSlNo.requestFocus();
-                return;
-            } else if (txtSlNo.getText().toString().length() == 0 & secSlNo.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: Serial No.");
-                txtSlNo.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "01" : txtSlNo.getText().toString()) < 01 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "10" : txtSlNo.getText().toString()) > 10) {
-                Connection.MessageBox(AssetB.this, "Value should be between 01 and 10(Serial No).");
-                txtSlNo.requestFocus();
-                return;
-            } else if (spnH41a.getSelectedItemPosition() == 0 & secH41a.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: সম্পদ.");
-                spnH41a.requestFocus();
-                return;
-            } else if (txtH41aX.getText().toString().length() == 0 & secH41aX.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: অন্যান্য সম্পদ.");
-                txtH41aX.requestFocus();
-                return;
-            } else if (txtH41b.getText().toString().length() == 0 & secH41b.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
-                txtH41b.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "00" : txtH41b.getText().toString()) < 00 || Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "999" : txtH41b.getText().toString()) > 999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 00 and 999(সংখ্যা).");
-                txtH41b.requestFocus();
-                return;
-            } else if (txtH41c.getText().toString().length() == 0 & secH41c.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন).");
-                txtH41c.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "000" : txtH41c.getText().toString()) < 000 || Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "999" : txtH41c.getText().toString()) > 999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 000 and 999(এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন)).");
-                txtH41c.requestFocus();
-                return;
-            } else if (txtH41d.getText().toString().length() == 0 & secH41d.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদের বর্তমান মূল্য.");
-                txtH41d.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41d.getText().toString().length() == 0 ? "00" : txtH41d.getText().toString()) < 00 || Integer.valueOf(txtH41d.getText().toString().length() == 0 ? "999999" : txtH41d.getText().toString()) > 999999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 00 and 999999(এই সম্পদের বর্তমান মূল্য).");
-                txtH41d.requestFocus();
-                return;
-            } else if (spnH41e.getSelectedItemPosition() == 0 & secH41e.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ কিভাবে অর্জিত হয়েছে.");
-                spnH41e.requestFocus();
-                return;
-            } else if (txtH41eX.getText().toString().length() == 0 & secH41eX.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH41eX.requestFocus();
-                return;
-            } else if (spnH41f.getSelectedItemPosition() == 0 & secH41f.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: যদি ক্রয় করে থাকেন তাহলে অর্থায়ন কি ভাবে হয়েছিল.");
-                spnH41f.requestFocus();
-                return;
-            } else if (txtH41fX.getText().toString().length() == 0 & secH41fX.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH41fX.requestFocus();
-                return;
-            } else if (!rdoH41g1.isChecked() & !rdoH41g2.isChecked() & secH41g.isShown()) {
-                Connection.MessageBox(AssetB.this, "Select anyone options from (এই সম্পদ কি কারোর সাথে ভাগাভাগি করেন).");
-                rdoH41g1.requestFocus();
-                return;
-            } else if (txtH41h.getText().toString().length() == 0 & secH41h.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?.");
-                txtH41h.requestFocus();
-                return;
-            } else if (Double.valueOf(txtH41h.getText().toString().length() == 0 ? "1" : txtH41h.getText().toString()) < 1 || Double.valueOf(txtH41h.getText().toString().length() == 0 ? "100" : txtH41h.getText().toString()) > 100) {
-                Connection.MessageBox(AssetB.this, "Value should be between 1 and 100(সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?).");
-                txtH41h.requestFocus();
-                return;
-            } else if (txtH41i.getText().toString().length() == 0 & secH41i.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
-                txtH41i.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "0" : txtH41i.getText().toString()) < 0 || Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "999" : txtH41i.getText().toString()) > 999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 0 and 999(সংখ্যা).");
-                txtH41i.requestFocus();
-                return;
-            } else if (txtH41j.getText().toString().length() == 0 & secH41j.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: কবে থেকে আছে (সর্বোচ্চ সময়কাল উল্লেখ করুন) (মাস).");
-                txtH41j.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41j.getText().toString().length() == 0 ? "1" : txtH41j.getText().toString()) < 1 || Integer.valueOf(txtH41j.getText().toString().length() == 0 ? "99" : txtH41j.getText().toString()) > 99) {
-                Connection.MessageBox(AssetB.this, "Value should be between 1 and 99(কবে থেকে আছে (সর্বোচ্চ সময়কাল উল্লেখ করুন) (মাস)).");
-                txtH41j.requestFocus();
-                return;
-            } else if (spnH41k.getSelectedItemPosition() == 0 & secH41k.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: কার কাছ থেকে কোথা থেকে পেয়েছেন.");
-                spnH41k.requestFocus();
-                return;
-            } else if (txtH41kX.getText().toString().length() == 0 & secH41kX.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH41kX.requestFocus();
-                return;
-            } else if (txtH41l.getText().toString().length() == 0 & secH41l.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
-                txtH41l.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41l.getText().toString().length() == 0 ? "0" : txtH41l.getText().toString()) < 0 || Integer.valueOf(txtH41l.getText().toString().length() == 0 ? "999" : txtH41l.getText().toString()) > 999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 0 and 999(সংখ্যা).");
-                txtH41l.requestFocus();
-                return;
-            } else if (txtH41m.getText().toString().length() == 0 & secH41m.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ বিক্রী বা হস্তান্তরের সময় মূল্য কত ছিল.");
-                txtH41m.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41m.getText().toString().length() == 0 ? "0" : txtH41m.getText().toString()) < 0 || Integer.valueOf(txtH41m.getText().toString().length() == 0 ? "999999" : txtH41m.getText().toString()) > 999999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 0 and 999999(এই সম্পদ বিক্রী বা হস্তান্তরের সময় মূল্য কত ছিল).");
-                txtH41m.requestFocus();
-                return;
-            } else if (txtH41n.getText().toString().length() == 0 & secH41n.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদের বর্তমান মূল্য কত.");
-                txtH41n.requestFocus();
-                return;
-            } else if (Integer.valueOf(txtH41n.getText().toString().length() == 0 ? "0" : txtH41n.getText().toString()) < 0 || Integer.valueOf(txtH41n.getText().toString().length() == 0 ? "999999" : txtH41n.getText().toString()) > 999999) {
-                Connection.MessageBox(AssetB.this, "Value should be between 0 and 999999(এই সম্পদের বর্তমান মূল্য কত).");
-                txtH41n.requestFocus();
-                return;
-            } else if (txtH41o4X.getText().toString().length() == 0 & secH41o4X.isShown()) {
-                Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
-                txtH41o4X.requestFocus();
-                return;
-            } else if (secH41o1.isShown() & !chkH41o1.isChecked() & !chkH41o2.isChecked() & !chkH41o3.isChecked() & !chkH41o4.isChecked()) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন");
-                secH41o1.requestFocus();
-                return;
-            } else if (secH41aX.isShown() & txtH41aX.getText().toString().length() == 0) {
-                Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন অন্যান্য");
-                txtH41aX.requestFocus();
-                return;
+                if (txtRnd.getText().toString().length() == 0 & secRnd.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: রাউন্ড নাম্বার.");
+                    txtRnd.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "1" : txtRnd.getText().toString()) < 1 || Integer.valueOf(txtRnd.getText().toString().length() == 0 ? "5" : txtRnd.getText().toString()) > 5) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 1 and 5(রাউন্ড নাম্বার).");
+                    txtRnd.requestFocus();
+                    return;
+                } else if (txtSuchanaID.getText().toString().length() == 0 & secSuchanaID.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: উপকারভোগী সদস্য আইডি.");
+                    txtSuchanaID.requestFocus();
+                    return;
+                } else if (spnMSlNo.getSelectedItemPosition() == 0 & secMSlNo.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: তথ্যদানে সহায়তাকারীর লাইন নম্বর #.");
+                    spnMSlNo.requestFocus();
+                    return;
+                } else if (txtSlNo.getText().toString().length() == 0 & secSlNo.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: Serial No.");
+                    txtSlNo.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "01" : txtSlNo.getText().toString()) < 01 || Integer.valueOf(txtSlNo.getText().toString().length() == 0 ? "10" : txtSlNo.getText().toString()) > 10) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 01 and 10(Serial No).");
+                    txtSlNo.requestFocus();
+                    return;
+                } else if (spnH41a.getSelectedItemPosition() == 0 & secH41a.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: সম্পদ.");
+                    spnH41a.requestFocus();
+                    return;
+                } else if (txtH41aX.getText().toString().length() == 0 & secH41aX.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: অন্যান্য সম্পদ.");
+                    txtH41aX.requestFocus();
+                    return;
+                } else if (txtH41b.getText().toString().length() == 0 & secH41b.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
+                    txtH41b.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "00" : txtH41b.getText().toString()) < 00 || Integer.valueOf(txtH41b.getText().toString().length() == 0 ? "999" : txtH41b.getText().toString()) > 999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 00 and 999(সংখ্যা).");
+                    txtH41b.requestFocus();
+                    return;
+                } else if (txtH41c.getText().toString().length() == 0 & secH41c.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন).");
+                    txtH41c.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "000" : txtH41c.getText().toString()) < 000 || Integer.valueOf(txtH41c.getText().toString().length() == 0 ? "999" : txtH41c.getText().toString()) > 999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 000 and 999(এই সম্পদ কত মাস ধরে আছে (যে সম্পদটি সর্বোচ্চ সময় ধরে আছে, সেটার সময়কাল  উল্লেখ করুন)).");
+                    txtH41c.requestFocus();
+                    return;
+                } else if (txtH41d.getText().toString().length() == 0 & secH41d.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদের বর্তমান মূল্য.");
+                    txtH41d.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41d.getText().toString().length() == 0 ? "00" : txtH41d.getText().toString()) < 00 || Integer.valueOf(txtH41d.getText().toString().length() == 0 ? "999999" : txtH41d.getText().toString()) > 999999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 00 and 999999(এই সম্পদের বর্তমান মূল্য).");
+                    txtH41d.requestFocus();
+                    return;
+                } else if (spnH41e.getSelectedItemPosition() == 0 & secH41e.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ কিভাবে অর্জিত হয়েছে.");
+                    spnH41e.requestFocus();
+                    return;
+                } else if (txtH41eX.getText().toString().length() == 0 & secH41eX.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
+                    txtH41eX.requestFocus();
+                    return;
+                } else if (spnH41f.getSelectedItemPosition() == 0 & secH41f.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: যদি ক্রয় করে থাকেন তাহলে অর্থায়ন কি ভাবে হয়েছিল.");
+                    spnH41f.requestFocus();
+                    return;
+                } else if (txtH41fX.getText().toString().length() == 0 & secH41fX.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
+                    txtH41fX.requestFocus();
+                    return;
+                } else if (!rdoH41g1.isChecked() & !rdoH41g2.isChecked() & secH41g.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Select anyone options from (এই সম্পদ কি কারোর সাথে ভাগাভাগি করেন).");
+                    rdoH41g1.requestFocus();
+                    return;
+                } else if (txtH41h.getText().toString().length() == 0 & secH41h.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?.");
+                    txtH41h.requestFocus();
+                    return;
+                } else if (Double.valueOf(txtH41h.getText().toString().length() == 0 ? "1" : txtH41h.getText().toString()) < 1 || Double.valueOf(txtH41h.getText().toString().length() == 0 ? "100" : txtH41h.getText().toString()) > 100) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 1 and 100(সম্পদ কারো সাথে ভাগাভাগি করলে, কত শতাংশ আপনার নিজের?).");
+                    txtH41h.requestFocus();
+                    return;
+                } else if (txtH41i.getText().toString().length() == 0 & secH41i.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
+                    txtH41i.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "0" : txtH41i.getText().toString()) < 0 || Integer.valueOf(txtH41i.getText().toString().length() == 0 ? "999" : txtH41i.getText().toString()) > 999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 0 and 999(সংখ্যা).");
+                    txtH41i.requestFocus();
+                    return;
+                } else if (txtH41j.getText().toString().length() == 0 & secH41j.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: কবে থেকে আছে (সর্বোচ্চ সময়কাল উল্লেখ করুন) (মাস).");
+                    txtH41j.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41j.getText().toString().length() == 0 ? "1" : txtH41j.getText().toString()) < 1 || Integer.valueOf(txtH41j.getText().toString().length() == 0 ? "99" : txtH41j.getText().toString()) > 99) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 1 and 99(কবে থেকে আছে (সর্বোচ্চ সময়কাল উল্লেখ করুন) (মাস)).");
+                    txtH41j.requestFocus();
+                    return;
+                } else if (spnH41k.getSelectedItemPosition() == 0 & secH41k.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: কার কাছ থেকে কোথা থেকে পেয়েছেন.");
+                    spnH41k.requestFocus();
+                    return;
+                } else if (txtH41kX.getText().toString().length() == 0 & secH41kX.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
+                    txtH41kX.requestFocus();
+                    return;
+                } else if (txtH41l.getText().toString().length() == 0 & secH41l.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: সংখ্যা.");
+                    txtH41l.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41l.getText().toString().length() == 0 ? "0" : txtH41l.getText().toString()) < 0 || Integer.valueOf(txtH41l.getText().toString().length() == 0 ? "999" : txtH41l.getText().toString()) > 999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 0 and 999(সংখ্যা).");
+                    txtH41l.requestFocus();
+                    return;
+                } else if (txtH41m.getText().toString().length() == 0 & secH41m.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদ বিক্রী বা হস্তান্তরের সময় মূল্য কত ছিল.");
+                    txtH41m.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41m.getText().toString().length() == 0 ? "0" : txtH41m.getText().toString()) < 0 || Integer.valueOf(txtH41m.getText().toString().length() == 0 ? "999999" : txtH41m.getText().toString()) > 999999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 0 and 999999(এই সম্পদ বিক্রী বা হস্তান্তরের সময় মূল্য কত ছিল).");
+                    txtH41m.requestFocus();
+                    return;
+                } else if (txtH41n.getText().toString().length() == 0 & secH41n.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদের বর্তমান মূল্য কত.");
+                    txtH41n.requestFocus();
+                    return;
+                } else if (Integer.valueOf(txtH41n.getText().toString().length() == 0 ? "0" : txtH41n.getText().toString()) < 0 || Integer.valueOf(txtH41n.getText().toString().length() == 0 ? "999999" : txtH41n.getText().toString()) > 999999) {
+                    Connection.MessageBox(AssetB.this, "Value should be between 0 and 999999(এই সম্পদের বর্তমান মূল্য কত).");
+                    txtH41n.requestFocus();
+                    return;
+                } else if (txtH41o4X.getText().toString().length() == 0 & secH41o4X.isShown()) {
+                    Connection.MessageBox(AssetB.this, "Required field: অন্যান্য উল্লেখ করুন.");
+                    txtH41o4X.requestFocus();
+                    return;
+                } else if (secH41o1.isShown() & !chkH41o1.isChecked() & !chkH41o2.isChecked() & !chkH41o3.isChecked() & !chkH41o4.isChecked()) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন");
+                    secH41o1.requestFocus();
+                    return;
+                } else if (secH41aX.isShown() & txtH41aX.getText().toString().length() == 0) {
+                    Connection.MessageBox(AssetB.this, "Required field: এই সম্পদটি কিভাবে বদলি করেছেন অন্যান্য");
+                    txtH41aX.requestFocus();
+                    return;
+                }
+
             }
 
             String SQL = "";

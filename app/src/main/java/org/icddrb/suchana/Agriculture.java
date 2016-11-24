@@ -846,7 +846,7 @@ public class Agriculture extends Activity {
                 Connection.MessageBox(Agriculture.this, "Required field: সিরিয়াল নাম্বার.");
                 txtSl.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtSl.getText().toString().length() == 0 ? "1" : txtSl.getText().toString()) < 1 || Integer.valueOf(txtSl.getText().toString().length() == 0 ? "10" : txtSl.getText().toString()) > 10) {
+            } else if (Integer.valueOf(txtSl.getText().toString().length() == 0 ? "1" : txtSl.getText().toString()) < 1 || Integer.valueOf(txtSl.getText().toString().length() == 0 ? "30" : txtSl.getText().toString()) > 30) {
                 Connection.MessageBox(Agriculture.this, "Value should be between 1 and 10(সিরিয়াল নাম্বার).");
                 txtSl.requestFocus();
                 return;
