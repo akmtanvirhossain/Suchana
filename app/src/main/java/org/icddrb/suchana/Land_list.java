@@ -225,7 +225,7 @@ public class Land_list extends Activity {
         try {
 
             Land_DataModel d = new Land_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'  order by cast(SlNo as int) asc";
             List<Land_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 

@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
 
             //Need to update date every time whenever shared updated system
             //*********************************************************************
-            SystemUpdateDT = "22112016";  //Format: DDMMYYYY
+            SystemUpdateDT = "28112016";  //Format: DDMMYYYY
             lblSystemDate.setText("Version: 1.0, Built on:" + SystemUpdateDT);
 
             //Check for Internet connectivity
@@ -108,7 +108,7 @@ public class LoginActivity extends Activity {
             if (Global.DateNowDMY().equals("22/11/2016") || Global.DateNowDMY().equals("23/11/2016"))
             {
 
-                    C.Save("Delete from Agriculture where  endt<'2016-11-22'");
+              /*      C.Save("Delete from Agriculture where  endt<'2016-11-22'");
                     C.Save("Delete from Anthro where  endt<'2016-11-22'");
                     C.Save("Delete from AssetB where  endt<'2016-11-22'");
                     C.Save("Delete from AssetNB where  endt<'2016-11-22'");
@@ -142,7 +142,7 @@ public class LoginActivity extends Activity {
                     C.Save("Delete from Father where  endt<'2016-11-22'");
                     C.Save("Delete from Adolescent where  endt<'2016-11-22'");
                     C.Save("Delete from QC where  endt<'2016-11-22'");
-
+*/
             }
 
             Button btnClose = (Button) findViewById(R.id.btnClose);

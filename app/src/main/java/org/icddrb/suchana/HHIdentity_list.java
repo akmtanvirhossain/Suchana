@@ -568,6 +568,7 @@ public class HHIdentity_list extends Activity {
                             IDbundle.putString("Rnd", o.get("Rnd"));
                             IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                             IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+
                             Intent f1;
 
                             f1 = new Intent(getApplicationContext(), Adolescent.class);
@@ -580,6 +581,7 @@ public class HHIdentity_list extends Activity {
                             IDbundle.putString("Rnd", o.get("Rnd"));
                             IDbundle.putString("ScreeningID", o.get("ScreeningID"));
                             IDbundle.putString("SuchanaID", o.get("SuchanaID"));
+                            IDbundle.putString("Age",String.valueOf(spnAgeGroup.getSelectedItemPosition()));
                             Intent f1;
 
                             f1 = new Intent(getApplicationContext(), HHIdentity_final.class);

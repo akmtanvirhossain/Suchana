@@ -249,7 +249,7 @@ public class Loan_list extends Activity {
         try {
 
             Loan_DataModel d = new Loan_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'  order by cast(H112 as int) asc";
             List<Loan_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 

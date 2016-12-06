@@ -19,6 +19,7 @@ public class UpdateMenu extends Activity {
     static String USERID = "";
     static String RND = "";
     static String SUCHANAID = "";
+    static String Age = "";
     static String H7 = "";
     Button cmdMenuIdentity;
     Button cmdMenuMember;
@@ -82,6 +83,7 @@ public class UpdateMenu extends Activity {
             IDBundle = getIntent().getExtras();
             RND = IDBundle.getString("Rnd");
             SUCHANAID = IDBundle.getString("SuchanaID");
+
 
         /*    cmdMenuStart = (Button) findViewById(R.id.cmdMenuStart);
             cmdMenuStart.setOnClickListener(new View.OnClickListener() {
@@ -166,7 +168,8 @@ public class UpdateMenu extends Activity {
                 @Override
                 public void onClick(View v) {
                     finish();
-                    startActivity(new Intent(UpdateMenu.this, HHIdentity.class).putExtras(IDBundle));
+                    IDBundle.putString("Age","0");
+                    startActivity(new Intent(UpdateMenu.this, HHIdentity_final.class).putExtras(IDBundle));
                 }
             });
 

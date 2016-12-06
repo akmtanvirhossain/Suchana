@@ -52,6 +52,7 @@ public class HHIdentity_final extends Activity {
     static String RND = "";
     static String SUCHANAID = "";
     static String ScreeningID = "";
+    static Integer Age=0;
     private static String Status = "new";
     String[] SuchanaIdBuilder;
     boolean networkAvailable = false;
@@ -264,6 +265,14 @@ public class HHIdentity_final extends Activity {
             RND = IDbundle.getString("Rnd");
             ScreeningID = IDbundle.getString("ScreeningID");
             SUCHANAID = IDbundle.getString("SuchanaID");
+            if(IDbundle.getString("Age").toString().length()==0)
+            {
+                Age =0;
+            }
+            else
+            {
+                Age =Integer.valueOf(IDbundle.getString("Age"));
+            }
 
             TableName = "HHIdentity";
 
@@ -459,7 +468,8 @@ public class HHIdentity_final extends Activity {
             listAgeGroup.add("3-১২-২৩ মাস");
             ArrayAdapter<String> adptrAgeGroup = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listAgeGroup);
             spnAgeGroup.setAdapter(adptrAgeGroup);
-
+            spnAgeGroup.setSelection(Age);
+         //   spnAgeGroup.setEnabled(false);
             secH17 = (LinearLayout) findViewById(R.id.secH17);
             lineH17 = (View) findViewById(R.id.lineH17);
             VlblH17 = (TextView) findViewById(R.id.VlblH17);
@@ -496,7 +506,7 @@ public class HHIdentity_final extends Activity {
                     }
 
                     if (!spnData.equalsIgnoreCase("1") & !spnData.equalsIgnoreCase("5")) {
-                        txtResultX.setText("");
+                     //   txtResultX.setText("");
                         secH16.setVisibility(View.GONE);
                         rdogrpH16.clearCheck();
                         lineH16.setVisibility(View.GONE);
@@ -698,7 +708,14 @@ public class HHIdentity_final extends Activity {
                 Connection.MessageBox(HHIdentity_final.this, DV);
                 dtpH17.requestFocus();
                 return;
-            } else if (spnResult.getSelectedItemPosition() == 0 & secResult.isShown()) {
+            }
+            else if( Global.DateDifferenceDays(dtpH17.getText().toString(),"22/11/2016")<0)
+            {
+                Connection.MessageBox(HHIdentity_final.this, "Invalid date H17");
+                dtpH17.requestFocus();
+                return;
+            }
+            else if (spnResult.getSelectedItemPosition() == 0 & secResult.isShown()) {
                 Connection.MessageBox(HHIdentity_final.this, "Required field: সাক্ষাৎকার এর ফলাফল.");
                 spnResult.requestFocus();
                 return;

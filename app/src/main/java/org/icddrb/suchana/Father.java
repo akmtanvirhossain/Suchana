@@ -790,11 +790,7 @@ public class Father extends Activity {
                 Connection.MessageBox(Father.this, "Required field: কত বয়স পর্যন্ত  শিশুকে বুকের দুধ খাওয়াতে হয়? (বছর) (জানা নেই ৮৮ ).");
                 txtF214.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtF214.getText().toString().length() == 0 ? "0" : txtF214.getText().toString()) < 0 || Integer.valueOf(txtF214.getText().toString().length() == 0 ? "99" : txtF214.getText().toString()) > 99) {
-                Connection.MessageBox(Father.this, "Value should be between 0 and 99(কত বয়স পর্যন্ত শিশুকে বুকের দুধ খাওয়াতে হয়? (বছর) (জানা নেই ৮৮ )).");
-                txtF214.requestFocus();
-                return;
-            } else if (txtF216X1.getText().toString().length() == 0 & secF216X1.isShown()) {
+            }  else if (txtF216X1.getText().toString().length() == 0 & secF216X1.isShown()) {
                 Connection.MessageBox(Father.this, "Required field: অন্যান্য উল্লেক করুণ ১.");
                 txtF216X1.requestFocus();
                 return;

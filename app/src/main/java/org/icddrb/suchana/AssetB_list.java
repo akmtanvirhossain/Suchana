@@ -212,7 +212,7 @@ public class AssetB_list extends Activity {
         try {
 
             AssetB_DataModel d = new AssetB_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "' order by cast(SlNo as int) asc";
             List<AssetB_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 

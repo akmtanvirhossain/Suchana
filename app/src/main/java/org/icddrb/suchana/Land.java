@@ -466,8 +466,8 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: আয়তন/জমির পরিমান (শতাংশ).");
                 txtH5c.requestFocus();
                 return;
-            } else if (Double.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 0 || Double.valueOf(txtH5c.getText().toString().length() == 0 ? "100" : txtH5c.getText().toString()) > 100) {
-                Connection.MessageBox(Land.this, "Value should be between 0 and 100(আয়তন/জমির পরিমান (শতাংশ)).");
+            } else if (Double.valueOf(txtH5c.getText().toString().length() == 0 ? "1" : txtH5c.getText().toString()) < 0 || Double.valueOf(txtH5c.getText().toString().length() == 0 ? "600" : txtH5c.getText().toString()) > 600) {
+                Connection.MessageBox(Land.this, "Value should be between 0 and 600(আয়তন/জমির পরিমান (শতাংশ)).");
                 txtH5c.requestFocus();
                 return;
             } else if (spnH5d.getSelectedItemPosition() == 0 & secH5d.isShown()) {
@@ -490,8 +490,8 @@ public class Land extends Activity {
                 Connection.MessageBox(Land.this, "Required field: জমির বর্তমান বাজার মূল্য.");
                 txtH5g.requestFocus();
                 return;
-            } else if (Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "000000" : txtH5g.getText().toString()) < 000000 || Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "999999" : txtH5g.getText().toString()) > 999999) {
-                Connection.MessageBox(Land.this, "Value should be between 000000 and 999999(জমির বর্তমান বাজার মূল্য).");
+            } else if (Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "000000" : txtH5g.getText().toString()) < 000000 || Integer.valueOf(txtH5g.getText().toString().length() == 0 ? "9999999" : txtH5g.getText().toString()) > 9999999) {
+                Connection.MessageBox(Land.this, "Value should be between 000000 and 9999999(জমির বর্তমান বাজার মূল্য).");
                 txtH5g.requestFocus();
                 return;
             } else if (txtH5hY.getText().toString().length() == 0 & secH5hY.isShown()) {

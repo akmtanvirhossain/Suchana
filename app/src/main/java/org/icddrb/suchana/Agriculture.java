@@ -274,7 +274,7 @@ public class Agriculture extends Activity {
             lineMSlNo = (View) findViewById(R.id.lineMSlNo);
             VlblMSlNo = (TextView) findViewById(R.id.VlblMSlNo);
             spnMSlNo = (Spinner) findViewById(R.id.spnMSlNo);
-            spnMSlNo.setAdapter(C.getArrayAdapter("select '' union all select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15"));
+            spnMSlNo.setAdapter(C.getArrayAdapter("select '' union all select H21 ||'-'||H22 from member where RND='" + RND + "' and SuchanaID='"+ SUCHANAID + "' and cast(H26Y as int)>15 "));
             seclbH151 = (LinearLayout) findViewById(R.id.seclbH151);
             secH151 = (LinearLayout) findViewById(R.id.secH151);
             lineH151 = (View) findViewById(R.id.lineH151);

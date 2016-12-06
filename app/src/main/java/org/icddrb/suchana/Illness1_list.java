@@ -241,7 +241,7 @@ public class Illness1_list extends Activity {
         try {
 
             Illness1_DataModel d = new Illness1_DataModel();
-            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
+            String SQL = "Select * from " + TableName + "  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'  order by cast(SlNo as int) asc";
             List<Illness1_DataModel> data = d.SelectAll(this, SQL);
             dataList.clear();
 
