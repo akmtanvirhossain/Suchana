@@ -131,6 +131,15 @@ public class HHIdentity_list extends Activity {
 
             TableName = "HHIdentity";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
+            if(Integer.valueOf(C.ReturnSingleValue("select count(*) from hhidentity where lat is null  or length(lat)=0"))>2)
+            {
+                C.Save("update HHIdentity set  Upload='2'  where lat is null  or length(lat)=0");
+                String s="update HHIdentity set  Lon=(select Lon from Screening where SuchanaID=HHIdentity.SuchanaID) ,Lat=(select Lat from Screening where SuchanaID=HHIdentity.SuchanaID)  where lat is null or length(lat)=0";
+                C.Save(s);
+
+            }
+
+
             /*lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -376,7 +385,7 @@ public class HHIdentity_list extends Activity {
             String V = spnVill.getCount() > 0 ? spnVill.getSelectedItemPosition() == 0 ? "%" : Connection.SelectedSpinnerValue(spnVill.getSelectedItem().toString(), "-") : "";
 
             //household interview
-            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,case when h.Upload is null and A.Upload is null then '2' when  A.Upload is null then h.Upload else A.Upload end Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC,HHLocation, case when length(i.Lat)==0 or i.Lat is null then 0 else 1 end Lat from Screening i";
+            SQL = "Select (case when i.Sampling is null then '2' else '1' end)Sampling, i.Rnd, i.ScreeningID, i.Dist||i.Upz||i.Un||i.Vill||i.HHNo SuchanaID,i.Dist, i.Upz, i.Un, i.Vill, i.WRHHNo, i.HHNo, i.BenName, i.HeadName, i.HsuName,case when length(i.MobNo)=0 then i.ReqMobNo else i.MobNo end MobNo, v.DistCode, v.DistName, v.UPZCode, v.UPZName, v.UNCode, v.UNName, v.VillCode, v.VillName,case when h.Upload is null and A.Upload is null then '2' when  A.Upload is null then h.Upload else A.Upload end Upload, i.VDate ,ifnull(h.H17,'')H17,ifnull(i.QC,'2')QC,HHLocation, case when length(h.Lat)==0 or h.Lat is null then 0 else 1 end Lat from Screening i";
             SQL += " left outer join HHIdentity h on i.rnd=h.rnd and i.suchanaid=h.suchanaid";
             SQL += " left outer join Adolescent A on i.rnd=A.rnd and i.suchanaid=A.suchanaid";
             SQL += " left outer join VillageList v on i.Dist=v.DistCode and i.Upz=v.UPZCode and i.Un=v.UNCode and i.Vill=v.VillCode";

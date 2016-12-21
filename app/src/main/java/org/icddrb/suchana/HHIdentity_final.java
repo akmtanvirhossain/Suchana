@@ -624,7 +624,7 @@ public class HHIdentity_final extends Activity {
             secResultX.setVisibility(View.GONE);
             secH16X.setVisibility(View.GONE);
 
-            DataSearchScreening(RND, ScreeningID);
+            DataSearchScreening(RND, SUCHANAID);
             DataSearch(RND, SUCHANAID);
             Button cmdSave = (Button) findViewById(R.id.cmdSave);
             cmdSave.setOnClickListener(new View.OnClickListener() {
@@ -831,7 +831,7 @@ public class HHIdentity_final extends Activity {
 
             RadioButton rb;
             Screening_DataModel d = new Screening_DataModel();
-            String SQL = "Select * from Screening  Where Rnd='" + Rnd + "' and ScreeningID='" + ScreeningID + "'";
+            String SQL = "Select * from Screening  Where Rnd='" + Rnd + "' and SuchanaID='" + SuchanaID + "'";
             List<Screening_DataModel> data = d.SelectAll(this, SQL);
             for (Screening_DataModel item : data) {
                 txtRnd.setText(item.getRnd());

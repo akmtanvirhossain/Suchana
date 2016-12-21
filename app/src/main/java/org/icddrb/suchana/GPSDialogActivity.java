@@ -121,7 +121,7 @@ public class GPSDialogActivity extends Activity implements LocationListener {
             {
                 Connection C;
                 C = new Connection(this);
-                String SQL = "Update Screening Set Lat='" + mLat + "',Lon='" + mLong + "' where Rnd = '" + txtRnd.getText() + "' and SuchanaID = '" + txtSuchanaID.getText() + "'";
+                String SQL = "Update HHIdentity Set Lat='" + mLat + "',Lon='" + mLong + "' where Rnd = '" + txtRnd.getText() + "' and SuchanaID = '" + txtSuchanaID.getText() + "'";
                 C.Save(SQL);
                 startActivity(new Intent(GPSDialogActivity.this, HHIdentity_list.class));
             }

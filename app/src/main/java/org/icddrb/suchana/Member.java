@@ -1236,7 +1236,7 @@ public class Member extends Activity {
                 int days = Days.daysBetween(birthdate, now).getDays();
                 // int xMonths = Integer.parseInt(months.toString());
                 int mDays = (365 * Integer.valueOf(txtH26Y.getText().toString()) + (30 * Integer.valueOf(txtH26M.getText().toString())));
-                if (Math.abs(days - mDays) > 30) {
+                if (Math.abs(days - mDays) > 35) {
                     Connection.MessageBox(Member.this, "Required field: বয়স এর সাথে জন্মতারিখ মিল নেই");
                     dtpC15.requestFocus();
                     return;
