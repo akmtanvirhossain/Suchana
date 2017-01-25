@@ -120,6 +120,7 @@ public class MainMenu extends Activity {
                                         tableList.add("EntryStatus");
 
                                         //Household
+                                        //tableList.add("Screening");
                                         tableList.add("HHIdentity");
                                         tableList.add("Member");
                                         tableList.add("SES");

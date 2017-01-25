@@ -131,6 +131,7 @@ public class HHIdentity_list extends Activity {
 
             TableName = "HHIdentity";
             lblHeading = (TextView) findViewById(R.id.lblHeading);
+          /*
             if(Integer.valueOf(C.ReturnSingleValue("select count(*) from hhidentity where lat is null  or length(lat)=0"))>2)
             {
                 C.Save("update HHIdentity set  Upload='2'  where lat is null  or length(lat)=0");
@@ -139,7 +140,7 @@ public class HHIdentity_list extends Activity {
 
             }
 
-
+            */
             /*lblHeading.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
